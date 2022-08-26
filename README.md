@@ -13,10 +13,16 @@ The table is derived from https://github.com/celeritas-project/celeritas/issues/
 # Running the code
 
 TODO:
-- add input files
+- add input geometry
 - add python script for running all configurations
-- run debug on wildstyle, release on titan + summit
+- run release-debug (assertions enabled) on wildstyle, release on titan + summit
+- run all problems with 0.1.0 and 0.1.1
 - add spack lock files from environments where they're being run?
+
+## Directory structure
+
+- `input/`: input detector geometry
+- `results/{reldeb,opt}-{crusher,summit,wildstyle}`: output JSON files
 
 # Table of results
 
