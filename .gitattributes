@@ -1,0 +1,2 @@
+*.gdml filter=lfs diff=lfs merge=lfs -text
+*.hepmc3 filter=lfs diff=lfs merge=lfs -text
