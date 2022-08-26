@@ -13,7 +13,6 @@ The table is derived from https://github.com/celeritas-project/celeritas/issues/
 # Running the code
 
 TODO:
-- add input geometry
 - add python script for running all configurations
 - run release-debug (assertions enabled) on wildstyle, release on titan + summit
 - run all problems with 0.1.0 and 0.1.1
@@ -21,7 +20,7 @@ TODO:
 
 ## Directory structure
 
-- `input/`: input detector geometry
+- `input/`: input detector geometry and hepmc3 files
 - `results/{reldeb,opt}-{crusher,summit,wildstyle}`: output JSON files
 
 # Table of results
