@@ -15,8 +15,9 @@ The table is derived from https://github.com/celeritas-project/celeritas/issues/
 TODO:
 - add python script for running all configurations
 - run release-debug (assertions enabled) on wildstyle, release on titan + summit
-- run all problems with 0.1.0 and 0.1.1
+- run all problems with 0.1.0 (then commit) and 0.1.1 (then commit)
 - add spack lock files from environments where they're being run?
+- add tags for each celeritas tag where the versions are run
 
 ## Directory structure
 
@@ -48,6 +49,8 @@ CMS2018 | Field + MSC | VecGeom | CUDA | 20k |  6
 
 For the 'version', use `git describe --tags --match 'v*'`, and please make sure
 you're on the `master`/`main` branch!
+
+In these in initial tests, the field was defined to have a value of `[0,0,1]`.
 
 ## Failing assertions:
 
