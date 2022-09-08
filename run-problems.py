@@ -23,7 +23,7 @@ import re
 class System:
     name = None
     build_dirs = {}
-    num_jobs = None
+    num_jobs = None # Number of simultaneous jobs to run
     gpu_per_job = None
     cpu_per_job = None
 
@@ -64,33 +64,68 @@ class Local(System):
         "orange": Path("/Users/seth/.local/src/celeritas/build"),
     }
     name = "testing"
-    num_jobs = 3
+    num_jobs = 1
     gpu_per_job = 0
-    cpu_per_job = 2
+    cpu_per_job = 1
 
 
-_fixme_systems = {
-    'summit': {
-        'gpu': 6,
-        'cpu_per_gpu': 7,
-        'orange': Path("/.../build-ndebug"),
-        'vecgeom': Path("/.../build-ndebug-vecgeom"),
-    },
-    'crusher': {
-        'gpu': 8, # NOTE: really 4 GCDs, 2 GPUs per GCD
-        'cpu_per_gpu': 8, # NOTE: really 4 job nodes, so 8 procs per 2 GPU
+class Summit(System):
+    _CELER_ROOT = Path(environ.get('PROJWORK', '')) / 'csc404' / 'celeritas'
+    build_dirs = {
+        "orange": _CELER_ROOT / 'build-ndebug-novg',
+        "vecgeom": _CELER_ROOT / 'build-ndebug',
     }
-}
+    name = "summit"
+    num_jobs = 6
+    gpu_per_job = 1
+    cpu_per_job = 7
+
+    def create_celer_subprocess(self, inp):
+        cmd = "jsrun"
+        args = [
+            "-n1", # total resource sets
+            "-r1", # resource sets per host
+            "-a1", # tasks per resource set
+            f"-c{self.cpu_per_job}", # CPUs per resource set
+            "--bind=packed:7",
+            "--launch_distribution=packed",
+            f"-EOMP_NUM_THREADS={self.cpu_per_job}",
+        ]
+        demo_loop = self.build_dirs[inp["_geometry"]] / "app" / "demo-loop"
+        if inp['use_device']:
+            args.append("-g1") # GPUs per resource set
+        else:
+            args.extend("-ECELER_DISABLE_DEVICE=1")
+
+        return asyncio.create_subprocess_exec(
+            cmd, "-",
+            stdin=asyncio.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env=env
+        )
+
+class Crusher(System):
+    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas'
+    build_dirs = {
+        "orange": _CELER_ROOT / 'build-ndebug'
+    }
+    name = "crusher"
+    num_jobs = 8
+    gpu_per_job = 2
+    cpu_per_job = 16
+
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
+
 base_input = {
     "brem_combined": False,
     "enable_diagnostics": False,
-    "initializer_capacity": 1e6,
+    "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
-    "max_num_tracks": 32,
+    "max_num_tracks": 1024,
     "max_steps": 2**30,
     "secondary_stack_factor": 3.0,
     "sync": True,
@@ -107,8 +142,14 @@ base_input = {
     },
 }
 
-use_msc = {"enable_msc": True,
-           "eloss_fluctuation": False}
+use_msc = {"enable_msc": True}
+
+use_gpu = {
+    "use_device": True,
+    "max_num_tracks": 2**21,
+    "initializer_capacity": 2**26,
+}
+
 
 no_field = {
     "mag_field": [0.0, 0.0, 0.0],
@@ -171,7 +212,6 @@ problems = [
     [full_cms, no_field],
     [full_cms, use_msc],
 ]
-
 
 def recurse_updated(d, other):
     result = d.copy()
@@ -237,7 +277,6 @@ def summarize(out):
         "total_time": time['total'],
         "action_times": get_action_times(out['internal']['actions']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1]
-        # occupancy if not debug?
     }
     return summary
 
@@ -255,8 +294,7 @@ def summarize_failure(out):
                            if failure_re.search(line) is not None)
         return matches
 
-async def run_celeritas(system, problem_dicts, instance):
-    inp = build_input(problem_dicts)
+async def run_celeritas(system, inp, instance):
     try:
         proc = await system.create_celer_subprocess(inp)
     except FileNotFoundError as e:
@@ -287,25 +325,37 @@ async def run_celeritas(system, problem_dicts, instance):
 
     return (summary, result)
 
+summaries = []
+results = []
+
 async def main():
     system = Local()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    summaries = []
-    results = []
-    for p in problems:
-        result = await asyncio.gather(*(run_celeritas(system, p, i)
-                                        for i in range(system.num_jobs)))
-        [cur_summaries, cur_results] = zip(*result)
-        pprint(cur_summaries)
-        summaries.append(cur_summaries)
-        results.append(cur_results)
+    device_mods = [[]] # CPU
+    if system.gpu_per_job:
+        device_mods.append([use_gpu])
 
-    with open(results_dir / 'summaries.json', 'w') as f:
-        json.dump(summaries, f, indent=1, sort_keys=True)
-    with open(results_dir / 'full.json', 'w') as f:
-        json.dump(results, f, indent=0, sort_keys=True)
+    try:
+        for p in problems:
+            for d in device_mods:
+                inp = build_input([base_input] + p + d)
+                result = await asyncio.gather(*(run_celeritas(system, inp, i)
+                                                for i in range(system.num_jobs)))
+                [cur_summaries, cur_results] = zip(*result)
+                pprint(cur_summaries)
+                summaries.append(cur_summaries)
+                results.append(cur_results)
+    finally:
+        with open(results_dir / 'summaries.json', 'w') as f:
+            json.dump(summaries, f, indent=1, sort_keys=True)
+        with open(results_dir / 'full.json', 'w') as f:
+            json.dump(results, f, indent=0, sort_keys=True)
+
+        # TODO: dump first successful GPU run
+        # with open(results_dir / 'system.json', 'w') as f:
+        #     json.dump(results, f, indent=0, sort_keys=True)
 
 asyncio.run(main())
