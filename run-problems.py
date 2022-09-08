@@ -98,7 +98,7 @@ base_input = {
     # Geant options
     "brem_lpm": True,
     "conv_lpm": True,
-    "eloss_fluctuation": True,
+    "eloss_fluctuation": False,
     "enable_msc": False,
     "rayleigh": False,
     "geant_options": {
@@ -112,6 +112,7 @@ use_msc = {"enable_msc": True,
 
 no_field = {
     "mag_field": [0.0, 0.0, 0.0],
+    "eloss_fluctuation": True,
 }
 
 testem15 = {
@@ -132,8 +133,8 @@ simple_cms = {
 
 testem3 = {
     "_geometry": "orange",
-    "geometry_filename": "testem3.org.json",
-    "physics_filename": "testem15.gdml",
+    "geometry_filename": "testem3-flat.org.json",
+    "physics_filename": "testem3-flat.gdml",
     "mag_field": [0.0, 0.0, 1.0],
     "primary_gen_options": {
         "pdg": 11,
@@ -160,7 +161,7 @@ problems = [
     [testem15, use_msc,
         {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
     [testem15, use_msc],
-    [simple_cms, use_msc, no_field],
+    [simple_cms, no_field, use_msc],
     [simple_cms],
     [simple_cms, use_msc],
     [simple_cms, use_msc,
@@ -290,7 +291,7 @@ async def main():
     system = Local()
 
     results_dir = regression_dir / 'results' / system.name
-    results_dir.mkdir()
+    results_dir.mkdir(exist_ok=True)
 
     summaries = []
     results = []
