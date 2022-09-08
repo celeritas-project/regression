@@ -34,7 +34,7 @@ class System:
             build = PurePath("nonexistent")
         cmd = build / "app/demo-loop"
         env = None
-        if inp['use_device']:
+        if not inp['use_device']:
             env = dict(environ)
             env['CELER_DISABLE_DEVICE'] = "1"
             env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
