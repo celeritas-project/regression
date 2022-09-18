@@ -13,12 +13,19 @@ Requires Python 3.7+.
 """
 
 import asyncio
+import itertools
 import json
-from math import log10
 from pathlib import Path, PurePath
 from pprint import pprint
 from os import environ
-import re
+from signal import SIGINT, SIGTERM, SIGKILL
+import subprocess
+from summarize import inp_to_nametuple, summarize_all, exception_to_dict
+
+g4env = {k: v for k, v in environ.items()
+         if k.startswith('G4')}
+
+systems = {}
 
 class System:
     name = None
@@ -76,12 +83,16 @@ class Summit(System):
         "vecgeom": _CELER_ROOT / 'build-ndebug',
     }
     name = "summit"
+    num_jobs = 1
     num_jobs = 6
     gpu_per_job = 1
     cpu_per_job = 7
 
     def create_celer_subprocess(self, inp):
         cmd = "jsrun"
+        env = g4env.copy()
+        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+
         args = [
             "-n1", # total resource sets
             "-r1", # resource sets per host
@@ -89,20 +100,25 @@ class Summit(System):
             f"-c{self.cpu_per_job}", # CPUs per resource set
             "--bind=packed:7",
             "--launch_distribution=packed",
-            f"-EOMP_NUM_THREADS={self.cpu_per_job}",
         ]
-        demo_loop = self.build_dirs[inp["_geometry"]] / "app" / "demo-loop"
         if inp['use_device']:
             args.append("-g1") # GPUs per resource set
         else:
-            args.extend("-ECELER_DISABLE_DEVICE=1")
+            env["CELER_DISABLE_DEVICE"] = "1"
+            args.append("-g0")
+
+        args.extend("".join(["-E", k, "=", v]) for k, v in env.items())
+
+        args.extend([
+            self.build_dirs[inp["_geometry"]] / "app" / "demo-loop",
+            "-"
+        ])
 
         return asyncio.create_subprocess_exec(
-            cmd, "-",
+            cmd, *args,
             stdin=asyncio.subprocess.PIPE,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
-            env=env
         )
 
 class Crusher(System):
@@ -121,12 +137,13 @@ input_dir = regression_dir / "input"
 
 
 base_input = {
+    "_timeout": 600.0,
     "brem_combined": False,
     "enable_diagnostics": False,
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 1024,
-    "max_steps": 2**30,
+    "max_steps": 2**18,
     "secondary_stack_factor": 3.0,
     "sync": True,
     "use_device": False,
@@ -147,9 +164,9 @@ use_msc = {"enable_msc": True}
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**21,
+    "max_steps": 2**12,
     "initializer_capacity": 2**26,
 }
-
 
 no_field = {
     "mag_field": [0.0, 0.0, 0.0],
@@ -238,76 +255,63 @@ def build_input(problem_dicts):
     for k in inp:
         if k.endswith('_filename'):
             inp[k] = str(input_dir / inp[k])
+
+    inp["_name"] = name = inp_to_nametuple(inp)
+    inp["_outdir"] = "-".join(name)
     return inp
 
-def calc_emptying_step(active):
-    active_it = iter(active)
-    prev = next(active_it)
-    max_cap = 0
-    result = None
-    for (i, cur) in enumerate(active_it, start=1):
-        max_cap = max(prev, max_cap)
-        if prev == max_cap and cur < max_cap:
-            result = i
-        prev = cur
+
+async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
+    """Interrupt, then terminate, then kill a process if it doesn't
+    communicate.
+    """
+    try:
+        result = await asyncio.wait_for(
+            proc.communicate(input),
+            timeout=interrupt)
+    except asyncio.TimeoutError:
+        print(f"Timed out after {interrupt} seconds: sending interrupt")
+        proc.send_signal(SIGINT)
+    else:
+        return result
+
+    try:
+        result = await asyncio.wait_for(proc.communicate(),
+                    timeout=terminate)
+    except asyncio.TimeoutError:
+        print(f"Timed out *AGAIN* after {terminate} seconds")
+        proc.send_signal(SIGTERM)
+    else:
+        return result
+
+    try:
+        result = await asyncio.wait_for(proc.communicate(),
+                    timeout=kill)
+    except asyncio.TimeoutError:
+        print(f"Set phasers to kill after {kill} seconds")
+        proc.send_signal(SIGKILL)
+    else:
+        return result
+
+    print("Awaiting communication")
+    result = await proc.communicate()
     return result
 
-def calc_queue_hwm(queued):
-    hq, hi = max((q, i) for (i, q) in enumerate(queued))
-    return (hi, hq)
 
-def get_action_times(actions):
-    return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
-
-def summarize(out):
-    """Calculate statistics about the tracking behaviors.
-
-    These are basically equivalent to those in StepperTestBase.
-    """
-    result = out['result']
-    active = result['active']
-    time = result['time']
-
-    emptying_step = calc_emptying_step(active)
-    summary = {
-        "num_step_iters": len(active),
-        "avg_steps_per_primary": sum(active) / active[0],
-        "emptying_step": emptying_step,
-        "queue_hwm": calc_queue_hwm(result['initializers']),
-        "total_time": time['total'],
-        "action_times": get_action_times(out['internal']['actions']),
-        "pre_emptying_time": time['steps'][(emptying_step or 0) - 1]
-    }
-    return summary
-
-failure_re = re.compile('(error|warning|exception|critical)', re.IGNORECASE)
-
-def summarize_failure(out):
-    try:
-        return out['result']['exception']
-    except KeyError:
-        matches = []
-        for k in ['stderr', 'stdout']:
-            if k not in out:
-                continue
-            matches.extend(line for line in out[k]
-                           if failure_re.search(line) is not None)
-        return matches
-
-async def run_celeritas(system, inp, instance):
+async def run_celeritas(system, results_dir, inp, instance):
     try:
         proc = await system.create_celer_subprocess(inp)
     except FileNotFoundError as e:
-        summary = str(e)
-        result = None
-        return (summary, result)
+        return exception_to_dict(e, context="creating subprocess")
 
-    # TODO: define alarm to send process SIGINT after too long an interval
     # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
 
     inp["seed"] = 20220904 + instance
     print(f"{instance}: awaiting communcation")
-    out, err = await proc.communicate(input=json.dumps(inp).encode())
+    out, err = await communicate_with_timeout(proc,
+        input=json.dumps(inp).encode(),
+        interrupt=inp['_timeout']
+    )
 
     print(f"{instance}: complete")
     try:
@@ -319,17 +323,36 @@ async def run_celeritas(system, inp, instance):
 
     if proc.returncode:
         result['stderr'] = err.decode().splitlines()
-        summary = summarize_failure(result)
-    else:
-        summary = summarize(result)
 
-    return (summary, result)
+    try:
+        outdir = results_dir / inp['_outdir']
+        outdir.mkdir(exist_ok=True)
+        with open(outdir / f"{instance:d}.json", "w") as f:
+            json.dump(result, f, indent=0, sort_keys=True)
+    except Exception as e:
+        print("Failed to output:", repr(e))
 
-summaries = []
-results = []
+    return result
+
+
+async def run_jslist():
+    # Wait a second for the jobs to start
+    await asyncio.sleep(1)
+    print("Running jslist")
+
+    try:
+        proc = await asyncio.create_subprocess_exec("jslist", "-r", "-R")
+    except FileNotFoundError as e:
+        print("jslist not found :(")
+        return
+
+    print("Waiting on jslist output")
+    await proc.communicate()
+
 
 async def main():
     system = Local()
+    #system = Summit()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
@@ -338,24 +361,25 @@ async def main():
     if system.gpu_per_job:
         device_mods.append([use_gpu])
 
-    try:
-        for p in problems:
-            for d in device_mods:
-                inp = build_input([base_input] + p + d)
-                result = await asyncio.gather(*(run_celeritas(system, inp, i)
-                                                for i in range(system.num_jobs)))
-                [cur_summaries, cur_results] = zip(*result)
-                pprint(cur_summaries)
-                summaries.append(cur_summaries)
-                results.append(cur_results)
-    finally:
-        with open(results_dir / 'summaries.json', 'w') as f:
-            json.dump(summaries, f, indent=1, sort_keys=True)
-        with open(results_dir / 'full.json', 'w') as f:
-            json.dump(results, f, indent=0, sort_keys=True)
+    inputs = [build_input([base_input] + p + d)
+              for p, d in itertools.product(problems, device_mods)]
+    with open(results_dir / "index.json", "w") as f:
+        json.dump({inp['_outdir']: inp['_name'] for inp in inputs}, f, indent=0)
 
-        # TODO: dump first successful GPU run
-        # with open(results_dir / 'system.json', 'w') as f:
-        #     json.dump(results, f, indent=0, sort_keys=True)
+    summaries = {}
+    for inp in inputs:
+        # print("="*79)
+        # pprint(inp)
+        tasks = [run_celeritas(system, results_dir, inp, i)
+                 for i in range(system.num_jobs)]
+        tasks.append(run_jslist())
+        result = await asyncio.gather(*tasks)
+        del result[-1]
+
+        summaries[inp['_name']] = summary = summarize_all(result)
+        pprint(summary)
+
+    with open(results_dir / 'summaries.json', 'w') as f:
+        json.dump(summaries, f, indent=1, sort_keys=True)
 
 asyncio.run(main())
