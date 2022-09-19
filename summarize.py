@@ -109,13 +109,14 @@ def exception_to_dict(e, context=None):
 
 def summarize_one(out):
     failure = summarize_failure(out)
-    if failure:
-        return failure
 
     try:
         result = summarize_result(out['result'], out['internal'])
     except Exception as e:
-        return exception_to_dict(e, context='result')
+        return {
+            'failure': failure,
+            'exception': exception_to_dict(e, context='result')
+        }
 
     return result
 
