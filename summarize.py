@@ -19,9 +19,9 @@ def calc_emptying_step(active):
         prev = cur
     return result
 
-def calc_queue_hwm(queued):
-    hq, hi = max((q, i) for (i, q) in enumerate(queued))
-    return (hi, hq)
+def calc_hwm(counts):
+    hq, hi = max((q, i) for (i, q) in enumerate(counts))
+    return {"index": hi, "count": hq}
 
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
@@ -43,7 +43,8 @@ def summarize_result(result, internal):
         "num_steps": steps,
         "emptying_step": emptying_step,
         "total_time": time['total'],
-        "queue_hwm": calc_queue_hwm(result['initializers']),
+        "active_hwm": calc_hwm(result['active']),
+        "queue_hwm": calc_hwm(result['initializers']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
         "action_times": get_action_times(internal['actions']),
         "avg_steps_per_primary": steps / active[0],
@@ -157,7 +158,6 @@ def main(index_filename):
             with open(r) as f:
                 results.append(json.load(f))
         summaries[subdir] = summary = summarize_all(results)
-        pprint(summary)
         summary['name'] = name
 
     with open(results_dir / 'summaries.json', 'w') as f:
