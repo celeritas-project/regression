@@ -33,7 +33,7 @@
 1.0
 ],
 "max_num_tracks": 524288,
-"max_steps": 8192,
+"max_steps": 32768,
 "physics_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.gdml",
 "rayleigh": false,
 "secondary_stack_factor": 3.0,
@@ -46,7 +46,7 @@
 {
 "description": "beginning of step physics",
 "label": "pre-step",
-"time": 0.005667753000000001
+"time": 0.005675226999999998
 },
 {
 "description": "range limitation due to energy loss",
@@ -56,7 +56,7 @@
 {
 "description": "discrete interaction",
 "label": "physics-discrete-select",
-"time": 0.0012719019999999999
+"time": 0.001283957
 },
 {
 "description": "rejection by integral cross section",
@@ -66,42 +66,42 @@
 {
 "description": "Urban multiple scattering",
 "label": "msc-urban",
-"time": 0.00012423700000000002
+"time": 0.00012194300000000002
 },
 {
 "description": "Moller+Bhabha scattering",
 "label": "ioni-moller-bhabha",
-"time": 0.001055463
+"time": 0.0010553620000000002
 },
 {
 "description": "Seltzer-Berger bremsstrahlung",
 "label": "brems-sb",
-"time": 0.0012936750000000002
+"time": 0.001289147
 },
 {
 "description": "Relativistic bremsstrahlung",
 "label": "brems-rel",
-"time": 0.0010058900000000002
+"time": 0.001005732
 },
 {
 "description": "Livermore photoelectric effect",
 "label": "photoel-livermore",
-"time": 0.001594424
+"time": 0.001582757
 },
 {
 "description": "Klein-Nishina Compton scattering",
 "label": "scat-klein-nishina",
-"time": 0.001200738
+"time": 0.0011994549999999997
 },
 {
 "description": "Bethe-Heitler gamma conversion",
 "label": "conv-bethe-heitler",
-"time": 0.00109853
+"time": 0.001093593
 },
 {
 "description": "Rayleigh scattering",
 "label": "scat-rayleigh",
-"time": 0.001183576
+"time": 0.001177843
 },
 {
 "description": "interaction sampling failure",
@@ -111,12 +111,12 @@
 {
 "description": "along-step in a uniform field with Urban MSC",
 "label": "along-step-uniform-msc",
-"time": 0.0023067519999999996
+"time": 0.0023155069999999996
 },
 {
 "description": "Boundary crossing",
 "label": "geo-boundary",
-"time": 0.00102145
+"time": 0.001015713
 }
 ],
 "physics": {
@@ -281,33 +281,33 @@
 "process": {},
 "steps": {},
 "time": {
-"setup": 0.361454779,
+"setup": 0.380830714,
 "steps": [
-0.66844342,
-0.001147211,
-0.001175425,
-0.001185413,
-0.001161295,
-0.001158564,
-0.001118759,
-0.001078106,
-0.001041492,
-0.001028672,
-0.001013813,
-0.000994568,
-0.000977755,
-0.000967817,
-0.000958841,
-0.000951984,
-0.000937099,
-0.000919468,
-0.000904906,
-0.000893327,
-0.000908435,
-0.000904413,
-0.000868954
+0.26452567,
+0.001152675,
+0.001169704,
+0.00117405,
+0.001170536,
+0.001148363,
+0.001118132,
+0.001078487,
+0.001038875,
+0.001031014,
+0.001010871,
+0.00099767,
+0.000975165,
+0.000962209,
+0.000961619,
+0.000953244,
+0.00093908,
+0.000909085,
+0.000908982,
+0.000890332,
+0.000888417,
+0.00089406,
+0.000860716
 ],
-"total": 0.893094562
+"total": 0.353376191
 }
 },
 "system": {

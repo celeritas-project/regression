@@ -89,6 +89,26 @@
 "orange",
 "gpu"
 ],
+"testem3-flat-orange-cpu": [
+"testem3-flat",
+"orange",
+"cpu"
+],
+"testem3-flat-orange-gpu": [
+"testem3-flat",
+"orange",
+"gpu"
+],
+"testem3-flat-vecgeom-cpu": [
+"testem3-flat",
+"vecgeom",
+"cpu"
+],
+"testem3-flat-vecgeom-gpu": [
+"testem3-flat",
+"vecgeom",
+"gpu"
+],
 "testem3-flat+msc-orange-cpu": [
 "testem3-flat+msc",
 "orange",

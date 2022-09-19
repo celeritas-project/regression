@@ -33,7 +33,7 @@
 1.0
 ],
 "max_num_tracks": 524288,
-"max_steps": 8192,
+"max_steps": 32768,
 "physics_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.gdml",
 "rayleigh": false,
 "secondary_stack_factor": 3.0,
@@ -46,7 +46,7 @@
 {
 "description": "beginning of step physics",
 "label": "pre-step",
-"time": 0.005801532000000002
+"time": 0.006083073999999999
 },
 {
 "description": "range limitation due to energy loss",
@@ -56,7 +56,7 @@
 {
 "description": "discrete interaction",
 "label": "physics-discrete-select",
-"time": 0.001304578
+"time": 0.0013051319999999999
 },
 {
 "description": "rejection by integral cross section",
@@ -66,37 +66,37 @@
 {
 "description": "Moller+Bhabha scattering",
 "label": "ioni-moller-bhabha",
-"time": 0.0010906560000000002
+"time": 0.0010911090000000003
 },
 {
 "description": "Seltzer-Berger bremsstrahlung",
 "label": "brems-sb",
-"time": 0.0013285770000000003
+"time": 0.001341418
 },
 {
 "description": "Relativistic bremsstrahlung",
 "label": "brems-rel",
-"time": 0.001033826
+"time": 0.0010350509999999997
 },
 {
 "description": "Livermore photoelectric effect",
 "label": "photoel-livermore",
-"time": 0.001588476
+"time": 0.001624103
 },
 {
 "description": "Klein-Nishina Compton scattering",
 "label": "scat-klein-nishina",
-"time": 0.0012379470000000003
+"time": 0.0012598219999999996
 },
 {
 "description": "Bethe-Heitler gamma conversion",
 "label": "conv-bethe-heitler",
-"time": 0.0011434710000000003
+"time": 0.0011486480000000002
 },
 {
 "description": "Rayleigh scattering",
 "label": "scat-rayleigh",
-"time": 0.0012234829999999998
+"time": 0.0012294250000000004
 },
 {
 "description": "interaction sampling failure",
@@ -106,12 +106,12 @@
 {
 "description": "along-step in a uniform field with Urban MSC",
 "label": "along-step-uniform-msc",
-"time": 0.0019223989999999995
+"time": 0.001938777
 },
 {
 "description": "Boundary crossing",
 "label": "geo-boundary",
-"time": 0.001053346
+"time": 0.0010489549999999999
 }
 ],
 "physics": {
@@ -272,34 +272,34 @@
 "process": {},
 "steps": {},
 "time": {
-"setup": 0.292781382,
+"setup": 0.28643944,
 "steps": [
-0.741847456,
-0.001094396,
-0.001112449,
-0.00110964,
-0.001109272,
-0.001103529,
-0.00108069,
-0.001016363,
-0.001013637,
-0.000996366,
-0.000970007,
-0.000970029,
-0.000930994,
-0.000930662,
-0.000916996,
-0.000932552,
-0.000911615,
-0.000880964,
-0.000865331,
-0.000846537,
-0.000847676,
-0.000856042,
-0.000845281,
-0.000833596
+0.742825998,
+0.001108288,
+0.001146587,
+0.001132389,
+0.001140201,
+0.00111339,
+0.001096084,
+0.001037788,
+0.001038297,
+0.001017983,
+0.000986744,
+0.000989274,
+0.000946393,
+0.000941529,
+0.000924879,
+0.000949287,
+0.000911471,
+0.000896056,
+0.000877529,
+0.000857809,
+0.000861999,
+0.000866491,
+0.000861419,
+0.000839916
 ],
-"total": 0.868595236
+"total": 0.871843493
 }
 },
 "system": {

@@ -143,7 +143,7 @@ base_input = {
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 4096,
-    "max_steps": 2**18,
+    "max_steps": 2**20,
     "secondary_stack_factor": 3.0,
     "sync": True,
     "use_device": False,
@@ -164,7 +164,7 @@ use_msc = {"enable_msc": True}
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**19,
-    "max_steps": 2**13,
+    "max_steps": 2**15,
     "initializer_capacity": 2**26,
 }
 
@@ -225,6 +225,9 @@ problems = [
     [simple_cms, use_msc,
         {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
     [testem3],
+    [testem3, no_field],
+    [testem3, no_field,
+        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
     [testem3, no_field, use_msc],
     [full_cms, no_field],
     [full_cms, use_msc],
@@ -377,7 +380,8 @@ async def main():
         result = await asyncio.gather(*tasks)
         del result[-1]
 
-        summaries[str(inp['_name'])] = summary = summarize_all(result)
+        summaries[inp['_outdir']] = summary = summarize_all(result)
+        summary['name'] = inp['_name']
         pprint(summary)
 
     with open(results_dir / 'summaries.json', 'w') as f:
