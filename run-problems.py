@@ -327,7 +327,8 @@ async def run_celeritas(system, results_dir, inp, instance):
     try:
         outdir = results_dir / inp['_outdir']
         outdir.mkdir(exist_ok=True)
-        with open(outdir / f"{instance:d}.json", "w") as f:
+        filename = f"{instance:d}.json"
+        with open(outdir / filename, "w") as f:
             json.dump(result, f, indent=0, sort_keys=True)
     except Exception as e:
         print("Failed to output:", repr(e))
@@ -351,8 +352,8 @@ async def run_jslist():
 
 
 async def main():
-    system = Local()
-    #system = Summit()
+    #system = Local()
+    system = Summit()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
@@ -376,7 +377,7 @@ async def main():
         result = await asyncio.gather(*tasks)
         del result[-1]
 
-        summaries[inp['_name']] = summary = summarize_all(result)
+        summaries[str(inp['_name'])] = summary = summarize_all(result)
         pprint(summary)
 
     with open(results_dir / 'summaries.json', 'w') as f:

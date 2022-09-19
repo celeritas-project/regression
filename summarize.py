@@ -26,7 +26,7 @@ def calc_queue_hwm(queued):
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
-def summarize_result(result):
+def summarize_result(result, internal):
     """Calculate statistics about the tracking behaviors.
 
     These are basically equivalent to those in StepperTestBase.
@@ -45,7 +45,7 @@ def summarize_result(result):
         "total_time": time['total'],
         "queue_hwm": calc_queue_hwm(result['initializers']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
-        "action_times": get_action_times(out['internal']['actions']),
+        "action_times": get_action_times(internal['actions']),
         "avg_steps_per_primary": steps / active[0],
         "avg_time_per_step": time['total'] / steps,
         "avg_time_per_primary": time['total'] / active[0],
@@ -78,7 +78,7 @@ def summarize_system(sys):
 def inp_to_nametuple(d):
     geo_split = PurePath(d['geometry_filename']).name.split('.')
     name = geo_split[0]
-    if d['mag_field']:
+    if d.get('mag_field') and any(d['mag_field']):
         name += '+field'
     if d['enable_msc']:
         name += '+msc'
@@ -112,20 +112,23 @@ def summarize_one(out):
         return failure
 
     try:
-        result = summarize_result(out['result'])
+        result = summarize_result(out['result'], out['internal'])
     except Exception as e:
         return exception_to_dict(e, context='result')
+
+    return result
 
 def summarize_all(instances):
     """Create a summary of all instances that ran.
     """
+    instances = list(instances)
     summaries = [summarize_one(result) for result in instances]
     try:
         single = next((result for result in instances
                         if 'system' in result))
     except StopIteration:
         print("Can't summarize: no runs have system output!")
-        return summaries
+        return {'result': summaries}
 
     return {
         'input': summarize_input(single['input']),
@@ -133,6 +136,33 @@ def summarize_all(instances):
         'result': summaries
     }
 
+def main(index_filename):
+    import json
+    from pathlib import Path
+    from pprint import pprint
+
+    # Load index
+    index_filename = Path(index_filename)
+    with open(index_filename) as f:
+        problems = json.load(f)
+    results_dir = index_filename.parent
+
+    # Load results
+    summaries = {}
+    for subdir, name in problems.items():
+        outdir = results_dir / subdir
+        result_files = sorted(outdir.glob("*.json"))
+        results = []
+        for r in result_files:
+            with open(r) as f:
+                results.append(json.load(f))
+        summaries[subdir] = summary = summarize_all(results)
+        pprint(summary)
+        summary['name'] = name
+
+    with open(results_dir / 'summaries.json', 'w') as f:
+        json.dump(summaries, f, indent=1, sort_keys=True)
+
 if __name__ == "__main__":
-    # TODO: Summarize results
-    pass
+    import sys
+    main(sys.argv[1])
