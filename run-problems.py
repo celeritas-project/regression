@@ -203,8 +203,8 @@ use_msc = {"enable_msc": True}
 
 use_gpu = {
     "use_device": True,
-    "max_num_tracks": 2**19,
-    "max_steps": 2**12,
+    "max_num_tracks": 2**20,
+    "max_steps": 2**11,
     "initializer_capacity": 2**26,
 }
 

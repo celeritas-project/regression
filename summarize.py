@@ -26,7 +26,7 @@ def calc_hwm(counts):
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
-def summarize_result():
+def summarize_result(out):
     """Calculate statistics about the tracking behaviors.
 
     These are basically equivalent to those in StepperTestBase.
