@@ -109,8 +109,13 @@ class Summit(System):
 
         args.extend("".join(["-E", k, "=", v]) for k, v in env.items())
 
+        try:
+            build = self.build_dirs[inp["_geometry"]]
+        except KeyError:
+            build = PurePath("nonexistent")
+
         args.extend([
-            self.build_dirs[inp["_geometry"]] / "app" / "demo-loop",
+            build / "app" / "demo-loop",
             "-"
         ])
 
@@ -127,10 +132,45 @@ class Crusher(System):
         "orange": _CELER_ROOT / 'build-ndebug'
     }
     name = "crusher"
+    # TODO: multi-gpu run
+    # num_jobs = 4
+    # gpu_per_job = 2
+    # cpu_per_job = 16
     num_jobs = 8
-    gpu_per_job = 2
-    cpu_per_job = 16
+    gpu_per_job = 1
+    cpu_per_job = 8
 
+    def create_celer_subprocess(self, inp):
+        cmd = "srun"
+        env = dict(environ)
+        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+
+        args = [
+            f"--cpus-per-task={self.cpu_per_job}",
+        ]
+        if inp['use_device']:
+            args.append("--gpus-per-task=1")
+        else:
+            env["CELER_DISABLE_DEVICE"] = "1"
+            args.append("--gpus=0")
+
+        try:
+            build = self.build_dirs[inp["_geometry"]]
+        except KeyError:
+            build = PurePath("nonexistent")
+
+        args.extend([
+            build / "app" / "demo-loop",
+            "-"
+        ])
+
+        return asyncio.create_subprocess_exec(
+            cmd, *args,
+            stdin=asyncio.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env=env,
+        )
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
@@ -165,7 +205,7 @@ use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**19,
     "max_steps": 2**12,
-    "initializer_capacity": 2**22,
+    "initializer_capacity": 2**27,
 }
 
 no_field = {
@@ -356,7 +396,8 @@ async def run_jslist():
 
 async def main():
     #system = Local()
-    system = Summit()
+    #system = Summit()
+    system = Crusher()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)

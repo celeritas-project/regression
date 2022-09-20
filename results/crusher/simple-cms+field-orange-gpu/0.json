@@ -1,0 +1,17 @@
+{
+"stderr": [
+"status: Loading input and initializing problem data",
+"status: Initializing Geant4",
+"info: Loading geometry from /autofs/nccs-svm1_home1/s3j/celeritas-regression/input/simple-cms.gdml",
+"info: Loading ORANGE geometry from JSON at /autofs/nccs-svm1_home1/s3j/celeritas-regression/input/simple-cms.org.json",
+"/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+"/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+"status: Reading and building Seltzer Berger model data",
+"status: Reading and building Livermore PE model data",
+"status: Transporting",
+":0:rocdevice.cpp            :2614: 3018827146334 us: 4418 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+"srun: error: crusher027: task 0: Aborted (core dumped)",
+"srun: launch/slurm: _step_signal: Terminating StepId=185377.168"
+],
+"stdout": []
+}

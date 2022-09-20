@@ -1,0 +1,5410 @@
+{
+ "cms2018+field+msc-vecgeom-cpu": {
+  "name": [
+   "cms2018+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "cms2018+field+msc-vecgeom-gpu": {
+  "name": [
+   "cms2018+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "cms2018-vecgeom-cpu": {
+  "name": [
+   "cms2018",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "cms2018-vecgeom-gpu": {
+  "name": [
+   "cms2018",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field+msc-orange-cpu": {
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field+msc-orange-gpu": {
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018861170917 us: 12327: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018860802937 us: 12319: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018861040479 us: 12329: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018860710997 us: 12324: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018862480623 us: 12758: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018861834629 us: 12653: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018862142485 us: 12721: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018862240009 us: 12669: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field+msc-vecgeom-cpu": {
+  "name": [
+   "simple-cms+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field+msc-vecgeom-gpu": {
+  "name": [
+   "simple-cms+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field-orange-cpu": {
+  "name": [
+   "simple-cms+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field-orange-gpu": {
+  "name": [
+   "simple-cms+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018827146334 us: 4418 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted (core dumped)"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018827507936 us: 4428 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018828524265 us: 4841 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018827253469 us: 4415 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018828132214 us: 4739 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018827667613 us: 4422 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018830105888 us: 4761 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      ":0:rocdevice.cpp            :2614: 3018829211692 us: 5233 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher027: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": null,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7861911729999962,
+     "brems-rel": 0.01313898100000006,
+     "brems-sb": 0.1872509799999997,
+     "conv-bethe-heitler": 0.03182673100000003,
+     "geo-boundary": 0.02869803299999991,
+     "ioni-moller-bhabha": 0.04048746700000007,
+     "msc-urban": 0.0004260789999999848,
+     "photoel-livermore": 0.08998091299999945,
+     "physics-discrete-select": 0.14978560100000002,
+     "pre-step": 0.7302559289999968,
+     "scat-klein-nishina": 0.3725429569999995,
+     "scat-rayleigh": 0.03794997099999989
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7228
+    },
+    "avg_steps_per_primary": 7243.845458984375,
+    "avg_time_per_primary": 0.0010194414790039063,
+    "avg_time_per_step": 1.4073208557196875e-07,
+    "emptying_step": 7229,
+    "num_primaries": 4096,
+    "num_step_iters": 7306,
+    "num_steps": 29670791,
+    "pre_emptying_time": 0.000527509,
+    "queue_hwm": {
+     "count": 148389,
+     "index": 59
+    },
+    "total_time": 4.175632298,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7771869020000026,
+     "brems-rel": 0.013040306000000217,
+     "brems-sb": 0.185522272,
+     "conv-bethe-heitler": 0.031904321999999964,
+     "geo-boundary": 0.028506420999999848,
+     "ioni-moller-bhabha": 0.04013311700000022,
+     "msc-urban": 0.00044837200000002,
+     "photoel-livermore": 0.0898354589999999,
+     "physics-discrete-select": 0.14900914499999984,
+     "pre-step": 0.7305995490000031,
+     "scat-klein-nishina": 0.37261362100000084,
+     "scat-rayleigh": 0.03770568500000009
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7227
+    },
+    "avg_steps_per_primary": 7250.96484375,
+    "avg_time_per_primary": 0.001022225846923828,
+    "avg_time_per_step": 1.40977906933991e-07,
+    "emptying_step": 7228,
+    "num_primaries": 4096,
+    "num_step_iters": 7309,
+    "num_steps": 29699952,
+    "pre_emptying_time": 0.000563298,
+    "queue_hwm": {
+     "count": 146852,
+     "index": 61
+    },
+    "total_time": 4.187037069,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7805291720000003,
+     "brems-rel": 0.013148224000000083,
+     "brems-sb": 0.1892911789999994,
+     "conv-bethe-heitler": 0.031510131999999996,
+     "geo-boundary": 0.02864333999999999,
+     "ioni-moller-bhabha": 0.04039122499999995,
+     "msc-urban": 0.0004483190000000042,
+     "photoel-livermore": 0.08986178799999973,
+     "physics-discrete-select": 0.14967856899999923,
+     "pre-step": 0.731765708,
+     "scat-klein-nishina": 0.37088650000000084,
+     "scat-rayleigh": 0.03776845199999978
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7232
+    },
+    "avg_steps_per_primary": 7245.983154296875,
+    "avg_time_per_primary": 0.0010183754279785157,
+    "avg_time_per_step": 1.4054344404245794e-07,
+    "emptying_step": 7233,
+    "num_primaries": 4096,
+    "num_step_iters": 7289,
+    "num_steps": 29679547,
+    "pre_emptying_time": 0.000537779,
+    "queue_hwm": {
+     "count": 146896,
+     "index": 60
+    },
+    "total_time": 4.171265753,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7756971570000044,
+     "brems-rel": 0.013115564000000109,
+     "brems-sb": 0.18560996100000043,
+     "conv-bethe-heitler": 0.03181850599999994,
+     "geo-boundary": 0.028750545999999873,
+     "ioni-moller-bhabha": 0.04005019599999978,
+     "msc-urban": 0.0004439000000000101,
+     "photoel-livermore": 0.09005160299999938,
+     "physics-discrete-select": 0.14979777400000016,
+     "pre-step": 0.7314295089999999,
+     "scat-klein-nishina": 0.37244245800000025,
+     "scat-rayleigh": 0.037967106999999944
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7236
+    },
+    "avg_steps_per_primary": 7251.731201171875,
+    "avg_time_per_primary": 0.0010200623364257813,
+    "avg_time_per_step": 1.4066466449569172e-07,
+    "emptying_step": 7237,
+    "num_primaries": 4096,
+    "num_step_iters": 7332,
+    "num_steps": 29703091,
+    "pre_emptying_time": 0.000523501,
+    "queue_hwm": {
+     "count": 147852,
+     "index": 59
+    },
+    "total_time": 4.17817533,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7765445279999983,
+     "brems-rel": 0.012854160999999968,
+     "brems-sb": 0.18646272600000063,
+     "conv-bethe-heitler": 0.03150272600000003,
+     "geo-boundary": 0.02828246599999995,
+     "ioni-moller-bhabha": 0.04025683800000004,
+     "msc-urban": 0.00042148200000000584,
+     "photoel-livermore": 0.08923071599999968,
+     "physics-discrete-select": 0.14840598900000015,
+     "pre-step": 0.7268531900000005,
+     "scat-klein-nishina": 0.37125741700000053,
+     "scat-rayleigh": 0.03770034499999978
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7225
+    },
+    "avg_steps_per_primary": 7241.5732421875,
+    "avg_time_per_primary": 0.0010138762978515626,
+    "avg_time_per_step": 1.4000773919470786e-07,
+    "emptying_step": 7226,
+    "num_primaries": 4096,
+    "num_step_iters": 7303,
+    "num_steps": 29661484,
+    "pre_emptying_time": 0.000555994,
+    "queue_hwm": {
+     "count": 147336,
+     "index": 60
+    },
+    "total_time": 4.152837316,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.7775522250000002,
+     "brems-rel": 0.013787380000000059,
+     "brems-sb": 0.18651576100000003,
+     "conv-bethe-heitler": 0.03252289699999987,
+     "geo-boundary": 0.029260166999999965,
+     "ioni-moller-bhabha": 0.04103017399999992,
+     "msc-urban": 0.0004084369999999907,
+     "photoel-livermore": 0.09053698099999936,
+     "physics-discrete-select": 0.14957732799999968,
+     "pre-step": 0.7286425380000001,
+     "scat-klein-nishina": 0.37370690899999953,
+     "scat-rayleigh": 0.03864512599999977
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7221
+    },
+    "avg_steps_per_primary": 7251.216796875,
+    "avg_time_per_primary": 0.0010175902199707032,
+    "avg_time_per_step": 1.403337189434532e-07,
+    "emptying_step": 7222,
+    "num_primaries": 4096,
+    "num_step_iters": 7326,
+    "num_steps": 29700984,
+    "pre_emptying_time": 0.000553239,
+    "queue_hwm": {
+     "count": 148162,
+     "index": 60
+    },
+    "total_time": 4.168049541,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.788130406999997,
+     "brems-rel": 0.012822401000000011,
+     "brems-sb": 0.18622433299999963,
+     "conv-bethe-heitler": 0.03148898500000006,
+     "geo-boundary": 0.03466558600000023,
+     "ioni-moller-bhabha": 0.0451392549999998,
+     "msc-urban": 0.0004225990000000188,
+     "photoel-livermore": 0.08931225199999981,
+     "physics-discrete-select": 0.16866844800000008,
+     "pre-step": 0.739949763999998,
+     "scat-klein-nishina": 0.3726259750000009,
+     "scat-rayleigh": 0.03761660599999979
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7236
+    },
+    "avg_steps_per_primary": 7257.499755859375,
+    "avg_time_per_primary": 0.0010335760283203125,
+    "avg_time_per_step": 1.424148898504406e-07,
+    "emptying_step": 7237,
+    "num_primaries": 4096,
+    "num_step_iters": 7335,
+    "num_steps": 29726719,
+    "pre_emptying_time": 0.000537699,
+    "queue_hwm": {
+     "count": 148471,
+     "index": 60
+    },
+    "total_time": 4.233527412,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 1.781726030000006,
+     "brems-rel": 0.013371294999999991,
+     "brems-sb": 0.1861825019999995,
+     "conv-bethe-heitler": 0.03177425400000002,
+     "geo-boundary": 0.028632219999999983,
+     "ioni-moller-bhabha": 0.04014768700000001,
+     "msc-urban": 0.00036755799999998274,
+     "photoel-livermore": 0.0897290939999997,
+     "physics-discrete-select": 0.14876575999999977,
+     "pre-step": 0.7361605899999997,
+     "scat-klein-nishina": 0.3728776729999992,
+     "scat-rayleigh": 0.038035703999999816
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7237
+    },
+    "avg_steps_per_primary": 7253.58837890625,
+    "avg_time_per_primary": 0.001018360614501953,
+    "avg_time_per_step": 1.4039404516851134e-07,
+    "emptying_step": 7238,
+    "num_primaries": 4096,
+    "num_step_iters": 7343,
+    "num_steps": 29710698,
+    "pre_emptying_time": 0.000540885,
+    "queue_hwm": {
+     "count": 148512,
+     "index": 60
+    },
+    "total_time": 4.171205077,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "simple-cms+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": null,
+   "use_device": true
+  },
+  "name": [
+   "simple-cms+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.08336197700000003,
+     "brems-rel": 0.005342069000000002,
+     "brems-sb": 0.016517970000000014,
+     "conv-bethe-heitler": 0.009579992,
+     "geo-boundary": 0.009912816999999997,
+     "ioni-moller-bhabha": 0.0088647,
+     "msc-urban": 3.1848000000000045e-05,
+     "photoel-livermore": 0.01714376800000001,
+     "physics-discrete-select": 0.021357330000000015,
+     "pre-step": 0.08646272399999996,
+     "scat-klein-nishina": 0.019925211000000005,
+     "scat-rayleigh": 0.010769647
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2967.6228,
+    "avg_time_per_primary": 3.32835694e-05,
+    "avg_time_per_step": 1.1215566007917179e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 150,
+    "num_steps": 29676228,
+    "pre_emptying_time": 0.003970129,
+    "queue_hwm": {
+     "count": 1799466,
+     "index": 34
+    },
+    "total_time": 0.332835694,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.09168059499999996,
+     "brems-rel": 0.006710092999999999,
+     "brems-sb": 0.01813972000000001,
+     "conv-bethe-heitler": 0.010831819000000006,
+     "geo-boundary": 0.011318562999999993,
+     "ioni-moller-bhabha": 0.010209500000000005,
+     "msc-urban": 3.969999999999999e-05,
+     "photoel-livermore": 0.018557096999999988,
+     "physics-discrete-select": 0.02247322100000001,
+     "pre-step": 0.09148701599999992,
+     "scat-klein-nishina": 0.021316464000000014,
+     "scat-rayleigh": 0.012429366000000004
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2968.9535,
+    "avg_time_per_primary": 3.62661518e-05,
+    "avg_time_per_step": 1.2215129607115774e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 189,
+    "num_steps": 29689535,
+    "pre_emptying_time": 0.003969848,
+    "queue_hwm": {
+     "count": 1804668,
+     "index": 34
+    },
+    "total_time": 0.362661518,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.08858040000000007,
+     "brems-rel": 0.005418836999999999,
+     "brems-sb": 0.016826587000000014,
+     "conv-bethe-heitler": 0.009759712999999998,
+     "geo-boundary": 0.009946270000000002,
+     "ioni-moller-bhabha": 0.009158856000000002,
+     "msc-urban": 3.133700000000004e-05,
+     "photoel-livermore": 0.017194461999999997,
+     "physics-discrete-select": 0.025412404000000006,
+     "pre-step": 0.08935789800000003,
+     "scat-klein-nishina": 0.020102729000000017,
+     "scat-rayleigh": 0.010701024000000002
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2965.7389,
+    "avg_time_per_primary": 3.44037732e-05,
+    "avg_time_per_step": 1.1600405281800094e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 152,
+    "num_steps": 29657389,
+    "pre_emptying_time": 0.003962615,
+    "queue_hwm": {
+     "count": 1786814,
+     "index": 34
+    },
+    "total_time": 0.344037732,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.09060027900000002,
+     "brems-rel": 0.0065202110000000015,
+     "brems-sb": 0.01780551899999999,
+     "conv-bethe-heitler": 0.010737248999999992,
+     "geo-boundary": 0.011036740999999996,
+     "ioni-moller-bhabha": 0.010007316,
+     "msc-urban": 3.801400000000002e-05,
+     "photoel-livermore": 0.018248712000000004,
+     "physics-discrete-select": 0.022447577999999992,
+     "pre-step": 0.09586260300000003,
+     "scat-klein-nishina": 0.021489988,
+     "scat-rayleigh": 0.012189293999999995
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2968.2231,
+    "avg_time_per_primary": 3.62591112e-05,
+    "avg_time_per_step": 1.2215763430990076e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 187,
+    "num_steps": 29682231,
+    "pre_emptying_time": 0.003910984,
+    "queue_hwm": {
+     "count": 1805213,
+     "index": 33
+    },
+    "total_time": 0.362591112,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.08852445399999997,
+     "brems-rel": 0.005725074999999999,
+     "brems-sb": 0.016782810999999995,
+     "conv-bethe-heitler": 0.009743486999999993,
+     "geo-boundary": 0.010249645000000009,
+     "ioni-moller-bhabha": 0.008977162999999995,
+     "msc-urban": 3.477300000000004e-05,
+     "photoel-livermore": 0.017421229000000017,
+     "physics-discrete-select": 0.021447860999999988,
+     "pre-step": 0.08790247799999996,
+     "scat-klein-nishina": 0.020264338,
+     "scat-rayleigh": 0.011010670999999994
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2971.8712,
+    "avg_time_per_primary": 3.41719916e-05,
+    "avg_time_per_step": 1.1498476649997484e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 165,
+    "num_steps": 29718712,
+    "pre_emptying_time": 0.004098528,
+    "queue_hwm": {
+     "count": 1797614,
+     "index": 34
+    },
+    "total_time": 0.341719916,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.090448986,
+     "brems-rel": 0.006534520999999999,
+     "brems-sb": 0.018199399000000005,
+     "conv-bethe-heitler": 0.010759493999999996,
+     "geo-boundary": 0.011040962000000001,
+     "ioni-moller-bhabha": 0.009610044,
+     "msc-urban": 4.118700000000001e-05,
+     "photoel-livermore": 0.018528243000000017,
+     "physics-discrete-select": 0.022602898000000017,
+     "pre-step": 0.09089734799999998,
+     "scat-klein-nishina": 0.021233159999999997,
+     "scat-rayleigh": 0.01189785000000001
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2971.0699,
+    "avg_time_per_primary": 3.58704494e-05,
+    "avg_time_per_step": 1.2073243177482966e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 183,
+    "num_steps": 29710699,
+    "pre_emptying_time": 0.003931755,
+    "queue_hwm": {
+     "count": 1810452,
+     "index": 34
+    },
+    "total_time": 0.358704494,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.08533237300000002,
+     "brems-rel": 0.0056228910000000005,
+     "brems-sb": 0.016761386000000003,
+     "conv-bethe-heitler": 0.010196583999999995,
+     "geo-boundary": 0.010151514,
+     "ioni-moller-bhabha": 0.009091030999999994,
+     "msc-urban": 3.285300000000003e-05,
+     "photoel-livermore": 0.017557655999999998,
+     "physics-discrete-select": 0.02156653700000001,
+     "pre-step": 0.08765036199999995,
+     "scat-klein-nishina": 0.020429060000000006,
+     "scat-rayleigh": 0.011067327000000009
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2968.2614,
+    "avg_time_per_primary": 3.40218285e-05,
+    "avg_time_per_step": 1.1461870743594214e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 160,
+    "num_steps": 29682614,
+    "pre_emptying_time": 0.003952715,
+    "queue_hwm": {
+     "count": 1798177,
+     "index": 33
+    },
+    "total_time": 0.340218285,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.08210226100000001,
+     "brems-rel": 0.005243922000000001,
+     "brems-sb": 0.016178732000000008,
+     "conv-bethe-heitler": 0.009144214999999999,
+     "geo-boundary": 0.009629534,
+     "ioni-moller-bhabha": 0.008716399999999996,
+     "msc-urban": 2.9386000000000047e-05,
+     "photoel-livermore": 0.016750198999999986,
+     "physics-discrete-select": 0.020920079000000008,
+     "pre-step": 0.08598436700000002,
+     "scat-klein-nishina": 0.01975211100000001,
+     "scat-rayleigh": 0.010511872
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2969.5873,
+    "avg_time_per_primary": 3.2617335400000006e-05,
+    "avg_time_per_step": 1.098379407805253e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 143,
+    "num_steps": 29695873,
+    "pre_emptying_time": 0.003889774,
+    "queue_hwm": {
+     "count": 1816335,
+     "index": 34
+    },
+    "total_time": 0.326173354,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_general_linear": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": false
+  },
+  "name": [
+   "testem15+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.019898698999999995,
+     "brems-rel": 0.000132768,
+     "brems-sb": 0.0022291890000000008,
+     "conv-bethe-heitler": 0.00018516899999999995,
+     "geo-boundary": 0.0002746390000000001,
+     "ioni-moller-bhabha": 0.00019876699999999998,
+     "msc-urban": 4.3539999999999985e-06,
+     "photoel-livermore": 0.0014707889999999995,
+     "physics-discrete-select": 0.001782751,
+     "pre-step": 0.006570664000000002,
+     "scat-klein-nishina": 0.0029957220000000006,
+     "scat-rayleigh": 0.000376028
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.47900390625,
+    "avg_time_per_primary": 1.7269951416015626e-05,
+    "avg_time_per_step": 3.170019673218431e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223146,
+    "pre_emptying_time": 0.000765649,
+    "queue_hwm": {
+     "count": 16019,
+     "index": 4
+    },
+    "total_time": 0.070737721,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.018860807999999996,
+     "brems-rel": 0.00012247999999999998,
+     "brems-sb": 0.0020128079999999996,
+     "conv-bethe-heitler": 0.00016335600000000003,
+     "geo-boundary": 0.000244455,
+     "ioni-moller-bhabha": 0.00018036299999999995,
+     "msc-urban": 4.494999999999999e-06,
+     "photoel-livermore": 0.0013834930000000004,
+     "physics-discrete-select": 0.0016303900000000004,
+     "pre-step": 0.009092702999999995,
+     "scat-klein-nishina": 0.002866648,
+     "scat-rayleigh": 0.0003356480000000001
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 47
+    },
+    "avg_steps_per_primary": 54.57470703125,
+    "avg_time_per_primary": 2.2161380126953125e-05,
+    "avg_time_per_step": 4.0607419320205066e-07,
+    "emptying_step": 48,
+    "num_primaries": 4096,
+    "num_step_iters": 65,
+    "num_steps": 223538,
+    "pre_emptying_time": 0.000709571,
+    "queue_hwm": {
+     "count": 15733,
+     "index": 4
+    },
+    "total_time": 0.090773013,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.018901341000000006,
+     "brems-rel": 0.00012924100000000007,
+     "brems-sb": 0.0020263049999999995,
+     "conv-bethe-heitler": 0.00017335799999999998,
+     "geo-boundary": 0.00025110499999999995,
+     "ioni-moller-bhabha": 0.000189451,
+     "msc-urban": 3.977999999999997e-06,
+     "photoel-livermore": 0.0013481810000000004,
+     "physics-discrete-select": 0.0016306309999999998,
+     "pre-step": 0.005905447,
+     "scat-klein-nishina": 0.0028235160000000003,
+     "scat-rayleigh": 0.00034799499999999987
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.512939453125,
+    "avg_time_per_primary": 1.8312993896484374e-05,
+    "avg_time_per_step": 3.35938477730255e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 65,
+    "num_steps": 223285,
+    "pre_emptying_time": 0.000666277,
+    "queue_hwm": {
+     "count": 15898,
+     "index": 4
+    },
+    "total_time": 0.075010023,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.018580403000000006,
+     "brems-rel": 0.000122935,
+     "brems-sb": 0.0019830299999999993,
+     "conv-bethe-heitler": 0.00017199200000000004,
+     "geo-boundary": 0.000244493,
+     "ioni-moller-bhabha": 0.00018063700000000004,
+     "msc-urban": 3.887999999999999e-06,
+     "photoel-livermore": 0.0013394300000000006,
+     "physics-discrete-select": 0.0016147910000000004,
+     "pre-step": 0.005862192999999997,
+     "scat-klein-nishina": 0.002783045,
+     "scat-rayleigh": 0.00033900599999999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 47
+    },
+    "avg_steps_per_primary": 54.55224609375,
+    "avg_time_per_primary": 1.5647833740234374e-05,
+    "avg_time_per_step": 2.868412368088934e-07,
+    "emptying_step": 48,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223446,
+    "pre_emptying_time": 0.000715061,
+    "queue_hwm": {
+     "count": 15878,
+     "index": 4
+    },
+    "total_time": 0.064093527,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.020900022999999997,
+     "brems-rel": 0.00012407699999999997,
+     "brems-sb": 0.0021697559999999997,
+     "conv-bethe-heitler": 0.00017086899999999995,
+     "geo-boundary": 0.00025524300000000005,
+     "ioni-moller-bhabha": 0.00018617800000000003,
+     "msc-urban": 3.893999999999999e-06,
+     "photoel-livermore": 0.001419449,
+     "physics-discrete-select": 0.0017146199999999996,
+     "pre-step": 0.006480917999999998,
+     "scat-klein-nishina": 0.002878741000000001,
+     "scat-rayleigh": 0.000349745
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 51
+    },
+    "avg_steps_per_primary": 55.146728515625,
+    "avg_time_per_primary": 2.1725582275390626e-05,
+    "avg_time_per_step": 3.939595849141805e-07,
+    "emptying_step": 52,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 225881,
+    "pre_emptying_time": 0.000642141,
+    "queue_hwm": {
+     "count": 15954,
+     "index": 4
+    },
+    "total_time": 0.088987985,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.018359165000000007,
+     "brems-rel": 0.00011916999999999999,
+     "brems-sb": 0.0019278480000000009,
+     "conv-bethe-heitler": 0.00016932899999999994,
+     "geo-boundary": 0.000232182,
+     "ioni-moller-bhabha": 0.00018825100000000004,
+     "msc-urban": 3.7899999999999993e-06,
+     "photoel-livermore": 0.001359396,
+     "physics-discrete-select": 0.001557611,
+     "pre-step": 0.006179389999999999,
+     "scat-klein-nishina": 0.0027862209999999997,
+     "scat-rayleigh": 0.00032802
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.152587890625,
+    "avg_time_per_primary": 1.541550244140625e-05,
+    "avg_time_per_step": 2.8466788092457924e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 66,
+    "num_steps": 221809,
+    "pre_emptying_time": 0.000660105,
+    "queue_hwm": {
+     "count": 15750,
+     "index": 4
+    },
+    "total_time": 0.063141898,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.05874305899999999,
+     "brems-rel": 0.025797913000000002,
+     "brems-sb": 0.028010076,
+     "conv-bethe-heitler": 0.021524998000000004,
+     "geo-boundary": 0.032377006999999985,
+     "ioni-moller-bhabha": 0.042082793,
+     "msc-urban": 3.997999999999999e-06,
+     "photoel-livermore": 0.027178258999999996,
+     "physics-discrete-select": 0.04667138600000001,
+     "pre-step": 0.045522534999999996,
+     "scat-klein-nishina": 0.028635365,
+     "scat-rayleigh": 0.026053760000000006
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 51
+    },
+    "avg_steps_per_primary": 54.8447265625,
+    "avg_time_per_primary": 0.00012065036474609375,
+    "avg_time_per_step": 2.1998535193461654e-06,
+    "emptying_step": 52,
+    "num_primaries": 4096,
+    "num_step_iters": 65,
+    "num_steps": 224644,
+    "pre_emptying_time": 0.000647771,
+    "queue_hwm": {
+     "count": 15788,
+     "index": 4
+    },
+    "total_time": 0.494183894,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.05819405499999997,
+     "brems-rel": 0.03218591399999998,
+     "brems-sb": 0.030266634000000014,
+     "conv-bethe-heitler": 0.025899390999999997,
+     "geo-boundary": 0.038777007999999974,
+     "ioni-moller-bhabha": 0.038908985,
+     "msc-urban": 4.151999999999997e-06,
+     "photoel-livermore": 0.020660667999999993,
+     "physics-discrete-select": 0.040202576,
+     "pre-step": 0.04468786099999997,
+     "scat-klein-nishina": 0.028538166999999996,
+     "scat-rayleigh": 0.031085376
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 47
+    },
+    "avg_steps_per_primary": 54.443603515625,
+    "avg_time_per_primary": 0.00012204678002929688,
+    "avg_time_per_step": 2.241710176187551e-06,
+    "emptying_step": 48,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223001,
+    "pre_emptying_time": 0.000700683,
+    "queue_hwm": {
+     "count": 15736,
+     "index": 4
+    },
+    "total_time": 0.499903611,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15+field+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": true
+  },
+  "name": [
+   "testem15+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004398814,
+     "brems-rel": 0.0016081550000000002,
+     "brems-sb": 0.0019987900000000003,
+     "conv-bethe-heitler": 0.0016280620000000002,
+     "geo-boundary": 0.001676717,
+     "ioni-moller-bhabha": 0.0019748409999999997,
+     "msc-urban": 5.123e-06,
+     "photoel-livermore": 0.002166848,
+     "physics-discrete-select": 0.0020671109999999995,
+     "pre-step": 0.004321215000000001,
+     "scat-klein-nishina": 0.0016897329999999995,
+     "scat-rayleigh": 0.0021983579999999996
+    },
+    "active_hwm": {
+     "count": 36603,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.6497,
+    "avg_time_per_primary": 5.3410521e-06,
+    "avg_time_per_step": 2.3581116306176242e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 226497,
+    "pre_emptying_time": 0.000961137,
+    "queue_hwm": {
+     "count": 12943,
+     "index": 3
+    },
+    "total_time": 0.053410521,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0045435250000000005,
+     "brems-rel": 0.001387461,
+     "brems-sb": 0.0019631270000000003,
+     "conv-bethe-heitler": 0.0015952750000000002,
+     "geo-boundary": 0.0015710880000000002,
+     "ioni-moller-bhabha": 0.0016341350000000003,
+     "msc-urban": 5.157e-06,
+     "photoel-livermore": 0.0019026839999999995,
+     "physics-discrete-select": 0.0017671439999999996,
+     "pre-step": 0.004544820000000001,
+     "scat-klein-nishina": 0.001718029,
+     "scat-rayleigh": 0.001809245
+    },
+    "active_hwm": {
+     "count": 36276,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4487,
+    "avg_time_per_primary": 5.105991e-06,
+    "avg_time_per_step": 2.274515228053295e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 23,
+    "num_steps": 224487,
+    "pre_emptying_time": 0.000933363,
+    "queue_hwm": {
+     "count": 12823,
+     "index": 2
+    },
+    "total_time": 0.05105991,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004871782999999999,
+     "brems-rel": 0.0015447459999999996,
+     "brems-sb": 0.00195588,
+     "conv-bethe-heitler": 0.0017827329999999999,
+     "geo-boundary": 0.0014821039999999995,
+     "ioni-moller-bhabha": 0.0014786019999999999,
+     "msc-urban": 5.118999999999999e-06,
+     "photoel-livermore": 0.001870614,
+     "physics-discrete-select": 0.0018690579999999998,
+     "pre-step": 0.004592741,
+     "scat-klein-nishina": 0.0016565189999999995,
+     "scat-rayleigh": 0.001761943
+    },
+    "active_hwm": {
+     "count": 36130,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.3211,
+    "avg_time_per_primary": 5.2833656e-06,
+    "avg_time_per_step": 2.3669826307843252e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 24,
+    "num_steps": 223211,
+    "pre_emptying_time": 0.000966326,
+    "queue_hwm": {
+     "count": 12706,
+     "index": 3
+    },
+    "total_time": 0.052833656,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004321726,
+     "brems-rel": 0.001392728,
+     "brems-sb": 0.0018699839999999999,
+     "conv-bethe-heitler": 0.0015756859999999998,
+     "geo-boundary": 0.0014284,
+     "ioni-moller-bhabha": 0.0014557690000000002,
+     "msc-urban": 4.880000000000001e-06,
+     "photoel-livermore": 0.001910051,
+     "physics-discrete-select": 0.0017561240000000002,
+     "pre-step": 0.00419282,
+     "scat-klein-nishina": 0.0017027570000000003,
+     "scat-rayleigh": 0.0017887039999999997
+    },
+    "active_hwm": {
+     "count": 36045,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.3549,
+    "avg_time_per_primary": 4.9752245e-06,
+    "avg_time_per_step": 2.2255632993214017e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 223549,
+    "pre_emptying_time": 0.000933604,
+    "queue_hwm": {
+     "count": 12693,
+     "index": 2
+    },
+    "total_time": 0.049752245,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004953487,
+     "brems-rel": 0.001447687,
+     "brems-sb": 0.0018764740000000002,
+     "conv-bethe-heitler": 0.0017169449999999997,
+     "geo-boundary": 0.0015658670000000005,
+     "ioni-moller-bhabha": 0.0016087800000000002,
+     "msc-urban": 4.555e-06,
+     "photoel-livermore": 0.002135862999999999,
+     "physics-discrete-select": 0.0020391790000000003,
+     "pre-step": 0.004605207000000001,
+     "scat-klein-nishina": 0.001722871,
+     "scat-rayleigh": 0.0017014950000000001
+    },
+    "active_hwm": {
+     "count": 36319,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4367,
+    "avg_time_per_primary": 5.3666565e-06,
+    "avg_time_per_step": 2.391909906537058e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 224367,
+    "pre_emptying_time": 0.000938753,
+    "queue_hwm": {
+     "count": 12849,
+     "index": 2
+    },
+    "total_time": 0.053666565,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004413626000000001,
+     "brems-rel": 0.0014090330000000005,
+     "brems-sb": 0.00194087,
+     "conv-bethe-heitler": 0.001854333,
+     "geo-boundary": 0.0013787210000000003,
+     "ioni-moller-bhabha": 0.0015043749999999999,
+     "msc-urban": 4.922000000000001e-06,
+     "photoel-livermore": 0.0020337589999999996,
+     "physics-discrete-select": 0.0017335190000000004,
+     "pre-step": 0.004207018000000001,
+     "scat-klein-nishina": 0.0018722290000000004,
+     "scat-rayleigh": 0.001953273
+    },
+    "active_hwm": {
+     "count": 36328,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4962,
+    "avg_time_per_primary": 5.0866796999999996e-06,
+    "avg_time_per_step": 2.261128412798606e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 224962,
+    "pre_emptying_time": 0.000944815,
+    "queue_hwm": {
+     "count": 12822,
+     "index": 2
+    },
+    "total_time": 0.050866797,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004446459000000001,
+     "brems-rel": 0.0013991799999999997,
+     "brems-sb": 0.0019891120000000003,
+     "conv-bethe-heitler": 0.0019272510000000003,
+     "geo-boundary": 0.0014954279999999998,
+     "ioni-moller-bhabha": 0.0014616940000000004,
+     "msc-urban": 4.652e-06,
+     "photoel-livermore": 0.0021411459999999996,
+     "physics-discrete-select": 0.001797291,
+     "pre-step": 0.004321846999999999,
+     "scat-klein-nishina": 0.0018534620000000006,
+     "scat-rayleigh": 0.0019233920000000001
+    },
+    "active_hwm": {
+     "count": 36042,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4948,
+    "avg_time_per_primary": 5.0737868e-06,
+    "avg_time_per_step": 2.2555376353646175e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 21,
+    "num_steps": 224948,
+    "pre_emptying_time": 0.000941298,
+    "queue_hwm": {
+     "count": 12743,
+     "index": 3
+    },
+    "total_time": 0.050737868,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.00428426,
+     "brems-rel": 0.0014978710000000002,
+     "brems-sb": 0.001903998,
+     "conv-bethe-heitler": 0.001643444,
+     "geo-boundary": 0.0014257819999999998,
+     "ioni-moller-bhabha": 0.001701165,
+     "msc-urban": 4.599999999999999e-06,
+     "photoel-livermore": 0.001969883,
+     "physics-discrete-select": 0.001807284,
+     "pre-step": 0.004426678,
+     "scat-klein-nishina": 0.0016134250000000006,
+     "scat-rayleigh": 0.0018383450000000001
+    },
+    "active_hwm": {
+     "count": 36070,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.3111,
+    "avg_time_per_primary": 5.0036422999999995e-06,
+    "avg_time_per_step": 2.242669478421055e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 223111,
+    "pre_emptying_time": 0.000939675,
+    "queue_hwm": {
+     "count": 12754,
+     "index": 2
+    },
+    "total_time": 0.050036423,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_uniform_msc": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15+field+msc-vecgeom-cpu": {
+  "name": [
+   "testem15+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "testem15+field+msc-vecgeom-gpu": {
+  "name": [
+   "testem15+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "testem15+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": false
+  },
+  "name": [
+   "testem15+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.009935942000000003,
+     "brems-rel": 0.000128879,
+     "brems-sb": 0.0020433070000000007,
+     "conv-bethe-heitler": 0.00018829700000000003,
+     "geo-boundary": 0.0002633700000000001,
+     "ioni-moller-bhabha": 0.0001910379999999999,
+     "photoel-livermore": 0.001379674999999999,
+     "physics-discrete-select": 0.0015965690000000002,
+     "pre-step": 0.005818504000000003,
+     "scat-klein-nishina": 0.002763442,
+     "scat-rayleigh": 0.0003429680000000001
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.1416015625,
+    "avg_time_per_primary": 1.3502459228515624e-05,
+    "avg_time_per_step": 2.4939157392543424e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 221764,
+    "pre_emptying_time": 0.000506819,
+    "queue_hwm": {
+     "count": 15888,
+     "index": 4
+    },
+    "total_time": 0.055306073,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.009814197999999998,
+     "brems-rel": 0.000127447,
+     "brems-sb": 0.0019247639999999998,
+     "conv-bethe-heitler": 0.00017308500000000007,
+     "geo-boundary": 0.000239458,
+     "ioni-moller-bhabha": 0.00019446600000000002,
+     "photoel-livermore": 0.0013822410000000002,
+     "physics-discrete-select": 0.0015623600000000005,
+     "pre-step": 0.005764014,
+     "scat-klein-nishina": 0.002837209,
+     "scat-rayleigh": 0.0003514599999999999
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.184326171875,
+    "avg_time_per_primary": 1.3373496826171875e-05,
+    "avg_time_per_step": 2.468148590378437e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 66,
+    "num_steps": 221939,
+    "pre_emptying_time": 0.000535114,
+    "queue_hwm": {
+     "count": 15771,
+     "index": 4
+    },
+    "total_time": 0.054777843,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.009797074999999999,
+     "brems-rel": 0.00012501500000000002,
+     "brems-sb": 0.0019422929999999999,
+     "conv-bethe-heitler": 0.00016765499999999998,
+     "geo-boundary": 0.00024760799999999996,
+     "ioni-moller-bhabha": 0.00020003400000000006,
+     "photoel-livermore": 0.0013695200000000002,
+     "physics-discrete-select": 0.0015568170000000003,
+     "pre-step": 0.008256906999999999,
+     "scat-klein-nishina": 0.0027994360000000006,
+     "scat-rayleigh": 0.00034305600000000006
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.251220703125,
+    "avg_time_per_primary": 1.9796710205078125e-05,
+    "avg_time_per_step": 3.6490810618640677e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 222213,
+    "pre_emptying_time": 0.000556425,
+    "queue_hwm": {
+     "count": 15872,
+     "index": 4
+    },
+    "total_time": 0.081087325,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.009948460999999997,
+     "brems-rel": 0.00012350200000000002,
+     "brems-sb": 0.002036393,
+     "conv-bethe-heitler": 0.00016839,
+     "geo-boundary": 0.00024260700000000002,
+     "ioni-moller-bhabha": 0.00019782900000000003,
+     "photoel-livermore": 0.001343955,
+     "physics-discrete-select": 0.0016106429999999997,
+     "pre-step": 0.009781394,
+     "scat-klein-nishina": 0.0027655170000000008,
+     "scat-rayleigh": 0.00035119399999999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.43701171875,
+    "avg_time_per_primary": 2.0531770263671877e-05,
+    "avg_time_per_step": 3.771656381461516e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 222974,
+    "pre_emptying_time": 0.00050189,
+    "queue_hwm": {
+     "count": 15788,
+     "index": 4
+    },
+    "total_time": 0.084098131,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.010021037000000005,
+     "brems-rel": 0.00012371999999999996,
+     "brems-sb": 0.0019561480000000004,
+     "conv-bethe-heitler": 0.00017403299999999995,
+     "geo-boundary": 0.00024384599999999998,
+     "ioni-moller-bhabha": 0.000197685,
+     "photoel-livermore": 0.0013927380000000001,
+     "physics-discrete-select": 0.0015949029999999995,
+     "pre-step": 0.005855031999999998,
+     "scat-klein-nishina": 0.0028583740000000003,
+     "scat-rayleigh": 0.00034573399999999994
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.996337890625,
+    "avg_time_per_primary": 1.3371400390625e-05,
+    "avg_time_per_step": 2.431325594300047e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 70,
+    "num_steps": 225265,
+    "pre_emptying_time": 0.000482813,
+    "queue_hwm": {
+     "count": 15995,
+     "index": 4
+    },
+    "total_time": 0.054769256,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.009885024,
+     "brems-rel": 0.000122507,
+     "brems-sb": 0.0020354389999999996,
+     "conv-bethe-heitler": 0.00017946700000000002,
+     "geo-boundary": 0.00023781900000000003,
+     "ioni-moller-bhabha": 0.00019294899999999993,
+     "photoel-livermore": 0.0013595370000000005,
+     "physics-discrete-select": 0.001579,
+     "pre-step": 0.005793917000000001,
+     "scat-klein-nishina": 0.0027862599999999996,
+     "scat-rayleigh": 0.0003473299999999998
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 47
+    },
+    "avg_steps_per_primary": 54.341552734375,
+    "avg_time_per_primary": 1.3314535400390624e-05,
+    "avg_time_per_step": 2.4501573345673296e-07,
+    "emptying_step": 48,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 222583,
+    "pre_emptying_time": 0.000540634,
+    "queue_hwm": {
+     "count": 15760,
+     "index": 4
+    },
+    "total_time": 0.054536337,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.024257302999999997,
+     "brems-rel": 0.012963109999999993,
+     "brems-sb": 0.014904265000000002,
+     "conv-bethe-heitler": 0.010555033000000002,
+     "geo-boundary": 0.013148820000000002,
+     "ioni-moller-bhabha": 0.013026389999999994,
+     "photoel-livermore": 0.014292487000000005,
+     "physics-discrete-select": 0.014631623999999996,
+     "pre-step": 0.020487981,
+     "scat-klein-nishina": 0.01581253899999999,
+     "scat-rayleigh": 0.00036262299999999996
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 47
+    },
+    "avg_steps_per_primary": 54.78369140625,
+    "avg_time_per_primary": 5.15163466796875e-05,
+    "avg_time_per_step": 9.403591718138631e-07,
+    "emptying_step": 48,
+    "num_primaries": 4096,
+    "num_step_iters": 66,
+    "num_steps": 224394,
+    "pre_emptying_time": 0.000584168,
+    "queue_hwm": {
+     "count": 15895,
+     "index": 4
+    },
+    "total_time": 0.211010956,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.024590458,
+     "brems-rel": 0.0069177530000000004,
+     "brems-sb": 0.02140376700000002,
+     "conv-bethe-heitler": 0.00016490700000000003,
+     "geo-boundary": 0.013132197999999994,
+     "ioni-moller-bhabha": 0.013035516,
+     "photoel-livermore": 0.008809615,
+     "physics-discrete-select": 0.014498144999999999,
+     "pre-step": 0.013686444000000004,
+     "scat-klein-nishina": 0.0027627280000000008,
+     "scat-rayleigh": 0.0003333450000000001
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.270263671875,
+    "avg_time_per_primary": 4.398989404296875e-05,
+    "avg_time_per_step": 8.105708553202784e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 65,
+    "num_steps": 222291,
+    "pre_emptying_time": 0.0005589,
+    "queue_hwm": {
+     "count": 15800,
+     "index": 4
+    },
+    "total_time": 0.180182606,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15+field-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": true
+  },
+  "name": [
+   "testem15+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0034389229999999995,
+     "brems-rel": 0.0013939000000000002,
+     "brems-sb": 0.001997091,
+     "conv-bethe-heitler": 0.0015743919999999998,
+     "geo-boundary": 0.0013249289999999999,
+     "ioni-moller-bhabha": 0.0016360219999999998,
+     "photoel-livermore": 0.0018957960000000002,
+     "physics-discrete-select": 0.0016378020000000003,
+     "pre-step": 0.004404617,
+     "scat-klein-nishina": 0.0016209710000000001,
+     "scat-rayleigh": 0.0017405320000000001
+    },
+    "active_hwm": {
+     "count": 36438,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4786,
+    "avg_time_per_primary": 5.0025473e-06,
+    "avg_time_per_step": 2.2254710257756266e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 224786,
+    "pre_emptying_time": 0.000880111,
+    "queue_hwm": {
+     "count": 12821,
+     "index": 2
+    },
+    "total_time": 0.050025473,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.003416511,
+     "brems-rel": 0.001448228,
+     "brems-sb": 0.0020257790000000006,
+     "conv-bethe-heitler": 0.001646058,
+     "geo-boundary": 0.001600152,
+     "ioni-moller-bhabha": 0.0015529219999999998,
+     "photoel-livermore": 0.001803371,
+     "physics-discrete-select": 0.0018657339999999998,
+     "pre-step": 0.004619796,
+     "scat-klein-nishina": 0.00165203,
+     "scat-rayleigh": 0.0017816730000000003
+    },
+    "active_hwm": {
+     "count": 36573,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.584,
+    "avg_time_per_primary": 5.1952785e-06,
+    "avg_time_per_step": 2.3004244155154093e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 23,
+    "num_steps": 225840,
+    "pre_emptying_time": 0.000881854,
+    "queue_hwm": {
+     "count": 12944,
+     "index": 3
+    },
+    "total_time": 0.051952785,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0035280740000000004,
+     "brems-rel": 0.001339845,
+     "brems-sb": 0.0019479330000000002,
+     "conv-bethe-heitler": 0.0017385010000000002,
+     "geo-boundary": 0.0015558540000000004,
+     "ioni-moller-bhabha": 0.001835966,
+     "photoel-livermore": 0.0018718970000000004,
+     "physics-discrete-select": 0.001831649,
+     "pre-step": 0.004246225,
+     "scat-klein-nishina": 0.0017112849999999999,
+     "scat-rayleigh": 0.0018993089999999996
+    },
+    "active_hwm": {
+     "count": 36144,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.421,
+    "avg_time_per_primary": 5.049539e-06,
+    "avg_time_per_step": 2.2521470942420053e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 20,
+    "num_steps": 224210,
+    "pre_emptying_time": 0.000875,
+    "queue_hwm": {
+     "count": 12722,
+     "index": 2
+    },
+    "total_time": 0.05049539,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0037292669999999997,
+     "brems-rel": 0.0013878629999999998,
+     "brems-sb": 0.0022082459999999996,
+     "conv-bethe-heitler": 0.001727575,
+     "geo-boundary": 0.0017359020000000008,
+     "ioni-moller-bhabha": 0.001772541,
+     "photoel-livermore": 0.0021927439999999995,
+     "physics-discrete-select": 0.0019510400000000005,
+     "pre-step": 0.004678404,
+     "scat-klein-nishina": 0.001649076,
+     "scat-rayleigh": 0.0017799640000000002
+    },
+    "active_hwm": {
+     "count": 35877,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.2812,
+    "avg_time_per_primary": 5.238505e-06,
+    "avg_time_per_step": 2.3510874638708868e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 23,
+    "num_steps": 222812,
+    "pre_emptying_time": 0.000872876,
+    "queue_hwm": {
+     "count": 12632,
+     "index": 2
+    },
+    "total_time": 0.05238505,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0035413800000000002,
+     "brems-rel": 0.0013883900000000002,
+     "brems-sb": 0.001921735,
+     "conv-bethe-heitler": 0.0015910350000000004,
+     "geo-boundary": 0.001519014,
+     "ioni-moller-bhabha": 0.0015221779999999997,
+     "photoel-livermore": 0.0018632289999999999,
+     "physics-discrete-select": 0.001760461,
+     "pre-step": 0.0046688139999999986,
+     "scat-klein-nishina": 0.0016641159999999996,
+     "scat-rayleigh": 0.0017965580000000006
+    },
+    "active_hwm": {
+     "count": 35988,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.2862,
+    "avg_time_per_primary": 5.2204491e-06,
+    "avg_time_per_step": 2.342458157963224e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 24,
+    "num_steps": 222862,
+    "pre_emptying_time": 0.000896051,
+    "queue_hwm": {
+     "count": 12631,
+     "index": 2
+    },
+    "total_time": 0.052204491,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.003777087999999999,
+     "brems-rel": 0.0015816560000000003,
+     "brems-sb": 0.002266965,
+     "conv-bethe-heitler": 0.0017134290000000005,
+     "geo-boundary": 0.0014868510000000004,
+     "ioni-moller-bhabha": 0.0016630909999999996,
+     "photoel-livermore": 0.0019171380000000003,
+     "physics-discrete-select": 0.001771573,
+     "pre-step": 0.004683728,
+     "scat-klein-nishina": 0.0017481379999999998,
+     "scat-rayleigh": 0.001926472
+    },
+    "active_hwm": {
+     "count": 35995,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.369,
+    "avg_time_per_primary": 5.183153e-06,
+    "avg_time_per_step": 2.3171143099825652e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 25,
+    "num_steps": 223690,
+    "pre_emptying_time": 0.0008644,
+    "queue_hwm": {
+     "count": 12660,
+     "index": 2
+    },
+    "total_time": 0.05183153,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.0032596260000000003,
+     "brems-rel": 0.001276654,
+     "brems-sb": 0.0018663649999999996,
+     "conv-bethe-heitler": 0.0015568370000000002,
+     "geo-boundary": 0.001394596,
+     "ioni-moller-bhabha": 0.001489765,
+     "photoel-livermore": 0.001766414,
+     "physics-discrete-select": 0.0018008079999999992,
+     "pre-step": 0.004132801,
+     "scat-klein-nishina": 0.0016419410000000003,
+     "scat-rayleigh": 0.00177144
+    },
+    "active_hwm": {
+     "count": 36254,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4284,
+    "avg_time_per_primary": 4.8132966e-06,
+    "avg_time_per_step": 2.146072212016907e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 224284,
+    "pre_emptying_time": 0.000881713,
+    "queue_hwm": {
+     "count": 12783,
+     "index": 2
+    },
+    "total_time": 0.048132966,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.003546312999999999,
+     "brems-rel": 0.0012546430000000002,
+     "brems-sb": 0.001964013,
+     "conv-bethe-heitler": 0.001495638,
+     "geo-boundary": 0.0016292780000000003,
+     "ioni-moller-bhabha": 0.001747504,
+     "photoel-livermore": 0.0018128449999999996,
+     "physics-discrete-select": 0.001608505,
+     "pre-step": 0.004171147,
+     "scat-klein-nishina": 0.001466222,
+     "scat-rayleigh": 0.001669861
+    },
+    "active_hwm": {
+     "count": 36033,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.3056,
+    "avg_time_per_primary": 4.7672966999999995e-06,
+    "avg_time_per_step": 2.137264498601248e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 21,
+    "num_steps": 223056,
+    "pre_emptying_time": 0.000893656,
+    "queue_hwm": {
+     "count": 12694,
+     "index": 2
+    },
+    "total_time": 0.047672967,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_uniform_msc": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": null,
+   "use_device": false
+  },
+  "name": [
+   "testem15",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007645646000000002,
+     "brems-rel": 0.000132163,
+     "brems-sb": 0.0020928829999999994,
+     "conv-bethe-heitler": 0.00017801699999999996,
+     "geo-boundary": 0.000264814,
+     "ioni-moller-bhabha": 0.00019323,
+     "photoel-livermore": 0.0013830000000000001,
+     "physics-discrete-select": 0.0016643560000000007,
+     "pre-step": 0.005907810999999999,
+     "scat-klein-nishina": 0.0029697650000000005,
+     "scat-rayleigh": 0.000354065
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49
+    },
+    "avg_steps_per_primary": 54.427978515625,
+    "avg_time_per_primary": 1.7146216552734374e-05,
+    "avg_time_per_step": 3.150257830687593e-07,
+    "emptying_step": 50,
+    "num_primaries": 4096,
+    "num_step_iters": 69,
+    "num_steps": 222937,
+    "pre_emptying_time": 0.000540154,
+    "queue_hwm": {
+     "count": 15725,
+     "index": 4
+    },
+    "total_time": 0.070230903,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007558297999999999,
+     "brems-rel": 0.00013595400000000006,
+     "brems-sb": 0.002095266999999999,
+     "conv-bethe-heitler": 0.00018385300000000002,
+     "geo-boundary": 0.00027958699999999987,
+     "ioni-moller-bhabha": 0.00019572399999999993,
+     "photoel-livermore": 0.0014904139999999998,
+     "physics-discrete-select": 0.0017178840000000007,
+     "pre-step": 0.006309083999999999,
+     "scat-klein-nishina": 0.0029878200000000017,
+     "scat-rayleigh": 0.00037171999999999986
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49
+    },
+    "avg_steps_per_primary": 54.61669921875,
+    "avg_time_per_primary": 1.3211376953125e-05,
+    "avg_time_per_step": 2.4189262884985024e-07,
+    "emptying_step": 50,
+    "num_primaries": 4096,
+    "num_step_iters": 70,
+    "num_steps": 223710,
+    "pre_emptying_time": 0.000457835,
+    "queue_hwm": {
+     "count": 15722,
+     "index": 4
+    },
+    "total_time": 0.0541138,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007636742,
+     "brems-rel": 0.000125637,
+     "brems-sb": 0.0020950139999999988,
+     "conv-bethe-heitler": 0.00017046999999999999,
+     "geo-boundary": 0.00025658999999999995,
+     "ioni-moller-bhabha": 0.00018906300000000008,
+     "photoel-livermore": 0.0013505149999999996,
+     "physics-discrete-select": 0.0016466430000000008,
+     "pre-step": 0.005866544000000002,
+     "scat-klein-nishina": 0.002891386,
+     "scat-rayleigh": 0.000351254
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 51
+    },
+    "avg_steps_per_primary": 54.9013671875,
+    "avg_time_per_primary": 1.532883154296875e-05,
+    "avg_time_per_step": 2.792067361568153e-07,
+    "emptying_step": 52,
+    "num_primaries": 4096,
+    "num_step_iters": 66,
+    "num_steps": 224876,
+    "pre_emptying_time": 0.000483053,
+    "queue_hwm": {
+     "count": 15730,
+     "index": 4
+    },
+    "total_time": 0.062786894,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.030155539999999995,
+     "brems-rel": 0.00014071199999999995,
+     "brems-sb": 0.002418649999999999,
+     "conv-bethe-heitler": 0.00018285099999999988,
+     "geo-boundary": 0.01315649300000002,
+     "ioni-moller-bhabha": 0.007693630999999997,
+     "photoel-livermore": 0.0014365369999999997,
+     "physics-discrete-select": 0.008504337000000002,
+     "pre-step": 0.020919744,
+     "scat-klein-nishina": 0.0029069700000000005,
+     "scat-rayleigh": 0.00036471499999999994
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.771728515625,
+    "avg_time_per_primary": 3.5452085693359376e-05,
+    "avg_time_per_step": 6.472697987474648e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 224345,
+    "pre_emptying_time": 0.000592124,
+    "queue_hwm": {
+     "count": 15664,
+     "index": 4
+    },
+    "total_time": 0.145211743,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007888097,
+     "brems-rel": 0.00012980499999999998,
+     "brems-sb": 0.0022103940000000014,
+     "conv-bethe-heitler": 0.00017607200000000002,
+     "geo-boundary": 0.00025867,
+     "ioni-moller-bhabha": 0.000194107,
+     "photoel-livermore": 0.0014111040000000005,
+     "physics-discrete-select": 0.0016872380000000004,
+     "pre-step": 0.005907114000000001,
+     "scat-klein-nishina": 0.0030458210000000015,
+     "scat-rayleigh": 0.00036281000000000003
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.393798828125,
+    "avg_time_per_primary": 1.4259933349609375e-05,
+    "avg_time_per_step": 2.6216101204235247e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 222797,
+    "pre_emptying_time": 0.000537839,
+    "queue_hwm": {
+     "count": 15689,
+     "index": 4
+    },
+    "total_time": 0.058408687,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007669364999999999,
+     "brems-rel": 0.00012068999999999997,
+     "brems-sb": 0.0021432159999999994,
+     "conv-bethe-heitler": 0.000164578,
+     "geo-boundary": 0.00023852,
+     "ioni-moller-bhabha": 0.00018364200000000003,
+     "photoel-livermore": 0.0014276089999999998,
+     "physics-discrete-select": 0.0016385459999999998,
+     "pre-step": 0.0058324979999999985,
+     "scat-klein-nishina": 0.002970339,
+     "scat-rayleigh": 0.00034599300000000006
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.132080078125,
+    "avg_time_per_primary": 1.306472900390625e-05,
+    "avg_time_per_step": 2.4134910361934827e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 66,
+    "num_steps": 221725,
+    "pre_emptying_time": 0.000558018,
+    "queue_hwm": {
+     "count": 15648,
+     "index": 4
+    },
+    "total_time": 0.05351313,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007324114,
+     "brems-rel": 0.00012061500000000001,
+     "brems-sb": 0.002010407000000001,
+     "conv-bethe-heitler": 0.00016892899999999998,
+     "geo-boundary": 0.00024078200000000004,
+     "ioni-moller-bhabha": 0.00018376,
+     "photoel-livermore": 0.0013583459999999999,
+     "physics-discrete-select": 0.0015953059999999995,
+     "pre-step": 0.005810460000000001,
+     "scat-klein-nishina": 0.0028965170000000004,
+     "scat-rayleigh": 0.00033408599999999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.618408203125,
+    "avg_time_per_primary": 1.2760195556640625e-05,
+    "avg_time_per_step": 2.336244496394999e-07,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223717,
+    "pre_emptying_time": 0.000494105,
+    "queue_hwm": {
+     "count": 15744,
+     "index": 4
+    },
+    "total_time": 0.052265761,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.007550090000000001,
+     "brems-rel": 0.00013233200000000006,
+     "brems-sb": 0.0021381790000000013,
+     "conv-bethe-heitler": 0.00017704499999999997,
+     "geo-boundary": 0.000253223,
+     "ioni-moller-bhabha": 0.00019999399999999997,
+     "photoel-livermore": 0.0013969589999999997,
+     "physics-discrete-select": 0.0016429370000000003,
+     "pre-step": 0.005860503000000001,
+     "scat-klein-nishina": 0.0029541049999999994,
+     "scat-rayleigh": 0.00035270699999999996
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.22412109375,
+    "avg_time_per_primary": 1.288497265625e-05,
+    "avg_time_per_step": 2.3762437078459447e-07,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 222102,
+    "pre_emptying_time": 0.000542448,
+    "queue_hwm": {
+     "count": 15803,
+     "index": 4
+    },
+    "total_time": 0.052776848,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem15-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": null,
+   "use_device": true
+  },
+  "name": [
+   "testem15",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.003156285,
+     "brems-rel": 0.0016968570000000006,
+     "brems-sb": 0.002314832,
+     "conv-bethe-heitler": 0.002008827,
+     "geo-boundary": 0.0016694639999999996,
+     "ioni-moller-bhabha": 0.0019407510000000003,
+     "photoel-livermore": 0.0021783240000000006,
+     "physics-discrete-select": 0.0019431930000000002,
+     "pre-step": 0.004729692,
+     "scat-klein-nishina": 0.0020517640000000006,
+     "scat-rayleigh": 0.0023043429999999995
+    },
+    "active_hwm": {
+     "count": 35371,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.356,
+    "avg_time_per_primary": 5.339737600000001e-06,
+    "avg_time_per_step": 2.388503131150474e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 24,
+    "num_steps": 223560,
+    "pre_emptying_time": 0.000875751,
+    "queue_hwm": {
+     "count": 12644,
+     "index": 2
+    },
+    "total_time": 0.053397376,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.0030487519999999996,
+     "brems-rel": 0.0014308539999999998,
+     "brems-sb": 0.0020052669999999994,
+     "conv-bethe-heitler": 0.0015848230000000002,
+     "geo-boundary": 0.0014493620000000003,
+     "ioni-moller-bhabha": 0.0015708999999999999,
+     "photoel-livermore": 0.0018492819999999998,
+     "physics-discrete-select": 0.0018775769999999998,
+     "pre-step": 0.004557299,
+     "scat-klein-nishina": 0.0016354700000000006,
+     "scat-rayleigh": 0.002078126
+    },
+    "active_hwm": {
+     "count": 35528,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.3583,
+    "avg_time_per_primary": 4.9323397e-06,
+    "avg_time_per_step": 2.2060441536252756e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 23,
+    "num_steps": 223583,
+    "pre_emptying_time": 0.000864711,
+    "queue_hwm": {
+     "count": 12717,
+     "index": 2
+    },
+    "total_time": 0.049323397,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.003182194000000001,
+     "brems-rel": 0.0015060689999999999,
+     "brems-sb": 0.001985654,
+     "conv-bethe-heitler": 0.0016307609999999995,
+     "geo-boundary": 0.0014764430000000002,
+     "ioni-moller-bhabha": 0.00150705,
+     "photoel-livermore": 0.001932435,
+     "physics-discrete-select": 0.002077093,
+     "pre-step": 0.004473542,
+     "scat-klein-nishina": 0.0017092499999999998,
+     "scat-rayleigh": 0.0021793290000000002
+    },
+    "active_hwm": {
+     "count": 35707,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4842,
+    "avg_time_per_primary": 4.9851167e-06,
+    "avg_time_per_step": 2.2171643643091593e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 24,
+    "num_steps": 224842,
+    "pre_emptying_time": 0.000864811,
+    "queue_hwm": {
+     "count": 12849,
+     "index": 2
+    },
+    "total_time": 0.049851167,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.0026279460000000004,
+     "brems-rel": 0.0013649860000000003,
+     "brems-sb": 0.0017683439999999998,
+     "conv-bethe-heitler": 0.0015289840000000004,
+     "geo-boundary": 0.0013633949999999997,
+     "ioni-moller-bhabha": 0.0016095149999999997,
+     "photoel-livermore": 0.001799464,
+     "physics-discrete-select": 0.0016907380000000002,
+     "pre-step": 0.004008655999999999,
+     "scat-klein-nishina": 0.0015836919999999998,
+     "scat-rayleigh": 0.002339171
+    },
+    "active_hwm": {
+     "count": 35586,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4622,
+    "avg_time_per_primary": 5.084675000000001e-06,
+    "avg_time_per_step": 2.2636585018386445e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 21,
+    "num_steps": 224622,
+    "pre_emptying_time": 0.000855051,
+    "queue_hwm": {
+     "count": 12769,
+     "index": 2
+    },
+    "total_time": 0.05084675,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.002896746,
+     "brems-rel": 0.0014082399999999996,
+     "brems-sb": 0.0020908019999999997,
+     "conv-bethe-heitler": 0.0016840310000000003,
+     "geo-boundary": 0.001678081,
+     "ioni-moller-bhabha": 0.001576496,
+     "photoel-livermore": 0.002010331,
+     "physics-discrete-select": 0.0019724100000000004,
+     "pre-step": 0.004476288,
+     "scat-klein-nishina": 0.0016755080000000002,
+     "scat-rayleigh": 0.0021567659999999996
+    },
+    "active_hwm": {
+     "count": 35348,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.1349,
+    "avg_time_per_primary": 5.052317499999999e-06,
+    "avg_time_per_step": 2.2825120059272913e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 21,
+    "num_steps": 221349,
+    "pre_emptying_time": 0.000897774,
+    "queue_hwm": {
+     "count": 12728,
+     "index": 2
+    },
+    "total_time": 0.050523175,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.0029902480000000005,
+     "brems-rel": 0.001363155,
+     "brems-sb": 0.0020807770000000002,
+     "conv-bethe-heitler": 0.0019530020000000003,
+     "geo-boundary": 0.001350902,
+     "ioni-moller-bhabha": 0.0017275249999999995,
+     "photoel-livermore": 0.0017986000000000005,
+     "physics-discrete-select": 0.0016721989999999999,
+     "pre-step": 0.00409105,
+     "scat-klein-nishina": 0.0016288479999999994,
+     "scat-rayleigh": 0.0023160030000000005
+    },
+    "active_hwm": {
+     "count": 35887,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.5039,
+    "avg_time_per_primary": 4.9135002999999994e-06,
+    "avg_time_per_step": 2.183399455205542e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 21,
+    "num_steps": 225039,
+    "pre_emptying_time": 0.000857185,
+    "queue_hwm": {
+     "count": 12930,
+     "index": 3
+    },
+    "total_time": 0.049135003,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.002714315,
+     "brems-rel": 0.0013755870000000002,
+     "brems-sb": 0.0018117360000000002,
+     "conv-bethe-heitler": 0.0014948269999999998,
+     "geo-boundary": 0.0013274110000000003,
+     "ioni-moller-bhabha": 0.0015552959999999998,
+     "photoel-livermore": 0.001760816,
+     "physics-discrete-select": 0.001643086,
+     "pre-step": 0.0038222639999999993,
+     "scat-klein-nishina": 0.0014369549999999997,
+     "scat-rayleigh": 0.002466463
+    },
+    "active_hwm": {
+     "count": 35258,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.2272,
+    "avg_time_per_primary": 4.6540812000000005e-06,
+    "avg_time_per_step": 2.0938675136769363e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 20,
+    "num_steps": 222272,
+    "pre_emptying_time": 0.000863148,
+    "queue_hwm": {
+     "count": 12664,
+     "index": 2
+    },
+    "total_time": 0.046540812,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 0.0028612329999999995,
+     "brems-rel": 0.0013888109999999998,
+     "brems-sb": 0.00196772,
+     "conv-bethe-heitler": 0.0016015109999999997,
+     "geo-boundary": 0.001637341,
+     "ioni-moller-bhabha": 0.0015288449999999998,
+     "photoel-livermore": 0.0021588700000000002,
+     "physics-discrete-select": 0.0016877329999999996,
+     "pre-step": 0.0045670100000000016,
+     "scat-klein-nishina": 0.0019707939999999997,
+     "scat-rayleigh": 0.0020628779999999998
+    },
+    "active_hwm": {
+     "count": 35211,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.1805,
+    "avg_time_per_primary": 5.0278431999999995e-06,
+    "avg_time_per_step": 2.2667853294560536e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 23,
+    "num_steps": 221805,
+    "pre_emptying_time": 0.000863729,
+    "queue_hwm": {
+     "count": 12646,
+     "index": 2
+    },
+    "total_time": 0.050278432,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_general_linear": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 33.019187139999815,
+     "brems-rel": 0.2983808220000052,
+     "brems-sb": 2.5243562289999804,
+     "conv-bethe-heitler": 0.5729835549999994,
+     "geo-boundary": 3.047208393999976,
+     "ioni-moller-bhabha": 0.36396528600000455,
+     "photoel-livermore": 1.6941605130000308,
+     "physics-discrete-select": 1.6381312659999916,
+     "pre-step": 13.026404053000281,
+     "scat-klein-nishina": 1.2956872590000226,
+     "scat-rayleigh": 0.3561730859999989
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131918
+    },
+    "avg_steps_per_primary": 131979.46337890625,
+    "avg_time_per_primary": 0.016043880259277343,
+    "avg_time_per_step": 1.2156346031818744e-07,
+    "emptying_step": 131919,
+    "num_primaries": 4096,
+    "num_step_iters": 132087,
+    "num_steps": 540587882,
+    "pre_emptying_time": 0.000513743,
+    "queue_hwm": {
+     "count": 217037,
+     "index": 130
+    },
+    "total_time": 65.715733542,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 33.04677917700019,
+     "brems-rel": 0.29492609600000724,
+     "brems-sb": 2.510346351999949,
+     "conv-bethe-heitler": 0.5680681579999949,
+     "geo-boundary": 3.0443151829999278,
+     "ioni-moller-bhabha": 0.358666971999996,
+     "photoel-livermore": 1.6967358029999977,
+     "physics-discrete-select": 1.6427331909999816,
+     "pre-step": 13.060111540000214,
+     "scat-klein-nishina": 1.2946956970000016,
+     "scat-rayleigh": 0.35189185300000136
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131922
+    },
+    "avg_steps_per_primary": 131964.67797851562,
+    "avg_time_per_primary": 0.016065324256347657,
+    "avg_time_per_step": 1.2173957836628948e-07,
+    "emptying_step": 131923,
+    "num_primaries": 4096,
+    "num_step_iters": 132083,
+    "num_steps": 540527321,
+    "pre_emptying_time": 0.000552918,
+    "queue_hwm": {
+     "count": 215898,
+     "index": 129
+    },
+    "total_time": 65.803568154,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 33.02864599399963,
+     "brems-rel": 0.30415561400000884,
+     "brems-sb": 2.516485033999993,
+     "conv-bethe-heitler": 0.5857273719999891,
+     "geo-boundary": 3.0365207779999412,
+     "ioni-moller-bhabha": 0.3681205719999955,
+     "photoel-livermore": 1.714253598000034,
+     "physics-discrete-select": 1.6433730830000066,
+     "pre-step": 13.080420057000534,
+     "scat-klein-nishina": 1.3139415780000057,
+     "scat-rayleigh": 0.3667968610000056
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131965
+    },
+    "avg_steps_per_primary": 132007.16625976562,
+    "avg_time_per_primary": 0.016077496345947264,
+    "avg_time_per_step": 1.2179260264029706e-07,
+    "emptying_step": 131966,
+    "num_primaries": 4096,
+    "num_step_iters": 132092,
+    "num_steps": 540701353,
+    "pre_emptying_time": 0.000516989,
+    "queue_hwm": {
+     "count": 218399,
+     "index": 133
+    },
+    "total_time": 65.853425033,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 32.949110312000016,
+     "brems-rel": 0.29127561000000685,
+     "brems-sb": 2.5058223489999567,
+     "conv-bethe-heitler": 0.5679459879999962,
+     "geo-boundary": 3.0232705779999693,
+     "ioni-moller-bhabha": 0.35655415000000307,
+     "photoel-livermore": 1.6957453310000206,
+     "physics-discrete-select": 1.6310316570000118,
+     "pre-step": 13.011465047000533,
+     "scat-klein-nishina": 1.293071096000009,
+     "scat-rayleigh": 0.3511195310000053
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131927
+    },
+    "avg_steps_per_primary": 131976.8076171875,
+    "avg_time_per_primary": 0.0159959845,
+    "avg_time_per_step": 1.2120299610821033e-07,
+    "emptying_step": 131928,
+    "num_primaries": 4096,
+    "num_step_iters": 132059,
+    "num_steps": 540577004,
+    "pre_emptying_time": 0.000539301,
+    "queue_hwm": {
+     "count": 215619,
+     "index": 128
+    },
+    "total_time": 65.519552512,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "srun: error: crusher027: task 0: Exited with exit code 139"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 32.97491095499966,
+     "brems-rel": 0.29256626900000726,
+     "brems-sb": 2.4999455429999546,
+     "conv-bethe-heitler": 0.5645693569999994,
+     "geo-boundary": 3.0299514949999686,
+     "ioni-moller-bhabha": 0.35548322600000004,
+     "photoel-livermore": 1.6997329340000151,
+     "physics-discrete-select": 1.6360148460000221,
+     "pre-step": 13.041732836000184,
+     "scat-klein-nishina": 1.2891719979999876,
+     "scat-rayleigh": 0.3516951899999998
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131886
+    },
+    "avg_steps_per_primary": 131924.35302734375,
+    "avg_time_per_primary": 0.016009593864013672,
+    "avg_time_per_step": 1.2135434812930552e-07,
+    "emptying_step": 131887,
+    "num_primaries": 4096,
+    "num_step_iters": 132020,
+    "num_steps": 540362150,
+    "pre_emptying_time": 0.000518611,
+    "queue_hwm": {
+     "count": 214394,
+     "index": 126
+    },
+    "total_time": 65.575296467,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat+field-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116119 new secondaries for a total capacity requirement of 4206095)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116044 new secondaries for a total capacity requirement of 4201267)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 114910 new secondaries for a total capacity requirement of 4265303)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 115099 new secondaries for a total capacity requirement of 4265270)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 114909 new secondaries for a total capacity requirement of 4265076)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 115046 new secondaries for a total capacity requirement of 4270770)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116273 new secondaries for a total capacity requirement of 4196258)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 115299 new secondaries for a total capacity requirement of 4269233)",
+     "which": "runtime"
+    }
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_uniform_msc": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 53.773389930999976,
+     "brems-rel": 0.3662512670000085,
+     "brems-sb": 2.626563029999995,
+     "conv-bethe-heitler": 0.665387684999997,
+     "geo-boundary": 3.128470138999953,
+     "ioni-moller-bhabha": 0.431164156000008,
+     "msc-urban": 0.01060487199997551,
+     "photoel-livermore": 1.820760383000024,
+     "physics-discrete-select": 1.8150273460000357,
+     "pre-step": 17.766348162000487,
+     "scat-klein-nishina": 1.421590915999979,
+     "scat-rayleigh": 0.43572691099999883
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171634
+    },
+    "avg_steps_per_primary": 171672.01245117188,
+    "avg_time_per_primary": 0.022689790124511718,
+    "avg_time_per_step": 1.3216941888512725e-07,
+    "emptying_step": 171635,
+    "num_primaries": 4096,
+    "num_step_iters": 171804,
+    "num_steps": 703168563,
+    "pre_emptying_time": 0.000578748,
+    "queue_hwm": {
+     "count": 212240,
+     "index": 128
+    },
+    "total_time": 92.93738035,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.75747590399908,
+     "brems-rel": 0.3552156310000156,
+     "brems-sb": 2.628755143999989,
+     "conv-bethe-heitler": 0.655721272000006,
+     "geo-boundary": 3.1211965039999443,
+     "ioni-moller-bhabha": 0.4154204800000083,
+     "msc-urban": 0.009750375999975299,
+     "photoel-livermore": 1.816148781999991,
+     "physics-discrete-select": 1.8072732040000494,
+     "pre-step": 17.76259407200017,
+     "scat-klein-nishina": 1.406499786999963,
+     "scat-rayleigh": 0.4245287520000101
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171565
+    },
+    "avg_steps_per_primary": 171652.52734375,
+    "avg_time_per_primary": 0.022657266923339844,
+    "avg_time_per_step": 1.3199495092761775e-07,
+    "emptying_step": 171566,
+    "num_primaries": 4096,
+    "num_step_iters": 171772,
+    "num_steps": 703088752,
+    "pre_emptying_time": 0.000557507,
+    "queue_hwm": {
+     "count": 211285,
+     "index": 134
+    },
+    "total_time": 92.804165318,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.82212972699819,
+     "brems-rel": 0.3618078340000249,
+     "brems-sb": 2.631570765999963,
+     "conv-bethe-heitler": 0.660082016999992,
+     "geo-boundary": 3.1317457659999706,
+     "ioni-moller-bhabha": 0.4262145799999966,
+     "msc-urban": 0.012087025999978922,
+     "photoel-livermore": 1.8280366790000466,
+     "physics-discrete-select": 1.8116500340000548,
+     "pre-step": 17.774180786000212,
+     "scat-klein-nishina": 1.4180029239999785,
+     "scat-rayleigh": 0.4312079160000011
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171616
+    },
+    "avg_steps_per_primary": 171668.74633789062,
+    "avg_time_per_primary": 0.022695457257080078,
+    "avg_time_per_step": 1.322049455199566e-07,
+    "emptying_step": 171617,
+    "num_primaries": 4096,
+    "num_step_iters": 171825,
+    "num_steps": 703155185,
+    "pre_emptying_time": 0.000520315,
+    "queue_hwm": {
+     "count": 213077,
+     "index": 132
+    },
+    "total_time": 92.960592925,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.737582509000156,
+     "brems-rel": 0.3615700140000124,
+     "brems-sb": 2.6217633760000236,
+     "conv-bethe-heitler": 0.6614054530000034,
+     "geo-boundary": 3.1167554489999736,
+     "ioni-moller-bhabha": 0.4243935790000063,
+     "msc-urban": 0.008795747999977965,
+     "photoel-livermore": 1.8197640700000426,
+     "physics-discrete-select": 1.827596694000004,
+     "pre-step": 17.73969856300039,
+     "scat-klein-nishina": 1.412140215999976,
+     "scat-rayleigh": 0.4296019430000088
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171603
+    },
+    "avg_steps_per_primary": 171652.76098632812,
+    "avg_time_per_primary": 0.022666383365722655,
+    "avg_time_per_step": 1.320478810563845e-07,
+    "emptying_step": 171604,
+    "num_primaries": 4096,
+    "num_step_iters": 171796,
+    "num_steps": 703089709,
+    "pre_emptying_time": 0.00056966,
+    "queue_hwm": {
+     "count": 213349,
+     "index": 130
+    },
+    "total_time": 92.841506266,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.74783605599938,
+     "brems-rel": 0.3642528880000135,
+     "brems-sb": 2.653434172000032,
+     "conv-bethe-heitler": 0.6652655779999882,
+     "geo-boundary": 3.125657300999957,
+     "ioni-moller-bhabha": 0.42509425700000014,
+     "msc-urban": 0.012270173999978425,
+     "photoel-livermore": 1.8223708260000195,
+     "physics-discrete-select": 1.8304555950000396,
+     "pre-step": 17.745923316000507,
+     "scat-klein-nishina": 1.4114685239999607,
+     "scat-rayleigh": 0.4318211279999937
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171622
+    },
+    "avg_steps_per_primary": 171666.2626953125,
+    "avg_time_per_primary": 0.022679118856689454,
+    "avg_time_per_step": 1.3211168287004786e-07,
+    "emptying_step": 171623,
+    "num_primaries": 4096,
+    "num_step_iters": 171794,
+    "num_steps": 703145012,
+    "pre_emptying_time": 0.000674733,
+    "queue_hwm": {
+     "count": 211273,
+     "index": 133
+    },
+    "total_time": 92.893670837,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.74101743999885,
+     "brems-rel": 0.35745899900001715,
+     "brems-sb": 2.613331835999969,
+     "conv-bethe-heitler": 0.6482052000000093,
+     "geo-boundary": 3.11199789599996,
+     "ioni-moller-bhabha": 0.41318949900001256,
+     "msc-urban": 0.010932406999969321,
+     "photoel-livermore": 1.8031031070000274,
+     "physics-discrete-select": 1.8006899840000612,
+     "pre-step": 17.716096596000316,
+     "scat-klein-nishina": 1.3990983359999685,
+     "scat-rayleigh": 0.41570853300001476
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171582
+    },
+    "avg_steps_per_primary": 171628.09155273438,
+    "avg_time_per_primary": 0.02261309392114258,
+    "avg_time_per_step": 1.3175636760019843e-07,
+    "emptying_step": 171583,
+    "num_primaries": 4096,
+    "num_step_iters": 171760,
+    "num_steps": 702988663,
+    "pre_emptying_time": 0.000585982,
+    "queue_hwm": {
+     "count": 211061,
+     "index": 130
+    },
+    "total_time": 92.623232701,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 53.73862969399966,
+     "brems-rel": 0.3780742220000074,
+     "brems-sb": 2.6567132959999538,
+     "conv-bethe-heitler": 0.6788203550000015,
+     "geo-boundary": 3.136113418999972,
+     "ioni-moller-bhabha": 0.4381215599999989,
+     "msc-urban": 0.012433989999979784,
+     "photoel-livermore": 1.8428964380000172,
+     "physics-discrete-select": 1.8420599999999643,
+     "pre-step": 17.826500179999893,
+     "scat-klein-nishina": 1.4283582649999669,
+     "scat-rayleigh": 0.44907934200000305
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171585
+    },
+    "avg_steps_per_primary": 171640.34155273438,
+    "avg_time_per_primary": 0.022730980787353517,
+    "avg_time_per_step": 1.3243378905983884e-07,
+    "emptying_step": 171586,
+    "num_primaries": 4096,
+    "num_step_iters": 171767,
+    "num_steps": 703038839,
+    "pre_emptying_time": 0.000550193,
+    "queue_hwm": {
+     "count": 212384,
+     "index": 131
+    },
+    "total_time": 93.106097305,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 54.51974218800087,
+     "brems-rel": 0.35648759300001714,
+     "brems-sb": 2.621706446000033,
+     "conv-bethe-heitler": 0.6554810340000123,
+     "geo-boundary": 3.1739358159999425,
+     "ioni-moller-bhabha": 0.4153395730000116,
+     "msc-urban": 0.010426285999971596,
+     "photoel-livermore": 1.8121495190000105,
+     "physics-discrete-select": 1.8200935730000452,
+     "pre-step": 17.94042879300026,
+     "scat-klein-nishina": 1.405091250999998,
+     "scat-rayleigh": 0.4213462600000028
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 171625
+    },
+    "avg_steps_per_primary": 171669.91186523438,
+    "avg_time_per_primary": 0.022893991689453125,
+    "avg_time_per_step": 1.3336053732832076e-07,
+    "emptying_step": 171626,
+    "num_primaries": 4096,
+    "num_step_iters": 171797,
+    "num_steps": 703159959,
+    "pre_emptying_time": 0.000578868,
+    "queue_hwm": {
+     "count": 212493,
+     "index": 130
+    },
+    "total_time": 93.77378996,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87296 new secondaries for a total capacity requirement of 4217952)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87209 new secondaries for a total capacity requirement of 4224777)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87573 new secondaries for a total capacity requirement of 4222696)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87741 new secondaries for a total capacity requirement of 4211643)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87595 new secondaries for a total capacity requirement of 4219740)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87571 new secondaries for a total capacity requirement of 4215714)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87617 new secondaries for a total capacity requirement of 4222781)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 87660 new secondaries for a total capacity requirement of 4223538)",
+     "which": "runtime"
+    }
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_general_linear": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 12.776071250000129,
+     "brems-rel": 0.29934844899999985,
+     "brems-sb": 2.493649983000027,
+     "conv-bethe-heitler": 0.5782493500000075,
+     "geo-boundary": 3.0812959989999102,
+     "ioni-moller-bhabha": 0.3619889800000028,
+     "photoel-livermore": 1.7059456060000147,
+     "physics-discrete-select": 1.6378827189999845,
+     "pre-step": 13.122474192000416,
+     "scat-klein-nishina": 1.3030808339999922,
+     "scat-rayleigh": 0.3597607260000048
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131775
+    },
+    "avg_steps_per_primary": 131841.22973632812,
+    "avg_time_per_primary": 0.011130630672363282,
+    "avg_time_per_step": 8.442450585923424e-08,
+    "emptying_step": 131776,
+    "num_primaries": 4096,
+    "num_step_iters": 131921,
+    "num_steps": 540021677,
+    "pre_emptying_time": 0.000347291,
+    "queue_hwm": {
+     "count": 215776,
+     "index": 128
+    },
+    "total_time": 45.591063234,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.672598463000348,
+     "brems-rel": 0.29226679300000213,
+     "brems-sb": 2.50200713500001,
+     "conv-bethe-heitler": 0.5749983029999963,
+     "geo-boundary": 3.0360031499999143,
+     "ioni-moller-bhabha": 0.36129942500000095,
+     "photoel-livermore": 1.7020529369999984,
+     "physics-discrete-select": 1.6291570359999765,
+     "pre-step": 13.027848035000387,
+     "scat-klein-nishina": 1.30054854400002,
+     "scat-rayleigh": 0.3532818709999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131789
+    },
+    "avg_steps_per_primary": 131839.13354492188,
+    "avg_time_per_primary": 0.011063260020751952,
+    "avg_time_per_step": 8.391484169593954e-08,
+    "emptying_step": 131790,
+    "num_primaries": 4096,
+    "num_step_iters": 131930,
+    "num_steps": 540013091,
+    "pre_emptying_time": 0.000359515,
+    "queue_hwm": {
+     "count": 218062,
+     "index": 132
+    },
+    "total_time": 45.315113045,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.66220485300022,
+     "brems-rel": 0.29411665200000564,
+     "brems-sb": 2.490202987999989,
+     "conv-bethe-heitler": 0.5745434690000013,
+     "geo-boundary": 3.0355270089999227,
+     "ioni-moller-bhabha": 0.3593730150000048,
+     "photoel-livermore": 1.7000857999999825,
+     "physics-discrete-select": 1.629605556000002,
+     "pre-step": 13.016640650000344,
+     "scat-klein-nishina": 1.2983980840000158,
+     "scat-rayleigh": 0.3524503580000036
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131766
+    },
+    "avg_steps_per_primary": 131802.81665039062,
+    "avg_time_per_primary": 0.011059134467041015,
+    "avg_time_per_step": 8.390666260475731e-08,
+    "emptying_step": 131767,
+    "num_primaries": 4096,
+    "num_step_iters": 131897,
+    "num_steps": 539864337,
+    "pre_emptying_time": 0.000366698,
+    "queue_hwm": {
+     "count": 216712,
+     "index": 126
+    },
+    "total_time": 45.298214777,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.673468721999868,
+     "brems-rel": 0.29560808300000496,
+     "brems-sb": 2.504802972000004,
+     "conv-bethe-heitler": 0.5752890519999859,
+     "geo-boundary": 3.040601631999969,
+     "ioni-moller-bhabha": 0.35652739400000716,
+     "photoel-livermore": 1.6968881729999774,
+     "physics-discrete-select": 1.6230879120000294,
+     "pre-step": 13.032781861000585,
+     "scat-klein-nishina": 1.297032575000008,
+     "scat-rayleigh": 0.3546366339999974
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131718
+    },
+    "avg_steps_per_primary": 131797.2421875,
+    "avg_time_per_primary": 0.011066047938964844,
+    "avg_time_per_step": 8.396266686082736e-08,
+    "emptying_step": 131719,
+    "num_primaries": 4096,
+    "num_step_iters": 131894,
+    "num_steps": 539841504,
+    "pre_emptying_time": 0.000315529,
+    "queue_hwm": {
+     "count": 216659,
+     "index": 129
+    },
+    "total_time": 45.326532358,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.6548778280001,
+     "brems-rel": 0.2943046290000023,
+     "brems-sb": 2.4883790099999956,
+     "conv-bethe-heitler": 0.5708874259999938,
+     "geo-boundary": 3.0341819299999675,
+     "ioni-moller-bhabha": 0.3569259310000006,
+     "photoel-livermore": 1.697631688000018,
+     "physics-discrete-select": 1.6182827010000282,
+     "pre-step": 13.050631970000236,
+     "scat-klein-nishina": 1.2992682549999806,
+     "scat-rayleigh": 0.3531529840000041
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131730
+    },
+    "avg_steps_per_primary": 131792.5732421875,
+    "avg_time_per_primary": 0.011052159529785156,
+    "avg_time_per_step": 8.386026054347728e-08,
+    "emptying_step": 131731,
+    "num_primaries": 4096,
+    "num_step_iters": 131899,
+    "num_steps": 539822380,
+    "pre_emptying_time": 0.000368512,
+    "queue_hwm": {
+     "count": 216018,
+     "index": 130
+    },
+    "total_time": 45.269645434,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.926602809000327,
+     "brems-rel": 0.3045968170000028,
+     "brems-sb": 2.5128224989999834,
+     "conv-bethe-heitler": 0.5840301360000062,
+     "geo-boundary": 3.123928049999893,
+     "ioni-moller-bhabha": 0.36695703900000076,
+     "photoel-livermore": 1.7220388890000269,
+     "physics-discrete-select": 1.6441624790000555,
+     "pre-step": 13.232129444000538,
+     "scat-klein-nishina": 1.3099831580000172,
+     "scat-rayleigh": 0.36679319299999946
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131779
+    },
+    "avg_steps_per_primary": 131807.53344726562,
+    "avg_time_per_primary": 0.011264380999511719,
+    "avg_time_per_step": 8.546082841325942e-08,
+    "emptying_step": 131780,
+    "num_primaries": 4096,
+    "num_step_iters": 131893,
+    "num_steps": 539883657,
+    "pre_emptying_time": 0.000385024,
+    "queue_hwm": {
+     "count": 216552,
+     "index": 126
+    },
+    "total_time": 46.138904574,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.608894262000016,
+     "brems-rel": 0.2939255920000049,
+     "brems-sb": 2.508553535000028,
+     "conv-bethe-heitler": 0.5716616459999989,
+     "geo-boundary": 3.0175637019999657,
+     "ioni-moller-bhabha": 0.3581372370000053,
+     "photoel-livermore": 1.7006276390000288,
+     "physics-discrete-select": 1.6235303160000025,
+     "pre-step": 13.002517056000313,
+     "scat-klein-nishina": 1.297428287999999,
+     "scat-rayleigh": 0.3528236529999987
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131769
+    },
+    "avg_steps_per_primary": 131810.5224609375,
+    "avg_time_per_primary": 0.011028475988525391,
+    "avg_time_per_step": 8.36691622384982e-08,
+    "emptying_step": 131770,
+    "num_primaries": 4096,
+    "num_step_iters": 131898,
+    "num_steps": 539895900,
+    "pre_emptying_time": 0.000371959,
+    "queue_hwm": {
+     "count": 218146,
+     "index": 129
+    },
+    "total_time": 45.172637649,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 12.674124312000052,
+     "brems-rel": 0.29372352100000265,
+     "brems-sb": 2.490797365999991,
+     "conv-bethe-heitler": 0.5771624589999914,
+     "geo-boundary": 3.031717356000014,
+     "ioni-moller-bhabha": 0.35628992099999734,
+     "photoel-livermore": 1.6990284639999973,
+     "physics-discrete-select": 1.6236920950000229,
+     "pre-step": 13.016024120000418,
+     "scat-klein-nishina": 1.2971582129999955,
+     "scat-rayleigh": 0.3534514030000025
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131817
+    },
+    "avg_steps_per_primary": 131859.10375976562,
+    "avg_time_per_primary": 0.011051457594726562,
+    "avg_time_per_step": 8.38126248367442e-08,
+    "emptying_step": 131818,
+    "num_primaries": 4096,
+    "num_step_iters": 131971,
+    "num_steps": 540094889,
+    "pre_emptying_time": 0.000412697,
+    "queue_hwm": {
+     "count": 218071,
+     "index": 135
+    },
+    "total_time": 45.266770308,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116841 new secondaries for a total capacity requirement of 4201518)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116231 new secondaries for a total capacity requirement of 4197907)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 115999 new secondaries for a total capacity requirement of 4196215)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116848 new secondaries for a total capacity requirement of 4199522)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 114704 new secondaries for a total capacity requirement of 4270274)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 115261 new secondaries for a total capacity requirement of 4266004)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 116082 new secondaries for a total capacity requirement of 4195534)",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "data->num_secondaries + data->initializers.size() <= data->initializers.capacity()",
+     "file": "/ccs/home/s3j/.local/src/celeritas/src/celeritas/track/TrackInitUtils.hh",
+     "line": 185,
+     "type": "RuntimeError",
+     "what": "insufficient capacity (4194304) for track initializers (created 114864 new secondaries for a total capacity requirement of 4269470)",
+     "which": "runtime"
+    }
+   }
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_general_linear": 0.5,
+    "bethe_heitler_interact": 0.625,
+    "boundary": 0.875,
+    "discrete_select": 1.0,
+    "init_tracks": 1.0,
+    "klein_nishina_interact": 0.875,
+    "livermore_pe_interact": 0.875,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 1.0,
+    "pre_step": 0.875,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.75,
+    "relativistic_brem_interact": 0.5,
+    "seltzer_berger_interact": 0.5
+   },
+   "version": "v0.1.2+fb3f5506"
+  }
+ },
+ "testem3-flat-vecgeom-cpu": {
+  "name": [
+   "testem3-flat",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "testem3-flat-vecgeom-gpu": {
+  "name": [
+   "testem3-flat",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher027: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher027: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ }
+}
