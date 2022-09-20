@@ -66,6 +66,7 @@ def summarize_input(inp):
         'mag_field': inp['mag_field'] if any(inp['mag_field']) else None,
         'use_device': inp['use_device'],
         'enable_msc': msc,
+        'max_num_tracks': inp['max_num_tracks'],
     }
 
 def summarize_system(sys):
