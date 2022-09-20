@@ -7,7 +7,7 @@
 #SBATCH -e summit-%J.err
 
 if [ -z "$SLURM_JOB_ID" ]; then
-  exec srun $0
+  exec sbatch $0
 fi
 
 source /ccs/home/s3j/.local/src/celeritas/scripts/env/crusher.sh

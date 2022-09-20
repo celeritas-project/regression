@@ -9,9 +9,9 @@
 "status: Reading and building Seltzer Berger model data",
 "status: Reading and building Livermore PE model data",
 "status: Transporting",
-":0:rocdevice.cpp            :2614: 3018827146334 us: 4418 : [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-"srun: error: crusher027: task 0: Aborted (core dumped)",
-"srun: launch/slurm: _step_signal: Terminating StepId=185377.168"
+":0:rocdevice.cpp            :2614: 3047888347584 us: 122875: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+"srun: error: crusher124: task 0: Aborted",
+"srun: launch/slurm: _step_signal: Terminating StepId=185671.88"
 ],
 "stdout": []
 }
