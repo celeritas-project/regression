@@ -1,0 +1,1519 @@
+{
+ "cms2018+field+msc-vecgeom-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "cms2018.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "cms2018+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "step_limit->action != track.boundary_action()",
+     "file": "/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh",
+     "line": 75,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "cms2018+field+msc-vecgeom-gpu": {
+  "name": [
+   "cms2018+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "celeritas: cuda error: cudaFree(ptr) failed:"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "cms2018-vecgeom-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "cms2018.gdml",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "cms2018",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 27.969552404000137,
+     "brems-rel": 0.19041805599999867,
+     "brems-sb": 1.6064886989999978,
+     "conv-bethe-heitler": 0.3434470939999991,
+     "geo-boundary": 9.855880401000013,
+     "ioni-moller-bhabha": 0.3214395400000008,
+     "photoel-livermore": 1.3479208680000028,
+     "physics-discrete-select": 1.7562180909999974,
+     "pre-step": 14.509514267999915,
+     "scat-klein-nishina": 0.8245560559999979,
+     "scat-rayleigh": 0.279385014
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 13157
+    },
+    "avg_steps_per_primary": 13347.621826171875,
+    "avg_time_per_primary": 0.015176691364501954,
+    "avg_time_per_step": 1.1370333653552919e-06,
+    "emptying_step": 13158,
+    "num_primaries": 4096,
+    "num_step_iters": 14143,
+    "num_steps": 54671859,
+    "pre_emptying_time": 0.005208847,
+    "queue_hwm": {
+     "count": 152701,
+     "index": 610
+    },
+    "total_time": 62.163727829,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "cms2018-vecgeom-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "cms2018.gdml",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "cms2018",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 2.0941744429999987,
+     "brems-rel": 0.05330676000000007,
+     "brems-sb": 0.15947249400000024,
+     "conv-bethe-heitler": 0.07561387199999985,
+     "geo-boundary": 0.8019501809999986,
+     "ioni-moller-bhabha": 0.07612989199999996,
+     "photoel-livermore": 0.16205026700000047,
+     "physics-discrete-select": 0.12119903900000001,
+     "pre-step": 0.641414259999999,
+     "scat-klein-nishina": 0.07128480900000002,
+     "scat-rayleigh": 0.06707253899999993
+    },
+    "active_hwm": {
+     "count": 473022,
+     "index": 384
+    },
+    "avg_steps_per_primary": 5481.8332,
+    "avg_time_per_primary": 0.00045811256179999996,
+    "avg_time_per_step": 8.356922676888453e-08,
+    "emptying_step": 385,
+    "num_primaries": 10000,
+    "num_step_iters": 1314,
+    "num_steps": 54818332,
+    "pre_emptying_time": 0.016735958,
+    "queue_hwm": {
+     "count": 86491,
+     "index": 377
+    },
+    "total_time": 4.581125618,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.125,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "init.volume",
+     "file": "/home/alund/celeritas_project/celeritas/src/orange/OrangeTrackView.hh",
+     "line": 418,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+field+msc-orange-gpu": {
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "celeritas: cuda error: cudaFree(ptr) failed:"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+field+msc-vecgeom-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 24.890749100999983,
+     "brems-rel": 0.49381981300002,
+     "brems-sb": 1.3265922570000914,
+     "conv-bethe-heitler": 0.5575412210000288,
+     "geo-boundary": 0.5422578879999962,
+     "ioni-moller-bhabha": 0.6086989710000579,
+     "msc-urban": 0.0018737280000004502,
+     "photoel-livermore": 0.9837213910001291,
+     "physics-discrete-select": 1.3017064830000271,
+     "pre-step": 8.305002597000087,
+     "scat-klein-nishina": 1.9876898240000176,
+     "scat-rayleigh": 0.6591451420000897
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7265
+    },
+    "avg_steps_per_primary": 7300.871826171875,
+    "avg_time_per_primary": 0.010759475708496094,
+    "avg_time_per_step": 1.4737247776253178e-06,
+    "emptying_step": 7266,
+    "num_primaries": 4096,
+    "num_step_iters": 37106,
+    "num_steps": 29904371,
+    "pre_emptying_time": 0.005075805,
+    "queue_hwm": {
+     "count": 148961,
+     "index": 61
+    },
+    "total_time": 44.070812502,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+field+msc-vecgeom-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 1.488467648999995,
+     "brems-rel": 0.15937626499999968,
+     "brems-sb": 0.20309597699999965,
+     "conv-bethe-heitler": 0.15924529599999987,
+     "geo-boundary": 0.20052627000000015,
+     "ioni-moller-bhabha": 0.15980781199999983,
+     "msc-urban": 0.0059008330000000124,
+     "photoel-livermore": 0.18274767200000036,
+     "physics-discrete-select": 0.1768886889999993,
+     "pre-step": 1.1782980059999983,
+     "scat-klein-nishina": 0.165532659,
+     "scat-rayleigh": 0.15990248200000023
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2989.0241,
+    "avg_time_per_primary": 0.0004857967255,
+    "avg_time_per_step": 1.625268680503446e-07,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 4096,
+    "num_steps": 29890241,
+    "pre_emptying_time": 0.009131003,
+    "queue_hwm": {
+     "count": 1817143,
+     "index": 34
+    },
+    "total_time": 4.857967255,
+    "unconverged": 3
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_uniform_msc": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.125,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "init.volume",
+     "file": "/home/alund/celeritas_project/celeritas/src/orange/OrangeTrackView.hh",
+     "line": 418,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+field-orange-gpu": {
+  "name": [
+   "simple-cms+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "celeritas: cuda error: cudaFree(ptr) failed:"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "simple-cms+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 17.672223306000053,
+     "brems-rel": 0.09857719199999962,
+     "brems-sb": 0.9164060710000023,
+     "conv-bethe-heitler": 0.1631114460000003,
+     "geo-boundary": 0.09957292899999959,
+     "ioni-moller-bhabha": 0.21432465699999964,
+     "msc-urban": 0.0006777149999999918,
+     "photoel-livermore": 0.5935325089999987,
+     "physics-discrete-select": 0.9971372720000011,
+     "pre-step": 7.549430372000004,
+     "scat-klein-nishina": 1.5626730149999997,
+     "scat-rayleigh": 0.26823966999999926
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 7228
+    },
+    "avg_steps_per_primary": 7243.845458984375,
+    "avg_time_per_primary": 0.007725462423828125,
+    "avg_time_per_step": 1.066486366608831e-06,
+    "emptying_step": 7229,
+    "num_primaries": 4096,
+    "num_step_iters": 7306,
+    "num_steps": 29670791,
+    "pre_emptying_time": 0.004232006,
+    "queue_hwm": {
+     "count": 148389,
+     "index": 59
+    },
+    "total_time": 31.643494088,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "simple-cms+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "simple-cms+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.6104340450000001,
+     "brems-rel": 0.006143841000000004,
+     "brems-sb": 0.047675726000000015,
+     "conv-bethe-heitler": 0.012465649999999991,
+     "geo-boundary": 0.012123831000000003,
+     "ioni-moller-bhabha": 0.012472003000000006,
+     "msc-urban": 0.00019847300000000012,
+     "photoel-livermore": 0.029008189999999996,
+     "physics-discrete-select": 0.023024261000000004,
+     "pre-step": 0.13418545999999998,
+     "scat-klein-nishina": 0.018393971999999998,
+     "scat-rayleigh": 0.012660072999999999
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 56
+    },
+    "avg_steps_per_primary": 2967.6228,
+    "avg_time_per_primary": 0.00010148831439999999,
+    "avg_time_per_step": 3.41985222650264e-08,
+    "emptying_step": 57,
+    "num_primaries": 10000,
+    "num_step_iters": 150,
+    "num_steps": 29676228,
+    "pre_emptying_time": 0.012029973,
+    "queue_hwm": {
+     "count": 1799466,
+     "index": 34
+    },
+    "total_time": 1.014883144,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem15+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.192199867,
+     "brems-rel": 0.0009474570000000001,
+     "brems-sb": 0.009981575,
+     "conv-bethe-heitler": 0.001036413,
+     "geo-boundary": 0.0007838379999999995,
+     "ioni-moller-bhabha": 0.001297389,
+     "msc-urban": 6.978000000000001e-06,
+     "photoel-livermore": 0.007812004,
+     "physics-discrete-select": 0.010243057,
+     "pre-step": 0.056750824,
+     "scat-klein-nishina": 0.009857552,
+     "scat-rayleigh": 0.002127835
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.47900390625,
+    "avg_time_per_primary": 8.5236189453125e-05,
+    "avg_time_per_step": 1.5645695284701497e-06,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223146,
+    "pre_emptying_time": 0.005515001,
+    "queue_hwm": {
+     "count": 16019,
+     "index": 4
+    },
+    "total_time": 0.349127432,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem15+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.026137102,
+     "brems-rel": 0.000880947,
+     "brems-sb": 0.001905491,
+     "conv-bethe-heitler": 0.001048954,
+     "geo-boundary": 0.0009378059999999999,
+     "ioni-moller-bhabha": 0.000990563,
+     "msc-urban": 2.9763999999999995e-05,
+     "photoel-livermore": 0.0016471049999999998,
+     "physics-discrete-select": 0.001558275,
+     "pre-step": 0.007319297,
+     "scat-klein-nishina": 0.001198508,
+     "scat-rayleigh": 0.001198702
+    },
+    "active_hwm": {
+     "count": 36603,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.6497,
+    "avg_time_per_primary": 1.18783631e-05,
+    "avg_time_per_step": 5.244379881411233e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 226497,
+    "pre_emptying_time": 0.002491962,
+    "queue_hwm": {
+     "count": 12943,
+     "index": 3
+    },
+    "total_time": 0.118783631,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_uniform_msc": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field+msc-vecgeom-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem15+field+msc",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.16345515199999996,
+     "brems-rel": 0.0009095559999999997,
+     "brems-sb": 0.010745306999999997,
+     "conv-bethe-heitler": 0.001033598,
+     "geo-boundary": 0.0009797030000000002,
+     "ioni-moller-bhabha": 0.001212706,
+     "msc-urban": 6.977999999999998e-06,
+     "photoel-livermore": 0.007830943000000002,
+     "physics-discrete-select": 0.010355048000000002,
+     "pre-step": 0.05733778900000002,
+     "scat-klein-nishina": 0.010139596999999995,
+     "scat-rayleigh": 0.0021253649999999997
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 48
+    },
+    "avg_steps_per_primary": 54.47900390625,
+    "avg_time_per_primary": 7.864727954101563e-05,
+    "avg_time_per_step": 1.4436255052745737e-06,
+    "emptying_step": 49,
+    "num_primaries": 4096,
+    "num_step_iters": 67,
+    "num_steps": 223146,
+    "pre_emptying_time": 0.004961623,
+    "queue_hwm": {
+     "count": 16019,
+     "index": 4
+    },
+    "total_time": 0.322139257,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field+msc-vecgeom-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem15.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem15+field+msc",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.004161173,
+     "brems-rel": 0.000891381,
+     "brems-sb": 0.0018497129999999998,
+     "conv-bethe-heitler": 0.001034796,
+     "geo-boundary": 0.000917685,
+     "ioni-moller-bhabha": 0.000963598,
+     "msc-urban": 3.1986e-05,
+     "photoel-livermore": 0.001559007,
+     "physics-discrete-select": 0.001534687,
+     "pre-step": 0.007340794,
+     "scat-klein-nishina": 0.001170634,
+     "scat-rayleigh": 0.0011436740000000001
+    },
+    "active_hwm": {
+     "count": 36603,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.6497,
+    "avg_time_per_primary": 1.0082122e-05,
+    "avg_time_per_step": 4.4513269491428143e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 226497,
+    "pre_emptying_time": 0.001501246,
+    "queue_hwm": {
+     "count": 12943,
+     "index": 3
+    },
+    "total_time": 0.10082122,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_uniform_msc": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.125,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem15+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.12742248099999995,
+     "brems-rel": 0.0009278559999999999,
+     "brems-sb": 0.010058403,
+     "conv-bethe-heitler": 0.0010503969999999998,
+     "geo-boundary": 0.0007827180000000003,
+     "ioni-moller-bhabha": 0.001303967,
+     "photoel-livermore": 0.007848091,
+     "physics-discrete-select": 0.010315079,
+     "pre-step": 0.05557967400000001,
+     "scat-klein-nishina": 0.009942461999999997,
+     "scat-rayleigh": 0.0021614449999999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 50
+    },
+    "avg_steps_per_primary": 54.1416015625,
+    "avg_time_per_primary": 6.927153784179688e-05,
+    "avg_time_per_step": 1.2794512139030681e-06,
+    "emptying_step": 51,
+    "num_primaries": 4096,
+    "num_step_iters": 68,
+    "num_steps": 221764,
+    "pre_emptying_time": 0.004204495,
+    "queue_hwm": {
+     "count": 15888,
+     "index": 4
+    },
+    "total_time": 0.283736219,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15+field-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem15+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-uniform-msc": 0.02396819,
+     "brems-rel": 0.0008797239999999998,
+     "brems-sb": 0.0018922640000000003,
+     "conv-bethe-heitler": 0.001041988,
+     "geo-boundary": 0.0009387990000000001,
+     "ioni-moller-bhabha": 0.001033671,
+     "photoel-livermore": 0.0016420920000000002,
+     "physics-discrete-select": 0.0015536589999999998,
+     "pre-step": 0.007345425999999999,
+     "scat-klein-nishina": 0.0012091340000000002,
+     "scat-rayleigh": 0.001220729
+    },
+    "active_hwm": {
+     "count": 36438,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.4786,
+    "avg_time_per_primary": 1.1656761e-05,
+    "avg_time_per_step": 5.185714857686866e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 22,
+    "num_steps": 224786,
+    "pre_emptying_time": 0.002289839,
+    "queue_hwm": {
+     "count": 12821,
+     "index": 2
+    },
+    "total_time": 0.11656761,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_uniform_msc": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem15",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.067227247,
+     "brems-rel": 0.0009735640000000001,
+     "brems-sb": 0.010078612999999993,
+     "conv-bethe-heitler": 0.001077649,
+     "geo-boundary": 0.000781501,
+     "ioni-moller-bhabha": 0.0013431559999999992,
+     "photoel-livermore": 0.007895045999999998,
+     "physics-discrete-select": 0.010496742999999998,
+     "pre-step": 0.05669271500000002,
+     "scat-klein-nishina": 0.010169195999999995,
+     "scat-rayleigh": 0.0021899610000000003
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49
+    },
+    "avg_steps_per_primary": 54.427978515625,
+    "avg_time_per_primary": 5.50943759765625e-05,
+    "avg_time_per_step": 1.0122436562795768e-06,
+    "emptying_step": 50,
+    "num_primaries": 4096,
+    "num_step_iters": 69,
+    "num_steps": 222937,
+    "pre_emptying_time": 0.003128581,
+    "queue_hwm": {
+     "count": 15725,
+     "index": 4
+    },
+    "total_time": 0.225666564,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem15-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem15.org.json",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem15",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 0.024254998,
+     "brems-rel": 0.0009664829999999999,
+     "brems-sb": 0.0020585569999999995,
+     "conv-bethe-heitler": 0.0011418390000000002,
+     "geo-boundary": 0.001041183,
+     "ioni-moller-bhabha": 0.0010742640000000001,
+     "photoel-livermore": 0.001851647,
+     "physics-discrete-select": 0.001752207,
+     "pre-step": 0.009002782,
+     "scat-klein-nishina": 0.0013423490000000003,
+     "scat-rayleigh": 0.001344586
+    },
+    "active_hwm": {
+     "count": 35371,
+     "index": 4
+    },
+    "avg_steps_per_primary": 22.356,
+    "avg_time_per_primary": 1.20366382e-05,
+    "avg_time_per_step": 5.384075058149937e-07,
+    "emptying_step": 5,
+    "num_primaries": 10000,
+    "num_step_iters": 24,
+    "num_steps": 223560,
+    "pre_emptying_time": 0.002338251,
+    "queue_hwm": {
+     "count": 12644,
+     "index": 2
+    },
+    "total_time": 0.120366382,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat+field",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "step_limit->action != track.boundary_action()",
+     "file": "/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh",
+     "line": 75,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat+field-orange-gpu": {
+  "name": [
+   "testem3-flat+field",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "celeritas: cuda error: cudaFree(ptr) failed:"
+     ],
+     "stdout": []
+    }
+   }
+  ]
+ },
+ "testem3-flat+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "mfp > 0",
+     "file": "/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
+     "line": 122,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 12.650968524000026,
+     "brems-rel": 0.09758993899999996,
+     "brems-sb": 0.9976772059999993,
+     "conv-bethe-heitler": 0.21137197399999974,
+     "geo-boundary": 0.7699500369999996,
+     "ioni-moller-bhabha": 0.14105467300000005,
+     "msc-urban": 0.0022100899999999988,
+     "photoel-livermore": 0.6555819170000018,
+     "physics-discrete-select": 0.3333449239999995,
+     "pre-step": 2.724330437000002,
+     "scat-klein-nishina": 0.18863843899999977,
+     "scat-rayleigh": 0.12277707000000003
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 1301
+    },
+    "avg_steps_per_primary": 70308.4321,
+    "avg_time_per_primary": 0.0019283600472,
+    "avg_time_per_step": 2.7427151902026273e-08,
+    "emptying_step": 1302,
+    "num_primaries": 10000,
+    "num_step_iters": 1577,
+    "num_steps": 703084321,
+    "pre_emptying_time": 0.013824047,
+    "queue_hwm": {
+     "count": 5475843,
+     "index": 108
+    },
+    "total_time": 19.283600472,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 145.9754482849986,
+     "brems-rel": 1.9497379189999668,
+     "brems-sb": 15.894847271000206,
+     "conv-bethe-heitler": 3.341881356999949,
+     "geo-boundary": 33.32498649000004,
+     "ioni-moller-bhabha": 2.5613318300000474,
+     "photoel-livermore": 10.971885509000058,
+     "physics-discrete-select": 11.710596407999812,
+     "pre-step": 134.45298090799952,
+     "scat-klein-nishina": 6.36186761300003,
+     "scat-rayleigh": 2.656390017000003
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131775
+    },
+    "avg_steps_per_primary": 131841.22973632812,
+    "avg_time_per_primary": 0.09515382578833008,
+    "avg_time_per_step": 7.217304175532198e-07,
+    "emptying_step": 131776,
+    "num_primaries": 4096,
+    "num_step_iters": 131921,
+    "num_steps": 540021677,
+    "pre_emptying_time": 0.002900262,
+    "queue_hwm": {
+     "count": 215776,
+     "index": 128
+    },
+    "total_time": 389.750070429,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 3.9809882109999988,
+     "brems-rel": 0.07673644900000012,
+     "brems-sb": 0.8322478949999996,
+     "conv-bethe-heitler": 0.178219213,
+     "geo-boundary": 0.5685819349999999,
+     "ioni-moller-bhabha": 0.11842017999999999,
+     "photoel-livermore": 0.5509876120000007,
+     "physics-discrete-select": 0.26450124,
+     "pre-step": 1.9138449670000026,
+     "scat-klein-nishina": 0.15279976099999992,
+     "scat-rayleigh": 0.10026469200000002
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 995
+    },
+    "avg_steps_per_primary": 53983.943,
+    "avg_time_per_primary": 0.0009050785141,
+    "avg_time_per_step": 1.676569853558122e-08,
+    "emptying_step": 996,
+    "num_primaries": 10000,
+    "num_step_iters": 1165,
+    "num_steps": 539839430,
+    "pre_emptying_time": 0.008099248,
+    "queue_hwm": {
+     "count": 6069450,
+     "index": 105
+    },
+    "total_time": 9.050785141,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.25,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat-vecgeom-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.gdml",
+   "mag_field": null,
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
+  "name": [
+   "testem3-flat",
+   "vecgeom",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 118.10675197100008,
+     "brems-rel": 1.9383033279999307,
+     "brems-sb": 16.331506899000168,
+     "conv-bethe-heitler": 3.3550228350000073,
+     "geo-boundary": 42.65043805699955,
+     "ioni-moller-bhabha": 2.4563798210000387,
+     "photoel-livermore": 11.005904884999849,
+     "physics-discrete-select": 11.581728456999796,
+     "pre-step": 134.79862630499923,
+     "scat-klein-nishina": 6.517653566000066,
+     "scat-rayleigh": 2.5047176289999755
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 131775
+    },
+    "avg_steps_per_primary": 131841.22973632812,
+    "avg_time_per_primary": 0.09059040686767578,
+    "avg_time_per_step": 6.871174294175602e-07,
+    "emptying_step": 131776,
+    "num_primaries": 4096,
+    "num_step_iters": 131921,
+    "num_steps": 540021677,
+    "pre_emptying_time": 0.002795044,
+    "queue_hwm": {
+     "count": 215776,
+     "index": 128
+    },
+    "total_time": 371.05830653,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {},
+   "version": "v0.1.1+2d505f63"
+  }
+ },
+ "testem3-flat-vecgeom-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "testem3-flat.gdml",
+   "mag_field": null,
+   "max_num_tracks": 524288,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat",
+   "vecgeom",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-general-linear": 1.8062560129999992,
+     "brems-rel": 0.07505067499999993,
+     "brems-sb": 0.8108569220000006,
+     "conv-bethe-heitler": 0.17315661199999993,
+     "geo-boundary": 1.5811958449999999,
+     "ioni-moller-bhabha": 0.11295421499999987,
+     "photoel-livermore": 0.5352445990000007,
+     "physics-discrete-select": 0.26673828599999966,
+     "pre-step": 1.718700072999999,
+     "scat-klein-nishina": 0.14407079099999998,
+     "scat-rayleigh": 0.09614157499999985
+    },
+    "active_hwm": {
+     "count": 524288,
+     "index": 995
+    },
+    "avg_steps_per_primary": 53983.943,
+    "avg_time_per_primary": 0.0007639888370999999,
+    "avg_time_per_step": 1.4152149595667734e-08,
+    "emptying_step": 996,
+    "num_primaries": 10000,
+    "num_step_iters": 1165,
+    "num_steps": 539839430,
+    "pre_emptying_time": 0.007022439,
+    "queue_hwm": {
+     "count": 6069450,
+     "index": 105
+    },
+    "total_time": 7.639888371,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": true,
+   "occupancy": {
+    "along_step_general_linear": 0.125,
+    "bethe_heitler_interact": 0.25,
+    "boundary": 0.125,
+    "discrete_select": 0.25,
+    "init_tracks": 0.125,
+    "klein_nishina_interact": 0.25,
+    "livermore_pe_interact": 0.125,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.25,
+    "pre_step": 0.25,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.25,
+    "rayleigh_interact": 0.375,
+    "relativistic_brem_interact": 0.125,
+    "seltzer_berger_interact": 0.125
+   },
+   "version": "v0.1.1+2d505f63"
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+"stderr": [
+"status: Loading input and initializing problem data",
+"status: Initializing Geant4",
+"info: Loading geometry from input/simple-cms.gdml",
+"info: Loading ORANGE geometry from JSON at input/simple-cms.org.json",
+"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+"status: Reading and building Seltzer Berger model data",
+"status: Reading and building Livermore PE model data",
+"status: Transporting",
+"terminate called after throwing an instance of 'celeritas::RuntimeError'",
+"  what():  /home/alund/celeritas_project/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+"celeritas: cuda error: cudaFree(ptr) failed:",
+"    unspecified launch failure"
+],
+"stdout": [
+"/home/alund/celeritas_project/celeritas/src/orange/OrangeTrackView.hh:418:",
+"celeritas: internal assertion failed: init.volume"
+]
+}

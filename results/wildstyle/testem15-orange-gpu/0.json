@@ -1,0 +1,540 @@
+{
+"input": {
+"brem_combined": false,
+"brem_lpm": true,
+"conv_lpm": true,
+"eloss_fluctuation": true,
+"enable_diagnostics": false,
+"enable_msc": false,
+"geant_options": {
+"em_bins_per_decade": 56,
+"physics": "em_basic"
+},
+"geometry_filename": "input/testem15.org.json",
+"hepmc3_filename": "input/testem15-10k.hepmc3",
+"initializer_capacity": 134217728,
+"mag_field": [
+0.0,
+0.0,
+0.0
+],
+"max_num_tracks": 524288,
+"max_steps": 4096,
+"physics_filename": "input/testem15.gdml",
+"rayleigh": false,
+"secondary_stack_factor": 3.0,
+"seed": 20220904,
+"sync": true,
+"use_device": true
+},
+"internal": {
+"actions": [
+{
+"description": "beginning of step physics",
+"label": "pre-step",
+"time": 0.009002782
+},
+{
+"description": "range limitation due to energy loss",
+"label": "eloss-range",
+"time": 0.0
+},
+{
+"description": "discrete interaction",
+"label": "physics-discrete-select",
+"time": 0.001752207
+},
+{
+"description": "rejection by integral cross section",
+"label": "physics-integral-rejected",
+"time": 0.0
+},
+{
+"description": "Moller+Bhabha scattering",
+"label": "ioni-moller-bhabha",
+"time": 0.0010742640000000001
+},
+{
+"description": "Seltzer-Berger bremsstrahlung",
+"label": "brems-sb",
+"time": 0.0020585569999999995
+},
+{
+"description": "Relativistic bremsstrahlung",
+"label": "brems-rel",
+"time": 0.0009664829999999999
+},
+{
+"description": "Livermore photoelectric effect",
+"label": "photoel-livermore",
+"time": 0.001851647
+},
+{
+"description": "Klein-Nishina Compton scattering",
+"label": "scat-klein-nishina",
+"time": 0.0013423490000000003
+},
+{
+"description": "Bethe-Heitler gamma conversion",
+"label": "conv-bethe-heitler",
+"time": 0.0011418390000000002
+},
+{
+"description": "Rayleigh scattering",
+"label": "scat-rayleigh",
+"time": 0.001344586
+},
+{
+"description": "interaction sampling failure",
+"label": "physics-failure",
+"time": 0.0
+},
+{
+"description": "along-step for particles with no field",
+"label": "along-step-general-linear",
+"time": 0.024254998
+},
+{
+"description": "Boundary crossing",
+"label": "geo-boundary",
+"time": 0.001041183
+}
+],
+"physics": {
+"models": [
+{
+"label": "ioni-moller-bhabha",
+"process": 0
+},
+{
+"label": "brems-sb",
+"process": 1
+},
+{
+"label": "brems-rel",
+"process": 1
+},
+{
+"label": "photoel-livermore",
+"process": 2
+},
+{
+"label": "scat-klein-nishina",
+"process": 3
+},
+{
+"label": "conv-bethe-heitler",
+"process": 4
+},
+{
+"label": "scat-rayleigh",
+"process": 5
+}
+],
+"options": {
+"eloss_calc_limit": [
+0.001,
+"MeV"
+],
+"energy_fraction": 0.8,
+"fixed_step_limiter": 0.0,
+"linear_loss_limit": 0.01,
+"scaling_fraction": 0.2,
+"scaling_min_range": 0.1
+},
+"processes": [
+{
+"label": "Electron/positron ionization"
+},
+{
+"label": "Bremsstrahlung"
+},
+{
+"label": "Photoelectric effect"
+},
+{
+"label": "Compton scattering"
+},
+{
+"label": "Photon annihiliation"
+},
+{
+"label": "Rayleigh scattering"
+}
+],
+"sizes": {
+"integral_xs": 8,
+"model_groups": 8,
+"model_ids": 10,
+"process_groups": 3,
+"process_ids": 8,
+"reals": 15468,
+"value_grid_ids": 42,
+"value_grids": 42,
+"value_tables": 38
+}
+}
+},
+"result": {
+"active": [
+10000,
+17530,
+28334,
+34453,
+35371,
+30391,
+22767,
+16067,
+10886,
+7160,
+4549,
+2760,
+1593,
+867,
+451,
+201,
+93,
+45,
+22,
+8,
+6,
+4,
+1,
+1
+],
+"alive": [
+10000,
+17429,
+21809,
+22759,
+19412,
+14403,
+10075,
+6918,
+4564,
+2976,
+1840,
+1086,
+605,
+326,
+145,
+67,
+31,
+18,
+5,
+3,
+3,
+1,
+1,
+0
+],
+"edep": [],
+"initializers": [
+7530,
+10905,
+12644,
+12612,
+10979,
+8364,
+5992,
+3968,
+2596,
+1573,
+920,
+507,
+262,
+125,
+56,
+26,
+14,
+4,
+3,
+3,
+1,
+0,
+0,
+0
+],
+"process": {},
+"steps": {},
+"time": {
+"setup": 0.130161098,
+"steps": [
+0.019260841,
+0.002317875,
+0.002452478,
+0.002437262,
+0.002338251,
+0.00228094,
+0.002203018,
+0.002099268,
+0.002075531,
+0.002048627,
+0.002032691,
+0.002011434,
+0.002005309,
+0.001933825,
+0.001971297,
+0.001840518,
+0.001846261,
+0.0018503,
+0.001812989,
+0.001784538,
+0.001804862,
+0.001789389,
+0.001753208,
+0.001732641
+],
+"total": 0.120366382
+}
+},
+"system": {
+"build": {
+"config": {
+"CELERITAS_BUILD_TYPE": "RelWithDebInfo",
+"CELERITAS_DEBUG": true,
+"CELERITAS_LAUNCH_BOUNDS": false,
+"CELERITAS_RNG": "XORWOW",
+"CELERITAS_USE_CUDA": true,
+"CELERITAS_USE_GEANT4": true,
+"CELERITAS_USE_HEPMC3": true,
+"CELERITAS_USE_HIP": false,
+"CELERITAS_USE_JSON": true,
+"CELERITAS_USE_MPI": false,
+"CELERITAS_USE_OPENMP": false,
+"CELERITAS_USE_ROOT": true,
+"CELERITAS_USE_VECGEOM": false,
+"CLHEP_VERSION": "2.4.4.0",
+"Geant4_VERSION": "10.7.2"
+},
+"version": "v0.1.1+2d505f63"
+},
+"device": {
+"capability_major": 7,
+"capability_minor": 0,
+"clock_rate": 1530000,
+"default_block_size": 256,
+"device_id": 0,
+"eu_per_cu": 1,
+"max_cache_size": 6291456,
+"max_threads_per_block": 1024,
+"max_threads_per_cu": 2048,
+"memory_clock_rate": 877000,
+"multiprocessor_count": 80,
+"name": "Tesla V100-SXM2-32GB",
+"platform": "cuda",
+"regs_per_block": 65536,
+"regs_per_multiprocessor": 65536,
+"shared_mem_per_block": 49152,
+"threads_per_warp": 32,
+"total_const_mem": 65536,
+"total_global_mem": 34089926656
+},
+"environ": {
+"CELER_BLOCK_SIZE": "",
+"CELER_DISABLE_DEVICE": "",
+"CELER_DISABLE_SIGNALS": "",
+"CELER_LOG": "",
+"CELER_LOG_LOCAL": "",
+"G4LEDATA": "/home/alund/spack/opt/spack/linux-opensuse_leap15-zen/gcc-8.2.0/g4emlow-7.13-wnirm4oiqze36hqtb6mr657oom7zhn3q/share/data/G4EMLOW7.13",
+"GTEST_COLOR": ""
+},
+"kernels": [
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 8,
+"max_num_threads": 10000,
+"max_threads_per_block": 1024,
+"max_warps_per_eu": 64,
+"name": "process_primaries",
+"num_launches": 1,
+"num_regs": 24,
+"occupancy": 1.0,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 1,
+"max_num_threads": 12644,
+"max_threads_per_block": 384,
+"max_warps_per_eu": 8,
+"name": "init_tracks",
+"num_launches": 22,
+"num_regs": 144,
+"occupancy": 0.125,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 512,
+"max_warps_per_eu": 16,
+"name": "pre_step",
+"num_launches": 24,
+"num_regs": 113,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 1304,
+"max_blocks_per_cu": 1,
+"max_num_threads": 524288,
+"max_threads_per_block": 256,
+"max_warps_per_eu": 8,
+"name": "along_step_general_linear",
+"num_launches": 24,
+"num_regs": 224,
+"occupancy": 0.125,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 512,
+"max_warps_per_eu": 16,
+"name": "discrete_select",
+"num_launches": 24,
+"num_regs": 104,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 1,
+"max_num_threads": 524288,
+"max_threads_per_block": 384,
+"max_warps_per_eu": 8,
+"name": "boundary",
+"num_launches": 24,
+"num_regs": 130,
+"occupancy": 0.125,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 512,
+"max_warps_per_eu": 16,
+"name": "moller_bhabha_interact",
+"num_launches": 24,
+"num_regs": 103,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 1,
+"max_num_threads": 524288,
+"max_threads_per_block": 384,
+"max_warps_per_eu": 8,
+"name": "seltzer_berger_interact",
+"num_launches": 24,
+"num_regs": 154,
+"occupancy": 0.125,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 512,
+"max_warps_per_eu": 16,
+"name": "relativistic_brem_interact",
+"num_launches": 24,
+"num_regs": 120,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 1,
+"max_num_threads": 524288,
+"max_threads_per_block": 384,
+"max_warps_per_eu": 8,
+"name": "livermore_pe_interact",
+"num_launches": 24,
+"num_regs": 137,
+"occupancy": 0.125,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 640,
+"max_warps_per_eu": 16,
+"name": "klein_nishina_interact",
+"num_launches": 24,
+"num_regs": 89,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 48,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 512,
+"max_warps_per_eu": 16,
+"name": "bethe_heitler_interact",
+"num_launches": 24,
+"num_regs": 98,
+"occupancy": 0.25,
+"threads_per_block": 256
+},
+{
+"const_mem": 272,
+"local_mem": 104,
+"max_blocks_per_cu": 3,
+"max_num_threads": 524288,
+"max_threads_per_block": 768,
+"max_warps_per_eu": 24,
+"name": "rayleigh_interact",
+"num_launches": 24,
+"num_regs": 80,
+"occupancy": 0.375,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 8,
+"max_num_threads": 524288,
+"max_threads_per_block": 1024,
+"max_warps_per_eu": 64,
+"name": "locate_alive",
+"num_launches": 24,
+"num_regs": 32,
+"occupancy": 1.0,
+"threads_per_block": 256
+},
+{
+"const_mem": 0,
+"local_mem": 24,
+"max_blocks_per_cu": 2,
+"max_num_threads": 524288,
+"max_threads_per_block": 640,
+"max_warps_per_eu": 16,
+"name": "process_secondaries",
+"num_launches": 24,
+"num_regs": 96,
+"occupancy": 0.25,
+"threads_per_block": 256
+}
+]
+}
+}
