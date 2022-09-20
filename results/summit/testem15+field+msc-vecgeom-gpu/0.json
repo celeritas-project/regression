@@ -26,14 +26,14 @@
 },
 "geometry_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.gdml",
 "hepmc3_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15-10k.hepmc3",
-"initializer_capacity": 67108864,
+"initializer_capacity": 4194304,
 "mag_field": [
 0.0,
 0.0,
 1.0
 ],
 "max_num_tracks": 524288,
-"max_steps": 32768,
+"max_steps": 4096,
 "physics_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.gdml",
 "rayleigh": false,
 "secondary_stack_factor": 3.0,
@@ -46,7 +46,7 @@
 {
 "description": "beginning of step physics",
 "label": "pre-step",
-"time": 0.005675226999999998
+"time": 0.006433689000000001
 },
 {
 "description": "range limitation due to energy loss",
@@ -56,7 +56,7 @@
 {
 "description": "discrete interaction",
 "label": "physics-discrete-select",
-"time": 0.001283957
+"time": 0.001338172
 },
 {
 "description": "rejection by integral cross section",
@@ -66,42 +66,42 @@
 {
 "description": "Urban multiple scattering",
 "label": "msc-urban",
-"time": 0.00012194300000000002
+"time": 0.000123953
 },
 {
 "description": "Moller+Bhabha scattering",
 "label": "ioni-moller-bhabha",
-"time": 0.0010553620000000002
+"time": 0.001079689
 },
 {
 "description": "Seltzer-Berger bremsstrahlung",
 "label": "brems-sb",
-"time": 0.001289147
+"time": 0.0013609779999999999
 },
 {
 "description": "Relativistic bremsstrahlung",
 "label": "brems-rel",
-"time": 0.001005732
+"time": 0.00101551
 },
 {
 "description": "Livermore photoelectric effect",
 "label": "photoel-livermore",
-"time": 0.001582757
+"time": 0.0016826829999999997
 },
 {
 "description": "Klein-Nishina Compton scattering",
 "label": "scat-klein-nishina",
-"time": 0.0011994549999999997
+"time": 0.0012472660000000001
 },
 {
 "description": "Bethe-Heitler gamma conversion",
 "label": "conv-bethe-heitler",
-"time": 0.001093593
+"time": 0.0011251370000000002
 },
 {
 "description": "Rayleigh scattering",
 "label": "scat-rayleigh",
-"time": 0.001177843
+"time": 0.001216585
 },
 {
 "description": "interaction sampling failure",
@@ -111,12 +111,12 @@
 {
 "description": "along-step in a uniform field with Urban MSC",
 "label": "along-step-uniform-msc",
-"time": 0.0023155069999999996
+"time": 0.00246733
 },
 {
 "description": "Boundary crossing",
 "label": "geo-boundary",
-"time": 0.001015713
+"time": 0.0010389749999999997
 }
 ],
 "physics": {
@@ -281,33 +281,33 @@
 "process": {},
 "steps": {},
 "time": {
-"setup": 0.380830714,
+"setup": 0.394998483,
 "steps": [
-0.26452567,
-0.001152675,
-0.001169704,
-0.00117405,
-0.001170536,
-0.001148363,
-0.001118132,
-0.001078487,
-0.001038875,
-0.001031014,
-0.001010871,
-0.00099767,
-0.000975165,
-0.000962209,
-0.000961619,
-0.000953244,
-0.00093908,
-0.000909085,
-0.000908982,
-0.000890332,
-0.000888417,
-0.00089406,
-0.000860716
+0.062485212,
+0.001233542,
+0.001242208,
+0.001270884,
+0.001266031,
+0.001230692,
+0.00118913,
+0.001142403,
+0.001106301,
+0.001092117,
+0.001075064,
+0.001054443,
+0.00103636,
+0.001019796,
+0.001014294,
+0.001007508,
+0.000991801,
+0.00096558,
+0.000961781,
+0.000944448,
+0.000934513,
+0.000931898,
+0.000910291
 ],
-"total": 0.353376191
+"total": 0.156283646
 }
 },
 "system": {
@@ -330,7 +330,7 @@
 "Geant4_VERSION": "11.0.0",
 "VecGeom_VERSION": "1.2.0"
 },
-"version": "v0.1.2+5f0f8dd7"
+"version": "v0.1.2+fb3f5506"
 },
 "device": {
 "capability_major": 7,

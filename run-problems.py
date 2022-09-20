@@ -142,8 +142,8 @@ base_input = {
     "enable_diagnostics": False,
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
-    "max_num_tracks": 4096,
-    "max_steps": 2**20,
+    "max_num_tracks": 2**12,
+    "max_steps": 2**19,
     "secondary_stack_factor": 3.0,
     "sync": True,
     "use_device": False,
@@ -164,8 +164,8 @@ use_msc = {"enable_msc": True}
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**19,
-    "max_steps": 2**15,
-    "initializer_capacity": 2**26,
+    "max_steps": 2**12,
+    "initializer_capacity": 2**22,
 }
 
 no_field = {

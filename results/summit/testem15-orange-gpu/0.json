@@ -12,14 +12,14 @@
 },
 "geometry_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.org.json",
 "hepmc3_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15-10k.hepmc3",
-"initializer_capacity": 67108864,
+"initializer_capacity": 4194304,
 "mag_field": [
 0.0,
 0.0,
 0.0
 ],
 "max_num_tracks": 524288,
-"max_steps": 32768,
+"max_steps": 4096,
 "physics_filename": "/autofs/nccs-svm1_home1/s3j/celeritas-regression/input/testem15.gdml",
 "rayleigh": false,
 "secondary_stack_factor": 3.0,
@@ -32,7 +32,7 @@
 {
 "description": "beginning of step physics",
 "label": "pre-step",
-"time": 0.005176715999999998
+"time": 0.005594723000000001
 },
 {
 "description": "range limitation due to energy loss",
@@ -42,7 +42,7 @@
 {
 "description": "discrete interaction",
 "label": "physics-discrete-select",
-"time": 0.001141234
+"time": 0.0011671409999999998
 },
 {
 "description": "rejection by integral cross section",
@@ -52,37 +52,37 @@
 {
 "description": "Moller+Bhabha scattering",
 "label": "ioni-moller-bhabha",
-"time": 0.000929684
+"time": 0.0009417459999999999
 },
 {
 "description": "Seltzer-Berger bremsstrahlung",
 "label": "brems-sb",
-"time": 0.0011801269999999998
+"time": 0.001207984
 },
 {
 "description": "Relativistic bremsstrahlung",
 "label": "brems-rel",
-"time": 0.0008740210000000001
+"time": 0.0008732859999999998
 },
 {
 "description": "Livermore photoelectric effect",
 "label": "photoel-livermore",
-"time": 0.001435482
+"time": 0.001476215
 },
 {
 "description": "Klein-Nishina Compton scattering",
 "label": "scat-klein-nishina",
-"time": 0.001064467
+"time": 0.001087032
 },
 {
 "description": "Bethe-Heitler gamma conversion",
 "label": "conv-bethe-heitler",
-"time": 0.000981124
+"time": 0.0009911370000000002
 },
 {
 "description": "Rayleigh scattering",
 "label": "scat-rayleigh",
-"time": 0.0010501170000000002
+"time": 0.001067507
 },
 {
 "description": "interaction sampling failure",
@@ -92,12 +92,12 @@
 {
 "description": "along-step for particles with no field",
 "label": "along-step-general-linear",
-"time": 0.0017281979999999998
+"time": 0.0018054380000000004
 },
 {
 "description": "Boundary crossing",
 "label": "geo-boundary",
-"time": 0.0008953329999999999
+"time": 0.000891478
 }
 ],
 "physics": {
@@ -246,30 +246,30 @@
 "process": {},
 "steps": {},
 "time": {
-"setup": 0.202625098,
+"setup": 0.20876415,
 "steps": [
-0.429492138,
-0.001147196,
-0.001149187,
-0.001157663,
-0.001134746,
-0.001109421,
-0.001088406,
-0.001070315,
-0.001014661,
-0.00099625,
-0.00099177,
-0.000961108,
-0.000966372,
-0.00096835,
-0.000971501,
-0.000922371,
-0.000899133,
-0.000892785,
-0.000867059,
-0.000854024
+0.066510412,
+0.001184309,
+0.001211692,
+0.001193005,
+0.001202345,
+0.001165698,
+0.00112619,
+0.001100795,
+0.001049222,
+0.001031089,
+0.001023688,
+0.000989207,
+0.0009999,
+0.000999689,
+0.00099462,
+0.000948778,
+0.000925482,
+0.000924406,
+0.000892664,
+0.000866541
 ],
-"total": 0.964611485
+"total": 0.182351773
 }
 },
 "system": {
@@ -291,7 +291,7 @@
 "CLHEP_VERSION": "2.4.5.1",
 "Geant4_VERSION": "11.0.0"
 },
-"version": "v0.1.2+5f0f8dd7"
+"version": "v0.1.2+fb3f5506"
 },
 "device": {
 "capability_major": 7,
