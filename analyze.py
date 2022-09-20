@@ -8,26 +8,28 @@ import json
 import pandas as pd
 from pathlib import Path
 
+Islc = pd.IndexSlice
+
+
+RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
+
+
 def unstack_subdict(df):
     result = pd.DataFrame(list(df.values), index=df.index)
     result.columns.name = df.name
     return result
 
 
-def summarize_instances(df):
-    """TODO: probably a better way to do this with a combination of
-    stack/unstack or groupby"""
-    transformed = {}
-    for k in df.columns:
-        temp = df[k].unstack().T.describe().T[['count', 'mean', 'std']]
-        temp.columns.name = k
-        transformed[temp.columns.name] = temp
-    result = pd.concat(transformed, axis=1, names=[df.columns.name, "summary"])
-    return result
+def groupby_notinstance(obj):
+    """
+    Return an object suitable for ``describe``, ``sum``, etc.
+    """
+    return obj.groupby(level=RESULT_LEVELS[:-1])
 
 
-def sum_instance(series):
-    return series.groupby(level=['problem', 'geo', 'arch']).sum()
+def summarize_instances(obj):
+    grouped = groupby_notinstance(obj)
+    return grouped.describe().loc[Islc[:], Islc[:, ['count', 'mean', 'std']]]
 
 
 class Analysis:
@@ -40,12 +42,14 @@ class Analysis:
             summaries = {tuple(v.pop('name')): v
                          for v in json.load(f).values()}
 
-        input = pd.DataFrame([v['input'] for v in summaries.values()],
+        input = pd.DataFrame([v.get('input', {}) for v in summaries.values()],
                                index=summaries.keys())
+        input.index.names = RESULT_LEVELS[:-1]
+
         result = pd.DataFrame([v['result'] for v in summaries.values()],
                                index=summaries.keys())
         result = result.stack()
-        result.index.names = ['problem', 'geo', 'arch', 'instance']
+        result.index.names = RESULT_LEVELS
         result = unstack_subdict(result)
 
         self.basedir = basedir
@@ -93,3 +97,43 @@ class Analysis:
     def __str__(self):
         return f"Analysis for Celeritas {self.version} on {self.basedir.name}"
 
+def plot_counts(ax, out):
+    blue = (.1, .1, .9)
+    red = (.7, .1, .1)
+
+    lines = []
+    def plot(ax, *args, **kwargs):
+        line, = ax.plot(*args, **kwargs)
+        lines.append(line)
+
+    plot(ax, out['result']['active'], '-', color=(blue + (0.5,)), label='Active')
+    plot(ax, out['result']['alive'], '-', color=blue, label='Alive')
+    ax.set_xlabel('Step iteration')
+    ax.set_ylabel('Tracks', color=blue)
+
+    oax = ax.twinx()
+    inits = np.array(out['result']['initializers'])
+    plot(oax, inits, '--', color=red, label='Queued')
+    oax.axhline(out['input']['initializer_capacity'], linestyle='--', color=(red + (0.25,)))
+    oax.set_ylabel('Initializers', color=red)
+
+    max_init_idx = np.argmax(inits)
+    max_init_val = inits[max_init_idx]
+    text = re.sub(r'([-+.0-9]+)e\+?(-)?0*([0-9]+)', r'$\1\\times 10^{\2\3}$',
+                  f'{max_init_val:.2g}')
+    oax.annotate(text + ' queued', xy=(max_init_idx, max_init_val), xycoords='data',
+                 xytext=(30, 10), textcoords='offset points',
+                 size='x-small',
+                 bbox=dict(boxstyle="round,pad=.2", fc=(0.9, 0.9, 0.9, 0.8) , ec=(0.2,)*3),
+                 arrowprops=dict(arrowstyle="->", ec=red, lw=1,
+                                 connectionstyle="arc3,rad=0.2"))
+
+    oax.spines['left'].set_color(blue)
+    oax.spines['right'].set_color(red)
+
+    ax.legend(lines, [l.get_label() for l in lines])
+
+    return {
+        'ax': ax,
+        'oax': oax,
+    }
