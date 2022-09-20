@@ -149,9 +149,13 @@ def main(index_filename):
         problems = json.load(f)
     results_dir = index_filename.parent
 
+    if isinstance(problems, dict):
+        # Legacy
+        problems = problems.items()
+
     # Load results
     summaries = {}
-    for subdir, name in problems.items():
+    for subdir, name in problems:
         outdir = results_dir / subdir
         result_files = sorted(outdir.glob("*.json"))
         results = []

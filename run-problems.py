@@ -409,7 +409,8 @@ async def main():
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
     with open(results_dir / "index.json", "w") as f:
-        json.dump({inp['_outdir']: inp['_name'] for inp in inputs}, f, indent=0)
+        json.dump([(inp['_outdir'], inp['_name'])
+                   for inp in inputs], f, indent=0)
 
     summaries = {}
     for inp in inputs:

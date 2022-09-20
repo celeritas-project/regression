@@ -1,0 +1,39 @@
+{
+ "axes.axisbelow": true,
+ "axes.formatter.use_mathtext": true,
+ "figure.dpi": 150.0,
+ "figure.edgecolor": [
+  1,
+  1,
+  1,
+  0
+ ],
+ "figure.figsize": [
+  3.75,
+  3.0
+ ],
+ "figure.subplot.bottom": 0.125,
+ "font.family": [
+  "serif"
+ ],
+ "font.size": 9.0,
+ "grid.color": "#c0c0c0",
+ "grid.linewidth": 0.25,
+ "legend.fontsize": 7.0,
+ "legend.framealpha": 0.9,
+ "legend.labelspacing": 0.25,
+ "lines.linewidth": 0.75,
+ "patch.linewidth": 0.75,
+ "savefig.bbox": "tight",
+ "savefig.dpi": 300.0,
+ "xtick.direction": "in",
+ "xtick.major.size": 3.0,
+ "xtick.major.width": 0.25,
+ "xtick.minor.size": 1.5,
+ "xtick.minor.width": 0.25,
+ "ytick.direction": "in",
+ "ytick.major.size": 3.0,
+ "ytick.major.width": 0.25,
+ "ytick.minor.size": 1.5,
+ "ytick.minor.width": 0.25
+}
