@@ -8,6 +8,7 @@
     0.0,
     1000.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -236,6 +237,7 @@
     0.0,
     1000.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -476,6 +478,7 @@
    "enable_msc": false,
    "geometry_filename": "cms2018.gdml",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -694,6 +697,7 @@
    "enable_msc": false,
    "geometry_filename": "cms2018.gdml",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -1148,6 +1152,7 @@
     0.0,
     1000.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -1376,6 +1381,7 @@
     0.0,
     1000.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -1832,6 +1838,7 @@
    "enable_msc": true,
    "geometry_filename": "simple-cms.org.json",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -2056,6 +2063,7 @@
    "enable_msc": true,
    "geometry_filename": "simple-cms.org.json",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -2300,6 +2308,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -2528,6 +2537,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -2772,6 +2782,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -3000,6 +3011,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -3244,6 +3256,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -3466,6 +3479,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -3700,6 +3714,7 @@
    "enable_msc": false,
    "geometry_filename": "testem15.org.json",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -3918,6 +3933,7 @@
    "enable_msc": false,
    "geometry_filename": "testem15.org.json",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -4156,6 +4172,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -4306,6 +4323,7 @@
     0.0,
     1.0
    ],
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -4432,6 +4450,7 @@
    "enable_msc": true,
    "geometry_filename": "testem3-flat.org.json",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -4618,6 +4637,7 @@
    "enable_msc": true,
    "geometry_filename": "testem3-flat.org.json",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -4744,6 +4764,7 @@
    "enable_msc": false,
    "geometry_filename": "testem3-flat.org.json",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -4962,6 +4983,7 @@
    "enable_msc": false,
    "geometry_filename": "testem3-flat.org.json",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
@@ -5088,6 +5110,7 @@
    "enable_msc": false,
    "geometry_filename": "testem3-flat.gdml",
    "mag_field": null,
+   "max_num_tracks": 4096,
    "use_device": false
   },
   "name": [
@@ -5306,6 +5329,7 @@
    "enable_msc": false,
    "geometry_filename": "testem3-flat.gdml",
    "mag_field": null,
+   "max_num_tracks": 524288,
    "use_device": true
   },
   "name": [
