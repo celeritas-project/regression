@@ -216,7 +216,7 @@ no_field = {
 testem15 = {
     "_geometry": "orange",
     "geometry_filename": "testem15.org.json",
-    "hepmc3_filename": "testem15-10k.hepmc3",
+    "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
     "mag_field": [0.0, 0.0, 1.0],
 }
@@ -236,18 +236,18 @@ testem3 = {
     "mag_field": [0.0, 0.0, 1.0],
     "primary_gen_options": {
         "pdg": 11,
-        "energy": 10000,
+        "energy": 10000,  # 10 GeV
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
-        "num_events": 10000,
-        "primaries_per_event": 1
+        "num_events": 7,
+        "primaries_per_event": 1300  # 13 TeV
     }
 }
 
 full_cms = {
     "_geometry": "vecgeom",
     "geometry_filename": "cms2018.gdml",
-    "hepmc3_filename": "simple-cms-10k.hepmc3",
+    "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
     "mag_field": [0.0, 0.0, 1000.0],
 }

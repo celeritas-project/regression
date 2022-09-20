@@ -26,11 +26,12 @@ def calc_hwm(counts):
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
-def summarize_result(result, internal):
+def summarize_result():
     """Calculate statistics about the tracking behaviors.
 
     These are basically equivalent to those in StepperTestBase.
     """
+    inp, result, internal = (out[k] for k in ['input', 'result', 'internal'])
     active = result['active']
     time = result['time']
     steps = sum(active)
@@ -50,6 +51,7 @@ def summarize_result(result, internal):
         "avg_steps_per_primary": steps / active[0],
         "avg_time_per_step": time['total'] / steps,
         "avg_time_per_primary": time['total'] / active[0],
+        "slot_occupancy": steps / (len(active) * inp['max_num_tracks'])
     }
     return summary
 
@@ -112,7 +114,7 @@ def summarize_one(out):
     failure = summarize_failure(out)
 
     try:
-        result = summarize_result(out['result'], out['internal'])
+        result = summarize_result(out)
     except Exception as e:
         return {
             'failure': failure,
