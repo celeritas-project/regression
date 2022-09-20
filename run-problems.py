@@ -205,7 +205,7 @@ use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**19,
     "max_steps": 2**12,
-    "initializer_capacity": 2**27,
+    "initializer_capacity": 2**26,
 }
 
 no_field = {
@@ -224,7 +224,7 @@ testem15 = {
 simple_cms = {
     "_geometry": "orange",
     "geometry_filename": "simple-cms.org.json",
-    "hepmc3_filename": "simple-cms-10k.hepmc3",
+    "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
     "mag_field": [0.0, 0.0, 1000.0],
 }
@@ -396,8 +396,8 @@ async def run_jslist():
 
 async def main():
     #system = Local()
-    #system = Summit()
-    system = Crusher()
+    system = Summit()
+    #system = Crusher()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
