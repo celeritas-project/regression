@@ -3,8 +3,8 @@
 #SBATCH -t 0:59:59
 #SBATCH -N 1
 #SBATCH -J celer-regression
-#SBATCH -o summit-%J.out
-#SBATCH -e summit-%J.err
+#SBATCH -o crusher-%J.out
+#SBATCH -e crusher-%J.err
 
 if [ -z "$SLURM_JOB_ID" ]; then
   exec sbatch $0

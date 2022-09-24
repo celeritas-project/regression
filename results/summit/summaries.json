@@ -952,6 +952,17 @@
   }
  },
  "simple-cms+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
   "name": [
    "simple-cms+field+msc",
    "orange",
@@ -959,6 +970,74 @@
   ],
   "result": [
    {
+    "action_times": {
+     "along-step-uniform-msc": 48.49662528699976,
+     "brems-rel": 0.3548190819999989,
+     "brems-sb": 3.031922051000035,
+     "conv-bethe-heitler": 0.5260679110000002,
+     "geo-boundary": 0.4174149369999997,
+     "ioni-moller-bhabha": 0.7112567150000025,
+     "msc-urban": 0.005821768000000494,
+     "photoel-livermore": 1.848273963999997,
+     "physics-discrete-select": 2.655561537000025,
+     "pre-step": 16.632137114999708,
+     "scat-klein-nishina": 4.278054173999997
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 60064
+    },
+    "avg_steps_per_primary": 60080.718505859375,
+    "avg_time_per_primary": 0.02109971336376953,
+    "avg_time_per_step": 3.511894312933654e-07,
+    "emptying_step": 60065,
+    "num_primaries": 4096,
+    "num_step_iters": 60151,
+    "num_steps": 246090623,
+    "pre_emptying_time": 0.001343626,
+    "queue_hwm": {
+     "count": 302632,
+     "index": 110
+    },
+    "slot_occupancy": 0.9988315822822459,
+    "total_time": 86.424425938,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 247.12009560100043,
+     "brems-rel": 0.366422476000007,
+     "brems-sb": 3.150844866000002,
+     "conv-bethe-heitler": 0.5456973009999998,
+     "geo-boundary": 0.43031305800000536,
+     "ioni-moller-bhabha": 0.7077124930000092,
+     "msc-urban": 0.006068897000000906,
+     "photoel-livermore": 1.914958262000023,
+     "physics-discrete-select": 2.669393337000001,
+     "pre-step": 16.63889994499999,
+     "scat-klein-nishina": 4.65897985799996
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 60047
+    },
+    "avg_steps_per_primary": 60089.703857421875,
+    "avg_time_per_primary": 0.06980703816967773,
+    "avg_time_per_step": 1.161713799344272e-06,
+    "emptying_step": 60048,
+    "num_primaries": 4096,
+    "num_step_iters": 60167,
+    "num_steps": 246127427,
+    "pre_emptying_time": 0.001351286,
+    "queue_hwm": {
+     "count": 296545,
+     "index": 110
+    },
+    "slot_occupancy": 0.9987153066867531,
+    "total_time": 285.929628343,
+    "unconverged": 0
+   },
+   {
     "exception": {
      "context": "result",
      "str": "'input'",
@@ -966,8 +1045,8 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -981,8 +1060,8 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -996,59 +1075,53 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
     }
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 1087.6995706670082,
+     "brems-rel": 0.354912295999998,
+     "brems-sb": 3.0385521470000296,
+     "conv-bethe-heitler": 0.5286692200000014,
+     "geo-boundary": 0.4114834690000035,
+     "ioni-moller-bhabha": 0.6743107180000021,
+     "msc-urban": 0.004631058000000349,
+     "photoel-livermore": 1.8528637309999973,
+     "physics-discrete-select": 2.6481758540000473,
+     "pre-step": 16.67045095799994,
+     "scat-klein-nishina": 4.257746246000019
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "active_hwm": {
+     "count": 4096,
+     "index": 60058
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "avg_steps_per_primary": 60080.50830078125,
+    "avg_time_per_primary": 0.27481707744262696,
+    "avg_time_per_step": 4.574147010654592e-06,
+    "emptying_step": 60059,
+    "num_primaries": 4096,
+    "num_step_iters": 60166,
+    "num_steps": 246089762,
+    "pre_emptying_time": 0.001337933,
+    "queue_hwm": {
+     "count": 301787,
+     "index": 110
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "slot_occupancy": 0.998579069587163,
+    "total_time": 1125.650749205,
+    "unconverged": 0
    }
-  ]
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.3"
+  }
  },
  "simple-cms+field+msc-orange-gpu": {
   "name": [
@@ -1065,11 +1138,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245498, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437843, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1083,11 +1156,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245499, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437842, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1101,11 +1174,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245497, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437844, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1119,11 +1192,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245502, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437845, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1137,11 +1210,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245501, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437847, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1155,11 +1228,11 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245500, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
+      "[PID=437846, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
@@ -1187,73 +1260,71 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 61.82665267489463,
-     "brems-rel": 2.267322638999974,
-     "brems-sb": 4.997066483999798,
-     "conv-bethe-heitler": 2.5228899580001185,
-     "geo-boundary": 3.4779056139999915,
-     "ioni-moller-bhabha": 2.6514512010000097,
-     "msc-urban": 0.026991455999988773,
-     "photoel-livermore": 3.785939945999901,
-     "physics-discrete-select": 5.733277524000118,
-     "pre-step": 21.82474771999576,
-     "scat-klein-nishina": 6.362999925999866,
-     "scat-rayleigh": 2.657155288999995
+     "along-step-uniform-msc": 93.48052781399957,
+     "brems-rel": 0.3944087860000012,
+     "brems-sb": 3.104004874999969,
+     "conv-bethe-heitler": 0.5845308210000032,
+     "geo-boundary": 0.41668931499999984,
+     "ioni-moller-bhabha": 0.8050006960000003,
+     "msc-urban": 0.00411069200000003,
+     "photoel-livermore": 1.9354288730000044,
+     "physics-discrete-select": 2.9134971550000084,
+     "pre-step": 16.76545632699992,
+     "scat-klein-nishina": 4.518414482999981
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61521
+     "index": 60507
     },
-    "avg_steps_per_primary": 62156.9775390625,
-    "avg_time_per_primary": 0.032522950193115234,
-    "avg_time_per_step": 5.232389263566784e-07,
-    "emptying_step": 61522,
+    "avg_steps_per_primary": 60539.252197265625,
+    "avg_time_per_primary": 0.032346987607666015,
+    "avg_time_per_step": 5.343142908713866e-07,
+    "emptying_step": 60508,
     "num_primaries": 4096,
-    "num_step_iters": 524288,
-    "num_steps": 254594980,
-    "pre_emptying_time": 0.001359665,
+    "num_step_iters": 60622,
+    "num_steps": 247968777,
+    "pre_emptying_time": 0.001955624,
     "queue_hwm": {
-     "count": 302382,
-     "index": 110
+     "count": 302523,
+     "index": 109
     },
-    "slot_occupancy": 0.11855502612888813,
-    "total_time": 133.214003991,
-    "unconverged": 3
+    "slot_occupancy": 0.9986350202445585,
+    "total_time": 132.493261241,
+    "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 60.05967304388715,
-     "brems-rel": 2.563473925000042,
-     "brems-sb": 5.30065496999987,
-     "conv-bethe-heitler": 2.70713801599995,
-     "geo-boundary": 3.4042074590000824,
-     "ioni-moller-bhabha": 2.9510223839999212,
-     "msc-urban": 0.021734767999991574,
-     "photoel-livermore": 4.0776463310000715,
-     "physics-discrete-select": 5.7570573470000195,
-     "pre-step": 21.61694844399398,
-     "scat-klein-nishina": 6.66466675099975,
-     "scat-rayleigh": 2.954814959999934
+     "along-step-uniform-msc": 78.2533318970002,
+     "brems-rel": 0.3820242970000003,
+     "brems-sb": 3.1154704559999913,
+     "conv-bethe-heitler": 0.5735330980000038,
+     "geo-boundary": 0.4145565259999995,
+     "ioni-moller-bhabha": 0.7808468820000002,
+     "msc-urban": 0.0059909370000011675,
+     "photoel-livermore": 1.8757734679999911,
+     "physics-discrete-select": 2.8968741100000144,
+     "pre-step": 16.8584956920001,
+     "scat-klein-nishina": 4.432697703000026
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61482
+     "index": 60458
     },
-    "avg_steps_per_primary": 61830.74169921875,
-    "avg_time_per_primary": 0.0325777738515625,
-    "avg_time_per_step": 5.268863506447979e-07,
-    "emptying_step": 61483,
+    "avg_steps_per_primary": 60474.747802734375,
+    "avg_time_per_primary": 0.028589937336425782,
+    "avg_time_per_step": 4.7275827308424234e-07,
+    "emptying_step": 60459,
     "num_primaries": 4096,
-    "num_step_iters": 524288,
-    "num_steps": 253258718,
-    "pre_emptying_time": 0.001389075,
+    "num_step_iters": 60559,
+    "num_steps": 247704567,
+    "pre_emptying_time": 0.001577615,
     "queue_hwm": {
-     "count": 296046,
-     "index": 110
+     "count": 296602,
+     "index": 111
     },
-    "slot_occupancy": 0.11793278064578772,
-    "total_time": 133.438561696,
-    "unconverged": 2
+    "slot_occupancy": 0.9986087584460506,
+    "total_time": 117.10438333,
+    "unconverged": 0
    },
    {
     "action_times": {
@@ -1292,38 +1363,37 @@
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 61.16928888897097,
-     "brems-rel": 1.8855047789999206,
-     "brems-sb": 4.640011837000177,
-     "conv-bethe-heitler": 2.032528859999982,
-     "geo-boundary": 2.8509708489998933,
-     "ioni-moller-bhabha": 2.3320946650000822,
-     "msc-urban": 0.018314347999985804,
-     "photoel-livermore": 3.3301059300002405,
-     "physics-discrete-select": 5.359981545000072,
-     "pre-step": 21.133995255002084,
-     "scat-klein-nishina": 6.019800437999809,
-     "scat-rayleigh": 2.2209805889999803
+     "along-step-uniform-msc": 825.0998285539945,
+     "brems-rel": 0.3757383390000037,
+     "brems-sb": 3.1245551549999284,
+     "conv-bethe-heitler": 0.542204917000005,
+     "geo-boundary": 0.38378153499999695,
+     "ioni-moller-bhabha": 0.8043282980000038,
+     "msc-urban": 0.0040528420000002004,
+     "photoel-livermore": 1.842974907000013,
+     "physics-discrete-select": 3.002010375999987,
+     "pre-step": 16.753295202999947,
+     "scat-klein-nishina": 4.516696764999984
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61498
+     "index": 60464
     },
-    "avg_steps_per_primary": 61833.94384765625,
-    "avg_time_per_primary": 0.03100920959399414,
-    "avg_time_per_step": 5.014916996139413e-07,
-    "emptying_step": 61499,
+    "avg_steps_per_primary": 60508.175537109375,
+    "avg_time_per_primary": 0.21091311598071288,
+    "avg_time_per_step": 3.4856961742526985e-06,
+    "emptying_step": 60465,
     "num_primaries": 4096,
-    "num_step_iters": 524288,
-    "num_steps": 253271834,
-    "pre_emptying_time": 0.00133602,
+    "num_step_iters": 60916,
+    "num_steps": 247841487,
+    "pre_emptying_time": 0.001786907,
     "queue_hwm": {
-     "count": 300800,
+     "count": 301222,
      "index": 111
     },
-    "slot_occupancy": 0.11793888825923204,
-    "total_time": 127.013722497,
-    "unconverged": 1
+    "slot_occupancy": 0.9933051339075017,
+    "total_time": 863.900123057,
+    "unconverged": 0
    },
    {
     "action_times": {
@@ -1362,44 +1432,43 @@
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 58.09088569700575,
-     "brems-rel": 1.4258134449999986,
-     "brems-sb": 4.139830608000142,
-     "conv-bethe-heitler": 1.6607532339999918,
-     "geo-boundary": 2.1099071689999978,
-     "ioni-moller-bhabha": 1.8166569730000197,
-     "msc-urban": 0.015571140000002226,
-     "photoel-livermore": 3.046923971000054,
-     "physics-discrete-select": 4.348529099999907,
-     "pre-step": 20.202194667996988,
-     "scat-klein-nishina": 5.615508074999859,
-     "scat-rayleigh": 1.8318982500000187
+     "along-step-uniform-msc": 78.01437375400059,
+     "brems-rel": 0.40053285799999916,
+     "brems-sb": 3.2033372409999967,
+     "conv-bethe-heitler": 0.5817152339999987,
+     "geo-boundary": 0.4184738380000026,
+     "ioni-moller-bhabha": 0.8633224910000044,
+     "msc-urban": 0.005886832000000601,
+     "photoel-livermore": 1.9553147799999973,
+     "physics-discrete-select": 3.1000110830000023,
+     "pre-step": 16.819908144000035,
+     "scat-klein-nishina": 4.789805065999952
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61490
+     "index": 60445
     },
-    "avg_steps_per_primary": 61715.601318359375,
-    "avg_time_per_primary": 0.028333028568359377,
-    "avg_time_per_step": 4.5909021322183517e-07,
-    "emptying_step": 61491,
+    "avg_steps_per_primary": 60482.562744140625,
+    "avg_time_per_primary": 0.028812893599609375,
+    "avg_time_per_step": 4.7638347801988076e-07,
+    "emptying_step": 60446,
     "num_primaries": 4096,
-    "num_step_iters": 319792,
-    "num_steps": 252787103,
-    "pre_emptying_time": 0.001339954,
+    "num_step_iters": 61070,
+    "num_steps": 247736577,
+    "pre_emptying_time": 0.002127278,
     "queue_hwm": {
-     "count": 301057,
-     "index": 111
+     "count": 301760,
+     "index": 110
     },
-    "slot_occupancy": 0.19298669547192981,
-    "total_time": 116.052085016,
+    "slot_occupancy": 0.9903809193407668,
+    "total_time": 118.017612184,
     "unconverged": 0
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "simple-cms+field+msc-vecgeom-gpu": {
@@ -1654,6 +1723,17 @@
   }
  },
  "simple-cms+field-orange-cpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 4096,
+   "use_device": false
+  },
   "name": [
    "simple-cms+field",
    "orange",
@@ -1661,98 +1741,222 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 28.11974954599971,
+     "brems-rel": 0.34428151699999854,
+     "brems-sb": 3.0427603080000036,
+     "conv-bethe-heitler": 0.5262986770000014,
+     "geo-boundary": 0.41048158599999623,
+     "ioni-moller-bhabha": 0.6919461910000039,
+     "photoel-livermore": 1.8244410950000012,
+     "physics-discrete-select": 2.5582433270000204,
+     "pre-step": 16.30455225499995,
+     "scat-klein-nishina": 4.356977569999924
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59662
+    },
+    "avg_steps_per_primary": 59704.6787109375,
+    "avg_time_per_primary": 0.016025940561523438,
+    "avg_time_per_step": 2.6842017924782154e-07,
+    "emptying_step": 59663,
+    "num_primaries": 4096,
+    "num_step_iters": 59769,
+    "num_steps": 244550364,
+    "pre_emptying_time": 0.001073452,
+    "queue_hwm": {
+     "count": 299360,
+     "index": 107
+    },
+    "slot_occupancy": 0.9989238352814586,
+    "total_time": 65.64225254,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 27.8415333010003,
+     "brems-rel": 0.38881695200000077,
+     "brems-sb": 3.140338115000022,
+     "conv-bethe-heitler": 0.5866261490000031,
+     "geo-boundary": 0.41819238800000036,
+     "ioni-moller-bhabha": 0.7678143950000044,
+     "photoel-livermore": 1.9639202910000144,
+     "physics-discrete-select": 2.6044735950000404,
+     "pre-step": 16.292121703000078,
+     "scat-klein-nishina": 4.730736080000001
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59651
+    },
+    "avg_steps_per_primary": 59678.541259765625,
+    "avg_time_per_primary": 0.01623295841357422,
+    "avg_time_per_step": 2.720066219935948e-07,
+    "emptying_step": 59652,
+    "num_primaries": 4096,
+    "num_step_iters": 59760,
+    "num_steps": 244443305,
+    "pre_emptying_time": 0.001082401,
+    "queue_hwm": {
+     "count": 305086,
+     "index": 111
+    },
+    "slot_occupancy": 0.9986369019371758,
+    "total_time": 66.490197662,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 28.33740444199985,
+     "brems-rel": 0.3594801150000024,
+     "brems-sb": 3.0299023479999714,
+     "conv-bethe-heitler": 0.5488881729999998,
+     "geo-boundary": 0.4329969459999976,
+     "ioni-moller-bhabha": 0.7067178540000028,
+     "photoel-livermore": 1.8876720600000252,
+     "physics-discrete-select": 2.5631809010000053,
+     "pre-step": 16.32005414999997,
+     "scat-klein-nishina": 4.289918461000028
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59700
+    },
+    "avg_steps_per_primary": 59716.139404296875,
+    "avg_time_per_primary": 0.016122291235595703,
+    "avg_time_per_step": 2.699821421214584e-07,
+    "emptying_step": 59701,
+    "num_primaries": 4096,
+    "num_step_iters": 59798,
+    "num_steps": 244597307,
+    "pre_emptying_time": 0.00106479,
+    "queue_hwm": {
+     "count": 298983,
+     "index": 107
+    },
+    "slot_occupancy": 0.998631047932989,
+    "total_time": 66.036904901,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 28.412014404000104,
+     "brems-rel": 0.34986464399999856,
+     "brems-sb": 3.013313978000002,
+     "conv-bethe-heitler": 0.5479667540000004,
+     "geo-boundary": 0.38508433999999847,
+     "ioni-moller-bhabha": 0.7135037550000025,
+     "photoel-livermore": 1.8909874360000005,
+     "physics-discrete-select": 2.5587048709999944,
+     "pre-step": 16.225720581000026,
+     "scat-klein-nishina": 4.31832420599997
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59689
+    },
+    "avg_steps_per_primary": 59716.822509765625,
+    "avg_time_per_primary": 0.016066188646728517,
+    "avg_time_per_step": 2.69039576646952e-07,
+    "emptying_step": 59690,
+    "num_primaries": 4096,
+    "num_step_iters": 59794,
+    "num_steps": 244600105,
+    "pre_emptying_time": 0.001050914,
+    "queue_hwm": {
+     "count": 302509,
+     "index": 110
+    },
+    "slot_occupancy": 0.9987092770138413,
+    "total_time": 65.807108697,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 28.708953489000056,
+     "brems-rel": 0.3754761800000018,
+     "brems-sb": 3.118470431999969,
+     "conv-bethe-heitler": 0.5654842219999991,
+     "geo-boundary": 0.449591599000004,
+     "ioni-moller-bhabha": 0.7420607289999996,
+     "photoel-livermore": 1.9537946299999966,
+     "physics-discrete-select": 2.5772150369999784,
+     "pre-step": 16.281849546999794,
+     "scat-klein-nishina": 4.68831451099999
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59693
+    },
+    "avg_steps_per_primary": 59712.89599609375,
+    "avg_time_per_primary": 0.016414219301513672,
+    "avg_time_per_step": 2.7488566795667464e-07,
+    "emptying_step": 59694,
+    "num_primaries": 4096,
+    "num_step_iters": 59772,
+    "num_steps": 244584022,
+    "pre_emptying_time": 0.001093139,
+    "queue_hwm": {
+     "count": 301359,
+     "index": 109
+    },
+    "slot_occupancy": 0.999011175736026,
+    "total_time": 67.232642259,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 28.43587495899992,
+     "brems-rel": 0.3545746880000013,
+     "brems-sb": 3.028790341999999,
+     "conv-bethe-heitler": 0.5157816450000009,
+     "geo-boundary": 0.4141713080000045,
+     "ioni-moller-bhabha": 0.6735099219999998,
+     "photoel-livermore": 1.8266489839999986,
+     "physics-discrete-select": 2.538649474999997,
+     "pre-step": 16.21719327300011,
+     "scat-klein-nishina": 4.211243219999974
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 59678
+    },
+    "avg_steps_per_primary": 59709.8251953125,
+    "avg_time_per_primary": 0.01602667706298828,
+    "avg_time_per_step": 2.6840937836552984e-07,
+    "emptying_step": 59679,
+    "num_primaries": 4096,
+    "num_step_iters": 59771,
+    "num_steps": 244571444,
+    "pre_emptying_time": 0.001047775,
+    "queue_hwm": {
+     "count": 298936,
+     "index": 110
+    },
+    "slot_occupancy": 0.9989765136155075,
+    "total_time": 65.64526925,
+    "unconverged": 0
    }
-  ]
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.3"
+  }
  },
  "simple-cms+field-orange-gpu": {
+  "input": {
+   "enable_msc": false,
+   "geometry_filename": "simple-cms.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1000.0
+   ],
+   "max_num_tracks": 1048576,
+   "use_device": true
+  },
   "name": [
    "simple-cms+field",
    "orange",
@@ -1760,114 +1964,224 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 15.889120114999997,
+     "brems-rel": 0.030402341,
+     "brems-sb": 0.10111097500000003,
+     "conv-bethe-heitler": 0.04698271800000001,
+     "geo-boundary": 0.03272021599999997,
+     "ioni-moller-bhabha": 0.041580035000000036,
+     "photoel-livermore": 0.09122413900000004,
+     "physics-discrete-select": 0.10586932200000004,
+     "pre-step": 0.5995405440000002,
+     "scat-klein-nishina": 0.09866640300000006
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245416, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 225
+    },
+    "avg_steps_per_primary": 26878.83835164835,
+    "avg_time_per_primary": 0.0019948893524175822,
+    "avg_time_per_step": 7.42178410509785e-08,
+    "emptying_step": 226,
+    "num_primaries": 9100,
+    "num_step_iters": 354,
+    "num_steps": 244597429,
+    "pre_emptying_time": 0.006223543,
+    "queue_hwm": {
+     "count": 15371373,
+     "index": 71
+    },
+    "slot_occupancy": 0.658944310441529,
+    "total_time": 18.153493107,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 7.907656964999993,
+     "brems-rel": 0.029881087000000004,
+     "brems-sb": 0.10029942000000001,
+     "conv-bethe-heitler": 0.04635796699999999,
+     "geo-boundary": 0.032234060999999994,
+     "ioni-moller-bhabha": 0.04103846900000001,
+     "photoel-livermore": 0.09087147700000002,
+     "physics-discrete-select": 0.10546364900000006,
+     "pre-step": 0.5965472549999999,
+     "scat-klein-nishina": 0.09735497899999992
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245412, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 225
+    },
+    "avg_steps_per_primary": 26873.674065934065,
+    "avg_time_per_primary": 0.0011166362808791208,
+    "avg_time_per_step": 4.155130698316405e-08,
+    "emptying_step": 226,
+    "num_primaries": 9100,
+    "num_step_iters": 349,
+    "num_steps": 244550434,
+    "pre_emptying_time": 0.006261242,
+    "queue_hwm": {
+     "count": 15349107,
+     "index": 71
+    },
+    "slot_occupancy": 0.6682563552200623,
+    "total_time": 10.161390156,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 7.330205354000005,
+     "brems-rel": 0.030461841000000007,
+     "brems-sb": 0.101092408,
+     "conv-bethe-heitler": 0.046998079000000005,
+     "geo-boundary": 0.03282817799999997,
+     "ioni-moller-bhabha": 0.041482624000000023,
+     "photoel-livermore": 0.09118582400000001,
+     "physics-discrete-select": 0.10587865899999997,
+     "pre-step": 0.5991784969999998,
+     "scat-klein-nishina": 0.09798915700000008
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245417, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 225
+    },
+    "avg_steps_per_primary": 26876.89021978022,
+    "avg_time_per_primary": 0.0010541428092307693,
+    "avg_time_per_step": 3.92211599113861e-08,
+    "emptying_step": 226,
+    "num_primaries": 9100,
+    "num_step_iters": 355,
+    "num_steps": 244579701,
+    "pre_emptying_time": 0.006260772,
+    "queue_hwm": {
+     "count": 15360515,
+     "index": 71
+    },
+    "slot_occupancy": 0.6570405046704789,
+    "total_time": 9.592699564,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 6.847915571000001,
+     "brems-rel": 0.03081875999999998,
+     "brems-sb": 0.10174711199999995,
+     "conv-bethe-heitler": 0.04753052899999998,
+     "geo-boundary": 0.033328311,
+     "ioni-moller-bhabha": 0.04212751799999999,
+     "photoel-livermore": 0.09155303000000008,
+     "physics-discrete-select": 0.10638937300000008,
+     "pre-step": 0.6031698409999999,
+     "scat-klein-nishina": 0.09834353799999998
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245413, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 226
+    },
+    "avg_steps_per_primary": 26880.633296703298,
+    "avg_time_per_primary": 0.0009199851951648351,
+    "avg_time_per_step": 3.4224833359028944e-08,
+    "emptying_step": 227,
+    "num_primaries": 9100,
+    "num_step_iters": 362,
+    "num_steps": 244613763,
+    "pre_emptying_time": 0.006902843,
+    "queue_hwm": {
+     "count": 15406432,
+     "index": 71
+    },
+    "slot_occupancy": 0.6444250364988549,
+    "total_time": 8.371865276,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 9.920379158000005,
+     "brems-rel": 0.030052987999999992,
+     "brems-sb": 0.1007207740000001,
+     "conv-bethe-heitler": 0.046572114,
+     "geo-boundary": 0.032435101,
+     "ioni-moller-bhabha": 0.04127257099999998,
+     "photoel-livermore": 0.090562982,
+     "physics-discrete-select": 0.10569628799999997,
+     "pre-step": 0.5966712019999997,
+     "scat-klein-nishina": 0.09793814499999999
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245415, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 225
+    },
+    "avg_steps_per_primary": 26884.327802197804,
+    "avg_time_per_primary": 0.0013382537303296704,
+    "avg_time_per_step": 4.977821056847357e-08,
+    "emptying_step": 226,
+    "num_primaries": 9100,
+    "num_step_iters": 350,
+    "num_steps": 244647383,
+    "pre_emptying_time": 0.043611089,
+    "queue_hwm": {
+     "count": 15417036,
+     "index": 71
+    },
+    "slot_occupancy": 0.6666112164088658,
+    "total_time": 12.178108946,
+    "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 6.240259241000004,
+     "brems-rel": 0.02947003500000001,
+     "brems-sb": 0.100223183,
+     "conv-bethe-heitler": 0.046196715999999985,
+     "geo-boundary": 0.031758057000000006,
+     "ioni-moller-bhabha": 0.04075785800000002,
+     "photoel-livermore": 0.09023761299999998,
+     "physics-discrete-select": 0.10505078799999999,
+     "pre-step": 0.5951488339999998,
+     "scat-klein-nishina": 0.09763738699999998
     },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-      "celeritas: cuda error: an illegal memory access was encountered",
-      "[PID=245414, TID=-1][ 7/15]> /sw/summit/gcc/11.2.0-0/lib64/libgcc_s.so.1(_Unwind_RaiseException+0x3e8) [0x20000487c3f8]",
-      "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
-     ],
-     "stdout": []
-    }
+    "active_hwm": {
+     "count": 1048576,
+     "index": 225
+    },
+    "avg_steps_per_primary": 26878.028681318683,
+    "avg_time_per_primary": 0.0009330506367032967,
+    "avg_time_per_step": 3.4714251099516266e-08,
+    "emptying_step": 226,
+    "num_primaries": 9100,
+    "num_step_iters": 343,
+    "num_steps": 244590061,
+    "pre_emptying_time": 0.020873238,
+    "queue_hwm": {
+     "count": 15473561,
+     "index": 71
+    },
+    "slot_occupancy": 0.6800561493409271,
+    "total_time": 8.490760794,
+    "unconverged": 0
    }
-  ]
+  ],
+  "system": {
+   "debug": false,
+   "occupancy": {
+    "along_step_uniform_msc": 0.125,
+    "bethe_heitler_interact": 0.375,
+    "boundary": 0.625,
+    "discrete_select": 0.5,
+    "init_tracks": 0.75,
+    "klein_nishina_interact": 0.5,
+    "livermore_pe_interact": 0.375,
+    "locate_alive": 1.0,
+    "moller_bhabha_interact": 0.5,
+    "pre_step": 0.5,
+    "process_primaries": 1.0,
+    "process_secondaries": 0.625,
+    "relativistic_brem_interact": 0.375,
+    "seltzer_berger_interact": 0.375
+   },
+   "version": "v0.1.3"
+  }
  },
  "simple-cms+msc-orange-cpu": {
   "input": {
@@ -1885,219 +2199,213 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 36.01357978500021,
-     "brems-rel": 0.3886157779999951,
-     "brems-sb": 3.1318368009999635,
-     "conv-bethe-heitler": 0.5637601970000014,
-     "geo-boundary": 0.43242621600000486,
-     "ioni-moller-bhabha": 0.7319224789999904,
-     "msc-urban": 0.006107539000000778,
-     "photoel-livermore": 1.8741216380000105,
-     "physics-discrete-select": 2.7423756939999997,
-     "pre-step": 18.41265320000004,
-     "scat-klein-nishina": 4.451933953000022,
-     "scat-rayleigh": 0.7794332220000004
+     "along-step-general-linear": 44.0662116457711,
+     "brems-rel": 1.9852510510000145,
+     "brems-sb": 4.800939158999858,
+     "conv-bethe-heitler": 2.262695468000067,
+     "geo-boundary": 3.673495730999886,
+     "ioni-moller-bhabha": 2.4018694510000245,
+     "msc-urban": 0.02619913299997536,
+     "photoel-livermore": 3.560391693000209,
+     "physics-discrete-select": 5.808424031000242,
+     "pre-step": 35.81642125304881,
+     "scat-klein-nishina": 5.929301106999374
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61233
+     "index": 62193
     },
-    "avg_steps_per_primary": 61258.893310546875,
-    "avg_time_per_primary": 0.018848036569824218,
-    "avg_time_per_step": 3.076783720900027e-07,
-    "emptying_step": 61234,
+    "avg_steps_per_primary": 95048.3447265625,
+    "avg_time_per_primary": 0.030657462482421877,
+    "avg_time_per_step": 3.2254599036540874e-07,
+    "emptying_step": 62194,
     "num_primaries": 4096,
-    "num_step_iters": 61327,
-    "num_steps": 250916427,
-    "pre_emptying_time": 0.001192529,
+    "num_step_iters": 524288,
+    "num_steps": 389318020,
+    "pre_emptying_time": 0.001219601,
     "queue_hwm": {
-     "count": 299588,
-     "index": 109
+     "count": 301319,
+     "index": 108
     },
-    "slot_occupancy": 0.9988894501695318,
-    "total_time": 77.20155779,
-    "unconverged": 0
+    "slot_occupancy": 0.18129033036530018,
+    "total_time": 125.572966328,
+    "unconverged": 291
    },
    {
     "action_times": {
-     "along-step-general-linear": 35.8996489500003,
-     "brems-rel": 0.32701991500000144,
-     "brems-sb": 3.041004833999982,
-     "conv-bethe-heitler": 0.5120890970000023,
-     "geo-boundary": 0.39077300300000034,
-     "ioni-moller-bhabha": 0.653254511000002,
-     "msc-urban": 0.0027441129999999938,
-     "photoel-livermore": 1.8473231560000047,
-     "physics-discrete-select": 2.7052409930000145,
-     "pre-step": 18.333309170999883,
-     "scat-klein-nishina": 4.232920718000007,
-     "scat-rayleigh": 0.7195345060000035
+     "along-step-general-linear": 42.95023600175021,
+     "brems-rel": 1.8481814009999409,
+     "brems-sb": 4.639149210000079,
+     "conv-bethe-heitler": 2.0309189429999672,
+     "geo-boundary": 3.4951550800000515,
+     "ioni-moller-bhabha": 2.3394623869999487,
+     "msc-urban": 0.022674117000055075,
+     "photoel-livermore": 3.401093602000189,
+     "physics-discrete-select": 5.665460200000217,
+     "pre-step": 32.61936497798446,
+     "scat-klein-nishina": 6.098552422999996
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61206
+     "index": 62030
     },
-    "avg_steps_per_primary": 61227.9560546875,
-    "avg_time_per_primary": 0.018578725528320312,
-    "avg_time_per_step": 3.0343533780102333e-07,
-    "emptying_step": 61207,
+    "avg_steps_per_primary": 92203.84155273438,
+    "avg_time_per_primary": 0.02932441966796875,
+    "avg_time_per_step": 3.1803902282311264e-07,
+    "emptying_step": 62031,
     "num_primaries": 4096,
-    "num_step_iters": 61295,
-    "num_steps": 250789708,
-    "pre_emptying_time": 0.001193761,
+    "num_step_iters": 524288,
+    "num_steps": 377666935,
+    "pre_emptying_time": 0.001151055,
     "queue_hwm": {
-     "count": 302605,
+     "count": 303600,
      "index": 111
     },
-    "slot_occupancy": 0.998906208576352,
-    "total_time": 76.098459764,
-    "unconverged": 0
+    "slot_occupancy": 0.1758648711256683,
+    "total_time": 120.11282296,
+    "unconverged": 267
    },
    {
     "action_times": {
-     "along-step-general-linear": 36.042380743999985,
-     "brems-rel": 0.3319043059999979,
-     "brems-sb": 3.035451514999997,
-     "conv-bethe-heitler": 0.5086503969999954,
-     "geo-boundary": 0.3921453139999985,
-     "ioni-moller-bhabha": 0.6788458250000028,
-     "msc-urban": 0.003090943999999967,
-     "photoel-livermore": 1.86651695499999,
-     "physics-discrete-select": 2.711453266000043,
-     "pre-step": 18.36207748899981,
-     "scat-klein-nishina": 4.325730870999963,
-     "scat-rayleigh": 0.7161512650000054
+     "along-step-general-linear": 43.45076843729189,
+     "brems-rel": 2.005212906999918,
+     "brems-sb": 4.794936086999928,
+     "conv-bethe-heitler": 2.1776856310000383,
+     "geo-boundary": 3.7383533329998935,
+     "ioni-moller-bhabha": 2.397625304999999,
+     "msc-urban": 0.025866517000068767,
+     "photoel-livermore": 3.616433047000016,
+     "physics-discrete-select": 5.779412223999952,
+     "pre-step": 34.597648141029644,
+     "scat-klein-nishina": 5.955696512999732
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61242
+     "index": 62259
     },
-    "avg_steps_per_primary": 61263.46875,
-    "avg_time_per_primary": 0.018667184048095704,
-    "avg_time_per_step": 3.0470334816122705e-07,
-    "emptying_step": 61243,
+    "avg_steps_per_primary": 95219.6015625,
+    "avg_time_per_primary": 0.030371297298095703,
+    "avg_time_per_step": 3.189605585375262e-07,
+    "emptying_step": 62260,
     "num_primaries": 4096,
-    "num_step_iters": 61332,
-    "num_steps": 250935168,
-    "pre_emptying_time": 0.001158729,
+    "num_step_iters": 524288,
+    "num_steps": 390019488,
+    "pre_emptying_time": 0.001210172,
     "queue_hwm": {
-     "count": 301346,
+     "count": 301229,
      "index": 110
     },
-    "slot_occupancy": 0.9988826183721385,
-    "total_time": 76.460785861,
-    "unconverged": 0
+    "slot_occupancy": 0.18161697685718536,
+    "total_time": 124.400833733,
+    "unconverged": 292
    },
    {
     "action_times": {
-     "along-step-general-linear": 36.18404575499994,
-     "brems-rel": 0.3767166660000019,
-     "brems-sb": 3.084070269000018,
-     "conv-bethe-heitler": 0.556922733000003,
-     "geo-boundary": 0.44315687599999787,
-     "ioni-moller-bhabha": 0.712046699999995,
-     "msc-urban": 0.006569705000001786,
-     "photoel-livermore": 1.8887515060000037,
-     "physics-discrete-select": 2.7532445590000094,
-     "pre-step": 18.540668390999993,
-     "scat-klein-nishina": 4.34349570300002,
-     "scat-rayleigh": 0.7771036979999957
+     "along-step-general-linear": 43.1081325357565,
+     "brems-rel": 2.2439503740000446,
+     "brems-sb": 5.0462344449996595,
+     "conv-bethe-heitler": 2.4150628050000122,
+     "geo-boundary": 3.7880312789999144,
+     "ioni-moller-bhabha": 2.6500682210000353,
+     "msc-urban": 0.03815219299992713,
+     "photoel-livermore": 3.854052659000105,
+     "physics-discrete-select": 5.896143279000183,
+     "pre-step": 33.6237428280308,
+     "scat-klein-nishina": 6.583505922999498
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61224
+     "index": 62004
     },
-    "avg_steps_per_primary": 61254.260009765625,
-    "avg_time_per_primary": 0.018851881184082032,
-    "avg_time_per_step": 3.0776440987249736e-07,
-    "emptying_step": 61225,
+    "avg_steps_per_primary": 93859.85522460938,
+    "avg_time_per_primary": 0.030599386521972655,
+    "avg_time_per_step": 3.2601143959520743e-07,
+    "emptying_step": 62005,
     "num_primaries": 4096,
-    "num_step_iters": 61335,
-    "num_steps": 250897449,
-    "pre_emptying_time": 0.001250451,
+    "num_step_iters": 524288,
+    "num_steps": 384449967,
+    "pre_emptying_time": 0.001210209,
     "queue_hwm": {
-     "count": 298380,
+     "count": 299119,
      "index": 109
     },
-    "slot_occupancy": 0.9986836228868611,
-    "total_time": 77.21730533,
-    "unconverged": 0
+    "slot_occupancy": 0.17902346653863788,
+    "total_time": 125.335087194,
+    "unconverged": 282
    },
    {
     "action_times": {
-     "along-step-general-linear": 36.024850129999834,
-     "brems-rel": 0.3841530649999985,
-     "brems-sb": 3.1356697690000166,
-     "conv-bethe-heitler": 0.5824129129999924,
-     "geo-boundary": 0.46302000500000207,
-     "ioni-moller-bhabha": 0.7164307039999974,
-     "msc-urban": 0.002843922999999644,
-     "photoel-livermore": 1.8472651109999798,
-     "physics-discrete-select": 2.742624030999977,
-     "pre-step": 18.389567478000064,
-     "scat-klein-nishina": 4.37163938400005,
-     "scat-rayleigh": 0.7715862819999993
+     "along-step-general-linear": 43.295323730076426,
+     "brems-rel": 2.1173521560000346,
+     "brems-sb": 5.039667426999881,
+     "conv-bethe-heitler": 2.4049450139999906,
+     "geo-boundary": 3.8035362899999474,
+     "ioni-moller-bhabha": 2.539545722000001,
+     "msc-urban": 0.021149795000013388,
+     "photoel-livermore": 3.7699853860000805,
+     "physics-discrete-select": 5.90198272899996,
+     "pre-step": 33.234678485018684,
+     "scat-klein-nishina": 6.444838505999743
     },
     "active_hwm": {
      "count": 4096,
-     "index": 61231
+     "index": 62075
     },
-    "avg_steps_per_primary": 61252.432861328125,
-    "avg_time_per_primary": 0.01879106136767578,
-    "avg_time_per_step": 3.067806532716444e-07,
-    "emptying_step": 61232,
+    "avg_steps_per_primary": 94269.181640625,
+    "avg_time_per_primary": 0.030322363207763672,
+    "avg_time_per_step": 3.2165722328384304e-07,
+    "emptying_step": 62076,
     "num_primaries": 4096,
-    "num_step_iters": 61315,
-    "num_steps": 250889965,
-    "pre_emptying_time": 0.001223515,
+    "num_step_iters": 524288,
+    "num_steps": 386126568,
+    "pre_emptying_time": 0.001249671,
     "queue_hwm": {
-     "count": 297061,
-     "index": 109
-    },
-    "slot_occupancy": 0.9989795785913418,
-    "total_time": 76.968187362,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-general-linear": 35.95355063000031,
-     "brems-rel": 0.38648651999999456,
-     "brems-sb": 3.048847843000014,
-     "conv-bethe-heitler": 0.5863229219999981,
-     "geo-boundary": 0.4697807460000003,
-     "ioni-moller-bhabha": 0.7235366689999949,
-     "msc-urban": 0.006049319000000501,
-     "photoel-livermore": 1.9052914109999692,
-     "physics-discrete-select": 2.734147472000026,
-     "pre-step": 18.392199255000012,
-     "scat-klein-nishina": 4.304644963999995,
-     "scat-rayleigh": 0.7729368480000007
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 61215
-    },
-    "avg_steps_per_primary": 61239.7802734375,
-    "avg_time_per_primary": 0.0187885061796875,
-    "avg_time_per_step": 3.0680231208858434e-07,
-    "emptying_step": 61216,
-    "num_primaries": 4096,
-    "num_step_iters": 61342,
-    "num_steps": 250838140,
-    "pre_emptying_time": 0.00121857,
-    "queue_hwm": {
-     "count": 301115,
+     "count": 297396,
      "index": 110
     },
-    "slot_occupancy": 0.9983336094916615,
-    "total_time": 76.957721312,
-    "unconverged": 0
+    "slot_occupancy": 0.17980419471859932,
+    "total_time": 124.200399699,
+    "unconverged": 285
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 43.26369839913406,
+     "brems-rel": 1.9088534730000344,
+     "brems-sb": 4.681255297999749,
+     "conv-bethe-heitler": 2.1406448310000292,
+     "geo-boundary": 3.571127711000098,
+     "ioni-moller-bhabha": 2.243687194000026,
+     "msc-urban": 0.021801767000044374,
+     "photoel-livermore": 3.3539973630001194,
+     "physics-discrete-select": 5.699765213000196,
+     "pre-step": 33.89056256497036,
+     "scat-klein-nishina": 5.904980839999757
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 62417
+    },
+    "avg_steps_per_primary": 97057.27856445312,
+    "avg_time_per_primary": 0.02973133830541992,
+    "avg_time_per_step": 3.0632775558070215e-07,
+    "emptying_step": 62418,
+    "num_primaries": 4096,
+    "num_step_iters": 524288,
+    "num_steps": 397546613,
+    "pre_emptying_time": 0.001141966,
+    "queue_hwm": {
+     "count": 301448,
+     "index": 110
+    },
+    "slot_occupancy": 0.18512206757441163,
+    "total_time": 121.779561699,
+    "unconverged": 307
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "simple-cms+msc-orange-gpu": {
@@ -2116,213 +2424,207 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 1.3873927119999985,
-     "brems-rel": 0.03378042599999998,
-     "brems-sb": 0.10489846399999998,
-     "conv-bethe-heitler": 0.05001106899999997,
-     "geo-boundary": 0.036175506,
-     "ioni-moller-bhabha": 0.04473384100000003,
-     "msc-urban": 0.0018634640000000007,
-     "photoel-livermore": 0.09512714200000014,
-     "physics-discrete-select": 0.11278246300000007,
-     "pre-step": 0.6417481140000009,
-     "scat-klein-nishina": 0.10229806400000001,
-     "scat-rayleigh": 0.053545570000000056
+     "along-step-general-linear": 1.5160957209999977,
+     "brems-rel": 0.14869297599999995,
+     "brems-sb": 0.21982368399999966,
+     "conv-bethe-heitler": 0.16515413499999976,
+     "geo-boundary": 0.1533182859999999,
+     "ioni-moller-bhabha": 0.16053397099999994,
+     "msc-urban": 0.009968911000000002,
+     "photoel-livermore": 0.20918873099999996,
+     "physics-discrete-select": 0.22626284199999985,
+     "pre-step": 1.2889432160000023,
+     "scat-klein-nishina": 0.21634860800000025
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27568.646373626372,
-    "avg_time_per_primary": 0.00041270298307692307,
-    "avg_time_per_step": 1.4970012581819634e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27047.275934065936,
+    "avg_time_per_primary": 0.0006239354043956044,
+    "avg_time_per_step": 2.3068326951541924e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 396,
-    "num_steps": 250874682,
-    "pre_emptying_time": 0.009932961,
+    "num_step_iters": 2048,
+    "num_steps": 246130211,
+    "pre_emptying_time": 0.009849874,
     "queue_hwm": {
-     "count": 15294850,
+     "count": 15392031,
      "index": 71
     },
-    "slot_occupancy": 0.604173588030266,
-    "total_time": 3.755597146,
-    "unconverged": 0
+    "slot_occupancy": 0.11461331089958549,
+    "total_time": 5.67781218,
+    "unconverged": 297
    },
    {
     "action_times": {
-     "along-step-general-linear": 1.3877409119999995,
-     "brems-rel": 0.034839108000000035,
-     "brems-sb": 0.1060094859999999,
-     "conv-bethe-heitler": 0.051445253999999926,
-     "geo-boundary": 0.03746180800000001,
-     "ioni-moller-bhabha": 0.045929058000000016,
-     "msc-urban": 0.0019933089999999987,
-     "photoel-livermore": 0.09587540599999995,
-     "physics-discrete-select": 0.11399404100000016,
-     "pre-step": 0.6497040280000009,
-     "scat-klein-nishina": 0.102900666,
-     "scat-rayleigh": 0.05480754700000004
+     "along-step-general-linear": 1.5150325979999946,
+     "brems-rel": 0.14843793100000016,
+     "brems-sb": 0.21919347300000003,
+     "conv-bethe-heitler": 0.16519227400000003,
+     "geo-boundary": 0.15388777399999998,
+     "ioni-moller-bhabha": 0.16030715000000012,
+     "msc-urban": 0.00979707000000001,
+     "photoel-livermore": 0.2093068759999997,
+     "physics-discrete-select": 0.22626346300000008,
+     "pre-step": 1.2896896619999985,
+     "scat-klein-nishina": 0.21612201999999986
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27583.237582417583,
-    "avg_time_per_primary": 0.0004153510410989011,
-    "avg_time_per_step": 1.5058096057717995e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27054.62824175824,
+    "avg_time_per_primary": 0.0006235321462637362,
+    "avg_time_per_step": 2.3047152623643436e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 415,
-    "num_steps": 251007462,
-    "pre_emptying_time": 0.009956855,
+    "num_step_iters": 2048,
+    "num_steps": 246197117,
+    "pre_emptying_time": 0.009815612,
     "queue_hwm": {
-     "count": 15281641,
+     "count": 15420979,
      "index": 71
     },
-    "slot_occupancy": 0.5768177583993199,
-    "total_time": 3.779694474,
-    "unconverged": 0
+    "slot_occupancy": 0.1146444664336741,
+    "total_time": 5.674142531,
+    "unconverged": 293
    },
    {
     "action_times": {
-     "along-step-general-linear": 1.3853917709999994,
-     "brems-rel": 0.031892057000000036,
-     "brems-sb": 0.10329003600000002,
-     "conv-bethe-heitler": 0.04856943699999999,
-     "geo-boundary": 0.034587877999999996,
-     "ioni-moller-bhabha": 0.04317460200000002,
-     "msc-urban": 0.0018154439999999987,
-     "photoel-livermore": 0.09313710199999999,
-     "physics-discrete-select": 0.11124511000000004,
-     "pre-step": 0.6324240450000002,
-     "scat-klein-nishina": 0.10057098300000009,
-     "scat-rayleigh": 0.052373255000000014
+     "along-step-general-linear": 1.5164754249999999,
+     "brems-rel": 0.1482519080000003,
+     "brems-sb": 0.21884601300000023,
+     "conv-bethe-heitler": 0.16484458699999988,
+     "geo-boundary": 0.15320922500000003,
+     "ioni-moller-bhabha": 0.1604818350000002,
+     "msc-urban": 0.009739891000000006,
+     "photoel-livermore": 0.20909852799999998,
+     "physics-discrete-select": 0.2261177030000001,
+     "pre-step": 1.2893863159999979,
+     "scat-klein-nishina": 0.21634289500000004
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27560.976263736266,
-    "avg_time_per_primary": 0.00040923230483516486,
-    "avg_time_per_step": 1.4848251416029044e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27049.69032967033,
+    "avg_time_per_primary": 0.0005542365501098902,
+    "avg_time_per_step": 2.0489570984180838e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 373,
-    "num_steps": 250804884,
-    "pre_emptying_time": 0.010045185,
+    "num_step_iters": 2048,
+    "num_steps": 246152182,
+    "pre_emptying_time": 0.009752705,
     "queue_hwm": {
-     "count": 15274867,
+     "count": 15398733,
      "index": 71
     },
-    "slot_occupancy": 0.6412498024129996,
-    "total_time": 3.724013974,
-    "unconverged": 0
+    "slot_occupancy": 0.11462354194372892,
+    "total_time": 5.043552606,
+    "unconverged": 279
    },
    {
     "action_times": {
-     "along-step-general-linear": 1.3865444779999994,
-     "brems-rel": 0.031969355,
-     "brems-sb": 0.10371205000000001,
-     "conv-bethe-heitler": 0.04876131200000002,
-     "geo-boundary": 0.03487325700000003,
-     "ioni-moller-bhabha": 0.04330029900000002,
-     "msc-urban": 0.0017833400000000002,
-     "photoel-livermore": 0.09380616899999993,
-     "physics-discrete-select": 0.11149090400000006,
-     "pre-step": 0.6353398569999992,
-     "scat-klein-nishina": 0.10055779500000009,
-     "scat-rayleigh": 0.05187249299999998
+     "along-step-general-linear": 1.514087127999993,
+     "brems-rel": 0.14852300800000018,
+     "brems-sb": 0.21902945600000015,
+     "conv-bethe-heitler": 0.1647945509999999,
+     "geo-boundary": 0.15329021600000006,
+     "ioni-moller-bhabha": 0.1604970420000002,
+     "msc-urban": 0.009928350999999993,
+     "photoel-livermore": 0.20891361700000008,
+     "physics-discrete-select": 0.2260594290000002,
+     "pre-step": 1.2885580549999984,
+     "scat-klein-nishina": 0.21680699300000017
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27570.91021978022,
-    "avg_time_per_primary": 0.0003482330142857143,
-    "avg_time_per_step": 1.2630450409862828e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27049.81813186813,
+    "avg_time_per_primary": 0.000622966764065934,
+    "avg_time_per_step": 2.3030349447414576e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 376,
-    "num_steps": 250895283,
-    "pre_emptying_time": 0.009959659,
+    "num_step_iters": 2048,
+    "num_steps": 246153345,
+    "pre_emptying_time": 0.009737913,
     "queue_hwm": {
-     "count": 15347287,
-     "index": 72
+     "count": 15444000,
+     "index": 71
     },
-    "slot_occupancy": 0.6363627327249405,
-    "total_time": 3.16892043,
-    "unconverged": 0
+    "slot_occupancy": 0.11462408350780606,
+    "total_time": 5.668997553,
+    "unconverged": 305
    },
    {
     "action_times": {
-     "along-step-general-linear": 1.390226890999999,
-     "brems-rel": 0.03353843900000002,
-     "brems-sb": 0.10528231199999998,
-     "conv-bethe-heitler": 0.05035563699999995,
-     "geo-boundary": 0.03632730899999998,
-     "ioni-moller-bhabha": 0.04479278800000003,
-     "msc-urban": 0.0018664409999999993,
-     "photoel-livermore": 0.09483718899999996,
-     "physics-discrete-select": 0.11281815999999997,
-     "pre-step": 0.6440636739999998,
-     "scat-klein-nishina": 0.10183168799999992,
-     "scat-rayleigh": 0.05330406900000003
+     "along-step-general-linear": 1.5142737390000047,
+     "brems-rel": 0.14825110999999994,
+     "brems-sb": 0.21908967000000024,
+     "conv-bethe-heitler": 0.1650120249999999,
+     "geo-boundary": 0.15376590999999967,
+     "ioni-moller-bhabha": 0.16065345999999986,
+     "msc-urban": 0.009918758999999987,
+     "photoel-livermore": 0.20911334799999987,
+     "physics-discrete-select": 0.2260641499999997,
+     "pre-step": 1.291027021000003,
+     "scat-klein-nishina": 0.21704620600000019
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27572.08175824176,
-    "avg_time_per_primary": 0.0003513309867032967,
-    "avg_time_per_step": 1.2742272773737079e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27048.07912087912,
+    "avg_time_per_primary": 0.0006237451778021978,
+    "avg_time_per_step": 2.3060609036769364e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 397,
-    "num_steps": 250905944,
-    "pre_emptying_time": 0.010033041,
+    "num_step_iters": 2048,
+    "num_steps": 246137520,
+    "pre_emptying_time": 0.00974312,
     "queue_hwm": {
-     "count": 15259979,
+     "count": 15381163,
      "index": 71
     },
-    "slot_occupancy": 0.6027268378500374,
-    "total_time": 3.197111979,
-    "unconverged": 0
+    "slot_occupancy": 0.11461671441793442,
+    "total_time": 5.676081118,
+    "unconverged": 303
    },
    {
     "action_times": {
-     "along-step-general-linear": 1.3873433560000004,
-     "brems-rel": 0.033617532,
-     "brems-sb": 0.10537276699999998,
-     "conv-bethe-heitler": 0.05052489900000001,
-     "geo-boundary": 0.03666166800000002,
-     "ioni-moller-bhabha": 0.045128548,
-     "msc-urban": 0.0019354859999999978,
-     "photoel-livermore": 0.09559399900000005,
-     "physics-discrete-select": 0.1131610999999999,
-     "pre-step": 0.6442296239999996,
-     "scat-klein-nishina": 0.1025470240000001,
-     "scat-rayleigh": 0.05384961199999997
+     "along-step-general-linear": 1.5105478780000006,
+     "brems-rel": 0.148542393,
+     "brems-sb": 0.2193455689999998,
+     "conv-bethe-heitler": 0.16550614299999977,
+     "geo-boundary": 0.15346712499999984,
+     "ioni-moller-bhabha": 0.1610738819999997,
+     "msc-urban": 0.009862924000000006,
+     "photoel-livermore": 0.20974532999999979,
+     "physics-discrete-select": 0.22685138299999935,
+     "pre-step": 1.2882617270000005,
+     "scat-klein-nishina": 0.2173829369999998
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 231
+     "index": 226
     },
-    "avg_steps_per_primary": 27579.55285714286,
-    "avg_time_per_primary": 0.0004133658326373626,
-    "avg_time_per_step": 1.498812670308774e-08,
-    "emptying_step": 232,
+    "avg_steps_per_primary": 27046.324615384616,
+    "avg_time_per_primary": 0.0006236298940659341,
+    "avg_time_per_step": 2.305784253255609e-08,
+    "emptying_step": 227,
     "num_primaries": 9100,
-    "num_step_iters": 401,
-    "num_steps": 250973931,
-    "pre_emptying_time": 0.00999346,
+    "num_step_iters": 2048,
+    "num_steps": 246121554,
+    "pre_emptying_time": 0.009922555,
     "queue_hwm": {
-     "count": 15296228,
+     "count": 15388398,
      "index": 71
     },
-    "slot_occupancy": 0.5968762894818314,
-    "total_time": 3.761629077,
-    "unconverged": 0
+    "slot_occupancy": 0.11460927966982126,
+    "total_time": 5.675032036,
+    "unconverged": 222
    }
   ],
   "system": {
@@ -2340,11 +2642,10 @@
     "pre_step": 0.5,
     "process_primaries": 1.0,
     "process_secondaries": 0.625,
-    "rayleigh_interact": 0.5,
     "relativistic_brem_interact": 0.375,
     "seltzer_berger_interact": 0.375
    },
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field+msc-orange-cpu": {
@@ -2367,219 +2668,213 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 36.92557770900028,
-     "brems-rel": 0.3094479300000007,
-     "brems-sb": 3.6348388369999953,
-     "conv-bethe-heitler": 0.5559812779999909,
-     "geo-boundary": 0.2851669889999932,
-     "ioni-moller-bhabha": 0.3199918329999992,
-     "msc-urban": 0.005132910000000665,
-     "photoel-livermore": 2.262785991999987,
-     "physics-discrete-select": 3.8401051160000477,
-     "pre-step": 15.400984225999997,
-     "scat-klein-nishina": 2.9522986260000166,
-     "scat-rayleigh": 0.542980062999995
+     "along-step-uniform-msc": 37.13041281300028,
+     "brems-rel": 0.3402996149999968,
+     "brems-sb": 3.7627082019999896,
+     "conv-bethe-heitler": 0.5934711269999975,
+     "geo-boundary": 0.32810368700000264,
+     "ioni-moller-bhabha": 0.33926670200000003,
+     "msc-urban": 0.003429671000000371,
+     "photoel-livermore": 2.3168727000000016,
+     "physics-discrete-select": 3.755944470999978,
+     "pre-step": 14.036956311999926,
+     "scat-klein-nishina": 3.2218622629999834
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50048
+     "index": 49047
     },
-    "avg_steps_per_primary": 50076.9140625,
-    "avg_time_per_primary": 0.01791862747583008,
-    "avg_time_per_step": 3.578221184609379e-07,
-    "emptying_step": 50049,
+    "avg_steps_per_primary": 49071.71337890625,
+    "avg_time_per_primary": 0.017705754532714845,
+    "avg_time_per_step": 3.608138643132392e-07,
+    "emptying_step": 49048,
     "num_primaries": 4096,
-    "num_step_iters": 50137,
-    "num_steps": 205115040,
-    "pre_emptying_time": 0.001491347,
+    "num_step_iters": 49114,
+    "num_steps": 200997738,
+    "pre_emptying_time": 0.001413093,
     "queue_hwm": {
-     "count": 247923,
+     "count": 248218,
      "index": 88
     },
-    "slot_occupancy": 0.9988015649620041,
-    "total_time": 73.394698141,
+    "slot_occupancy": 0.999139010850394,
+    "total_time": 72.522770566,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 37.13009753899959,
-     "brems-rel": 0.3328326029999974,
-     "brems-sb": 3.662867489999987,
-     "conv-bethe-heitler": 0.599670719999991,
-     "geo-boundary": 0.3549373139999979,
-     "ioni-moller-bhabha": 0.3451240810000018,
-     "msc-urban": 0.002820952000000003,
-     "photoel-livermore": 2.289234141999995,
-     "physics-discrete-select": 3.9051976029999955,
-     "pre-step": 15.569092699999874,
-     "scat-klein-nishina": 2.985973910999994,
-     "scat-rayleigh": 0.5910928719999948
+     "along-step-uniform-msc": 37.14718302199996,
+     "brems-rel": 0.32061611299999776,
+     "brems-sb": 3.6551060120000356,
+     "conv-bethe-heitler": 0.5769985210000077,
+     "geo-boundary": 0.31912383500000197,
+     "ioni-moller-bhabha": 0.32137260700000314,
+     "msc-urban": 0.005177950000000643,
+     "photoel-livermore": 2.258019863999994,
+     "physics-discrete-select": 3.7327579440000047,
+     "pre-step": 14.042868040000142,
+     "scat-klein-nishina": 2.956889794000011
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50051
+     "index": 49055
     },
-    "avg_steps_per_primary": 50075.74462890625,
-    "avg_time_per_primary": 0.018139953292480467,
-    "avg_time_per_step": 3.622502955654337e-07,
-    "emptying_step": 50052,
+    "avg_steps_per_primary": 49089.11767578125,
+    "avg_time_per_primary": 0.01754480890234375,
+    "avg_time_per_step": 3.574072978500428e-07,
+    "emptying_step": 49056,
     "num_primaries": 4096,
-    "num_step_iters": 50129,
-    "num_steps": 205110250,
-    "pre_emptying_time": 0.001457706,
+    "num_step_iters": 49153,
+    "num_steps": 201069026,
+    "pre_emptying_time": 0.001477332,
     "queue_hwm": {
-     "count": 251963,
+     "count": 251644,
      "index": 89
     },
-    "slot_occupancy": 0.998937633483737,
-    "total_time": 74.301248686,
+    "slot_occupancy": 0.9987003372282719,
+    "total_time": 71.863537264,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 37.04175952300012,
-     "brems-rel": 0.3428539050000011,
-     "brems-sb": 3.760139453999934,
-     "conv-bethe-heitler": 0.5995500749999988,
-     "geo-boundary": 0.35187886000000357,
-     "ioni-moller-bhabha": 0.36170714899999984,
-     "msc-urban": 0.0022685789999999247,
-     "photoel-livermore": 2.283843165000002,
-     "physics-discrete-select": 3.898981348999988,
-     "pre-step": 15.470020359000065,
-     "scat-klein-nishina": 3.0505657569999594,
-     "scat-rayleigh": 0.5845854360000018
+     "along-step-uniform-msc": 37.016831689999925,
+     "brems-rel": 0.32194478000000015,
+     "brems-sb": 3.617060761000017,
+     "conv-bethe-heitler": 0.5705372670000021,
+     "geo-boundary": 0.3190316009999984,
+     "ioni-moller-bhabha": 0.3345549329999965,
+     "msc-urban": 0.003428623000000531,
+     "photoel-livermore": 2.2569992929999954,
+     "physics-discrete-select": 3.7202001740000035,
+     "pre-step": 13.964640921000072,
+     "scat-klein-nishina": 2.929203497999991
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50049
+     "index": 49061
     },
-    "avg_steps_per_primary": 50076.3447265625,
-    "avg_time_per_primary": 0.018154760611816406,
-    "avg_time_per_step": 3.6254164937454777e-07,
-    "emptying_step": 50050,
+    "avg_steps_per_primary": 49091.245849609375,
+    "avg_time_per_primary": 0.01746485268432617,
+    "avg_time_per_step": 3.5576307714474395e-07,
+    "emptying_step": 49062,
     "num_primaries": 4096,
-    "num_step_iters": 50141,
-    "num_steps": 205112708,
-    "pre_emptying_time": 0.001478869,
+    "num_step_iters": 49153,
+    "num_steps": 201077743,
+    "pre_emptying_time": 0.001420844,
     "queue_hwm": {
-     "count": 249283,
-     "index": 89
-    },
-    "slot_occupancy": 0.9987105308342973,
-    "total_time": 74.361899466,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 36.87645710799998,
-     "brems-rel": 0.33846463699999824,
-     "brems-sb": 3.65739601899996,
-     "conv-bethe-heitler": 0.6061298519999978,
-     "geo-boundary": 0.36178040100000014,
-     "ioni-moller-bhabha": 0.35467215299999827,
-     "msc-urban": 0.0022782480000000066,
-     "photoel-livermore": 2.319439067999999,
-     "physics-discrete-select": 3.884369106999974,
-     "pre-step": 15.454097119999936,
-     "scat-klein-nishina": 3.00115416199999,
-     "scat-rayleigh": 0.5951975439999968
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50057
-    },
-    "avg_steps_per_primary": 50082.024658203125,
-    "avg_time_per_primary": 0.018065841447021485,
-    "avg_time_per_step": 3.607250619422075e-07,
-    "emptying_step": 50058,
-    "num_primaries": 4096,
-    "num_step_iters": 50143,
-    "num_steps": 205135973,
-    "pre_emptying_time": 0.001429757,
-    "queue_hwm": {
-     "count": 249380,
-     "index": 90
-    },
-    "slot_occupancy": 0.9987839710069826,
-    "total_time": 73.997686567,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 37.001198642999874,
-     "brems-rel": 0.31169294599999986,
-     "brems-sb": 3.8968173479999817,
-     "conv-bethe-heitler": 0.5768933369999957,
-     "geo-boundary": 0.29164141199999255,
-     "ioni-moller-bhabha": 0.3250434429999988,
-     "msc-urban": 0.002264731999999838,
-     "photoel-livermore": 2.2544714880000134,
-     "physics-discrete-select": 3.8591483250000302,
-     "pre-step": 15.415241700999967,
-     "scat-klein-nishina": 3.0036530569999966,
-     "scat-rayleigh": 0.5436133199999986
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50040
-    },
-    "avg_steps_per_primary": 50078.3994140625,
-    "avg_time_per_primary": 0.018045610056640626,
-    "avg_time_per_step": 3.603471809758609e-07,
-    "emptying_step": 50041,
-    "num_primaries": 4096,
-    "num_step_iters": 50147,
-    "num_steps": 205121124,
-    "pre_emptying_time": 0.001467397,
-    "queue_hwm": {
-     "count": 246276,
-     "index": 87
-    },
-    "slot_occupancy": 0.9986320101713463,
-    "total_time": 73.914818792,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 36.929818200000085,
-     "brems-rel": 0.35809537900000005,
-     "brems-sb": 3.6957877259999874,
-     "conv-bethe-heitler": 0.6248957299999975,
-     "geo-boundary": 0.3829841219999982,
-     "ioni-moller-bhabha": 0.3721751810000004,
-     "msc-urban": 0.0022357839999999347,
-     "photoel-livermore": 2.3330230070000004,
-     "physics-discrete-select": 3.907798050000009,
-     "pre-step": 15.479318678999967,
-     "scat-klein-nishina": 3.0462853020000003,
-     "scat-rayleigh": 0.6141832629999988
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50062
-    },
-    "avg_steps_per_primary": 50090.52978515625,
-    "avg_time_per_primary": 0.01815655742260742,
-    "avg_time_per_step": 3.62474853040742e-07,
-    "emptying_step": 50063,
-    "num_primaries": 4096,
-    "num_step_iters": 50154,
-    "num_steps": 205170810,
-    "pre_emptying_time": 0.001401069,
-    "queue_hwm": {
-     "count": 247622,
+     "count": 249526,
      "index": 88
     },
-    "slot_occupancy": 0.9987344934632582,
-    "total_time": 74.369259203,
+    "slot_occupancy": 0.9987436341547693,
+    "total_time": 71.536036595,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 37.09448739899987,
+     "brems-rel": 0.3220280740000013,
+     "brems-sb": 3.7880808889999855,
+     "conv-bethe-heitler": 0.6072076700000031,
+     "geo-boundary": 0.30687838999999867,
+     "ioni-moller-bhabha": 0.3390167819999984,
+     "msc-urban": 0.004899207000000341,
+     "photoel-livermore": 2.3509735560000276,
+     "physics-discrete-select": 3.7340959980000146,
+     "pre-step": 14.025999982999947,
+     "scat-klein-nishina": 3.287648742999997
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49079
+    },
+    "avg_steps_per_primary": 49093.632568359375,
+    "avg_time_per_primary": 0.017717740415527344,
+    "avg_time_per_step": 3.6089691246327427e-07,
+    "emptying_step": 49080,
+    "num_primaries": 4096,
+    "num_step_iters": 49152,
+    "num_steps": 201087519,
+    "pre_emptying_time": 0.001688143,
+    "queue_hwm": {
+     "count": 251042,
+     "index": 89
+    },
+    "slot_occupancy": 0.9988125115633011,
+    "total_time": 72.571864742,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 37.17467572299978,
+     "brems-rel": 0.3088327819999992,
+     "brems-sb": 3.6470679360000244,
+     "conv-bethe-heitler": 0.5809224570000032,
+     "geo-boundary": 0.2821982809999997,
+     "ioni-moller-bhabha": 0.34078000200000313,
+     "msc-urban": 0.003437630000000363,
+     "photoel-livermore": 2.2869371719999876,
+     "physics-discrete-select": 3.7909362990000104,
+     "pre-step": 14.55370780399994,
+     "scat-klein-nishina": 2.9803516129999776
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49082
+    },
+    "avg_steps_per_primary": 49104.085205078125,
+    "avg_time_per_primary": 0.017680591311035155,
+    "avg_time_per_step": 3.600635514783342e-07,
+    "emptying_step": 49083,
+    "num_primaries": 4096,
+    "num_step_iters": 49156,
+    "num_steps": 201130333,
+    "pre_emptying_time": 0.001432773,
+    "queue_hwm": {
+     "count": 247017,
+     "index": 86
+    },
+    "slot_occupancy": 0.9989438767409498,
+    "total_time": 72.41970201,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 37.08528120099964,
+     "brems-rel": 0.3177009249999981,
+     "brems-sb": 3.7033553790000022,
+     "conv-bethe-heitler": 0.5775643499999967,
+     "geo-boundary": 0.31728984299999974,
+     "ioni-moller-bhabha": 0.3221874360000026,
+     "msc-urban": 0.003411353000000499,
+     "photoel-livermore": 2.2595126009999866,
+     "physics-discrete-select": 3.7229992540000088,
+     "pre-step": 14.012810724999964,
+     "scat-klein-nishina": 3.0102481870000113
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49078
+    },
+    "avg_steps_per_primary": 49115.638671875,
+    "avg_time_per_primary": 0.01754829977246094,
+    "avg_time_per_step": 3.5728538296519375e-07,
+    "emptying_step": 49079,
+    "num_primaries": 4096,
+    "num_step_iters": 49175,
+    "num_steps": 201177656,
+    "pre_emptying_time": 0.00146958,
+    "queue_hwm": {
+     "count": 248645,
+     "index": 89
+    },
+    "slot_occupancy": 0.9987928555541433,
+    "total_time": 71.877835868,
     "unconverged": 0
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field+msc-orange-gpu": {
@@ -2602,212 +2897,206 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 0.574069995,
-     "brems-rel": 0.025711785000000008,
-     "brems-sb": 0.09585781099999996,
-     "conv-bethe-heitler": 0.045267019000000006,
-     "geo-boundary": 0.021800097,
-     "ioni-moller-bhabha": 0.028983982999999974,
-     "msc-urban": 0.0014294470000000008,
-     "photoel-livermore": 0.10396919899999997,
-     "physics-discrete-select": 0.09898727500000003,
-     "pre-step": 0.524804782,
-     "scat-klein-nishina": 0.07698417700000003,
-     "scat-rayleigh": 0.040678056
+     "along-step-uniform-msc": 0.5686901059999998,
+     "brems-rel": 0.025106943,
+     "brems-sb": 0.09478181499999995,
+     "conv-bethe-heitler": 0.04447005000000003,
+     "geo-boundary": 0.021135832000000007,
+     "ioni-moller-bhabha": 0.028276290000000016,
+     "msc-urban": 0.0013851430000000001,
+     "photoel-livermore": 0.102318793,
+     "physics-discrete-select": 0.095651502,
+     "pre-step": 0.5030585619999999,
+     "scat-klein-nishina": 0.07622265600000007
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22542.576373626373,
-    "avg_time_per_primary": 0.0002501312975824176,
-    "avg_time_per_step": 1.1095949878872675e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22092.31967032967,
+    "avg_time_per_primary": 0.0002912155547252747,
+    "avg_time_per_step": 1.3181755427719153e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 205137445,
-    "pre_emptying_time": 0.007874382,
+    "num_step_iters": 287,
+    "num_steps": 201040109,
+    "pre_emptying_time": 0.007686593,
     "queue_hwm": {
-     "count": 12411547,
+     "count": 12470255,
      "index": 58
     },
-    "slot_occupancy": 0.6587013893255882,
-    "total_time": 2.276194808,
+    "slot_occupancy": 0.6680375906648536,
+    "total_time": 2.650061548,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5747543310000007,
-     "brems-rel": 0.026048065999999974,
-     "brems-sb": 0.09598891299999995,
-     "conv-bethe-heitler": 0.04532332299999998,
-     "geo-boundary": 0.021784291999999993,
-     "ioni-moller-bhabha": 0.028997711999999974,
-     "msc-urban": 0.0014217929999999998,
-     "photoel-livermore": 0.10393478799999993,
-     "physics-discrete-select": 0.09899870399999995,
-     "pre-step": 0.5256529909999998,
-     "scat-klein-nishina": 0.07698993799999995,
-     "scat-rayleigh": 0.04045924700000002
+     "along-step-uniform-msc": 0.5695366539999999,
+     "brems-rel": 0.024784263999999986,
+     "brems-sb": 0.09422688200000005,
+     "conv-bethe-heitler": 0.044036791000000006,
+     "geo-boundary": 0.02086657699999999,
+     "ioni-moller-bhabha": 0.027904898999999997,
+     "msc-urban": 0.001342575000000001,
+     "photoel-livermore": 0.10173494099999997,
+     "physics-discrete-select": 0.09517086800000005,
+     "pre-step": 0.5017154859999995,
+     "scat-klein-nishina": 0.07586143500000005
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 185
     },
-    "avg_steps_per_primary": 22544.547252747252,
-    "avg_time_per_primary": 0.00021869591956043957,
-    "avg_time_per_step": 9.700612618591822e-09,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22093.63010989011,
+    "avg_time_per_primary": 0.0002904948689010989,
+    "avg_time_per_step": 1.3148353957960952e-08,
+    "emptying_step": 186,
     "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 205155380,
-    "pre_emptying_time": 0.007865404,
+    "num_step_iters": 284,
+    "num_steps": 201052034,
+    "pre_emptying_time": 0.007658969,
     "queue_hwm": {
-     "count": 12449649,
+     "count": 12522274,
      "index": 58
     },
-    "slot_occupancy": 0.6587589790524055,
-    "total_time": 1.990132868,
+    "slot_occupancy": 0.6751343700247752,
+    "total_time": 2.643503307,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5779261279999998,
-     "brems-rel": 0.025798903000000015,
-     "brems-sb": 0.0959532470000001,
-     "conv-bethe-heitler": 0.04525887100000001,
-     "geo-boundary": 0.021720020999999985,
-     "ioni-moller-bhabha": 0.02889475399999999,
-     "msc-urban": 0.0014051829999999993,
-     "photoel-livermore": 0.10388678700000001,
-     "physics-discrete-select": 0.09896583,
-     "pre-step": 0.5256582650000003,
-     "scat-klein-nishina": 0.07718704099999997,
-     "scat-rayleigh": 0.04020216299999999
+     "along-step-uniform-msc": 0.5667527789999993,
+     "brems-rel": 0.025155454999999997,
+     "brems-sb": 0.094705142,
+     "conv-bethe-heitler": 0.04446699699999998,
+     "geo-boundary": 0.021014415000000005,
+     "ioni-moller-bhabha": 0.028198368,
+     "msc-urban": 0.0013667369999999998,
+     "photoel-livermore": 0.10224183700000007,
+     "physics-discrete-select": 0.095330326,
+     "pre-step": 0.5026686950000001,
+     "scat-klein-nishina": 0.07559718099999997
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22547.877802197803,
-    "avg_time_per_primary": 0.0002976348197802198,
-    "avg_time_per_step": 1.3200125634493573e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22091.97087912088,
+    "avg_time_per_primary": 0.00029064986384615387,
+    "avg_time_per_step": 1.3156357367863772e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205185688,
-    "pre_emptying_time": 0.007881677,
+    "num_step_iters": 286,
+    "num_steps": 201036935,
+    "pre_emptying_time": 0.007683242,
     "queue_hwm": {
-     "count": 12428163,
+     "count": 12493202,
      "index": 58
     },
-    "slot_occupancy": 0.6610821646613043,
-    "total_time": 2.70847686,
+    "slot_occupancy": 0.6703628026522123,
+    "total_time": 2.644913761,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5756116280000002,
-     "brems-rel": 0.025631282000000005,
-     "brems-sb": 0.09579346600000006,
-     "conv-bethe-heitler": 0.04518515999999999,
-     "geo-boundary": 0.021731282000000022,
-     "ioni-moller-bhabha": 0.028922980999999983,
-     "msc-urban": 0.0013978429999999995,
-     "photoel-livermore": 0.10382050399999998,
-     "physics-discrete-select": 0.09887181300000003,
-     "pre-step": 0.525626557,
-     "scat-klein-nishina": 0.0770328300000001,
-     "scat-rayleigh": 0.040245842000000025
+     "along-step-uniform-msc": 0.5706701360000004,
+     "brems-rel": 0.025439020000000007,
+     "brems-sb": 0.09505639599999992,
+     "conv-bethe-heitler": 0.044632913999999996,
+     "geo-boundary": 0.02141189100000001,
+     "ioni-moller-bhabha": 0.028543062999999994,
+     "msc-urban": 0.0014132099999999985,
+     "photoel-livermore": 0.10240295899999997,
+     "physics-discrete-select": 0.09595340699999999,
+     "pre-step": 0.5043972560000002,
+     "scat-klein-nishina": 0.07604844599999998
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22541.455164835166,
-    "avg_time_per_primary": 0.00029731720637362637,
-    "avg_time_per_step": 1.3189796497142004e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22097.72032967033,
+    "avg_time_per_primary": 0.00029164823274725277,
+    "avg_time_per_step": 1.3198114031503076e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205127242,
-    "pre_emptying_time": 0.007899758,
+    "num_step_iters": 290,
+    "num_steps": 201089255,
+    "pre_emptying_time": 0.007693693,
     "queue_hwm": {
-     "count": 12442333,
+     "count": 12522051,
      "index": 58
     },
-    "slot_occupancy": 0.6608938590900318,
-    "total_time": 2.705586578,
+    "slot_occupancy": 0.6612884751681624,
+    "total_time": 2.653998918,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5703009039999992,
-     "brems-rel": 0.025632665000000013,
-     "brems-sb": 0.09617734000000003,
-     "conv-bethe-heitler": 0.045034106,
-     "geo-boundary": 0.021525367000000007,
-     "ioni-moller-bhabha": 0.028684842000000012,
-     "msc-urban": 0.0013759549999999999,
-     "photoel-livermore": 0.10366876200000003,
-     "physics-discrete-select": 0.09883129200000011,
-     "pre-step": 0.5252251969999999,
-     "scat-klein-nishina": 0.07666204099999999,
-     "scat-rayleigh": 0.040563721
+     "along-step-uniform-msc": 0.5721816909999999,
+     "brems-rel": 0.025586988000000015,
+     "brems-sb": 0.09546588300000003,
+     "conv-bethe-heitler": 0.04522655900000002,
+     "geo-boundary": 0.021416419999999988,
+     "ioni-moller-bhabha": 0.02863324399999999,
+     "msc-urban": 0.0013838160000000006,
+     "photoel-livermore": 0.10351169200000004,
+     "physics-discrete-select": 0.09616011900000009,
+     "pre-step": 0.5068161129999998,
+     "scat-klein-nishina": 0.07599246299999995
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22541.357032967033,
-    "avg_time_per_primary": 0.0002967581367032967,
-    "avg_time_per_step": 1.3165051965118337e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22099.077252747255,
+    "avg_time_per_primary": 0.0002925986272527473,
+    "avg_time_per_step": 1.3240309715482478e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 293,
-    "num_steps": 205126349,
-    "pre_emptying_time": 0.007856321,
+    "num_step_iters": 292,
+    "num_steps": 201101603,
+    "pre_emptying_time": 0.007660764,
     "queue_hwm": {
-     "count": 12381496,
+     "count": 12480719,
      "index": 58
     },
-    "slot_occupancy": 0.6676577838207675,
-    "total_time": 2.700499044,
+    "slot_occupancy": 0.6567994307165277,
+    "total_time": 2.662647508,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5780015009999997,
-     "brems-rel": 0.02600469700000001,
-     "brems-sb": 0.09632882100000002,
-     "conv-bethe-heitler": 0.04530626299999999,
-     "geo-boundary": 0.021946565999999994,
-     "ioni-moller-bhabha": 0.02903699200000002,
-     "msc-urban": 0.001439567,
-     "photoel-livermore": 0.10385980300000007,
-     "physics-discrete-select": 0.09908295799999997,
-     "pre-step": 0.5259932560000005,
-     "scat-klein-nishina": 0.07780293600000002,
-     "scat-rayleigh": 0.04102035499999995
+     "along-step-uniform-msc": 0.5713223640000001,
+     "brems-rel": 0.025261581999999987,
+     "brems-sb": 0.09470645699999994,
+     "conv-bethe-heitler": 0.044517964999999986,
+     "geo-boundary": 0.021067955999999995,
+     "ioni-moller-bhabha": 0.028231557999999983,
+     "msc-urban": 0.0013794529999999999,
+     "photoel-livermore": 0.10234369100000001,
+     "physics-discrete-select": 0.09558177899999994,
+     "pre-step": 0.5043556150000001,
+     "scat-klein-nishina": 0.07608225699999994
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22538.6110989011,
-    "avg_time_per_primary": 0.00023433588615384614,
-    "avg_time_per_step": 1.0397086365506858e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22096.029230769233,
+    "avg_time_per_primary": 0.00020992444769230768,
+    "avg_time_per_step": 9.500550777692811e-09,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 299,
-    "num_steps": 205101361,
-    "pre_emptying_time": 0.007900175,
+    "num_step_iters": 287,
+    "num_steps": 201073866,
+    "pre_emptying_time": 0.007665099,
     "queue_hwm": {
-     "count": 12423049,
+     "count": 12520251,
      "index": 58
     },
-    "slot_occupancy": 0.6541802683801555,
-    "total_time": 2.132456564,
+    "slot_occupancy": 0.6681497620373238,
+    "total_time": 1.910312474,
     "unconverged": 0
    }
   ],
@@ -2826,11 +3115,10 @@
     "pre_step": 0.5,
     "process_primaries": 1.0,
     "process_secondaries": 0.625,
-    "rayleigh_interact": 0.5,
     "relativistic_brem_interact": 0.375,
     "seltzer_berger_interact": 0.375
    },
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field+msc-vecgeom-cpu": {
@@ -2853,219 +3141,213 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 34.75841779099962,
-     "brems-rel": 0.33920253399999617,
-     "brems-sb": 3.908804486999987,
-     "conv-bethe-heitler": 0.595728438999994,
-     "geo-boundary": 0.32023517599999957,
-     "ioni-moller-bhabha": 0.3544210609999994,
-     "msc-urban": 0.0032099849999997357,
-     "photoel-livermore": 2.3394859489999926,
-     "physics-discrete-select": 3.8797423919999994,
-     "pre-step": 15.517601699999988,
-     "scat-klein-nishina": 3.045362041000009,
-     "scat-rayleigh": 0.5800819700000035
+     "along-step-uniform-msc": 34.35295807900009,
+     "brems-rel": 0.3314259039999992,
+     "brems-sb": 3.7142951410000067,
+     "conv-bethe-heitler": 0.6132841160000089,
+     "geo-boundary": 0.30808090200000005,
+     "ioni-moller-bhabha": 0.3614220510000003,
+     "msc-urban": 0.002911936999999491,
+     "photoel-livermore": 2.4510122709999975,
+     "physics-discrete-select": 3.7160390990000187,
+     "pre-step": 14.05411464700004,
+     "scat-klein-nishina": 3.0284216549999967
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50048
+     "index": 49047
     },
-    "avg_steps_per_primary": 50076.9140625,
-    "avg_time_per_primary": 0.017607700676025392,
-    "avg_time_per_step": 3.516131336297914e-07,
-    "emptying_step": 50049,
+    "avg_steps_per_primary": 49071.71337890625,
+    "avg_time_per_primary": 0.016946848555908202,
+    "avg_time_per_step": 3.453486212118466e-07,
+    "emptying_step": 49048,
     "num_primaries": 4096,
-    "num_step_iters": 50137,
-    "num_steps": 205115040,
-    "pre_emptying_time": 0.001457856,
+    "num_step_iters": 49114,
+    "num_steps": 200997738,
+    "pre_emptying_time": 0.001351308,
     "queue_hwm": {
-     "count": 247923,
+     "count": 248218,
      "index": 88
     },
-    "slot_occupancy": 0.9988015649620041,
-    "total_time": 72.121141969,
+    "slot_occupancy": 0.999139010850394,
+    "total_time": 69.414291685,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 34.64863809599982,
-     "brems-rel": 0.40160279400000437,
-     "brems-sb": 3.8713246850000025,
-     "conv-bethe-heitler": 0.6173677009999968,
-     "geo-boundary": 0.45288170599999616,
-     "ioni-moller-bhabha": 0.40205546500000183,
-     "msc-urban": 0.0029437299999998255,
-     "photoel-livermore": 2.2943212739999983,
-     "physics-discrete-select": 3.8877268920000243,
-     "pre-step": 15.525283865000045,
-     "scat-klein-nishina": 3.112917920000001,
-     "scat-rayleigh": 0.585328068000009
+     "along-step-uniform-msc": 34.15600443999995,
+     "brems-rel": 0.31070519499999927,
+     "brems-sb": 3.754833479000045,
+     "conv-bethe-heitler": 0.5674166510000032,
+     "geo-boundary": 0.2473129719999983,
+     "ioni-moller-bhabha": 0.3247366269999974,
+     "msc-urban": 0.005178042000000562,
+     "photoel-livermore": 2.243635863000013,
+     "physics-discrete-select": 3.6953676040000434,
+     "pre-step": 14.011147386000136,
+     "scat-klein-nishina": 3.0425467080000117
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50051
+     "index": 49055
     },
-    "avg_steps_per_primary": 50075.74462890625,
-    "avg_time_per_primary": 0.017666681122558595,
-    "avg_time_per_step": 3.5279916960756475e-07,
-    "emptying_step": 50052,
+    "avg_steps_per_primary": 49089.11767578125,
+    "avg_time_per_primary": 0.01677306985546875,
+    "avg_time_per_step": 3.416861139417863e-07,
+    "emptying_step": 49056,
     "num_primaries": 4096,
-    "num_step_iters": 50129,
-    "num_steps": 205110250,
-    "pre_emptying_time": 0.001413795,
+    "num_step_iters": 49153,
+    "num_steps": 201069026,
+    "pre_emptying_time": 0.00140536,
     "queue_hwm": {
-     "count": 251963,
+     "count": 251644,
      "index": 89
     },
-    "slot_occupancy": 0.998937633483737,
-    "total_time": 72.362725878,
+    "slot_occupancy": 0.9987003372282719,
+    "total_time": 68.702494128,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 34.610456172000056,
-     "brems-rel": 0.34165162499999957,
-     "brems-sb": 3.7336939779999936,
-     "conv-bethe-heitler": 0.6100137440000006,
-     "geo-boundary": 0.3386202789999985,
-     "ioni-moller-bhabha": 0.3556275069999983,
-     "msc-urban": 0.00520798100000036,
-     "photoel-livermore": 2.337115289999987,
-     "physics-discrete-select": 3.884550605999988,
-     "pre-step": 15.433405481999985,
-     "scat-klein-nishina": 3.059454710000006,
-     "scat-rayleigh": 0.587933862999992
+     "along-step-uniform-msc": 34.23675658899995,
+     "brems-rel": 0.31650746299999966,
+     "brems-sb": 3.7147653779999836,
+     "conv-bethe-heitler": 0.5681425480000006,
+     "geo-boundary": 0.28954851799999803,
+     "ioni-moller-bhabha": 0.3219252320000022,
+     "msc-urban": 0.004893162000000168,
+     "photoel-livermore": 2.292071326999999,
+     "physics-discrete-select": 3.690924481999943,
+     "pre-step": 13.966072589999953,
+     "scat-klein-nishina": 3.0230822939999964
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50049
+     "index": 49061
     },
-    "avg_steps_per_primary": 50076.3447265625,
-    "avg_time_per_primary": 0.017551045485595704,
-    "avg_time_per_step": 3.504857549294313e-07,
-    "emptying_step": 50050,
+    "avg_steps_per_primary": 49091.245849609375,
+    "avg_time_per_primary": 0.01682009751098633,
+    "avg_time_per_step": 3.4262926556222587e-07,
+    "emptying_step": 49062,
     "num_primaries": 4096,
-    "num_step_iters": 50141,
-    "num_steps": 205112708,
-    "pre_emptying_time": 0.001426728,
+    "num_step_iters": 49153,
+    "num_steps": 201077743,
+    "pre_emptying_time": 0.001367924,
     "queue_hwm": {
-     "count": 249283,
-     "index": 89
-    },
-    "slot_occupancy": 0.9987105308342973,
-    "total_time": 71.889082309,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 34.63313469299996,
-     "brems-rel": 0.36067639099999865,
-     "brems-sb": 3.76591903400004,
-     "conv-bethe-heitler": 0.6199517779999942,
-     "geo-boundary": 0.34223783400000013,
-     "ioni-moller-bhabha": 0.377205056999999,
-     "msc-urban": 0.003123574999999869,
-     "photoel-livermore": 2.333670867999986,
-     "physics-discrete-select": 3.886607043999983,
-     "pre-step": 15.43097427399998,
-     "scat-klein-nishina": 3.1073150410000023,
-     "scat-rayleigh": 0.612553422000004
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50057
-    },
-    "avg_steps_per_primary": 50082.024658203125,
-    "avg_time_per_primary": 0.01761392062158203,
-    "avg_time_per_step": 3.51701448609406e-07,
-    "emptying_step": 50058,
-    "num_primaries": 4096,
-    "num_step_iters": 50143,
-    "num_steps": 205135973,
-    "pre_emptying_time": 0.001382343,
-    "queue_hwm": {
-     "count": 249380,
-     "index": 90
-    },
-    "slot_occupancy": 0.9987839710069826,
-    "total_time": 72.146618866,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 34.52742726200007,
-     "brems-rel": 0.3376963920000004,
-     "brems-sb": 3.7166467539999686,
-     "conv-bethe-heitler": 0.6212632429999987,
-     "geo-boundary": 0.2931893730000012,
-     "ioni-moller-bhabha": 0.35925185699999823,
-     "msc-urban": 0.0050656770000000965,
-     "photoel-livermore": 2.310864217999999,
-     "physics-discrete-select": 3.8750125650000045,
-     "pre-step": 15.405317878000165,
-     "scat-klein-nishina": 3.028667889,
-     "scat-rayleigh": 0.6087560330000045
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50040
-    },
-    "avg_steps_per_primary": 50078.3994140625,
-    "avg_time_per_primary": 0.017472933221435547,
-    "avg_time_per_step": 3.489115751676556e-07,
-    "emptying_step": 50041,
-    "num_primaries": 4096,
-    "num_step_iters": 50147,
-    "num_steps": 205121124,
-    "pre_emptying_time": 0.001413426,
-    "queue_hwm": {
-     "count": 246276,
-     "index": 87
-    },
-    "slot_occupancy": 0.9986320101713463,
-    "total_time": 71.569134475,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 34.547554526999996,
-     "brems-rel": 0.3349188950000001,
-     "brems-sb": 3.7804118670000073,
-     "conv-bethe-heitler": 0.6139128639999964,
-     "geo-boundary": 0.2843585129999996,
-     "ioni-moller-bhabha": 0.3638243910000012,
-     "msc-urban": 0.003266392999999802,
-     "photoel-livermore": 2.294781845000014,
-     "physics-discrete-select": 3.8932655729999888,
-     "pre-step": 15.444466533999947,
-     "scat-klein-nishina": 3.081994319999987,
-     "scat-rayleigh": 0.5950141410000017
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50062
-    },
-    "avg_steps_per_primary": 50090.52978515625,
-    "avg_time_per_primary": 0.01751693126098633,
-    "avg_time_per_step": 3.497054500345347e-07,
-    "emptying_step": 50063,
-    "num_primaries": 4096,
-    "num_step_iters": 50154,
-    "num_steps": 205170810,
-    "pre_emptying_time": 0.001354719,
-    "queue_hwm": {
-     "count": 247622,
+     "count": 249526,
      "index": 88
     },
-    "slot_occupancy": 0.9987344934632582,
-    "total_time": 71.749350445,
+    "slot_occupancy": 0.9987436341547693,
+    "total_time": 68.895119405,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 34.28415397999982,
+     "brems-rel": 0.32977285600000183,
+     "brems-sb": 3.89958694699997,
+     "conv-bethe-heitler": 0.6120926550000094,
+     "geo-boundary": 0.30725118399999896,
+     "ioni-moller-bhabha": 0.3390131859999994,
+     "msc-urban": 0.002815467999999507,
+     "photoel-livermore": 2.3201019199999946,
+     "physics-discrete-select": 3.716775664000003,
+     "pre-step": 14.021592700000031,
+     "scat-klein-nishina": 3.4921110829999993
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49079
+    },
+    "avg_steps_per_primary": 49093.632568359375,
+    "avg_time_per_primary": 0.017108658947753905,
+    "avg_time_per_step": 3.4849038567132553e-07,
+    "emptying_step": 49080,
+    "num_primaries": 4096,
+    "num_step_iters": 49152,
+    "num_steps": 201087519,
+    "pre_emptying_time": 0.001354786,
+    "queue_hwm": {
+     "count": 251042,
+     "index": 89
+    },
+    "slot_occupancy": 0.9988125115633011,
+    "total_time": 70.07706705,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 34.21737777399969,
+     "brems-rel": 0.30953882200000027,
+     "brems-sb": 3.6986512409999937,
+     "conv-bethe-heitler": 0.5623817840000068,
+     "geo-boundary": 0.24215297599999983,
+     "ioni-moller-bhabha": 0.3183101920000015,
+     "msc-urban": 0.0050123470000006465,
+     "photoel-livermore": 2.2544394200000264,
+     "physics-discrete-select": 3.6846145840000055,
+     "pre-step": 13.98149659899997,
+     "scat-klein-nishina": 2.9852832519999883
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49082
+    },
+    "avg_steps_per_primary": 49104.085205078125,
+    "avg_time_per_primary": 0.0167382537265625,
+    "avg_time_per_step": 3.408729366743503e-07,
+    "emptying_step": 49083,
+    "num_primaries": 4096,
+    "num_step_iters": 49156,
+    "num_steps": 201130333,
+    "pre_emptying_time": 0.001356002,
+    "queue_hwm": {
+     "count": 247017,
+     "index": 86
+    },
+    "slot_occupancy": 0.9989438767409498,
+    "total_time": 68.559887264,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-uniform-msc": 34.2991350590001,
+     "brems-rel": 0.35069765599999897,
+     "brems-sb": 3.8065628610000077,
+     "conv-bethe-heitler": 0.631772087000005,
+     "geo-boundary": 0.3200666999999982,
+     "ioni-moller-bhabha": 0.3950100479999972,
+     "msc-urban": 0.0029318829999995717,
+     "photoel-livermore": 2.5559156840000075,
+     "physics-discrete-select": 3.711486217999992,
+     "pre-step": 14.005218872999901,
+     "scat-klein-nishina": 3.3126870160000323
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49078
+    },
+    "avg_steps_per_primary": 49115.638671875,
+    "avg_time_per_primary": 0.017128162465820312,
+    "avg_time_per_step": 3.4873133952808355e-07,
+    "emptying_step": 49079,
+    "num_primaries": 4096,
+    "num_step_iters": 49175,
+    "num_steps": 201177656,
+    "pre_emptying_time": 0.001422689,
+    "queue_hwm": {
+     "count": 248645,
+     "index": 89
+    },
+    "slot_occupancy": 0.9987928555541433,
+    "total_time": 70.15695346,
     "unconverged": 0
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -3088,212 +3370,206 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5717106030000001,
-     "brems-rel": 0.026005668000000016,
-     "brems-sb": 0.09418468400000005,
-     "conv-bethe-heitler": 0.04516494100000002,
-     "geo-boundary": 0.021972662000000007,
-     "ioni-moller-bhabha": 0.028959230000000002,
-     "msc-urban": 0.001585451999999999,
-     "photoel-livermore": 0.10343818500000006,
-     "physics-discrete-select": 0.099394147,
-     "pre-step": 0.48683490799999996,
-     "scat-klein-nishina": 0.07949546200000003,
-     "scat-rayleigh": 0.042198807999999983
+     "along-step-uniform-msc": 0.5633420100000004,
+     "brems-rel": 0.025119752999999988,
+     "brems-sb": 0.09264269900000001,
+     "conv-bethe-heitler": 0.04404734599999998,
+     "geo-boundary": 0.021179082000000002,
+     "ioni-moller-bhabha": 0.02812635400000001,
+     "msc-urban": 0.0015093899999999998,
+     "photoel-livermore": 0.10132001100000002,
+     "physics-discrete-select": 0.09558184600000003,
+     "pre-step": 0.46529156200000005,
+     "scat-klein-nishina": 0.078908909
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22542.576373626373,
-    "avg_time_per_primary": 0.0002958873885714286,
-    "avg_time_per_step": 1.3125713035959866e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22092.31967032967,
+    "avg_time_per_primary": 0.00028338316450549447,
+    "avg_time_per_step": 1.282722542196791e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 205137445,
-    "pre_emptying_time": 0.007648779,
+    "num_step_iters": 287,
+    "num_steps": 201040109,
+    "pre_emptying_time": 0.007448275,
     "queue_hwm": {
-     "count": 12411547,
+     "count": 12470255,
      "index": 58
     },
-    "slot_occupancy": 0.6587013893255882,
-    "total_time": 2.692575236,
+    "slot_occupancy": 0.6680375906648536,
+    "total_time": 2.578786797,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5723903349999999,
-     "brems-rel": 0.026198394000000028,
-     "brems-sb": 0.09432761299999996,
-     "conv-bethe-heitler": 0.04520406600000002,
-     "geo-boundary": 0.021880939000000012,
-     "ioni-moller-bhabha": 0.028964798000000007,
-     "msc-urban": 0.001539647,
-     "photoel-livermore": 0.103494233,
-     "physics-discrete-select": 0.09939271400000001,
-     "pre-step": 0.48631473800000025,
-     "scat-klein-nishina": 0.07939704299999997,
-     "scat-rayleigh": 0.04229444500000002
+     "along-step-uniform-msc": 0.566533471,
+     "brems-rel": 0.025174504,
+     "brems-sb": 0.09267347899999996,
+     "conv-bethe-heitler": 0.04401194200000002,
+     "geo-boundary": 0.020968880999999998,
+     "ioni-moller-bhabha": 0.02792680000000001,
+     "msc-urban": 0.0014609,
+     "photoel-livermore": 0.10154123399999995,
+     "physics-discrete-select": 0.09524097199999998,
+     "pre-step": 0.46480328099999996,
+     "scat-klein-nishina": 0.07819033900000003
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 185
     },
-    "avg_steps_per_primary": 22544.547252747252,
-    "avg_time_per_primary": 0.00021556977087912088,
-    "avg_time_per_step": 9.561947217762459e-09,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22093.63010989011,
+    "avg_time_per_primary": 0.00028335498296703295,
+    "avg_time_per_step": 1.2825189050313214e-08,
+    "emptying_step": 186,
     "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 205155380,
-    "pre_emptying_time": 0.007663788,
+    "num_step_iters": 284,
+    "num_steps": 201052034,
+    "pre_emptying_time": 0.007422747,
     "queue_hwm": {
-     "count": 12449649,
+     "count": 12522274,
      "index": 58
     },
-    "slot_occupancy": 0.6587589790524055,
-    "total_time": 1.961684915,
+    "slot_occupancy": 0.6751343700247752,
+    "total_time": 2.578530345,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5729593640000002,
-     "brems-rel": 0.025833244,
-     "brems-sb": 0.09424267799999991,
-     "conv-bethe-heitler": 0.045157994999999986,
-     "geo-boundary": 0.021860948000000015,
-     "ioni-moller-bhabha": 0.02887838899999999,
-     "msc-urban": 0.0015510309999999996,
-     "photoel-livermore": 0.10357472599999995,
-     "physics-discrete-select": 0.099318433,
-     "pre-step": 0.48644327799999987,
-     "scat-klein-nishina": 0.07946757699999994,
-     "scat-rayleigh": 0.04179381299999997
+     "along-step-uniform-msc": 0.5631800910000008,
+     "brems-rel": 0.025294626,
+     "brems-sb": 0.09248776000000013,
+     "conv-bethe-heitler": 0.044035694000000014,
+     "geo-boundary": 0.021144542999999995,
+     "ioni-moller-bhabha": 0.02805483799999999,
+     "msc-urban": 0.0014968590000000008,
+     "photoel-livermore": 0.10133060899999992,
+     "physics-discrete-select": 0.09554422899999997,
+     "pre-step": 0.46477867300000014,
+     "scat-klein-nishina": 0.07783463400000006
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22547.877802197803,
-    "avg_time_per_primary": 0.00029588653186813187,
-    "avg_time_per_step": 1.3122588940023925e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22091.97087912088,
+    "avg_time_per_primary": 0.0002832249657142857,
+    "avg_time_per_step": 1.2820267022077312e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205185688,
-    "pre_emptying_time": 0.007615231,
+    "num_step_iters": 286,
+    "num_steps": 201036935,
+    "pre_emptying_time": 0.007432664,
     "queue_hwm": {
-     "count": 12428163,
+     "count": 12493202,
      "index": 58
     },
-    "slot_occupancy": 0.6610821646613043,
-    "total_time": 2.69256744,
+    "slot_occupancy": 0.6703628026522123,
+    "total_time": 2.577347188,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5735205430000005,
-     "brems-rel": 0.025956403999999992,
-     "brems-sb": 0.09415982700000002,
-     "conv-bethe-heitler": 0.04504674800000003,
-     "geo-boundary": 0.021813853000000008,
-     "ioni-moller-bhabha": 0.02887736199999999,
-     "msc-urban": 0.0015467199999999997,
-     "photoel-livermore": 0.10348425300000001,
-     "physics-discrete-select": 0.09918675699999989,
-     "pre-step": 0.48639111599999985,
-     "scat-klein-nishina": 0.07936940900000002,
-     "scat-rayleigh": 0.04172227200000002
+     "along-step-uniform-msc": 0.5638316860000002,
+     "brems-rel": 0.025150860999999993,
+     "brems-sb": 0.09264181300000005,
+     "conv-bethe-heitler": 0.044254589000000004,
+     "geo-boundary": 0.02141956600000001,
+     "ioni-moller-bhabha": 0.028327033999999997,
+     "msc-urban": 0.0015010850000000003,
+     "photoel-livermore": 0.10153564000000008,
+     "physics-discrete-select": 0.09576397000000002,
+     "pre-step": 0.46640629799999994,
+     "scat-klein-nishina": 0.07875269299999997
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22541.455164835166,
-    "avg_time_per_primary": 0.00029586433164835164,
-    "avg_time_per_step": 1.3125343039516906e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22097.72032967033,
+    "avg_time_per_primary": 0.00028361636032967033,
+    "avg_time_per_step": 1.2834643397530116e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205127242,
-    "pre_emptying_time": 0.007656543,
+    "num_step_iters": 290,
+    "num_steps": 201089255,
+    "pre_emptying_time": 0.007434859,
     "queue_hwm": {
-     "count": 12442333,
+     "count": 12522051,
      "index": 58
     },
-    "slot_occupancy": 0.6608938590900318,
-    "total_time": 2.692365418,
+    "slot_occupancy": 0.6612884751681624,
+    "total_time": 2.580908879,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5745678000000005,
-     "brems-rel": 0.025963213000000013,
-     "brems-sb": 0.09442586300000001,
-     "conv-bethe-heitler": 0.04514141099999997,
-     "geo-boundary": 0.02163654099999999,
-     "ioni-moller-bhabha": 0.02872370299999998,
-     "msc-urban": 0.0015325300000000016,
-     "photoel-livermore": 0.10368013000000001,
-     "physics-discrete-select": 0.09913454200000002,
-     "pre-step": 0.48735275199999994,
-     "scat-klein-nishina": 0.079402243,
-     "scat-rayleigh": 0.04134960700000002
+     "along-step-uniform-msc": 0.5675728609999999,
+     "brems-rel": 0.025687862000000002,
+     "brems-sb": 0.09334163900000003,
+     "conv-bethe-heitler": 0.044675871000000006,
+     "geo-boundary": 0.021542876000000002,
+     "ioni-moller-bhabha": 0.028495600999999992,
+     "msc-urban": 0.0015063570000000003,
+     "photoel-livermore": 0.10245181200000004,
+     "physics-discrete-select": 0.09619007199999999,
+     "pre-step": 0.46884982000000003,
+     "scat-klein-nishina": 0.078617868
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22541.357032967033,
-    "avg_time_per_primary": 0.00029601041241758243,
-    "avg_time_per_step": 1.3131880746339419e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22099.077252747255,
+    "avg_time_per_primary": 0.00020824043296703297,
+    "avg_time_per_step": 9.423037468279157e-09,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 293,
-    "num_steps": 205126349,
-    "pre_emptying_time": 0.007634089,
+    "num_step_iters": 292,
+    "num_steps": 201101603,
+    "pre_emptying_time": 0.007464476,
     "queue_hwm": {
-     "count": 12381496,
+     "count": 12480719,
      "index": 58
     },
-    "slot_occupancy": 0.6676577838207675,
-    "total_time": 2.693694753,
+    "slot_occupancy": 0.6567994307165277,
+    "total_time": 1.89498794,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.5719286339999993,
-     "brems-rel": 0.026168756999999997,
-     "brems-sb": 0.09430299299999999,
-     "conv-bethe-heitler": 0.04515665700000004,
-     "geo-boundary": 0.022061711000000015,
-     "ioni-moller-bhabha": 0.028995017000000005,
-     "msc-urban": 0.0015458349999999993,
-     "photoel-livermore": 0.1032429519999999,
-     "physics-discrete-select": 0.09939435000000003,
-     "pre-step": 0.4871612900000003,
-     "scat-klein-nishina": 0.07948381300000001,
-     "scat-rayleigh": 0.04191024699999998
+     "along-step-uniform-msc": 0.5680249489999998,
+     "brems-rel": 0.025487516999999987,
+     "brems-sb": 0.09289115399999998,
+     "conv-bethe-heitler": 0.04445327300000002,
+     "geo-boundary": 0.021247674,
+     "ioni-moller-bhabha": 0.028182594000000002,
+     "msc-urban": 0.0015228519999999997,
+     "photoel-livermore": 0.10195364799999992,
+     "physics-discrete-select": 0.09581119099999993,
+     "pre-step": 0.46759126899999964,
+     "scat-klein-nishina": 0.07878070799999995
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22538.6110989011,
-    "avg_time_per_primary": 0.0002958961338461538,
-    "avg_time_per_step": 1.3128410288803495e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22096.029230769233,
+    "avg_time_per_primary": 0.0002843775448351648,
+    "avg_time_per_step": 1.2870074612282035e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 299,
-    "num_steps": 205101361,
-    "pre_emptying_time": 0.007643,
+    "num_step_iters": 287,
+    "num_steps": 201073866,
+    "pre_emptying_time": 0.007458247,
     "queue_hwm": {
-     "count": 12423049,
+     "count": 12520251,
      "index": 58
     },
-    "slot_occupancy": 0.6541802683801555,
-    "total_time": 2.692654818,
+    "slot_occupancy": 0.6681497620373238,
+    "total_time": 2.587835658,
     "unconverged": 0
    }
   ],
@@ -3312,11 +3588,10 @@
     "pre_step": 0.5,
     "process_primaries": 1.0,
     "process_secondaries": 0.625,
-    "rayleigh_interact": 0.5,
     "relativistic_brem_interact": 0.375,
     "seltzer_berger_interact": 0.375
    },
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field-orange-cpu": {
@@ -3339,213 +3614,207 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 21.103340546999874,
-     "brems-rel": 0.32589998700000017,
-     "brems-sb": 3.6557156969999594,
-     "conv-bethe-heitler": 0.5841096319999977,
-     "geo-boundary": 0.34861608199999944,
-     "ioni-moller-bhabha": 0.3492325320000005,
-     "photoel-livermore": 2.3151303789999864,
-     "physics-discrete-select": 3.7515567989999847,
-     "pre-step": 15.225942722000058,
-     "scat-klein-nishina": 3.0139025309999914,
-     "scat-rayleigh": 0.5732379169999973
+     "along-step-uniform-msc": 20.9974271639999,
+     "brems-rel": 0.31295118699999847,
+     "brems-sb": 3.671954677999987,
+     "conv-bethe-heitler": 0.5715495470000017,
+     "geo-boundary": 0.2802867940000035,
+     "ioni-moller-bhabha": 0.32315975599999797,
+     "photoel-livermore": 2.218183905,
+     "physics-discrete-select": 3.629042302000008,
+     "pre-step": 13.759533726999956,
+     "scat-klein-nishina": 2.9875990520000015
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50032
+     "index": 49052
     },
-    "avg_steps_per_primary": 50068.608154296875,
-    "avg_time_per_primary": 0.014101477381591798,
-    "avg_time_per_step": 2.8164308738391827e-07,
-    "emptying_step": 50033,
+    "avg_steps_per_primary": 49085.242431640625,
+    "avg_time_per_primary": 0.013478436646240235,
+    "avg_time_per_step": 2.745924432381322e-07,
+    "emptying_step": 49053,
     "num_primaries": 4096,
-    "num_step_iters": 50139,
-    "num_steps": 205081019,
-    "pre_emptying_time": 0.001130814,
+    "num_step_iters": 49151,
+    "num_steps": 201053153,
+    "pre_emptying_time": 0.001118151,
     "queue_hwm": {
-     "count": 247751,
+     "count": 248785,
      "index": 89
     },
-    "slot_occupancy": 0.9985960660223953,
-    "total_time": 57.759651355,
+    "slot_occupancy": 0.9986621316278534,
+    "total_time": 55.207676503,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 20.996162710000103,
-     "brems-rel": 0.29402510300000184,
-     "brems-sb": 3.6122886320000016,
-     "conv-bethe-heitler": 0.5634906440000041,
-     "geo-boundary": 0.29185601999999256,
-     "ioni-moller-bhabha": 0.31019947100000067,
-     "photoel-livermore": 2.2380949549999967,
-     "physics-discrete-select": 3.7616646729999896,
-     "pre-step": 15.307683530000103,
-     "scat-klein-nishina": 2.940927151000015,
-     "scat-rayleigh": 0.5489701029999998
+     "along-step-uniform-msc": 20.92427431900007,
+     "brems-rel": 0.3026205509999985,
+     "brems-sb": 3.6409375729999938,
+     "conv-bethe-heitler": 0.5626930719999956,
+     "geo-boundary": 0.27503160300000296,
+     "ioni-moller-bhabha": 0.31726061799999883,
+     "photoel-livermore": 2.232966611000001,
+     "physics-discrete-select": 3.62745151199999,
+     "pre-step": 13.81123983899995,
+     "scat-klein-nishina": 2.9309848489999943
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50044
+     "index": 49055
     },
-    "avg_steps_per_primary": 50075.980224609375,
-    "avg_time_per_primary": 0.013977538548583985,
-    "avg_time_per_step": 2.791266089228714e-07,
-    "emptying_step": 50045,
+    "avg_steps_per_primary": 49081.59912109375,
+    "avg_time_per_primary": 0.013442162416259765,
+    "avg_time_per_step": 2.738737664821263e-07,
+    "emptying_step": 49056,
     "num_primaries": 4096,
-    "num_step_iters": 50135,
-    "num_steps": 205111215,
-    "pre_emptying_time": 0.001184027,
+    "num_step_iters": 49142,
+    "num_steps": 201038230,
+    "pre_emptying_time": 0.001089174,
     "queue_hwm": {
-     "count": 244706,
-     "index": 87
+     "count": 244888,
+     "index": 86
     },
-    "slot_occupancy": 0.9988227829781465,
-    "total_time": 57.251997895,
+    "slot_occupancy": 0.9987708909098887,
+    "total_time": 55.059097257,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 21.03247365000008,
-     "brems-rel": 0.3076242560000037,
-     "brems-sb": 3.7028842619999587,
-     "conv-bethe-heitler": 0.561930978999998,
-     "geo-boundary": 0.2919223149999943,
-     "ioni-moller-bhabha": 0.32452374199999956,
-     "photoel-livermore": 2.230371716000005,
-     "physics-discrete-select": 3.7642941149999856,
-     "pre-step": 15.228129845999954,
-     "scat-klein-nishina": 3.0052225360000127,
-     "scat-rayleigh": 0.5413518699999955
+     "along-step-uniform-msc": 20.95470714499998,
+     "brems-rel": 0.31297853299999884,
+     "brems-sb": 3.6271847010000076,
+     "conv-bethe-heitler": 0.5896688360000072,
+     "geo-boundary": 0.3351740969999979,
+     "ioni-moller-bhabha": 0.3353792749999967,
+     "photoel-livermore": 2.2934647570000144,
+     "physics-discrete-select": 3.630329251999995,
+     "pre-step": 13.755435483999886,
+     "scat-klein-nishina": 2.990895303000009
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50027
+     "index": 49083
     },
-    "avg_steps_per_primary": 50069.676513671875,
-    "avg_time_per_primary": 0.014032910384521485,
-    "avg_time_per_step": 2.802676462407282e-07,
-    "emptying_step": 50028,
+    "avg_steps_per_primary": 49103.82861328125,
+    "avg_time_per_primary": 0.013527282551513671,
+    "avg_time_per_step": 2.7548325524773663e-07,
+    "emptying_step": 49084,
     "num_primaries": 4096,
-    "num_step_iters": 50119,
-    "num_steps": 205085395,
-    "pre_emptying_time": 0.001130704,
+    "num_step_iters": 49160,
+    "num_steps": 201129282,
+    "pre_emptying_time": 0.001138026,
     "queue_hwm": {
-     "count": 246643,
-     "index": 88
+     "count": 247164,
+     "index": 89
     },
-    "slot_occupancy": 0.9990158724968949,
-    "total_time": 57.478800935,
+    "slot_occupancy": 0.9988573761855422,
+    "total_time": 55.407749331,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 20.94979051699998,
-     "brems-rel": 0.33750508699999926,
-     "brems-sb": 3.6641346109999984,
-     "conv-bethe-heitler": 0.6118590860000052,
-     "geo-boundary": 0.3615652929999992,
-     "ioni-moller-bhabha": 0.35739263499999957,
-     "photoel-livermore": 2.3067027689999966,
-     "physics-discrete-select": 3.7725743879999576,
-     "pre-step": 15.234830546999964,
-     "scat-klein-nishina": 3.0290343840000036,
-     "scat-rayleigh": 0.5966574919999987
+     "along-step-uniform-msc": 20.918801694999956,
+     "brems-rel": 0.3133903069999972,
+     "brems-sb": 3.7462788129999773,
+     "conv-bethe-heitler": 0.5669113420000015,
+     "geo-boundary": 0.2832227539999982,
+     "ioni-moller-bhabha": 0.3321463180000011,
+     "photoel-livermore": 2.292341066999993,
+     "physics-discrete-select": 3.643803874,
+     "pre-step": 13.785488744000034,
+     "scat-klein-nishina": 3.1963961480000287
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50064
+     "index": 49075
     },
-    "avg_steps_per_primary": 50084.30224609375,
-    "avg_time_per_primary": 0.014112172821289062,
-    "avg_time_per_step": 2.8176838227570035e-07,
-    "emptying_step": 50065,
+    "avg_steps_per_primary": 49095.357421875,
+    "avg_time_per_primary": 0.013589050088623046,
+    "avg_time_per_step": 2.7678890229584703e-07,
+    "emptying_step": 49076,
     "num_primaries": 4096,
-    "num_step_iters": 50135,
-    "num_steps": 205145302,
-    "pre_emptying_time": 0.001116237,
+    "num_step_iters": 49152,
+    "num_steps": 201094584,
+    "pre_emptying_time": 0.001130191,
     "queue_hwm": {
-     "count": 249251,
+     "count": 250181,
      "index": 90
     },
-    "slot_occupancy": 0.9989887752287574,
-    "total_time": 57.803459876,
+    "slot_occupancy": 0.9988476037979126,
+    "total_time": 55.660749163,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 20.928655313999993,
-     "brems-rel": 0.2948296110000006,
-     "brems-sb": 3.6018798659999787,
-     "conv-bethe-heitler": 0.5627221949999995,
-     "geo-boundary": 0.29048865299999566,
-     "ioni-moller-bhabha": 0.30808458200000194,
-     "photoel-livermore": 2.223490478999991,
-     "physics-discrete-select": 3.7497755479999637,
-     "pre-step": 15.208141642000042,
-     "scat-klein-nishina": 2.9199158969999686,
-     "scat-rayleigh": 0.5471317470000009
+     "along-step-uniform-msc": 20.93059839300015,
+     "brems-rel": 0.2882502520000015,
+     "brems-sb": 3.5916519980000214,
+     "conv-bethe-heitler": 0.5578434480000017,
+     "geo-boundary": 0.27803870799999975,
+     "ioni-moller-bhabha": 0.30210393700000254,
+     "photoel-livermore": 2.22589935,
+     "physics-discrete-select": 3.60951188500002,
+     "pre-step": 13.73153114499992,
+     "scat-klein-nishina": 2.920609568000022
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50065
+     "index": 49052
     },
-    "avg_steps_per_primary": 50096.057861328125,
-    "avg_time_per_primary": 0.01391720515600586,
-    "avg_time_per_step": 2.7781038569003464e-07,
-    "emptying_step": 50066,
+    "avg_steps_per_primary": 49085.366455078125,
+    "avg_time_per_primary": 0.013391495169189454,
+    "avg_time_per_step": 2.7282051935875965e-07,
+    "emptying_step": 49053,
     "num_primaries": 4096,
-    "num_step_iters": 50170,
-    "num_steps": 205193453,
-    "pre_emptying_time": 0.001143199,
+    "num_step_iters": 49137,
+    "num_steps": 201053661,
+    "pre_emptying_time": 0.001112709,
     "queue_hwm": {
-     "count": 245375,
+     "count": 245354,
      "index": 87
     },
-    "slot_occupancy": 0.9985261682544972,
-    "total_time": 57.004872319,
+    "slot_occupancy": 0.9989491921582132,
+    "total_time": 54.851564213,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 21.07047314199994,
-     "brems-rel": 0.30686494499999734,
-     "brems-sb": 3.6827831650000014,
-     "conv-bethe-heitler": 0.5744863409999951,
-     "geo-boundary": 0.2976733630000017,
-     "ioni-moller-bhabha": 0.31700153199999553,
-     "photoel-livermore": 2.2142587759999937,
-     "physics-discrete-select": 3.7674356619999667,
-     "pre-step": 15.32140060599989,
-     "scat-klein-nishina": 2.9811339959999934,
-     "scat-rayleigh": 0.5506580459999981
+     "along-step-uniform-msc": 20.990868265999975,
+     "brems-rel": 0.35345917199999943,
+     "brems-sb": 3.7803959040000623,
+     "conv-bethe-heitler": 0.6122159859999975,
+     "geo-boundary": 0.35671595300000375,
+     "ioni-moller-bhabha": 0.37675515500000223,
+     "photoel-livermore": 2.359890736000005,
+     "physics-discrete-select": 3.6484495430000186,
+     "pre-step": 13.782611420999975,
+     "scat-klein-nishina": 3.274722713999982
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50066
+     "index": 49072
     },
-    "avg_steps_per_primary": 50088.223876953125,
-    "avg_time_per_primary": 0.014039721125,
-    "avg_time_per_step": 2.802998397285961e-07,
-    "emptying_step": 50067,
+    "avg_steps_per_primary": 49092.682861328125,
+    "avg_time_per_primary": 0.013750526741210937,
+    "avg_time_per_step": 2.8009320207762907e-07,
+    "emptying_step": 49073,
     "num_primaries": 4096,
-    "num_step_iters": 50128,
-    "num_steps": 205161365,
-    "pre_emptying_time": 0.001169792,
+    "num_step_iters": 49143,
+    "num_steps": 201083629,
+    "pre_emptying_time": 0.001129934,
     "queue_hwm": {
-     "count": 246603,
+     "count": 247978,
      "index": 87
     },
-    "slot_occupancy": 0.9992065088763391,
-    "total_time": 57.506697728,
+    "slot_occupancy": 0.9989761077127592,
+    "total_time": 56.322157532,
     "unconverged": 0
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15+field-orange-gpu": {
@@ -3568,206 +3837,200 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 0.23900553900000002,
-     "brems-rel": 0.025802041000000005,
-     "brems-sb": 0.09582980700000004,
-     "conv-bethe-heitler": 0.045225194,
-     "geo-boundary": 0.02163655000000001,
-     "ioni-moller-bhabha": 0.028810215,
-     "photoel-livermore": 0.10356801300000004,
-     "physics-discrete-select": 0.09893141100000001,
-     "pre-step": 0.5240390289999999,
-     "scat-klein-nishina": 0.07698568399999996,
-     "scat-rayleigh": 0.04077306800000002
+     "along-step-uniform-msc": 0.23729285099999997,
+     "brems-rel": 0.025635387999999995,
+     "brems-sb": 0.09505864000000006,
+     "conv-bethe-heitler": 0.04509567699999996,
+     "geo-boundary": 0.021503014000000004,
+     "ioni-moller-bhabha": 0.028730051999999992,
+     "photoel-livermore": 0.10265159299999994,
+     "physics-discrete-select": 0.09574549000000004,
+     "pre-step": 0.5067501779999998,
+     "scat-klein-nishina": 0.0768865489999999
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22540.053736263737,
-    "avg_time_per_primary": 0.00026355439164835165,
-    "avg_time_per_step": 1.1692713545945552e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22088.624285714286,
+    "avg_time_per_primary": 0.0001752433068131868,
+    "avg_time_per_step": 7.93364514450656e-09,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 295,
-    "num_steps": 205114489,
-    "pre_emptying_time": 0.006279859,
+    "num_step_iters": 293,
+    "num_steps": 201006481,
+    "pre_emptying_time": 0.006073993,
     "queue_hwm": {
-     "count": 12418712,
+     "count": 12494876,
      "index": 58
     },
-    "slot_occupancy": 0.6630929494308213,
-    "total_time": 2.398344964,
+    "slot_occupancy": 0.6542481855320849,
+    "total_time": 1.594714092,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.24171411499999998,
-     "brems-rel": 0.02700786599999999,
-     "brems-sb": 0.09754303700000001,
-     "conv-bethe-heitler": 0.046602829000000005,
-     "geo-boundary": 0.022879982999999993,
-     "ioni-moller-bhabha": 0.030165030000000037,
-     "photoel-livermore": 0.10536504300000006,
-     "physics-discrete-select": 0.100977273,
-     "pre-step": 0.5330671309999999,
-     "scat-klein-nishina": 0.07790662699999994,
-     "scat-rayleigh": 0.041448505000000024
+     "along-step-uniform-msc": 0.23622354999999987,
+     "brems-rel": 0.02589874800000001,
+     "brems-sb": 0.09537817000000001,
+     "conv-bethe-heitler": 0.04519524999999998,
+     "geo-boundary": 0.02182388,
+     "ioni-moller-bhabha": 0.029020714999999985,
+     "photoel-livermore": 0.10329711000000008,
+     "physics-discrete-select": 0.09592880599999996,
+     "pre-step": 0.5076885990000002,
+     "scat-klein-nishina": 0.0772709819999999
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 185
     },
-    "avg_steps_per_primary": 22544.52131868132,
-    "avg_time_per_primary": 0.00026660597725274726,
-    "avg_time_per_step": 1.1825754624997364e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22103.054835164836,
+    "avg_time_per_primary": 0.00024093180362637362,
+    "avg_time_per_step": 1.09003848302029e-08,
+    "emptying_step": 186,
     "num_primaries": 9100,
-    "num_step_iters": 312,
-    "num_steps": 205155144,
-    "pre_emptying_time": 0.006259862,
+    "num_step_iters": 298,
+    "num_steps": 201137799,
+    "pre_emptying_time": 0.006056336,
     "queue_hwm": {
-     "count": 12398625,
+     "count": 12486486,
      "index": 58
     },
-    "slot_occupancy": 0.6270871529212365,
-    "total_time": 2.426114393,
+    "slot_occupancy": 0.6436911173314857,
+    "total_time": 2.192479413,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.23846742699999995,
-     "brems-rel": 0.02558930700000001,
-     "brems-sb": 0.09567389500000001,
-     "conv-bethe-heitler": 0.045134320000000026,
-     "geo-boundary": 0.021714776999999994,
-     "ioni-moller-bhabha": 0.028869562000000012,
-     "photoel-livermore": 0.10333032600000001,
-     "physics-discrete-select": 0.09902080800000002,
-     "pre-step": 0.5237386109999999,
-     "scat-klein-nishina": 0.07708322399999994,
-     "scat-rayleigh": 0.04011500799999999
+     "along-step-uniform-msc": 0.237179621,
+     "brems-rel": 0.02473977700000002,
+     "brems-sb": 0.09448305900000002,
+     "conv-bethe-heitler": 0.04440549799999998,
+     "geo-boundary": 0.020770739000000014,
+     "ioni-moller-bhabha": 0.02785455799999999,
+     "photoel-livermore": 0.1018577810000001,
+     "physics-discrete-select": 0.09483342300000004,
+     "pre-step": 0.503261971,
+     "scat-klein-nishina": 0.07556473599999994
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22540.79967032967,
-    "avg_time_per_primary": 0.00026321907043956046,
-    "avg_time_per_step": 1.1677450413883685e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22097.76659340659,
+    "avg_time_per_primary": 0.00019019297285714285,
+    "avg_time_per_step": 8.606886675773449e-09,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205121277,
-    "pre_emptying_time": 0.006253351,
+    "num_step_iters": 283,
+    "num_steps": 201089676,
+    "pre_emptying_time": 0.00665777,
     "queue_hwm": {
-     "count": 12430998,
+     "count": 12531332,
      "index": 58
     },
-    "slot_occupancy": 0.6608746406194326,
-    "total_time": 2.395293541,
+    "slot_occupancy": 0.6776468526348208,
+    "total_time": 1.730756053,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.2379748630000003,
-     "brems-rel": 0.02563998900000001,
-     "brems-sb": 0.09602361600000003,
-     "conv-bethe-heitler": 0.045186712,
-     "geo-boundary": 0.021702693999999998,
-     "ioni-moller-bhabha": 0.028971320000000002,
-     "photoel-livermore": 0.10339939099999997,
-     "physics-discrete-select": 0.09900185399999994,
-     "pre-step": 0.5243597820000003,
-     "scat-klein-nishina": 0.07676125099999997,
-     "scat-rayleigh": 0.04050251200000004
+     "along-step-uniform-msc": 0.23825592100000015,
+     "brems-rel": 0.025058574999999993,
+     "brems-sb": 0.09487030300000002,
+     "conv-bethe-heitler": 0.04468275000000001,
+     "geo-boundary": 0.020832702000000012,
+     "ioni-moller-bhabha": 0.02806382600000001,
+     "photoel-livermore": 0.10246265499999999,
+     "physics-discrete-select": 0.09513908199999999,
+     "pre-step": 0.5045893140000001,
+     "scat-klein-nishina": 0.07567305799999992
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22537.637912087914,
-    "avg_time_per_primary": 0.00026349221956043954,
-    "avg_time_per_step": 1.1691208306222599e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22093.393626373625,
+    "avg_time_per_primary": 0.00023967588890109887,
+    "avg_time_per_step": 1.0848305740363478e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 296,
-    "num_steps": 205092505,
-    "pre_emptying_time": 0.006264563,
+    "num_step_iters": 284,
+    "num_steps": 201049882,
+    "pre_emptying_time": 0.006046633,
     "queue_hwm": {
-     "count": 12398782,
+     "count": 12496579,
      "index": 58
     },
-    "slot_occupancy": 0.6607819408983797,
-    "total_time": 2.397779198,
+    "slot_occupancy": 0.6751271435912226,
+    "total_time": 2.181050589,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.23865086,
-     "brems-rel": 0.025844178999999974,
-     "brems-sb": 0.09605150799999991,
-     "conv-bethe-heitler": 0.045311317999999975,
-     "geo-boundary": 0.021855464000000005,
-     "ioni-moller-bhabha": 0.029018863999999988,
-     "photoel-livermore": 0.10345110900000001,
-     "physics-discrete-select": 0.09906591299999992,
-     "pre-step": 0.5245758570000004,
-     "scat-klein-nishina": 0.07696589000000001,
-     "scat-rayleigh": 0.040875380000000044
+     "along-step-uniform-msc": 0.23459245300000015,
+     "brems-rel": 0.024834498999999993,
+     "brems-sb": 0.09379127599999995,
+     "conv-bethe-heitler": 0.04403924699999998,
+     "geo-boundary": 0.020917611,
+     "ioni-moller-bhabha": 0.02800436799999999,
+     "photoel-livermore": 0.100995144,
+     "physics-discrete-select": 0.09492436999999998,
+     "pre-step": 0.501090759,
+     "scat-klein-nishina": 0.07566507399999998
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22545.187692307692,
-    "avg_time_per_primary": 0.00018260205494505493,
-    "avg_time_per_step": 8.09938056126088e-09,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22091.05901098901,
+    "avg_time_per_primary": 0.0002385384871428571,
+    "avg_time_per_step": 1.0797965232187292e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 205161208,
-    "pre_emptying_time": 0.006295526,
+    "num_step_iters": 285,
+    "num_steps": 201028637,
+    "pre_emptying_time": 0.006044058,
     "queue_hwm": {
-     "count": 12445667,
-     "index": 59
+     "count": 12501303,
+     "index": 58
     },
-    "slot_occupancy": 0.6587776929039746,
-    "total_time": 1.6616787,
+    "slot_occupancy": 0.6726871858563339,
+    "total_time": 2.170700233,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 0.23910124300000005,
-     "brems-rel": 0.025354691999999988,
-     "brems-sb": 0.09575747399999998,
-     "conv-bethe-heitler": 0.044802053000000036,
-     "geo-boundary": 0.0213162,
-     "ioni-moller-bhabha": 0.028544074000000013,
-     "photoel-livermore": 0.10318342399999993,
-     "physics-discrete-select": 0.09868242900000013,
-     "pre-step": 0.52212431,
-     "scat-klein-nishina": 0.07656308600000004,
-     "scat-rayleigh": 0.039574901999999995
+     "along-step-uniform-msc": 0.23660357200000004,
+     "brems-rel": 0.025362806000000022,
+     "brems-sb": 0.0950502390000001,
+     "conv-bethe-heitler": 0.04490558899999999,
+     "geo-boundary": 0.02152295600000002,
+     "ioni-moller-bhabha": 0.028568115999999984,
+     "photoel-livermore": 0.102217038,
+     "physics-discrete-select": 0.09562048499999998,
+     "pre-step": 0.5044103400000001,
+     "scat-klein-nishina": 0.07588518200000004
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22542.5910989011,
-    "avg_time_per_primary": 0.0002627963659340659,
-    "avg_time_per_step": 1.165777105130016e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22091.165384615386,
+    "avg_time_per_primary": 0.0001721045779120879,
+    "avg_time_per_step": 7.790651824640455e-09,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 290,
-    "num_steps": 205137579,
-    "pre_emptying_time": 0.006281998,
+    "num_step_iters": 291,
+    "num_steps": 201029605,
+    "pre_emptying_time": 0.006043388,
     "queue_hwm": {
-     "count": 12417765,
+     "count": 12519957,
      "index": 58
     },
-    "slot_occupancy": 0.6746015186967521,
-    "total_time": 2.39144693,
+    "slot_occupancy": 0.6588205193326235,
+    "total_time": 1.566151659,
     "unconverged": 0
    }
   ],
@@ -3786,11 +4049,10 @@
     "pre_step": 0.5,
     "process_primaries": 1.0,
     "process_secondaries": 0.625,
-    "rayleigh_interact": 0.5,
     "relativistic_brem_interact": 0.375,
     "seltzer_berger_interact": 0.375
    },
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15-orange-cpu": {
@@ -3809,213 +4071,207 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 14.807579067000091,
-     "brems-rel": 0.3444472880000024,
-     "brems-sb": 3.6994400139999906,
-     "conv-bethe-heitler": 0.6156353799999943,
-     "geo-boundary": 0.3587508760000025,
-     "ioni-moller-bhabha": 0.36064601600000046,
-     "photoel-livermore": 2.31091713499999,
-     "physics-discrete-select": 3.796447055000015,
-     "pre-step": 15.32287853199996,
-     "scat-klein-nishina": 3.049558344000007,
-     "scat-rayleigh": 0.6039371829999963
+     "along-step-general-linear": 14.92807430799982,
+     "brems-rel": 0.3002990900000009,
+     "brems-sb": 3.6875663509999788,
+     "conv-bethe-heitler": 0.5574360750000003,
+     "geo-boundary": 0.282345301999998,
+     "ioni-moller-bhabha": 0.31563319800000417,
+     "photoel-livermore": 2.213445595000004,
+     "physics-discrete-select": 3.6189170779999613,
+     "pre-step": 13.819109228000139,
+     "scat-klein-nishina": 4.640539236000028
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50015
+     "index": 49005
     },
-    "avg_steps_per_primary": 50036.9052734375,
-    "avg_time_per_primary": 0.012665278870605468,
-    "avg_time_per_step": 2.531187490791709e-07,
-    "emptying_step": 50016,
+    "avg_steps_per_primary": 49034.266357421875,
+    "avg_time_per_primary": 0.012394319323486329,
+    "avg_time_per_step": 2.527685278931539e-07,
+    "emptying_step": 49006,
     "num_primaries": 4096,
-    "num_step_iters": 50125,
-    "num_steps": 204951164,
-    "pre_emptying_time": 0.000977866,
+    "num_step_iters": 49078,
+    "num_steps": 200844355,
+    "pre_emptying_time": 0.000992033,
     "queue_hwm": {
-     "count": 245521,
-     "index": 89
-    },
-    "slot_occupancy": 0.9982424992206983,
-    "total_time": 51.876982254,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-general-linear": 14.789241104999931,
-     "brems-rel": 0.30159427000000116,
-     "brems-sb": 3.6672485779999846,
-     "conv-bethe-heitler": 0.5585225189999924,
-     "geo-boundary": 0.29039462399999577,
-     "ioni-moller-bhabha": 0.3180767199999996,
-     "photoel-livermore": 2.2585934559999727,
-     "physics-discrete-select": 3.7652572519999943,
-     "pre-step": 15.327306175999942,
-     "scat-klein-nishina": 2.9643067220000168,
-     "scat-rayleigh": 0.5426306429999975
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50014
-    },
-    "avg_steps_per_primary": 50033.475341796875,
-    "avg_time_per_primary": 0.012489774677734374,
-    "avg_time_per_step": 2.4962836565743594e-07,
-    "emptying_step": 50015,
-    "num_primaries": 4096,
-    "num_step_iters": 50080,
-    "num_steps": 204937115,
-    "pre_emptying_time": 0.000976878,
-    "queue_hwm": {
-     "count": 245577,
-     "index": 87
-    },
-    "slot_occupancy": 0.9990709932467428,
-    "total_time": 51.15811708,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-general-linear": 14.672832567999892,
-     "brems-rel": 0.2963111750000018,
-     "brems-sb": 3.6117964970000007,
-     "conv-bethe-heitler": 0.5513759190000007,
-     "geo-boundary": 0.2889760169999932,
-     "ioni-moller-bhabha": 0.3143131189999993,
-     "photoel-livermore": 2.232063456,
-     "physics-discrete-select": 3.7494984190000125,
-     "pre-step": 15.213324557000009,
-     "scat-klein-nishina": 2.9227702429999955,
-     "scat-rayleigh": 0.541536710000001
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50010
-    },
-    "avg_steps_per_primary": 50032.70947265625,
-    "avg_time_per_primary": 0.012403485590332032,
-    "avg_time_per_step": 2.4790753331299704e-07,
-    "emptying_step": 50011,
-    "num_primaries": 4096,
-    "num_step_iters": 50092,
-    "num_steps": 204933978,
-    "pre_emptying_time": 0.000988217,
-    "queue_hwm": {
-     "count": 247189,
-     "index": 87
-    },
-    "slot_occupancy": 0.9988163673372245,
-    "total_time": 50.804676978,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-general-linear": 14.688929718999967,
-     "brems-rel": 0.33196467400000584,
-     "brems-sb": 3.6577243659999983,
-     "conv-bethe-heitler": 0.5873780959999999,
-     "geo-boundary": 0.34552738900000013,
-     "ioni-moller-bhabha": 0.35240164300000143,
-     "photoel-livermore": 2.3029722569999933,
-     "physics-discrete-select": 3.7597493540000038,
-     "pre-step": 15.241093741000027,
-     "scat-klein-nishina": 3.0027810969999673,
-     "scat-rayleigh": 0.5784195620000017
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50013
-    },
-    "avg_steps_per_primary": 50034.287841796875,
-    "avg_time_per_primary": 0.012548274854492187,
-    "avg_time_per_step": 2.5079351372339914e-07,
-    "emptying_step": 50014,
-    "num_primaries": 4096,
-    "num_step_iters": 50095,
-    "num_steps": 204940443,
-    "pre_emptying_time": 0.001008813,
-    "queue_hwm": {
-     "count": 249359,
-     "index": 89
-    },
-    "slot_occupancy": 0.9987880595228441,
-    "total_time": 51.397733804,
-    "unconverged": 0
-   },
-   {
-    "action_times": {
-     "along-step-general-linear": 14.826955916000054,
-     "brems-rel": 0.3065570670000042,
-     "brems-sb": 3.7084527070000073,
-     "conv-bethe-heitler": 0.5864029379999979,
-     "geo-boundary": 0.2956232479999994,
-     "ioni-moller-bhabha": 0.3171656170000003,
-     "photoel-livermore": 2.240105512999982,
-     "physics-discrete-select": 3.771813930999959,
-     "pre-step": 15.274212471999961,
-     "scat-klein-nishina": 3.0122423789999906,
-     "scat-rayleigh": 0.5620934879999938
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 50001
-    },
-    "avg_steps_per_primary": 50020.582763671875,
-    "avg_time_per_primary": 0.012536642689941407,
-    "avg_time_per_step": 2.506296807690596e-07,
-    "emptying_step": 50002,
-    "num_primaries": 4096,
-    "num_step_iters": 50082,
-    "num_steps": 204884307,
-    "pre_emptying_time": 0.001013395,
-    "queue_hwm": {
-     "count": 248745,
+     "count": 245939,
      "index": 88
     },
-    "slot_occupancy": 0.9987736664604424,
-    "total_time": 51.350088458,
+    "slot_occupancy": 0.9991088951754732,
+    "total_time": 50.767131949,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 14.780346887999906,
-     "brems-rel": 0.3040558979999982,
-     "brems-sb": 3.6780821689999783,
-     "conv-bethe-heitler": 0.583612804,
-     "geo-boundary": 0.2876299110000008,
-     "ioni-moller-bhabha": 0.3198382010000009,
-     "photoel-livermore": 2.22544082500002,
-     "physics-discrete-select": 3.7623336119999826,
-     "pre-step": 15.264131702000098,
-     "scat-klein-nishina": 2.9914969989999696,
-     "scat-rayleigh": 0.5699014110000016
+     "along-step-general-linear": 15.04796512299991,
+     "brems-rel": 0.3077739689999982,
+     "brems-sb": 3.7361874140000277,
+     "conv-bethe-heitler": 0.5758406660000008,
+     "geo-boundary": 0.28349774199999844,
+     "ioni-moller-bhabha": 0.3202577200000021,
+     "photoel-livermore": 2.306901120999994,
+     "physics-discrete-select": 3.6389600899999732,
+     "pre-step": 13.80287517699987,
+     "scat-klein-nishina": 3.211512854000023
     },
     "active_hwm": {
      "count": 4096,
-     "index": 50006
+     "index": 49016
     },
-    "avg_steps_per_primary": 50032.52685546875,
-    "avg_time_per_primary": 0.0125317020859375,
-    "avg_time_per_step": 2.504711009727412e-07,
-    "emptying_step": 50007,
+    "avg_steps_per_primary": 49049.780517578125,
+    "avg_time_per_primary": 0.012165137652587891,
+    "avg_time_per_step": 2.480161485784474e-07,
+    "emptying_step": 49017,
     "num_primaries": 4096,
-    "num_step_iters": 50103,
-    "num_steps": 204933230,
-    "pre_emptying_time": 0.001015518,
+    "num_step_iters": 49107,
+    "num_steps": 200907901,
+    "pre_emptying_time": 0.001000353,
     "queue_hwm": {
-     "count": 245828,
+     "count": 246291,
+     "index": 86
+    },
+    "slot_occupancy": 0.9988347998773723,
+    "total_time": 49.828403825,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 14.95255395500005,
+     "brems-rel": 0.31793849899999743,
+     "brems-sb": 3.6268596970000244,
+     "conv-bethe-heitler": 0.5930600629999963,
+     "geo-boundary": 0.3340572140000012,
+     "ioni-moller-bhabha": 0.3328953690000001,
+     "photoel-livermore": 2.2868275020000124,
+     "physics-discrete-select": 3.603226105000019,
+     "pre-step": 13.790419508999905,
+     "scat-klein-nishina": 4.763364260000042
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49021
+    },
+    "avg_steps_per_primary": 49036.34765625,
+    "avg_time_per_primary": 0.01248773813232422,
+    "avg_time_per_step": 2.5466289251117537e-07,
+    "emptying_step": 49022,
+    "num_primaries": 4096,
+    "num_step_iters": 49071,
+    "num_steps": 200852880,
+    "pre_emptying_time": 0.000956245,
+    "queue_hwm": {
+     "count": 247735,
+     "index": 87
+    },
+    "slot_occupancy": 0.9992938325334719,
+    "total_time": 51.14977539,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 14.91715982999989,
+     "brems-rel": 0.2893043919999991,
+     "brems-sb": 3.5893075089999633,
+     "conv-bethe-heitler": 0.5680028110000014,
+     "geo-boundary": 0.2773361920000012,
+     "ioni-moller-bhabha": 0.30153150700000225,
+     "photoel-livermore": 2.2235398920000033,
+     "physics-discrete-select": 3.5999049119999547,
+     "pre-step": 13.799105644999914,
+     "scat-klein-nishina": 4.6775294380000165
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49028
+    },
+    "avg_steps_per_primary": 49054.752197265625,
+    "avg_time_per_primary": 0.012355575130371093,
+    "avg_time_per_step": 2.5187315350580466e-07,
+    "emptying_step": 49029,
+    "num_primaries": 4096,
+    "num_step_iters": 49098,
+    "num_steps": 200928265,
+    "pre_emptying_time": 0.001011171,
+    "queue_hwm": {
+     "count": 250874,
      "index": 89
     },
-    "slot_occupancy": 0.9985934346340289,
-    "total_time": 51.329851744,
+    "slot_occupancy": 0.9991191534739832,
+    "total_time": 50.608435734,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 14.978935115000128,
+     "brems-rel": 0.35369115400000156,
+     "brems-sb": 3.786947873999972,
+     "conv-bethe-heitler": 0.6127754980000016,
+     "geo-boundary": 0.35768959300000347,
+     "ioni-moller-bhabha": 0.37471955099999865,
+     "photoel-livermore": 2.3377563109999953,
+     "physics-discrete-select": 3.654769326000007,
+     "pre-step": 13.849537197000087,
+     "scat-klein-nishina": 5.216655629999987
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49014
+    },
+    "avg_steps_per_primary": 49046.577880859375,
+    "avg_time_per_primary": 0.01276827814453125,
+    "avg_time_per_step": 2.6032964370209654e-07,
+    "emptying_step": 49015,
+    "num_primaries": 4096,
+    "num_step_iters": 49092,
+    "num_steps": 200894783,
+    "pre_emptying_time": 0.001038148,
+    "queue_hwm": {
+     "count": 248989,
+     "index": 87
+    },
+    "slot_occupancy": 0.9990747551710946,
+    "total_time": 52.29886728,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-general-linear": 14.970230438999943,
+     "brems-rel": 0.30019999800000063,
+     "brems-sb": 3.6047132030000317,
+     "conv-bethe-heitler": 0.5647449509999981,
+     "geo-boundary": 0.27341793700000144,
+     "ioni-moller-bhabha": 0.3093838489999988,
+     "photoel-livermore": 2.2429927640000176,
+     "physics-discrete-select": 3.613021568999991,
+     "pre-step": 13.848422212999994,
+     "scat-klein-nishina": 2.9412813729999994
+    },
+    "active_hwm": {
+     "count": 4096,
+     "index": 49008
+    },
+    "avg_steps_per_primary": 49040.756591796875,
+    "avg_time_per_primary": 0.011993823259765625,
+    "avg_time_per_step": 2.445684792263554e-07,
+    "emptying_step": 49009,
+    "num_primaries": 4096,
+    "num_step_iters": 49105,
+    "num_steps": 200870939,
+    "pre_emptying_time": 0.000962368,
+    "queue_hwm": {
+     "count": 245847,
+     "index": 88
+    },
+    "slot_occupancy": 0.9986917135077258,
+    "total_time": 49.126700072,
     "unconverged": 0
    }
   ],
   "system": {
    "debug": false,
    "occupancy": {},
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem15-orange-gpu": {
@@ -4034,206 +4290,200 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 0.2763187630000001,
-     "brems-rel": 0.02607265700000001,
-     "brems-sb": 0.09640528499999995,
-     "conv-bethe-heitler": 0.04525783899999994,
-     "geo-boundary": 0.02194446100000002,
-     "ioni-moller-bhabha": 0.029210131000000014,
-     "photoel-livermore": 0.10341612700000001,
-     "physics-discrete-select": 0.09934179099999996,
-     "pre-step": 0.5243340729999995,
-     "scat-klein-nishina": 0.07705074099999996,
-     "scat-rayleigh": 0.04098895899999997
+     "along-step-general-linear": 0.27424076000000036,
+     "brems-rel": 0.025243253999999982,
+     "brems-sb": 0.09479672099999994,
+     "conv-bethe-heitler": 0.04454016000000001,
+     "geo-boundary": 0.021336440000000016,
+     "ioni-moller-bhabha": 0.02838735200000002,
+     "photoel-livermore": 0.10271009600000003,
+     "physics-discrete-select": 0.09559059899999997,
+     "pre-step": 0.5031649439999997,
+     "scat-klein-nishina": 0.07606073899999999
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22520.74945054945,
-    "avg_time_per_primary": 0.0002692387374725275,
-    "avg_time_per_step": 1.195514110503808e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22079.22164835165,
+    "avg_time_per_primary": 0.00026054109439560444,
+    "avg_time_per_step": 1.180028438253644e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 299,
-    "num_steps": 204938820,
-    "pre_emptying_time": 0.006451875,
+    "num_step_iters": 289,
+    "num_steps": 200920917,
+    "pre_emptying_time": 0.006234432,
     "queue_hwm": {
-     "count": 12434135,
+     "count": 12536534,
      "index": 58
     },
-    "slot_occupancy": 0.6536618363498445,
-    "total_time": 2.450072511,
+    "slot_occupancy": 0.6630211701442627,
+    "total_time": 2.370923959,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 0.2777819249999999,
-     "brems-rel": 0.026638510000000008,
-     "brems-sb": 0.09653254000000003,
-     "conv-bethe-heitler": 0.04584125599999999,
-     "geo-boundary": 0.02233712900000002,
-     "ioni-moller-bhabha": 0.029509416999999993,
-     "photoel-livermore": 0.10411083799999996,
-     "physics-discrete-select": 0.09998718399999999,
-     "pre-step": 0.5283166409999994,
-     "scat-klein-nishina": 0.07741753699999994,
-     "scat-rayleigh": 0.041011529999999984
+     "along-step-general-linear": 0.27318563900000004,
+     "brems-rel": 0.025386707,
+     "brems-sb": 0.09447124700000006,
+     "conv-bethe-heitler": 0.04470925000000003,
+     "geo-boundary": 0.021309936,
+     "ioni-moller-bhabha": 0.02847245800000002,
+     "photoel-livermore": 0.10195661000000003,
+     "physics-discrete-select": 0.09554148400000008,
+     "pre-step": 0.5035205109999997,
+     "scat-klein-nishina": 0.07595420700000009
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22526.548241758243,
-    "avg_time_per_primary": 0.0002704310005494505,
-    "avg_time_per_step": 1.2004990629152106e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22077.023846153847,
+    "avg_time_per_primary": 0.00026027420384615383,
+    "avg_time_per_step": 1.1789370055488597e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 305,
-    "num_steps": 204991589,
-    "pre_emptying_time": 0.006446203,
+    "num_step_iters": 290,
+    "num_steps": 200900917,
+    "pre_emptying_time": 0.006232626,
     "queue_hwm": {
-     "count": 12401327,
+     "count": 12498622,
      "index": 58
     },
-    "slot_occupancy": 0.6409679131429703,
-    "total_time": 2.460922105,
+    "slot_occupancy": 0.6606691196047026,
+    "total_time": 2.368495255,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 0.27841492599999984,
-     "brems-rel": 0.026222890999999988,
-     "brems-sb": 0.09641092,
-     "conv-bethe-heitler": 0.04574291500000002,
-     "geo-boundary": 0.021951099999999984,
-     "ioni-moller-bhabha": 0.02915386900000002,
-     "photoel-livermore": 0.10389678899999992,
-     "physics-discrete-select": 0.09948519400000001,
-     "pre-step": 0.5268574659999994,
-     "scat-klein-nishina": 0.07699000800000001,
-     "scat-rayleigh": 0.04042564599999999
+     "along-step-general-linear": 0.27511116499999977,
+     "brems-rel": 0.026687759000000002,
+     "brems-sb": 0.09590359199999995,
+     "conv-bethe-heitler": 0.04589603399999999,
+     "geo-boundary": 0.022627574000000008,
+     "ioni-moller-bhabha": 0.029787349000000005,
+     "photoel-livermore": 0.10344621000000001,
+     "physics-discrete-select": 0.09700807000000003,
+     "pre-step": 0.5110425439999999,
+     "scat-klein-nishina": 0.07766984600000006
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22515.29857142857,
-    "avg_time_per_primary": 0.00026977279483516485,
-    "avg_time_per_step": 1.1981755159911614e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22074.456593406594,
+    "avg_time_per_primary": 0.0002630338231868132,
+    "avg_time_per_step": 1.1915755301780728e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 299,
-    "num_steps": 204889217,
-    "pre_emptying_time": 0.006437745,
+    "num_step_iters": 308,
+    "num_steps": 200877555,
+    "pre_emptying_time": 0.006235027,
     "queue_hwm": {
-     "count": 12458618,
+     "count": 12468566,
      "index": 58
     },
-    "slot_occupancy": 0.6535036252892535,
-    "total_time": 2.454932433,
+    "slot_occupancy": 0.621986249824623,
+    "total_time": 2.393607791,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 0.2775912779999997,
-     "brems-rel": 0.026107778000000016,
-     "brems-sb": 0.09648503699999995,
-     "conv-bethe-heitler": 0.045642914,
-     "geo-boundary": 0.02218466000000001,
-     "ioni-moller-bhabha": 0.029350212,
-     "photoel-livermore": 0.10362877700000006,
-     "physics-discrete-select": 0.09969251699999994,
-     "pre-step": 0.5266147420000001,
-     "scat-klein-nishina": 0.07725288,
-     "scat-rayleigh": 0.04101578699999999
+     "along-step-general-linear": 0.27397723400000007,
+     "brems-rel": 0.02524555599999999,
+     "brems-sb": 0.094579999,
+     "conv-bethe-heitler": 0.04462743100000001,
+     "geo-boundary": 0.021244552000000007,
+     "ioni-moller-bhabha": 0.028347090999999967,
+     "photoel-livermore": 0.10198389499999999,
+     "physics-discrete-select": 0.09551186100000002,
+     "pre-step": 0.5035186799999999,
+     "scat-klein-nishina": 0.07622345000000004
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22521.12208791209,
-    "avg_time_per_primary": 0.00026998604637362635,
-    "avg_time_per_step": 1.1988125872224536e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22071.29054945055,
+    "avg_time_per_primary": 0.0002603627883516483,
+    "avg_time_per_step": 1.179644605594347e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 302,
-    "num_steps": 204942211,
-    "pre_emptying_time": 0.00644144,
+    "num_step_iters": 289,
+    "num_steps": 200848744,
+    "pre_emptying_time": 0.006254905,
     "queue_hwm": {
-     "count": 12420882,
+     "count": 12491489,
      "index": 58
     },
-    "slot_occupancy": 0.6471792151596373,
-    "total_time": 2.456873022,
+    "slot_occupancy": 0.662783005658318,
+    "total_time": 2.369301374,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 0.27714105300000014,
-     "brems-rel": 0.025556053000000013,
-     "brems-sb": 0.09555347400000001,
-     "conv-bethe-heitler": 0.044966517000000004,
-     "geo-boundary": 0.021595520999999996,
-     "ioni-moller-bhabha": 0.028764329999999994,
-     "photoel-livermore": 0.10317849000000004,
-     "physics-discrete-select": 0.09910827099999997,
-     "pre-step": 0.5235575810000003,
-     "scat-klein-nishina": 0.07646259900000005,
-     "scat-rayleigh": 0.040271141999999996
+     "along-step-general-linear": 0.2773312230000001,
+     "brems-rel": 0.026039956000000017,
+     "brems-sb": 0.09586878100000004,
+     "conv-bethe-heitler": 0.045654838999999996,
+     "geo-boundary": 0.021862614,
+     "ioni-moller-bhabha": 0.02909694200000001,
+     "photoel-livermore": 0.10349937200000005,
+     "physics-discrete-select": 0.09641959600000005,
+     "pre-step": 0.5099148900000005,
+     "scat-klein-nishina": 0.07640543200000008
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22523.012637362637,
-    "avg_time_per_primary": 0.00026862201285714286,
-    "avg_time_per_step": 1.1926557835852527e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22077.022307692307,
+    "avg_time_per_primary": 0.000262389160989011,
+    "avg_time_per_step": 1.18851698989128e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 294,
-    "num_steps": 204959415,
-    "pre_emptying_time": 0.006449416,
+    "num_step_iters": 298,
+    "num_steps": 200900903,
+    "pre_emptying_time": 0.006245322,
     "queue_hwm": {
-     "count": 12365483,
+     "count": 12468538,
      "index": 58
     },
-    "slot_occupancy": 0.6648453401059521,
-    "total_time": 2.444460317,
+    "slot_occupancy": 0.642932991053434,
+    "total_time": 2.387741365,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 0.27703596700000005,
-     "brems-rel": 0.025654413999999987,
-     "brems-sb": 0.09603261899999999,
-     "conv-bethe-heitler": 0.04502600000000001,
-     "geo-boundary": 0.02158916499999998,
-     "ioni-moller-bhabha": 0.02880958700000001,
-     "photoel-livermore": 0.10328079600000002,
-     "physics-discrete-select": 0.09908122299999995,
-     "pre-step": 0.523226204,
-     "scat-klein-nishina": 0.07681482199999995,
-     "scat-rayleigh": 0.040262698000000034
+     "along-step-general-linear": 0.27305832299999994,
+     "brems-rel": 0.025534012000000023,
+     "brems-sb": 0.094895717,
+     "conv-bethe-heitler": 0.04488062099999999,
+     "geo-boundary": 0.021685210999999985,
+     "ioni-moller-bhabha": 0.02882857900000001,
+     "photoel-livermore": 0.10182617000000005,
+     "physics-discrete-select": 0.09590216100000007,
+     "pre-step": 0.5051594520000002,
+     "scat-klein-nishina": 0.07638436899999995
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 188
+     "index": 184
     },
-    "avg_steps_per_primary": 22521.745494505496,
-    "avg_time_per_primary": 0.00026869530307692304,
-    "avg_time_per_step": 1.193048305880533e-08,
-    "emptying_step": 189,
+    "avg_steps_per_primary": 22075.8489010989,
+    "avg_time_per_primary": 0.00026086224087912085,
+    "avg_time_per_step": 1.1816634642128555e-08,
+    "emptying_step": 185,
     "num_primaries": 9100,
-    "num_step_iters": 294,
-    "num_steps": 204947884,
-    "pre_emptying_time": 0.006455478,
+    "num_step_iters": 296,
+    "num_steps": 200890225,
+    "pre_emptying_time": 0.006245383,
     "queue_hwm": {
-     "count": 12399121,
+     "count": 12483140,
      "index": 58
     },
-    "slot_occupancy": 0.6648079359612498,
-    "total_time": 2.445127258,
+    "slot_occupancy": 0.6472427297282863,
+    "total_time": 2.373846392,
     "unconverged": 0
    }
   ],
@@ -4252,11 +4502,10 @@
     "pre_step": 0.5,
     "process_primaries": 1.0,
     "process_secondaries": 0.625,
-    "rayleigh_interact": 0.5,
     "relativistic_brem_interact": 0.375,
     "seltzer_berger_interact": 0.375
    },
-   "version": "v0.1.2+fb3f5506"
+   "version": "v0.1.3"
   }
  },
  "testem3-flat+field-orange-cpu": {

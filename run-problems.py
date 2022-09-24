@@ -213,7 +213,7 @@ base_input = {
     "conv_lpm": True,
     "eloss_fluctuation": False,
     "enable_msc": False,
-    "rayleigh": False,
+    "rayleigh": True,
     "geant_options": {
         "em_bins_per_decade": 56,
         "physics": "em_basic"
