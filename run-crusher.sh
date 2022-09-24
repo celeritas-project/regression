@@ -13,6 +13,6 @@ fi
 source /ccs/home/s3j/.local/src/celeritas/scripts/env/crusher.sh
 
 echo "Running on $HOSTNAME at $(date)"
-python3 run-problems.py
+python3 run-problems.py crusher
 echo "Completed at $(date)"
 exit 0

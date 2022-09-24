@@ -20,6 +20,8 @@ from pprint import pprint
 from os import environ
 from signal import SIGINT, SIGTERM, SIGKILL
 import subprocess
+import sys
+
 from summarize import inp_to_nametuple, summarize_all, exception_to_dict
 
 g4env = {k: v for k, v in environ.items()
@@ -54,6 +56,8 @@ class System:
             env=env
         )
 
+    def get_monitoring_coro(self):
+        return []
 
 class Wildstyle(System):
     build_dirs = {
@@ -125,6 +129,23 @@ class Summit(System):
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
+
+    async def run_jslist(self):
+        # Wait a second for the jobs to start
+        await asyncio.sleep(1)
+        print("Running jslist")
+
+        try:
+            proc = await asyncio.create_subprocess_exec("jslist", "-r", "-R")
+        except FileNotFoundError as e:
+            print("jslist not found :(")
+            return
+
+        print("Waiting on jslist output")
+        await proc.communicate()
+
+    def get_monitoring_coro(self):
+        return [self.run_jslist()]
 
 class Crusher(System):
     _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas'
@@ -379,25 +400,16 @@ async def run_celeritas(system, results_dir, inp, instance):
     return result
 
 
-async def run_jslist():
-    # Wait a second for the jobs to start
-    await asyncio.sleep(1)
-    print("Running jslist")
-
-    try:
-        proc = await asyncio.create_subprocess_exec("jslist", "-r", "-R")
-    except FileNotFoundError as e:
-        print("jslist not found :(")
-        return
-
-    print("Waiting on jslist output")
-    await proc.communicate()
-
-
 async def main():
-    #system = Local()
-    system = Summit()
-    #system = Crusher()
+    try:
+        sysname = sys.argv[1]
+    except IndexError:
+        Sys = Local
+    else:
+        # TODO: use metaclass to build this list automatically
+        _systems = {S.name: S for S in [Summit, Crusher, Wildstyle]}
+        Sys = _systems[sysname]
+    system = Sys()
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
@@ -414,13 +426,15 @@ async def main():
 
     summaries = {}
     for inp in inputs:
-        # print("="*79)
+        print("="*79)
         # pprint(inp)
         tasks = [run_celeritas(system, results_dir, inp, i)
                  for i in range(system.num_jobs)]
-        tasks.append(run_jslist())
+        tasks.extend(system.get_monitoring_coro())
         result = await asyncio.gather(*tasks)
-        del result[-1]
+
+        # Ignore results from monitoring tasks
+        result = result[:system.num_jobs]
 
         summaries[inp['_outdir']] = summary = summarize_all(result)
         summary['name'] = inp['_name']

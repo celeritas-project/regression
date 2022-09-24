@@ -13,6 +13,6 @@ fi
 source $PROJWORK/csc404/celeritas/summit-env.sh
 
 echo "Running on $HOSTNAME at $(date)"
-python3 run-problems.py
+python3 run-problems.py summit
 echo "Completed at $(date)"
 exit 0
