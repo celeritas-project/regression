@@ -3,10 +3,15 @@
 # See the top-level COPYRIGHT file for details.
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 """
+Analysis and plotting utilities for regression data.
 """
 import json
-import pandas as pd
+import re
+
 from pathlib import Path
+
+import pandas as pd
+import numpy as np
 
 Islc = pd.IndexSlice
 
@@ -30,6 +35,22 @@ def groupby_notinstance(obj):
 def summarize_instances(obj):
     grouped = groupby_notinstance(obj)
     return grouped.describe().loc[Islc[:], Islc[:, ['count', 'mean', 'std']]]
+
+
+def inverse_summary(summary):
+    result = summary.copy()
+    mean = 1/summary['mean']
+    rel = summary['std'] / summary['mean']
+    std = rel * mean
+    return pd.DataFrame({'count': summary['count'], 'mean': mean, 'std': std})
+
+
+def get_cpugpu_ratio(summary):
+    mean = summary['mean'].unstack()
+    re = summary['std'].unstack() / mean
+    ratio = mean['cpu'] / mean['gpu']
+    std = ratio * np.hypot(re['gpu'], re['cpu'])
+    return pd.DataFrame({'mean': ratio, 'std' : std})
 
 
 class Analysis:
@@ -75,7 +96,19 @@ class Analysis:
     def load_results(self, name, instance):
         subdir = self.basedir / self.index[name]
         with open(subdir / f"{instance:d}.json") as f:
-            return json.load(f)
+            result = json.load(f)
+
+        try:
+            version = result['system']['build']['version']
+        except KeyError:
+            version = self.version
+        result['_metadata'] = {
+            'version': version,
+            'system': self.system,
+            'name': name,
+            'instance': instance,
+        }
+        return result
 
     def failures(self):
         invalid = self.invalid.unstack()
@@ -94,8 +127,23 @@ class Analysis:
         hwm = self.result['active_hwm']
         return summarize_instances(unstack_subdict(hwm[~invalid]))
 
+    def problems(self):
+        """Get an ordered list of problem names.
+        """
+        skip = set()
+        result = []
+        for (p, *_) in self.index:
+            if p not in skip:
+                result.append(p)
+                skip.add(p)
+        return result
+
     def __str__(self):
-        return f"Analysis for Celeritas {self.version} on {self.basedir.name}"
+        return f"Analysis for Celeritas {self.version} on {self.system}"
+
+    @property
+    def system(self):
+        return self.basedir.name
 
 def plot_counts(ax, out):
     blue = (.1, .1, .9)
@@ -131,9 +179,110 @@ def plot_counts(ax, out):
     oax.spines['left'].set_color(blue)
     oax.spines['right'].set_color(red)
 
-    ax.legend(lines, [l.get_label() for l in lines])
+    legend = ax.legend(lines, [l.get_label() for l in lines])
+
+    return {
+        'ax': ax,
+        'oax': oax,
+        'legend': legend,
+    }
+
+
+def plot_time_per_step(ax, outp):
+    r = outp['result']
+    active = np.asarray(r['active'])
+    stime = np.asarray(r['time']['steps'])
+
+    alpha = np.ones_like(active, dtype=float)
+    alpha[active == outp['input']['max_num_tracks']] = .05
+
+    # Manually scale
+    mega_active = active * 1e-6
+
+    def _xy(idx):
+        return np.array([mega_active[idx], stime[idx]])
+
+    ax.plot(mega_active, stime, marker='', color="0.9", zorder=-1, lw=.5)
+    scat = ax.scatter(mega_active, stime, c=np.arange(len(mega_active)), s=6) #, alpha=alpha)
+    ax.annotate('All primaries active', xy=_xy(0), xycoords='data',
+                xytext=(30, 0), textcoords='offset points',
+                size='x-small', color=".2",
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
+    ax.annotate('First secondaries', xy=_xy(2), xycoords='data',
+                xytext=(-15, 50), textcoords='offset points',
+                size='x-small', color=".2",
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
+    ax.annotate('Filling', xy=(_xy(3) * 1.1), xycoords='data',
+                xytext=(_xy(5) * 1.2), textcoords='data',
+                size='x-small', color=".2",
+                arrowprops=dict(arrowstyle="<-", ec=".2", lw=.5))
+    ax.annotate('Draining', xy=(_xy(-100) * .8), xycoords='data',
+                xytext=(_xy(-80) * .9), textcoords='data',
+                size='x-small', color=".2",
+                arrowprops=dict(arrowstyle="<-", ec=".2", lw=.5))
+    ax.set_xlabel(r'Number of active tracks [$\times 10^{6}$]')
+    ax.set_ylabel('Time per step [s]')
+    cb = ax.get_figure().colorbar(scat)
+    cb.set_label('Step iteration')
+
+    return {
+        'ax': ax,
+        'oax': oax,
+        'cb': cb,
+    }
+
+
+def plot_accum_time(ax, outp):
+    r = outp['result']
+    active = np.asarray(r['active'])
+    stime = np.asarray(r['time']['steps'])
+
+    accum_time = np.cumsum(stime)
+    accum_steps = np.cumsum(active)
+
+    blue = (.1, .1, .9)
+    red = (.7, .1, .1)
+
+    ax.plot(accum_time, accum_steps, marker='', color=blue)
+    ax.set_ylabel('Total number of steps')
+    ax.set_xlabel('Total wall time (s)')
+    ax.grid()
+
+    oax = ax.twinx()
+    oax.plot(accum_time, np.arange(len(accum_steps)), linestyle='-.', marker='', color=(red + (0.5,)))
+    oax.set_ylabel("Number of step iterations", color=red)
+    oax.spines['left'].set_color(blue)
+    oax.spines['right'].set_color(red)
 
     return {
         'ax': ax,
         'oax': oax,
     }
+
+
+def annotate_metadata(obj, md, **kwargs):
+    """Draw a little caption on a figure or axis with result metadata.
+    """
+    if isinstance(md, Analysis):
+        s = f"{md.version} on {md.system}"
+    else:
+        # Assume data from a single result
+        name = "/".join(md['name'])
+        s = f"{name}.{md['instance']}\n{md['version']} on {md['system']}"
+
+    try:
+        # Assume obj is axes to get layout coordinates
+        transform = obj.transAxes
+    except AttributeError:
+        # Hope obj is a figure
+        transform = None
+
+    text_kwargs = dict(va='bottom', ha='right',
+        fontstyle='italic', color=(0.5,)*3, size='xx-small',
+        transform=transform,
+        zorder=-100
+    )
+    text_kwargs.update(kwargs)
+
+    return obj.text(0.98, 0.02, s, **text_kwargs)
+
