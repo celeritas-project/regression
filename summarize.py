@@ -140,7 +140,7 @@ def summarize_all(instances):
         try:
             sys_sum = summarize_system(r['system'])
         except KeyError as e:
-            print("Couldn't summarize system: missing key", e, repr(r))
+            print("Couldn't summarize system: missing key", e)
         else:
             systems.append(sys_sum)
             if inp is None:
@@ -176,6 +176,7 @@ def main(index_filename):
     summaries = {}
     for subdir, name in problems:
         outdir = results_dir / subdir
+        print("Processing", outdir)
         result_files = sorted(outdir.glob("*.json"))
         results = []
         for r in result_files:

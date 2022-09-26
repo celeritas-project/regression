@@ -1,5 +1,6 @@
 {
  "cms2018+field+msc-vecgeom-cpu": {
+  "input": null,
   "name": [
    "cms2018+field+msc",
    "vecgeom",
@@ -118,9 +119,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "cms2018+field+msc-vecgeom-gpu": {
+  "input": null,
   "name": [
    "cms2018+field+msc",
    "vecgeom",
@@ -239,9 +242,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "cms2018-vecgeom-cpu": {
+  "input": null,
   "name": [
    "cms2018",
    "vecgeom",
@@ -360,9 +365,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "cms2018-vecgeom-gpu": {
+  "input": null,
   "name": [
    "cms2018",
    "vecgeom",
@@ -481,7 +488,8 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "simple-cms+field+msc-orange-cpu": {
   "input": {
@@ -709,6 +717,7 @@
   }
  },
  "simple-cms+field+msc-orange-gpu": {
+  "input": null,
   "name": [
    "simple-cms+field+msc",
    "orange",
@@ -843,9 +852,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "simple-cms+field+msc-vecgeom-cpu": {
+  "input": null,
   "name": [
    "simple-cms+field+msc",
    "vecgeom",
@@ -964,9 +975,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "simple-cms+field+msc-vecgeom-gpu": {
+  "input": null,
   "name": [
    "simple-cms+field+msc",
    "vecgeom",
@@ -1085,7 +1098,8 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "simple-cms+field-orange-cpu": {
   "input": {
@@ -2942,6 +2956,7 @@
   }
  },
  "testem15+field+msc-vecgeom-cpu": {
+  "input": null,
   "name": [
    "testem15+field+msc",
    "vecgeom",
@@ -3060,9 +3075,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "testem15+field+msc-vecgeom-gpu": {
+  "input": null,
   "name": [
    "testem15+field+msc",
    "vecgeom",
@@ -3181,7 +3198,8 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "testem15+field-orange-cpu": {
   "input": {
@@ -6097,6 +6115,7 @@
   }
  },
  "testem3-flat-vecgeom-cpu": {
+  "input": null,
   "name": [
    "testem3-flat",
    "vecgeom",
@@ -6215,9 +6234,11 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  },
  "testem3-flat-vecgeom-gpu": {
+  "input": null,
   "name": [
    "testem3-flat",
    "vecgeom",
@@ -6336,6 +6357,7 @@
      "stdout": []
     }
    }
-  ]
+  ],
+  "system": []
  }
 }
