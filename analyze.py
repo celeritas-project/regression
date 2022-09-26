@@ -81,17 +81,22 @@ class Analysis:
         self.version = self._load_version(summaries)
 
     def _load_version(self, summaries):
-        version = None
+        versions = set()
         for s in summaries.values():
             try:
-                test_version = s["system"]["version"]
+                temp_sys = s["system"]
             except KeyError:
                 pass
             else:
-                if version is None:
-                    version = test_version
-                assert version == test_version
-        return version
+                if isinstance(temp_sys, list):
+                    versions.update(ts["version"] for version in temp_sys)
+                else:
+                    versions.add(temp_sys["version"])
+        if len(versions) > 1:
+            print("WARNING: multiple versions present in same summary:", versions)
+        elif not versions:
+            print("WARNING: no version found")
+        return " or ".join(versions)
 
     def load_results(self, name, instance):
         subdir = self.basedir / self.index[name]

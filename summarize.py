@@ -72,11 +72,16 @@ def summarize_input(inp):
     }
 
 def summarize_system(sys):
-    kernels = sys['kernels']
+    try:
+        kernels = sys['kernels']
+    except KeyError:
+        occupancy = None
+    else:
+        occupancy = {v['name']: v['occupancy'] for v in sys['kernels']}
     return  {
         'debug': sys['build']['config']['CELERITAS_DEBUG'],
         'version': sys['build']['version'],
-        'occupancy': {v['name']: v['occupancy'] for v in sys['kernels']},
+        'occupancy': occupancy,
     }
 
 def inp_to_nametuple(d):
@@ -133,13 +138,13 @@ def summarize_all(instances):
     inp = None
     for r in instances:
         try:
-            sys_sum = summarize_system(r)
-        except KeyError:
-            pass
+            sys_sum = summarize_system(r['system'])
+        except KeyError as e:
+            print("Couldn't summarize system: missing key", e, repr(r))
         else:
             systems.append(sys_sum)
             if inp is None:
-                inp = summarize_input(result['input'])
+                inp = summarize_input(r['input'])
 
     consistent = bool(systems)
     for s in systems[1:]:
