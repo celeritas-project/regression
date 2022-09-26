@@ -1,11 +1,21 @@
 {
+"input": {
+"_geometry": "orange",
+"_name": [
+"testem3-flat+field",
+"orange",
+"gpu"
+],
+"_outdir": "testem3-flat+field-orange-gpu",
+"_timeout": 1800.0
+},
 "stderr": [
 "status: Loading input and initializing problem data",
 "status: Initializing Geant4",
 "info: Loading geometry from input/testem3-flat.gdml",
 "info: Loading ORANGE geometry from JSON at input/testem3-flat.org.json",
-"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:275: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:306: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
 "status: Reading and building Seltzer Berger model data",
 "status: Reading and building Livermore PE model data",
 "status: Transporting",
@@ -15,7 +25,7 @@
 "    unspecified launch failure"
 ],
 "stdout": [
-"/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/AlongStep.hh:103:",
-"celeritas: internal assertion failed: speed > 0"
+"/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
+"celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
 ]
 }
