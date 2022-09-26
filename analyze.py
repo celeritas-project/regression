@@ -89,7 +89,7 @@ class Analysis:
                 pass
             else:
                 if isinstance(temp_sys, list):
-                    versions.update(ts["version"] for version in temp_sys)
+                    versions.update(ts["version"] for ts in temp_sys)
                 else:
                     versions.add(temp_sys["version"])
         if len(versions) > 1:
@@ -116,11 +116,7 @@ class Analysis:
         return result
 
     def failures(self):
-        invalid = self.invalid.unstack()
-        invalid = invalid.sum(axis=1) / len(invalid.columns)
-        unconverged = (sum_instance(result['unconverged']) /
-                       sum_instance(result['num_primaries']))
-        return pd.DataFrame({'failed': invalid, 'unconverged': unconverged})
+        return unstack_subdict(self.result['failure'].dropna())
 
     def action_times(self):
         result = self.result
