@@ -128,23 +128,34 @@ def summarize_all(instances):
     """
     instances = list(instances)
     summaries = [summarize_one(result) for result in instances]
-    try:
-        single = next((result for result in instances
-                        if 'system' in result))
-    except StopIteration:
-        print("Can't summarize: no runs have system output!")
-        return {'result': summaries}
+
+    systems = []
+    inp = None
+    for r in instances:
+        try:
+            sys_sum = summarize_system(r)
+        except KeyError:
+            pass
+        else:
+            systems.append(sys_sum)
+            if inp is None:
+                inp = summarize_input(result['input'])
+
+    consistent = bool(systems)
+    for s in systems[1:]:
+        if s != systems[0]:
+            consistent = False
+            print("WARNING: inconsistent system settings:", s)
 
     return {
-        'input': summarize_input(single['input']),
-        'system': summarize_system(single['system']),
+        'input': inp,
+        'system': systems[0] if consistent else systems,
         'result': summaries
     }
 
 def main(index_filename):
     import json
     from pathlib import Path
-    from pprint import pprint
 
     # Load index
     index_filename = Path(index_filename)

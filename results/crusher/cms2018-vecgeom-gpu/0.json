@@ -1,8 +1,8 @@
 {
 "stderr": [
-"slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher005: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=188248.200"
+"srun: error: crusher093: task 0: Exited with exit code 2",
+"srun: launch/slurm: _step_signal: Terminating StepId=188732.200",
+"slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
 ],
 "stdout": []
 }
