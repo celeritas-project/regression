@@ -35,10 +35,20 @@ def summarize_result(out):
     active = result['active']
     time = result['time']
     steps = sum(active)
+    try:
+        primary_gen = inp['primary_gen_options']
+    except KeyError:
+        num_events = inp.get('_num_events', None)
+        num_primaries = inp.get('_num_primaries', None)
+    else:
+       num_events = primary_gen['num_events']
+       num_primaries = num_events * primary_gen['primaries_per_event']
+
 
     emptying_step = calc_emptying_step(active)
     summary = {
-        "num_primaries": active[0],
+        "num_events": num_events,
+        "num_primaries": num_primaries,
         "unconverged": result['alive'][-1] + result['initializers'][-1],
         "num_step_iters": len(active),
         "num_steps": steps,

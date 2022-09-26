@@ -236,6 +236,8 @@ no_field = {
 
 testem15 = {
     "_geometry": "orange",
+    "_num_events": 7, # TODO: output this as a diagnostic
+    "_num_primaries": 9100, # TODO: output this as a diagnostic
     "geometry_filename": "testem15.org.json",
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
@@ -244,6 +246,8 @@ testem15 = {
 
 simple_cms = {
     "_geometry": "orange",
+    "_num_events": 7, # TODO: output this as a diagnostic
+    "_num_primaries": 9100, # TODO: output this as a diagnostic
     "geometry_filename": "simple-cms.org.json",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
@@ -267,6 +271,8 @@ testem3 = {
 
 full_cms = {
     "_geometry": "vecgeom",
+    "_num_events": 7, # TODO: output this as a diagnostic
+    "_num_primaries": 9100, # TODO: output this as a diagnostic
     "geometry_filename": "cms2018.gdml",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
@@ -387,6 +393,11 @@ async def run_celeritas(system, results_dir, inp, instance):
 
     if proc.returncode:
         result['stderr'] = err.decode().splitlines()
+
+    # Copy special inputs to output for later processing
+    result.setdefault('input', {}).update(
+        {k: v for k,v in inp.items() if k.startswith('_')}
+    )
 
     try:
         outdir = results_dir / inp['_outdir']
