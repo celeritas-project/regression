@@ -87,41 +87,6 @@
     }
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 1206.9822178029603,
-     "brems-rel": 1.6107380559997597,
-     "brems-sb": 2.2743408650001156,
-     "conv-bethe-heitler": 1.6593351450000569,
-     "geo-boundary": 92.42824536700101,
-     "ioni-moller-bhabha": 1.9281614509988332,
-     "msc-urban": 0.05972331299972714,
-     "photoel-livermore": 2.3635735040001573,
-     "physics-discrete-select": 4.3242054340001,
-     "pre-step": 187.64000238903444,
-     "scat-klein-nishina": 1.764718456999898,
-     "scat-rayleigh": 1.6107671920002007
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 524287
-    },
-    "avg_steps_per_primary": 524288.0,
-    "avg_time_per_primary": 0.370361552972168,
-    "avg_time_per_step": 7.064086017077789e-07,
-    "emptying_step": null,
-    "num_primaries": 4096,
-    "num_step_iters": 524288,
-    "num_steps": 2147483648,
-    "pre_emptying_time": 0.002931729,
-    "queue_hwm": {
-     "count": 397916,
-     "index": 721
-    },
-    "slot_occupancy": 1.0,
-    "total_time": 1517.000920974,
-    "unconverged": 182857
-   },
-   {
     "exception": {
      "context": "result",
      "str": "'input'",
@@ -224,18 +189,11 @@
     }
    }
   ],
-  "system": [
-   {
-    "debug": false,
-    "occupancy": {},
-    "version": "v0.1.3+609057e6"
-   },
-   {
-    "debug": false,
-    "occupancy": {},
-    "version": "v0.1.2+fb3f5506"
-   }
-  ]
+  "system": {
+   "debug": false,
+   "occupancy": {},
+   "version": "v0.1.3+609057e6"
+  }
  },
  "cms2018+field+msc-vecgeom-gpu": {
   "input": {
