@@ -9,7 +9,6 @@
 - Catch failure message and save
 
 Requires Python 3.7+.
-
 """
 
 import asyncio
@@ -153,7 +152,7 @@ class Crusher(System):
         "orange": _CELER_ROOT / 'build-ndebug'
     }
     name = "crusher"
-    # TODO: multi-gpu run
+    # NOTE: layout multi-gpu run
     # num_jobs = 4
     # gpu_per_job = 2
     # cpu_per_job = 16
@@ -242,6 +241,7 @@ testem15 = {
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
     "mag_field": [0.0, 0.0, 1.0],
+    "sync": False,
 }
 
 simple_cms = {
@@ -259,6 +259,7 @@ testem3 = {
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
     "mag_field": [0.0, 0.0, 1.0],
+    "sync": False,
     "primary_gen_options": {
         "pdg": 11,
         "energy": 10000,  # 10 GeV
