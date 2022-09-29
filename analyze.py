@@ -63,8 +63,8 @@ class Analysis:
             summaries = {tuple(v.pop('name')): v
                          for v in json.load(f).values()}
 
-        input = pd.DataFrame([v.get('input', {}) for v in summaries.values()],
-                               index=summaries.keys())
+        input = pd.DataFrame([v.get('input') or {} for v in summaries.values()],
+                             index=summaries.keys())
         input.index.names = RESULT_LEVELS[:-1]
 
         result = pd.DataFrame([v['result'] for v in summaries.values()],
