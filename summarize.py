@@ -108,7 +108,12 @@ def inp_to_nametuple(d):
         "gpu" if d["use_device"] else "cpu"
     )
 
-failure_re = re.compile('(error|warning|exception|critical|assertion|failed|what\(\))', re.IGNORECASE)
+failure_re = re.compile(
+    r'(error|warning|critical'
+    r'|exception|assertion|failed|what\(\)'
+    r'|\w+\.(hh|cc):\d+'
+    r')', re.IGNORECASE
+)
 
 def summarize_failure(out):
     try:

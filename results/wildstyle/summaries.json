@@ -88,6 +88,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -114,6 +115,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -411,6 +413,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -438,6 +441,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -531,6 +535,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -556,6 +561,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -655,6 +661,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:198:",
       "celeritas: internal assertion failed: succeeded"
      ]
     }
@@ -682,6 +689,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -1607,6 +1615,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -1634,6 +1643,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     }
@@ -1733,6 +1743,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
       "celeritas: internal assertion failed: mfp > 0"
      ]
     }
@@ -1760,6 +1771,7 @@
       "celeritas: cuda error: cudaFree(ptr) failed:"
      ],
      "stdout": [
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
       "celeritas: internal assertion failed: mfp > 0"
      ]
     }
