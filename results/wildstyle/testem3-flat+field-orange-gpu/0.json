@@ -1,31 +1,32 @@
 {
 "input": {
 "_geometry": "orange",
+"_instance": 0,
 "_name": [
 "testem3-flat+field",
 "orange",
 "gpu"
 ],
 "_outdir": "testem3-flat+field-orange-gpu",
-"_timeout": 1800.0
+"_timeout": 600.0
 },
 "stderr": [
 "status: Loading input and initializing problem data",
 "status: Initializing Geant4",
-"info: Loading geometry from input/testem3-flat.gdml",
-"info: Loading ORANGE geometry from JSON at input/testem3-flat.org.json",
-"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-"/home/alund/celeritas_project/celeritas/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
+"info: Loading geometry from /home/s3j/celeritas-regression/input/testem3-flat.gdml",
+"info: Loading ORANGE geometry from JSON at /home/s3j/celeritas-regression/input/testem3-flat.org.json",
+"/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+"/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
 "status: Reading and building Seltzer Berger model data",
 "status: Reading and building Livermore PE model data",
 "status: Transporting",
 "terminate called after throwing an instance of 'celeritas::RuntimeError'",
-"  what():  /home/alund/celeritas_project/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+"  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
 "celeritas: cuda error: cudaFree(ptr) failed:",
 "    unspecified launch failure"
 ],
 "stdout": [
-"/home/alund/celeritas_project/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
+"/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
 "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
 ]
 }

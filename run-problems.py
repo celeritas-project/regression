@@ -41,11 +41,12 @@ class System:
         except KeyError:
             build = PurePath("nonexistent")
         cmd = build / "app/demo-loop"
-        env = None
+        env = dict(environ)
+        env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
         if not inp['use_device']:
-            env = dict(environ)
             env['CELER_DISABLE_DEVICE'] = "1"
-            env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
+        else:
+            env['CUDA_VISIBLE_DEVICES'] = str(inp['_instance'])
 
         return asyncio.create_subprocess_exec(
             cmd, "-",
@@ -60,8 +61,8 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/wherever/celeritas/build-reldeb-orange"),
-        'vecgeom': Path("/home/wherever/celeritas/build-reldeb-vecgeom"),
+        'orange': Path("/home/s3j/.local/src/celeritas/build-reldeb"),
+        'vecgeom': Path("/home/s3j/.local/src/celeritas/build-reldeb-vecgeom"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -332,6 +333,12 @@ def build_input(problem_dicts):
     return inp
 
 
+def build_instance(inp, instance):
+    inp = inp.copy()
+    inp["_instance"] = instance
+    inp["seed"] = 20220904 + instance
+    return inp
+
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
     """Interrupt, then terminate, then kill a process if it doesn't
     communicate.
@@ -369,15 +376,16 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
     return result
 
 
-async def run_celeritas(system, results_dir, inp, instance):
+async def run_celeritas(system, results_dir, inp):
+    instance = inp['_instance']
     try:
         proc = await system.create_celer_subprocess(inp)
     except FileNotFoundError as e:
+        print("File not found:", e)
         return exception_to_dict(e, context="creating subprocess")
 
     # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
 
-    inp["seed"] = 20220904 + instance
     print(f"{instance}: awaiting communcation")
     out, err = await communicate_with_timeout(proc,
         input=json.dumps(inp).encode(),
@@ -388,6 +396,7 @@ async def run_celeritas(system, results_dir, inp, instance):
     try:
         result = json.loads(out)
     except json.decoder.JSONDecodeError as e:
+        print(f"{instance}: failed to decode JSON")
         result = {
             'stdout': out.decode().splitlines(),
         }
@@ -403,11 +412,15 @@ async def run_celeritas(system, results_dir, inp, instance):
     try:
         outdir = results_dir / inp['_outdir']
         outdir.mkdir(exist_ok=True)
-        filename = f"{instance:d}.json"
-        with open(outdir / filename, "w") as f:
+        with open(outdir / f"{instance:d}.json", "w") as f:
             json.dump(result, f, indent=0, sort_keys=True)
     except Exception as e:
-        print("Failed to output:", repr(e))
+        print(f"{instance}: failed to output:", repr(e))
+
+    if proc.returncode:
+        # Write input to reproduce later
+        with open(outdir / f"{instance:d}.inp.json", "w") as f:
+            json.dump(inp, f, indent=0, sort_keys=True)
 
     return result
 
@@ -439,8 +452,8 @@ async def main():
     summaries = {}
     for inp in inputs:
         print("="*79)
-        # pprint(inp)
-        tasks = [run_celeritas(system, results_dir, inp, i)
+        #pprint(inp)
+        tasks = [run_celeritas(system, results_dir, build_instance(inp, i))
                  for i in range(system.num_jobs)]
         tasks.extend(system.get_monitoring_coro())
         result = await asyncio.gather(*tasks)
