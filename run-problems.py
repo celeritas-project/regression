@@ -21,7 +21,7 @@ from signal import SIGINT, SIGTERM, SIGKILL
 import subprocess
 import sys
 
-from summarize import inp_to_nametuple, summarize_all, exception_to_dict
+from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
 
 g4env = {k: v for k, v in environ.items()
          if k.startswith('G4')}

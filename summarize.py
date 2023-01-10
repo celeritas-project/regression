@@ -26,6 +26,25 @@ def calc_hwm(counts):
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
+def get_msc(d):
+    try:
+        msc_model = d['geant_options']['msc'] 
+    except KeyError:
+        return d['enable_msc']
+    else:
+        return msc_model != "none"
+
+def get_num_events_and_primaries(d):
+    try:
+        primary_gen = d['primary_gen_options']
+    except KeyError:
+        num_events = d.get('_num_events', None)
+        num_primaries = d.get('_num_primaries', None)
+    else:
+       num_events = primary_gen['num_events']
+       num_primaries = num_events * primary_gen['primaries_per_event']
+    return (num_events, num_primaries)
+
 def summarize_result(out):
     """Calculate statistics about the tracking behaviors.
 
@@ -35,15 +54,7 @@ def summarize_result(out):
     active = result['active']
     time = result['time']
     steps = sum(active)
-    try:
-        primary_gen = inp['primary_gen_options']
-    except KeyError:
-        num_events = inp.get('_num_events', None)
-        num_primaries = inp.get('_num_primaries', None)
-    else:
-       num_events = primary_gen['num_events']
-       num_primaries = num_events * primary_gen['primaries_per_event']
-
+    (num_events, num_primaries) = get_num_events_and_primaries(inp)
 
     emptying_step = calc_emptying_step(active)
     summary = {
@@ -66,18 +77,11 @@ def summarize_result(out):
     return summary
 
 def summarize_input(inp):
-    try:
-        msc = inp['enable_msc']
-    except KeyError:
-        # Newer
-        print(inp)
-        msc = inp['geant_options']['msc']
-
     return {
         'geometry_filename': PurePath(inp['geometry_filename']).name,
         'mag_field': inp['mag_field'] if any(inp['mag_field']) else None,
         'use_device': inp['use_device'],
-        'enable_msc': msc,
+        'enable_msc': get_msc(inp),
         'max_num_tracks': inp['max_num_tracks'],
     }
 
@@ -99,7 +103,7 @@ def inp_to_nametuple(d):
     name = geo_split[0]
     if d.get('mag_field') and any(d['mag_field']):
         name += '+field'
-    if d['enable_msc']:
+    if get_msc(d):
         name += '+msc'
 
     return (
