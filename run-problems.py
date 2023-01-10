@@ -200,27 +200,27 @@ input_dir = regression_dir / "input"
 base_input = {
     "_timeout": 600.0,
     "brem_combined": False,
-    "enable_diagnostics": False,
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 2**12,
     "max_steps": 2**19,
     "secondary_stack_factor": 3.0,
-    "sync": True,
+    "enable_diagnostics": False,
     "use_device": False,
+    "sync": True,
     # Geant options
-    "brem_lpm": True,
-    "conv_lpm": True,
-    "eloss_fluctuation": False,
-    "enable_msc": False,
-    "rayleigh": True,
     "geant_options": {
+        "coulomb_scattering": False,
+        "rayleigh_scattering": True,
+        "eloss_fluctuation": False,
+        "lpm": True,
         "em_bins_per_decade": 56,
-        "physics": "em_basic"
+        "physics": "em_basic",
+        "msc": "none",
     },
 }
 
-use_msc = {"enable_msc": True}
+use_msc = {"geant_options": {"msc": "urban"}}
 
 use_gpu = {
     "use_device": True,
@@ -330,6 +330,7 @@ def build_input(problem_dicts):
 
     inp["_name"] = name = inp_to_nametuple(inp)
     inp["_outdir"] = "-".join(name)
+    (inp["max_events"], _) = get_num_events_and_primaries(inp)
     return inp
 
 
