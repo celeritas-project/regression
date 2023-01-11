@@ -1,4 +1,15 @@
 {
+"input": {
+"_geometry": "orange",
+"_instance": 0,
+"_name": [
+"testem3-flat+field",
+"orange",
+"gpu"
+],
+"_outdir": "testem3-flat+field-orange-gpu",
+"_timeout": 600.0
+},
 "stderr": [
 "status: Loading input and initializing problem data",
 "status: Initializing Geant4",
@@ -9,9 +20,9 @@
 "status: Reading and building Seltzer Berger model data",
 "status: Reading and building Livermore PE model data",
 "status: Transporting",
-":0:rocdevice.cpp            :2614: 3507653414488 us: 117502: [tid:0x7fffd04ad700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-"srun: error: crusher093: task 0: Aborted",
-"srun: launch/slurm: _step_signal: Terminating StepId=188732.152"
+":0:rocdevice.cpp            :2614: 426684302416 us: 77483: [tid:0x7fffd3d00700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+"srun: error: crusher121: task 0: Aborted",
+"srun: launch/slurm: _step_signal: Terminating StepId=246534.42"
 ],
 "stdout": []
 }

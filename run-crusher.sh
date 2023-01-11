@@ -7,7 +7,9 @@
 #SBATCH -e crusher-%J.err
 
 if [ -z "$SLURM_JOB_ID" ]; then
-  exec sbatch $0
+  set -x
+  sbatch $0 && squeue -u $USER
+  exit $?
 fi
 
 source /ccs/home/s3j/.local/src/celeritas/scripts/env/crusher.sh

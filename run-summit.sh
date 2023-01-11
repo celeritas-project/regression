@@ -7,7 +7,9 @@
 #BSUB -e summit-%J.err
 
 if [ -z "$LSB_JOBID" ]; then
-  exec bsub $0
+  set -x
+  bsub $0 && bjobs -u $USER
+  exit $?
 fi
 
 source $PROJWORK/csc404/celeritas/summit-env.sh
