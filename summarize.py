@@ -88,9 +88,13 @@ def summarize_system(sys):
         occupancy = None
     else:
         occupancy = {v['name']: v['occupancy'] for v in sys['kernels']}
+
+    get_config = sys['build']['config'].get
     return  {
-        'debug': sys['build']['config']['CELERITAS_DEBUG'],
+        'debug': get_config('CELERITAS_DEBUG'),
         'version': sys['build']['version'],
+        'geant4': get_config('Geant4_VERSION'),
+        'vecgeom': get_config('VecGeom_VERSION'),
         'occupancy': occupancy,
     }
 
@@ -143,6 +147,18 @@ def summarize_one(out):
 
     return result
 
+def equivalent_systems(a, b):
+    if a.keys() != b.keys():
+        return False
+    for k in a.keys():
+        if a[k] == b[k]:
+            continue
+        if k == 'vecgeom' and (a[k] is None or b[k] is None):
+            # Ignore difference between VG and no-VG builds
+            continue
+        return False
+    return True
+
 def summarize_all(instances):
     """Create a summary of all instances that ran.
     """
@@ -163,7 +179,7 @@ def summarize_all(instances):
 
     consistent = bool(systems)
     for s in systems[1:]:
-        if s != systems[0]:
+        if not equivalent_systems(systems[0], s):
             consistent = False
             print("WARNING: inconsistent system settings:", s)
 
