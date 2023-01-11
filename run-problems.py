@@ -440,7 +440,7 @@ async def main():
     # Copy build files
     buildfile_dir = regression_dir / 'build-files' / system.name
     buildfile_dir.mkdir(exist_ok=True)
-    for k, v in system.build_dirs:
+    for k, v in system.build_dirs.items():
         shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
 
     results_dir = regression_dir / 'results' / system.name
