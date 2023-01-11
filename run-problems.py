@@ -17,6 +17,7 @@ import json
 from pathlib import Path, PurePath
 from pprint import pprint
 from os import environ
+import shutil
 from signal import SIGINT, SIGTERM, SIGKILL
 import subprocess
 import sys
@@ -435,6 +436,12 @@ async def main():
         _systems = {S.name: S for S in [Summit, Crusher, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
+
+    # Copy build files
+    buildfile_dir = regression_dir / 'build-files' / system.name
+    buildfile_dir.mkdir(exist_ok=True)
+    for k, v in system.build_dirs:
+        shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
