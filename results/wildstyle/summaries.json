@@ -19,7 +19,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2548709, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f00dca9d071]"
+      "[PID=2603673, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7ff0e4b3d071]"
      ],
      "stdout": []
     }
@@ -36,7 +36,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2548711, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7ffb65c51071]"
+      "[PID=2603675, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f5c9f2a8071]"
      ],
      "stdout": []
     }
@@ -64,7 +64,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2548931, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fa2fee7b071]"
+      "[PID=2603902, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f092c3ac071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -84,7 +84,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2548933, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f18fed7b071]"
+      "[PID=2603906, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f83b11a2071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -111,72 +111,72 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 18.721538540999802,
-     "brems-rel": 0.6876550890000006,
-     "brems-sb": 2.9315481589999575,
-     "conv-bethe-heitler": 0.9798059130000063,
-     "geo-boundary": 4.982145326999994,
-     "ioni-moller-bhabha": 0.8040439610000069,
-     "photoel-livermore": 2.285914152999996,
-     "physics-discrete-select": 2.702957265999964,
-     "pre-step": 11.144515799999958,
-     "scat-klein-nishina": 1.841947663000014,
-     "scat-rayleigh": 0.7576012060000015
+     "along-step-general-linear": 16.82630570799987,
+     "brems-rel": 0.7311807399999981,
+     "brems-sb": 2.928324765999992,
+     "conv-bethe-heitler": 0.9499844500000053,
+     "geo-boundary": 4.343046947999999,
+     "ioni-moller-bhabha": 0.7758026659999921,
+     "photoel-livermore": 2.2876522470000245,
+     "physics-discrete-select": 2.7175912109999794,
+     "pre-step": 10.945541430000198,
+     "scat-klein-nishina": 1.8489768239999873,
+     "scat-rayleigh": 0.751155432000002
     },
     "active_hwm": {
      "count": 4096,
      "index": 81960
     },
     "avg_steps_per_primary": 81995.46801757812,
-    "avg_time_per_primary": 0.01432897179663086,
-    "avg_time_per_step": 1.747532167699686e-07,
+    "avg_time_per_primary": 0.013646288267578126,
+    "avg_time_per_step": 1.6642734772429917e-07,
     "emptying_step": 81961,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 82660,
     "num_steps": 335853437,
-    "pre_emptying_time": 0.000809144,
+    "pre_emptying_time": 0.000880394,
     "queue_hwm": {
      "count": 399375,
      "index": 709
     },
     "slot_occupancy": 0.9919606583302459,
-    "total_time": 58.691468479,
+    "total_time": 55.895196744,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 18.793487512999995,
-     "brems-rel": 0.6288058020000042,
-     "brems-sb": 2.883254517000001,
-     "conv-bethe-heitler": 0.9609974860000015,
-     "geo-boundary": 5.008297599999989,
-     "ioni-moller-bhabha": 0.747360338999997,
-     "photoel-livermore": 2.2366435479999858,
-     "physics-discrete-select": 2.681650329999974,
-     "pre-step": 10.964820272000095,
-     "scat-klein-nishina": 1.8416481080000104,
-     "scat-rayleigh": 0.7193963690000079
+     "along-step-general-linear": 16.65960741300007,
+     "brems-rel": 0.6207141780000024,
+     "brems-sb": 2.8474255640000106,
+     "conv-bethe-heitler": 0.9092838160000101,
+     "geo-boundary": 4.21637018199997,
+     "ioni-moller-bhabha": 0.7015736350000065,
+     "photoel-livermore": 2.191349297999996,
+     "physics-discrete-select": 2.5434008039999862,
+     "pre-step": 10.731947886999889,
+     "scat-klein-nishina": 1.755927620000007,
+     "scat-rayleigh": 0.7323885019999982
     },
     "active_hwm": {
      "count": 4096,
      "index": 82106
     },
     "avg_steps_per_primary": 82031.92333984375,
-    "avg_time_per_primary": 0.014231143859619141,
-    "avg_time_per_step": 1.7348299637766664e-07,
+    "avg_time_per_primary": 0.013330397044677735,
+    "avg_time_per_step": 1.6250255390760811e-07,
     "emptying_step": 82107,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 82707,
     "num_steps": 336002758,
-    "pre_emptying_time": 0.000681267,
+    "pre_emptying_time": 0.000663006,
     "queue_hwm": {
      "count": 396590,
      "index": 701
     },
     "slot_occupancy": 0.9918377324754102,
-    "total_time": 58.290765249,
+    "total_time": 54.601306295,
     "unconverged": 0
    }
   ],
@@ -184,7 +184,7 @@
    "debug": true,
    "geant4": "11.0.3",
    "occupancy": {},
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  },
@@ -204,72 +204,72 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 7.415399347999999,
-     "brems-rel": 0.1255477329999999,
-     "brems-sb": 0.6530502009999991,
-     "conv-bethe-heitler": 0.23215354599999996,
-     "geo-boundary": 2.126001886000005,
-     "ioni-moller-bhabha": 0.15620548199999995,
-     "photoel-livermore": 0.564828502,
-     "physics-discrete-select": 0.3161022649999993,
-     "pre-step": 2.2378610929999962,
-     "scat-klein-nishina": 0.17855731599999988,
-     "scat-rayleigh": 0.14455252500000007
+     "along-step-general-linear": 7.356876300000002,
+     "brems-rel": 0.12545316000000017,
+     "brems-sb": 0.6528420480000002,
+     "conv-bethe-heitler": 0.2318889539999999,
+     "geo-boundary": 1.9208716390000011,
+     "ioni-moller-bhabha": 0.15537616999999987,
+     "photoel-livermore": 0.564660374,
+     "physics-discrete-select": 0.3163014039999997,
+     "pre-step": 2.2239089059999952,
+     "scat-klein-nishina": 0.1783436060000001,
+     "scat-rayleigh": 0.1487415440000001
     },
     "active_hwm": {
      "count": 1048576,
      "index": 605
     },
     "avg_steps_per_primary": 36882.93868131868,
-    "avg_time_per_primary": 0.001611944236043956,
-    "avg_time_per_step": 4.370433305143363e-08,
+    "avg_time_per_primary": 0.001581712361098901,
+    "avg_time_per_step": 4.288466205920959e-08,
     "emptying_step": 606,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1475,
     "num_steps": 335634742,
-    "pre_emptying_time": 0.038205907,
+    "pre_emptying_time": 0.037447167,
     "queue_hwm": {
      "count": 9035790,
      "index": 440
     },
     "slot_occupancy": 0.21700761568748345,
-    "total_time": 14.668692548,
+    "total_time": 14.393582486,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 7.410603217000014,
-     "brems-rel": 0.12333570900000013,
-     "brems-sb": 0.6518787059999988,
-     "conv-bethe-heitler": 0.23032356299999993,
-     "geo-boundary": 2.130658352999999,
-     "ioni-moller-bhabha": 0.15245797499999986,
-     "photoel-livermore": 0.5633187450000002,
-     "physics-discrete-select": 0.31459630199999966,
-     "pre-step": 2.2290608220000014,
-     "scat-klein-nishina": 0.1767024350000002,
-     "scat-rayleigh": 0.1427620740000002
+     "along-step-general-linear": 7.3555550659999955,
+     "brems-rel": 0.12334031299999978,
+     "brems-sb": 0.6517219869999988,
+     "conv-bethe-heitler": 0.2301767079999998,
+     "geo-boundary": 1.9287001700000024,
+     "ioni-moller-bhabha": 0.15177910000000003,
+     "photoel-livermore": 0.5629793939999997,
+     "physics-discrete-select": 0.31460574399999996,
+     "pre-step": 2.214571536000001,
+     "scat-klein-nishina": 0.17665451900000012,
+     "scat-rayleigh": 0.1426437350000002
     },
     "active_hwm": {
      "count": 1048576,
      "index": 605
     },
     "avg_steps_per_primary": 36900.80087912088,
-    "avg_time_per_primary": 0.0016089543561538461,
-    "avg_time_per_step": 4.3602152739839873e-08,
+    "avg_time_per_primary": 0.0015790675123076923,
+    "avg_time_per_step": 4.279222875081707e-08,
     "emptying_step": 606,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1456,
     "num_steps": 335797288,
-    "pre_emptying_time": 0.037688007,
+    "pre_emptying_time": 0.036905674,
     "queue_hwm": {
      "count": 8940179,
      "index": 439
     },
     "slot_occupancy": 0.2199459128327422,
-    "total_time": 14.641484641,
+    "total_time": 14.369514362,
     "unconverged": 0
    }
   ],
@@ -293,7 +293,7 @@
     "relativistic_brem_interact": 0.25,
     "seltzer_berger_interact": 0.125
    },
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  },
@@ -318,7 +318,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2546860, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f8f9665c071]"
+      "[PID=2601848, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f0761f01071]"
      ],
      "stdout": []
     }
@@ -336,7 +336,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2546862, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fb61059e071]"
+      "[PID=2601850, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fc57215c071]"
      ],
      "stdout": []
     }
@@ -365,7 +365,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2546953, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fbe783ec071]"
+      "[PID=2601945, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f7cd99b1071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -386,7 +386,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2546955, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f44354ac071]"
+      "[PID=2601947, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fddaaa54071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -416,7 +416,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2547017, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f2cd973e071]"
+      "[PID=2602001, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f41698b7071]"
      ],
      "stdout": []
     }
@@ -432,7 +432,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2547019, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fcf929dc071]"
+      "[PID=2602003, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fa0f908e071]"
      ],
      "stdout": []
     }
@@ -459,7 +459,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2547113, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7efe69515071]"
+      "[PID=2602097, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fec29b21071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -478,7 +478,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2547115, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f6f5983e071]"
+      "[PID=2602099, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fa5ec38f071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -510,7 +510,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:110:",
       "celeritas: internal assertion failed: speed > 0",
-      "[PID=2546590, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fce9c9c7071]"
+      "[PID=2601576, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4a55741071]"
      ],
      "stdout": []
     }
@@ -528,7 +528,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2546592, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fac0c655071]"
+      "[PID=2601578, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fd16d1df071]"
      ],
      "stdout": []
     }
@@ -557,7 +557,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2546802, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7efefd5da071]"
+      "[PID=2601793, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f6e79f93071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:198:",
@@ -578,7 +578,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2546807, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f74645ec071]"
+      "[PID=2601795, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7ff84bf02071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/orange/surf/detail/../detail/QuadraticSolver.hh:110:",
@@ -605,74 +605,74 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 18.54474511500013,
-     "brems-rel": 0.6285562730000088,
-     "brems-sb": 2.3123158289999983,
-     "conv-bethe-heitler": 0.765111725999998,
-     "geo-boundary": 0.7071375860000095,
-     "ioni-moller-bhabha": 0.856598834999995,
-     "msc-urban": 0.005907451999999783,
-     "photoel-livermore": 1.5387959970000216,
-     "physics-discrete-select": 1.8792413819999971,
-     "pre-step": 8.726773278999978,
-     "scat-klein-nishina": 4.042992790000016,
-     "scat-rayleigh": 0.8042644730000078
+     "along-step-general-linear": 21.06964753699961,
+     "brems-rel": 0.6536337990000022,
+     "brems-sb": 2.3601847090000025,
+     "conv-bethe-heitler": 0.7137177370000046,
+     "geo-boundary": 0.6954506149999988,
+     "ioni-moller-bhabha": 0.9104161359999963,
+     "msc-urban": 0.005310911999998946,
+     "photoel-livermore": 1.5217405579999976,
+     "physics-discrete-select": 1.912533287999989,
+     "pre-step": 8.682432302000135,
+     "scat-klein-nishina": 3.949256326000008,
+     "scat-rayleigh": 0.7557922640000012
     },
     "active_hwm": {
      "count": 4096,
      "index": 64483
     },
     "avg_steps_per_primary": 64504.60693359375,
-    "avg_time_per_primary": 0.012436135128173828,
-    "avg_time_per_step": 1.9279452614875384e-07,
+    "avg_time_per_primary": 0.012974339502929687,
+    "avg_time_per_step": 2.0113818407244182e-07,
     "emptying_step": 64484,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 64590,
     "num_steps": 264210870,
-    "pre_emptying_time": 0.000752948,
+    "pre_emptying_time": 0.000984394,
     "queue_hwm": {
      "count": 292222,
      "index": 108
     },
     "slot_occupancy": 0.9986779212508708,
-    "total_time": 50.938409485,
+    "total_time": 53.142894604,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 18.58980112299988,
-     "brems-rel": 0.6296583199999963,
-     "brems-sb": 2.30789376200001,
-     "conv-bethe-heitler": 0.7501801739999997,
-     "geo-boundary": 0.6240973130000088,
-     "ioni-moller-bhabha": 0.8513351910000067,
-     "msc-urban": 0.0065364510000001305,
-     "photoel-livermore": 1.5290425080000012,
-     "physics-discrete-select": 1.7567477879999813,
-     "pre-step": 8.728846570000005,
-     "scat-klein-nishina": 3.942288945999961,
-     "scat-rayleigh": 0.7917293760000002
+     "along-step-general-linear": 18.443347699999908,
+     "brems-rel": 0.5603300529999989,
+     "brems-sb": 2.2637806169999926,
+     "conv-bethe-heitler": 0.6821467769999942,
+     "geo-boundary": 0.5232613950000022,
+     "ioni-moller-bhabha": 0.784709652000004,
+     "msc-urban": 0.005565740000000231,
+     "photoel-livermore": 1.448741865000015,
+     "physics-discrete-select": 1.6616554109999944,
+     "pre-step": 8.645832498000043,
+     "scat-klein-nishina": 3.880992605,
+     "scat-rayleigh": 0.7319162780000043
     },
     "active_hwm": {
      "count": 4096,
      "index": 64463
     },
     "avg_steps_per_primary": 64496.904541015625,
-    "avg_time_per_primary": 0.012357711815429688,
-    "avg_time_per_step": 1.9160162651792115e-07,
+    "avg_time_per_primary": 0.012023095622070313,
+    "avg_time_per_step": 1.8641352957372467e-07,
     "emptying_step": 64464,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 64567,
     "num_steps": 264179321,
-    "pre_emptying_time": 0.000707648,
+    "pre_emptying_time": 0.000721371,
     "queue_hwm": {
      "count": 292572,
      "index": 109
     },
     "slot_occupancy": 0.9989143763999508,
-    "total_time": 50.617187596,
+    "total_time": 49.246599668,
     "unconverged": 0
    }
   ],
@@ -700,74 +700,74 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 4.921731718000006,
-     "brems-rel": 0.034913459000000015,
-     "brems-sb": 0.41323047599999946,
-     "conv-bethe-heitler": 0.09386222899999995,
-     "geo-boundary": 0.054873313000000055,
-     "ioni-moller-bhabha": 0.072271461,
-     "msc-urban": 0.0006482119999999994,
-     "photoel-livermore": 0.15981042800000012,
-     "physics-discrete-select": 0.14255386199999998,
-     "pre-step": 0.9931660280000004,
-     "scat-klein-nishina": 0.11939899600000001,
-     "scat-rayleigh": 0.07438473400000005
+     "along-step-general-linear": 4.919867854999996,
+     "brems-rel": 0.03478781700000001,
+     "brems-sb": 0.41317114600000004,
+     "conv-bethe-heitler": 0.09399267900000009,
+     "geo-boundary": 0.05496853000000002,
+     "ioni-moller-bhabha": 0.07238688499999998,
+     "msc-urban": 0.0006627199999999999,
+     "photoel-livermore": 0.1599215100000001,
+     "physics-discrete-select": 0.14295079200000008,
+     "pre-step": 0.9942747900000003,
+     "scat-klein-nishina": 0.11955825500000002,
+     "scat-rayleigh": 0.07441043900000005
     },
     "active_hwm": {
      "count": 1048576,
      "index": 244
     },
     "avg_steps_per_primary": 29018.29186813187,
-    "avg_time_per_primary": 0.0008124438784615385,
-    "avg_time_per_step": 2.7997646524252213e-08,
+    "avg_time_per_primary": 0.0008126402656043957,
+    "avg_time_per_step": 2.8004414225940156e-08,
     "emptying_step": 245,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 377,
     "num_steps": 264066456,
-    "pre_emptying_time": 0.02559363,
+    "pre_emptying_time": 0.025217611,
     "queue_hwm": {
      "count": 15430685,
      "index": 71
     },
     "slot_occupancy": 0.6679930952562894,
-    "total_time": 7.393239294,
+    "total_time": 7.395026417,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 4.9534567229999995,
-     "brems-rel": 0.03497379300000001,
-     "brems-sb": 0.41483110400000023,
-     "conv-bethe-heitler": 0.09433589400000002,
-     "geo-boundary": 0.05455841000000003,
-     "ioni-moller-bhabha": 0.07279032300000005,
-     "msc-urban": 0.000635149,
-     "photoel-livermore": 0.16060256599999997,
-     "physics-discrete-select": 0.14373089799999994,
-     "pre-step": 0.9962421430000009,
-     "scat-klein-nishina": 0.11996584499999988,
-     "scat-rayleigh": 0.07454793600000004
+     "along-step-general-linear": 4.942245966000004,
+     "brems-rel": 0.03496901900000004,
+     "brems-sb": 0.4140328090000002,
+     "conv-bethe-heitler": 0.09414681200000007,
+     "geo-boundary": 0.05448384300000004,
+     "ioni-moller-bhabha": 0.07271033899999994,
+     "msc-urban": 0.0006470530000000003,
+     "photoel-livermore": 0.16039580200000006,
+     "physics-discrete-select": 0.14363549900000017,
+     "pre-step": 0.994683336,
+     "scat-klein-nishina": 0.11987465399999987,
+     "scat-rayleigh": 0.07440074199999996
     },
     "active_hwm": {
      "count": 1048576,
      "index": 244
     },
     "avg_steps_per_primary": 29013.39186813187,
-    "avg_time_per_primary": 0.0008167454181318681,
-    "avg_time_per_step": 2.815063546668517e-08,
+    "avg_time_per_primary": 0.0008152890720879121,
+    "avg_time_per_step": 2.8100439817359674e-08,
     "emptying_step": 245,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 380,
     "num_steps": 264021866,
-    "pre_emptying_time": 0.025264195,
+    "pre_emptying_time": 0.025127965,
     "queue_hwm": {
      "count": 15441373,
      "index": 71
     },
     "slot_occupancy": 0.6626075594048751,
-    "total_time": 7.432383305,
+    "total_time": 7.419130556,
     "unconverged": 0
    }
   ],
@@ -820,20 +820,20 @@
      "index": 54905
     },
     "avg_steps_per_primary": 54923.42333984375,
-    "avg_time_per_primary": 0.011685329524414062,
-    "avg_time_per_step": 2.1275675866214688e-07,
+    "avg_time_per_primary": 0.015125037497314453,
+    "avg_time_per_step": 2.753840998534794e-07,
     "emptying_step": 54906,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54986,
     "num_steps": 224966342,
-    "pre_emptying_time": 0.000810059,
+    "pre_emptying_time": 0.000937312,
     "queue_hwm": {
      "count": 244053,
      "index": 89
     },
     "slot_occupancy": 0.9988619528578866,
-    "total_time": 47.863109732,
+    "total_time": 61.952153589,
     "unconverged": 0
    },
    {
@@ -843,20 +843,20 @@
      "index": 54911
     },
     "avg_steps_per_primary": 54931.811767578125,
-    "avg_time_per_primary": 0.012078880956298828,
-    "avg_time_per_step": 2.198886322447502e-07,
+    "avg_time_per_primary": 0.014329843592285157,
+    "avg_time_per_step": 2.6086602883072796e-07,
     "emptying_step": 54912,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54981,
     "num_steps": 225000701,
-    "pre_emptying_time": 0.000929686,
+    "pre_emptying_time": 0.000932726,
     "queue_hwm": {
      "count": 238941,
      "index": 85
     },
     "slot_occupancy": 0.9991053594437738,
-    "total_time": 49.475096397,
+    "total_time": 58.695039354,
     "unconverged": 0
    }
   ],
@@ -893,20 +893,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24722.47813186813,
-    "avg_time_per_primary": 0.0005213820382417583,
-    "avg_time_per_step": 2.108939223085726e-08,
+    "avg_time_per_primary": 0.000521896773956044,
+    "avg_time_per_step": 2.1110212785800826e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 315,
     "num_steps": 224974551,
-    "pre_emptying_time": 0.018664002,
+    "pre_emptying_time": 0.018649931,
     "queue_hwm": {
      "count": 13130983,
      "index": 59
     },
     "slot_occupancy": 0.6811188924880255,
-    "total_time": 4.744576548,
+    "total_time": 4.749260643,
     "unconverged": 0
    },
    {
@@ -916,20 +916,20 @@
      "index": 208
     },
     "avg_steps_per_primary": 24725.452637362636,
-    "avg_time_per_primary": 0.0005186162176923076,
-    "avg_time_per_step": 2.097499387771072e-08,
+    "avg_time_per_primary": 0.0005212833496703297,
+    "avg_time_per_step": 2.108286377263801e-08,
     "emptying_step": 209,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 311,
     "num_steps": 225001619,
-    "pre_emptying_time": 0.018579476,
+    "pre_emptying_time": 0.018633186,
     "queue_hwm": {
      "count": 13118076,
      "index": 59
     },
     "slot_occupancy": 0.6899622674923618,
-    "total_time": 4.719407581,
+    "total_time": 4.743678482,
     "unconverged": 0
    }
   ],
@@ -982,20 +982,20 @@
      "index": 54905
     },
     "avg_steps_per_primary": 54923.42333984375,
-    "avg_time_per_primary": 0.011167840241455078,
-    "avg_time_per_step": 2.0333474431032888e-07,
+    "avg_time_per_primary": 0.012877571822509766,
+    "avg_time_per_step": 2.3446411456963637e-07,
     "emptying_step": 54906,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54986,
     "num_steps": 224966342,
-    "pre_emptying_time": 0.000789116,
+    "pre_emptying_time": 0.000790837,
     "queue_hwm": {
      "count": 244053,
      "index": 89
     },
     "slot_occupancy": 0.9988619528578866,
-    "total_time": 45.743473629,
+    "total_time": 52.746534185,
     "unconverged": 0
    },
    {
@@ -1005,20 +1005,20 @@
      "index": 54911
     },
     "avg_steps_per_primary": 54931.811767578125,
-    "avg_time_per_primary": 0.011259886461669921,
-    "avg_time_per_step": 2.0497933891770406e-07,
+    "avg_time_per_primary": 0.013290054846191406,
+    "avg_time_per_step": 2.419373113419767e-07,
     "emptying_step": 54912,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54981,
     "num_steps": 225000701,
-    "pre_emptying_time": 0.000848996,
+    "pre_emptying_time": 0.000926893,
     "queue_hwm": {
      "count": 238941,
      "index": 85
     },
     "slot_occupancy": 0.9991053594437738,
-    "total_time": 46.120494947,
+    "total_time": 54.43606465,
     "unconverged": 0
    }
   ],
@@ -1026,7 +1026,7 @@
    "debug": true,
    "geant4": "11.0.3",
    "occupancy": {},
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  },
@@ -1055,20 +1055,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24722.47813186813,
-    "avg_time_per_primary": 0.0005066905325274725,
-    "avg_time_per_step": 2.0495135229762054e-08,
+    "avg_time_per_primary": 0.0005095025426373627,
+    "avg_time_per_step": 2.0608878281526164e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 315,
     "num_steps": 224974551,
-    "pre_emptying_time": 0.018151983,
+    "pre_emptying_time": 0.018266683,
     "queue_hwm": {
      "count": 13130983,
      "index": 59
     },
     "slot_occupancy": 0.6811188924880255,
-    "total_time": 4.610883846,
+    "total_time": 4.636473138,
     "unconverged": 0
    },
    {
@@ -1078,20 +1078,20 @@
      "index": 208
     },
     "avg_steps_per_primary": 24725.452637362636,
-    "avg_time_per_primary": 0.0005051672550549451,
-    "avg_time_per_step": 2.043106196938076e-08,
+    "avg_time_per_primary": 0.0005071804217582418,
+    "avg_time_per_step": 2.0512482792401595e-08,
     "emptying_step": 209,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 311,
     "num_steps": 225001619,
-    "pre_emptying_time": 0.01807695,
+    "pre_emptying_time": 0.018240059,
     "queue_hwm": {
      "count": 13118076,
      "index": 59
     },
     "slot_occupancy": 0.6899622674923618,
-    "total_time": 4.597022021,
+    "total_time": 4.615341838,
     "unconverged": 0
    }
   ],
@@ -1115,7 +1115,7 @@
     "relativistic_brem_interact": 0.25,
     "seltzer_berger_interact": 0.125
    },
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  },
@@ -1144,20 +1144,20 @@
      "index": 54900
     },
     "avg_steps_per_primary": 54933.4248046875,
-    "avg_time_per_primary": 0.010264642463623047,
-    "avg_time_per_step": 1.8685604438678943e-07,
+    "avg_time_per_primary": 0.01266287068798828,
+    "avg_time_per_step": 2.3051303888316372e-07,
     "emptying_step": 54901,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54996,
     "num_steps": 225007308,
-    "pre_emptying_time": 0.00074589,
+    "pre_emptying_time": 0.000875676,
     "queue_hwm": {
      "count": 243411,
      "index": 89
     },
     "slot_occupancy": 0.9988621864260583,
-    "total_time": 42.043975531,
+    "total_time": 51.867118338,
     "unconverged": 0
    },
    {
@@ -1167,20 +1167,20 @@
      "index": 54896
     },
     "avg_steps_per_primary": 54915.406494140625,
-    "avg_time_per_primary": 0.010039568266113281,
-    "avg_time_per_step": 1.828187917936014e-07,
+    "avg_time_per_primary": 0.011784706788085937,
+    "avg_time_per_step": 2.1459746072066942e-07,
     "emptying_step": 54897,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54963,
     "num_steps": 224933505,
-    "pre_emptying_time": 0.000688143,
+    "pre_emptying_time": 0.000784763,
     "queue_hwm": {
      "count": 239349,
      "index": 86
     },
     "slot_occupancy": 0.999134081002504,
-    "total_time": 41.122071618,
+    "total_time": 48.270159004,
     "unconverged": 0
    }
   ],
@@ -1217,20 +1217,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24713.51175824176,
-    "avg_time_per_primary": 0.000403875754945055,
-    "avg_time_per_step": 1.6342305330620024e-08,
+    "avg_time_per_primary": 0.00040733150934065936,
+    "avg_time_per_step": 1.6482137922176015e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 303,
     "num_steps": 224892957,
-    "pre_emptying_time": 0.014189232,
+    "pre_emptying_time": 0.014248178,
     "queue_hwm": {
      "count": 13130957,
      "index": 59
     },
     "slot_occupancy": 0.7078370859127233,
-    "total_time": 3.67526937,
+    "total_time": 3.706716735,
     "unconverged": 0
    },
    {
@@ -1240,20 +1240,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24721.98131868132,
-    "avg_time_per_primary": 0.00040151440318681315,
-    "avg_time_per_step": 1.6241190299881276e-08,
+    "avg_time_per_primary": 0.0004024229779120879,
+    "avg_time_per_step": 1.6277941995207094e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 297,
     "num_steps": 224970030,
-    "pre_emptying_time": 0.014196326,
+    "pre_emptying_time": 0.014191223,
     "queue_hwm": {
      "count": 13116208,
      "index": 59
     },
     "slot_occupancy": 0.7223843083237157,
-    "total_time": 3.653781069,
+    "total_time": 3.662049099,
     "unconverged": 0
    }
   ],
@@ -1302,20 +1302,20 @@
      "index": 54708
     },
     "avg_steps_per_primary": 54741.0546875,
-    "avg_time_per_primary": 0.009590612979736329,
-    "avg_time_per_step": 1.7519963826941618e-07,
+    "avg_time_per_primary": 0.008736492016601562,
+    "avg_time_per_step": 1.5959670610066856e-07,
     "emptying_step": 54709,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54793,
     "num_steps": 224219360,
-    "pre_emptying_time": 0.00063006,
+    "pre_emptying_time": 0.000683919,
     "queue_hwm": {
      "count": 243579,
      "index": 88
     },
     "slot_occupancy": 0.9990519717390908,
-    "total_time": 39.283150765,
+    "total_time": 35.7846713,
     "unconverged": 0
    },
    {
@@ -1325,20 +1325,20 @@
      "index": 54703
     },
     "avg_steps_per_primary": 54737.376220703125,
-    "avg_time_per_primary": 0.01024716141796875,
-    "avg_time_per_step": 1.8720592994176074e-07,
+    "avg_time_per_primary": 0.008518575081542969,
+    "avg_time_per_step": 1.5562629540728733e-07,
     "emptying_step": 54704,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 54807,
     "num_steps": 224204293,
-    "pre_emptying_time": 0.00071942,
+    "pre_emptying_time": 0.000603633,
     "queue_hwm": {
      "count": 241986,
      "index": 87
     },
     "slot_occupancy": 0.9987296553488263,
-    "total_time": 41.972373168,
+    "total_time": 34.892083534,
     "unconverged": 0
    }
   ],
@@ -1371,20 +1371,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24645.05912087912,
-    "avg_time_per_primary": 0.0004422114001098901,
-    "avg_time_per_step": 1.7943207112668346e-08,
+    "avg_time_per_primary": 0.0004416951758241758,
+    "avg_time_per_step": 1.7922260752459495e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 315,
     "num_steps": 224270038,
-    "pre_emptying_time": 0.015495856,
+    "pre_emptying_time": 0.015502262,
     "queue_hwm": {
      "count": 13154389,
      "index": 59
     },
     "slot_occupancy": 0.6789859529525515,
-    "total_time": 4.024123741,
+    "total_time": 4.0194261,
     "unconverged": 0
    },
    {
@@ -1394,20 +1394,20 @@
      "index": 207
     },
     "avg_steps_per_primary": 24641.29241758242,
-    "avg_time_per_primary": 0.0004444920427472528,
-    "avg_time_per_step": 1.8038503631006476e-08,
+    "avg_time_per_primary": 0.00044287852802197804,
+    "avg_time_per_step": 1.7973023513408284e-08,
     "emptying_step": 208,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 318,
     "num_steps": 224235761,
-    "pre_emptying_time": 0.01554227,
+    "pre_emptying_time": 0.01555201,
     "queue_hwm": {
      "count": 13162830,
      "index": 59
     },
     "slot_occupancy": 0.6724776291997178,
-    "total_time": 4.044877589,
+    "total_time": 4.030194605,
     "unconverged": 0
    }
   ],
@@ -1456,7 +1456,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2547536, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f334186a071]"
+      "[PID=2602485, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f7c9228a071]"
      ],
      "stdout": []
     }
@@ -1474,7 +1474,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
       "celeritas: internal assertion failed: step_limit->action != track.boundary_action()",
-      "[PID=2547538, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f577a459071]"
+      "[PID=2602487, TID=-1][ 7/17]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fbdc1e0f071]"
      ],
      "stdout": []
     }
@@ -1503,7 +1503,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2547611, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f0f5a8d1071]"
+      "[PID=2602561, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f9095f45071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -1524,7 +1524,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2547621, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f8c753fd071]"
+      "[PID=2602563, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f064efd7071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:75:",
@@ -1556,7 +1556,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
       "celeritas: internal assertion failed: mfp > 0",
-      "[PID=2547960, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f6998532071]"
+      "[PID=2602945, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f06ac203071]"
      ],
      "stdout": []
     }
@@ -1574,7 +1574,7 @@
       "terminate called after throwing an instance of 'celeritas::DebugError'",
       "  what():  /home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
       "celeritas: internal assertion failed: mfp > 0",
-      "[PID=2547962, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f20b0890071]"
+      "[PID=2602947, TID=-1][ 7/16]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f2363a93071]"
      ],
      "stdout": []
     }
@@ -1603,7 +1603,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2548049, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f759f324071]"
+      "[PID=2603035, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f6396187071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
@@ -1624,7 +1624,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: cuda error: cudaFree(ptr) failed:",
-      "[PID=2548051, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f95b14f0071]"
+      "[PID=2603042, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f60fd24c071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
@@ -1656,20 +1656,20 @@
      "index": 119912
     },
     "avg_steps_per_primary": 119965.14770507812,
-    "avg_time_per_primary": 0.019570601217529297,
-    "avg_time_per_step": 1.6313572393243403e-07,
+    "avg_time_per_primary": 0.017164655714355468,
+    "avg_time_per_step": 1.430803532752112e-07,
     "emptying_step": 119913,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 120071,
     "num_steps": 491377245,
-    "pre_emptying_time": 0.00065769,
+    "pre_emptying_time": 0.000621508,
     "queue_hwm": {
      "count": 215992,
      "index": 125
     },
     "slot_occupancy": 0.999118419144324,
-    "total_time": 80.161182587,
+    "total_time": 70.306429806,
     "unconverged": 0
    },
    {
@@ -1679,20 +1679,20 @@
      "index": 119966
     },
     "avg_steps_per_primary": 119995.51123046875,
-    "avg_time_per_primary": 0.016240101728271485,
-    "avg_time_per_step": 1.3533924362453875e-07,
+    "avg_time_per_primary": 0.017288361019042967,
+    "avg_time_per_step": 1.4407506449002218e-07,
     "emptying_step": 119967,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 120072,
     "num_steps": 491501614,
-    "pre_emptying_time": 0.000609216,
+    "pre_emptying_time": 0.000612614,
     "queue_hwm": {
      "count": 216943,
      "index": 127
     },
     "slot_occupancy": 0.9993629758017585,
-    "total_time": 66.519456679,
+    "total_time": 70.813126734,
     "unconverged": 0
    }
   ],
@@ -1725,20 +1725,20 @@
      "index": 445
     },
     "avg_steps_per_primary": 54004.526813186814,
-    "avg_time_per_primary": 0.0009197169859340659,
-    "avg_time_per_step": 1.703036838218328e-08,
+    "avg_time_per_primary": 0.0009247159242857144,
+    "avg_time_per_step": 1.7122933554894466e-08,
     "emptying_step": 446,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 616,
     "num_steps": 491441194,
-    "pre_emptying_time": 0.01527838,
+    "pre_emptying_time": 0.016016184,
     "queue_hwm": {
      "count": 7826992,
      "index": 99
     },
     "slot_occupancy": 0.760835786918541,
-    "total_time": 8.369424572,
+    "total_time": 8.414914911,
     "unconverged": 0
    },
    {
@@ -1748,20 +1748,20 @@
      "index": 444
     },
     "avg_steps_per_primary": 54003.69835164835,
-    "avg_time_per_primary": 0.0009185033926373626,
-    "avg_time_per_step": 1.7008157231315383e-08,
+    "avg_time_per_primary": 0.0009211506294505494,
+    "avg_time_per_step": 1.7057176778012893e-08,
     "emptying_step": 445,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 612,
     "num_steps": 491433655,
-    "pre_emptying_time": 0.015451636,
+    "pre_emptying_time": 0.015889226,
     "queue_hwm": {
      "count": 7862716,
      "index": 99
     },
     "slot_occupancy": 0.7657968218809639,
-    "total_time": 8.358380873,
+    "total_time": 8.382470728,
     "unconverged": 0
    }
   ],
@@ -1810,20 +1810,20 @@
      "index": 119912
     },
     "avg_steps_per_primary": 119965.14770507812,
-    "avg_time_per_primary": 0.01513952779663086,
-    "avg_time_per_step": 1.2619938445664086e-07,
+    "avg_time_per_primary": 0.01689730410473633,
+    "avg_time_per_step": 1.4085177593642947e-07,
     "emptying_step": 119913,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 120071,
     "num_steps": 491377245,
-    "pre_emptying_time": 0.000595939,
+    "pre_emptying_time": 0.000544842,
     "queue_hwm": {
      "count": 215992,
      "index": 125
     },
     "slot_occupancy": 0.999118419144324,
-    "total_time": 62.011505855,
+    "total_time": 69.211357613,
     "unconverged": 0
    },
    {
@@ -1833,20 +1833,20 @@
      "index": 119966
     },
     "avg_steps_per_primary": 119995.51123046875,
-    "avg_time_per_primary": 0.014475372813720704,
-    "avg_time_per_step": 1.2063261921455259e-07,
+    "avg_time_per_primary": 0.017561344482910156,
+    "avg_time_per_step": 1.46350011786533e-07,
     "emptying_step": 119967,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 120072,
     "num_steps": 491501614,
-    "pre_emptying_time": 0.000440691,
+    "pre_emptying_time": 0.000544092,
     "queue_hwm": {
      "count": 216943,
      "index": 127
     },
     "slot_occupancy": 0.9993629758017585,
-    "total_time": 59.291127045,
+    "total_time": 71.931267002,
     "unconverged": 0
    }
   ],
@@ -1854,7 +1854,7 @@
    "debug": true,
    "geant4": "11.0.3",
    "occupancy": {},
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  },
@@ -1879,20 +1879,20 @@
      "index": 445
     },
     "avg_steps_per_primary": 54004.526813186814,
-    "avg_time_per_primary": 0.0006376761757142858,
-    "avg_time_per_step": 1.180782822003318e-08,
+    "avg_time_per_primary": 0.0006218118276923077,
+    "avg_time_per_step": 1.1514068623233892e-08,
     "emptying_step": 446,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 616,
     "num_steps": 491441194,
-    "pre_emptying_time": 0.01102018,
+    "pre_emptying_time": 0.010721239,
     "queue_hwm": {
      "count": 7826992,
      "index": 99
     },
     "slot_occupancy": 0.760835786918541,
-    "total_time": 5.802853199,
+    "total_time": 5.658487632,
     "unconverged": 0
    },
    {
@@ -1902,20 +1902,20 @@
      "index": 444
     },
     "avg_steps_per_primary": 54003.69835164835,
-    "avg_time_per_primary": 0.0006362091684615384,
-    "avg_time_per_step": 1.1780844421410251e-08,
+    "avg_time_per_primary": 0.0006201687947252748,
+    "avg_time_per_step": 1.148382080588274e-08,
     "emptying_step": 445,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 612,
     "num_steps": 491433655,
-    "pre_emptying_time": 0.010999662,
+    "pre_emptying_time": 0.010760749,
     "queue_hwm": {
      "count": 7862716,
      "index": 99
     },
     "slot_occupancy": 0.7657968218809639,
-    "total_time": 5.789503433,
+    "total_time": 5.643536032,
     "unconverged": 0
    }
   ],
@@ -1939,7 +1939,7 @@
     "relativistic_brem_interact": 0.25,
     "seltzer_berger_interact": 0.125
    },
-   "vecgeom": "1.2.0",
+   "vecgeom": "1.2.1",
    "version": "v0.1.4"
   }
  }
