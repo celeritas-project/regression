@@ -5,6 +5,7 @@
 """
 Analysis and plotting utilities for regression data.
 """
+import itertools
 import json
 import re
 
@@ -17,7 +18,8 @@ Islc = pd.IndexSlice
 
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
-
+GEO_COLORS = {'orange': '#F6A75E', 'vecgeom': '#5785B7'}
+ARCH_SHAPES = {'gpu': 'x', 'cpu': 'o'}
 
 def unstack_subdict(df):
     result = pd.DataFrame(list(df.values), index=df.index)
@@ -52,6 +54,24 @@ def get_cpugpu_ratio(summary):
     std = ratio * np.hypot(re['gpu'], re['cpu'])
     return pd.DataFrame({'mean': ratio, 'std' : std})
 
+
+class ProblemAbbreviator:
+    def __init__(self):
+        input_dir = Path(__file__).parent / "input"
+        with open(input_dir / "problem-abbr.json") as f:
+            self.geo_abbrev = json.load(f)
+
+    def __call__(self, inp):
+        geo, *_ = inp['geometry_filename'].partition('.')
+        bits = [self.geo_abbrev[geo]]
+        if inp.get('mag_field') and any(inp['mag_field']):
+            bits.append('F')
+        if inp['enable_msc']:
+            bits.append('M')
+
+        return "".join(bits)
+
+abbreviate_problem = ProblemAbbreviator()
 
 class Analysis:
     def __init__(self, basedir):
@@ -139,12 +159,60 @@ class Analysis:
                 skip.add(p)
         return result
 
+    def problem_to_abbr(self, problems=None):
+        if problems is None:
+            problems = self.problems()
+        result = {}
+        for p in problems:
+            inputs = self.input.xs(p, level='problem')
+            inputs = inputs.dropna(subset='geometry_filename')
+            if len(inputs):
+                result[p] = abbreviate_problem(inputs.iloc[0])
+            else:
+                print(f"WARNING: no inputs available for {p}")
+                result[p] = "*"
+        return result
+
     def __str__(self):
         return f"Analysis for Celeritas {self.version} on {self.system}"
 
     @property
     def system(self):
         return self.basedir.name
+
+    def plot_results(self, ax, df):
+        problems = self.problems()
+        problem_to_abbr = self.problem_to_abbr(problems)
+        p_to_i = dict(zip(problems, itertools.count()))
+        get_levels = df.index.get_level_values
+
+        # One data point for each row, with geometries close to each other
+        index = np.array([p_to_i[p] for p in get_levels('problem')], dtype=float)
+        index += [(0.1 if g == 'orange' else -0.05) for g in get_levels('geo')]
+        color = np.array([GEO_COLORS[g] for g in get_levels('geo')])
+
+        if 'arch' in df.index.names:
+            slc_mark = [(a.upper(), get_levels('arch') == a, ARCH_SHAPES[a])
+                        for a in ['cpu', 'gpu']]
+        else:
+            slc_mark = [(None, slice(None), 's')]
+
+        result = []
+        for lab, slc, mark in slc_mark:
+            temp_idx = index[slc]
+            temp_sum = df.loc[slc]
+            ax.errorbar(temp_idx, temp_sum['mean'], temp_sum['std'],
+                        capsize=0, fmt='none', ecolor=(0.2,)*3)
+            scat = ax.scatter(temp_idx, temp_sum['mean'], c=color[slc],
+                              marker=mark, label=lab)
+            result.append(scat)
+
+        xax = ax.get_xaxis()
+        xax.set_ticks(np.arange(len(problems)))
+        xax.set_ticklabels(list(problem_to_abbr.values()), rotation=90)
+        grid = ax.grid()
+        ax.set_axisbelow(True)
+        return scat
 
 def plot_counts(ax, out):
     blue = (.1, .1, .9)
@@ -286,4 +354,5 @@ def annotate_metadata(obj, md, **kwargs):
     text_kwargs.update(kwargs)
 
     return obj.text(0.98, 0.02, s, **text_kwargs)
+
 
