@@ -17,9 +17,11 @@ import json
 from pathlib import Path, PurePath
 from pprint import pprint
 from os import environ
+import shutil
 from signal import SIGINT, SIGTERM, SIGKILL
 import subprocess
 import sys
+import time
 
 from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
 
@@ -87,7 +89,6 @@ class Summit(System):
         "vecgeom": _CELER_ROOT / 'build-ndebug',
     }
     name = "summit"
-    num_jobs = 1
     num_jobs = 6
     gpu_per_job = 1
     cpu_per_job = 7
@@ -148,7 +149,7 @@ class Summit(System):
         return [self.run_jslist()]
 
 class Crusher(System):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas'
+    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-crusher'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug'
     }
@@ -283,20 +284,20 @@ full_cms = {
 
 # List of list of setting dictionaries
 problems = [
-    [testem15, no_field],
-    [testem15],
-    [testem15, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
-    [testem15, use_msc],
-    [simple_cms, no_field, use_msc],
-    [simple_cms],
-    [simple_cms, use_msc],
-    [simple_cms, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
-    [testem3, no_field],
-    [testem3],
-    [testem3, no_field,
-        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+#    [testem15, no_field],
+#    [testem15],
+#    [testem15, use_msc,
+#        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
+#    [testem15, use_msc],
+#    [simple_cms, no_field, use_msc],
+#    [simple_cms],
+#    [simple_cms, use_msc],
+#    [simple_cms, use_msc,
+#        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
+#    [testem3, no_field],
+#    [testem3],
+#    [testem3, no_field,
+#        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
     [testem3, no_field, use_msc],
     [full_cms, no_field],
     [full_cms, use_msc],
@@ -388,21 +389,24 @@ async def run_celeritas(system, results_dir, inp):
     # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
 
     print(f"{instance}: awaiting communcation")
+    failed = False
     out, err = await communicate_with_timeout(proc,
         input=json.dumps(inp).encode(),
         interrupt=inp['_timeout']
     )
 
-    print(f"{instance}: complete")
     try:
         result = json.loads(out)
     except json.decoder.JSONDecodeError as e:
         print(f"{instance}: failed to decode JSON")
+        failed = True
         result = {
             'stdout': out.decode().splitlines(),
         }
 
     if proc.returncode:
+        print(f"{instance}: exit code {proc.returncode}")
+        failed = True
         result['stderr'] = err.decode().splitlines()
 
     # Copy special inputs to output for later processing
@@ -417,11 +421,15 @@ async def run_celeritas(system, results_dir, inp):
             json.dump(result, f, indent=0, sort_keys=True)
     except Exception as e:
         print(f"{instance}: failed to output:", repr(e))
+        failed = True
 
     if proc.returncode:
         # Write input to reproduce later
         with open(outdir / f"{instance:d}.inp.json", "w") as f:
             json.dump(inp, f, indent=0, sort_keys=True)
+
+    if not failed:
+        print(f"{instance}: success")
 
     return result
 
@@ -437,6 +445,12 @@ async def main():
         Sys = _systems[sysname]
     system = Sys()
 
+    # Copy build files
+    buildfile_dir = regression_dir / 'build-files' / system.name
+    buildfile_dir.mkdir(exist_ok=True)
+    for k, v in system.build_dirs.items():
+        shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
+
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
@@ -451,22 +465,31 @@ async def main():
                    for inp in inputs], f, indent=0)
 
     summaries = {}
+    allstart = time.monotonic()
     for inp in inputs:
         print("="*79)
         #pprint(inp)
+        start = time.monotonic()
         tasks = [run_celeritas(system, results_dir, build_instance(inp, i))
                  for i in range(system.num_jobs)]
-        tasks.extend(system.get_monitoring_coro())
+        if not summaries:
+            # Only print monitoring for first instance
+            tasks.extend(system.get_monitoring_coro())
         result = await asyncio.gather(*tasks)
 
         # Ignore results from monitoring tasks
         result = result[:system.num_jobs]
 
-        summaries[inp['_outdir']] = summary = summarize_all(result)
-        summary['name'] = inp['_name']
+        name = inp['_outdir']
+        summaries[name] = summary = summarize_all(result)
+        summary['name'] = inp['_name'] # name tuple
         pprint(summary)
+        alldelta = time.monotonic() - allstart
+        delta = time.monotonic() - start
+        print(f"Elapsed time for {name}: {delta:.1f} (total: {alldelta:.0f})")
 
     with open(results_dir / 'summaries.json', 'w') as f:
         json.dump(summaries, f, indent=1, sort_keys=True)
+    print(f"Wrote summaries to {results_dir}")
 
 asyncio.run(main())

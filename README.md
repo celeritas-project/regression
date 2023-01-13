@@ -98,3 +98,27 @@ celeritas: internal assertion failed: p.distance < local.step_limit.step
 src/celeritas/em/interactor/MollerBhabhaInteractor.hh:109:
 celeritas: internal assertion failed: electron_cutoff_ >= value_as<Energy>(shared_.min_valid_energy())
 ```
+
+# System environments
+
+## Summit
+
+Summit uses a chained installation of Spack.
+- [Chained installation
+  notes](https://docs.olcf.ornl.gov/software/spack_env/summit_spack_env.html#getting-started)
+  are out of date
+- Spack environment used to build summit toolchains is at
+  `/sw/sources/facility-spack/summit/hosts/summit/envs/base/spack.yaml`
+- Spack source directory is `/sw/sources/facility-spack/summit/spack`
+
+Key locations:
+
+- Spack repository: `/ccs/proj/csc404/spack` including environment files
+- Spack installation and view: `$PROJWORK/csc404/celeritas/spack`
+- Celeritas builds: `/gpfs/alpine/proj-shared/csc404/celeritas/build*`
+- Regression repo: `$HOME/celeritas-regression`
+
+See [Summit guide](https://docs.olcf.ornl.gov/systems/summit_user_guide.html)
+for more details.
+
+## Frontier
