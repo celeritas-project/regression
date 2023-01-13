@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #BSUB -P csc404
-#BSUB -W 0:59
+#BSUB -W 1:59
 #BSUB -nnodes 1
 #BSUB -J celer-regression
 #BSUB -o summit-%J.out
