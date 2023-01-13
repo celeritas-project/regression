@@ -41,9 +41,6 @@ CELERITAS_PYTHONPATH:STRING=/ccs/home/s3j/.local/nemesis/python:/sw/summit/xalt/
 //Celeritas runtime random number generator
 CELERITAS_RNG:STRING=XORWOW
 
-//No help, variable specified on the command line.
-CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
-
 //Enable the CUDA language
 CELERITAS_USE_CUDA:BOOL=ON
 
@@ -78,7 +75,7 @@ CELERITAS_USE_SWIG:BOOL=OFF
 CELERITAS_USE_VecGeom:BOOL=OFF
 
 //The directory containing a CMake configuration file for CLHEP.
-CLHEP_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/CLHEP-2.4.5.1
+CLHEP_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/opt/gcc-11.2.0/clhep/rmqjglf/lib/CLHEP-2.4.5.1
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -526,10 +523,10 @@ Celeritas_SOURCE_DIR:STATIC=/ccs/home/s3j/.local/src/celeritas-summit
 DART_TESTING_TIMEOUT:STRING=1500
 
 //Path to a file.
-EXPAT_INCLUDE_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/include
+EXPAT_INCLUDE_DIR:PATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/expat-2.4.6-4ghtygwa6lrl5i2afmh5aoyw6fclozdi/include
 
 //Path to a library.
-EXPAT_LIBRARY:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/libexpat.so
+EXPAT_LIBRARY:FILEPATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/expat-2.4.6-4ghtygwa6lrl5i2afmh5aoyw6fclozdi/lib/libexpat.so
 
 //Path to a program.
 GITCOMMAND:FILEPATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8.3.1/git-2.36.1-ohqgkmm2pekojsy3jrndrhun344j63ke/bin/git
@@ -541,7 +538,7 @@ GIT_EXECUTABLE:FILEPATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8
 GTest_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/GTest
 
 //The directory containing a CMake configuration file for Geant4.
-Geant4_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.0
+Geant4_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.3
 
 //Path to a library.
 HEPMC3_LIB:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/libHepMC3.so
@@ -583,28 +580,28 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //The directory containing a CMake configuration file for PTL.
-PTL_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.0/PTL
+PTL_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.3/PTL
 
 //Name of the computer/site where compile is being run
 SITE:STRING=login2
 
 //Xerces-C++ include directory
-XercesC_INCLUDE_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/include
+XercesC_INCLUDE_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/opt/gcc-11.2.0/xerces-c/febilzt/include
 
 //Xerces-C++ libraries (debug)
 XercesC_LIBRARY_DEBUG:FILEPATH=XercesC_LIBRARY_DEBUG-NOTFOUND
 
 //Xerces-C++ libraries (release)
-XercesC_LIBRARY_RELEASE:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/libxerces-c.so
+XercesC_LIBRARY_RELEASE:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/opt/gcc-11.2.0/xerces-c/febilzt/lib/libxerces-c.so
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/include
+ZLIB_INCLUDE_DIR:PATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/zlib-1.2.11-erk5ue5faw4ujfpzyihymwxyr3wxcy5r/include
 
 //Path to a library.
 ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/libz.so
+ZLIB_LIBRARY_RELEASE:FILEPATH=/sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/zlib-1.2.11-erk5ue5faw4ujfpzyihymwxyr3wxcy5r/lib/libz.so
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/nlohmann_json
@@ -622,8 +619,6 @@ pkgcfg_lib_PC_EXPAT_m:FILEPATH=/usr/lib64/libm.so
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
-//Build/deploy system name
-CELERITAS_HOSTNAME:INTERNAL=summit
 //STRINGS property for variable: CELERITAS_RNG
 CELERITAS_RNG-STRINGS:INTERNAL=XORWOW;CURAND
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -930,7 +925,7 @@ EXPAT_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding GTest
 FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/GTest/GTestConfig.cmake][c ][v1.10.0()]
 //Details about finding Geant4
-FIND_PACKAGE_MESSAGE_DETAILS_Geant4:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.0/Geant4Config.cmake][v11.0.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Geant4:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/Geant4-11.0.3/Geant4Config.cmake][v11.0.3()]
 //Details about finding HepMC3
 FIND_PACKAGE_MESSAGE_DETAILS_HepMC3:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/share/HepMC3/cmake/HepMC3Config.cmake][v3.02.04()]
 //Details about finding OpenMP
