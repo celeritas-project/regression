@@ -140,7 +140,7 @@ def summarize_one(out):
     try:
         result = summarize_result(out)
     except Exception as e:
-        return {
+        result = {
             'failure': failure,
             'exception': exception_to_dict(e, context='result')
         }
