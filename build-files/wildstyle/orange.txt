@@ -253,16 +253,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.1.4
+CMAKE_PROJECT_VERSION:STATIC=0.2.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+CMAKE_PROJECT_VERSION_MINOR:STATIC=2
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=4
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -721,6 +721,8 @@ pkgcfg_lib_PC_EXPAT_expat:FILEPATH=/projects/spack/opt/spack/gcc-8.5.0/expat/voc
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
+//Build/deploy system name
+CELERITAS_HOSTNAME:INTERNAL=wildstyle
 //STRINGS property for variable: CELERITAS_RNG
 CELERITAS_RNG-STRINGS:INTERNAL=XORWOW;CURAND
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -857,7 +859,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1023,7 +1025,7 @@ CUDA_nvml_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvrtc_LIBRARY
 CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.1.4;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.2.0;;
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1198,7 +1200,7 @@ _Python_INTERPRETER_SIGNATURE:INTERNAL=9ce9a2265f42feb8003a6e995540b5ca
 __pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
 __pkg_config_checked_PC_EXPAT:INTERNAL=1
 //modules_idx_deps
-modules_idx_deps:INTERNAL=celeritas_io;celeritas_io
+modules_idx_deps:INTERNAL=celeritas
 //ADVANCED property for variable: pkgcfg_lib_PC_EXPAT_expat
 pkgcfg_lib_PC_EXPAT_expat-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/expat/vocoi2f/lib

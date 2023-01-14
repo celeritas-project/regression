@@ -481,7 +481,16 @@ async def main():
         result = result[:system.num_jobs]
 
         name = inp['_outdir']
-        summaries[name] = summary = summarize_all(result)
+        try:
+            summaries[name] = summary = summarize_all(result)
+        except Exception as e:
+            print("*"*79)
+            print("FAILED input:")
+            pprint(inp)
+            print("*"*79)
+            pprint(result)
+            print("Failed to summarize result above")
+            raise
         summary['name'] = inp['_name'] # name tuple
         pprint(summary)
         alldelta = time.monotonic() - allstart
