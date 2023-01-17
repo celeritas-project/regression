@@ -23,29 +23,7 @@
     },
     "failure": {
      "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -67,73 +45,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -156,7 +68,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -177,7 +89,95 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -211,7 +211,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -232,7 +232,29 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -255,7 +277,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -276,7 +298,29 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -298,29 +342,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher123: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -343,29 +365,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher123: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -779,22 +779,22 @@
      "count": 4096,
      "index": 72
     },
-    "avg_steps_per_primary": 530.204833984375,
-    "avg_time_per_primary": 0.35484382512182616,
-    "avg_time_per_step": 0.0006692579968674584,
+    "avg_steps_per_primary": 416.87255859375,
+    "avg_time_per_primary": 0.1740343917192383,
+    "avg_time_per_step": 0.0004174762481519874,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 2171719,
-    "pre_emptying_time": 0.786680288,
+    "num_step_iters": 131072,
+    "num_steps": 1707510,
+    "pre_emptying_time": 0.785546348,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
-    "slot_occupancy": 0.0010112854652106762,
-    "total_time": 1453.440307699,
-    "unconverged": 1
+    "slot_occupancy": 0.0031804852187633514,
+    "total_time": 712.844868482,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -810,22 +810,22 @@
      "count": 4096,
      "index": 72
     },
-    "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.354551980935791,
-    "avg_time_per_step": 0.000668707252276076,
+    "avg_steps_per_primary": 416.872802734375,
+    "avg_time_per_primary": 0.17477486603344727,
+    "avg_time_per_step": 0.0004192522632492558,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 2171720,
-    "pre_emptying_time": 0.78652595,
+    "num_step_iters": 131072,
+    "num_steps": 1707511,
+    "pre_emptying_time": 0.786602607,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
-    "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1452.244913913,
-    "unconverged": 1
+    "slot_occupancy": 0.0031804870814085007,
+    "total_time": 715.877851273,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -841,66 +841,22 @@
      "count": 4096,
      "index": 72
     },
-    "avg_steps_per_primary": 530.20458984375,
-    "avg_time_per_primary": 0.3547159889243164,
-    "avg_time_per_step": 0.0006690171977365385,
+    "avg_steps_per_primary": 416.87255859375,
+    "avg_time_per_primary": 0.17324647932763673,
+    "avg_time_per_step": 0.0004155861923654913,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 2171718,
-    "pre_emptying_time": 0.787395031,
+    "num_step_iters": 131072,
+    "num_steps": 1707510,
+    "pre_emptying_time": 0.786620251,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
-    "slot_occupancy": 0.0010112849995493889,
-    "total_time": 1452.916690634,
-    "unconverged": 1
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {
-     "along-step-uniform-msc": 1150.5307169759628,
-     "brems-rel": 4.280621137998549,
-     "brems-sb": 6.757324065001609,
-     "conv-bethe-heitler": 4.344644043998209,
-     "geo-boundary": 9.327839899999928,
-     "ioni-moller-bhabha": 4.572803439999918,
-     "msc-urban": 0.027177451000136715,
-     "photoel-livermore": 5.525558959999404,
-     "physics-discrete-select": 22.116711453998988,
-     "pre-step": 18.032698504997768,
-     "scat-klein-nishina": 9.109603762998573,
-     "scat-rayleigh": 4.351521013997143
-    },
-    "active_hwm": {
-     "count": 4096,
-     "index": 64828
-    },
-    "avg_steps_per_primary": 64977.395751953125,
-    "avg_time_per_primary": 0.30738557453222654,
-    "avg_time_per_step": 4.7306539601194614e-06,
-    "emptying_step": 64829,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 266147413,
-    "pre_emptying_time": 0.002959267,
-    "queue_hwm": {
-     "count": 294432,
-     "index": 110
-    },
-    "slot_occupancy": 0.12393454695120454,
-    "total_time": 1259.051313284,
-    "unconverged": 1
+    "slot_occupancy": 0.0031804852187633514,
+    "total_time": 709.617579326,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -916,22 +872,22 @@
      "count": 4096,
      "index": 72
     },
-    "avg_steps_per_primary": 530.20458984375,
-    "avg_time_per_primary": 0.36139668876904296,
-    "avg_time_per_step": 0.0006816174278603391,
+    "avg_steps_per_primary": 416.872802734375,
+    "avg_time_per_primary": 0.17541675153051758,
+    "avg_time_per_step": 0.0004207920266803552,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 2171718,
-    "pre_emptying_time": 0.785639385,
+    "num_step_iters": 131072,
+    "num_steps": 1707511,
+    "pre_emptying_time": 0.78815224,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
-    "slot_occupancy": 0.0010112849995493889,
-    "total_time": 1480.280837198,
-    "unconverged": 1
+    "slot_occupancy": 0.0031804870814085007,
+    "total_time": 718.507014269,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -942,40 +898,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 1093.3236889980174,
-     "brems-rel": 2.5902499150024463,
-     "brems-sb": 5.146714746008267,
-     "conv-bethe-heitler": 2.863790111002543,
-     "geo-boundary": 2.5689525110007114,
-     "ioni-moller-bhabha": 3.0305238319971486,
-     "msc-urban": 0.02692803100013664,
-     "photoel-livermore": 4.046854884002173,
-     "physics-discrete-select": 3.7926192259978144,
-     "pre-step": 14.02746470299987,
-     "scat-klein-nishina": 7.811763834015892,
-     "scat-rayleigh": 2.773390862001591
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 64855
+     "index": 72
     },
-    "avg_steps_per_primary": 64987.5166015625,
-    "avg_time_per_primary": 0.28277805335229494,
-    "avg_time_per_step": 4.351267260849541e-06,
-    "emptying_step": 64856,
+    "avg_steps_per_primary": 416.872314453125,
+    "avg_time_per_primary": 0.17645520117871094,
+    "avg_time_per_step": 0.00042328356923916654,
+    "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 266188868,
-    "pre_emptying_time": 0.002900724,
+    "num_step_iters": 131072,
+    "num_steps": 1707509,
+    "pre_emptying_time": 0.785654149,
     "queue_hwm": {
-     "count": 291235,
-     "index": 107
+     "count": 5004,
+     "index": 4
     },
-    "slot_occupancy": 0.12395385093986988,
-    "total_time": 1158.258906531,
-    "unconverged": 1
+    "slot_occupancy": 0.003180483356118202,
+    "total_time": 722.760504028,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -986,40 +929,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 22.59947818199991,
-     "brems-rel": 0.28193947499999816,
-     "brems-sb": 2.380674869000011,
-     "conv-bethe-heitler": 0.45800777099999995,
-     "geo-boundary": 0.25152046499999786,
-     "ioni-moller-bhabha": 0.6003888659999925,
-     "msc-urban": 0.004785210000000016,
-     "photoel-livermore": 1.5153493270000058,
-     "physics-discrete-select": 1.1899733090000006,
-     "pre-step": 7.927177215000004,
-     "scat-klein-nishina": 4.588301359000062,
-     "scat-rayleigh": 0.43699591499999896
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 64835
+     "index": 72
     },
-    "avg_steps_per_primary": 64861.094970703125,
-    "avg_time_per_primary": 0.012032970833251952,
-    "avg_time_per_step": 1.8551908256693912e-07,
-    "emptying_step": 64836,
+    "avg_steps_per_primary": 416.872802734375,
+    "avg_time_per_primary": 0.1763109754807129,
+    "avg_time_per_step": 0.0004229371029346224,
+    "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 64927,
-    "num_steps": 265671045,
-    "pre_emptying_time": 0.00072997,
+    "num_step_iters": 131072,
+    "num_steps": 1707511,
+    "pre_emptying_time": 0.787092686,
     "queue_hwm": {
-     "count": 290987,
-     "index": 108
+     "count": 5004,
+     "index": 4
     },
-    "slot_occupancy": 0.9989849364779387,
-    "total_time": 49.287048533,
-    "unconverged": 0
+    "slot_occupancy": 0.0031804870814085007,
+    "total_time": 722.169755569,
+    "unconverged": 2
    },
    {
     "exception": {
@@ -1030,100 +960,67 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 23.747057772000243,
-     "brems-rel": 0.3216879069999968,
-     "brems-sb": 2.503271867999997,
-     "conv-bethe-heitler": 0.500346907999996,
-     "geo-boundary": 0.2887464209999984,
-     "ioni-moller-bhabha": 0.6394531279999947,
-     "msc-urban": 0.005042036000001098,
-     "photoel-livermore": 1.570662488000024,
-     "physics-discrete-select": 1.228121535999983,
-     "pre-step": 8.021591854000064,
-     "scat-klein-nishina": 4.681310588000061,
-     "scat-rayleigh": 0.479594137999991
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 64804
+     "index": 72
     },
-    "avg_steps_per_primary": 64825.515380859375,
-    "avg_time_per_primary": 0.012520140028320312,
-    "avg_time_per_step": 1.9313598904324416e-07,
-    "emptying_step": 64805,
+    "avg_steps_per_primary": 416.872802734375,
+    "avg_time_per_primary": 0.17734855555004883,
+    "avg_time_per_step": 0.00042542606374600225,
+    "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 64881,
-    "num_steps": 265525311,
-    "pre_emptying_time": 0.000739359,
+    "num_step_iters": 131072,
+    "num_steps": 1707511,
+    "pre_emptying_time": 0.786840397,
     "queue_hwm": {
-     "count": 293641,
-     "index": 108
+     "count": 5004,
+     "index": 4
     },
-    "slot_occupancy": 0.9991448248464014,
-    "total_time": 51.282493556,
-    "unconverged": 0
+    "slot_occupancy": 0.0031804870814085007,
+    "total_time": 726.419683533,
+    "unconverged": 2
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 72
+    },
+    "avg_steps_per_primary": 416.872802734375,
+    "avg_time_per_primary": 0.18834948828613282,
+    "avg_time_per_step": 0.00045181524688274336,
+    "emptying_step": 73,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 131072,
+    "num_steps": 1707511,
+    "pre_emptying_time": 0.786790164,
+    "queue_hwm": {
+     "count": 5004,
+     "index": 4
+    },
+    "slot_occupancy": 0.0031804870814085007,
+    "total_time": 771.47950402,
+    "unconverged": 2
    }
   ],
-  "system": [
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.2.0-1+49ccc7c8"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.2.0-1+49ccc7c8"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.2.0-1+49ccc7c8"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.1.4+374bda2d"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.2.0-1+49ccc7c8"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.1.4+374bda2d"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.1.4+374bda2d"
-   },
-   {
-    "debug": false,
-    "geant4": "11.0.3",
-    "occupancy": {},
-    "vecgeom": null,
-    "version": "v0.1.4+374bda2d"
-   }
-  ]
+  "system": {
+   "debug": false,
+   "geant4": "11.0.3",
+   "occupancy": {},
+   "vecgeom": null,
+   "version": "v0.2.0-1+49ccc7c8"
+  }
  },
  "simple-cms+field+msc-orange-gpu": {
   "input": {
@@ -1152,40 +1049,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 812.4050335590007,
-     "brems-rel": 0.10954056399999984,
-     "brems-sb": 0.21319001399999976,
-     "conv-bethe-heitler": 0.12916439099999982,
-     "geo-boundary": 0.28463637500000066,
-     "ioni-moller-bhabha": 0.13094225200000004,
-     "msc-urban": 0.0006016739999999982,
-     "photoel-livermore": 0.20169251300000024,
-     "physics-discrete-select": 0.2697647940000004,
-     "pre-step": 1.483898103000002,
-     "scat-klein-nishina": 0.2575173859999994,
-     "scat-rayleigh": 0.1518674469999996
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 275
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41689.24318681319,
-    "avg_time_per_primary": 0.08967767262736263,
-    "avg_time_per_step": 2.151098599355931e-06,
-    "emptying_step": 276,
+    "avg_steps_per_primary": 79.0920879120879,
+    "avg_time_per_primary": 0.00121638235010989,
+    "avg_time_per_step": 1.5379317732285916e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 379372113,
-    "pre_emptying_time": 0.513522393,
+    "num_step_iters": 512,
+    "num_steps": 719738,
+    "pre_emptying_time": 0.022664905,
     "queue_hwm": {
-     "count": 15425263,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17665890650823712,
-    "total_time": 816.066820909,
-    "unconverged": 17247
+    "slot_occupancy": 0.0013406164944171906,
+    "total_time": 11.069079386,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1196,40 +1080,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 816.4032531409982,
-     "brems-rel": 0.10983753499999999,
-     "brems-sb": 0.21405789200000017,
-     "conv-bethe-heitler": 0.12850065099999997,
-     "geo-boundary": 0.28535691500000027,
-     "ioni-moller-bhabha": 0.13144867199999954,
-     "msc-urban": 0.0005620260000000012,
-     "photoel-livermore": 0.20146077699999967,
-     "physics-discrete-select": 0.2704439039999997,
-     "pre-step": 1.484302983000001,
-     "scat-klein-nishina": 0.2571690360000007,
-     "scat-rayleigh": 0.15249426999999996
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 275
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41747.214835164836,
-    "avg_time_per_primary": 0.09011708088967033,
-    "avg_time_per_step": 2.158636959267573e-06,
-    "emptying_step": 276,
+    "avg_steps_per_primary": 79.0921978021978,
+    "avg_time_per_primary": 0.0012438352378021976,
+    "avg_time_per_step": 1.572639618528383e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 379899655,
-    "pre_emptying_time": 0.521707674,
+    "num_step_iters": 512,
+    "num_steps": 719739,
+    "pre_emptying_time": 0.022655326,
     "queue_hwm": {
-     "count": 15398684,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17690456239506602,
-    "total_time": 820.065436096,
-    "unconverged": 17335
+    "slot_occupancy": 0.0013406183570623398,
+    "total_time": 11.318900664,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1240,40 +1111,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 819.3628192470003,
-     "brems-rel": 0.11242218699999973,
-     "brems-sb": 0.21687301700000025,
-     "conv-bethe-heitler": 0.1326955669999999,
-     "geo-boundary": 0.2882109220000003,
-     "ioni-moller-bhabha": 0.13533021899999997,
-     "msc-urban": 0.0005547310000000025,
-     "photoel-livermore": 0.20489951699999986,
-     "physics-discrete-select": 0.2724765880000011,
-     "pre-step": 1.4874954099999984,
-     "scat-klein-nishina": 0.25993237299999966,
-     "scat-rayleigh": 0.15478349099999997
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 276
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41952.697692307695,
-    "avg_time_per_primary": 0.09044765944175824,
-    "avg_time_per_step": 2.1559438228531946e-06,
-    "emptying_step": 277,
+    "avg_steps_per_primary": 79.0921978021978,
+    "avg_time_per_primary": 0.001237928132857143,
+    "avg_time_per_step": 1.565170986843842e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 381769549,
-    "pre_emptying_time": 0.51378531,
+    "num_step_iters": 512,
+    "num_steps": 719739,
+    "pre_emptying_time": 0.02278969,
     "queue_hwm": {
-     "count": 15429842,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17777529964223504,
-    "total_time": 823.07370092,
-    "unconverged": 17665
+    "slot_occupancy": 0.0013406183570623398,
+    "total_time": 11.265146009,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1284,40 +1142,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 819.7757766450009,
-     "brems-rel": 0.10937356499999973,
-     "brems-sb": 0.21350188600000045,
-     "conv-bethe-heitler": 0.12774772399999976,
-     "geo-boundary": 0.2846788779999999,
-     "ioni-moller-bhabha": 0.13066774699999986,
-     "msc-urban": 0.0005476490000000037,
-     "photoel-livermore": 0.20088670199999975,
-     "physics-discrete-select": 0.26839359700000015,
-     "pre-step": 1.4838781709999977,
-     "scat-klein-nishina": 0.25659980599999965,
-     "scat-rayleigh": 0.1518497270000003
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 276
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41845.06362637362,
-    "avg_time_per_primary": 0.09048706945483517,
-    "avg_time_per_step": 2.162431159449929e-06,
-    "emptying_step": 277,
+    "avg_steps_per_primary": 79.0920879120879,
+    "avg_time_per_primary": 0.0012491289085714286,
+    "avg_time_per_step": 1.5793348507373516e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 380790079,
-    "pre_emptying_time": 0.521832835,
+    "num_step_iters": 512,
+    "num_steps": 719738,
+    "pre_emptying_time": 0.022892424,
     "queue_hwm": {
-     "count": 15462325,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17731919838115573,
-    "total_time": 823.432332039,
-    "unconverged": 17700
+    "slot_occupancy": 0.0013406164944171906,
+    "total_time": 11.367073068,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1328,40 +1173,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 815.9458883479988,
-     "brems-rel": 0.10947192399999972,
-     "brems-sb": 0.21374452099999985,
-     "conv-bethe-heitler": 0.12837620499999988,
-     "geo-boundary": 0.2851811760000005,
-     "ioni-moller-bhabha": 0.13079003700000008,
-     "msc-urban": 0.0005716730000000018,
-     "photoel-livermore": 0.20047655600000047,
-     "physics-discrete-select": 0.2696127840000004,
-     "pre-step": 1.4846359730000016,
-     "scat-klein-nishina": 0.25715807700000004,
-     "scat-rayleigh": 0.15259363000000004
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 276
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41837.10571428572,
-    "avg_time_per_primary": 0.09006716441868132,
-    "avg_time_per_step": 2.1528058139052137e-06,
-    "emptying_step": 277,
+    "avg_steps_per_primary": 79.0920879120879,
+    "avg_time_per_primary": 0.0012280723776923077,
+    "avg_time_per_step": 1.5527120475784245e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 380717662,
-    "pre_emptying_time": 0.519214519,
+    "num_step_iters": 512,
+    "num_steps": 719738,
+    "pre_emptying_time": 0.022696234,
     "queue_hwm": {
-     "count": 15468784,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17728547658771276,
-    "total_time": 819.61119621,
-    "unconverged": 17367
+    "slot_occupancy": 0.0013406164944171906,
+    "total_time": 11.175458637,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1372,40 +1204,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 819.4800092690002,
-     "brems-rel": 0.11093078399999985,
-     "brems-sb": 0.21513534399999984,
-     "conv-bethe-heitler": 0.12858163999999983,
-     "geo-boundary": 0.2871588350000007,
-     "ioni-moller-bhabha": 0.13153514799999963,
-     "msc-urban": 0.0006080329999999964,
-     "photoel-livermore": 0.20293426699999975,
-     "physics-discrete-select": 0.270660513,
-     "pre-step": 1.4907739399999986,
-     "scat-klein-nishina": 0.2585649159999997,
-     "scat-rayleigh": 0.15346033600000003
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 276
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41959.02659340659,
-    "avg_time_per_primary": 0.09045744315901098,
-    "avg_time_per_step": 2.155851803607508e-06,
-    "emptying_step": 277,
+    "avg_steps_per_primary": 79.0921978021978,
+    "avg_time_per_primary": 0.0012290286724175824,
+    "avg_time_per_step": 1.5539189788242683e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 381827142,
-    "pre_emptying_time": 0.519383435,
+    "num_step_iters": 512,
+    "num_steps": 719739,
+    "pre_emptying_time": 0.022874398,
     "queue_hwm": {
-     "count": 15476847,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17780211847275496,
-    "total_time": 823.162732747,
-    "unconverged": 17771
+    "slot_occupancy": 0.0013406183570623398,
+    "total_time": 11.184160919,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1416,40 +1235,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 808.6334720630008,
-     "brems-rel": 0.11018710500000012,
-     "brems-sb": 0.21393037000000004,
-     "conv-bethe-heitler": 0.12869352699999986,
-     "geo-boundary": 0.2864916579999995,
-     "ioni-moller-bhabha": 0.13130559699999975,
-     "msc-urban": 0.0006319669999999973,
-     "photoel-livermore": 0.20164314699999975,
-     "physics-discrete-select": 0.27102051300000013,
-     "pre-step": 1.4881124550000018,
-     "scat-klein-nishina": 0.25874927699999994,
-     "scat-rayleigh": 0.152859993
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 275
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41804.824065934066,
-    "avg_time_per_primary": 0.08926488689384615,
-    "avg_time_per_step": 2.135277181242496e-06,
-    "emptying_step": 276,
+    "avg_steps_per_primary": 79.0921978021978,
+    "avg_time_per_primary": 0.0012490161647252746,
+    "avg_time_per_step": 1.5791901090534205e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 380423899,
-    "pre_emptying_time": 0.512677772,
+    "num_step_iters": 512,
+    "num_steps": 719739,
+    "pre_emptying_time": 0.022668481,
     "queue_hwm": {
-     "count": 15444502,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.17714868253096938,
-    "total_time": 812.310470734,
-    "unconverged": 17264
+    "slot_occupancy": 0.0013406183570623398,
+    "total_time": 11.366047099,
+    "unconverged": 339
    },
    {
     "exception": {
@@ -1460,40 +1266,27 @@
     "failure": {}
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 813.2737220479997,
-     "brems-rel": 0.11099987599999979,
-     "brems-sb": 0.21450225999999978,
-     "conv-bethe-heitler": 0.12822356399999965,
-     "geo-boundary": 0.2863966860000003,
-     "ioni-moller-bhabha": 0.13119912399999986,
-     "msc-urban": 0.0005486860000000011,
-     "photoel-livermore": 0.20268517000000005,
-     "physics-discrete-select": 0.2702672890000003,
-     "pre-step": 1.4877364259999983,
-     "scat-klein-nishina": 0.258098225,
-     "scat-rayleigh": 0.153244758
-    },
+    "action_times": {},
     "active_hwm": {
-     "count": 1048576,
-     "index": 276
+     "count": 9100,
+     "index": 4
     },
-    "avg_steps_per_primary": 41813.539010989014,
-    "avg_time_per_primary": 0.08977414935615384,
-    "avg_time_per_step": 2.1470115058321257e-06,
-    "emptying_step": 277,
+    "avg_steps_per_primary": 79.0921978021978,
+    "avg_time_per_primary": 0.0012524731572527473,
+    "avg_time_per_step": 1.583560947926957e-05,
+    "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 380503205,
-    "pre_emptying_time": 0.512195439,
+    "num_step_iters": 512,
+    "num_steps": 719739,
+    "pre_emptying_time": 0.02280755,
     "queue_hwm": {
-     "count": 15462701,
-     "index": 73
+     "count": 0,
+     "index": 511
     },
-    "slot_occupancy": 0.1771856122650206,
-    "total_time": 816.944759141,
-    "unconverged": 17418
+    "slot_occupancy": 0.0013406183570623398,
+    "total_time": 11.397505731,
+    "unconverged": 339
    }
   ],
   "system": {
@@ -1517,7 +1310,7 @@
     "seltzer_berger_interact": 0.5
    },
    "vecgeom": null,
-   "version": "v0.1.4+374bda2d"
+   "version": "v0.2.0-1+49ccc7c8"
   }
  },
  "simple-cms+field+msc-vecgeom-cpu": {
@@ -1545,7 +1338,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1566,7 +1359,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -1589,7 +1382,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1611,7 +1404,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1632,7 +1425,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -1655,29 +1448,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1699,7 +1470,29 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
     }
@@ -1732,7 +1525,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1753,8 +1546,8 @@
     },
     "failure": {
      "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
     }
@@ -1775,7 +1568,29 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -1798,7 +1613,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1819,8 +1634,8 @@
     },
     "failure": {
      "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
     }
@@ -1841,7 +1656,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -1864,29 +1679,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -1927,20 +1720,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.204833984375,
-    "avg_time_per_primary": 0.35475451217114257,
-    "avg_time_per_step": 0.0006690895469685534,
+    "avg_time_per_primary": 0.3552446462277832,
+    "avg_time_per_step": 0.0006700139709368476,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171719,
-    "pre_emptying_time": 0.785529695,
+    "pre_emptying_time": 0.785948667,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112854652106762,
-    "total_time": 1453.074481853,
+    "total_time": 1455.082070949,
     "unconverged": 1
    },
    {
@@ -1958,20 +1751,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.35501888332861326,
-    "avg_time_per_step": 0.0006695878594450481,
+    "avg_time_per_primary": 0.3538381279013672,
+    "avg_time_per_step": 0.0006673608807231136,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171720,
-    "pre_emptying_time": 0.786430988,
+    "pre_emptying_time": 0.786350484,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1454.157346114,
+    "total_time": 1449.320971884,
     "unconverged": 1
    },
    {
@@ -1989,20 +1782,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.20458984375,
-    "avg_time_per_primary": 0.39513020671435545,
-    "avg_time_per_step": 0.0007452410150406267,
+    "avg_time_per_primary": 0.3717292723210449,
+    "avg_time_per_step": 0.0007011053458262077,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171718,
-    "pre_emptying_time": 0.78677297,
+    "pre_emptying_time": 0.786501566,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112849995493889,
-    "total_time": 1618.453326702,
+    "total_time": 1522.603099427,
     "unconverged": 1
    },
    {
@@ -2020,20 +1813,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.3535015532055664,
-    "avg_time_per_step": 0.000666726079757059,
+    "avg_time_per_primary": 0.3536315641689453,
+    "avg_time_per_step": 0.00066697128858048,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171720,
-    "pre_emptying_time": 0.788030983,
+    "pre_emptying_time": 0.786951523,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1447.94236193,
+    "total_time": 1448.474886836,
     "unconverged": 1
    },
    {
@@ -2051,20 +1844,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.20458984375,
-    "avg_time_per_primary": 0.35835206961376953,
-    "avg_time_per_step": 0.0006758750800693276,
+    "avg_time_per_primary": 0.38683967141137693,
+    "avg_time_per_step": 0.0007296045315740809,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171718,
-    "pre_emptying_time": 0.785797451,
+    "pre_emptying_time": 0.785812727,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112849995493889,
-    "total_time": 1467.810077138,
+    "total_time": 1584.495294101,
     "unconverged": 1
    },
    {
@@ -2082,20 +1875,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.36175858644702147,
-    "avg_time_per_step": 0.0006822993618362404,
+    "avg_time_per_primary": 0.36191877964086916,
+    "avg_time_per_step": 0.0006826014962375445,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171720,
-    "pre_emptying_time": 0.787153314,
+    "pre_emptying_time": 0.786067836,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1481.763170087,
+    "total_time": 1482.419321409,
     "unconverged": 1
    },
    {
@@ -2113,20 +1906,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.37729614439257814,
-    "avg_time_per_step": 0.0007116041697051186,
+    "avg_time_per_primary": 0.36183569985009767,
+    "avg_time_per_step": 0.0006824448025463688,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171720,
-    "pre_emptying_time": 0.785826437,
+    "pre_emptying_time": 0.785902069,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1545.405007432,
+    "total_time": 1482.079026586,
     "unconverged": 1
    },
    {
@@ -2144,20 +1937,20 @@
      "index": 72
     },
     "avg_steps_per_primary": 530.205078125,
-    "avg_time_per_primary": 0.357479460875,
-    "avg_time_per_step": 0.0006742286628773507,
+    "avg_time_per_primary": 0.3569726041477051,
+    "avg_time_per_step": 0.0006732726993300242,
     "emptying_step": 73,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
     "num_steps": 2171720,
-    "pre_emptying_time": 0.786596827,
+    "pre_emptying_time": 0.785795424,
     "queue_hwm": {
      "count": 5004,
      "index": 4
     },
     "slot_occupancy": 0.0010112859308719635,
-    "total_time": 1464.235871744,
+    "total_time": 1462.159786589,
     "unconverged": 1
    }
   ],
@@ -2202,20 +1995,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88505494505495,
-    "avg_time_per_primary": 0.0048246827796703294,
-    "avg_time_per_step": 4.513898395009942e-05,
+    "avg_time_per_primary": 0.004811299493406593,
+    "avg_time_per_step": 4.501377199908704e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972654,
-    "pre_emptying_time": 0.022772126,
+    "pre_emptying_time": 0.022695424,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.0004529273137450218,
-    "total_time": 43.904613295,
+    "total_time": 43.78282539,
     "unconverged": 87
    },
    {
@@ -2233,20 +2026,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88516483516483,
-    "avg_time_per_primary": 0.0047990867043956045,
-    "avg_time_per_step": 4.4899464877063295e-05,
+    "avg_time_per_primary": 0.004766889533296703,
+    "avg_time_per_step": 4.45982334465972e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972655,
-    "pre_emptying_time": 0.02266585,
+    "pre_emptying_time": 0.022618035,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.00045292777940630913,
-    "total_time": 43.67168901,
+    "total_time": 43.378694753,
     "unconverged": 87
    },
    {
@@ -2264,20 +2057,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88516483516483,
-    "avg_time_per_primary": 0.004840738594395605,
-    "avg_time_per_step": 4.528915310053411e-05,
+    "avg_time_per_primary": 0.00483228666956044,
+    "avg_time_per_step": 4.521007828366687e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972655,
-    "pre_emptying_time": 0.022757127,
+    "pre_emptying_time": 0.022882349,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.00045292777940630913,
-    "total_time": 44.050721209,
+    "total_time": 43.973808693,
     "unconverged": 87
    },
    {
@@ -2295,20 +2088,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88505494505495,
-    "avg_time_per_primary": 0.004809665400329671,
-    "avg_time_per_step": 4.499848367764899e-05,
+    "avg_time_per_primary": 0.004848828436263736,
+    "avg_time_per_step": 4.53648869690558e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972654,
-    "pre_emptying_time": 0.022879613,
+    "pre_emptying_time": 0.022753365,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.0004529273137450218,
-    "total_time": 43.767955143,
+    "total_time": 44.12433877,
     "unconverged": 87
    },
    {
@@ -2326,20 +2119,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88505494505495,
-    "avg_time_per_primary": 0.00483312268021978,
-    "avg_time_per_step": 4.521794635091204e-05,
+    "avg_time_per_primary": 0.004821966196813187,
+    "avg_time_per_step": 4.5113568022133256e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972654,
-    "pre_emptying_time": 0.022724814,
+    "pre_emptying_time": 0.022739539,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.0004529273137450218,
-    "total_time": 43.98141639,
+    "total_time": 43.879892391,
     "unconverged": 87
    },
    {
@@ -2357,20 +2150,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88516483516483,
-    "avg_time_per_primary": 0.004766318383296704,
-    "avg_time_per_step": 4.459288986125605e-05,
+    "avg_time_per_primary": 0.004793182337472527,
+    "avg_time_per_step": 4.48442245924814e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972655,
-    "pre_emptying_time": 0.022791954,
+    "pre_emptying_time": 0.022878888,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.00045292777940630913,
-    "total_time": 43.373497288,
+    "total_time": 43.617959271,
     "unconverged": 87
    },
    {
@@ -2388,20 +2181,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88516483516483,
-    "avg_time_per_primary": 0.004801227728571429,
-    "avg_time_per_step": 4.491949594666146e-05,
+    "avg_time_per_primary": 0.0048018422221978024,
+    "avg_time_per_step": 4.492524504783299e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972655,
-    "pre_emptying_time": 0.02283005,
+    "pre_emptying_time": 0.022883576,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.00045292777940630913,
-    "total_time": 43.69117233,
+    "total_time": 43.696764222,
     "unconverged": 87
    },
    {
@@ -2419,20 +2212,20 @@
      "index": 4
     },
     "avg_steps_per_primary": 106.88516483516483,
-    "avg_time_per_primary": 0.004749632914285715,
-    "avg_time_per_step": 4.443678336100673e-05,
+    "avg_time_per_primary": 0.004777636211428572,
+    "avg_time_per_step": 4.469877759740093e-05,
     "emptying_step": 5,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2048,
     "num_steps": 972655,
-    "pre_emptying_time": 0.022783768,
+    "pre_emptying_time": 0.022827849,
     "queue_hwm": {
      "count": 0,
      "index": 2047
     },
     "slot_occupancy": 0.00045292777940630913,
-    "total_time": 43.22165952,
+    "total_time": 43.476489524,
     "unconverged": 87
    }
   ],
@@ -5109,37 +4902,6 @@
     "failure": {}
    },
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 120052
-    },
-    "avg_steps_per_primary": 120094.64306640625,
-    "avg_time_per_primary": 0.017124068862792968,
-    "avg_time_per_step": 1.4258811571906856e-07,
-    "emptying_step": 120053,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120182,
-    "num_steps": 491907658,
-    "pre_emptying_time": 0.000643673,
-    "queue_hwm": {
-     "count": 216219,
-     "index": 125
-    },
-    "slot_occupancy": 0.9992731279759552,
-    "total_time": 70.140186062,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "exception": {
      "context": "result",
      "str": "'result'",
@@ -5147,9 +4909,8 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "srun: error: crusher170: task 0: Aborted"
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
     }
@@ -5170,9 +4931,8 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "srun: error: crusher170: task 0: Aborted"
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
     }
@@ -5189,23 +4949,23 @@
     "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 120063
+     "index": 118330
     },
-    "avg_steps_per_primary": 120122.75366210938,
-    "avg_time_per_primary": 0.04140127998144531,
-    "avg_time_per_step": 3.446580994796544e-07,
-    "emptying_step": 120064,
+    "avg_steps_per_primary": 118405.74853515625,
+    "avg_time_per_primary": 0.02240898751171875,
+    "avg_time_per_step": 1.8925590850908072e-07,
+    "emptying_step": 118331,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120210,
-    "num_steps": 492022799,
-    "pre_emptying_time": 0.001477273,
+    "num_step_iters": 118503,
+    "num_steps": 484989946,
+    "pre_emptying_time": 0.000646969,
     "queue_hwm": {
-     "count": 217012,
-     "index": 132
+     "count": 215429,
+     "index": 129
     },
-    "slot_occupancy": 0.9992742173039628,
-    "total_time": 169.579642804,
+    "slot_occupancy": 0.9991793333093361,
+    "total_time": 91.787212848,
     "unconverged": 0
    },
    {
@@ -5220,23 +4980,23 @@
     "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 120054
+     "index": 118383
     },
-    "avg_steps_per_primary": 120097.21533203125,
-    "avg_time_per_primary": 0.02566446847949219,
-    "avg_time_per_step": 2.1369744842574374e-07,
-    "emptying_step": 120055,
+    "avg_steps_per_primary": 118428.72973632812,
+    "avg_time_per_primary": 0.04954994305371094,
+    "avg_time_per_step": 4.1839461728610814e-07,
+    "emptying_step": 118384,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120174,
-    "num_steps": 491918194,
-    "pre_emptying_time": 0.000509394,
+    "num_step_iters": 118521,
+    "num_steps": 485084077,
+    "pre_emptying_time": 0.001500225,
     "queue_hwm": {
-     "count": 215231,
-     "index": 130
+     "count": 217624,
+     "index": 128
     },
-    "slot_occupancy": 0.9993610542382816,
-    "total_time": 105.121662892,
+    "slot_occupancy": 0.9992214859504065,
+    "total_time": 202.956566748,
     "unconverged": 0
    },
    {
@@ -5255,9 +5015,8 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      "srun: error: crusher170: task 0: Aborted"
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
     }
@@ -5274,24 +5033,46 @@
     "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 120063
+     "index": 118411
     },
-    "avg_steps_per_primary": 120111.33251953125,
-    "avg_time_per_primary": 0.017247051044189454,
-    "avg_time_per_step": 1.4359220468547312e-07,
-    "emptying_step": 120064,
+    "avg_steps_per_primary": 118451.92993164062,
+    "avg_time_per_primary": 0.027661917587646485,
+    "avg_time_per_step": 2.3352863565507424e-07,
+    "emptying_step": 118412,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120186,
-    "num_steps": 491976018,
-    "pre_emptying_time": 0.000608696,
+    "num_step_iters": 118547,
+    "num_steps": 485179105,
+    "pre_emptying_time": 0.000656517,
     "queue_hwm": {
-     "count": 217297,
-     "index": 133
+     "count": 214830,
+     "index": 129
     },
-    "slot_occupancy": 0.9993787339584581,
-    "total_time": 70.643921077,
+    "slot_occupancy": 0.9991980390194659,
+    "total_time": 113.303214439,
     "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "srun: error: crusher191: task 0: Aborted"
+     ],
+     "stdout": []
+    }
    },
    {
     "exception": {
@@ -5305,23 +5086,23 @@
     "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 120031
+     "index": 118371
     },
-    "avg_steps_per_primary": 120075.20434570312,
-    "avg_time_per_primary": 0.02477284716015625,
-    "avg_time_per_step": 2.0631109724230707e-07,
-    "emptying_step": 120032,
+    "avg_steps_per_primary": 118411.19580078125,
+    "avg_time_per_primary": 0.03731043282861328,
+    "avg_time_per_step": 3.1509210405564637e-07,
+    "emptying_step": 118372,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120169,
-    "num_steps": 491828037,
-    "pre_emptying_time": 0.000640979,
+    "num_step_iters": 118523,
+    "num_steps": 485012258,
+    "pre_emptying_time": 0.001191078,
     "queue_hwm": {
-     "count": 214188,
+     "count": 213734,
      "index": 126
     },
-    "slot_occupancy": 0.9992194687956388,
-    "total_time": 101.469581968,
+    "slot_occupancy": 0.9990566877380866,
+    "total_time": 152.823532866,
     "unconverged": 0
    }
   ],
@@ -5330,7 +5111,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.1.4+374bda2d"
+   "version": "v0.2.0-1+49ccc7c8"
   }
  },
  "testem3-flat+field-orange-gpu": {
@@ -5360,50 +5141,26 @@
     "failure": {}
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      ":0:rocdevice.cpp            :2614: 559866032022 us: 68417: [tid:0x7fffd4457700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-      "srun: error: crusher170: task 0: Aborted"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 406
+     "index": 439
     },
-    "avg_steps_per_primary": 49319.667692307696,
-    "avg_time_per_primary": 0.000589586009010989,
-    "avg_time_per_step": 1.1954379187817315e-08,
-    "emptying_step": 407,
+    "avg_steps_per_primary": 53301.56087912088,
+    "avg_time_per_primary": 0.0007241914258241758,
+    "avg_time_per_step": 1.3586683276809137e-08,
+    "emptying_step": 440,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 603,
-    "num_steps": 448808976,
-    "pre_emptying_time": 0.009123276,
+    "num_step_iters": 623,
+    "num_steps": 485044204,
+    "pre_emptying_time": 0.013238979,
     "queue_hwm": {
-     "count": 8067723,
+     "count": 7827381,
      "index": 98
     },
-    "slot_occupancy": 0.7098135877011428,
-    "total_time": 5.365232682,
+    "slot_occupancy": 0.7424947025305195,
+    "total_time": 6.590141975,
     "unconverged": 0
    },
    {
@@ -5422,10 +5179,9 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      ":0:rocdevice.cpp            :2614: 559865381009 us: 68439: [tid:0x7fffd4457700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-      "srun: error: crusher170: task 0: Aborted"
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      ":0:rocdevice.cpp            :2614: 833889383963 us: 63837: [tid:0x7fffd4257700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
     }
@@ -5442,23 +5198,23 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 406
+     "index": 439
     },
-    "avg_steps_per_primary": 49301.51835164835,
-    "avg_time_per_primary": 0.0005894536787912088,
-    "avg_time_per_step": 1.1956095846518709e-08,
-    "emptying_step": 407,
+    "avg_steps_per_primary": 53322.42549450549,
+    "avg_time_per_primary": 0.0007316079375824176,
+    "avg_time_per_step": 1.372045496425898e-08,
+    "emptying_step": 440,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 575,
-    "num_steps": 448643817,
-    "pre_emptying_time": 0.009074399,
+    "num_step_iters": 614,
+    "num_steps": 485234072,
+    "pre_emptying_time": 0.012607261,
     "queue_hwm": {
-     "count": 8070543,
+     "count": 7848093,
      "index": 98
     },
-    "slot_occupancy": 0.7441044964997665,
-    "total_time": 5.364028477,
+    "slot_occupancy": 0.7536730812892851,
+    "total_time": 6.657632232,
     "unconverged": 0
    },
    {
@@ -5477,58 +5233,9 @@
     },
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      ":0:rocdevice.cpp            :2614: 559865541050 us: 68449: [tid:0x7fffd4457700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-      "srun: error: crusher170: task 0: Aborted"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      ":0:rocdevice.cpp            :2614: 559866322747 us: 68448: [tid:0x7fffd4457700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-      "srun: error: crusher170: task 0: Aborted"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:300: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
-      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:331: warning: Volume/material mapping is inconsistent between Geant4 data and geometry file: attempting to remap",
-      ":0:rocdevice.cpp            :2614: 559866147439 us: 68438: [tid:0x7fffd4457700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
-      "srun: error: crusher170: task 0: Aborted"
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      ":0:rocdevice.cpp            :2614: 833887352803 us: 63842: [tid:0x7fffd4257700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
     }
@@ -5545,23 +5252,100 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 406
+     "index": 439
     },
-    "avg_steps_per_primary": 49301.37362637363,
-    "avg_time_per_primary": 0.0005891557792307692,
-    "avg_time_per_step": 1.1950088524827673e-08,
-    "emptying_step": 407,
+    "avg_steps_per_primary": 53327.93142857143,
+    "avg_time_per_primary": 0.0007327797307692307,
+    "avg_time_per_step": 1.3741011720110156e-08,
+    "emptying_step": 440,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 590,
-    "num_steps": 448642500,
-    "pre_emptying_time": 0.008947794,
+    "num_step_iters": 657,
+    "num_steps": 485284176,
+    "pre_emptying_time": 0.01225464,
     "queue_hwm": {
-     "count": 8067277,
+     "count": 7817817,
      "index": 98
     },
-    "slot_occupancy": 0.7251844567767645,
-    "total_time": 5.361317591,
+    "slot_occupancy": 0.7044186526781893,
+    "total_time": 6.66829555,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      ":0:rocdevice.cpp            :2614: 833887323352 us: 63824: [tid:0x7fffd4257700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher191: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      ":0:rocdevice.cpp            :2614: 833887047443 us: 63836: [tid:0x7fffd4257700] Device::callbackQueue aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+      "srun: error: crusher191: task 0: Aborted"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 439
+    },
+    "avg_steps_per_primary": 53296.5689010989,
+    "avg_time_per_primary": 0.0007302533949450549,
+    "avg_time_per_step": 1.3701696187988532e-08,
+    "emptying_step": 440,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 648,
+    "num_steps": 484998777,
+    "pre_emptying_time": 0.01198563,
+    "queue_hwm": {
+     "count": 7810812,
+     "index": 99
+    },
+    "slot_occupancy": 0.7137822177675035,
+    "total_time": 6.645305894,
     "unconverged": 0
    }
   ],
@@ -5586,7 +5370,7 @@
     "seltzer_berger_interact": 0.5
    },
    "vecgeom": null,
-   "version": "v0.1.4+374bda2d"
+   "version": "v0.2.0-1+49ccc7c8"
   }
  },
  "testem3-flat+msc-orange-cpu": {
@@ -6018,240 +5802,240 @@
     "action_times": {},
     "active_hwm": {
      "count": 4096,
-     "index": 119912
+     "index": 120041
     },
-    "avg_steps_per_primary": 119965.14770507812,
-    "avg_time_per_primary": 0.01784531557739258,
-    "avg_time_per_step": 1.4875416667900443e-07,
-    "emptying_step": 119913,
+    "avg_steps_per_primary": 120083.04174804688,
+    "avg_time_per_primary": 0.021668898947021484,
+    "avg_time_per_step": 1.8044928435845458e-07,
+    "emptying_step": 120042,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120071,
-    "num_steps": 491377245,
-    "pre_emptying_time": 0.000451332,
-    "queue_hwm": {
-     "count": 215992,
-     "index": 125
-    },
-    "slot_occupancy": 0.999118419144324,
-    "total_time": 73.094412605,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119966
-    },
-    "avg_steps_per_primary": 119995.51123046875,
-    "avg_time_per_primary": 0.034753237400146485,
-    "avg_time_per_step": 2.896211453559947e-07,
-    "emptying_step": 119967,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120072,
-    "num_steps": 491501614,
-    "pre_emptying_time": 0.00099934,
-    "queue_hwm": {
-     "count": 216943,
-     "index": 127
-    },
-    "slot_occupancy": 0.9993629758017585,
-    "total_time": 142.349260391,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119869
-    },
-    "avg_steps_per_primary": 119946.80004882812,
-    "avg_time_per_primary": 0.019842820979492186,
-    "avg_time_per_step": 1.654301821425377e-07,
-    "emptying_step": 119870,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120058,
-    "num_steps": 491302093,
-    "pre_emptying_time": 0.000474457,
-    "queue_hwm": {
-     "count": 216671,
-     "index": 129
-    },
-    "slot_occupancy": 0.9990737814125517,
-    "total_time": 81.276194732,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119893
-    },
-    "avg_steps_per_primary": 119969.1904296875,
-    "avg_time_per_primary": 0.028983116658203124,
-    "avg_time_per_step": 2.4158799900537615e-07,
-    "emptying_step": 119894,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120071,
-    "num_steps": 491393804,
-    "pre_emptying_time": 0.000941448,
-    "queue_hwm": {
-     "count": 214843,
-     "index": 133
-    },
-    "slot_occupancy": 0.9991520885949772,
-    "total_time": 118.714845832,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119991
-    },
-    "avg_steps_per_primary": 120028.81640625,
-    "avg_time_per_primary": 0.01976694067626953,
-    "avg_time_per_step": 1.6468495872996251e-07,
-    "emptying_step": 119992,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120131,
-    "num_steps": 491638032,
-    "pre_emptying_time": 0.000463626,
-    "queue_hwm": {
-     "count": 214443,
-     "index": 128
-    },
-    "slot_occupancy": 0.9991493986252508,
-    "total_time": 80.96538901,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119865
-    },
-    "avg_steps_per_primary": 119930.802734375,
-    "avg_time_per_primary": 0.019918567151123046,
-    "avg_time_per_step": 1.6608383081733442e-07,
-    "emptying_step": 119866,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120046,
-    "num_steps": 491236568,
-    "pre_emptying_time": 0.001271537,
-    "queue_hwm": {
-     "count": 217451,
-     "index": 129
-    },
-    "slot_occupancy": 0.9990403906367142,
-    "total_time": 81.586451051,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119905
-    },
-    "avg_steps_per_primary": 119963.44799804688,
-    "avg_time_per_primary": 0.018413134045410156,
-    "avg_time_per_step": 1.5348953662710613e-07,
-    "emptying_step": 119906,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120058,
-    "num_steps": 491370283,
-    "pre_emptying_time": 0.000503072,
-    "queue_hwm": {
-     "count": 215237,
-     "index": 127
-    },
-    "slot_occupancy": 0.9992124473008619,
-    "total_time": 75.42019705,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 4096,
-     "index": 119927
-    },
-    "avg_steps_per_primary": 120006.20385742188,
-    "avg_time_per_primary": 0.022342935023925783,
-    "avg_time_per_step": 1.861814998370517e-07,
-    "emptying_step": 119928,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 120097,
-    "num_steps": 491545411,
-    "pre_emptying_time": 0.000456321,
+    "num_step_iters": 120162,
+    "num_steps": 491860139,
+    "pre_emptying_time": 0.00038349,
     "queue_hwm": {
      "count": 216170,
-     "index": 130
+     "index": 128
     },
-    "slot_occupancy": 0.9992439765974327,
-    "total_time": 91.516661858,
+    "slot_occupancy": 0.99934290164983,
+    "total_time": 88.755810087,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120034
+    },
+    "avg_steps_per_primary": 120091.19750976562,
+    "avg_time_per_primary": 0.0324907817512207,
+    "avg_time_per_step": 2.7055090152280815e-07,
+    "emptying_step": 120035,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120212,
+    "num_steps": 491893545,
+    "pre_emptying_time": 0.000435119,
+    "queue_hwm": {
+     "count": 214843,
+     "index": 129
+    },
+    "slot_occupancy": 0.9989950879260442,
+    "total_time": 133.082242053,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120055
+    },
+    "avg_steps_per_primary": 120099.16625976562,
+    "avg_time_per_primary": 0.022808170084472657,
+    "avg_time_per_step": 1.8991114422176977e-07,
+    "emptying_step": 120056,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120216,
+    "num_steps": 491926185,
+    "pre_emptying_time": 0.000418277,
+    "queue_hwm": {
+     "count": 215462,
+     "index": 127
+    },
+    "slot_occupancy": 0.9990281348553073,
+    "total_time": 93.422264666,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120118
+    },
+    "avg_steps_per_primary": 120149.35693359375,
+    "avg_time_per_primary": 0.03617800413330078,
+    "avg_time_per_step": 3.011085956398108e-07,
+    "emptying_step": 120119,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120231,
+    "num_steps": 492131766,
+    "pre_emptying_time": 0.001292425,
+    "queue_hwm": {
+     "count": 216976,
+     "index": 129
+    },
+    "slot_occupancy": 0.9993209482878271,
+    "total_time": 148.18510493,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120080
+    },
+    "avg_steps_per_primary": 120120.58251953125,
+    "avg_time_per_primary": 0.018507315806640626,
+    "avg_time_per_step": 1.5407281099083408e-07,
+    "emptying_step": 120081,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120218,
+    "num_steps": 492013906,
+    "pre_emptying_time": 0.000491969,
+    "queue_hwm": {
+     "count": 215304,
+     "index": 129
+    },
+    "slot_occupancy": 0.9991896597808253,
+    "total_time": 75.805965544,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120024
+    },
+    "avg_steps_per_primary": 120107.90454101562,
+    "avg_time_per_primary": 0.01205784102319336,
+    "avg_time_per_step": 1.0039173582514488e-07,
+    "emptying_step": 120025,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120207,
+    "num_steps": 491961977,
+    "pre_emptying_time": 0.000384452,
+    "queue_hwm": {
+     "count": 215269,
+     "index": 128
+    },
+    "slot_occupancy": 0.9991756265526602,
+    "total_time": 49.388916831,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120095
+    },
+    "avg_steps_per_primary": 120133.76733398438,
+    "avg_time_per_primary": 0.05382640697387695,
+    "avg_time_per_step": 4.4805393328117266e-07,
+    "emptying_step": 120096,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120234,
+    "num_steps": 492067911,
+    "pre_emptying_time": 0.000826185,
+    "queue_hwm": {
+     "count": 217485,
+     "index": 128
+    },
+    "slot_occupancy": 0.9991663533940847,
+    "total_time": 220.472962965,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 4096,
+     "index": 120090
+    },
+    "avg_steps_per_primary": 120138.99829101562,
+    "avg_time_per_primary": 0.011961880662597657,
+    "avg_time_per_step": 9.956700848813557e-08,
+    "emptying_step": 120091,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 120230,
+    "num_steps": 492089337,
+    "pre_emptying_time": 0.000463875,
+    "queue_hwm": {
+     "count": 213703,
+     "index": 128
+    },
+    "slot_occupancy": 0.999243103144104,
+    "total_time": 48.995863194,
     "unconverged": 0
    }
   ],
@@ -6260,7 +6044,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.1.4+374bda2d"
+   "version": "v0.2.0-1+49ccc7c8"
   }
  },
  "testem3-flat-orange-gpu": {
@@ -6291,114 +6075,21 @@
      "count": 1048576,
      "index": 445
     },
-    "avg_steps_per_primary": 54004.526813186814,
-    "avg_time_per_primary": 0.00036463722549450546,
-    "avg_time_per_step": 6.75197519563246e-09,
+    "avg_steps_per_primary": 54069.13857142857,
+    "avg_time_per_primary": 0.00035635146032967035,
+    "avg_time_per_step": 6.590662802199238e-09,
     "emptying_step": 446,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 616,
-    "num_steps": 491441194,
-    "pre_emptying_time": 0.006374895,
+    "num_step_iters": 618,
+    "num_steps": 492029161,
+    "pre_emptying_time": 0.006230193,
     "queue_hwm": {
-     "count": 7826992,
-     "index": 99
-    },
-    "slot_occupancy": 0.760835786918541,
-    "total_time": 3.318198752,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 444
-    },
-    "avg_steps_per_primary": 54003.69835164835,
-    "avg_time_per_primary": 0.00036422664890109886,
-    "avg_time_per_step": 6.744476026982726e-09,
-    "emptying_step": 445,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 612,
-    "num_steps": 491433655,
-    "pre_emptying_time": 0.006393401,
-    "queue_hwm": {
-     "count": 7862716,
-     "index": 99
-    },
-    "slot_occupancy": 0.7657968218809639,
-    "total_time": 3.314462505,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
-    },
-    "avg_steps_per_primary": 54016.41098901099,
-    "avg_time_per_primary": 0.0003640673037362637,
-    "avg_time_per_step": 6.739938790274848e-09,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 617,
-    "num_steps": 491549340,
-    "pre_emptying_time": 0.006365486,
-    "queue_hwm": {
-     "count": 7839331,
-     "index": 99
-    },
-    "slot_occupancy": 0.7597698230217883,
-    "total_time": 3.313012464,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 444
-    },
-    "avg_steps_per_primary": 53996.5378021978,
-    "avg_time_per_primary": 0.00036584865461538463,
-    "avg_time_per_step": 6.775409489319029e-09,
-    "emptying_step": 445,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 629,
-    "num_steps": 491368494,
-    "pre_emptying_time": 0.006363081,
-    "queue_hwm": {
-     "count": 7812945,
+     "count": 7839071,
      "index": 98
     },
-    "slot_occupancy": 0.7450008149745923,
-    "total_time": 3.329222757,
+    "slot_occupancy": 0.7592808637032616,
+    "total_time": 3.242798289,
     "unconverged": 0
    },
    {
@@ -6415,114 +6106,207 @@
      "count": 1048576,
      "index": 445
     },
-    "avg_steps_per_primary": 54000.04406593407,
-    "avg_time_per_primary": 0.0003645239517582418,
-    "avg_time_per_step": 6.750438042479334e-09,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 620,
-    "num_steps": 491400401,
-    "pre_emptying_time": 0.006378131,
-    "queue_hwm": {
-     "count": 7813543,
-     "index": 98
-    },
-    "slot_occupancy": 0.7558644217829551,
-    "total_time": 3.317167961,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
-    },
-    "avg_steps_per_primary": 54011.04450549451,
-    "avg_time_per_primary": 0.00036522509417582415,
-    "avg_time_per_step": 6.762044643270509e-09,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 627,
-    "num_steps": 491500505,
-    "pre_emptying_time": 0.00636707,
-    "queue_hwm": {
-     "count": 7815448,
-     "index": 99
-    },
-    "slot_occupancy": 0.747578003379907,
-    "total_time": 3.323548357,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
-    },
-    "avg_steps_per_primary": 54010.24,
-    "avg_time_per_primary": 0.0003670920864835165,
-    "avg_time_per_step": 6.7967127434263666e-09,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 623,
-    "num_steps": 491493184,
-    "pre_emptying_time": 0.006368452,
-    "queue_hwm": {
-     "count": 7799293,
-     "index": 98
-    },
-    "slot_occupancy": 0.7523666553283006,
-    "total_time": 3.340537987,
-    "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
-    },
-    "avg_steps_per_primary": 53997.41318681319,
-    "avg_time_per_primary": 0.0003631853776923077,
-    "avg_time_per_step": 6.725977343318399e-09,
+    "avg_steps_per_primary": 54056.96626373626,
+    "avg_time_per_primary": 0.0003564037171428571,
+    "avg_time_per_step": 6.593113557353811e-09,
     "emptying_step": 446,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 619,
-    "num_steps": 491376460,
-    "pre_emptying_time": 0.006361587,
+    "num_steps": 491918393,
+    "pre_emptying_time": 0.006198302,
     "queue_hwm": {
-     "count": 7839601,
+     "count": 7844210,
      "index": 99
     },
-    "slot_occupancy": 0.7570486423079532,
-    "total_time": 3.304986937,
+    "slot_occupancy": 0.7578835818609629,
+    "total_time": 3.243273826,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54073.65923076923,
+    "avg_time_per_primary": 0.000356730111978022,
+    "avg_time_per_step": 6.597114326138185e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 618,
+    "num_steps": 492070299,
+    "pre_emptying_time": 0.006210535,
+    "queue_hwm": {
+     "count": 7842293,
+     "index": 98
+    },
+    "slot_occupancy": 0.759344346314958,
+    "total_time": 3.246244019,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54042.54769230769,
+    "avg_time_per_primary": 0.000356843590989011,
+    "avg_time_per_step": 6.603012001223684e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 636,
+    "num_steps": 491787184,
+    "pre_emptying_time": 0.006230714,
+    "queue_hwm": {
+     "count": 7791935,
+     "index": 98
+    },
+    "slot_occupancy": 0.7374289410669099,
+    "total_time": 3.247276678,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54062.062967032965,
+    "avg_time_per_primary": 0.00035983814725274723,
+    "avg_time_per_step": 6.656019535772737e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 626,
+    "num_steps": 491964773,
+    "pre_emptying_time": 0.006200115,
+    "queue_hwm": {
+     "count": 7817968,
+     "index": 98
+    },
+    "slot_occupancy": 0.749479502534714,
+    "total_time": 3.27452714,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54053.086593406595,
+    "avg_time_per_primary": 0.00035570100285714284,
+    "avg_time_per_step": 6.580586332335947e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 614,
+    "num_steps": 491883088,
+    "pre_emptying_time": 0.006190266,
+    "queue_hwm": {
+     "count": 7818911,
+     "index": 98
+    },
+    "slot_occupancy": 0.7640004359938034,
+    "total_time": 3.236879126,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54058.83758241758,
+    "avg_time_per_primary": 0.0003561088679120879,
+    "avg_time_per_step": 6.587431099848712e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 614,
+    "num_steps": 491935422,
+    "pre_emptying_time": 0.006211217,
+    "queue_hwm": {
+     "count": 7829307,
+     "index": 99
+    },
+    "slot_occupancy": 0.7640817219737298,
+    "total_time": 3.240590698,
+    "unconverged": 0
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 445
+    },
+    "avg_steps_per_primary": 54031.09945054945,
+    "avg_time_per_primary": 0.00035472494021978023,
+    "avg_time_per_step": 6.565199372713726e-09,
+    "emptying_step": 446,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 611,
+    "num_steps": 491683005,
+    "pre_emptying_time": 0.006236945,
+    "queue_hwm": {
+     "count": 7809864,
+     "index": 99
+    },
+    "slot_occupancy": 0.7674393677282255,
+    "total_time": 3.227996956,
     "unconverged": 0
    }
   ],
@@ -6547,7 +6331,7 @@
     "seltzer_berger_interact": 0.5
    },
    "vecgeom": null,
-   "version": "v0.1.4+374bda2d"
+   "version": "v0.2.0-1+49ccc7c8"
   }
  },
  "testem3-flat-vecgeom-cpu": {
@@ -6574,73 +6358,7 @@
     },
     "failure": {
      "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -6663,7 +6381,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -6684,7 +6402,7 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -6706,7 +6424,29 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -6728,7 +6468,51 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -6762,7 +6546,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -6783,8 +6567,8 @@
     },
     "failure": {
      "stderr": [
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
     }
@@ -6805,7 +6589,29 @@
     },
     "failure": {
      "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
+      "srun: error: crusher191: task 0: Exited with exit code 2",
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
@@ -6828,51 +6634,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
-     ],
-     "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {
-     "stderr": [
-      "srun: error: crusher170: task 0: Exited with exit code 2",
-      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -6894,7 +6656,7 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }
@@ -6916,7 +6678,29 @@
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-      "srun: error: crusher170: task 0: Exited with exit code 2"
+      "srun: error: crusher191: task 0: Exited with exit code 2"
+     ],
+     "stdout": []
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'input'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {}
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'result'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "stderr": [
+      "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
+      "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
     }

@@ -2,6 +2,7 @@
 "input": {
 "_geometry": "vecgeom",
 "_instance": 0,
+"_log2_max_steps": 31,
 "_name": [
 "cms2018+field+msc",
 "vecgeom",
@@ -14,8 +15,8 @@
 },
 "stderr": [
 "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher123: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=248199.42"
+"srun: error: crusher191: task 0: Exited with exit code 2",
+"srun: launch/slurm: _step_signal: Terminating StepId=249648.110"
 ],
 "stdout": []
 }

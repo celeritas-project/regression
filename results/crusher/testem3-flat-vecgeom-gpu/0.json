@@ -2,6 +2,7 @@
 "input": {
 "_geometry": "vecgeom",
 "_instance": 0,
+"_log2_max_steps": 31,
 "_name": [
 "testem3-flat",
 "vecgeom",
@@ -12,8 +13,8 @@
 },
 "stderr": [
 "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher170: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=248008.184"
+"srun: error: crusher191: task 0: Exited with exit code 2",
+"srun: launch/slurm: _step_signal: Terminating StepId=249648.93"
 ],
 "stdout": []
 }
