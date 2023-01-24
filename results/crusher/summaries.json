@@ -8,180 +8,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -195,180 +107,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -382,180 +206,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -569,180 +305,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher123: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher123: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -766,14 +414,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -783,6 +423,11 @@
     "avg_time_per_primary": 0.1740343917192383,
     "avg_time_per_step": 0.0004174762481519874,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -797,14 +442,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -814,6 +451,11 @@
     "avg_time_per_primary": 0.17477486603344727,
     "avg_time_per_step": 0.0004192522632492558,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -828,14 +470,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -845,6 +479,11 @@
     "avg_time_per_primary": 0.17324647932763673,
     "avg_time_per_step": 0.0004155861923654913,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -859,14 +498,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -876,6 +507,11 @@
     "avg_time_per_primary": 0.17541675153051758,
     "avg_time_per_step": 0.0004207920266803552,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -890,14 +526,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -907,6 +535,12 @@
     "avg_time_per_primary": 0.17645520117871094,
     "avg_time_per_step": 0.00042328356923916654,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -921,14 +555,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -938,6 +564,12 @@
     "avg_time_per_primary": 0.1763109754807129,
     "avg_time_per_step": 0.0004229371029346224,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -952,14 +584,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -969,6 +593,12 @@
     "avg_time_per_primary": 0.17734855555004883,
     "avg_time_per_step": 0.00042542606374600225,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -983,14 +613,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1000,6 +622,12 @@
     "avg_time_per_primary": 0.18834948828613282,
     "avg_time_per_step": 0.00045181524688274336,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -1041,14 +669,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -1070,14 +690,6 @@
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 11.069079386,
     "unconverged": 339
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -1103,14 +715,6 @@
     "unconverged": 339
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -1132,14 +736,6 @@
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 11.265146009,
     "unconverged": 339
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -1165,14 +761,6 @@
     "unconverged": 339
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -1194,14 +782,6 @@
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 11.175458637,
     "unconverged": 339
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -1227,14 +807,6 @@
     "unconverged": 339
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -1256,14 +828,6 @@
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 11.366047099,
     "unconverged": 339
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -1322,180 +886,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -1509,180 +985,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -1706,14 +1094,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1723,6 +1103,12 @@
     "avg_time_per_primary": 0.3552446462277832,
     "avg_time_per_step": 0.0006700139709368476,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1737,14 +1123,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1754,6 +1132,11 @@
     "avg_time_per_primary": 0.3538381279013672,
     "avg_time_per_step": 0.0006673608807231136,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1768,14 +1151,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1785,6 +1160,11 @@
     "avg_time_per_primary": 0.3717292723210449,
     "avg_time_per_step": 0.0007011053458262077,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1799,14 +1179,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1816,6 +1188,14 @@
     "avg_time_per_primary": 0.3536315641689453,
     "avg_time_per_step": 0.00066697128858048,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "srun: error: slurm_receive_msgs: [[crusher191.crusher.olcf.ornl.gov]:6818] failed: Socket timed out on send/recv operation",
+      "srun: error: Failure sending signal 0 to StepId=249648.4 on node crusher191: Communication connection failure",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1830,14 +1210,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1847,6 +1219,12 @@
     "avg_time_per_primary": 0.38683967141137693,
     "avg_time_per_step": 0.0007296045315740809,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1861,14 +1239,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1878,6 +1248,12 @@
     "avg_time_per_primary": 0.36191877964086916,
     "avg_time_per_step": 0.0006826014962375445,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1892,14 +1268,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1909,6 +1277,11 @@
     "avg_time_per_primary": 0.36183569985009767,
     "avg_time_per_step": 0.0006824448025463688,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1923,14 +1296,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1940,6 +1305,11 @@
     "avg_time_per_primary": 0.3569726041477051,
     "avg_time_per_step": 0.0006732726993300242,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1981,14 +1351,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -2010,14 +1372,6 @@
     "slot_occupancy": 0.0004529273137450218,
     "total_time": 43.78282539,
     "unconverged": 87
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2043,14 +1397,6 @@
     "unconverged": 87
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -2072,14 +1418,6 @@
     "slot_occupancy": 0.00045292777940630913,
     "total_time": 43.973808693,
     "unconverged": 87
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2105,14 +1443,6 @@
     "unconverged": 87
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -2134,14 +1464,6 @@
     "slot_occupancy": 0.0004529273137450218,
     "total_time": 43.879892391,
     "unconverged": 87
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2167,14 +1489,6 @@
     "unconverged": 87
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 9100,
@@ -2196,14 +1510,6 @@
     "slot_occupancy": 0.00045292777940630913,
     "total_time": 43.696764222,
     "unconverged": 87
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2268,14 +1574,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2297,14 +1595,6 @@
     "slot_occupancy": 0.9986704833310526,
     "total_time": 65.75954826,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2330,14 +1620,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2359,14 +1641,6 @@
     "slot_occupancy": 0.9989711278392218,
     "total_time": 87.486018679,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2392,14 +1666,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2421,14 +1687,6 @@
     "slot_occupancy": 0.9990346110012228,
     "total_time": 107.578836647,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2454,14 +1712,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2483,14 +1733,6 @@
     "slot_occupancy": 0.9988039692594742,
     "total_time": 73.672959088,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2539,14 +1781,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -2568,14 +1802,6 @@
     "slot_occupancy": 0.630439656036453,
     "total_time": 2.191365886,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2601,14 +1827,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -2630,14 +1848,6 @@
     "slot_occupancy": 0.6933735390232034,
     "total_time": 2.152611855,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2663,14 +1873,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -2692,14 +1894,6 @@
     "slot_occupancy": 0.6606398898689927,
     "total_time": 2.179971932,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2725,14 +1919,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -2754,14 +1940,6 @@
     "slot_occupancy": 0.6551725654404398,
     "total_time": 2.174045469,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2830,14 +2008,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2859,14 +2029,6 @@
     "slot_occupancy": 0.9988619528578866,
     "total_time": 78.355425919,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2892,14 +2054,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2921,14 +2075,6 @@
     "slot_occupancy": 0.9991312055263092,
     "total_time": 95.745098367,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -2954,14 +2100,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -2983,14 +2121,6 @@
     "slot_occupancy": 0.999165698157802,
     "total_time": 89.108332824,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3016,14 +2146,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3045,14 +2167,6 @@
     "slot_occupancy": 0.9989961543811263,
     "total_time": 83.383923797,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3105,14 +2219,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -3134,14 +2240,6 @@
     "slot_occupancy": 0.6811188924880255,
     "total_time": 2.188583968,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3167,14 +2265,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -3196,14 +2286,6 @@
     "slot_occupancy": 0.6684141901794624,
     "total_time": 2.167540898,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3229,14 +2311,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -3258,14 +2332,6 @@
     "slot_occupancy": 0.7105612912714876,
     "total_time": 2.148692624,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3291,14 +2357,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -3320,14 +2378,6 @@
     "slot_occupancy": 0.6623553729351656,
     "total_time": 2.166684672,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3386,180 +2436,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher131: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -3573,180 +2535,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher131: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher131: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher131: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher131: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": 7,
+    "num_primaries": 9100
    }
   ],
   "system": []
@@ -3770,14 +2644,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3799,14 +2665,6 @@
     "slot_occupancy": 0.9988621864260583,
     "total_time": 45.529466973,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3832,14 +2690,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3861,14 +2711,6 @@
     "slot_occupancy": 0.9988654740797723,
     "total_time": 72.392448909,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3894,14 +2736,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3923,14 +2757,6 @@
     "slot_occupancy": 0.9989187328572289,
     "total_time": 56.943070482,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -3956,14 +2782,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3985,14 +2803,6 @@
     "slot_occupancy": 0.9989295027569349,
     "total_time": 46.507041191,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4045,14 +2855,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4074,14 +2876,6 @@
     "slot_occupancy": 0.7078370859127233,
     "total_time": 1.84159625,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4107,14 +2901,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4136,14 +2922,6 @@
     "slot_occupancy": 0.6705827355384827,
     "total_time": 1.876950352,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4169,14 +2947,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4198,14 +2968,6 @@
     "slot_occupancy": 0.6725843304003294,
     "total_time": 1.858291232,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4231,14 +2993,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4260,14 +3014,6 @@
     "slot_occupancy": 0.6854165811508227,
     "total_time": 1.851781716,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4332,14 +3078,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -4361,14 +3099,6 @@
     "slot_occupancy": 0.9988621864260583,
     "total_time": 76.929746762,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4394,14 +3124,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -4423,14 +3145,6 @@
     "slot_occupancy": 0.9988654740797723,
     "total_time": 43.682942519,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4456,14 +3170,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -4485,14 +3191,6 @@
     "slot_occupancy": 0.9989187328572289,
     "total_time": 174.480784872,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4518,14 +3216,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -4547,14 +3237,6 @@
     "slot_occupancy": 0.9989295027569349,
     "total_time": 75.806789558,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4603,14 +3285,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4632,14 +3306,6 @@
     "slot_occupancy": 0.7078370859127233,
     "total_time": 1.650092814,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4665,14 +3331,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4694,14 +3352,6 @@
     "slot_occupancy": 0.6705827355384827,
     "total_time": 1.667952648,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4727,14 +3377,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4756,14 +3398,6 @@
     "slot_occupancy": 0.6725843304003294,
     "total_time": 1.667617129,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4789,14 +3423,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -4818,14 +3444,6 @@
     "slot_occupancy": 0.6854165811508227,
     "total_time": 1.664130253,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -4894,56 +3512,26 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -4969,14 +3557,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -5000,34 +3580,15 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5053,34 +3614,15 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5133,14 +3675,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -5164,19 +3698,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5184,15 +3705,9 @@
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5218,19 +3733,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5238,15 +3740,9 @@
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5272,19 +3768,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5292,22 +3775,11 @@
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5315,15 +3787,9 @@
       "srun: error: crusher191: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5388,122 +3854,59 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -5529,48 +3932,26 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": {
@@ -5590,19 +3971,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5610,22 +3978,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5633,22 +3990,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5656,22 +4002,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5679,22 +4014,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5702,22 +4026,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5725,22 +4038,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5748,22 +4050,11 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-crusher/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -5771,7 +4062,9 @@
       "srun: error: crusher123: task 0: Aborted"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": []
@@ -5790,14 +4083,6 @@
    "cpu"
   ],
   "result": [
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
    {
     "action_times": {},
     "active_hwm": {
@@ -5820,14 +4105,6 @@
     "slot_occupancy": 0.99934290164983,
     "total_time": 88.755810087,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -5853,14 +4130,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -5882,14 +4151,6 @@
     "slot_occupancy": 0.9990281348553073,
     "total_time": 93.422264666,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -5915,14 +4176,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -5944,14 +4197,6 @@
     "slot_occupancy": 0.9991896597808253,
     "total_time": 75.805965544,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -5977,14 +4222,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -6006,14 +4243,6 @@
     "slot_occupancy": 0.9991663533940847,
     "total_time": 220.472962965,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -6062,14 +4291,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -6091,14 +4312,6 @@
     "slot_occupancy": 0.7592808637032616,
     "total_time": 3.242798289,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -6124,14 +4337,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -6153,14 +4358,6 @@
     "slot_occupancy": 0.759344346314958,
     "total_time": 3.246244019,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -6186,14 +4383,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -6215,14 +4404,6 @@
     "slot_occupancy": 0.749479502534714,
     "total_time": 3.27452714,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -6248,14 +4429,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
@@ -6277,14 +4450,6 @@
     "slot_occupancy": 0.7640817219737298,
     "total_time": 3.240590698,
     "unconverged": 0
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "action_times": {},
@@ -6343,180 +4508,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": []
@@ -6530,180 +4607,92 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "srun: error: crusher191: task 0: Exited with exit code 2",
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
       "srun: error: crusher191: task 0: Exited with exit code 2"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": []

@@ -20,14 +20,6 @@
    {
     "exception": {
      "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
      "str": "'active'",
      "type": "<class 'KeyError'>"
     },
@@ -39,14 +31,6 @@
      "what": "insufficient capacity (1048576) for track initializers (created 391 new secondaries for a total capacity requirement of 1048633)",
      "which": "runtime"
     }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "exception": {
@@ -66,14 +50,6 @@
    {
     "exception": {
      "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
      "str": "'active'",
      "type": "<class 'KeyError'>"
     },
@@ -85,14 +61,6 @@
      "what": "insufficient capacity (1048576) for track initializers (created 401 new secondaries for a total capacity requirement of 1048693)",
      "which": "runtime"
     }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
    },
    {
     "exception": {
@@ -110,31 +78,12 @@
     }
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": 7,
+    "num_primaries": 9100
    },
    {
     "exception": {
@@ -527,14 +476,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -544,6 +485,11 @@
     "avg_time_per_primary": 0.33025985491552734,
     "avg_time_per_step": 0.0007922321776938348,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -558,14 +504,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -575,6 +513,11 @@
     "avg_time_per_primary": 0.32965653703320313,
     "avg_time_per_step": 0.0007907844667987498,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -589,14 +532,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -606,6 +541,11 @@
     "avg_time_per_primary": 0.3274174139040527,
     "avg_time_per_step": 0.0007854136885587786,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -620,14 +560,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -637,6 +569,11 @@
     "avg_time_per_primary": 0.32852759729296876,
     "avg_time_per_step": 0.0007880763511989089,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -651,14 +588,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -668,6 +597,11 @@
     "avg_time_per_primary": 0.3337478072824707,
     "avg_time_per_step": 0.0008005995977936281,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -682,14 +616,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -699,6 +625,11 @@
     "avg_time_per_primary": 0.3337316604926758,
     "avg_time_per_step": 0.0008005599269217006,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -921,14 +852,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -938,6 +861,11 @@
     "avg_time_per_primary": 0.3302123807512207,
     "avg_time_per_step": 0.0007921182959730837,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -952,14 +880,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -969,6 +889,11 @@
     "avg_time_per_primary": 0.32962179428027344,
     "avg_time_per_step": 0.0007907011254229109,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -983,14 +908,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1000,6 +917,11 @@
     "avg_time_per_primary": 0.3277305640378418,
     "avg_time_per_step": 0.0007861648776868071,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -1014,14 +936,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1031,6 +945,11 @@
     "avg_time_per_primary": 0.3286545512067871,
     "avg_time_per_step": 0.0007883808899286739,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -1045,14 +964,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1062,6 +973,11 @@
     "avg_time_per_primary": 0.333932440581543,
     "avg_time_per_step": 0.000801042499115378,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -1076,14 +992,6 @@
     "unconverged": 2
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1093,6 +1001,11 @@
     "avg_time_per_primary": 0.3339624975432129,
     "avg_time_per_step": 0.0008011136618955896,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 131072: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 131072,
@@ -1315,14 +1228,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1332,6 +1237,11 @@
     "avg_time_per_primary": 0.6439906110905762,
     "avg_time_per_step": 0.0012146072042593908,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1346,14 +1256,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1363,6 +1265,11 @@
     "avg_time_per_primary": 0.642491218739502,
     "avg_time_per_step": 0.0012117786970498039,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1377,14 +1284,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1394,6 +1293,11 @@
     "avg_time_per_primary": 0.6447778908549805,
     "avg_time_per_step": 0.0012160926238775017,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1408,14 +1312,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1425,6 +1321,11 @@
     "avg_time_per_primary": 0.6407695240515137,
     "avg_time_per_step": 0.001208531472986849,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1439,14 +1340,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1456,6 +1349,11 @@
     "avg_time_per_primary": 0.6503638193164063,
     "avg_time_per_step": 0.0012266280446724667,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -1470,14 +1368,6 @@
     "unconverged": 1
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -1487,6 +1377,11 @@
     "avg_time_per_primary": 0.6572606500825195,
     "avg_time_per_step": 0.0012396347700154716,
     "emptying_step": 73,
+    "failure": {
+     "stderr": [
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+     ]
+    },
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 524288,
@@ -3423,56 +3318,26 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -3498,14 +3363,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
     "action_times": {},
     "active_hwm": {
      "count": 4096,
@@ -3529,26 +3386,15 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -3624,19 +3470,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -3647,7 +3480,9 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -3673,19 +3508,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -3696,15 +3518,9 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -3730,19 +3546,6 @@
     "unconverged": 0
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -3753,7 +3556,9 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": {
@@ -3795,122 +3600,59 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
     },
-    "failure": {}
+    "num_events": null,
+    "num_primaries": null
    },
    {
     "action_times": {},
@@ -3953,19 +3695,6 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -3976,22 +3705,11 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -4002,22 +3720,11 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -4028,22 +3735,11 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -4054,22 +3750,11 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -4080,22 +3765,11 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "exception": {
-     "context": "result",
-     "str": "'input'",
-     "type": "<class 'KeyError'>"
-    },
-    "failure": {}
-   },
-   {
-    "exception": {
-     "context": "result",
-     "str": "'result'",
-     "type": "<class 'KeyError'>"
-    },
     "failure": {
      "stderr": [
       "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
@@ -4106,7 +3780,9 @@
       "ERROR:  One or more process (first noticed rank 0) terminated with signal 6"
      ],
      "stdout": []
-    }
+    },
+    "num_events": null,
+    "num_primaries": null
    }
   ],
   "system": []
