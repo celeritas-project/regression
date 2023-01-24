@@ -72,6 +72,7 @@ def summarize_result(out):
         "num_step_iters": len(active),
         "num_steps": steps,
         "emptying_step": emptying_step,
+        "setup_time": time['setup'],
         "total_time": time['total'],
         "active_hwm": calc_hwm(result['active']),
         "queue_hwm": calc_hwm(result['initializers']),
@@ -82,9 +83,13 @@ def summarize_result(out):
         "slot_occupancy": steps / (len(active) * inp['max_num_tracks'])
     })
 
-    if internal is None:
-        return summary
-    summary["action_times"] = get_action_times(internal['actions'])
+    try:
+        summary["action_times"] = time['actions']
+    except KeyError:
+        # Backward compatibility
+        if internal is not None:
+            summary["action_times"] = get_action_times(internal['actions'])
+
     return summary
 
 def summarize_input(inp):
