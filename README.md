@@ -121,4 +121,6 @@ Key locations:
 See [Summit guide](https://docs.olcf.ornl.gov/systems/summit_user_guide.html)
 for more details.
 
-## Frontier
+## Crusher
+
+Same but with "crusher" instead of "summit"

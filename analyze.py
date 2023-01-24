@@ -9,7 +9,7 @@ import itertools
 import json
 import re
 
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 import pandas as pd
 import numpy as np
@@ -53,6 +53,14 @@ def get_cpugpu_ratio(summary):
     ratio = mean['cpu'] / mean['gpu']
     std = ratio * np.hypot(re['gpu'], re['cpu'])
     return pd.DataFrame({'mean': ratio, 'std' : std})
+
+
+def calc_event_rate(results, summary):
+    ppe = summary[('num_primaries', 'mean')] / summary[('num_events', 'mean')]
+    event_rate = inverse_summary(summary['avg_time_per_primary'])
+    event_rate['mean'] /= ppe
+    event_rate['std'] /= ppe
+    return event_rate
 
 
 class ProblemAbbreviator:
@@ -356,3 +364,35 @@ def annotate_metadata(obj, md, **kwargs):
     return obj.text(0.98, 0.02, s, **text_kwargs)
 
 
+def make_failure_table(failures):
+    flist = []
+    idx = []
+    for key, err in failures.iterrows():
+        idx.append("{}/{}+{} ({:d})".format(*key))
+        if err["type"] == "DebugError":
+            f = PurePosixPath(err["file"])
+            err["file"] = f.name
+            text = "{which}: `{condition}` at `{file}:{line}`".format(**err)
+        elif err["type"] == "RuntimeError":
+            f = PurePosixPath(err["file"])
+            err["file"] = f.name
+            text = "{which} error: `{what}` at `{file}:{line}`".format(**err)
+        elif isinstance(err["stdout"], list) and err["stdout"]:
+            text = "`{}`".format(err["stdout"][-1])
+        elif isinstance(err["stderr"], list) and err["stderr"]:
+            for line in err["stderr"]:
+                if line.startswith("celeritas: CUDA error"):
+                    text = line
+                    break
+            else:
+                # Use final line
+                text = line
+            text = "`{}`".format(line)
+        else:
+            text = "(unknown failure)"
+        flist.append(text)
+    return pd.Series(flist, index=idx, name="Failure")
+
+def main():
+    # Generate table from wildstyle failures
+    pass
