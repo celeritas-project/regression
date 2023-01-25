@@ -237,8 +237,8 @@ no_field = {
 
 testem15 = {
     "_geometry": "orange",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "testem15.org.json",
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
@@ -248,12 +248,12 @@ testem15 = {
 
 simple_cms = {
     "_geometry": "orange",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "simple-cms.org.json",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
-    "mag_field": [0.0, 0.0, 1000.0],
+    "mag_field": [0.0, 0.0, 1.0],
 }
 
 testem3 = {
@@ -274,12 +274,12 @@ testem3 = {
 
 full_cms = {
     "_geometry": "vecgeom",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "cms2018.gdml",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
-    "mag_field": [0.0, 0.0, 1000.0],
+    "mag_field": [0.0, 0.0, 1.0],
 }
 
 # List of list of setting dictionaries
