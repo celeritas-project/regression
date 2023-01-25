@@ -134,7 +134,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 33.01822720199967,
+     "brems-rel": 0.37843666200000114,
+     "brems-sb": 4.166960029000058,
+     "conv-bethe-heitler": 0.8850375570000002,
+     "geo-boundary": 11.632745308000013,
+     "ioni-moller-bhabha": 0.48267366599999667,
+     "photoel-livermore": 3.0197078530000137,
+     "physics-discrete-select": 4.860487549999961,
+     "pre-step": 25.228784708999893,
+     "scat-klein-nishina": 1.9923132630000282,
+     "scat-rayleigh": 0.5655061000000086
+    },
     "active_hwm": {
      "count": 4096,
      "index": 81932
@@ -152,12 +164,25 @@
      "count": 393607,
      "index": 705
     },
+    "setup_time": 55.461105477,
     "slot_occupancy": 0.9928253083849283,
     "total_time": 99.343537771,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 32.87688492899982,
+     "brems-rel": 0.3932944769999974,
+     "brems-sb": 4.113877270999984,
+     "conv-bethe-heitler": 0.8893093690000047,
+     "geo-boundary": 11.381277209999878,
+     "ioni-moller-bhabha": 0.4906596909999951,
+     "photoel-livermore": 2.99805445299999,
+     "physics-discrete-select": 4.910876503000009,
+     "pre-step": 25.25546117800007,
+     "scat-klein-nishina": 2.016664561999983,
+     "scat-rayleigh": 0.5823952549999923
+    },
     "active_hwm": {
      "count": 4096,
      "index": 82207
@@ -175,12 +200,25 @@
      "count": 400583,
      "index": 722
     },
+    "setup_time": 55.492441863,
     "slot_occupancy": 0.9929212168707635,
     "total_time": 99.578891099,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 32.520412725999904,
+     "brems-rel": 0.358038517999995,
+     "brems-sb": 4.075161254999988,
+     "conv-bethe-heitler": 0.8680370320000015,
+     "geo-boundary": 11.284811262000087,
+     "ioni-moller-bhabha": 0.45981847399999937,
+     "photoel-livermore": 2.9436716880000438,
+     "physics-discrete-select": 4.86671291999998,
+     "pre-step": 26.626015630999895,
+     "scat-klein-nishina": 1.9836436180000248,
+     "scat-rayleigh": 0.5563269080000004
+    },
     "active_hwm": {
      "count": 4096,
      "index": 82291
@@ -198,12 +236,25 @@
      "count": 390127,
      "index": 701
     },
+    "setup_time": 55.476923904,
     "slot_occupancy": 0.9946147205103903,
     "total_time": 99.495369575,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 32.908232632999685,
+     "brems-rel": 0.41126494299999844,
+     "brems-sb": 4.19609301899999,
+     "conv-bethe-heitler": 0.9278499720000026,
+     "geo-boundary": 11.572387305000028,
+     "ioni-moller-bhabha": 0.5090380650000044,
+     "photoel-livermore": 2.965472889000024,
+     "physics-discrete-select": 4.895675013000039,
+     "pre-step": 25.232983825999924,
+     "scat-klein-nishina": 2.1148901279999794,
+     "scat-rayleigh": 0.5807362940000063
+    },
     "active_hwm": {
      "count": 4096,
      "index": 82372
@@ -221,12 +272,25 @@
      "count": 399009,
      "index": 709
     },
+    "setup_time": 55.536334008,
     "slot_occupancy": 0.9948505449863633,
     "total_time": 99.79998249,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 32.484602642999995,
+     "brems-rel": 0.4200998509999987,
+     "brems-sb": 4.146194083999917,
+     "conv-bethe-heitler": 0.9321050320000002,
+     "geo-boundary": 11.30037084099996,
+     "ioni-moller-bhabha": 0.5205780429999981,
+     "photoel-livermore": 3.058014094999994,
+     "physics-discrete-select": 4.938734179000015,
+     "pre-step": 25.12485124000034,
+     "scat-klein-nishina": 2.086080899000012,
+     "scat-rayleigh": 0.6316577789999955
+    },
     "active_hwm": {
      "count": 4096,
      "index": 82249
@@ -244,12 +308,25 @@
      "count": 393040,
      "index": 715
     },
+    "setup_time": 55.551057601,
     "slot_occupancy": 0.9917930230283177,
     "total_time": 99.300829523,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 32.54199915699989,
+     "brems-rel": 0.449805600999997,
+     "brems-sb": 4.158420357999994,
+     "conv-bethe-heitler": 0.9496891360000076,
+     "geo-boundary": 11.32899140800001,
+     "ioni-moller-bhabha": 0.5444812820000035,
+     "photoel-livermore": 3.0406718370000108,
+     "physics-discrete-select": 4.919537266999997,
+     "pre-step": 25.105404990000146,
+     "scat-klein-nishina": 2.0698272169999923,
+     "scat-rayleigh": 0.6549542620000042
+    },
     "active_hwm": {
      "count": 4096,
      "index": 82156
@@ -267,6 +344,7 @@
      "count": 391785,
      "index": 704
     },
+    "setup_time": 55.516934218,
     "slot_occupancy": 0.9927014742158935,
     "total_time": 98.957485701,
     "unconverged": 0
@@ -295,7 +373,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.3512102939999995,
+     "brems-rel": 0.12721666999999987,
+     "brems-sb": 0.2308506550000001,
+     "conv-bethe-heitler": 0.15858360499999993,
+     "geo-boundary": 1.8940137919999978,
+     "ioni-moller-bhabha": 0.14174712200000025,
+     "photoel-livermore": 0.25941574500000064,
+     "physics-discrete-select": 0.21738072500000036,
+     "pre-step": 1.3914165130000022,
+     "scat-klein-nishina": 0.17245005099999997,
+     "scat-rayleigh": 0.13596146300000025
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -313,12 +403,25 @@
      "count": 8991033,
      "index": 440
     },
+    "setup_time": 58.326682058,
     "slot_occupancy": 0.2026104118813489,
     "total_time": 10.7747726,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.348708243999985,
+     "brems-rel": 0.13097754500000014,
+     "brems-sb": 0.2347172230000002,
+     "conv-bethe-heitler": 0.162380375,
+     "geo-boundary": 1.8913758440000001,
+     "ioni-moller-bhabha": 0.14542229400000034,
+     "photoel-livermore": 0.2626600849999998,
+     "physics-discrete-select": 0.22116585799999997,
+     "pre-step": 1.412679204999999,
+     "scat-klein-nishina": 0.1762409840000003,
+     "scat-rayleigh": 0.13963897799999989
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -336,12 +439,25 @@
      "count": 9011576,
      "index": 440
     },
+    "setup_time": 58.01360842,
     "slot_occupancy": 0.19577789945132254,
     "total_time": 10.867347275,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.365682957000006,
+     "brems-rel": 0.12027264699999977,
+     "brems-sb": 0.22373868099999977,
+     "conv-bethe-heitler": 0.15096637200000024,
+     "geo-boundary": 1.8813609019999988,
+     "ioni-moller-bhabha": 0.136105869,
+     "photoel-livermore": 0.2512403549999998,
+     "physics-discrete-select": 0.21036170400000026,
+     "pre-step": 1.3445836110000018,
+     "scat-klein-nishina": 0.1659741560000004,
+     "scat-rayleigh": 0.12833018800000015
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -359,12 +475,25 @@
      "count": 9018873,
      "index": 440
     },
+    "setup_time": 57.714640031,
     "slot_occupancy": 0.2177582955796249,
     "total_time": 10.554083291,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.384358961000014,
+     "brems-rel": 0.14231048899999993,
+     "brems-sb": 0.24578710399999987,
+     "conv-bethe-heitler": 0.17325346100000025,
+     "geo-boundary": 1.9129229370000003,
+     "ioni-moller-bhabha": 0.1576222270000002,
+     "photoel-livermore": 0.2740521959999994,
+     "physics-discrete-select": 0.23249782200000008,
+     "pre-step": 1.4711922940000022,
+     "scat-klein-nishina": 0.1880362279999994,
+     "scat-rayleigh": 0.15079967599999985
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -382,12 +511,25 @@
      "count": 9017156,
      "index": 440
     },
+    "setup_time": 57.976704354,
     "slot_occupancy": 0.1795518024216678,
     "total_time": 11.239198847,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.380025243000005,
+     "brems-rel": 0.12461647999999984,
+     "brems-sb": 0.22840661900000037,
+     "conv-bethe-heitler": 0.1557637530000003,
+     "geo-boundary": 1.8962070280000032,
+     "ioni-moller-bhabha": 0.14059665900000007,
+     "photoel-livermore": 0.25698426399999985,
+     "physics-discrete-select": 0.21530428000000018,
+     "pre-step": 1.3763675840000005,
+     "scat-klein-nishina": 0.16987766900000004,
+     "scat-rayleigh": 0.13328660000000003
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -405,12 +547,25 @@
      "count": 8994873,
      "index": 440
     },
+    "setup_time": 57.924970344,
     "slot_occupancy": 0.20736367467293657,
     "total_time": 10.673985335,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 5.319876544999996,
+     "brems-rel": 0.1159895959999998,
+     "brems-sb": 0.21908396599999977,
+     "conv-bethe-heitler": 0.1469744379999999,
+     "geo-boundary": 1.8717290859999989,
+     "ioni-moller-bhabha": 0.13133711999999992,
+     "photoel-livermore": 0.24701392099999986,
+     "physics-discrete-select": 0.20641145200000044,
+     "pre-step": 1.320210309000002,
+     "scat-klein-nishina": 0.16060955000000046,
+     "scat-rayleigh": 0.12429830799999994
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 607
@@ -428,6 +583,7 @@
      "count": 9027343,
      "index": 440
     },
+    "setup_time": 58.457991496,
     "slot_occupancy": 0.22667367069672428,
     "total_time": 10.573495508,
     "unconverged": 0
@@ -476,7 +632,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1344.8379701949534,
+     "brems-rel": 0.42537541200000095,
+     "brems-sb": 0.4302047200000066,
+     "conv-bethe-heitler": 0.42317763300000905,
+     "geo-boundary": 0.7415556070000061,
+     "ioni-moller-bhabha": 0.43605268800000857,
+     "msc-urban": 0.010113393000001587,
+     "photoel-livermore": 0.43212857000001026,
+     "physics-discrete-select": 1.1646483449999974,
+     "pre-step": 1.1723757700000048,
+     "scat-klein-nishina": 0.42227583200000063,
+     "scat-rayleigh": 0.42480174700000306
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -499,12 +668,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.187488883,
     "slot_occupancy": 0.0031804852187633514,
     "total_time": 1352.744365734,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1342.0098918259164,
+     "brems-rel": 0.47058217599999946,
+     "brems-sb": 0.4701398799999917,
+     "conv-bethe-heitler": 0.4721205420000067,
+     "geo-boundary": 0.7899374520000169,
+     "ioni-moller-bhabha": 0.46985410800000205,
+     "msc-urban": 0.0091564240000007,
+     "photoel-livermore": 0.4718664740000097,
+     "physics-discrete-select": 1.25321821400002,
+     "pre-step": 0.961288036000005,
+     "scat-klein-nishina": 0.46972709000000396,
+     "scat-rayleigh": 0.4702754970000038
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -527,12 +710,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.18390754,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1350.273175688,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1333.319106322075,
+     "brems-rel": 0.43195840699999744,
+     "brems-sb": 0.42758397200000053,
+     "conv-bethe-heitler": 0.42968081100000355,
+     "geo-boundary": 0.737876159000015,
+     "ioni-moller-bhabha": 0.44377144499999577,
+     "msc-urban": 0.009323963000001437,
+     "photoel-livermore": 0.4287051850000033,
+     "physics-discrete-select": 1.203312535000013,
+     "pre-step": 0.9880128720000011,
+     "scat-klein-nishina": 0.42203566500000705,
+     "scat-rayleigh": 0.42555993500000594
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -555,12 +752,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.184031439,
     "slot_occupancy": 0.0031804852187633514,
     "total_time": 1341.101727351,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1337.123094844076,
+     "brems-rel": 0.4967069020000069,
+     "brems-sb": 0.4968077710000091,
+     "conv-bethe-heitler": 0.5022751210000015,
+     "geo-boundary": 0.8089389760000003,
+     "ioni-moller-bhabha": 0.494751656,
+     "msc-urban": 0.009477212000001697,
+     "photoel-livermore": 0.4990575150000039,
+     "physics-discrete-select": 1.274947867000008,
+     "pre-step": 0.9450932800000063,
+     "scat-klein-nishina": 0.4979772280000025,
+     "scat-rayleigh": 0.4958517130000066
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -583,12 +794,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.185141854,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1345.649038512,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1359.1434441000845,
+     "brems-rel": 0.41922060400000194,
+     "brems-sb": 0.4175101000000062,
+     "conv-bethe-heitler": 0.41689364700000936,
+     "geo-boundary": 0.727611503999998,
+     "ioni-moller-bhabha": 0.4413916920000113,
+     "msc-urban": 0.009418721000000595,
+     "photoel-livermore": 0.41592382000000616,
+     "physics-discrete-select": 1.4043467540000152,
+     "pre-step": 0.9723344880000077,
+     "scat-klein-nishina": 0.4106553060000077,
+     "scat-rayleigh": 0.41281105500000204
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -611,12 +836,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.184661823,
     "slot_occupancy": 0.003180483356118202,
     "total_time": 1367.031018629,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1359.1904234639846,
+     "brems-rel": 0.42146539100000974,
+     "brems-sb": 0.4157094200000017,
+     "conv-bethe-heitler": 0.42091099200000615,
+     "geo-boundary": 0.7454287810000121,
+     "ioni-moller-bhabha": 0.4344766240000065,
+     "msc-urban": 0.01002809200000351,
+     "photoel-livermore": 0.4173609239999968,
+     "physics-discrete-select": 1.2971594450000208,
+     "pre-step": 0.9727918579999925,
+     "scat-klein-nishina": 0.41541909600000243,
+     "scat-rayleigh": 0.4182954190000085
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -639,6 +878,7 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.184010053,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1366.964881378,
     "unconverged": 2
@@ -671,7 +911,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.191412186999996,
+     "brems-rel": 0.03568016600000007,
+     "brems-sb": 0.03571968799999999,
+     "conv-bethe-heitler": 0.03565111600000001,
+     "geo-boundary": 0.04546404,
+     "ioni-moller-bhabha": 0.035831317000000015,
+     "msc-urban": 0.002462867000000001,
+     "photoel-livermore": 0.03582721200000002,
+     "physics-discrete-select": 0.03670752299999997,
+     "pre-step": 0.2099014049999998,
+     "scat-klein-nishina": 0.035784036000000054,
+     "scat-rayleigh": 0.035793276999999936
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -689,12 +942,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.297591087,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 10.683347663,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.201752572000006,
+     "brems-rel": 0.03590099700000002,
+     "brems-sb": 0.036054288000000004,
+     "conv-bethe-heitler": 0.03602334300000002,
+     "geo-boundary": 0.04561392999999998,
+     "ioni-moller-bhabha": 0.03606901399999999,
+     "msc-urban": 0.0024744080000000013,
+     "photoel-livermore": 0.035937952999999995,
+     "physics-discrete-select": 0.037175073,
+     "pre-step": 0.21052099900000004,
+     "scat-klein-nishina": 0.03599504999999997,
+     "scat-rayleigh": 0.03594522400000003
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -712,12 +979,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.302178858,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.699882492,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.185431599999998,
+     "brems-rel": 0.035633962,
+     "brems-sb": 0.03581771799999996,
+     "conv-bethe-heitler": 0.035645157999999996,
+     "geo-boundary": 0.045426332999999985,
+     "ioni-moller-bhabha": 0.035773115999999994,
+     "msc-urban": 0.0024073419999999994,
+     "photoel-livermore": 0.03569269499999998,
+     "physics-discrete-select": 0.03674537999999998,
+     "pre-step": 0.20998425200000007,
+     "scat-klein-nishina": 0.03572998399999999,
+     "scat-rayleigh": 0.03568424200000004
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -735,12 +1016,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.297666865,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.678907643,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.22530646300001,
+     "brems-rel": 0.035792501000000004,
+     "brems-sb": 0.035833626999999986,
+     "conv-bethe-heitler": 0.03581920600000001,
+     "geo-boundary": 0.045546172000000024,
+     "ioni-moller-bhabha": 0.035846149000000035,
+     "msc-urban": 0.002407008000000002,
+     "photoel-livermore": 0.03578775900000002,
+     "physics-discrete-select": 0.036696272,
+     "pre-step": 0.21026160400000007,
+     "scat-klein-nishina": 0.03591206300000001,
+     "scat-rayleigh": 0.03579066199999999
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -758,12 +1053,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.298415412,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 10.721372822,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.188808253000005,
+     "brems-rel": 0.035926331000000006,
+     "brems-sb": 0.035890707000000015,
+     "conv-bethe-heitler": 0.03594160300000004,
+     "geo-boundary": 0.04548034400000002,
+     "ioni-moller-bhabha": 0.036011856,
+     "msc-urban": 0.0024103490000000013,
+     "photoel-livermore": 0.03595144700000001,
+     "physics-discrete-select": 0.03674570000000003,
+     "pre-step": 0.2099991850000001,
+     "scat-klein-nishina": 0.036076506000000036,
+     "scat-rayleigh": 0.036071738999999985
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -781,12 +1090,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.190064662,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 10.055051032,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.225088052999991,
+     "brems-rel": 0.03586735899999997,
+     "brems-sb": 0.035887018000000014,
+     "conv-bethe-heitler": 0.036115703999999985,
+     "geo-boundary": 0.045742119000000046,
+     "ioni-moller-bhabha": 0.036204195000000015,
+     "msc-urban": 0.002480073000000001,
+     "photoel-livermore": 0.03590251000000001,
+     "physics-discrete-select": 0.03681898699999998,
+     "pre-step": 0.21019449500000015,
+     "scat-klein-nishina": 0.036175475,
+     "scat-rayleigh": 0.03594051899999999
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -804,6 +1127,7 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.301055099,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.722233282,
     "unconverged": 339
@@ -852,7 +1176,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1344.7842104409683,
+     "brems-rel": 0.4272524339999978,
+     "brems-sb": 0.42453694000000003,
+     "conv-bethe-heitler": 0.4243313450000017,
+     "geo-boundary": 0.7344704609999988,
+     "ioni-moller-bhabha": 0.4373225200000064,
+     "msc-urban": 0.007034972000001087,
+     "photoel-livermore": 0.4264559820000075,
+     "physics-discrete-select": 1.213784760999992,
+     "pre-step": 1.009302405000004,
+     "scat-klein-nishina": 0.4252137589999967,
+     "scat-rayleigh": 0.4266413390000014
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -875,12 +1212,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.20040973,
     "slot_occupancy": 0.0031804852187633514,
     "total_time": 1352.549911557,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1342.3434933319356,
+     "brems-rel": 0.4388104069999986,
+     "brems-sb": 0.4369607190000068,
+     "conv-bethe-heitler": 0.43473949700000275,
+     "geo-boundary": 0.7296707380000098,
+     "ioni-moller-bhabha": 0.43853055100000266,
+     "msc-urban": 0.006865212000001777,
+     "photoel-livermore": 0.43709936700000646,
+     "physics-discrete-select": 1.1943380520000138,
+     "pre-step": 0.9586162450000021,
+     "scat-klein-nishina": 0.4377729989999995,
+     "scat-rayleigh": 0.43547422600000146
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -903,12 +1254,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.200205649,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1350.130869372,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1333.4066222821,
+     "brems-rel": 0.548338544,
+     "brems-sb": 0.5537970100000105,
+     "conv-bethe-heitler": 0.5491353420000042,
+     "geo-boundary": 0.8091115200000012,
+     "ioni-moller-bhabha": 0.5537611190000042,
+     "msc-urban": 0.007752824000006533,
+     "photoel-livermore": 0.5489663200000029,
+     "physics-discrete-select": 1.2273982309999785,
+     "pre-step": 0.9989980879999966,
+     "scat-klein-nishina": 0.5558677320000056,
+     "scat-rayleigh": 0.5517449530000025
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -931,12 +1296,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.201190523,
     "slot_occupancy": 0.0031804852187633514,
     "total_time": 1342.384390299,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1336.8266254961393,
+     "brems-rel": 0.5547341819999964,
+     "brems-sb": 0.5559228080000085,
+     "conv-bethe-heitler": 0.5546884909999955,
+     "geo-boundary": 0.8116638780000027,
+     "ioni-moller-bhabha": 0.5546776700000066,
+     "msc-urban": 0.0063952990000064784,
+     "photoel-livermore": 0.5575872790000013,
+     "physics-discrete-select": 1.4452341140000144,
+     "pre-step": 1.0981523780000244,
+     "scat-klein-nishina": 0.5594099770000012,
+     "scat-rayleigh": 0.561010724
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -959,12 +1338,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.20054659,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1346.169041743,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1359.254810524055,
+     "brems-rel": 0.4781480549999943,
+     "brems-sb": 0.48087449100000473,
+     "conv-bethe-heitler": 0.476223013999999,
+     "geo-boundary": 0.7705237480000178,
+     "ioni-moller-bhabha": 0.4778152750000075,
+     "msc-urban": 0.006594872000004129,
+     "photoel-livermore": 0.47820619999999664,
+     "physics-discrete-select": 1.4149135729999935,
+     "pre-step": 0.9974983389999953,
+     "scat-klein-nishina": 0.48107686299999614,
+     "scat-rayleigh": 0.4801102549999964
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -987,12 +1380,26 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.200260372,
     "slot_occupancy": 0.003180483356118202,
     "total_time": 1367.787276622,
     "unconverged": 2
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 1359.4070708059933,
+     "brems-rel": 0.47226421700000915,
+     "brems-sb": 0.47843714300000373,
+     "conv-bethe-heitler": 0.4712454210000154,
+     "geo-boundary": 0.7460516529999988,
+     "ioni-moller-bhabha": 0.47708931199999866,
+     "msc-urban": 0.0063975920000027865,
+     "photoel-livermore": 0.4728646219999944,
+     "physics-discrete-select": 1.4824064579999858,
+     "pre-step": 0.9472831969999963,
+     "scat-klein-nishina": 0.4764615770000055,
+     "scat-rayleigh": 0.47509424299999964
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1015,6 +1422,7 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.200999833,
     "slot_occupancy": 0.0031804870814085007,
     "total_time": 1367.910389937,
     "unconverged": 2
@@ -1047,7 +1455,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.123804040000008,
+     "brems-rel": 0.036181551999999985,
+     "brems-sb": 0.036195620000000005,
+     "conv-bethe-heitler": 0.03612602899999999,
+     "geo-boundary": 0.04144449100000002,
+     "ioni-moller-bhabha": 0.036183952000000005,
+     "msc-urban": 0.0026235639999999992,
+     "photoel-livermore": 0.03620321499999999,
+     "physics-discrete-select": 0.03833102800000004,
+     "pre-step": 0.21111989699999986,
+     "scat-klein-nishina": 0.036154558999999975,
+     "scat-rayleigh": 0.03610672399999999
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1065,12 +1486,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.381571789,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 10.756057979,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.101657431999994,
+     "brems-rel": 0.036245930999999995,
+     "brems-sb": 0.036281623000000006,
+     "conv-bethe-heitler": 0.03619380000000003,
+     "geo-boundary": 0.041550929,
+     "ioni-moller-bhabha": 0.036269169,
+     "msc-urban": 0.002637959000000001,
+     "photoel-livermore": 0.03625123699999998,
+     "physics-discrete-select": 0.038720443999999986,
+     "pre-step": 0.21097126100000002,
+     "scat-klein-nishina": 0.03622975999999997,
+     "scat-rayleigh": 0.036190540000000035
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1088,12 +1523,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.347126149,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.734565015,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.101596234999997,
+     "brems-rel": 0.03620649499999998,
+     "brems-sb": 0.036197048000000016,
+     "conv-bethe-heitler": 0.03611114899999999,
+     "geo-boundary": 0.04154314200000006,
+     "ioni-moller-bhabha": 0.03617378099999998,
+     "msc-urban": 0.002665788,
+     "photoel-livermore": 0.036201533999999966,
+     "physics-discrete-select": 0.03836453299999998,
+     "pre-step": 0.21054415499999982,
+     "scat-klein-nishina": 0.03614715199999999,
+     "scat-rayleigh": 0.036086589
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1111,12 +1560,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.347440988,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.732916914,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.120383153,
+     "brems-rel": 0.035844058000000026,
+     "brems-sb": 0.03583645699999999,
+     "conv-bethe-heitler": 0.035707836999999985,
+     "geo-boundary": 0.04120821400000001,
+     "ioni-moller-bhabha": 0.03582500899999996,
+     "msc-urban": 0.0025932119999999984,
+     "photoel-livermore": 0.03582360399999996,
+     "physics-discrete-select": 0.03819534799999997,
+     "pre-step": 0.21069808699999987,
+     "scat-klein-nishina": 0.03578193599999998,
+     "scat-rayleigh": 0.035672062999999934
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1134,12 +1597,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.346402261,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 10.746787453,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.085053405999998,
+     "brems-rel": 0.036060729,
+     "brems-sb": 0.036043299000000015,
+     "conv-bethe-heitler": 0.035972259999999985,
+     "geo-boundary": 0.04128505900000002,
+     "ioni-moller-bhabha": 0.03597306200000003,
+     "msc-urban": 0.0026189690000000022,
+     "photoel-livermore": 0.036019757999999985,
+     "physics-discrete-select": 0.03821140600000001,
+     "pre-step": 0.21088368199999993,
+     "scat-klein-nishina": 0.035964921999999976,
+     "scat-rayleigh": 0.03590409199999996
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1157,12 +1634,26 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.381430935,
     "slot_occupancy": 0.0013406164944171906,
     "total_time": 9.986533285,
     "unconverged": 339
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 9.140684228000005,
+     "brems-rel": 0.036149429000000004,
+     "brems-sb": 0.036217268000000004,
+     "conv-bethe-heitler": 0.03608589299999999,
+     "geo-boundary": 0.04142096199999996,
+     "ioni-moller-bhabha": 0.036196565999999986,
+     "msc-urban": 0.0026232389999999994,
+     "photoel-livermore": 0.036144378,
+     "physics-discrete-select": 0.03818763,
+     "pre-step": 0.21094586499999982,
+     "scat-klein-nishina": 0.03614290500000002,
+     "scat-rayleigh": 0.036115353999999995
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1180,6 +1671,7 @@
      "count": 0,
      "index": 511
     },
+    "setup_time": 0.347608128,
     "slot_occupancy": 0.0013406183570623398,
     "total_time": 10.771176162,
     "unconverged": 339
@@ -1228,7 +1720,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2610.269134021514,
+     "brems-rel": 1.4847253439999182,
+     "brems-sb": 1.4808226440000005,
+     "conv-bethe-heitler": 1.466295804000106,
+     "geo-boundary": 2.765208441000012,
+     "ioni-moller-bhabha": 1.52501604600002,
+     "photoel-livermore": 1.4924042120000018,
+     "physics-discrete-select": 3.9879735559999605,
+     "pre-step": 3.6457552079997857,
+     "scat-klein-nishina": 1.473924176999887,
+     "scat-rayleigh": 1.4636234669999866
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1251,12 +1755,25 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.987279549,
     "slot_occupancy": 0.0010112854652106762,
     "total_time": 2637.785543027,
     "unconverged": 1
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2599.425032028161,
+     "brems-rel": 1.8538478999999288,
+     "brems-sb": 1.8796569670000263,
+     "conv-bethe-heitler": 1.8506158629999436,
+     "geo-boundary": 3.1207635159999487,
+     "ioni-moller-bhabha": 1.9697935599999674,
+     "photoel-livermore": 1.8813944169999524,
+     "physics-discrete-select": 4.059759553000012,
+     "pre-step": 4.624125549999952,
+     "scat-klein-nishina": 1.8439363989999622,
+     "scat-rayleigh": 1.8590958289999542
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1279,12 +1796,25 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.988386483,
     "slot_occupancy": 0.0010112859308719635,
     "total_time": 2631.644031957,
     "unconverged": 1
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2604.919072990776,
+     "brems-rel": 2.262208123000033,
+     "brems-sb": 2.2666661310000316,
+     "conv-bethe-heitler": 2.2575195890000344,
+     "geo-boundary": 3.4604066739999584,
+     "ioni-moller-bhabha": 2.307218253999991,
+     "photoel-livermore": 2.24893633300002,
+     "physics-discrete-select": 4.980983056000026,
+     "pre-step": 3.6498053430000876,
+     "scat-klein-nishina": 2.2431569890000556,
+     "scat-rayleigh": 2.2525284970000308
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1307,12 +1837,25 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 1.000097714,
     "slot_occupancy": 0.0010112849995493889,
     "total_time": 2641.010240942,
     "unconverged": 1
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2597.0253067808003,
+     "brems-rel": 1.556554812000104,
+     "brems-sb": 1.549607309000127,
+     "conv-bethe-heitler": 1.5540561960001176,
+     "geo-boundary": 2.710615472999803,
+     "ioni-moller-bhabha": 1.5871760880000834,
+     "photoel-livermore": 1.559240240000224,
+     "physics-discrete-select": 4.128599504000303,
+     "pre-step": 2.9910385749998127,
+     "scat-klein-nishina": 1.5406605110000302,
+     "scat-rayleigh": 1.5586992840001463
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1335,12 +1878,25 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.988386369,
     "slot_occupancy": 0.0010112859308719635,
     "total_time": 2624.591970515,
     "unconverged": 1
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2630.999520701665,
+     "brems-rel": 1.964167516999907,
+     "brems-sb": 1.9501243939999275,
+     "conv-bethe-heitler": 1.9677285100000157,
+     "geo-boundary": 3.185801064000058,
+     "ioni-moller-bhabha": 2.0266133069999515,
+     "photoel-livermore": 1.9782470199999724,
+     "physics-discrete-select": 4.955325310000053,
+     "pre-step": 3.511050533000076,
+     "scat-klein-nishina": 1.9301893739999392,
+     "scat-rayleigh": 1.9600874259999934
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1363,12 +1919,25 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 1.000402908,
     "slot_occupancy": 0.0010112849995493889,
     "total_time": 2663.89020392,
     "unconverged": 1
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 2656.1140107571237,
+     "brems-rel": 2.1773415370000286,
+     "brems-sb": 2.1778830290000126,
+     "conv-bethe-heitler": 2.1740845740000867,
+     "geo-boundary": 3.517371623999875,
+     "ioni-moller-bhabha": 2.2137192440000404,
+     "photoel-livermore": 2.197210356999999,
+     "physics-discrete-select": 5.58169564199999,
+     "pre-step": 3.5942170919999654,
+     "scat-klein-nishina": 2.1712679399999963,
+     "scat-rayleigh": 2.1739498640000683
+    },
     "active_hwm": {
      "count": 4096,
      "index": 72
@@ -1391,6 +1960,7 @@
      "count": 5004,
      "index": 4
     },
+    "setup_time": 0.988053449,
     "slot_occupancy": 0.0010112859308719635,
     "total_time": 2692.139622738,
     "unconverged": 1
@@ -1423,7 +1993,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.346971042999975,
+     "brems-rel": 0.14336275800000023,
+     "brems-sb": 0.143493214,
+     "conv-bethe-heitler": 0.14352013599999988,
+     "geo-boundary": 0.15664151500000006,
+     "ioni-moller-bhabha": 0.14346697399999994,
+     "photoel-livermore": 0.14345383299999992,
+     "physics-discrete-select": 0.1454031929999998,
+     "pre-step": 0.8340985619999992,
+     "scat-klein-nishina": 0.14356177700000058,
+     "scat-rayleigh": 0.14346960799999997
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1441,12 +2023,25 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.192775291,
     "slot_occupancy": 0.0004529273137450218,
     "total_time": 39.907719375,
     "unconverged": 87
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.310916637000055,
+     "brems-rel": 0.14333796,
+     "brems-sb": 0.1436008990000002,
+     "conv-bethe-heitler": 0.14323826700000003,
+     "geo-boundary": 0.15692969600000012,
+     "ioni-moller-bhabha": 0.1438325849999999,
+     "photoel-livermore": 0.1433261340000003,
+     "physics-discrete-select": 0.14741460999999972,
+     "pre-step": 0.8335755729999994,
+     "scat-klein-nishina": 0.14362570500000005,
+     "scat-rayleigh": 0.144001524
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1464,12 +2059,25 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.193280051,
     "slot_occupancy": 0.00045292777940630913,
     "total_time": 39.877947673,
     "unconverged": 87
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.52997958500008,
+     "brems-rel": 0.14272044500000014,
+     "brems-sb": 0.1430248189999999,
+     "conv-bethe-heitler": 0.1428012419999999,
+     "geo-boundary": 0.15668937899999985,
+     "ioni-moller-bhabha": 0.14338660099999997,
+     "photoel-livermore": 0.14298003099999995,
+     "physics-discrete-select": 0.14560314600000013,
+     "pre-step": 0.832294317999999,
+     "scat-klein-nishina": 0.1429630450000001,
+     "scat-rayleigh": 0.14292248300000018
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1487,12 +2095,25 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.191080911,
     "slot_occupancy": 0.00045292777940630913,
     "total_time": 40.086323996,
     "unconverged": 87
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.547418808999986,
+     "brems-rel": 0.14379204400000042,
+     "brems-sb": 0.14366305000000035,
+     "conv-bethe-heitler": 0.14372785099999977,
+     "geo-boundary": 0.15751628300000006,
+     "ioni-moller-bhabha": 0.14413972300000005,
+     "photoel-livermore": 0.14387311699999994,
+     "physics-discrete-select": 0.1456050609999997,
+     "pre-step": 0.8331252229999979,
+     "scat-klein-nishina": 0.1442196739999998,
+     "scat-rayleigh": 0.143966769
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1510,12 +2131,25 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.192839021,
     "slot_occupancy": 0.0004529273137450218,
     "total_time": 40.11682456,
     "unconverged": 87
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.31400926399995,
+     "brems-rel": 0.142840661,
+     "brems-sb": 0.14323747599999978,
+     "conv-bethe-heitler": 0.14280480999999992,
+     "geo-boundary": 0.15625916500000023,
+     "ioni-moller-bhabha": 0.1435703140000002,
+     "photoel-livermore": 0.14287834100000002,
+     "physics-discrete-select": 0.14517674700000024,
+     "pre-step": 0.8316850959999985,
+     "scat-klein-nishina": 0.1430607490000002,
+     "scat-rayleigh": 0.14288410699999987
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1533,12 +2167,25 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.191559177,
     "slot_occupancy": 0.0004529273137450218,
     "total_time": 39.863874792,
     "unconverged": 87
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.36577930799995,
+     "brems-rel": 0.14241886200000006,
+     "brems-sb": 0.14230311499999992,
+     "conv-bethe-heitler": 0.14241006000000023,
+     "geo-boundary": 0.15605242099999997,
+     "ioni-moller-bhabha": 0.14305990000000007,
+     "photoel-livermore": 0.1424919089999998,
+     "physics-discrete-select": 0.14561738300000035,
+     "pre-step": 0.8332928909999994,
+     "scat-klein-nishina": 0.1424865089999997,
+     "scat-rayleigh": 0.1422841599999998
+    },
     "active_hwm": {
      "count": 9100,
      "index": 4
@@ -1556,6 +2203,7 @@
      "count": 0,
      "index": 2047
     },
+    "setup_time": 0.192318306,
     "slot_occupancy": 0.00045292777940630913,
     "total_time": 39.919588404,
     "unconverged": 87
@@ -1600,7 +2248,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.835271013999755,
+     "brems-rel": 0.3574517380000021,
+     "brems-sb": 3.235244365000006,
+     "conv-bethe-heitler": 0.5471450989999921,
+     "geo-boundary": 0.42573032499999935,
+     "ioni-moller-bhabha": 0.7532939379999943,
+     "msc-urban": 0.00434328000000038,
+     "photoel-livermore": 1.7717245440000002,
+     "physics-discrete-select": 2.7497185280000274,
+     "pre-step": 19.613751402999878,
+     "scat-klein-nishina": 5.531716320999976,
+     "scat-rayleigh": 0.8070772199999907
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64738
@@ -1618,12 +2279,26 @@
      "count": 292500,
      "index": 105
     },
+    "setup_time": 0.54285031,
     "slot_occupancy": 0.9986704833310526,
     "total_time": 72.457273935,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.67125534000002,
+     "brems-rel": 0.37314792000000324,
+     "brems-sb": 3.065054656999967,
+     "conv-bethe-heitler": 0.5874273549999981,
+     "geo-boundary": 0.4374350630000051,
+     "ioni-moller-bhabha": 0.7958210290000068,
+     "msc-urban": 0.004112402999999834,
+     "photoel-livermore": 1.6326745899999908,
+     "physics-discrete-select": 2.7777655390000047,
+     "pre-step": 19.404234529000018,
+     "scat-klein-nishina": 5.216948242999989,
+     "scat-rayleigh": 0.8207778439999966
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64692
@@ -1641,12 +2316,26 @@
      "count": 295932,
      "index": 113
     },
+    "setup_time": 0.420374793,
     "slot_occupancy": 0.9990119194067144,
     "total_time": 71.874378727,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.69119521599958,
+     "brems-rel": 0.3609950940000014,
+     "brems-sb": 3.1918704419999693,
+     "conv-bethe-heitler": 0.5497828729999961,
+     "geo-boundary": 0.4184452000000009,
+     "ioni-moller-bhabha": 0.7313234350000047,
+     "msc-urban": 0.004337980000000654,
+     "photoel-livermore": 1.805035408999994,
+     "physics-discrete-select": 2.7584556629999852,
+     "pre-step": 19.34339794800004,
+     "scat-klein-nishina": 5.512952953000042,
+     "scat-rayleigh": 0.8061890050000016
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64713
@@ -1664,12 +2353,26 @@
      "count": 290781,
      "index": 106
     },
+    "setup_time": 0.527079678,
     "slot_occupancy": 0.9989711278392218,
     "total_time": 72.037423206,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.639809660000196,
+     "brems-rel": 0.3679690840000042,
+     "brems-sb": 3.1402326339999975,
+     "conv-bethe-heitler": 0.5329959729999971,
+     "geo-boundary": 0.43925877099999666,
+     "ioni-moller-bhabha": 0.6653844350000041,
+     "msc-urban": 0.004243181000000133,
+     "photoel-livermore": 2.0050364110000074,
+     "physics-discrete-select": 2.7590020710000203,
+     "pre-step": 19.354723151000318,
+     "scat-klein-nishina": 4.568045433000012,
+     "scat-rayleigh": 0.7906709249999883
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64769
@@ -1687,12 +2390,26 @@
      "count": 295247,
      "index": 110
     },
+    "setup_time": 0.443228725,
     "slot_occupancy": 0.9989930064912259,
     "total_time": 71.02601983,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.62631171699991,
+     "brems-rel": 0.35844880999999673,
+     "brems-sb": 3.132298384999951,
+     "conv-bethe-heitler": 0.5273130929999965,
+     "geo-boundary": 0.429684390000006,
+     "ioni-moller-bhabha": 0.6542701150000024,
+     "msc-urban": 0.00412793099999973,
+     "photoel-livermore": 1.988454207999996,
+     "physics-discrete-select": 2.744152255999975,
+     "pre-step": 19.32926952,
+     "scat-klein-nishina": 4.603084454000067,
+     "scat-rayleigh": 0.7799059320000075
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64695
@@ -1710,12 +2427,26 @@
      "count": 294224,
      "index": 109
     },
+    "setup_time": 0.42772897,
     "slot_occupancy": 0.9990346110012228,
     "total_time": 71.046213545,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 28.68258117300015,
+     "brems-rel": 0.3480283040000016,
+     "brems-sb": 2.9618324679999937,
+     "conv-bethe-heitler": 0.5555452259999988,
+     "geo-boundary": 0.4356599340000016,
+     "ioni-moller-bhabha": 0.6983016049999973,
+     "msc-urban": 0.004158007999999785,
+     "photoel-livermore": 1.5234489079999896,
+     "physics-discrete-select": 2.7553290950000338,
+     "pre-step": 19.349857708000098,
+     "scat-klein-nishina": 4.724759887000006,
+     "scat-rayleigh": 0.8043921359999994
+    },
     "active_hwm": {
      "count": 4096,
      "index": 64761
@@ -1733,6 +2464,7 @@
      "count": 290665,
      "index": 108
     },
+    "setup_time": 0.42338126,
     "slot_occupancy": 0.9989437611293978,
     "total_time": 70.624542288,
     "unconverged": 0
@@ -1761,7 +2493,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.884410948999999,
+     "brems-rel": 0.034134569999999996,
+     "brems-sb": 0.10869370999999996,
+     "conv-bethe-heitler": 0.05106918199999997,
+     "geo-boundary": 0.037295883000000016,
+     "ioni-moller-bhabha": 0.050692155000000017,
+     "msc-urban": 0.0019118539999999997,
+     "photoel-livermore": 0.08652438700000001,
+     "physics-discrete-select": 0.12426778000000009,
+     "pre-step": 0.7267527520000004,
+     "scat-klein-nishina": 0.11894429699999996,
+     "scat-rayleigh": 0.058027585999999985
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1779,12 +2524,26 @@
      "count": 15385304,
      "index": 71
     },
+    "setup_time": 0.222342946,
     "slot_occupancy": 0.630439656036453,
     "total_time": 3.355959495,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.8764819309999992,
+     "brems-rel": 0.03303126200000001,
+     "brems-sb": 0.10772413899999989,
+     "conv-bethe-heitler": 0.049793038000000046,
+     "geo-boundary": 0.036575034000000006,
+     "ioni-moller-bhabha": 0.04872231599999996,
+     "msc-urban": 0.001851290999999999,
+     "photoel-livermore": 0.08506653899999995,
+     "physics-discrete-select": 0.1230408570000001,
+     "pre-step": 0.7204371530000002,
+     "scat-klein-nishina": 0.11887987599999994,
+     "scat-rayleigh": 0.05800636400000001
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1802,12 +2561,26 @@
      "count": 15378725,
      "index": 71
     },
+    "setup_time": 0.221535551,
     "slot_occupancy": 0.656883108461058,
     "total_time": 3.328809715,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.8749516239999999,
+     "brems-rel": 0.031997054999999996,
+     "brems-sb": 0.10628856899999996,
+     "conv-bethe-heitler": 0.048327797000000026,
+     "geo-boundary": 0.03507418300000001,
+     "ioni-moller-bhabha": 0.04767115299999996,
+     "msc-urban": 0.0017677789999999993,
+     "photoel-livermore": 0.08378855099999998,
+     "physics-discrete-select": 0.12187981100000005,
+     "pre-step": 0.7128234130000005,
+     "scat-klein-nishina": 0.11674019400000003,
+     "scat-rayleigh": 0.05626986400000001
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1825,12 +2598,26 @@
      "count": 15396287,
      "index": 71
     },
+    "setup_time": 0.220710029,
     "slot_occupancy": 0.6933735390232034,
     "total_time": 3.301978617,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.8741584050000003,
+     "brems-rel": 0.031801016000000015,
+     "brems-sb": 0.10632740900000007,
+     "conv-bethe-heitler": 0.048815148,
+     "geo-boundary": 0.03524231100000003,
+     "ioni-moller-bhabha": 0.047935853,
+     "msc-urban": 0.001763237,
+     "photoel-livermore": 0.08410887700000014,
+     "physics-discrete-select": 0.12194257800000001,
+     "pre-step": 0.7134858799999996,
+     "scat-klein-nishina": 0.11707128099999989,
+     "scat-rayleigh": 0.05615873299999997
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1848,12 +2635,26 @@
      "count": 15418123,
      "index": 71
     },
+    "setup_time": 0.220918189,
     "slot_occupancy": 0.6835090121707401,
     "total_time": 3.307292062,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.8761028959999995,
+     "brems-rel": 0.03274279199999999,
+     "brems-sb": 0.10732954500000011,
+     "conv-bethe-heitler": 0.049524057,
+     "geo-boundary": 0.03618440300000003,
+     "ioni-moller-bhabha": 0.048042512999999995,
+     "msc-urban": 0.0018243319999999997,
+     "photoel-livermore": 0.08492727999999991,
+     "physics-discrete-select": 0.12310311600000003,
+     "pre-step": 0.7193150480000001,
+     "scat-klein-nishina": 0.11733246499999997,
+     "scat-rayleigh": 0.056825080999999965
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1871,12 +2672,26 @@
      "count": 15449607,
      "index": 71
     },
+    "setup_time": 0.189927692,
     "slot_occupancy": 0.6606398898689927,
     "total_time": 2.792568813,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 0.8769261760000008,
+     "brems-rel": 0.03202503599999999,
+     "brems-sb": 0.10670952300000004,
+     "conv-bethe-heitler": 0.04873039099999995,
+     "geo-boundary": 0.034837776,
+     "ioni-moller-bhabha": 0.047032301000000026,
+     "msc-urban": 0.0017648260000000006,
+     "photoel-livermore": 0.0840447970000001,
+     "physics-discrete-select": 0.12207834999999988,
+     "pre-step": 0.7150068490000003,
+     "scat-klein-nishina": 0.11706550999999994,
+     "scat-rayleigh": 0.055991797
+    },
     "active_hwm": {
      "count": 1048576,
      "index": 245
@@ -1894,6 +2709,7 @@
      "count": 15470734,
      "index": 71
     },
+    "setup_time": 0.186818285,
     "slot_occupancy": 0.6857431173970706,
     "total_time": 2.765086982,
     "unconverged": 0
@@ -1942,7 +2758,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.76199745399967,
+     "brems-rel": 0.3286785009999989,
+     "brems-sb": 3.6491972019999936,
+     "conv-bethe-heitler": 0.6016878890000028,
+     "geo-boundary": 0.34300502400000127,
+     "ioni-moller-bhabha": 0.32498033799999965,
+     "msc-urban": 0.003369789999999947,
+     "photoel-livermore": 1.794824418999987,
+     "physics-discrete-select": 3.9819868090000003,
+     "pre-step": 16.69289771800004,
+     "scat-klein-nishina": 3.618572563999991,
+     "scat-rayleigh": 0.666762470999995
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54905
@@ -1960,12 +2789,26 @@
      "count": 244053,
      "index": 89
     },
+    "setup_time": 0.135707944,
     "slot_occupancy": 0.9988619528578866,
     "total_time": 75.801737011,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.826264245999845,
+     "brems-rel": 0.32075856399999464,
+     "brems-sb": 3.692356283000003,
+     "conv-bethe-heitler": 0.6190873359999959,
+     "geo-boundary": 0.31793527999999843,
+     "ioni-moller-bhabha": 0.31963024600000295,
+     "msc-urban": 0.0032397599999994258,
+     "photoel-livermore": 1.8056237439999778,
+     "physics-discrete-select": 4.157759177000021,
+     "pre-step": 18.04431950499997,
+     "scat-klein-nishina": 3.6519183680000222,
+     "scat-rayleigh": 0.6758984349999991
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54911
@@ -1983,12 +2826,26 @@
      "count": 238941,
      "index": 85
     },
+    "setup_time": 0.137136425,
     "slot_occupancy": 0.9991053594437738,
     "total_time": 77.604903323,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.848926838999894,
+     "brems-rel": 0.33307056900000004,
+     "brems-sb": 3.729045811000012,
+     "conv-bethe-heitler": 0.6159710360000015,
+     "geo-boundary": 0.3463087270000003,
+     "ioni-moller-bhabha": 0.32854459199999536,
+     "msc-urban": 0.0032824359999995695,
+     "photoel-livermore": 1.7816435970000029,
+     "physics-discrete-select": 3.9742575929999946,
+     "pre-step": 16.8870201620001,
+     "scat-klein-nishina": 3.6635472959999995,
+     "scat-rayleigh": 0.6645097020000078
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54882
@@ -2006,12 +2863,26 @@
      "count": 242202,
      "index": 87
     },
+    "setup_time": 0.139088897,
     "slot_occupancy": 0.9991312055263092,
     "total_time": 76.29155157,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 37.19800739299976,
+     "brems-rel": 0.35429149499999607,
+     "brems-sb": 3.7967772290000323,
+     "conv-bethe-heitler": 0.6447879149999958,
+     "geo-boundary": 0.36454046000000173,
+     "ioni-moller-bhabha": 0.35086702199999886,
+     "msc-urban": 0.0033499539999997845,
+     "photoel-livermore": 1.9100532640000079,
+     "physics-discrete-select": 4.0237543459999845,
+     "pre-step": 16.75266244500004,
+     "scat-klein-nishina": 3.9936424799999966,
+     "scat-rayleigh": 0.6858174179999944
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54893
@@ -2029,12 +2900,26 @@
      "count": 245049,
      "index": 89
     },
+    "setup_time": 0.135377315,
     "slot_occupancy": 0.9992654107101844,
     "total_time": 77.39556189,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.901939688000205,
+     "brems-rel": 0.3361498039999996,
+     "brems-sb": 3.664412733999992,
+     "conv-bethe-heitler": 0.6056528580000071,
+     "geo-boundary": 0.33645266400000123,
+     "ioni-moller-bhabha": 0.3295045649999936,
+     "msc-urban": 0.0030986019999995292,
+     "photoel-livermore": 1.7897954629999877,
+     "physics-discrete-select": 4.03885593699998,
+     "pre-step": 16.808052963999987,
+     "scat-klein-nishina": 3.6354683029999677,
+     "scat-rayleigh": 0.6637132150000087
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54903
@@ -2052,12 +2937,26 @@
      "count": 239682,
      "index": 87
     },
+    "setup_time": 0.138344793,
     "slot_occupancy": 0.999165698157802,
     "total_time": 76.254024027,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 36.588982161,
+     "brems-rel": 0.3251787939999971,
+     "brems-sb": 3.648994444000018,
+     "conv-bethe-heitler": 0.6352040650000012,
+     "geo-boundary": 0.33684105499999545,
+     "ioni-moller-bhabha": 0.33269195800000184,
+     "msc-urban": 0.003182837999999605,
+     "photoel-livermore": 1.8042513579999981,
+     "physics-discrete-select": 3.9805190100000085,
+     "pre-step": 16.702737477000042,
+     "scat-klein-nishina": 3.6394835269999493,
+     "scat-rayleigh": 0.687010891999997
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54905
@@ -2075,6 +2974,7 @@
      "count": 242233,
      "index": 87
     },
+    "setup_time": 0.136697694,
     "slot_occupancy": 0.9990923654204444,
     "total_time": 75.740624519,
     "unconverged": 0
@@ -2125,6 +3025,7 @@
      "count": 13130983,
      "index": 59
     },
+    "setup_time": 0.14164178,
     "slot_occupancy": 0.6811188924880255,
     "total_time": 2.135261658,
     "unconverged": 0
@@ -2148,6 +3049,7 @@
      "count": 13118076,
      "index": 59
     },
+    "setup_time": 0.140805921,
     "slot_occupancy": 0.6899622674923618,
     "total_time": 2.895998353,
     "unconverged": 0
@@ -2171,6 +3073,7 @@
      "count": 13140499,
      "index": 59
     },
+    "setup_time": 0.139389451,
     "slot_occupancy": 0.6684141901794624,
     "total_time": 2.906604331,
     "unconverged": 0
@@ -2194,6 +3097,7 @@
      "count": 13144379,
      "index": 59
     },
+    "setup_time": 0.139195699,
     "slot_occupancy": 0.6946321042996009,
     "total_time": 2.895032846,
     "unconverged": 0
@@ -2217,6 +3121,7 @@
      "count": 13161714,
      "index": 59
     },
+    "setup_time": 0.140777593,
     "slot_occupancy": 0.7105612912714876,
     "total_time": 2.886747635,
     "unconverged": 0
@@ -2240,6 +3145,7 @@
      "count": 13151035,
      "index": 59
     },
+    "setup_time": 0.141072846,
     "slot_occupancy": 0.7059032634684914,
     "total_time": 2.886768323,
     "unconverged": 0
@@ -2288,7 +3194,20 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.23586330200018,
+     "brems-rel": 0.32144482800000174,
+     "brems-sb": 3.7149807090000047,
+     "conv-bethe-heitler": 0.620842963999997,
+     "geo-boundary": 0.312080885999999,
+     "ioni-moller-bhabha": 0.3279906659999969,
+     "msc-urban": 0.002807736999999742,
+     "photoel-livermore": 1.8136194720000012,
+     "physics-discrete-select": 3.972160583000032,
+     "pre-step": 16.724418970000034,
+     "scat-klein-nishina": 3.7318844020000035,
+     "scat-rayleigh": 0.6775653939999967
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54905
@@ -2306,12 +3225,26 @@
      "count": 244053,
      "index": 89
     },
+    "setup_time": 0.149824647,
     "slot_occupancy": 0.9988619528578866,
     "total_time": 74.410814418,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.2733251020002,
+     "brems-rel": 0.3478409350000038,
+     "brems-sb": 3.8214970339999934,
+     "conv-bethe-heitler": 0.6298020210000019,
+     "geo-boundary": 0.3470164679999988,
+     "ioni-moller-bhabha": 0.34771755000000276,
+     "msc-urban": 0.0030941790000002956,
+     "photoel-livermore": 1.9093699580000016,
+     "physics-discrete-select": 3.9933157560000234,
+     "pre-step": 16.751093082999958,
+     "scat-klein-nishina": 4.0396128769999695,
+     "scat-rayleigh": 0.6836472600000049
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54911
@@ -2329,12 +3262,26 @@
      "count": 238941,
      "index": 85
     },
+    "setup_time": 0.14986273,
     "slot_occupancy": 0.9991053594437738,
     "total_time": 75.394396737,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.56204656999987,
+     "brems-rel": 0.3132411770000006,
+     "brems-sb": 3.7571972660000066,
+     "conv-bethe-heitler": 0.6026692810000001,
+     "geo-boundary": 0.2832029950000008,
+     "ioni-moller-bhabha": 0.321650028000002,
+     "msc-urban": 0.0032628280000000206,
+     "photoel-livermore": 1.7835341439999968,
+     "physics-discrete-select": 3.9390258109999756,
+     "pre-step": 16.815299153000172,
+     "scat-klein-nishina": 3.7419883889999763,
+     "scat-rayleigh": 0.6529087690000057
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54882
@@ -2352,12 +3299,26 @@
      "count": 242202,
      "index": 87
     },
+    "setup_time": 0.149996344,
     "slot_occupancy": 0.9991312055263092,
     "total_time": 74.652979493,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.19192165900008,
+     "brems-rel": 0.3084935540000031,
+     "brems-sb": 3.7174600239999993,
+     "conv-bethe-heitler": 0.5948271509999975,
+     "geo-boundary": 0.2766334800000003,
+     "ioni-moller-bhabha": 0.31307947700000033,
+     "msc-urban": 0.002837511999999979,
+     "photoel-livermore": 1.782884408000013,
+     "physics-discrete-select": 3.9497599289999545,
+     "pre-step": 16.670698436999988,
+     "scat-klein-nishina": 3.689190348999944,
+     "scat-rayleigh": 0.6482952010000004
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54893
@@ -2375,12 +3336,26 @@
      "count": 245049,
      "index": 89
     },
+    "setup_time": 0.14986099,
     "slot_occupancy": 0.9992654107101844,
     "total_time": 74.055716415,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.18919760199986,
+     "brems-rel": 0.324726215,
+     "brems-sb": 3.741009544000013,
+     "conv-bethe-heitler": 0.6247236149999996,
+     "geo-boundary": 0.31130291599999943,
+     "ioni-moller-bhabha": 0.3296111020000012,
+     "msc-urban": 0.0027997799999997974,
+     "photoel-livermore": 1.796150429999993,
+     "physics-discrete-select": 3.981860390999988,
+     "pre-step": 16.969122986000144,
+     "scat-klein-nishina": 3.697821540000021,
+     "scat-rayleigh": 0.6795342219999968
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54903
@@ -2398,12 +3373,26 @@
      "count": 239682,
      "index": 87
     },
+    "setup_time": 0.14986066,
     "slot_occupancy": 0.999165698157802,
     "total_time": 74.522795227,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 35.21773986600031,
+     "brems-rel": 0.3324153030000028,
+     "brems-sb": 3.6936105890000084,
+     "conv-bethe-heitler": 0.6076373759999931,
+     "geo-boundary": 0.3328618349999996,
+     "ioni-moller-bhabha": 0.32861400100000215,
+     "msc-urban": 0.0031630390000003655,
+     "photoel-livermore": 1.8083993190000014,
+     "physics-discrete-select": 3.9515744409999636,
+     "pre-step": 16.684332125999966,
+     "scat-klein-nishina": 3.6831978930000284,
+     "scat-rayleigh": 0.667926318999998
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54905
@@ -2421,6 +3410,7 @@
      "count": 242233,
      "index": 87
     },
+    "setup_time": 0.149849661,
     "slot_occupancy": 0.9990923654204444,
     "total_time": 74.235130992,
     "unconverged": 0
@@ -2471,6 +3461,7 @@
      "count": 13130983,
      "index": 59
     },
+    "setup_time": 0.333717532,
     "slot_occupancy": 0.6811188924880255,
     "total_time": 2.818700246,
     "unconverged": 0
@@ -2494,6 +3485,7 @@
      "count": 13118076,
      "index": 59
     },
+    "setup_time": 0.332333407,
     "slot_occupancy": 0.6899622674923618,
     "total_time": 2.810733369,
     "unconverged": 0
@@ -2517,6 +3509,7 @@
      "count": 13140499,
      "index": 59
     },
+    "setup_time": 0.332567777,
     "slot_occupancy": 0.6684141901794624,
     "total_time": 2.826148713,
     "unconverged": 0
@@ -2540,6 +3533,7 @@
      "count": 13144379,
      "index": 59
     },
+    "setup_time": 0.333566572,
     "slot_occupancy": 0.6946321042996009,
     "total_time": 2.818140628,
     "unconverged": 0
@@ -2563,6 +3557,7 @@
      "count": 13161714,
      "index": 59
     },
+    "setup_time": 0.332339222,
     "slot_occupancy": 0.7105612912714876,
     "total_time": 2.102721268,
     "unconverged": 0
@@ -2586,6 +3581,7 @@
      "count": 13151035,
      "index": 59
     },
+    "setup_time": 0.332324276,
     "slot_occupancy": 0.7059032634684914,
     "total_time": 2.800891412,
     "unconverged": 0
@@ -2634,7 +3630,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.338246567000088,
+     "brems-rel": 0.3508524669999992,
+     "brems-sb": 3.6932196119999783,
+     "conv-bethe-heitler": 0.6326953040000042,
+     "geo-boundary": 0.45454832000000017,
+     "ioni-moller-bhabha": 0.34862562900000027,
+     "photoel-livermore": 1.827649015000001,
+     "physics-discrete-select": 3.8499134460000035,
+     "pre-step": 16.539900971999987,
+     "scat-klein-nishina": 3.6798236059999594,
+     "scat-rayleigh": 0.6939840039999989
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54900
@@ -2652,12 +3660,25 @@
      "count": 243411,
      "index": 89
     },
+    "setup_time": 0.137707729,
     "slot_occupancy": 0.9988621864260583,
     "total_time": 61.615118999,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.42192044300008,
+     "brems-rel": 0.3538102180000035,
+     "brems-sb": 3.6750758129999976,
+     "conv-bethe-heitler": 0.6384010370000013,
+     "geo-boundary": 0.38066847099999923,
+     "ioni-moller-bhabha": 0.3495984040000006,
+     "photoel-livermore": 1.8244849130000076,
+     "physics-discrete-select": 3.8805070969999913,
+     "pre-step": 16.493429032000083,
+     "scat-klein-nishina": 3.643646427000014,
+     "scat-rayleigh": 0.6982463389999931
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54896
@@ -2675,12 +3696,25 @@
      "count": 239349,
      "index": 86
     },
+    "setup_time": 0.136190577,
     "slot_occupancy": 0.999134081002504,
     "total_time": 61.490170913,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.42058246900008,
+     "brems-rel": 0.31535565999999843,
+     "brems-sb": 3.6318127939999543,
+     "conv-bethe-heitler": 0.5979994020000006,
+     "geo-boundary": 0.2909371569999996,
+     "ioni-moller-bhabha": 0.31650457800000054,
+     "photoel-livermore": 1.7864258110000057,
+     "physics-discrete-select": 3.838117096000006,
+     "pre-step": 16.461792239000033,
+     "scat-klein-nishina": 3.6153174479999897,
+     "scat-rayleigh": 0.6621222850000025
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54893
@@ -2698,12 +3732,25 @@
      "count": 242253,
      "index": 89
     },
+    "setup_time": 0.136457806,
     "slot_occupancy": 0.9988654740797723,
     "total_time": 60.904076349,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.563606299999964,
+     "brems-rel": 0.3125665610000014,
+     "brems-sb": 3.715319705999996,
+     "conv-bethe-heitler": 0.6023614460000023,
+     "geo-boundary": 0.29507247899999717,
+     "ioni-moller-bhabha": 0.318263423999998,
+     "photoel-livermore": 1.7694266830000032,
+     "physics-discrete-select": 3.8624001589999963,
+     "pre-step": 16.639866494000007,
+     "scat-klein-nishina": 3.6696015130000506,
+     "scat-rayleigh": 0.6543543949999933
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54908
@@ -2721,12 +3768,25 @@
      "count": 244573,
      "index": 90
     },
+    "setup_time": 0.145508877,
     "slot_occupancy": 0.9988281045802234,
     "total_time": 61.43149821,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.440039716999856,
+     "brems-rel": 0.31508740399999835,
+     "brems-sb": 3.6467980669999953,
+     "conv-bethe-heitler": 0.5940248199999965,
+     "geo-boundary": 0.28823740699999806,
+     "ioni-moller-bhabha": 0.3150977569999973,
+     "photoel-livermore": 1.7727131949999921,
+     "physics-discrete-select": 3.8490005119999973,
+     "pre-step": 16.448155995999894,
+     "scat-klein-nishina": 3.6213090349999937,
+     "scat-rayleigh": 0.6513962149999939
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54894
@@ -2744,12 +3804,25 @@
      "count": 240561,
      "index": 86
     },
+    "setup_time": 0.13645514,
     "slot_occupancy": 0.9989187328572289,
     "total_time": 61.00802035,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 22.461389009999856,
+     "brems-rel": 0.3219336799999972,
+     "brems-sb": 3.767479409,
+     "conv-bethe-heitler": 0.6182272389999995,
+     "geo-boundary": 0.3111251579999959,
+     "ioni-moller-bhabha": 0.329589961000001,
+     "photoel-livermore": 1.8865778790000014,
+     "physics-discrete-select": 3.877119080000003,
+     "pre-step": 16.513566323000052,
+     "scat-klein-nishina": 4.166952440999984,
+     "scat-rayleigh": 0.6602340019999986
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54917
@@ -2767,6 +3840,7 @@
      "count": 241745,
      "index": 86
     },
+    "setup_time": 0.13615398,
     "slot_occupancy": 0.9992456568522843,
     "total_time": 62.11374293,
     "unconverged": 0
@@ -2817,6 +3891,7 @@
      "count": 13130957,
      "index": 59
     },
+    "setup_time": 0.140590022,
     "slot_occupancy": 0.7078370859127233,
     "total_time": 2.505107936,
     "unconverged": 0
@@ -2840,6 +3915,7 @@
      "count": 13116208,
      "index": 59
     },
+    "setup_time": 0.1381262,
     "slot_occupancy": 0.7223843083237157,
     "total_time": 2.493956056,
     "unconverged": 0
@@ -2863,6 +3939,7 @@
      "count": 13157898,
      "index": 59
     },
+    "setup_time": 0.140347172,
     "slot_occupancy": 0.6705827355384827,
     "total_time": 2.52523057,
     "unconverged": 0
@@ -2886,6 +3963,7 @@
      "count": 13138475,
      "index": 59
     },
+    "setup_time": 0.140284166,
     "slot_occupancy": 0.6788842798788336,
     "total_time": 1.771664273,
     "unconverged": 0
@@ -2909,6 +3987,7 @@
      "count": 13169697,
      "index": 59
     },
+    "setup_time": 0.139779493,
     "slot_occupancy": 0.6725843304003294,
     "total_time": 2.531407775,
     "unconverged": 0
@@ -2932,6 +4011,7 @@
      "count": 13139383,
      "index": 59
     },
+    "setup_time": 0.141138484,
     "slot_occupancy": 0.7012780974893009,
     "total_time": 2.509011807,
     "unconverged": 0
@@ -2976,7 +4056,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.684236282999889,
+     "brems-rel": 0.347653938999998,
+     "brems-sb": 3.796640528000015,
+     "conv-bethe-heitler": 0.6276542080000013,
+     "geo-boundary": 0.3640018089999973,
+     "ioni-moller-bhabha": 0.3494990340000063,
+     "photoel-livermore": 1.8890990170000064,
+     "physics-discrete-select": 3.8589592759999922,
+     "pre-step": 16.566455228000063,
+     "scat-klein-nishina": 3.9685051389999995,
+     "scat-rayleigh": 0.6816778599999946
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54900
@@ -2994,12 +4086,25 @@
      "count": 243411,
      "index": 89
     },
+    "setup_time": 0.668335084,
     "slot_occupancy": 0.9988621864260583,
     "total_time": 48.49795445,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.69601404800003,
+     "brems-rel": 0.3277758340000028,
+     "brems-sb": 3.6743318419999906,
+     "conv-bethe-heitler": 0.6229954560000001,
+     "geo-boundary": 0.3218194700000019,
+     "ioni-moller-bhabha": 0.3279062840000027,
+     "photoel-livermore": 1.7860403140000123,
+     "physics-discrete-select": 3.8756544259999974,
+     "pre-step": 16.524135729999884,
+     "scat-klein-nishina": 3.7081373499999737,
+     "scat-rayleigh": 0.6794000279999977
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54896
@@ -3017,12 +4122,25 @@
      "count": 239349,
      "index": 86
     },
+    "setup_time": 0.668495177,
     "slot_occupancy": 0.999134081002504,
     "total_time": 47.596032726,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.705461743000042,
+     "brems-rel": 0.31036250099999924,
+     "brems-sb": 3.640164535999933,
+     "conv-bethe-heitler": 0.5959810829999983,
+     "geo-boundary": 0.29586747799999696,
+     "ioni-moller-bhabha": 0.3103777030000004,
+     "photoel-livermore": 1.7815573470000023,
+     "physics-discrete-select": 3.8430845939999774,
+     "pre-step": 16.47008518299998,
+     "scat-klein-nishina": 3.7390258529999327,
+     "scat-rayleigh": 0.6486793749999984
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54893
@@ -3040,12 +4158,25 @@
      "count": 242253,
      "index": 89
     },
+    "setup_time": 0.668589375,
     "slot_occupancy": 0.9988654740797723,
     "total_time": 47.388794852,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.74851815599997,
+     "brems-rel": 0.3201457759999976,
+     "brems-sb": 3.7368692660000025,
+     "conv-bethe-heitler": 0.6013160109999962,
+     "geo-boundary": 0.2921867589999958,
+     "ioni-moller-bhabha": 0.32543988800000184,
+     "photoel-livermore": 1.778828453,
+     "physics-discrete-select": 3.8974900389999814,
+     "pre-step": 16.748452802000067,
+     "scat-klein-nishina": 3.656283400000005,
+     "scat-rayleigh": 0.6536370909999986
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54908
@@ -3063,12 +4194,25 @@
      "count": 244573,
      "index": 90
     },
+    "setup_time": 0.668592585,
     "slot_occupancy": 0.9988281045802234,
     "total_time": 47.790311908,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.695236719000036,
+     "brems-rel": 0.3196891699999981,
+     "brems-sb": 3.6645879249999997,
+     "conv-bethe-heitler": 0.617529222999997,
+     "geo-boundary": 0.31577476300000024,
+     "ioni-moller-bhabha": 0.32323481400000204,
+     "photoel-livermore": 1.8002602900000144,
+     "physics-discrete-select": 3.865372556000008,
+     "pre-step": 16.505933030000044,
+     "scat-klein-nishina": 3.6477297189999716,
+     "scat-rayleigh": 0.6726363170000044
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54894
@@ -3086,12 +4230,25 @@
      "count": 240561,
      "index": 86
     },
+    "setup_time": 0.66830322,
     "slot_occupancy": 0.9989187328572289,
     "total_time": 47.544776786,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 8.650838827999987,
+     "brems-rel": 0.3372936679999974,
+     "brems-sb": 3.668779758000014,
+     "conv-bethe-heitler": 0.6057221659999977,
+     "geo-boundary": 0.343648558000001,
+     "ioni-moller-bhabha": 0.3322723120000014,
+     "photoel-livermore": 1.790434367000006,
+     "physics-discrete-select": 4.114647239,
+     "pre-step": 16.77609932500012,
+     "scat-klein-nishina": 3.5862013979999685,
+     "scat-rayleigh": 0.6694006120000032
+    },
     "active_hwm": {
      "count": 4096,
      "index": 54917
@@ -3109,6 +4266,7 @@
      "count": 241745,
      "index": 86
     },
+    "setup_time": 0.668332175,
     "slot_occupancy": 0.9992456568522843,
     "total_time": 47.963334023,
     "unconverged": 0
@@ -3155,6 +4313,7 @@
      "count": 13130957,
      "index": 59
     },
+    "setup_time": 0.144125885,
     "slot_occupancy": 0.7078370859127233,
     "total_time": 2.431525021,
     "unconverged": 0
@@ -3178,6 +4337,7 @@
      "count": 13116208,
      "index": 59
     },
+    "setup_time": 0.143613135,
     "slot_occupancy": 0.7223843083237157,
     "total_time": 2.429737695,
     "unconverged": 0
@@ -3201,6 +4361,7 @@
      "count": 13157898,
      "index": 59
     },
+    "setup_time": 0.142491169,
     "slot_occupancy": 0.6705827355384827,
     "total_time": 2.454653375,
     "unconverged": 0
@@ -3224,6 +4385,7 @@
      "count": 13138475,
      "index": 59
     },
+    "setup_time": 0.143336299,
     "slot_occupancy": 0.6788842798788336,
     "total_time": 2.450245617,
     "unconverged": 0
@@ -3247,6 +4409,7 @@
      "count": 13169697,
      "index": 59
     },
+    "setup_time": 0.142226508,
     "slot_occupancy": 0.6725843304003294,
     "total_time": 2.453066153,
     "unconverged": 0
@@ -3270,6 +4433,7 @@
      "count": 13139383,
      "index": 59
     },
+    "setup_time": 0.141817586,
     "slot_occupancy": 0.7012780974893009,
     "total_time": 2.437960184,
     "unconverged": 0
@@ -3340,7 +4504,19 @@
     "num_primaries": null
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 79.30037167300009,
+     "brems-rel": 0.504996943999986,
+     "brems-sb": 4.399729138999991,
+     "conv-bethe-heitler": 0.9966207020000089,
+     "geo-boundary": 5.2799455260000006,
+     "ioni-moller-bhabha": 0.5770454810000039,
+     "photoel-livermore": 2.5806401270000285,
+     "physics-discrete-select": 3.052327421000007,
+     "pre-step": 34.72184291599979,
+     "scat-klein-nishina": 1.7912319209999867,
+     "scat-rayleigh": 0.6476261360000073
+    },
     "active_hwm": {
      "count": 4096,
      "index": 118401
@@ -3358,12 +4534,25 @@
      "count": 215429,
      "index": 129
     },
+    "setup_time": 0.134648912,
     "slot_occupancy": 0.9992182692492755,
     "total_time": 148.608908677,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 79.38630115100088,
+     "brems-rel": 0.6130211799999945,
+     "brems-sb": 4.443942439000004,
+     "conv-bethe-heitler": 1.1071755280000084,
+     "geo-boundary": 5.380045349000007,
+     "ioni-moller-bhabha": 0.6734658360000009,
+     "photoel-livermore": 2.770332989000026,
+     "physics-discrete-select": 3.1307977530000994,
+     "pre-step": 34.81978916300013,
+     "scat-klein-nishina": 2.1916240030000163,
+     "scat-rayleigh": 0.7665706510000018
+    },
     "active_hwm": {
      "count": 4096,
      "index": 118424
@@ -3381,6 +4570,7 @@
      "count": 217624,
      "index": 128
     },
+    "setup_time": 0.137716587,
     "slot_occupancy": 0.9991991750148387,
     "total_time": 150.361262918,
     "unconverged": 0
@@ -3397,7 +4587,19 @@
     "num_primaries": null
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-uniform-msc": 82.46728237000029,
+     "brems-rel": 0.5365190130000052,
+     "brems-sb": 4.443896559000048,
+     "conv-bethe-heitler": 1.0747713940000065,
+     "geo-boundary": 5.375624267999975,
+     "ioni-moller-bhabha": 0.6257595649999944,
+     "photoel-livermore": 2.6132350210000017,
+     "physics-discrete-select": 3.080970719999962,
+     "pre-step": 34.77731812199969,
+     "scat-klein-nishina": 1.9233567840000283,
+     "scat-rayleigh": 0.7030091190000183
+    },
     "active_hwm": {
      "count": 4096,
      "index": 118443
@@ -3415,6 +4617,7 @@
      "count": 214830,
      "index": 129
     },
+    "setup_time": 0.136006705,
     "slot_occupancy": 0.9992281727764373,
     "total_time": 152.579527226,
     "unconverged": 0
@@ -3465,6 +4668,7 @@
      "count": 7827381,
      "index": 98
     },
+    "setup_time": 0.226446751,
     "slot_occupancy": 0.7424947025305195,
     "total_time": 5.68652602,
     "unconverged": 0
@@ -3503,6 +4707,7 @@
      "count": 7848093,
      "index": 98
     },
+    "setup_time": 0.227995203,
     "slot_occupancy": 0.7426803307204147,
     "total_time": 5.700274442,
     "unconverged": 0
@@ -3541,6 +4746,7 @@
      "count": 7817817,
      "index": 98
     },
+    "setup_time": 0.229000314,
     "slot_occupancy": 0.7511464667010617,
     "total_time": 5.74259619,
     "unconverged": 0
@@ -3655,7 +4861,20 @@
     "num_primaries": null
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 80.34474267200045,
+     "brems-rel": 0.748735860999997,
+     "brems-sb": 4.686311336000012,
+     "conv-bethe-heitler": 1.2376465320000132,
+     "geo-boundary": 5.444068921000007,
+     "ioni-moller-bhabha": 0.7910513279999992,
+     "msc-urban": 0.00885692800000013,
+     "photoel-livermore": 2.8489927879999764,
+     "physics-discrete-select": 3.4240418750000043,
+     "pre-step": 43.025511964999644,
+     "scat-klein-nishina": 2.0552731850000345,
+     "scat-rayleigh": 0.8993164229999965
+    },
     "active_hwm": {
      "count": 4096,
      "index": 142215
@@ -3673,6 +4892,7 @@
      "count": 213261,
      "index": 128
     },
+    "setup_time": 0.29633575,
     "slot_occupancy": 0.9989630850501959,
     "total_time": 161.137970067,
     "unconverged": 0
@@ -3802,7 +5022,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.98237939600005,
+     "brems-rel": 0.5597660349999996,
+     "brems-sb": 4.838516335999997,
+     "conv-bethe-heitler": 1.020058246999984,
+     "geo-boundary": 5.469638955000001,
+     "ioni-moller-bhabha": 0.6143689800000038,
+     "photoel-livermore": 3.1900581850000562,
+     "physics-discrete-select": 3.055971368999964,
+     "pre-step": 35.169284357999416,
+     "scat-klein-nishina": 1.8206315699999909,
+     "scat-rayleigh": 0.684839010999992
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120041
@@ -3820,12 +5052,25 @@
      "count": 216170,
      "index": 128
     },
+    "setup_time": 0.278216128,
     "slot_occupancy": 0.99934290164983,
     "total_time": 88.386091602,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.98069991700029,
+     "brems-rel": 0.5487013349999984,
+     "brems-sb": 4.777122562000092,
+     "conv-bethe-heitler": 1.0166236509999969,
+     "geo-boundary": 5.4931804570000375,
+     "ioni-moller-bhabha": 0.6042203719999943,
+     "photoel-livermore": 3.401956379000031,
+     "physics-discrete-select": 3.0732930600000015,
+     "pre-step": 35.34259919999987,
+     "scat-klein-nishina": 1.848368727000018,
+     "scat-rayleigh": 0.6792476389999975
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120034
@@ -3843,12 +5088,25 @@
      "count": 214843,
      "index": 129
     },
+    "setup_time": 0.319198948,
     "slot_occupancy": 0.9989950879260442,
     "total_time": 88.926295189,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.906399326000116,
+     "brems-rel": 0.5591587689999999,
+     "brems-sb": 4.44834520599996,
+     "conv-bethe-heitler": 1.0618094370000053,
+     "geo-boundary": 5.469097115999951,
+     "ioni-moller-bhabha": 0.6425610929999888,
+     "photoel-livermore": 2.595078596999971,
+     "physics-discrete-select": 3.0601926080000372,
+     "pre-step": 35.10109921799984,
+     "scat-klein-nishina": 1.829954226000017,
+     "scat-rayleigh": 0.6794367289999969
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120055
@@ -3866,12 +5124,25 @@
      "count": 215462,
      "index": 127
     },
+    "setup_time": 0.250055486,
     "slot_occupancy": 0.9990281348553073,
     "total_time": 87.431787122,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.921472271000127,
+     "brems-rel": 0.5204500099999978,
+     "brems-sb": 4.4332722889999605,
+     "conv-bethe-heitler": 1.0937044950000037,
+     "geo-boundary": 5.474816439999923,
+     "ioni-moller-bhabha": 0.6272144590000045,
+     "photoel-livermore": 2.6608196280000005,
+     "physics-discrete-select": 3.092437850000004,
+     "pre-step": 35.248491711999954,
+     "scat-klein-nishina": 1.877292966000005,
+     "scat-rayleigh": 0.7042190990000076
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120118
@@ -3889,12 +5160,25 @@
      "count": 216976,
      "index": 129
     },
+    "setup_time": 0.260254518,
     "slot_occupancy": 0.9993209482878271,
     "total_time": 87.379177019,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 17.02160511399995,
+     "brems-rel": 0.5116389089999965,
+     "brems-sb": 4.4321024120000105,
+     "conv-bethe-heitler": 1.0934624869999947,
+     "geo-boundary": 5.477971444000047,
+     "ioni-moller-bhabha": 0.6182546160000022,
+     "photoel-livermore": 2.693052112000017,
+     "physics-discrete-select": 3.0580046929999622,
+     "pre-step": 35.159336012000075,
+     "scat-klein-nishina": 1.9002976530000253,
+     "scat-rayleigh": 0.6983463720000054
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120080
@@ -3912,12 +5196,25 @@
      "count": 215304,
      "index": 129
     },
+    "setup_time": 0.253492904,
     "slot_occupancy": 0.9991896597808253,
     "total_time": 87.70264875,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.971317065000026,
+     "brems-rel": 0.5692099970000033,
+     "brems-sb": 4.409961616000026,
+     "conv-bethe-heitler": 1.0857280820000237,
+     "geo-boundary": 5.433423023999991,
+     "ioni-moller-bhabha": 0.644918099000003,
+     "photoel-livermore": 2.6456057029999926,
+     "physics-discrete-select": 3.0666865790000184,
+     "pre-step": 35.12204340099942,
+     "scat-klein-nishina": 1.857197039000011,
+     "scat-rayleigh": 0.7185292220000059
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120024
@@ -3935,6 +5232,7 @@
      "count": 215269,
      "index": 128
     },
+    "setup_time": 0.244587982,
     "slot_occupancy": 0.9991756265526602,
     "total_time": 87.284633333,
     "unconverged": 0
@@ -3981,6 +5279,7 @@
      "count": 7839071,
      "index": 98
     },
+    "setup_time": 0.267924831,
     "slot_occupancy": 0.7592808637032616,
     "total_time": 3.621033795,
     "unconverged": 0
@@ -4004,6 +5303,7 @@
      "count": 7844210,
      "index": 99
     },
+    "setup_time": 0.268922188,
     "slot_occupancy": 0.7578835818609629,
     "total_time": 3.18903817,
     "unconverged": 0
@@ -4027,6 +5327,7 @@
      "count": 7842293,
      "index": 98
     },
+    "setup_time": 0.139252879,
     "slot_occupancy": 0.759344346314958,
     "total_time": 3.177226471,
     "unconverged": 0
@@ -4050,6 +5351,7 @@
      "count": 7791935,
      "index": 98
     },
+    "setup_time": 0.267897895,
     "slot_occupancy": 0.7374289410669099,
     "total_time": 3.646293044,
     "unconverged": 0
@@ -4073,6 +5375,7 @@
      "count": 7817968,
      "index": 98
     },
+    "setup_time": 0.266486823,
     "slot_occupancy": 0.749479502534714,
     "total_time": 3.639099825,
     "unconverged": 0
@@ -4096,6 +5399,7 @@
      "count": 7818911,
      "index": 98
     },
+    "setup_time": 0.143281897,
     "slot_occupancy": 0.7640004359938034,
     "total_time": 3.053776754,
     "unconverged": 0
@@ -4140,7 +5444,19 @@
   ],
   "result": [
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.725708188999906,
+     "brems-rel": 0.5810061570000019,
+     "brems-sb": 4.492713708000017,
+     "conv-bethe-heitler": 1.0445490610000063,
+     "geo-boundary": 8.860405029999992,
+     "ioni-moller-bhabha": 0.632241284999991,
+     "photoel-livermore": 2.6224010269999973,
+     "physics-discrete-select": 3.0609582139999927,
+     "pre-step": 35.25958616999981,
+     "scat-klein-nishina": 1.8639846779999965,
+     "scat-rayleigh": 0.6984071200000127
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120041
@@ -4158,12 +5474,25 @@
      "count": 216170,
      "index": 128
     },
+    "setup_time": 0.164780392,
     "slot_occupancy": 0.99934290164983,
     "total_time": 83.904244107,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 17.881509298000072,
+     "brems-rel": 0.588009936000001,
+     "brems-sb": 4.548137238999977,
+     "conv-bethe-heitler": 1.120425850000002,
+     "geo-boundary": 8.804394997999955,
+     "ioni-moller-bhabha": 0.6734915849999984,
+     "photoel-livermore": 2.6956279980000155,
+     "physics-discrete-select": 3.1048575170000197,
+     "pre-step": 35.21277976200002,
+     "scat-klein-nishina": 1.9398283070000029,
+     "scat-rayleigh": 0.7592686879999969
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120034
@@ -4181,12 +5510,25 @@
      "count": 214843,
      "index": 129
     },
+    "setup_time": 0.163672005,
     "slot_occupancy": 0.9989950879260442,
     "total_time": 85.455284212,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.400722008999967,
+     "brems-rel": 0.5476147810000159,
+     "brems-sb": 4.407644971000054,
+     "conv-bethe-heitler": 1.0160468120000088,
+     "geo-boundary": 8.662460774999943,
+     "ioni-moller-bhabha": 0.6027243260000062,
+     "photoel-livermore": 2.6955620950000387,
+     "physics-discrete-select": 3.035215904999997,
+     "pre-step": 35.1227025129995,
+     "scat-klein-nishina": 1.8681181310000166,
+     "scat-rayleigh": 0.6833057910000016
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120055
@@ -4204,12 +5546,25 @@
      "count": 215462,
      "index": 127
     },
+    "setup_time": 0.165598675,
     "slot_occupancy": 0.9990281348553073,
     "total_time": 83.116850059,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.454628580999884,
+     "brems-rel": 0.5729289870000018,
+     "brems-sb": 4.435140981999993,
+     "conv-bethe-heitler": 1.0326868469999986,
+     "geo-boundary": 8.659224177999972,
+     "ioni-moller-bhabha": 0.6235067679999999,
+     "photoel-livermore": 2.663195525000017,
+     "physics-discrete-select": 3.0466681740000165,
+     "pre-step": 35.14833748000004,
+     "scat-klein-nishina": 1.8593261550000109,
+     "scat-rayleigh": 0.6970318240000033
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120118
@@ -4227,12 +5582,25 @@
      "count": 216976,
      "index": 129
     },
+    "setup_time": 0.164699628,
     "slot_occupancy": 0.9993209482878271,
     "total_time": 83.194048811,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.47736402800011,
+     "brems-rel": 0.5825521720000104,
+     "brems-sb": 4.475384998999974,
+     "conv-bethe-heitler": 1.106355965999979,
+     "geo-boundary": 8.726311696000112,
+     "ioni-moller-bhabha": 0.6695247940000083,
+     "photoel-livermore": 2.7277576560000463,
+     "physics-discrete-select": 3.0940087460000507,
+     "pre-step": 35.17995441500014,
+     "scat-klein-nishina": 1.936700559000038,
+     "scat-rayleigh": 0.7595747440000118
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120080
@@ -4250,12 +5618,25 @@
      "count": 215304,
      "index": 129
     },
+    "setup_time": 0.16367104,
     "slot_occupancy": 0.9991896597808253,
     "total_time": 83.78880905,
     "unconverged": 0
    },
    {
-    "action_times": {},
+    "action_times": {
+     "along-step-general-linear": 16.47528244700011,
+     "brems-rel": 0.5547261030000042,
+     "brems-sb": 4.4642453580000225,
+     "conv-bethe-heitler": 1.0325071949999955,
+     "geo-boundary": 8.743477875999972,
+     "ioni-moller-bhabha": 0.6104256680000012,
+     "photoel-livermore": 2.7298210290000284,
+     "physics-discrete-select": 3.038743543999978,
+     "pre-step": 35.318434145999596,
+     "scat-klein-nishina": 1.8859124319999951,
+     "scat-rayleigh": 0.6904669229999999
+    },
     "active_hwm": {
      "count": 4096,
      "index": 120024
@@ -4273,6 +5654,7 @@
      "count": 215269,
      "index": 128
     },
+    "setup_time": 0.168289733,
     "slot_occupancy": 0.9991756265526602,
     "total_time": 83.73781577,
     "unconverged": 0
@@ -4319,6 +5701,7 @@
      "count": 7839071,
      "index": 98
     },
+    "setup_time": 0.276188227,
     "slot_occupancy": 0.7592808637032616,
     "total_time": 3.92457002,
     "unconverged": 0
@@ -4342,6 +5725,7 @@
      "count": 7844210,
      "index": 99
     },
+    "setup_time": 0.232452324,
     "slot_occupancy": 0.7578835818609629,
     "total_time": 3.481520028,
     "unconverged": 0
@@ -4365,6 +5749,7 @@
      "count": 7842293,
      "index": 98
     },
+    "setup_time": 0.292180902,
     "slot_occupancy": 0.759344346314958,
     "total_time": 3.932094766,
     "unconverged": 0
@@ -4388,6 +5773,7 @@
      "count": 7791935,
      "index": 98
     },
+    "setup_time": 0.232452235,
     "slot_occupancy": 0.7374289410669099,
     "total_time": 3.511247145,
     "unconverged": 0
@@ -4411,6 +5797,7 @@
      "count": 7817968,
      "index": 98
     },
+    "setup_time": 0.274684443,
     "slot_occupancy": 0.749479502534714,
     "total_time": 3.938369596,
     "unconverged": 0
@@ -4434,6 +5821,7 @@
      "count": 7818911,
      "index": 98
     },
+    "setup_time": 0.291485407,
     "slot_occupancy": 0.7640004359938034,
     "total_time": 3.494990522,
     "unconverged": 0
