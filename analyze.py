@@ -369,11 +369,12 @@ def make_failure_table(failures):
     idx = []
     for key, err in failures.iterrows():
         idx.append("{}/{}+{} ({:d})".format(*key))
-        if err["type"] == "DebugError":
+        tp = err.get("type")
+        if tp == "DebugError":
             f = PurePosixPath(err["file"])
             err["file"] = f.name
             text = "{which}: `{condition}` at `{file}:{line}`".format(**err)
-        elif err["type"] == "RuntimeError":
+        elif tp == "RuntimeError":
             f = PurePosixPath(err["file"])
             err["file"] = f.name
             text = "{which} error: `{what}` at `{file}:{line}`".format(**err)
