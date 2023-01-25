@@ -77,9 +77,9 @@ def summarize_result(out):
         "active_hwm": calc_hwm(result['active']),
         "queue_hwm": calc_hwm(result['initializers']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
-        "avg_steps_per_primary": steps / active[0],
+        "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
-        "avg_time_per_primary": time['total'] / active[0],
+        "avg_time_per_primary": time['total'] / num_primaries,
         "slot_occupancy": steps / (len(active) * inp['max_num_tracks'])
     })
 
