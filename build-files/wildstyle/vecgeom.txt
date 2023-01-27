@@ -399,7 +399,7 @@ CUDA_NVCC_FLAGS_RELEASE:STRING=
 // builds.
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
-//Path to a library.
+//"OpenCL" library
 CUDA_OpenCL_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libOpenCL.so
 
 //Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
@@ -436,7 +436,7 @@ CUDA_cublasLt_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcublasLt.so
 //Path to a library.
 CUDA_cublasLt_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcublasLt_static.a
 
-//Path to a library.
+//"cublas" library
 CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcublas.so
 
 //Path to a library.
@@ -451,10 +451,10 @@ CUDA_cudadevrt_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcudadevrt.a
 //Path to a library.
 CUDA_cudart_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcudart.so
 
-//Path to a library.
+//static CUDA runtime library
 CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcudart_static.a
 
-//Path to a library.
+//"cufft" library
 CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcufft.so
 
 //Path to a library.
@@ -472,19 +472,19 @@ CUDA_cufftw_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcufftw_static.
 //Path to a library.
 CUDA_culibos_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libculibos.a
 
-//Path to a library.
+//"cupti" library
 CUDA_cupti_LIBRARY:FILEPATH=/usr/local/cuda-11.5/extras/CUPTI/lib64/libcupti.so
 
 //Path to a library.
 CUDA_cupti_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/extras/CUPTI/lib64/libcupti_static.a
 
-//Path to a library.
+//"curand" library
 CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcurand.so
 
 //Path to a library.
 CUDA_curand_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcurand_static.a
 
-//Path to a library.
+//"cusolver" library
 CUDA_cusolver_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcusolver.so
 
 //Path to a library.
@@ -496,13 +496,13 @@ CUDA_cusolver_metis_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libmetis_
 //Path to a library.
 CUDA_cusolver_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcusolver_static.a
 
-//Path to a library.
+//"cusparse" library
 CUDA_cusparse_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcusparse.so
 
 //Path to a library.
 CUDA_cusparse_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libcusparse_static.a
 
-//Path to a library.
+//"nppc" library
 CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnppc.so
 
 //Path to a library.
@@ -568,13 +568,13 @@ CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnppitc.so
 //Path to a library.
 CUDA_nppitc_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnppitc_static.a
 
-//Path to a library.
+//"npps" library
 CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnpps.so
 
 //Path to a library.
 CUDA_npps_static_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnpps_static.a
 
-//Path to a library.
+//"nvToolsExt" library
 CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda-11.5/lib64/libnvToolsExt.so
 
 //Path to a library.
@@ -1168,7 +1168,7 @@ CUDA_parse_cubin:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/ecccvko/shar
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/ecccvko/share/cmake-3.24/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.2.0;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.2.0;-10;9f797bd3
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1345,7 +1345,7 @@ _Python_INTERPRETER_SIGNATURE:INTERNAL=9ce9a2265f42feb8003a6e995540b5ca
 __pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
 __pkg_config_checked_PC_EXPAT:INTERNAL=1
 //modules_idx_deps
-modules_idx_deps:INTERNAL=celeritas
+modules_idx_deps:INTERNAL=celeritas;celeritas
 //ADVANCED property for variable: pkgcfg_lib_PC_EXPAT_expat
 pkgcfg_lib_PC_EXPAT_expat-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/expat/vocoi2f/lib
