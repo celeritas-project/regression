@@ -253,13 +253,13 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.2.0
+CMAKE_PROJECT_VERSION:STATIC=0.3.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=2
+CMAKE_PROJECT_VERSION_MINOR:STATIC=3
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_PATCH:STATIC=0
@@ -1168,7 +1168,7 @@ CUDA_parse_cubin:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/ecccvko/shar
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/ecccvko/share/cmake-3.24/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.2.0;-10;9f797bd3
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev-5;0dcab606
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1345,7 +1345,7 @@ _Python_INTERPRETER_SIGNATURE:INTERNAL=9ce9a2265f42feb8003a6e995540b5ca
 __pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
 __pkg_config_checked_PC_EXPAT:INTERNAL=1
 //modules_idx_deps
-modules_idx_deps:INTERNAL=celeritas;celeritas
+modules_idx_deps:INTERNAL=celeritas;celeritas;celeritas
 //ADVANCED property for variable: pkgcfg_lib_PC_EXPAT_expat
 pkgcfg_lib_PC_EXPAT_expat-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/expat/vocoi2f/lib

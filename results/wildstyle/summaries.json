@@ -27,31 +27,31 @@
      "condition": "mfp > 0",
      "context": {
       "dir": [
-       0.34075079638596456,
-       0.11890851532618418,
-       0.9326036991912768
+       0.28977049742532407,
+       0.6602115361134434,
+       -0.6929312999169598
       ],
       "energy": [
-       9.331117982852458,
+       9.51564100962012,
        "MeV"
       ],
       "event": 4,
       "label": "along-step-uniform-msc",
-      "num_steps": 3,
-      "parent": 1681145,
+      "num_steps": 7,
+      "parent": 1968486,
       "particle": 2,
       "pos": [
-       -100.696255136249,
-       87.18868463055634,
-       80.93651914108645
+       -132.5429441030333,
+       16.33735675074913,
+       -71.09170185532457
       ],
-      "thread": 593,
-      "track": 1681186,
+      "thread": 679,
+      "track": 1968912,
       "type": "KernelContextException",
-      "volume": 2705
+      "volume": 2390
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 129,
+     "line": 119,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -63,34 +63,34 @@
      "type": "<class 'KeyError'>"
     },
     "failure": {
-     "condition": "mfp > 0",
+     "condition": "step_limit->action != track.boundary_action()",
      "context": {
       "dir": [
-       0.24278444495415058,
-       0.4229572039704155,
-       0.8730194252694686
+       -0.8945792384174444,
+       0.2720884840382072,
+       -0.35453609554776744
       ],
       "energy": [
-       9.916999303797795,
+       0.0005020205027754868,
        "MeV"
       ],
-      "event": 3,
+      "event": 4,
       "label": "along-step-uniform-msc",
-      "num_steps": 3,
-      "parent": 28006,
-      "particle": 2,
+      "num_steps": 28,
+      "parent": 126961,
+      "particle": 1,
       "pos": [
-       65.39978882143026,
-       55.44444787294294,
-       320.33029114931753
+       53.69997256881601,
+       84.1075895243459,
+       307.05
       ],
-      "thread": 3255,
-      "track": 30777,
+      "thread": 2962,
+      "track": 130258,
       "type": "KernelContextException",
-      "volume": 3120
+      "volume": 3398
      },
-     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 129,
+     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh",
+     "line": 77,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -101,7 +101,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "cms2018+field+msc-vecgeom-gpu": {
@@ -118,7 +118,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1332531, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f25ad3e1071]"
+      "[PID=3833465, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fdb0d655071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:264:",
@@ -134,7 +134,7 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1332533, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fcc27943071]"
+      "[PID=3833467, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4b2ce85071]"
      ],
      "stdout": [
       "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:264:",
@@ -186,16 +186,16 @@
       "particle": 1,
       "pos": [
        38.5587122234001,
-       7.806680082261858,
+       7.80668008226186,
        227.28506044268605
       ],
-      "thread": 1653,
-      "track": 28317,
+      "thread": 1817,
+      "track": 28421,
       "type": "KernelContextException",
       "volume": 2126
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 110,
+     "line": 100,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -210,31 +210,31 @@
      "condition": "speed > 0",
      "context": {
       "dir": [
-       -0.7764297365878872,
-       0.6090481744190231,
-       0.1619172176728581
+       0.15038838198152105,
+       0.5943635988328636,
+       0.7900096499077888
       ],
       "energy": [
-       9.540979117872439e-18,
+       1.3010426069826053e-17,
        "MeV"
       ],
-      "event": 6,
+      "event": 3,
       "label": "along-step-general-linear",
       "num_steps": 1,
-      "parent": 249599,
+      "parent": 2023696,
       "particle": 1,
       "pos": [
-       103.5844707518932,
-       36.381341521654974,
-       310.5217398600153
+       -27.57621152291524,
+       -69.45491083732541,
+       72.52965384774878
       ],
-      "thread": 408,
-      "track": 672611,
+      "thread": 2077,
+      "track": 2120836,
       "type": "KernelContextException",
-      "volume": 3413
+      "volume": 1939
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 110,
+     "line": 100,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -245,7 +245,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "cms2018-vecgeom-gpu": {
@@ -262,10 +262,10 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1344596, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f289ca59071]"
+      "[PID=3833000, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4ee2fdc071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:110:",
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:100:",
       "celeritas: internal assertion failed: speed > 0"
      ]
     },
@@ -278,10 +278,10 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1344598, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f7a93764071]"
+      "[PID=3833002, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f1b13863071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:110:",
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:100:",
       "celeritas: internal assertion failed: speed > 0"
      ]
     },
@@ -310,78 +310,84 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-uniform-msc": 30.206793962999924,
-     "brems-rel": 0.7509364929999984,
-     "brems-sb": 2.370209445999988,
-     "conv-bethe-heitler": 0.7775877760000046,
-     "geo-boundary": 0.6098220830000101,
-     "ioni-moller-bhabha": 1.0207023419999928,
-     "msc-urban": 0.005236580000000042,
-     "photoel-livermore": 1.4841766310000166,
-     "physics-discrete-select": 1.9714124269999964,
-     "pre-step": 8.59962550699993,
-     "scat-klein-nishina": 3.746572557999996,
-     "scat-rayleigh": 0.8173022099999968
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
     },
-    "active_hwm": {
-     "count": 4096,
-     "index": 64843
-    },
-    "avg_steps_per_primary": 29201.644395604395,
-    "avg_time_per_primary": 0.00680538192978022,
-    "avg_time_per_step": 2.3304790091905258e-07,
-    "emptying_step": 64844,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 64952,
-    "num_steps": 265734964,
-    "pre_emptying_time": 0.00082248,
-    "queue_hwm": {
-     "count": 292312,
-     "index": 106
-    },
-    "setup_time": 0.16261992,
-    "slot_occupancy": 0.9988406853570714,
-    "total_time": 61.928975561,
-    "unconverged": 0
+    "failure": {
+     "condition": "p.distance < local.step_limit.step",
+     "context": {
+      "dir": [
+       0.9326791502905805,
+       0.22055143930127016,
+       0.285423659207465
+      ],
+      "energy": [
+       0.15489069246907777,
+       "MeV"
+      ],
+      "event": 0,
+      "label": "along-step-uniform-msc",
+      "num_steps": 2,
+      "parent": 3389438,
+      "particle": 0,
+      "pos": [
+       92.02623479029565,
+       84.59416120703236,
+       27.242553860104337
+      ],
+      "surface": 9,
+      "thread": 427,
+      "track": 3410721,
+      "type": "KernelContextException",
+      "volume": 2
+     },
+     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
+     "line": 73,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 563.7545397039996,
-     "brems-rel": 0.8040492859999967,
-     "brems-sb": 2.766452968000009,
-     "conv-bethe-heitler": 0.9046226289999971,
-     "geo-boundary": 0.7402119350000034,
-     "ioni-moller-bhabha": 1.0768633780000014,
-     "msc-urban": 0.011643605000000456,
-     "photoel-livermore": 1.8409842420000104,
-     "physics-discrete-select": 2.7561428270000015,
-     "pre-step": 8.029227564999886,
-     "scat-klein-nishina": 4.703824480999953,
-     "scat-rayleigh": 0.9179245169999882
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
     },
-    "active_hwm": {
-     "count": 4096,
-     "index": 64812
-    },
-    "avg_steps_per_primary": 29192.478791208792,
-    "avg_time_per_primary": 0.06590997744395605,
-    "avg_time_per_step": 2.2577725555736157e-06,
-    "emptying_step": 64813,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 74159,
-    "num_steps": 265651557,
-    "pre_emptying_time": 0.016157686,
-    "queue_hwm": {
-     "count": 296030,
-     "index": 112
-    },
-    "setup_time": 0.162642749,
-    "slot_occupancy": 0.8745578710365988,
-    "total_time": 599.78079474,
-    "unconverged": 1
+    "failure": {
+     "condition": "init.volume",
+     "context": {
+      "dir": [
+       0.1907402105693087,
+       0.5173873554660011,
+       -0.8342232893391754
+      ],
+      "energy": [
+       5.24603846976218,
+       "MeV"
+      ],
+      "event": 5,
+      "label": "geo-boundary",
+      "num_steps": 7,
+      "parent": 3477123,
+      "particle": 1,
+      "pos": [
+       113.64459450696575,
+       -52.056758824837836,
+       -102.7076279262328
+      ],
+      "surface": 9,
+      "thread": 3980,
+      "track": 3478748,
+      "type": "KernelContextException",
+      "volume": 2
+     },
+     "file": "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh",
+     "line": 447,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
    }
   ],
   "system": {
@@ -389,21 +395,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "simple-cms+field+msc-orange-gpu": {
-  "input": {
-   "enable_msc": true,
-   "geometry_filename": "simple-cms.org.json",
-   "mag_field": [
-    0.0,
-    0.0,
-    1.0
-   ],
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "simple-cms+field+msc",
    "orange",
@@ -411,83 +407,213 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-uniform-msc": 46.42084791100001,
-     "brems-rel": 0.147568905,
-     "brems-sb": 0.5284401420000007,
-     "conv-bethe-heitler": 0.20742190700000004,
-     "geo-boundary": 0.1744468819999999,
-     "ioni-moller-bhabha": 0.18672177200000015,
-     "msc-urban": 0.0035770000000000003,
-     "photoel-livermore": 0.31911777100000027,
-     "physics-discrete-select": 0.26927717399999923,
-     "pre-step": 7.153182926999984,
-     "scat-klein-nishina": 0.23316727299999973,
-     "scat-rayleigh": 0.18792948600000023
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3831273, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f6d4df3b071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "active_hwm": {
-     "count": 1048576,
-     "index": 246
-    },
-    "avg_steps_per_primary": 29197.593076923076,
-    "avg_time_per_primary": 0.00621104898978022,
-    "avg_time_per_step": 2.1272469184075488e-07,
-    "emptying_step": 247,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 2048,
-    "num_steps": 265698097,
-    "pre_emptying_time": 0.047570662,
-    "queue_hwm": {
-     "count": 15399285,
-     "index": 71
-    },
-    "setup_time": 0.165980961,
-    "slot_occupancy": 0.12372531788423657,
-    "total_time": 56.520545807,
-    "unconverged": 2
+    "num_primaries": 9100
    },
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1331894, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fae5a0c6071]"
+      "[PID=3831275, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fca475f8071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:478:",
-      "celeritas: internal assertion failed: is_soft_unit_vector(newdir)"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_uniform_msc": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "simple-cms+field+msc-vecgeom-cpu": {
   "input": {
@@ -508,43 +634,41 @@
   ],
   "result": [
    {
-    "exception": {
-     "context": "result",
-     "str": "'active'",
-     "type": "<class 'KeyError'>"
+    "action_times": {
+     "along-step-uniform-msc": 24.568190826000247,
+     "annihil-2-gamma": 0.9149230590000003,
+     "brems-rel": 0.9164410960000011,
+     "brems-sb": 2.8059115309999827,
+     "conv-bethe-heitler": 1.0241351379999926,
+     "geo-boundary": 0.9185416789999986,
+     "ioni-moller-bhabha": 1.1844647510000115,
+     "photoel-livermore": 2.2097999129999812,
+     "physics-discrete-select": 1.9843003879999914,
+     "pre-step": 9.043171341999985,
+     "scat-klein-nishina": 6.399862590000034,
+     "scat-rayleigh": 1.1195791079999768
     },
-    "failure": {
-     "condition": "is_soft_unit_vector(newdir)",
-     "context": {
-      "dir": [
-       0.9212577226510097,
-       0.37033704650368765,
-       -0.11888936219360097
-      ],
-      "energy": [
-       2.967655524802351,
-       "MeV"
-      ],
-      "event": 5,
-      "label": "along-step-uniform-msc",
-      "num_steps": 5,
-      "parent": 16260361,
-      "particle": 1,
-      "pos": [
-       114.19444187236448,
-       50.83925103165045,
-       -32.40699492577129
-      ],
-      "thread": 579,
-      "track": 16261872,
-      "type": "KernelContextException",
-      "volume": 2
-     },
-     "file": "/home/s3j/.local/src/celeritas/src/celeritas/ext/VecgeomTrackView.hh",
-     "line": 463,
-     "type": "DebugError",
-     "which": "precondition failed"
-    }
+    "active_hwm": {
+     "count": 4096,
+     "index": 79903
+    },
+    "avg_steps_per_primary": 35975.65252747253,
+    "avg_time_per_primary": 0.007397171072527473,
+    "avg_time_per_step": 2.0561603620333728e-07,
+    "emptying_step": 79904,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 79982,
+    "num_steps": 327378438,
+    "pre_emptying_time": 0.000739628,
+    "queue_hwm": {
+     "count": 294858,
+     "index": 110
+    },
+    "setup_time": 0.171026947,
+    "slot_occupancy": 0.999304549334147,
+    "total_time": 67.31425676,
+    "unconverged": 0
    },
    {
     "exception": {
@@ -553,34 +677,34 @@
      "type": "<class 'KeyError'>"
     },
     "failure": {
-     "condition": "step_limit->action != track.boundary_action()",
+     "condition": "succeeded",
      "context": {
       "dir": [
-       0.7265521868280835,
-       0.6257586672854587,
-       0.2838098133124655
+       -0.10879161437713994,
+       -0.9915144018274107,
+       0.07115880556928907
       ],
       "energy": [
-       0.0015045044559559486,
+       0.0006774987355964047,
        "MeV"
       ],
-      "event": 5,
+      "event": 3,
       "label": "along-step-uniform-msc",
-      "num_steps": 13,
-      "parent": 5166702,
+      "num_steps": 24,
+      "parent": 2936296,
       "particle": 1,
       "pos": [
-       -119.76130784028624,
-       -35.808227328146195,
-       81.8567439396903
+       -48.87898133117359,
+       -115.04714331102177,
+       -2.7111447178520263
       ],
-      "thread": 3351,
-      "track": 5166729,
+      "thread": 915,
+      "track": 2952384,
       "type": "KernelContextException",
-      "volume": 2
+      "volume": 6
      },
-     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh",
-     "line": 77,
+     "file": "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh",
+     "line": 198,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -591,7 +715,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "simple-cms+field+msc-vecgeom-gpu": {
@@ -614,40 +738,40 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 6.815894467000002,
-     "brems-rel": 0.03669163100000002,
-     "brems-sb": 0.387296375,
-     "conv-bethe-heitler": 0.09815129100000007,
-     "geo-boundary": 0.06225650999999999,
-     "ioni-moller-bhabha": 0.07637920100000001,
-     "msc-urban": 0.0007517220000000007,
-     "photoel-livermore": 0.21258614600000014,
-     "physics-discrete-select": 0.14640713699999994,
-     "pre-step": 1.022758675999999,
-     "scat-klein-nishina": 0.12391795900000001,
-     "scat-rayleigh": 0.07775034000000004
+     "along-step-uniform-msc": 40.58510406599995,
+     "annihil-2-gamma": 0.151909523,
+     "brems-rel": 0.14680316499999965,
+     "brems-sb": 0.5401639969999994,
+     "conv-bethe-heitler": 0.21404924300000047,
+     "geo-boundary": 0.1812139250000005,
+     "ioni-moller-bhabha": 0.19001931199999977,
+     "photoel-livermore": 0.3640685360000005,
+     "physics-discrete-select": 0.3073040110000002,
+     "pre-step": 2.363334382999993,
+     "scat-klein-nishina": 0.26394253699999976,
+     "scat-rayleigh": 0.1989107210000003
     },
     "active_hwm": {
      "count": 1048576,
-     "index": 246
+     "index": 303
     },
-    "avg_steps_per_primary": 29189.959010989012,
-    "avg_time_per_primary": 0.0010304373896703298,
-    "avg_time_per_step": 3.530109066896619e-08,
-    "emptying_step": 247,
+    "avg_steps_per_primary": 35977.08604395604,
+    "avg_time_per_primary": 0.005074261248791208,
+    "avg_time_per_step": 1.4104147408135232e-07,
+    "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 389,
-    "num_steps": 265628627,
-    "pre_emptying_time": 0.03027005,
+    "num_step_iters": 2048,
+    "num_steps": 327391483,
+    "pre_emptying_time": 0.036296607,
     "queue_hwm": {
-     "count": 15374791,
-     "index": 71
+     "count": 17489133,
+     "index": 74
     },
-    "setup_time": 0.179490888,
-    "slot_occupancy": 0.6512164505710945,
-    "total_time": 9.376980246,
-    "unconverged": 0
+    "setup_time": 0.190565647,
+    "slot_occupancy": 0.15245353942736983,
+    "total_time": 46.175777364,
+    "unconverged": 1
    },
    {
     "failure": {
@@ -655,11 +779,11 @@
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1332240, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f7988511071]"
+      "[PID=3831564, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f41034cb071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:198:",
-      "celeritas: internal assertion failed: succeeded"
+      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:77:",
+      "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
      ]
     },
     "num_events": 7,
@@ -674,6 +798,7 @@
     "bethe_heitler_interact": 0.125,
     "boundary": 0.125,
     "discrete_select": 0.25,
+    "eplusgg_interact": 0.25,
     "init_tracks": 0.125,
     "klein_nishina_interact": 0.25,
     "livermore_pe_interact": 0.125,
@@ -687,7 +812,7 @@
     "seltzer_berger_interact": 0.125
    },
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "simple-cms+field-orange-cpu": {
@@ -715,73 +840,77 @@
      "type": "<class 'KeyError'>"
     },
     "failure": {
-     "condition": "speed > 0",
+     "condition": "init.volume",
      "context": {
       "dir": [
-       0.661229276233472,
-       -0.6982570672208755,
-       0.2742497262129173
+       0.12786406150733948,
+       0.8992406302339495,
+       -0.41835041617201335
       ],
       "energy": [
-       2.0816681711721685e-17,
+       0.010473511878757119,
        "MeV"
       ],
-      "event": 6,
-      "label": "along-step-uniform-msc",
+      "event": 5,
+      "label": "geo-boundary",
       "num_steps": 1,
-      "parent": 10832000,
+      "parent": 2265355,
       "particle": 1,
       "pos": [
-       -46.051359974905495,
-       116.20788374487174,
-       -5.384827845129563
+       24.108344300292877,
+       122.65311954898881,
+       -68.84393292401674
       ],
-      "thread": 3733,
-      "track": 10837755,
+      "surface": 9,
+      "thread": 3912,
+      "track": 2269592,
       "type": "KernelContextException",
-      "volume": 2
+      "volume": 3
      },
-     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 110,
+     "file": "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh",
+     "line": 447,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
    },
    {
-    "action_times": {
-     "along-step-uniform-msc": 15.052223891000034,
-     "brems-rel": 0.6947099529999955,
-     "brems-sb": 2.5863734029999916,
-     "conv-bethe-heitler": 0.8033343619999995,
-     "geo-boundary": 0.5848667200000021,
-     "ioni-moller-bhabha": 0.9943690840000045,
-     "photoel-livermore": 1.789642408999999,
-     "physics-discrete-select": 1.4951229329999909,
-     "pre-step": 6.909647039999952,
-     "scat-klein-nishina": 4.899045941000054,
-     "scat-rayleigh": 0.7803631079999951
+    "exception": {
+     "context": "result",
+     "str": "'active'",
+     "type": "<class 'KeyError'>"
     },
-    "active_hwm": {
-     "count": 4096,
-     "index": 64394
-    },
-    "avg_steps_per_primary": 29001.803076923075,
-    "avg_time_per_primary": 0.005351121886153846,
-    "avg_time_per_step": 1.8450997243036135e-07,
-    "emptying_step": 64395,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 64495,
-    "num_steps": 263916408,
-    "pre_emptying_time": 0.000686086,
-    "queue_hwm": {
-     "count": 296320,
-     "index": 109
-    },
-    "setup_time": 0.1741762,
-    "slot_occupancy": 0.9990342940828747,
-    "total_time": 48.695209164,
-    "unconverged": 0
+    "failure": {
+     "condition": "speed > 0",
+     "context": {
+      "dir": [
+       -0.7078867370826861,
+       -0.5066944469758596,
+       0.49209460966998547
+      ],
+      "energy": [
+       3.469446951953614e-18,
+       "MeV"
+      ],
+      "event": 2,
+      "label": "along-step-uniform-msc",
+      "num_steps": 1,
+      "parent": 142738,
+      "particle": 1,
+      "pos": [
+       114.80188288852048,
+       -49.45227684596959,
+       -59.902127582013115
+      ],
+      "thread": 3228,
+      "track": 148087,
+      "type": "KernelContextException",
+      "volume": 2
+     },
+     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
+     "line": 100,
+     "type": "DebugError",
+     "which": "internal assertion failed"
+    }
    }
   ],
   "system": {
@@ -789,7 +918,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "simple-cms+field-orange-gpu": {
@@ -803,15 +932,79 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1329852, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f21f8e3f071]"
+      "[PID=3831064, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fdc55a3f071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/field/FieldDriver.hh:198:",
-      "celeritas: internal assertion failed: succeeded"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": 7,
@@ -820,15 +1013,77 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1329854, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4a87373071]"
+      "[PID=3831066, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f1e5e91f071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/orange/surf/detail/../detail/QuadraticSolver.hh:110:",
-      "celeritas: internal assertion failed: std::fabs(a) >= min_a()"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": 7,
@@ -853,76 +1108,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 16.424875712999885,
-     "brems-rel": 0.745349931999995,
-     "brems-sb": 2.352565469999983,
-     "conv-bethe-heitler": 0.8134000039999907,
-     "geo-boundary": 0.6217129170000074,
-     "ioni-moller-bhabha": 0.926277318999995,
-     "msc-urban": 0.005742092000000277,
-     "photoel-livermore": 1.5580046220000192,
-     "physics-discrete-select": 1.79543861800001,
-     "pre-step": 8.598000069000076,
-     "scat-klein-nishina": 3.9619976310000427,
-     "scat-rayleigh": 0.8254124430000107
+     "along-step-general-linear": 19.30181999200016,
+     "annihil-2-gamma": 0.7583579809999933,
+     "brems-rel": 0.9155533169999994,
+     "brems-sb": 2.6533231650000126,
+     "conv-bethe-heitler": 0.9538973819999856,
+     "geo-boundary": 0.7309405780000018,
+     "ioni-moller-bhabha": 1.1831393689999836,
+     "photoel-livermore": 1.9168268210000075,
+     "physics-discrete-select": 2.1952515080000197,
+     "pre-step": 10.587413954999999,
+     "scat-klein-nishina": 5.203234483999979,
+     "scat-rayleigh": 0.9933266849999991
     },
     "active_hwm": {
      "count": 4096,
-     "index": 64738
+     "index": 79761
     },
-    "avg_steps_per_primary": 29152.166813186814,
-    "avg_time_per_primary": 0.005358006983956044,
-    "avg_time_per_step": 1.8379446777631569e-07,
-    "emptying_step": 64739,
+    "avg_steps_per_primary": 35914.30197802198,
+    "avg_time_per_primary": 0.0065749871360439565,
+    "avg_time_per_step": 1.8307434013523548e-07,
+    "emptying_step": 79762,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 64853,
-    "num_steps": 265284718,
-    "pre_emptying_time": 0.000699183,
+    "num_step_iters": 79862,
+    "num_steps": 326820148,
+    "pre_emptying_time": 0.000847596,
     "queue_hwm": {
-     "count": 292500,
-     "index": 105
+     "count": 295057,
+     "index": 109
     },
-    "setup_time": 0.164872907,
-    "slot_occupancy": 0.9986704833310526,
-    "total_time": 48.757863554,
+    "setup_time": 0.1637972,
+    "slot_occupancy": 0.9990993863829167,
+    "total_time": 59.832382938,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 18.142039734000054,
-     "brems-rel": 0.7046671829999929,
-     "brems-sb": 2.332872384000018,
-     "conv-bethe-heitler": 0.788395234999997,
-     "geo-boundary": 0.6063391900000044,
-     "ioni-moller-bhabha": 0.885237868000002,
-     "msc-urban": 0.004369746000000513,
-     "photoel-livermore": 1.5330920319999877,
-     "physics-discrete-select": 1.773507387000002,
-     "pre-step": 8.596935713999923,
-     "scat-klein-nishina": 3.9864258550000007,
-     "scat-rayleigh": 0.791566377999997
+     "along-step-general-linear": 19.4444649839997,
+     "annihil-2-gamma": 0.726563461999997,
+     "brems-rel": 0.7304013049999988,
+     "brems-sb": 2.4253164069999995,
+     "conv-bethe-heitler": 0.848398254000001,
+     "geo-boundary": 0.7002233980000012,
+     "ioni-moller-bhabha": 0.9262462859999938,
+     "photoel-livermore": 1.7861731350000167,
+     "physics-discrete-select": 1.9838833850000268,
+     "pre-step": 10.510545406999945,
+     "scat-klein-nishina": 5.09236704300003,
+     "scat-rayleigh": 0.9553288979999901
     },
     "active_hwm": {
      "count": 4096,
-     "index": 64692
+     "index": 79751
     },
-    "avg_steps_per_primary": 29136.95241758242,
-    "avg_time_per_primary": 0.005533795153406593,
-    "avg_time_per_step": 1.8992360882833023e-07,
-    "emptying_step": 64693,
+    "avg_steps_per_primary": 35915.55637362637,
+    "avg_time_per_primary": 0.006426278935824176,
+    "avg_time_per_step": 1.7892745051676664e-07,
+    "emptying_step": 79752,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 64797,
-    "num_steps": 265146267,
-    "pre_emptying_time": 0.000824239,
+    "num_step_iters": 79873,
+    "num_steps": 326831563,
+    "pre_emptying_time": 0.000711244,
     "queue_hwm": {
-     "count": 295932,
-     "index": 113
+     "count": 298308,
+     "index": 114
     },
-    "setup_time": 0.164561398,
-    "slot_occupancy": 0.9990119194067144,
-    "total_time": 50.357535896,
+    "setup_time": 0.162417048,
+    "slot_occupancy": 0.9989966829910842,
+    "total_time": 58.479138316,
     "unconverged": 0
    }
   ],
@@ -931,17 +1186,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "simple-cms+msc-orange-gpu": {
-  "input": {
-   "enable_msc": true,
-   "geometry_filename": "simple-cms.org.json",
-   "mag_field": null,
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "simple-cms+msc",
    "orange",
@@ -949,103 +1198,213 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-general-linear": 4.465188154000001,
-     "brems-rel": 0.036607665,
-     "brems-sb": 0.41714818300000006,
-     "conv-bethe-heitler": 0.09674156500000002,
-     "geo-boundary": 0.06347171899999994,
-     "ioni-moller-bhabha": 0.07699907299999997,
-     "msc-urban": 0.0006910780000000005,
-     "photoel-livermore": 0.206686242,
-     "physics-discrete-select": 0.145037278,
-     "pre-step": 2.133567434999999,
-     "scat-klein-nishina": 0.12167841100000006,
-     "scat-rayleigh": 0.07693460599999993
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3830759, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fa8f8c77071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "active_hwm": {
-     "count": 1048576,
-     "index": 245
-    },
-    "avg_steps_per_primary": 29130.397912087912,
-    "avg_time_per_primary": 0.0008989262650549451,
-    "avg_time_per_step": 3.0858701888240524e-08,
-    "emptying_step": 246,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 401,
-    "num_steps": 265086621,
-    "pre_emptying_time": 0.026636217,
-    "queue_hwm": {
-     "count": 15385304,
-     "index": 71
-    },
-    "setup_time": 0.165535519,
-    "slot_occupancy": 0.630439656036453,
-    "total_time": 8.180229012,
-    "unconverged": 0
+    "num_primaries": 9100
    },
    {
-    "action_times": {
-     "along-step-general-linear": 4.4226527599999965,
-     "brems-rel": 0.03567435599999997,
-     "brems-sb": 0.41633433300000067,
-     "conv-bethe-heitler": 0.09592478899999997,
-     "geo-boundary": 0.06365977999999997,
-     "ioni-moller-bhabha": 0.07556038999999992,
-     "msc-urban": 0.000677229,
-     "photoel-livermore": 0.20623430600000014,
-     "physics-discrete-select": 0.14459593799999995,
-     "pre-step": 2.084619527,
-     "scat-klein-nishina": 0.12132985199999995,
-     "scat-rayleigh": 0.07646384800000001
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3830761, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f71e59c9071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "active_hwm": {
-     "count": 1048576,
-     "index": 245
-    },
-    "avg_steps_per_primary": 29141.194175824177,
-    "avg_time_per_primary": 0.0008887007761538462,
-    "avg_time_per_step": 3.049637467812219e-08,
-    "emptying_step": 246,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 385,
-    "num_steps": 265184867,
-    "pre_emptying_time": 0.026722847,
-    "queue_hwm": {
-     "count": 15378725,
-     "index": 71
-    },
-    "setup_time": 0.166638967,
-    "slot_occupancy": 0.656883108461058,
-    "total_time": 8.087177063,
-    "unconverged": 0
+    "num_primaries": 9100
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_general_linear": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "testem15+field+msc-orange-cpu": {
   "input": {
@@ -1067,76 +1426,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 34.104806364000126,
-     "brems-rel": 0.8934266999999929,
-     "brems-sb": 3.2260043099999747,
-     "conv-bethe-heitler": 1.024671627,
-     "geo-boundary": 0.7480030299999992,
-     "ioni-moller-bhabha": 0.9197624179999966,
-     "msc-urban": 0.005446707000000498,
-     "photoel-livermore": 2.2588732369999813,
-     "physics-discrete-select": 2.4090936609999987,
-     "pre-step": 7.390502415999999,
-     "scat-klein-nishina": 4.060267429999997,
-     "scat-rayleigh": 0.8962182939999933
+     "along-step-uniform-msc": 24.92095743800004,
+     "annihil-2-gamma": 1.0601751070000036,
+     "brems-rel": 1.0552913369999957,
+     "brems-sb": 3.7754970600000033,
+     "conv-bethe-heitler": 1.2900608179999953,
+     "geo-boundary": 0.950589693999993,
+     "ioni-moller-bhabha": 1.1325961780000025,
+     "photoel-livermore": 2.9271136480000153,
+     "physics-discrete-select": 2.9483032060000194,
+     "pre-step": 9.792081690999911,
+     "scat-klein-nishina": 5.782699795999995,
+     "scat-rayleigh": 1.259934205999996
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54905
+     "index": 69457
     },
-    "avg_steps_per_primary": 24721.576043956044,
-    "avg_time_per_primary": 0.007604230496593406,
-    "avg_time_per_step": 3.075948913237875e-07,
-    "emptying_step": 54906,
+    "avg_steps_per_primary": 31271.634285714284,
+    "avg_time_per_primary": 0.007931972781098902,
+    "avg_time_per_step": 2.536475295351749e-07,
+    "emptying_step": 69458,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54986,
-    "num_steps": 224966342,
-    "pre_emptying_time": 0.000802485,
+    "num_step_iters": 69533,
+    "num_steps": 284571872,
+    "pre_emptying_time": 0.000957517,
     "queue_hwm": {
-     "count": 244053,
-     "index": 89
+     "count": 248806,
+     "index": 91
     },
-    "setup_time": 0.121532546,
-    "slot_occupancy": 0.9988619528578866,
-    "total_time": 69.198497519,
+    "setup_time": 0.120199164,
+    "slot_occupancy": 0.9991738410179339,
+    "total_time": 72.180952308,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 22.316167361999966,
-     "brems-rel": 0.8479180590000044,
-     "brems-sb": 3.2146256670000026,
-     "conv-bethe-heitler": 1.026990794999992,
-     "geo-boundary": 0.7246296439999924,
-     "ioni-moller-bhabha": 0.9146620670000003,
-     "msc-urban": 0.004361564000000418,
-     "photoel-livermore": 2.1325793130000004,
-     "physics-discrete-select": 2.3943482330000028,
-     "pre-step": 7.583733325999962,
-     "scat-klein-nishina": 3.9524584440000203,
-     "scat-rayleigh": 0.8677376589999931
+     "along-step-uniform-msc": 24.746098684999986,
+     "annihil-2-gamma": 0.9218426799999913,
+     "brems-rel": 0.8774397100000156,
+     "brems-sb": 3.4456652240000207,
+     "conv-bethe-heitler": 1.1124233529999994,
+     "geo-boundary": 0.7672105179999978,
+     "ioni-moller-bhabha": 0.9928539180000044,
+     "photoel-livermore": 2.730328837000015,
+     "physics-discrete-select": 2.7862427949999864,
+     "pre-step": 9.629021742999878,
+     "scat-klein-nishina": 5.605557831999937,
+     "scat-rayleigh": 1.122177428999989
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54911
+     "index": 69431
     },
-    "avg_steps_per_primary": 24725.35175824176,
-    "avg_time_per_primary": 0.0062284538330769235,
-    "avg_time_per_step": 2.5190557020086794e-07,
-    "emptying_step": 54912,
+    "avg_steps_per_primary": 31262.227252747252,
+    "avg_time_per_primary": 0.007662460720879121,
+    "avg_time_per_step": 2.45102841167715e-07,
+    "emptying_step": 69432,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54981,
-    "num_steps": 225000701,
-    "pre_emptying_time": 0.001008703,
+    "num_step_iters": 69524,
+    "num_steps": 284486268,
+    "pre_emptying_time": 0.000917938,
     "queue_hwm": {
-     "count": 238941,
-     "index": 85
+     "count": 244723,
+     "index": 87
     },
-    "setup_time": 0.121511437,
-    "slot_occupancy": 0.9991053594437738,
-    "total_time": 56.678929881,
+    "setup_time": 0.120450398,
+    "slot_occupancy": 0.9990025785834747,
+    "total_time": 69.72839256,
     "unconverged": 0
    }
   ],
@@ -1145,21 +1504,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem15+field+msc-orange-gpu": {
-  "input": {
-   "enable_msc": true,
-   "geometry_filename": "testem15.org.json",
-   "mag_field": [
-    0.0,
-    0.0,
-    1.0
-   ],
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "testem15+field+msc",
    "orange",
@@ -1167,77 +1516,41 @@
   ],
   "result": [
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 207
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3830424, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f8c47790071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24722.47813186813,
-    "avg_time_per_primary": 0.0006615038220879121,
-    "avg_time_per_step": 2.6757180997774276e-08,
-    "emptying_step": 208,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 315,
-    "num_steps": 224974551,
-    "pre_emptying_time": 0.023062004,
-    "queue_hwm": {
-     "count": 13130983,
-     "index": 59
-    },
-    "setup_time": 0.12473659,
-    "slot_occupancy": 0.6811188924880255,
-    "total_time": 6.019684781,
-    "unconverged": 0
+    "num_primaries": 9100
    },
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 208
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3830426, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4f3fd37071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24725.452637362636,
-    "avg_time_per_primary": 0.0006588047049450549,
-    "avg_time_per_step": 2.664479856476055e-08,
-    "emptying_step": 209,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 311,
-    "num_steps": 225001619,
-    "pre_emptying_time": 0.02306083,
-    "queue_hwm": {
-     "count": 13118076,
-     "index": 59
-    },
-    "setup_time": 0.121910437,
-    "slot_occupancy": 0.6899622674923618,
-    "total_time": 5.995122815,
-    "unconverged": 0
+    "num_primaries": 9100
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_uniform_msc": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "testem15+field+msc-vecgeom-cpu": {
   "input": {
@@ -1259,76 +1572,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 17.416335083999968,
-     "brems-rel": 0.7489607399999992,
-     "brems-sb": 2.941675240000048,
-     "conv-bethe-heitler": 0.8740900330000021,
-     "geo-boundary": 0.6755512099999981,
-     "ioni-moller-bhabha": 0.7102861020000006,
-     "msc-urban": 0.0072776050000002545,
-     "photoel-livermore": 1.9794508860000402,
-     "physics-discrete-select": 2.163044122999994,
-     "pre-step": 7.538315639000076,
-     "scat-klein-nishina": 3.7145162459999845,
-     "scat-rayleigh": 0.811946160000003
+     "along-step-uniform-msc": 21.394752666000137,
+     "annihil-2-gamma": 1.0321935519999916,
+     "brems-rel": 0.9844157070000056,
+     "brems-sb": 3.8450244750000033,
+     "conv-bethe-heitler": 1.2789089859999947,
+     "geo-boundary": 0.879262134999991,
+     "ioni-moller-bhabha": 1.0731873460000076,
+     "photoel-livermore": 2.9112229690000135,
+     "physics-discrete-select": 2.8684204220000202,
+     "pre-step": 9.71893146399991,
+     "scat-klein-nishina": 5.928053689000045,
+     "scat-rayleigh": 1.220760490999993
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54905
+     "index": 69457
     },
-    "avg_steps_per_primary": 24721.576043956044,
-    "avg_time_per_primary": 0.005414904174175824,
-    "avg_time_per_step": 2.190355568167615e-07,
-    "emptying_step": 54906,
+    "avg_steps_per_primary": 31271.634285714284,
+    "avg_time_per_primary": 0.007393857328901098,
+    "avg_time_per_step": 2.364397479628626e-07,
+    "emptying_step": 69458,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54986,
-    "num_steps": 224966342,
-    "pre_emptying_time": 0.00076926,
+    "num_step_iters": 69533,
+    "num_steps": 284571872,
+    "pre_emptying_time": 0.000825178,
     "queue_hwm": {
-     "count": 244053,
-     "index": 89
+     "count": 248806,
+     "index": 91
     },
-    "setup_time": 0.128670291,
-    "slot_occupancy": 0.9988619528578866,
-    "total_time": 49.275627985,
+    "setup_time": 0.127316091,
+    "slot_occupancy": 0.9991738410179339,
+    "total_time": 67.284101693,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 17.742400851999932,
-     "brems-rel": 0.9117334519999852,
-     "brems-sb": 3.1698713480000116,
-     "conv-bethe-heitler": 1.039041482999994,
-     "geo-boundary": 0.7309702410000055,
-     "ioni-moller-bhabha": 0.8881045189999979,
-     "msc-urban": 0.005155062000000393,
-     "photoel-livermore": 2.1264018509999887,
-     "physics-discrete-select": 2.3911529300000125,
-     "pre-step": 7.835681137000021,
-     "scat-klein-nishina": 3.8466940750000234,
-     "scat-rayleigh": 0.9369272290000012
+     "along-step-uniform-msc": 21.194985774000045,
+     "annihil-2-gamma": 1.1281386640000037,
+     "brems-rel": 1.1190217430000027,
+     "brems-sb": 3.967631013000003,
+     "conv-bethe-heitler": 1.3813467240000068,
+     "geo-boundary": 0.9962940990000025,
+     "ioni-moller-bhabha": 1.1878337039999969,
+     "photoel-livermore": 2.973776712999984,
+     "physics-discrete-select": 3.0502765410000166,
+     "pre-step": 9.796225455999949,
+     "scat-klein-nishina": 5.913612508999964,
+     "scat-rayleigh": 1.3032645510000003
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54911
+     "index": 69431
     },
-    "avg_steps_per_primary": 24725.35175824176,
-    "avg_time_per_primary": 0.005643767985714285,
-    "avg_time_per_step": 2.2825834960398635e-07,
-    "emptying_step": 54912,
+    "avg_steps_per_primary": 31262.227252747252,
+    "avg_time_per_primary": 0.00751039941967033,
+    "avg_time_per_step": 2.402387826993463e-07,
+    "emptying_step": 69432,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54981,
-    "num_steps": 225000701,
-    "pre_emptying_time": 0.000883439,
+    "num_step_iters": 69524,
+    "num_steps": 284486268,
+    "pre_emptying_time": 0.000866909,
     "queue_hwm": {
-     "count": 238941,
-     "index": 85
+     "count": 244723,
+     "index": 87
     },
-    "setup_time": 0.128555128,
-    "slot_occupancy": 0.9991053594437738,
-    "total_time": 51.35828867,
+    "setup_time": 0.12731681,
+    "slot_occupancy": 0.9990025785834747,
+    "total_time": 68.344634719,
     "unconverged": 0
    }
   ],
@@ -1337,7 +1650,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -1362,48 +1675,48 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 207
+     "index": 263
     },
-    "avg_steps_per_primary": 24722.47813186813,
-    "avg_time_per_primary": 0.000508397458021978,
-    "avg_time_per_step": 2.0564178692371297e-08,
-    "emptying_step": 208,
+    "avg_steps_per_primary": 31268.20978021978,
+    "avg_time_per_primary": 0.0006571635278021978,
+    "avg_time_per_step": 2.101698601938888e-08,
+    "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 315,
-    "num_steps": 224974551,
-    "pre_emptying_time": 0.018128755,
+    "num_step_iters": 368,
+    "num_steps": 284540709,
+    "pre_emptying_time": 0.019277498,
     "queue_hwm": {
-     "count": 13130983,
-     "index": 59
+     "count": 14938529,
+     "index": 62
     },
-    "setup_time": 0.134771781,
-    "slot_occupancy": 0.6811188924880255,
-    "total_time": 4.626416868,
+    "setup_time": 0.14556261,
+    "slot_occupancy": 0.7373890384383823,
+    "total_time": 5.980188103,
     "unconverged": 0
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 208
+     "index": 263
     },
-    "avg_steps_per_primary": 24725.452637362636,
-    "avg_time_per_primary": 0.0005064674093406594,
-    "avg_time_per_step": 2.0483645608790044e-08,
-    "emptying_step": 209,
+    "avg_steps_per_primary": 31265.05175824176,
+    "avg_time_per_primary": 0.0006562357220879121,
+    "avg_time_per_step": 2.0989433414736705e-08,
+    "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 311,
-    "num_steps": 225001619,
-    "pre_emptying_time": 0.018144092,
+    "num_step_iters": 369,
+    "num_steps": 284511971,
+    "pre_emptying_time": 0.019287712,
     "queue_hwm": {
-     "count": 13118076,
-     "index": 59
+     "count": 14912855,
+     "index": 61
     },
-    "setup_time": 0.131679005,
-    "slot_occupancy": 0.6899622674923618,
-    "total_time": 4.608853425,
+    "setup_time": 0.143515424,
+    "slot_occupancy": 0.7353164212813545,
+    "total_time": 5.971745071,
     "unconverged": 0
    }
   ],
@@ -1415,6 +1728,7 @@
     "bethe_heitler_interact": 0.125,
     "boundary": 0.125,
     "discrete_select": 0.25,
+    "eplusgg_interact": 0.25,
     "init_tracks": 0.125,
     "klein_nishina_interact": 0.25,
     "livermore_pe_interact": 0.125,
@@ -1428,7 +1742,7 @@
     "seltzer_berger_interact": 0.125
    },
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem15+field-orange-cpu": {
@@ -1451,74 +1765,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 13.177925321999968,
-     "brems-rel": 0.8017764119999902,
-     "brems-sb": 3.7114603200000227,
-     "conv-bethe-heitler": 1.0480496700000066,
-     "geo-boundary": 0.6947311740000006,
-     "ioni-moller-bhabha": 0.8835312389999972,
-     "photoel-livermore": 2.5193277590000114,
-     "physics-discrete-select": 2.299199590999994,
-     "pre-step": 7.621701556999948,
-     "scat-klein-nishina": 4.778577983999977,
-     "scat-rayleigh": 0.9240055400000032
+     "along-step-uniform-msc": 16.409257656000023,
+     "annihil-2-gamma": 0.6643515709999898,
+     "brems-rel": 0.6549030849999932,
+     "brems-sb": 2.732409617999996,
+     "conv-bethe-heitler": 0.7774939689999987,
+     "geo-boundary": 0.5854377380000022,
+     "ioni-moller-bhabha": 0.6399108360000066,
+     "photoel-livermore": 2.0082355989999967,
+     "physics-discrete-select": 2.3790103800000155,
+     "pre-step": 9.15884902000003,
+     "scat-klein-nishina": 4.1527599200000305,
+     "scat-rayleigh": 0.8101305309999854
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54900
+     "index": 69449
     },
-    "avg_steps_per_primary": 24726.077802197804,
-    "avg_time_per_primary": 0.005635219337472528,
-    "avg_time_per_step": 2.2790591304261106e-07,
-    "emptying_step": 54901,
+    "avg_steps_per_primary": 31270.849230769232,
+    "avg_time_per_primary": 0.005724615487802198,
+    "avg_time_per_step": 1.8306555877508472e-07,
+    "emptying_step": 69450,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54996,
-    "num_steps": 225007308,
-    "pre_emptying_time": 0.000897659,
+    "num_step_iters": 69518,
+    "num_steps": 284564728,
+    "pre_emptying_time": 0.00071611,
     "queue_hwm": {
-     "count": 243411,
-     "index": 89
+     "count": 248869,
+     "index": 91
     },
-    "setup_time": 0.121676568,
-    "slot_occupancy": 0.9988621864260583,
-    "total_time": 51.280495971,
+    "setup_time": 0.119890072,
+    "slot_occupancy": 0.9993643451606059,
+    "total_time": 52.094000939,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 13.53914592200001,
-     "brems-rel": 0.989623644000002,
-     "brems-sb": 3.923405523000032,
-     "conv-bethe-heitler": 1.2622372930000132,
-     "geo-boundary": 0.8297576070000017,
-     "ioni-moller-bhabha": 1.0798039830000117,
-     "photoel-livermore": 2.6185384480000238,
-     "physics-discrete-select": 2.5739704370000576,
-     "pre-step": 7.836337082000003,
-     "scat-klein-nishina": 4.772583409999961,
-     "scat-rayleigh": 1.0516411530000014
+     "along-step-uniform-msc": 16.24455834700005,
+     "annihil-2-gamma": 0.7441251290000032,
+     "brems-rel": 0.8241316150000033,
+     "brems-sb": 2.963268381999999,
+     "conv-bethe-heitler": 0.9466537410000055,
+     "geo-boundary": 0.6658193439999954,
+     "ioni-moller-bhabha": 0.8657506599999978,
+     "photoel-livermore": 2.1995002420000085,
+     "physics-discrete-select": 2.629676681000011,
+     "pre-step": 9.357556502999941,
+     "scat-klein-nishina": 4.319731241999946,
+     "scat-rayleigh": 0.9329771650000032
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54896
+     "index": 69425
     },
-    "avg_steps_per_primary": 24717.967582417583,
-    "avg_time_per_primary": 0.005880094756703297,
-    "avg_time_per_step": 2.3788746939234333e-07,
-    "emptying_step": 54897,
+    "avg_steps_per_primary": 31258.784175824178,
+    "avg_time_per_primary": 0.0059534060407692305,
+    "avg_time_per_step": 1.9045545748940704e-07,
+    "emptying_step": 69426,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54963,
-    "num_steps": 224933505,
-    "pre_emptying_time": 0.000846961,
+    "num_step_iters": 69516,
+    "num_steps": 284454936,
+    "pre_emptying_time": 0.000862755,
     "queue_hwm": {
-     "count": 239349,
-     "index": 86
+     "count": 244009,
+     "index": 87
     },
-    "setup_time": 0.120806333,
-    "slot_occupancy": 0.999134081002504,
-    "total_time": 53.508862286,
+    "setup_time": 0.120196859,
+    "slot_occupancy": 0.9990075070397463,
+    "total_time": 54.175994971,
     "unconverged": 0
    }
   ],
@@ -1527,21 +1843,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem15+field-orange-gpu": {
-  "input": {
-   "enable_msc": false,
-   "geometry_filename": "testem15.org.json",
-   "mag_field": [
-    0.0,
-    0.0,
-    1.0
-   ],
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "testem15+field",
    "orange",
@@ -1549,77 +1855,41 @@
   ],
   "result": [
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 207
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3829814, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4c2186e071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24713.51175824176,
-    "avg_time_per_primary": 0.0005395917781318681,
-    "avg_time_per_step": 2.1833877087578157e-08,
-    "emptying_step": 208,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 303,
-    "num_steps": 224892957,
-    "pre_emptying_time": 0.018604146,
-    "queue_hwm": {
-     "count": 13130957,
-     "index": 59
-    },
-    "setup_time": 0.122283841,
-    "slot_occupancy": 0.7078370859127233,
-    "total_time": 4.910285181,
-    "unconverged": 0
+    "num_primaries": 9100
    },
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 207
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3829816, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f87abf81071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24721.98131868132,
-    "avg_time_per_primary": 0.0005340234150549451,
-    "avg_time_per_step": 2.1601157616416726e-08,
-    "emptying_step": 208,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 224970030,
-    "pre_emptying_time": 0.018525907,
-    "queue_hwm": {
-     "count": 13116208,
-     "index": 59
-    },
-    "setup_time": 0.12463666,
-    "slot_occupancy": 0.7223843083237157,
-    "total_time": 4.859613077,
-    "unconverged": 0
+    "num_primaries": 9100
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_uniform_msc": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "testem15-orange-cpu": {
   "input": {
@@ -1637,74 +1907,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 6.818672154999972,
-     "brems-rel": 0.6156903289999957,
-     "brems-sb": 2.839471103999977,
-     "conv-bethe-heitler": 0.7701502600000121,
-     "geo-boundary": 0.4726871860000043,
-     "ioni-moller-bhabha": 0.6127949750000036,
-     "photoel-livermore": 1.876870571000021,
-     "physics-discrete-select": 2.1246738030000034,
-     "pre-step": 7.251252800000048,
-     "scat-klein-nishina": 3.524371528999974,
-     "scat-rayleigh": 0.6799309589999945
+     "along-step-general-linear": 8.142422400999893,
+     "annihil-2-gamma": 0.6696914549999989,
+     "brems-rel": 0.6966424329999997,
+     "brems-sb": 2.95679101199997,
+     "conv-bethe-heitler": 0.8907969879999954,
+     "geo-boundary": 0.5559767989999982,
+     "ioni-moller-bhabha": 0.7328255279999999,
+     "photoel-livermore": 2.154832685000021,
+     "physics-discrete-select": 2.5664415820000306,
+     "pre-step": 9.332027674999878,
+     "scat-klein-nishina": 4.383826245000052,
+     "scat-rayleigh": 0.8518188089999982
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54900
+     "index": 69449
     },
-    "avg_steps_per_primary": 24726.077802197804,
-    "avg_time_per_primary": 0.004109951548241758,
-    "avg_time_per_step": 1.6621930825908995e-07,
-    "emptying_step": 54901,
+    "avg_steps_per_primary": 31270.849230769232,
+    "avg_time_per_primary": 0.005018294487472527,
+    "avg_time_per_step": 1.6047835638997395e-07,
+    "emptying_step": 69450,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54996,
-    "num_steps": 225007308,
-    "pre_emptying_time": 0.000590003,
+    "num_step_iters": 69518,
+    "num_steps": 284564728,
+    "pre_emptying_time": 0.000607506,
     "queue_hwm": {
-     "count": 243411,
-     "index": 89
+     "count": 248869,
+     "index": 91
     },
-    "setup_time": 0.121235964,
-    "slot_occupancy": 0.9988621864260583,
-    "total_time": 37.400559089,
+    "setup_time": 0.119810664,
+    "slot_occupancy": 0.9993643451606059,
+    "total_time": 45.666479836,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 6.569660200000014,
-     "brems-rel": 0.687167359999994,
-     "brems-sb": 2.921236543999991,
-     "conv-bethe-heitler": 0.8419654520000002,
-     "geo-boundary": 0.5120969310000009,
-     "ioni-moller-bhabha": 0.675246119999999,
-     "photoel-livermore": 1.9425011439999842,
-     "physics-discrete-select": 2.171994433000008,
-     "pre-step": 7.302509647999954,
-     "scat-klein-nishina": 3.586370205999986,
-     "scat-rayleigh": 0.7240922759999959
+     "along-step-general-linear": 8.146656367999944,
+     "annihil-2-gamma": 0.7219535940000046,
+     "brems-rel": 0.712102508000004,
+     "brems-sb": 2.942665936999989,
+     "conv-bethe-heitler": 0.9354383340000054,
+     "geo-boundary": 0.5916121339999945,
+     "ioni-moller-bhabha": 0.7728574199999882,
+     "photoel-livermore": 2.1636389439999895,
+     "physics-discrete-select": 2.5400445939999927,
+     "pre-step": 9.350235150000088,
+     "scat-klein-nishina": 4.425408441999993,
+     "scat-rayleigh": 0.8961612400000046
     },
     "active_hwm": {
      "count": 4096,
-     "index": 54896
+     "index": 69425
     },
-    "avg_steps_per_primary": 24717.967582417583,
-    "avg_time_per_primary": 0.004157039184285715,
-    "avg_time_per_step": 1.6817884279622995e-07,
-    "emptying_step": 54897,
+    "avg_steps_per_primary": 31258.784175824178,
+    "avg_time_per_primary": 0.005067971666703297,
+    "avg_time_per_step": 1.62129519759854e-07,
+    "emptying_step": 69426,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 54963,
-    "num_steps": 224933505,
-    "pre_emptying_time": 0.000639165,
+    "num_step_iters": 69516,
+    "num_steps": 284454936,
+    "pre_emptying_time": 0.000686481,
     "queue_hwm": {
-     "count": 239349,
-     "index": 86
+     "count": 244009,
+     "index": 87
     },
-    "setup_time": 0.121234401,
-    "slot_occupancy": 0.999134081002504,
-    "total_time": 37.829056577,
+    "setup_time": 0.119811341,
+    "slot_occupancy": 0.9990075070397463,
+    "total_time": 46.118542167,
     "unconverged": 0
    }
   ],
@@ -1713,17 +1985,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem15-orange-gpu": {
-  "input": {
-   "enable_msc": false,
-   "geometry_filename": "testem15.org.json",
-   "mag_field": null,
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "testem15",
    "orange",
@@ -1731,77 +1997,41 @@
   ],
   "result": [
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 207
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3829558, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f077f6c0071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24713.51175824176,
-    "avg_time_per_primary": 0.0005003388634065934,
-    "avg_time_per_step": 2.02455591217114e-08,
-    "emptying_step": 208,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 303,
-    "num_steps": 224892957,
-    "pre_emptying_time": 0.017002028,
-    "queue_hwm": {
-     "count": 13130957,
-     "index": 59
-    },
-    "setup_time": 0.121814661,
-    "slot_occupancy": 0.7078370859127233,
-    "total_time": 4.553083657,
-    "unconverged": 0
+    "num_primaries": 9100
    },
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 207
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3829560, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f4afb51c071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 24721.98131868132,
-    "avg_time_per_primary": 0.0004965776103296704,
-    "avg_time_per_step": 2.008648109261487e-08,
-    "emptying_step": 208,
     "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 297,
-    "num_steps": 224970030,
-    "pre_emptying_time": 0.01705352,
-    "queue_hwm": {
-     "count": 13116208,
-     "index": 59
-    },
-    "setup_time": 0.122983547,
-    "slot_occupancy": 0.7223843083237157,
-    "total_time": 4.518856254,
-    "unconverged": 0
+    "num_primaries": 9100
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_general_linear": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "testem3-flat+field-orange-cpu": {
   "input": {
@@ -1831,31 +2061,31 @@
      "condition": "speed > 0",
      "context": {
       "dir": [
-       0.7923848321907785,
-       0.4695520742657637,
-       -0.38941896110321905
+       0.6478042768931984,
+       0.7055755490373339,
+       0.28725034976400804
       ],
       "energy": [
        1.3877787807814457e-17,
        "MeV"
       ],
-      "event": 6,
+      "event": 5,
       "label": "along-step-uniform-msc",
-      "num_steps": 1,
-      "parent": 320963,
+      "num_steps": 5,
+      "parent": 228694,
       "particle": 1,
       "pos": [
-       -3.769999999999698,
-       0.3357113635408798,
-       -0.014895482918505256
+       -2.9699999999997546,
+       0.6054501026659113,
+       0.2545011471080458
       ],
-      "thread": 2765,
-      "track": 321192,
+      "thread": 2626,
+      "track": 229029,
       "type": "KernelContextException",
-      "volume": 43
+      "volume": 45
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 110,
+     "line": 100,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -1867,34 +2097,35 @@
      "type": "<class 'KeyError'>"
     },
     "failure": {
-     "condition": "speed > 0",
+     "condition": "step_limit->action != track.boundary_action()",
      "context": {
       "dir": [
-       0.7638271343337536,
-       -0.4053697991528816,
-       0.5022384242471284
+       0.8037292676829325,
+       0.4380376370806633,
+       0.4026689617671645
       ],
       "energy": [
-       2.7755575615628914e-17,
+       0.11363523712258944,
        "MeV"
       ],
-      "event": 5,
+      "event": 6,
       "label": "along-step-uniform-msc",
       "num_steps": 1,
-      "parent": 140957,
+      "parent": 265154,
       "particle": 1,
       "pos": [
-       -10.969999999999585,
-       0.15070212254717402,
-       0.025229665023152267
+       14.399999999999995,
+       -1.1456857476415139,
+       -0.47400415713266086
       ],
-      "thread": 1377,
-      "track": 141357,
+      "surface": 97,
+      "thread": 2867,
+      "track": 268638,
       "type": "KernelContextException",
-      "volume": 25
+      "volume": 87
      },
-     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 110,
+     "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh",
+     "line": 77,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -1905,7 +2136,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem3-flat+field-orange-gpu": {
@@ -1919,15 +2150,33 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1343911, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f367c292071]"
+      "[PID=3832426, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f1d84c50071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:77:",
-      "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": null,
@@ -1936,15 +2185,25 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1343913, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7ff694ae1071]"
+      "[PID=3832428, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fd55422f071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/detail/EnergyLossApplier.hh:77:",
-      "celeritas: internal assertion failed: step_limit->action != track.boundary_action()"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": null,
@@ -1977,32 +2236,32 @@
      "condition": "mfp > 0",
      "context": {
       "dir": [
-       0.7896982086344465,
-       -0.2436570671427844,
-       0.5630346107575651
+       0.904430150189427,
+       -0.17707858375724506,
+       -0.3881356445920154
       ],
       "energy": [
-       9.780551795808083,
+       9.633266157174118,
        "MeV"
       ],
-      "event": 4,
+      "event": 5,
       "label": "along-step-general-linear",
-      "num_steps": 2,
-      "parent": 568315,
+      "num_steps": 6,
+      "parent": 44894,
       "particle": 2,
       "pos": [
-       -10.97,
-       0.015097379053139029,
-       -0.047897855689166095
+       -6.17,
+       -0.0037203190246303548,
+       0.012212159034817718
       ],
-      "surface": 34,
-      "thread": 2187,
-      "track": 568713,
+      "surface": 46,
+      "thread": 831,
+      "track": 736148,
       "type": "KernelContextException",
-      "volume": 24
+      "volume": 36
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 129,
+     "line": 119,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -2017,32 +2276,32 @@
      "condition": "mfp > 0",
      "context": {
       "dir": [
-       0.6603661062881427,
-       -0.4064863316349911,
-       -0.6314154479103007
+       0.934710794804506,
+       -0.3337756261789578,
+       -0.12210471508002227
       ],
       "energy": [
-       9.983024662237058,
+       9.066371469079753,
        "MeV"
       ],
       "event": 6,
       "label": "along-step-general-linear",
-      "num_steps": 9,
-      "parent": 609076,
+      "num_steps": 2,
+      "parent": 406217,
       "particle": 2,
       "pos": [
-       5.829999999999998,
-       -0.12380492796381154,
-       -0.2527382984044755
+       -2.170000000000002,
+       0.02935948019067141,
+       -0.012945693670900926
       ],
-      "surface": 76,
-      "thread": 2750,
-      "track": 618787,
+      "surface": 56,
+      "thread": 2349,
+      "track": 407133,
       "type": "KernelContextException",
-      "volume": 66
+      "volume": 46
      },
      "file": "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh",
-     "line": 129,
+     "line": 119,
      "type": "DebugError",
      "which": "internal assertion failed"
     }
@@ -2053,7 +2312,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem3-flat+msc-orange-gpu": {
@@ -2067,15 +2326,31 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1344310, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f1eba06c071]"
+      "[PID=3832892, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f2aef598071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
-      "celeritas: internal assertion failed: mfp > 0"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": null,
@@ -2084,15 +2359,29 @@
    {
     "failure": {
      "stderr": [
-      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:236: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
       "terminate called after throwing an instance of 'celeritas::RuntimeError'",
       "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
       "celeritas: CUDA error: cudaFree(ptr) failed:",
-      "[PID=1344312, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f8564652071]"
+      "[PID=3832894, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fefb844d071]"
      ],
      "stdout": [
-      "/home/s3j/.local/src/celeritas/src/celeritas/global/alongstep/AlongStep.hh:129:",
-      "celeritas: internal assertion failed: mfp > 0"
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
      ]
     },
     "num_events": null,
@@ -2117,74 +2406,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 14.580607247999927,
-     "brems-rel": 1.249492924000002,
-     "brems-sb": 4.0583291519999785,
-     "conv-bethe-heitler": 1.553281885999995,
-     "geo-boundary": 6.581064726999926,
-     "ioni-moller-bhabha": 1.4594389720000114,
-     "photoel-livermore": 2.83392190599998,
-     "physics-discrete-select": 2.496666034999964,
-     "pre-step": 15.502067881000253,
-     "scat-klein-nishina": 2.3891277190000166,
-     "scat-rayleigh": 1.2391027469999858
+     "along-step-general-linear": 16.859941243999746,
+     "annihil-2-gamma": 1.6441214760000245,
+     "brems-rel": 1.5514469770000245,
+     "brems-sb": 4.959276022000018,
+     "conv-bethe-heitler": 2.012265449999997,
+     "geo-boundary": 7.642104892999996,
+     "ioni-moller-bhabha": 1.729729896999999,
+     "photoel-livermore": 4.084093981999965,
+     "physics-discrete-select": 2.91584641300005,
+     "pre-step": 18.30778686899983,
+     "scat-klein-nishina": 3.5162526679999497,
+     "scat-rayleigh": 1.5854789129999884
     },
     "active_hwm": {
      "count": 4096,
-     "index": 120041
+     "index": 138836
     },
-    "avg_steps_per_primary": 54050.56472527472,
-    "avg_time_per_primary": 0.007921391864835165,
-    "avg_time_per_step": 1.465552100167239e-07,
-    "emptying_step": 120042,
+    "avg_steps_per_primary": 62531.00087912088,
+    "avg_time_per_primary": 0.010012347367362638,
+    "avg_time_per_step": 1.6011813702962437e-07,
+    "emptying_step": 138837,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120162,
-    "num_steps": 491860139,
-    "pre_emptying_time": 0.000553878,
+    "num_step_iters": 139036,
+    "num_steps": 569032108,
+    "pre_emptying_time": 0.000640235,
     "queue_hwm": {
-     "count": 216170,
-     "index": 128
+     "count": 217761,
+     "index": 131
     },
-    "setup_time": 0.122341199,
-    "slot_occupancy": 0.99934290164983,
-    "total_time": 72.08466597,
+    "setup_time": 0.121009843,
+    "slot_occupancy": 0.9991934066873868,
+    "total_time": 91.112361043,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 14.330046088000081,
-     "brems-rel": 1.149854983000007,
-     "brems-sb": 3.868636753000034,
-     "conv-bethe-heitler": 1.48500944699999,
-     "geo-boundary": 6.52650624400005,
-     "ioni-moller-bhabha": 1.2336835980000112,
-     "photoel-livermore": 2.714939963000002,
-     "physics-discrete-select": 2.2502597340000396,
-     "pre-step": 15.235339208999873,
-     "scat-klein-nishina": 2.273387051000023,
-     "scat-rayleigh": 1.1527205210000069
+     "along-step-general-linear": 17.139573672999717,
+     "annihil-2-gamma": 1.9800656230000195,
+     "brems-rel": 1.8578127170000036,
+     "brems-sb": 5.120427346000065,
+     "conv-bethe-heitler": 2.233034702000008,
+     "geo-boundary": 7.884321241000015,
+     "ioni-moller-bhabha": 2.110264688000004,
+     "photoel-livermore": 4.314957443999959,
+     "physics-discrete-select": 3.2642651970000345,
+     "pre-step": 18.32361431800005,
+     "scat-klein-nishina": 3.7772330830000556,
+     "scat-rayleigh": 1.875727090999986
     },
     "active_hwm": {
      "count": 4096,
-     "index": 120034
+     "index": 138897
     },
-    "avg_steps_per_primary": 54054.235714285714,
-    "avg_time_per_primary": 0.007697678850439561,
-    "avg_time_per_step": 1.424065801453036e-07,
-    "emptying_step": 120035,
+    "avg_steps_per_primary": 62539.68615384615,
+    "avg_time_per_primary": 0.010459235016263736,
+    "avg_time_per_step": 1.6724156546827345e-07,
+    "emptying_step": 138898,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120212,
-    "num_steps": 491893545,
-    "pre_emptying_time": 0.000587889,
+    "num_step_iters": 139048,
+    "num_steps": 569111144,
+    "pre_emptying_time": 0.000686151,
     "queue_hwm": {
-     "count": 214843,
-     "index": 129
+     "count": 216279,
+     "index": 127
     },
-    "setup_time": 0.122339093,
-    "slot_occupancy": 0.9989950879260442,
-    "total_time": 70.048877539,
+    "setup_time": 0.12063712,
+    "slot_occupancy": 0.9992459466560109,
+    "total_time": 95.179038648,
     "unconverged": 0
    }
   ],
@@ -2193,17 +2484,11 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem3-flat-orange-gpu": {
-  "input": {
-   "enable_msc": false,
-   "geometry_filename": "testem3-flat.org.json",
-   "mag_field": null,
-   "max_num_tracks": 1048576,
-   "use_device": true
-  },
+  "input": null,
   "name": [
    "testem3-flat",
    "orange",
@@ -2211,77 +2496,63 @@
   ],
   "result": [
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3832023, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7f562b81f071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 54069.13857142857,
-    "avg_time_per_primary": 0.0010875286460439561,
-    "avg_time_per_step": 2.0113666960076783e-08,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 618,
-    "num_steps": 492029161,
-    "pre_emptying_time": 0.01774913,
-    "queue_hwm": {
-     "count": 7839071,
-     "index": 98
-    },
-    "setup_time": 0.123558833,
-    "slot_occupancy": 0.7592808637032616,
-    "total_time": 9.896510679,
-    "unconverged": 0
+    "num_events": null,
+    "num_primaries": null
    },
    {
-    "action_times": {},
-    "active_hwm": {
-     "count": 1048576,
-     "index": 445
+    "failure": {
+     "stderr": [
+      "/home/s3j/.local/src/celeritas/app/demo-loop/LDemoIO.cc:248: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+      "terminate called after throwing an instance of 'celeritas::RuntimeError'",
+      "  what():  /home/s3j/.local/src/celeritas/src/corecel/data/DeviceAllocation.cc:61:",
+      "celeritas: CUDA error: cudaFree(ptr) failed:",
+      "[PID=3832025, TID=-1][ 7/15]> /lib64/libgcc_s.so.1(_Unwind_RaiseException+0x2b1) [0x7fe55e847071]"
+     ],
+     "stdout": [
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)",
+      "/home/s3j/.local/src/celeritas/src/orange/OrangeTrackView.hh:236:",
+      "celeritas: internal assertion failed: is_soft_unit_vector(init.dir)"
+     ]
     },
-    "avg_steps_per_primary": 54056.96626373626,
-    "avg_time_per_primary": 0.0010891354965934066,
-    "avg_time_per_step": 2.0147921200010913e-08,
-    "emptying_step": 446,
-    "num_events": 7,
-    "num_primaries": 9100,
-    "num_step_iters": 619,
-    "num_steps": 491918393,
-    "pre_emptying_time": 0.017890536,
-    "queue_hwm": {
-     "count": 7844210,
-     "index": 99
-    },
-    "setup_time": 0.122337697,
-    "slot_occupancy": 0.7578835818609629,
-    "total_time": 9.911133019,
-    "unconverged": 0
+    "num_events": null,
+    "num_primaries": null
    }
   ],
-  "system": {
-   "debug": true,
-   "geant4": "11.0.3",
-   "occupancy": {
-    "along_step_general_linear": 0.125,
-    "bethe_heitler_interact": 0.125,
-    "boundary": 0.25,
-    "discrete_select": 0.25,
-    "init_tracks": 0.25,
-    "klein_nishina_interact": 0.25,
-    "livermore_pe_interact": 0.125,
-    "locate_alive": 1.0,
-    "moller_bhabha_interact": 0.25,
-    "pre_step": 0.25,
-    "process_primaries": 1.0,
-    "process_secondaries": 0.25,
-    "rayleigh_interact": 0.25,
-    "relativistic_brem_interact": 0.25,
-    "seltzer_berger_interact": 0.125
-   },
-   "vecgeom": null,
-   "version": "v0.2.0-10+9f797bd3"
-  }
+  "system": []
  },
  "testem3-flat-vecgeom-cpu": {
   "input": {
@@ -2299,74 +2570,76 @@
   "result": [
    {
     "action_times": {
-     "along-step-general-linear": 9.653257038999975,
-     "brems-rel": 1.3668329480000074,
-     "brems-sb": 4.0276684040000434,
-     "conv-bethe-heitler": 1.6809955460000143,
-     "geo-boundary": 4.62877963899996,
-     "ioni-moller-bhabha": 1.4656462730000335,
-     "photoel-livermore": 2.981506521000083,
-     "physics-discrete-select": 2.435891257000016,
-     "pre-step": 15.429782375999864,
-     "scat-klein-nishina": 2.4898336519999895,
-     "scat-rayleigh": 1.3867667399999979
+     "along-step-general-linear": 11.294632989999835,
+     "annihil-2-gamma": 2.146491530000024,
+     "brems-rel": 1.9541743709999941,
+     "brems-sb": 4.766794581000012,
+     "conv-bethe-heitler": 2.3198952099999954,
+     "geo-boundary": 5.557437747000033,
+     "ioni-moller-bhabha": 1.9807307769999936,
+     "photoel-livermore": 4.4457189479999695,
+     "physics-discrete-select": 3.034599237999967,
+     "pre-step": 18.55381699200005,
+     "scat-klein-nishina": 3.7990330389999873,
+     "scat-rayleigh": 2.129043389000021
     },
     "active_hwm": {
      "count": 4096,
-     "index": 120041
+     "index": 138836
     },
-    "avg_steps_per_primary": 54050.56472527472,
-    "avg_time_per_primary": 0.006448931866373626,
-    "avg_time_per_step": 1.1931294148640086e-07,
-    "emptying_step": 120042,
+    "avg_steps_per_primary": 62531.00087912088,
+    "avg_time_per_primary": 0.00856796835967033,
+    "avg_time_per_step": 1.3701953014046793e-07,
+    "emptying_step": 138837,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120162,
-    "num_steps": 491860139,
-    "pre_emptying_time": 0.000467863,
+    "num_step_iters": 139036,
+    "num_steps": 569032108,
+    "pre_emptying_time": 0.000515471,
     "queue_hwm": {
-     "count": 216170,
-     "index": 128
+     "count": 217761,
+     "index": 131
     },
-    "setup_time": 0.143823488,
-    "slot_occupancy": 0.99934290164983,
-    "total_time": 58.685279984,
+    "setup_time": 0.142177249,
+    "slot_occupancy": 0.9991934066873868,
+    "total_time": 77.968512073,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-general-linear": 9.475070978999975,
-     "brems-rel": 1.1711148479999998,
-     "brems-sb": 3.780605597999927,
-     "conv-bethe-heitler": 1.4662081430000242,
-     "geo-boundary": 4.420202567000049,
-     "ioni-moller-bhabha": 1.2547014919999977,
-     "photoel-livermore": 2.768905072999979,
-     "physics-discrete-select": 2.2552612129999905,
-     "pre-step": 15.281122598000117,
-     "scat-klein-nishina": 2.274994138000021,
-     "scat-rayleigh": 1.1629177189999913
+     "along-step-general-linear": 10.902044881999897,
+     "annihil-2-gamma": 1.9136456389999812,
+     "brems-rel": 1.8203022269999596,
+     "brems-sb": 4.659144742000039,
+     "conv-bethe-heitler": 2.047658093999987,
+     "geo-boundary": 5.302658417000024,
+     "ioni-moller-bhabha": 1.8967821639999842,
+     "photoel-livermore": 4.191636503999974,
+     "physics-discrete-select": 2.949380739999972,
+     "pre-step": 18.14385690200016,
+     "scat-klein-nishina": 3.5258267709999944,
+     "scat-rayleigh": 1.8502829260000178
     },
     "active_hwm": {
      "count": 4096,
-     "index": 120034
+     "index": 138897
     },
-    "avg_steps_per_primary": 54054.235714285714,
-    "avg_time_per_primary": 0.006165617477142857,
-    "avg_time_per_step": 1.1406353999217453e-07,
-    "emptying_step": 120035,
+    "avg_steps_per_primary": 62539.68615384615,
+    "avg_time_per_primary": 0.008199126773846155,
+    "avg_time_per_step": 1.3110278093939416e-07,
+    "emptying_step": 138898,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 120212,
-    "num_steps": 491893545,
-    "pre_emptying_time": 0.000394019,
+    "num_step_iters": 139048,
+    "num_steps": 569111144,
+    "pre_emptying_time": 0.000511736,
     "queue_hwm": {
-     "count": 214843,
-     "index": 129
+     "count": 216279,
+     "index": 127
     },
-    "setup_time": 0.144054904,
-    "slot_occupancy": 0.9989950879260442,
-    "total_time": 56.107119042,
+    "setup_time": 0.142899265,
+    "slot_occupancy": 0.9992459466560109,
+    "total_time": 74.612053642,
     "unconverged": 0
    }
   ],
@@ -2375,7 +2648,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  },
  "testem3-flat-vecgeom-gpu": {
@@ -2396,48 +2669,48 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 445
+     "index": 518
     },
-    "avg_steps_per_primary": 54069.13857142857,
-    "avg_time_per_primary": 0.0005666689704395604,
-    "avg_time_per_step": 1.0480451240978377e-08,
-    "emptying_step": 446,
+    "avg_steps_per_primary": 62527.38395604396,
+    "avg_time_per_primary": 0.0006815912473626374,
+    "avg_time_per_step": 1.0900683896223586e-08,
+    "emptying_step": 519,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 618,
-    "num_steps": 492029161,
-    "pre_emptying_time": 0.009709322,
+    "num_step_iters": 694,
+    "num_steps": 568999194,
+    "pre_emptying_time": 0.010302099,
     "queue_hwm": {
-     "count": 7839071,
-     "index": 98
+     "count": 8481139,
+     "index": 102
     },
-    "setup_time": 0.149885226,
-    "slot_occupancy": 0.7592808637032616,
-    "total_time": 5.156687631,
+    "setup_time": 0.165044951,
+    "slot_occupancy": 0.7819018982329354,
+    "total_time": 6.202480351,
     "unconverged": 0
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 445
+     "index": 518
     },
-    "avg_steps_per_primary": 54056.96626373626,
-    "avg_time_per_primary": 0.0005671333440659341,
-    "avg_time_per_step": 1.0491401631733661e-08,
-    "emptying_step": 446,
+    "avg_steps_per_primary": 62508.21571428572,
+    "avg_time_per_primary": 0.0006821308367032968,
+    "avg_time_per_step": 1.0912658902650482e-08,
+    "emptying_step": 519,
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 619,
-    "num_steps": 491918393,
-    "pre_emptying_time": 0.009715063,
+    "num_step_iters": 701,
+    "num_steps": 568824763,
+    "pre_emptying_time": 0.010250776,
     "queue_hwm": {
-     "count": 7844210,
-     "index": 99
+     "count": 8471441,
+     "index": 102
     },
-    "setup_time": 0.151469823,
-    "slot_occupancy": 0.7578835818609629,
-    "total_time": 5.160913431,
+    "setup_time": 0.159699978,
+    "slot_occupancy": 0.7738567289714297,
+    "total_time": 6.207390614,
     "unconverged": 0
    }
   ],
@@ -2449,6 +2722,7 @@
     "bethe_heitler_interact": 0.125,
     "boundary": 0.125,
     "discrete_select": 0.25,
+    "eplusgg_interact": 0.25,
     "init_tracks": 0.125,
     "klein_nishina_interact": 0.25,
     "livermore_pe_interact": 0.125,
@@ -2462,7 +2736,7 @@
     "seltzer_berger_interact": 0.125
    },
    "vecgeom": "1.2.1",
-   "version": "v0.2.0-10+9f797bd3"
+   "version": "v0.3.0-dev-5+0dcab606"
   }
  }
 }
