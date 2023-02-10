@@ -454,9 +454,10 @@ async def main():
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    device_mods = [[]] # CPU
+    device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
+    device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]

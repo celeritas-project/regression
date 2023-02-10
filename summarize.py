@@ -241,7 +241,10 @@ def main(index_filename):
         results = []
         for r in result_files:
             with open(r) as f:
-                results.append(json.load(f))
+                try:
+                    results.append(json.load(f))
+                except json.decoder.JSONDecodeError as e:
+                    print(f"Failed to read file '{r}': {e!s}")
         summaries[subdir] = summary = summarize_all(results)
         summary['name'] = name
 
