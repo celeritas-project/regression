@@ -295,10 +295,12 @@ problems = [
     [simple_cms, use_msc,
         {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
     [testem3, no_field],
-    [testem3],
     [testem3, no_field,
         {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+    [testem3],
     [testem3, no_field, use_msc],
+    [testem3, use_msc,
+        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
     [full_cms, no_field],
     [full_cms, use_msc],
 ]
