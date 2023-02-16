@@ -204,7 +204,7 @@ base_input = {
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 2**12,
-    "max_steps": 2**19,
+    "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
@@ -226,7 +226,7 @@ use_msc = {"geant_options": {"msc": "urban"}}
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**20,
-    "max_steps": 2**11,
+    "max_steps": 2**15,
     "initializer_capacity": 2**26,
 }
 
