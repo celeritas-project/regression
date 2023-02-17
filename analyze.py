@@ -9,7 +9,7 @@ import itertools
 import json
 import re
 
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 import pandas as pd
 import numpy as np
@@ -35,8 +35,10 @@ def groupby_notinstance(obj):
 
 
 def summarize_instances(obj):
-    grouped = groupby_notinstance(obj)
-    return grouped.describe().loc[Islc[:], Islc[:, ['count', 'mean', 'std']]]
+    descr = groupby_notinstance(obj).describe()
+    if isinstance(obj, pd.Series):
+        return descr[['count', 'mean', 'std']]
+    return descr.loc[Islc[:], Islc[:, ['count', 'mean', 'std']]]
 
 
 def inverse_summary(summary):
@@ -53,6 +55,14 @@ def get_cpugpu_ratio(summary):
     ratio = mean['cpu'] / mean['gpu']
     std = ratio * np.hypot(re['gpu'], re['cpu'])
     return pd.DataFrame({'mean': ratio, 'std' : std})
+
+
+def calc_event_rate(results, summary):
+    ppe = summary[('num_primaries', 'mean')] / summary[('num_events', 'mean')]
+    event_rate = inverse_summary(summary['avg_time_per_primary'])
+    event_rate['mean'] /= ppe
+    event_rate['std'] /= ppe
+    return event_rate
 
 
 class ProblemAbbreviator:
@@ -97,8 +107,11 @@ class Analysis:
         self.index = index
         self.input = input
         self.result = result
-        self.invalid = ~result['failure'].isna()
+        self.valid = result['failure'].isna()
         self.version = self._load_version(summaries)
+        
+        failed_probs = (~self.successful).groupby(level='problem').any()
+        self.failed_problems = set(failed_probs.index[failed_probs])
 
     def _load_version(self, summaries):
         versions = set()
@@ -140,13 +153,12 @@ class Analysis:
 
     def action_times(self):
         result = self.result
-        invalid = ~result['failure'].isna()
         return summarize_instances(
-            unstack_subdict(result['action_times'][~invalid]))
+            unstack_subdict(result['action_times'][self.valid]))
 
     def active_hwm(self):
         hwm = self.result['active_hwm']
-        return summarize_instances(unstack_subdict(hwm[~invalid]))
+        return summarize_instances(unstack_subdict(hwm[self.valid]))
 
     def problems(self):
         """Get an ordered list of problem names.
@@ -167,10 +179,13 @@ class Analysis:
             inputs = self.input.xs(p, level='problem')
             inputs = inputs.dropna(subset='geometry_filename')
             if len(inputs):
-                result[p] = abbreviate_problem(inputs.iloc[0])
+                value = abbreviate_problem(inputs.iloc[0])
+                if p in self.failed_problems:
+                    value += "*"
             else:
                 print(f"WARNING: no inputs available for {p}")
                 result[p] = "*"
+            result[p] = value
         return result
 
     def __str__(self):
@@ -180,6 +195,14 @@ class Analysis:
     def system(self):
         return self.basedir.name
 
+    @property
+    def invalid(self):
+        return ~self.valid
+    
+    @property
+    def successful(self):
+        return self.valid & (self.result['unconverged'] == 0)
+        
     def plot_results(self, ax, df):
         problems = self.problems()
         problem_to_abbr = self.problem_to_abbr(problems)
@@ -356,3 +379,36 @@ def annotate_metadata(obj, md, **kwargs):
     return obj.text(0.98, 0.02, s, **text_kwargs)
 
 
+def make_failure_table(failures):
+    flist = []
+    idx = []
+    for key, err in failures.iterrows():
+        idx.append("{}/{}+{} ({:d})".format(*key))
+        tp = err.get("type")
+        if tp == "DebugError":
+            f = PurePosixPath(err["file"])
+            err["file"] = f.name
+            text = "{which}: `{condition}` at `{file}:{line}`".format(**err)
+        elif tp == "RuntimeError":
+            f = PurePosixPath(err["file"])
+            err["file"] = f.name
+            text = "{which} error: `{what}` at `{file}:{line}`".format(**err)
+        elif isinstance(err["stdout"], list) and err["stdout"]:
+            text = "`{}`".format(err["stdout"][-1])
+        elif isinstance(err["stderr"], list) and err["stderr"]:
+            for line in err["stderr"]:
+                if line.startswith("celeritas: CUDA error"):
+                    text = line
+                    break
+            else:
+                # Use final line
+                text = line
+            text = "`{}`".format(line)
+        else:
+            text = "(unknown failure)"
+        flist.append(text)
+    return pd.Series(flist, index=idx, name="Failure")
+
+def main():
+    # Generate table from wildstyle failures
+    pass

@@ -25,6 +25,9 @@ import time
 
 from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
 
+# XXX change to 1.0 for v0.2 demo loop or higher
+input_tesla = 1000.0
+
 g4env = {k: v for k, v in environ.items()
          if k.startswith('G4')}
 
@@ -197,14 +200,13 @@ class Crusher(System):
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
-
 base_input = {
     "_timeout": 600.0,
     "brem_combined": False,
     "initializer_capacity": 2**20,
-    "mag_field": [0.0, 0.0, 1.0],
+    "mag_field": [0.0, 0.0, 1.0 * input_tesla],
     "max_num_tracks": 2**12,
-    "max_steps": 2**19,
+    "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
@@ -226,7 +228,7 @@ use_msc = {"geant_options": {"msc": "urban"}}
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**20,
-    "max_steps": 2**11,
+    "max_steps": 2**15,
     "initializer_capacity": 2**26,
 }
 
@@ -237,30 +239,30 @@ no_field = {
 
 testem15 = {
     "_geometry": "orange",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "testem15.org.json",
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
+    "mag_field": [0.0, 0.0, 1.0 * input_tesla],
     "sync": False,
 }
 
 simple_cms = {
     "_geometry": "orange",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "simple-cms.org.json",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
-    "mag_field": [0.0, 0.0, 1000.0],
+    "mag_field": [0.0, 0.0, 1.0 * input_tesla],
 }
 
 testem3 = {
     "_geometry": "orange",
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
+    "mag_field": [0.0, 0.0, 1.0 * input_tesla],
     "sync": False,
     "primary_gen_options": {
         "pdg": 11,
@@ -274,31 +276,33 @@ testem3 = {
 
 full_cms = {
     "_geometry": "vecgeom",
-    "_num_events": 7, # TODO: output this as a diagnostic
-    "_num_primaries": 9100, # TODO: output this as a diagnostic
+    "_num_events": 7,
+    "_num_primaries": 9100,
     "geometry_filename": "cms2018.gdml",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
-    "mag_field": [0.0, 0.0, 1000.0],
+    "mag_field": [0.0, 0.0, 1.0 * input_tesla],
 }
 
 # List of list of setting dictionaries
 problems = [
-#    [testem15, no_field],
-#    [testem15],
-#    [testem15, use_msc,
-#        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
-#    [testem15, use_msc],
-#    [simple_cms, no_field, use_msc],
-#    [simple_cms],
-#    [simple_cms, use_msc],
-#    [simple_cms, use_msc,
-#        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
-#    [testem3, no_field],
-#    [testem3],
-#    [testem3, no_field,
-#        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+    [testem15, no_field],
+    [testem15],
+    [testem15, use_msc,
+        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
+    [testem15, use_msc],
+    [simple_cms, no_field, use_msc],
+    [simple_cms],
+    [simple_cms, use_msc],
+    [simple_cms, use_msc,
+        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
+    [testem3, no_field],
+    [testem3, no_field,
+        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+    [testem3],
     [testem3, no_field, use_msc],
+    [testem3, use_msc,
+        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
     [full_cms, no_field],
     [full_cms, use_msc],
 ]
@@ -454,9 +458,10 @@ async def main():
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    device_mods = [[]] # CPU
+    device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
+    device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
@@ -481,7 +486,16 @@ async def main():
         result = result[:system.num_jobs]
 
         name = inp['_outdir']
-        summaries[name] = summary = summarize_all(result)
+        try:
+            summaries[name] = summary = summarize_all(result)
+        except Exception as e:
+            print("*"*79)
+            print("FAILED input:")
+            pprint(inp)
+            print("*"*79)
+            pprint(result)
+            print("Failed to summarize result above")
+            raise
         summary['name'] = inp['_name'] # name tuple
         pprint(summary)
         alldelta = time.monotonic() - allstart

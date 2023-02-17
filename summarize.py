@@ -28,7 +28,7 @@ def get_action_times(actions):
 
 def get_msc(d):
     try:
-        msc_model = d['geant_options']['msc'] 
+        msc_model = d['geant_options']['msc']
     except KeyError:
         return d['enable_msc']
     else:
@@ -50,30 +50,46 @@ def summarize_result(out):
 
     These are basically equivalent to those in StepperTestBase.
     """
-    inp, result, internal = (out[k] for k in ['input', 'result', 'internal'])
+    inp, result, internal = (out.get(k) for k in ['input', 'result', 'internal'])
+    summary = {}
+    if inp is not None:
+        (num_events, num_primaries) = get_num_events_and_primaries(inp)
+        summary["num_events"] = num_events
+        summary["num_primaries"] = num_primaries
+    else:
+        num_events = 0
+        num_primaries = 0
+
+    if result is None:
+        return summary
+
     active = result['active']
     time = result['time']
     steps = sum(active)
-    (num_events, num_primaries) = get_num_events_and_primaries(inp)
-
     emptying_step = calc_emptying_step(active)
-    summary = {
-        "num_events": num_events,
-        "num_primaries": num_primaries,
+    summary.update({
         "unconverged": result['alive'][-1] + result['initializers'][-1],
         "num_step_iters": len(active),
         "num_steps": steps,
         "emptying_step": emptying_step,
+        "setup_time": time['setup'],
         "total_time": time['total'],
         "active_hwm": calc_hwm(result['active']),
         "queue_hwm": calc_hwm(result['initializers']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
-        "action_times": get_action_times(internal['actions']),
-        "avg_steps_per_primary": steps / active[0],
+        "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
-        "avg_time_per_primary": time['total'] / active[0],
+        "avg_time_per_primary": time['total'] / num_primaries,
         "slot_occupancy": steps / (len(active) * inp['max_num_tracks'])
-    }
+    })
+
+    try:
+        summary["action_times"] = time['actions']
+    except KeyError:
+        # Backward compatibility
+        if internal is not None:
+            summary["action_times"] = get_action_times(internal['actions'])
+
     return summary
 
 def summarize_input(inp):
@@ -140,7 +156,6 @@ def exception_to_dict(e, context=None):
 
 def summarize_one(out):
     failure = summarize_failure(out)
-
     try:
         result = summarize_result(out)
     except Exception as e:
@@ -148,6 +163,9 @@ def summarize_one(out):
             'failure': failure,
             'exception': exception_to_dict(e, context='result')
         }
+    else:
+        if failure:
+            result['failure'] = failure
 
     return result
 
@@ -193,6 +211,13 @@ def summarize_all(instances):
         'result': summaries
     }
 
+output_re = re.compile(r'^\d+.json$')
+
+def filter_outputs(paths):
+    for p in paths:
+        if output_re.match(p.name):
+            yield p
+
 def main(index_filename):
     import json
     from pathlib import Path
@@ -212,11 +237,14 @@ def main(index_filename):
     for subdir, name in problems:
         outdir = results_dir / subdir
         print("Processing", outdir)
-        result_files = sorted(outdir.glob("*.json"))
+        result_files = sorted(filter_outputs(outdir.glob("*.json")))
         results = []
         for r in result_files:
             with open(r) as f:
-                results.append(json.load(f))
+                try:
+                    results.append(json.load(f))
+                except json.decoder.JSONDecodeError as e:
+                    print(f"Failed to read file '{r}': {e!s}")
         summaries[subdir] = summary = summarize_all(results)
         summary['name'] = name
 
