@@ -56,212 +56,212 @@
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 1130.062231444784,
-     "annihil-2-gamma": 2.440335606999872,
-     "brems-rel": 2.3725025760000316,
-     "brems-sb": 6.646733182000006,
-     "conv-bethe-heitler": 2.9038818100000836,
-     "geo-boundary": 27.492913125996186,
-     "ioni-moller-bhabha": 2.507612513999986,
-     "photoel-livermore": 5.920320664999934,
-     "physics-discrete-select": 9.664917759001074,
-     "pre-step": 49.67813097806378,
-     "scat-klein-nishina": 4.599706369,
-     "scat-rayleigh": 2.676431127999949
+     "along-step-uniform-msc": 4188.34688944614,
+     "annihil-2-gamma": 8.411434139000104,
+     "brems-rel": 8.354882364000597,
+     "brems-sb": 12.710162800011327,
+     "conv-bethe-heitler": 8.827359934001185,
+     "geo-boundary": 38.04379564159107,
+     "ioni-moller-bhabha": 8.631562489000837,
+     "photoel-livermore": 11.821015328009112,
+     "physics-discrete-select": 27.682514791998244,
+     "pre-step": 60.561017080867764,
+     "scat-klein-nishina": 10.495837423006817,
+     "scat-rayleigh": 8.629100241001066
     },
     "active_hwm": {
      "count": 4096,
      "index": 153204
     },
-    "avg_steps_per_primary": 69002.47901098902,
-    "avg_time_per_primary": 0.13972925005857142,
-    "avg_time_per_step": 2.024988841869273e-06,
+    "avg_steps_per_primary": 69175.32120879121,
+    "avg_time_per_primary": 0.4879303680076923,
+    "avg_time_per_step": 7.053532379488007e-06,
     "emptying_step": 153205,
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 2097152: aborting transport loop"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 627922559,
-    "pre_emptying_time": 0.003943669,
+    "num_step_iters": 2097152,
+    "num_steps": 629495423,
+    "pre_emptying_time": 0.003925398,
     "queue_hwm": {
      "count": 391355,
      "index": 734
     },
-    "setup_time": 54.652195653,
-    "slot_occupancy": 0.29239922715350986,
-    "total_time": 1271.536175533,
+    "setup_time": 54.651866845,
+    "slot_occupancy": 0.07328291225712746,
+    "total_time": 4440.16634887,
     "unconverged": 1
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 1077.8380742829997,
-     "annihil-2-gamma": 1.867958439999982,
-     "brems-rel": 1.787968997000062,
-     "brems-sb": 6.178863784999604,
-     "conv-bethe-heitler": 2.3918193650000186,
-     "geo-boundary": 27.2211837460023,
-     "ioni-moller-bhabha": 2.010009803999996,
-     "photoel-livermore": 5.670828411999716,
-     "physics-discrete-select": 9.309308609000453,
-     "pre-step": 49.92415970380947,
-     "scat-klein-nishina": 4.585999656000291,
-     "scat-rayleigh": 2.1518679850000937
+     "along-step-uniform-msc": 4045.060956559062,
+     "annihil-2-gamma": 6.812626319000077,
+     "brems-rel": 6.735667600999711,
+     "brems-sb": 11.134406437007515,
+     "conv-bethe-heitler": 7.330045198999644,
+     "geo-boundary": 35.53756215814412,
+     "ioni-moller-bhabha": 6.999830053999439,
+     "photoel-livermore": 10.663877167005673,
+     "physics-discrete-select": 21.500545375002783,
+     "pre-step": 59.48984680686073,
+     "scat-klein-nishina": 9.491763488002626,
+     "scat-rayleigh": 7.061596711999589
     },
     "active_hwm": {
      "count": 4096,
      "index": 153333
     },
-    "avg_steps_per_primary": 69112.47,
-    "avg_time_per_primary": 0.13344830294241758,
-    "avg_time_per_step": 1.9308860317453215e-06,
+    "avg_steps_per_primary": 69285.3121978022,
+    "avg_time_per_primary": 0.4695088533821978,
+    "avg_time_per_step": 6.776455766581522e-06,
     "emptying_step": 153334,
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 2097152: aborting transport loop"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 628923477,
-    "pre_emptying_time": 0.004633887,
+    "num_step_iters": 2097152,
+    "num_steps": 630496341,
+    "pre_emptying_time": 0.004620046,
     "queue_hwm": {
      "count": 386907,
      "index": 726
     },
-    "setup_time": 54.922306064,
-    "slot_occupancy": 0.29286531591787934,
-    "total_time": 1214.379556776,
+    "setup_time": 54.927990677,
+    "slot_occupancy": 0.07339943444821984,
+    "total_time": 4272.530565778,
     "unconverged": 1
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 1002.2756414661097,
-     "annihil-2-gamma": 1.5984796710001212,
-     "brems-rel": 1.5641068760000818,
-     "brems-sb": 5.912844182999956,
-     "conv-bethe-heitler": 2.1455271019999764,
-     "geo-boundary": 26.58431765400706,
-     "ioni-moller-bhabha": 1.78122524500001,
-     "photoel-livermore": 5.097963073999695,
-     "physics-discrete-select": 9.506219058998756,
-     "pre-step": 49.17660988495698,
-     "scat-klein-nishina": 3.818553185999933,
-     "scat-rayleigh": 1.8758883840002063
+     "along-step-uniform-msc": 3982.0722575469963,
+     "annihil-2-gamma": 6.171880280999734,
+     "brems-rel": 6.105521889998783,
+     "brems-sb": 10.510612029998642,
+     "conv-bethe-heitler": 6.656960444998959,
+     "geo-boundary": 34.24927437138641,
+     "ioni-moller-bhabha": 6.452865218999361,
+     "photoel-livermore": 9.712507217999244,
+     "physics-discrete-select": 21.503685296000583,
+     "pre-step": 58.45179669942324,
+     "scat-klein-nishina": 8.390233714999455,
+     "scat-rayleigh": 6.424759744998511
     },
     "active_hwm": {
      "count": 4096,
      "index": 153479
     },
-    "avg_steps_per_primary": 69130.85428571429,
-    "avg_time_per_primary": 0.12460980093208791,
-    "avg_time_per_step": 1.8025207733884203e-06,
+    "avg_steps_per_primary": 69303.69648351648,
+    "avg_time_per_primary": 0.461587716029011,
+    "avg_time_per_step": 6.660362137231702e-06,
     "emptying_step": 153480,
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 2097152: aborting transport loop"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 629090774,
-    "pre_emptying_time": 0.003955838,
+    "num_step_iters": 2097152,
+    "num_steps": 630663638,
+    "pre_emptying_time": 0.003958339,
     "queue_hwm": {
      "count": 387248,
      "index": 719
     },
-    "setup_time": 54.801115458,
-    "slot_occupancy": 0.29294321965426207,
-    "total_time": 1133.949188482,
+    "setup_time": 54.646048391,
+    "slot_occupancy": 0.07341891038231552,
+    "total_time": 4200.448215864,
     "unconverged": 1
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 1070.5904542871026,
-     "annihil-2-gamma": 1.6559023729999225,
-     "brems-rel": 1.6112552699998781,
-     "brems-sb": 5.957188395999787,
-     "conv-bethe-heitler": 2.1877249470000364,
-     "geo-boundary": 27.06165268700826,
-     "ioni-moller-bhabha": 1.8286056989998736,
-     "photoel-livermore": 5.22577271199941,
-     "physics-discrete-select": 8.928155223999761,
-     "pre-step": 49.22276436293524,
-     "scat-klein-nishina": 3.9294984259998915,
-     "scat-rayleigh": 1.9227127680000207
+     "along-step-uniform-msc": 3943.4128662128687,
+     "annihil-2-gamma": 8.773956852000293,
+     "brems-rel": 8.69646907900076,
+     "brems-sb": 12.992698073005787,
+     "conv-bethe-heitler": 9.179923688001134,
+     "geo-boundary": 37.550860002678775,
+     "ioni-moller-bhabha": 8.978778792000837,
+     "photoel-livermore": 12.21235110300535,
+     "physics-discrete-select": 23.421888439999343,
+     "pre-step": 60.58134510402109,
+     "scat-klein-nishina": 10.898441407004272,
+     "scat-rayleigh": 9.015243539000048
     },
     "active_hwm": {
      "count": 4096,
      "index": 153271
     },
-    "avg_steps_per_primary": 69055.98637362638,
-    "avg_time_per_primary": 0.1322383387798901,
-    "avg_time_per_step": 1.9149438842914586e-06,
+    "avg_steps_per_primary": 69228.82857142857,
+    "avg_time_per_primary": 0.46089949843329675,
+    "avg_time_per_step": 6.657623824412284e-06,
     "emptying_step": 153272,
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 2097152: aborting transport loop"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 628409476,
-    "pre_emptying_time": 0.004146956,
+    "num_step_iters": 2097152,
+    "num_steps": 629982340,
+    "pre_emptying_time": 0.004163532,
     "queue_hwm": {
      "count": 387863,
      "index": 712
     },
-    "setup_time": 54.675743597,
-    "slot_occupancy": 0.2926259655505419,
-    "total_time": 1203.368882897,
+    "setup_time": 54.648017461,
+    "slot_occupancy": 0.07333959685638547,
+    "total_time": 4194.185435743,
     "unconverged": 1
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 922.5731441819162,
-     "annihil-2-gamma": 1.8642318419999173,
-     "brems-rel": 1.7881130959999276,
-     "brems-sb": 6.212270477999798,
-     "conv-bethe-heitler": 2.3910655090001196,
-     "geo-boundary": 27.790879733004555,
-     "ioni-moller-bhabha": 2.0586044549999802,
-     "photoel-livermore": 5.607088978999846,
-     "physics-discrete-select": 10.485533188000561,
-     "pre-step": 50.02464191080655,
-     "scat-klein-nishina": 4.467089115000211,
-     "scat-rayleigh": 2.132857419999939
+     "along-step-uniform-msc": 3644.8243417043263,
+     "annihil-2-gamma": 6.427362719000869,
+     "brems-rel": 6.327706178000919,
+     "brems-sb": 10.70604564800105,
+     "conv-bethe-heitler": 6.890734661000543,
+     "geo-boundary": 34.93713394740968,
+     "ioni-moller-bhabha": 6.624430240000255,
+     "photoel-livermore": 9.906351291000531,
+     "physics-discrete-select": 20.30646920398806,
+     "pre-step": 57.77188717787779,
+     "scat-klein-nishina": 8.685154397001147,
+     "scat-rayleigh": 6.6999051600007204
     },
     "active_hwm": {
      "count": 4096,
      "index": 153517
     },
-    "avg_steps_per_primary": 69145.8998901099,
-    "avg_time_per_primary": 0.11653767426813187,
-    "avg_time_per_step": 1.6853880628256967e-06,
+    "avg_steps_per_primary": 69318.74208791209,
+    "avg_time_per_primary": 0.4246567470354945,
+    "avg_time_per_step": 6.1261461798734345e-06,
     "emptying_step": 153518,
     "failure": {
      "stderr": [
-      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 524288: aborting transport loop"
+      "/ccs/home/s3j/.local/src/celeritas-summit/app/demo-loop/Transporter.cc:203: error: Exceeded step count of 2097152: aborting transport loop"
      ]
     },
     "num_events": 7,
     "num_primaries": 9100,
-    "num_step_iters": 524288,
-    "num_steps": 629227689,
-    "pre_emptying_time": 0.003812022,
+    "num_step_iters": 2097152,
+    "num_steps": 630800553,
+    "pre_emptying_time": 0.003801178,
     "queue_hwm": {
      "count": 390963,
      "index": 736
     },
-    "setup_time": 54.661135333,
-    "slot_occupancy": 0.2930069756694138,
-    "total_time": 1060.49283584,
+    "setup_time": 54.766349666,
+    "slot_occupancy": 0.07343484938610345,
+    "total_time": 3864.376398023,
     "unconverged": 1
    }
   ],
