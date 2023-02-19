@@ -194,7 +194,7 @@ class Crusher(System):
             env=env,
         )
 
-regression_dir = Path(__file__).parent
+regression_dir = Path(__file__).parent.resolve()
 input_dir = regression_dir / "input"
 
 base_input = {
@@ -202,7 +202,7 @@ base_input = {
     "brem_combined": False,
     "initializer_capacity": 2**20,
     "max_num_tracks": 2**12,
-    "max_steps": 2**21,
+    "max_steps": 2**18,
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
@@ -298,7 +298,7 @@ problems = [
     [testem15],
     [testem15, use_field],
     [testem15, use_msc, use_field],
-    [testem15, use_msc, use_vecgeom("testem15")],
+    [testem15, use_msc, use_field, use_vecgeom("testem15")],
     [simple_cms, use_msc],
     [simple_cms, use_field],
     [simple_cms, use_field, use_msc],
@@ -426,17 +426,29 @@ async def run_celeritas(system, results_dir, inp):
 
     try:
         outdir = results_dir / inp['_outdir']
-        outdir.mkdir(exist_ok=True)
+        outdir.mkdir(parents=True, exist_ok=True)
+        print(f"{instance}: writing...")
+        start = time.monotonic()
         with open(outdir / f"{instance:d}.json", "w") as f:
             json.dump(result, f, indent=0, sort_keys=True)
+        delta = time.monotonic() - start
+        print(f"{instance}: ... {delta:.1f}s")
     except Exception as e:
         print(f"{instance}: failed to output:", repr(e))
         failed = True
 
+    inp_path = outdir / f"{instance:d}.inp.json"
     if proc.returncode:
         # Write input to reproduce later
-        with open(outdir / f"{instance:d}.inp.json", "w") as f:
+        with open(inp_path, "w") as f:
             json.dump(inp, f, indent=0, sort_keys=True)
+    else:
+        # Clean up if a past run left an input
+        # use missing_ok=True for python >= 3.8
+        try:
+            inp_path.unlink()
+        except FileNotFoundError:
+            pass
 
     if not failed:
         print(f"{instance}: success")
@@ -457,12 +469,12 @@ async def main():
 
     # Copy build files
     buildfile_dir = regression_dir / 'build-files' / system.name
-    buildfile_dir.mkdir(exist_ok=True)
+    buildfile_dir.mkdir(parents=True, exist_ok=True)
     for k, v in system.build_dirs.items():
         shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
 
     results_dir = regression_dir / 'results' / system.name
-    results_dir.mkdir(exist_ok=True)
+    results_dir.mkdir(parents=True, exist_ok=True)
 
     device_mods = []
     if system.gpu_per_job:
@@ -507,7 +519,7 @@ async def main():
         pprint(summary)
         alldelta = time.monotonic() - allstart
         delta = time.monotonic() - start
-        print(f"Elapsed time for {name}: {delta:.1f} (total: {alldelta:.0f})")
+        print(f"Elapsed time for {name}: {delta:.1f}s (total: {alldelta:.0f}s)")
 
     with open(results_dir / 'summaries.json', 'w') as f:
         json.dump(summaries, f, indent=1, sort_keys=True)

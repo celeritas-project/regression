@@ -7,8 +7,10 @@
 #SBATCH -e crusher-%J.err
 
 if [ -z "$SLURM_JOB_ID" ]; then
-  set -x
-  sbatch $0 && squeue -u $USER
+  set -ex
+  sbatch $0 
+  sleep 5
+  squeue -u $USER
   exit $?
 fi
 

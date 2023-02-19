@@ -7,8 +7,10 @@
 #BSUB -e summit-%J.err
 
 if [ -z "$LSB_JOBID" ]; then
-  set -x
-  bsub $0 && bjobs -u $USER
+  set -ex
+  bsub $0
+  sleep 5
+  bjobs -u $USER
   exit $?
 fi
 
