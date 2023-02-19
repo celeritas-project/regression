@@ -3,19 +3,19 @@
 "_geometry": "vecgeom",
 "_instance": 0,
 "_name": [
-"simple-cms+field+msc",
+"testem15+msc",
 "vecgeom",
 "gpu"
 ],
 "_num_events": 7,
 "_num_primaries": 9100,
-"_outdir": "simple-cms+field+msc-vecgeom-gpu",
+"_outdir": "testem15+msc-vecgeom-gpu",
 "_timeout": 600.0
 },
 "stderr": [
 "slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher127: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=267875.36"
+"srun: error: crusher130: task 0: Exited with exit code 2",
+"srun: launch/slurm: _step_signal: Terminating StepId=267591.55"
 ],
 "stdout": []
 }

@@ -36,7 +36,7 @@ CELERITAS_DEBUG:BOOL=OFF
 CELERITAS_LAUNCH_BOUNDS:BOOL=OFF
 
 //Python path used for finding modules and generating documentation
-CELERITAS_PYTHONPATH:STRING=/ccs/home/s3j/.local/nemesis/python:/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
+CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
 
 //Celeritas runtime random number generator
 CELERITAS_RNG:STRING=XORWOW
@@ -915,7 +915,7 @@ CUDA_nvml_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvrtc_LIBRARY
 CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.1.4;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.1.4;;5c5a2dfd
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
