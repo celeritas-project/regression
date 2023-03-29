@@ -183,7 +183,7 @@ class Crusher(System):
         
         ncu_set = "full"
         kernel_name = "along_step_uniform_msc_kernel"
-        problem = Path(inp["geometry_filename"]).name.split['.']
+        problem = Path(inp["geometry_filename"]).name.split['.'][0]
         filename = f"{ncu_set}-{problem}-{inp['track_order']}-{kernel_name}"
 
         args.extend([
