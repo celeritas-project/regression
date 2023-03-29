@@ -180,8 +180,20 @@ class Crusher(System):
             build = self.build_dirs[inp["_geometry"]]
         except KeyError:
             build = PurePath("nonexistent")
+        
+        ncu_set = "full"
+        kernel_name = "along_step_uniform_msc_kernel"
+        problem = Path(inp["geometry_filename"]).name.split['.']
+        filename = f"{ncu_set}-{problem}-{inp['track_order']}-{kernel_name}"
 
         args.extend([
+            "ncu",
+            "-f",
+            f"--export={filename}",
+            f"--set={ncu_set}",
+            "--launch-skip=345",
+            "--launch-count=10",
+            f"--kernel-name={kernel_name}",
             build / "app" / "demo-loop",
             "-"
         ])
@@ -194,17 +206,31 @@ class Crusher(System):
             env=env,
         )
 
+
+# NOTE: Perlmutter uses Slurm so we can just inherit from Crusher
+class Perlmutter(Crusher):
+    _CELER_ROOT = Path(environ['CFS']) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
+    build_dirs = {
+        "vecgeom": _CELER_ROOT / 'build-ndebug',
+        "orange": _CELER_ROOT / 'build-ndebug-novg'
+    }
+    name = "perlmutter"
+    num_jobs = 1
+    gpu_per_job = 1
+    cpu_per_job = 1
+
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
 
 base_input = {
-    "_timeout": 600.0,
+    "_timeout": 4 * 3600.0,
     "brem_combined": False,
     "initializer_capacity": 2**20,
     "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 2**12,
     "max_steps": 2**21,
+    "track_order": "shuffled",
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
@@ -284,24 +310,24 @@ full_cms = {
 
 # List of list of setting dictionaries
 problems = [
-    [testem15, no_field],
-    [testem15],
-    [testem15, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
-    [testem15, use_msc],
-    [simple_cms, no_field, use_msc],
-    [simple_cms],
-    [simple_cms, use_msc],
-    [simple_cms, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
-    [testem3, no_field],
-    [testem3, no_field,
-        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
-    [testem3],
-    [testem3, no_field, use_msc],
-    [testem3, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
-    [full_cms, no_field],
+    # [testem15, no_field],
+    # [testem15],
+    # [testem15, use_msc,
+    #     {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
+    # [testem15, use_msc],
+    # [simple_cms, no_field, use_msc],
+    # [simple_cms],
+    # [simple_cms, use_msc],
+    # [simple_cms, use_msc,
+    #     {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
+    # [testem3, no_field],
+    # [testem3, no_field,
+    #     {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+    # [testem3],
+    # [testem3, no_field, use_msc],
+    # [testem3, use_msc,
+    #     {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
+    # [full_cms, no_field],
     [full_cms, use_msc],
 ]
 
@@ -387,7 +413,8 @@ async def run_celeritas(system, results_dir, inp):
     except FileNotFoundError as e:
         print("File not found:", e)
         return exception_to_dict(e, context="creating subprocess")
-
+    with open(results_dir / "0.inp.json", 'w') as f:
+        json.dump(inp, f)
     # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
 
     print(f"{instance}: awaiting communcation")
@@ -443,15 +470,21 @@ async def main():
         Sys = Local
     else:
         # TODO: use metaclass to build this list automatically
-        _systems = {S.name: S for S in [Summit, Crusher, Wildstyle]}
+        _systems = {S.name: S for S in [Summit, Crusher, Wildstyle, Perlmutter]}
         Sys = _systems[sysname]
     system = Sys()
 
+    try:
+        shuffled = sys.argv[2]
+    except IndexError:
+        shuffled = "unsorted"
+    base_input["track_order"] = shuffled
     # Copy build files
     buildfile_dir = regression_dir / 'build-files' / system.name
     buildfile_dir.mkdir(exist_ok=True)
     for k, v in system.build_dirs.items():
-        shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
+        if v.exists():
+            shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
@@ -459,7 +492,7 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    device_mods.append([]) # CPU
+    # device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
