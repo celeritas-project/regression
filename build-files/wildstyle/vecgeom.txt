@@ -1224,7 +1224,7 @@ CUDA_parse_cubin:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/bdbrx6h/shar
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/bdbrx6h/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.86;3cfb58ff
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.87;5697d959
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1402,6 +1402,8 @@ _Python_EXECUTABLE:INTERNAL=/projects/spack/var/spack/environments/celeritas/.sp
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;8;64;;cpython-310-x86_64-linux-gnu;abi3;/projects/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.10;/projects/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.10;/projects/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.10/site-packages;/projects/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.10/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=9ce9a2265f42feb8003a6e995540b5ca
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
 __pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
