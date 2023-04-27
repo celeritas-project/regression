@@ -63,8 +63,8 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/s3j/.local/src/celeritas/build-reldeb"),
-        'vecgeom': Path("/home/s3j/.local/src/celeritas/build-reldeb-vecgeom"),
+        'orange': Path("/home/s3j/.local/src/celeritas/build-ndebug"),
+        'vecgeom': Path("/home/s3j/.local/src/celeritas/build-ndebug-vecgeom"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -296,21 +296,21 @@ def use_vecgeom(basename):
 
 # List of list of setting dictionaries
 problems = [
-    [testem15],
-    [testem15, use_field],
-    [testem15, use_msc, use_field],
-    [testem15, use_msc, use_vecgeom("testem15")],
-    [simple_cms, use_msc],
-    [simple_cms, use_field],
-    [simple_cms, use_field, use_msc],
-    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
-    [testem3],
-    [testem3, use_vecgeom("testem3-flat")],
-    [testem3, use_field],
-    [testem3, use_msc],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
-    [full_cms],
+#    [testem15],
+#    [testem15, use_field],
+#    [testem15, use_msc, use_field],
+#    [testem15, use_msc, use_vecgeom("testem15")],
+#    [simple_cms, use_msc],
+#    [simple_cms, use_field],
+#    [simple_cms, use_field, use_msc],
+#    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
+#    [testem3],
+#    [testem3, use_vecgeom("testem3-flat")],
+#    [testem3, use_field],
+#    [testem3, use_msc],
+#    [testem3, use_field, use_msc],
+#    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
+#    [full_cms],
     [full_cms, use_field, use_msc],
 ]
 
@@ -468,7 +468,7 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    device_mods.append([]) # CPU
+    #device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
