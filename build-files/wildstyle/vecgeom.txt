@@ -1224,7 +1224,7 @@ CUDA_parse_cubin:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/bdbrx6h/shar
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/bdbrx6h/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.93;e682b3d1
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.95;e4b2292a
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
