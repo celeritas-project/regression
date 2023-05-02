@@ -29,6 +29,12 @@ CELERITAS_BUILD_DOCS:BOOL=OFF
 //Build Celeritas unit tests
 CELERITAS_BUILD_TESTS:BOOL=ON
 
+//Celeritas runtime geometry
+CELERITAS_CORE_GEO:STRING=ORANGE
+
+//Celeritas runtime random number generator
+CELERITAS_CORE_RNG:STRING=xorwow
+
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
@@ -751,6 +757,10 @@ pkgcfg_lib_PC_EXPAT_expat:FILEPATH=/projects/spack/opt/spack/gcc-8.5.0/expat/gio
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
+//STRINGS property for variable: CELERITAS_CORE_GEO
+CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
+//STRINGS property for variable: CELERITAS_CORE_RNG
+CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=wildstyle
 //STRINGS property for variable: CELERITAS_RNG
