@@ -19,80 +19,80 @@
   "result": [
    {
     "action_times": {
-     "along-step-uniform-msc": 63.641247551000205,
-     "annihil-2-gamma": 0.10802048200000006,
-     "brems-rel": 0.10605125200000007,
-     "brems-sb": 0.3164878020000013,
-     "conv-bethe-heitler": 0.16459403400000022,
-     "extend-from-secondaries": 0.6135665229999999,
-     "geo-boundary": 4.718048399000013,
-     "initialize-tracks": 0.4797161580000003,
-     "ioni-moller-bhabha": 0.15241004999999985,
-     "photoel-livermore": 0.4019386100000001,
-     "physics-discrete-select": 0.22101992700000017,
-     "pre-step": 1.1592122920000016,
-     "scat-klein-nishina": 0.23827308399999989,
-     "scat-rayleigh": 0.13056282700000013
+     "along-step-uniform-msc": 63.65636836999999,
+     "annihil-2-gamma": 0.10977582400000012,
+     "brems-rel": 0.108124391,
+     "brems-sb": 0.3185524059999994,
+     "conv-bethe-heitler": 0.16641036899999995,
+     "extend-from-secondaries": 0.6004329589999996,
+     "geo-boundary": 4.719951895,
+     "initialize-tracks": 0.4809564070000006,
+     "ioni-moller-bhabha": 0.15454303499999997,
+     "photoel-livermore": 0.408089611000001,
+     "physics-discrete-select": 0.22371667599999998,
+     "pre-step": 1.162304842,
+     "scat-klein-nishina": 0.23997090900000018,
+     "scat-rayleigh": 0.1323677049999999
     },
     "active_hwm": {
      "count": 1048576,
      "index": 856
     },
     "avg_steps_per_primary": 68179.53428571428,
-    "avg_time_per_primary": 0.007962003588461539,
-    "avg_time_per_step": 1.1677996442592045e-07,
+    "avg_time_per_primary": 0.007965336142307693,
+    "avg_time_per_step": 1.168288435196407e-07,
     "emptying_step": 857,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2492,
     "num_steps": 620433762,
-    "pre_emptying_time": 0.09854193,
+    "pre_emptying_time": 0.09819594,
     "queue_hwm": {
      "count": 10152490,
      "index": 457
     },
-    "setup_time": 46.504556668,
+    "setup_time": 46.607616342,
     "slot_occupancy": 0.23743649432211397,
-    "total_time": 72.454232655,
+    "total_time": 72.484558895,
     "unconverged": 0
    },
    {
     "action_times": {
-     "along-step-uniform-msc": 54.38613497799981,
-     "annihil-2-gamma": 0.10920674099999991,
-     "brems-rel": 0.10659448199999987,
-     "brems-sb": 0.29530201899999986,
-     "conv-bethe-heitler": 0.15818591499999998,
-     "extend-from-secondaries": 0.6286724990000029,
-     "geo-boundary": 4.169377070000034,
-     "initialize-tracks": 0.43899606399999935,
-     "ioni-moller-bhabha": 0.14818204900000034,
-     "photoel-livermore": 0.370570899,
-     "physics-discrete-select": 0.21344123799999984,
-     "pre-step": 1.054155508,
-     "scat-klein-nishina": 0.23203212399999995,
-     "scat-rayleigh": 0.129772392
+     "along-step-uniform-msc": 54.391103121000086,
+     "annihil-2-gamma": 0.10735970099999995,
+     "brems-rel": 0.10527251700000019,
+     "brems-sb": 0.2942292650000001,
+     "conv-bethe-heitler": 0.15670723600000025,
+     "extend-from-secondaries": 0.5813498070000005,
+     "geo-boundary": 4.159629295999994,
+     "initialize-tracks": 0.43716799399999967,
+     "ioni-moller-bhabha": 0.14697179000000027,
+     "photoel-livermore": 0.3695796189999999,
+     "physics-discrete-select": 0.21197206099999968,
+     "pre-step": 1.052862074000001,
+     "scat-klein-nishina": 0.23010640799999985,
+     "scat-rayleigh": 0.1282386680000002
     },
     "active_hwm": {
      "count": 1048576,
      "index": 855
     },
     "avg_steps_per_primary": 68001.4623076923,
-    "avg_time_per_primary": 0.006861965363626373,
-    "avg_time_per_step": 1.0090908534550954e-07,
+    "avg_time_per_primary": 0.006854465692637362,
+    "avg_time_per_step": 1.0079879843792692e-07,
     "emptying_step": 856,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2569,
     "num_steps": 618813307,
-    "pre_emptying_time": 0.083302572,
+    "pre_emptying_time": 0.083325017,
     "queue_hwm": {
      "count": 10174650,
      "index": 457
     },
-    "setup_time": 46.615864024,
+    "setup_time": 46.327831965,
     "slot_occupancy": 0.2297183174528283,
-    "total_time": 62.443884809,
+    "total_time": 62.375637803,
     "unconverged": 0
    }
   ],
@@ -123,7 +123,7 @@
     "seltzer_berger_interact": 0.375
    },
    "vecgeom": "1.2.2",
-   "version": "v0.3.0-dev.102+d650541e"
+   "version": "v0.3.0-dev.104+b0844f75"
   }
  }
 }
