@@ -207,6 +207,7 @@ base_input = {
     "enable_diagnostics": False,
     "use_device": False,
     "sync": True,
+    "track_order": "sort_along_step_action",
     "eloss_fluctuation": True,
 }
 
