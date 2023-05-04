@@ -29,6 +29,12 @@ CELERITAS_BUILD_DOCS:BOOL=OFF
 //Build Celeritas unit tests
 CELERITAS_BUILD_TESTS:BOOL=ON
 
+//Celeritas runtime geometry
+CELERITAS_CORE_GEO:STRING=VecGeom
+
+//Celeritas runtime random number generator
+CELERITAS_CORE_RNG:STRING=xorwow
+
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
@@ -38,10 +44,7 @@ CELERITAS_LAUNCH_BOUNDS:BOOL=OFF
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
 
-//Celeritas runtime random number generator
-CELERITAS_RNG:STRING=XORWOW
-
-//No help, variable specified on the command line.
+//Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
 
 //Enable the CUDA language
@@ -408,7 +411,7 @@ CUDA_NVCC_FLAGS_RELEASE:STRING=
 // builds.
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
-//"OpenCL" library
+//Path to a library.
 CUDA_OpenCL_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libOpenCL.so
 
 //Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
@@ -445,7 +448,7 @@ CUDA_cublasLt_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcublasLt.so
 //Path to a library.
 CUDA_cublasLt_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcublasLt_static.a
 
-//"cublas" library
+//Path to a library.
 CUDA_cublas_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcublas.so
 
 //Path to a library.
@@ -460,10 +463,10 @@ CUDA_cudadevrt_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcudadevrt.a
 //Path to a library.
 CUDA_cudart_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcudart.so
 
-//static CUDA runtime library
+//Path to a library.
 CUDA_cudart_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcudart_static.a
 
-//"cufft" library
+//Path to a library.
 CUDA_cufft_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft.so
 
 //Path to a library.
@@ -475,31 +478,31 @@ CUDA_cufftw_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufftw.so
 //Path to a library.
 CUDA_culibos_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libculibos.a
 
-//"cupti" library
+//Path to a library.
 CUDA_cupti_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcupti.so
 
 //Path to a library.
 CUDA_cupti_static_LIBRARY:FILEPATH=CUDA_cupti_static_LIBRARY-NOTFOUND
 
-//"curand" library
+//Path to a library.
 CUDA_curand_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcurand.so
 
 //Path to a library.
 CUDA_curand_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcurand_static.a
 
-//"cusolver" library
+//Path to a library.
 CUDA_cusolver_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver.so
 
 //Path to a library.
 CUDA_cusolver_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver_static.a
 
-//"cusparse" library
+//Path to a library.
 CUDA_cusparse_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusparse.so
 
 //Path to a library.
 CUDA_cusparse_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusparse_static.a
 
-//"nppc" library
+//Path to a library.
 CUDA_nppc_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnppc.so
 
 //Path to a library.
@@ -565,13 +568,13 @@ CUDA_nppitc_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnppitc.so
 //Path to a library.
 CUDA_nppitc_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnppitc_static.a
 
-//"npps" library
+//Path to a library.
 CUDA_npps_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnpps.so
 
 //Path to a library.
 CUDA_npps_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnpps_static.a
 
-//"nvToolsExt" library
+//Path to a library.
 CUDA_nvToolsExt_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libnvToolsExt.so
 
 //Path to a library.
@@ -632,7 +635,7 @@ HEPMC3_LIB:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/l
 HEPMC3_ROOTIO_LIB:FILEPATH=HEPMC3_ROOTIO_LIB-NOTFOUND
 
 //Path to a library.
-HEPMC3_SEARCH_LIB:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/libHepMC3search.so
+HEPMC3_SEARCH_LIB:FILEPATH=HEPMC3_SEARCH_LIB-NOTFOUND
 
 //The directory containing a CMake configuration file for HepMC3.
 HepMC3_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/share/HepMC3/cmake
@@ -710,10 +713,12 @@ pkgcfg_lib_PC_EXPAT_m:FILEPATH=/usr/lib64/libm.so
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
+//STRINGS property for variable: CELERITAS_CORE_GEO
+CELERITAS_CORE_GEO-STRINGS:INTERNAL=VecGeom;ORANGE
+//STRINGS property for variable: CELERITAS_CORE_RNG
+CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=summit
-//STRINGS property for variable: CELERITAS_RNG
-CELERITAS_RNG-STRINGS:INTERNAL=XORWOW;CURAND
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -1063,7 +1068,7 @@ CUDA_parse_cubin:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/cmake-3.22.2-wowacj45ll2cxqd7qs6hjsyjkupa76po/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev-46;8bb8f997
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.117;f5cc679d
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
