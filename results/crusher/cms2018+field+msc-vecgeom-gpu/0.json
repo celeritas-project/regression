@@ -13,9 +13,9 @@
 "_timeout": 600.0
 },
 "stderr": [
-"slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher082: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=262572.229"
+"srun: error: crusher001: task 0: Exited with exit code 2",
+"srun: launch/slurm: _step_signal: Terminating StepId=311940.255",
+"slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory"
 ],
 "stdout": []
 }
