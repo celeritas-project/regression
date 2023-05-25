@@ -197,20 +197,22 @@ class Crusher(System):
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
-
 base_input = {
     "_timeout": 600.0,
     "brem_combined": False,
     "initializer_capacity": 2**20,
-    "mag_field": [0.0, 0.0, 1.0],
     "max_num_tracks": 2**12,
-    "max_steps": 2**19,
+    "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
     "sync": True,
-    # Geant options
-    "geant_options": {
+    "eloss_fluctuation": True,
+}
+
+if True:
+    # v0.2 and higher
+    base_input["geant_options"] = {
         "coulomb_scattering": False,
         "rayleigh_scattering": True,
         "eloss_fluctuation": False,
@@ -218,21 +220,32 @@ base_input = {
         "em_bins_per_decade": 56,
         "physics": "em_basic",
         "msc": "none",
-    },
-}
-
-use_msc = {"geant_options": {"msc": "urban"}}
+    }
+    use_msc = {"geant_options": {"msc": "urban"}}
+    use_field = {
+        "mag_field": [0.0, 0.0, 1.0],
+        "eloss_fluctuation": False,
+    }
+else:
+    # v0.1
+    base_input.update({
+        "brem_lpm": True,
+        "conv_lpm": True,
+        "eloss_fluctuation": False,
+        "enable_msc": False,
+        "rayleigh": True,
+    })
+    use_msc = {"enable_msc": True}
+    use_field = {
+        "mag_field": [0.0, 0.0, 1000.0],
+        "eloss_fluctuation": False,
+    }
 
 use_gpu = {
     "use_device": True,
     "max_num_tracks": 2**20,
-    "max_steps": 2**11,
+    "max_steps": 2**15,
     "initializer_capacity": 2**26,
-}
-
-no_field = {
-    "mag_field": [0.0, 0.0, 0.0],
-    "eloss_fluctuation": True,
 }
 
 testem15 = {
@@ -242,7 +255,6 @@ testem15 = {
     "geometry_filename": "testem15.org.json",
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
     "sync": False,
 }
 
@@ -253,14 +265,12 @@ simple_cms = {
     "geometry_filename": "simple-cms.org.json",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
 }
 
 testem3 = {
     "_geometry": "orange",
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
     "sync": False,
     "primary_gen_options": {
         "pdg": 11,
@@ -279,28 +289,29 @@ full_cms = {
     "geometry_filename": "cms2018.gdml",
     "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
-    "mag_field": [0.0, 0.0, 1.0],
 }
+
+def use_vecgeom(basename):
+    return {"_geometry": "vecgeom", "geometry_filename": basename + ".gdml"}
 
 # List of list of setting dictionaries
 problems = [
-    [testem15, no_field],
     [testem15],
-    [testem15, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "testem15.gdml"}],
-    [testem15, use_msc],
-    [simple_cms, no_field, use_msc],
-    [simple_cms],
+    [testem15, use_field],
+    [testem15, use_msc, use_field],
+    [testem15, use_msc, use_field, use_vecgeom("testem15")],
     [simple_cms, use_msc],
-    [simple_cms, use_msc,
-        {"_geometry": "vecgeom", "geometry_filename": "simple-cms.gdml"}],
-    [testem3, no_field],
+    [simple_cms, use_field],
+    [simple_cms, use_field, use_msc],
+    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
     [testem3],
-    [testem3, no_field,
-        {"_geometry": "vecgeom", "geometry_filename": "testem3-flat.gdml"}],
-    [testem3, no_field, use_msc],
-    [full_cms, no_field],
-    [full_cms, use_msc],
+    [testem3, use_vecgeom("testem3-flat")],
+    [testem3, use_field],
+    [testem3, use_msc],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
+    [full_cms],
+    [full_cms, use_field, use_msc],
 ]
 
 def recurse_updated(d, other):
@@ -454,9 +465,10 @@ async def main():
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    device_mods = [[]] # CPU
+    device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
+    device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
@@ -466,9 +478,11 @@ async def main():
 
     summaries = {}
     allstart = time.monotonic()
-    for inp in inputs:
+    _num_inputs = len(inputs)
+    for (i, inp) in enumerate(inputs, start=1):
         print("="*79)
-        #pprint(inp)
+        name = inp['_outdir']
+        print(f"Running problem {i} of {_num_inputs}: {name}...")
         start = time.monotonic()
         tasks = [run_celeritas(system, results_dir, build_instance(inp, i))
                  for i in range(system.num_jobs)]
@@ -480,7 +494,6 @@ async def main():
         # Ignore results from monitoring tasks
         result = result[:system.num_jobs]
 
-        name = inp['_outdir']
         try:
             summaries[name] = summary = summarize_all(result)
         except Exception as e:

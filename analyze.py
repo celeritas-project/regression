@@ -107,7 +107,10 @@ class Analysis:
         self.index = index
         self.input = input
         self.result = result
-        self.valid = result['failure'].isna()
+        if 'failure' in result:
+            self.valid = result['failure'].isna()
+        else:
+            self.valid = pd.Series(True, index=result.index)
         self.version = self._load_version(summaries)
         
         failed_probs = (~self.successful).groupby(level='problem').any()
@@ -149,7 +152,11 @@ class Analysis:
         return result
 
     def failures(self):
-        return unstack_subdict(self.result['failure'].dropna())
+        try:
+            failures = self.result['failure']
+        except KeyError:
+            return
+        return unstack_subdict(failures.dropna())
 
     def action_times(self):
         result = self.result
@@ -380,6 +387,8 @@ def annotate_metadata(obj, md, **kwargs):
 
 
 def make_failure_table(failures):
+    if failures is None:
+        failures = pd.DataFrame(dtype=object)
     flist = []
     idx = []
     for key, err in failures.iterrows():
@@ -407,7 +416,7 @@ def make_failure_table(failures):
         else:
             text = "(unknown failure)"
         flist.append(text)
-    return pd.Series(flist, index=idx, name="Failure")
+    return pd.Series(flist, index=idx, name="Failure", dtype=object)
 
 def main():
     # Generate table from wildstyle failures

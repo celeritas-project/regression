@@ -93,9 +93,13 @@ def summarize_result(out):
     return summary
 
 def summarize_input(inp):
+    mag_field = inp.get('mag_field')
+    if mag_field and not any(mag_field):
+        # 0.3.0-dev or less
+        mag_field = None
     return {
         'geometry_filename': PurePath(inp['geometry_filename']).name,
-        'mag_field': inp['mag_field'] if any(inp['mag_field']) else None,
+        'mag_field': mag_field,
         'use_device': inp['use_device'],
         'enable_msc': get_msc(inp),
         'max_num_tracks': inp['max_num_tracks'],
@@ -241,7 +245,10 @@ def main(index_filename):
         results = []
         for r in result_files:
             with open(r) as f:
-                results.append(json.load(f))
+                try:
+                    results.append(json.load(f))
+                except json.decoder.JSONDecodeError as e:
+                    print(f"Failed to read file '{r}': {e!s}")
         summaries[subdir] = summary = summarize_all(results)
         summary['name'] = name
 

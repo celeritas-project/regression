@@ -29,6 +29,12 @@ CELERITAS_BUILD_DOCS:BOOL=OFF
 //Build Celeritas unit tests
 CELERITAS_BUILD_TESTS:BOOL=ON
 
+//Celeritas runtime geometry
+CELERITAS_CORE_GEO:STRING=ORANGE
+
+//Celeritas runtime random number generator
+CELERITAS_CORE_RNG:STRING=xorwow
+
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
@@ -36,12 +42,12 @@ CELERITAS_DEBUG:BOOL=OFF
 CELERITAS_LAUNCH_BOUNDS:BOOL=OFF
 
 //Python path used for finding modules and generating documentation
-CELERITAS_PYTHONPATH:STRING=/ccs/home/s3j/.local/nemesis/python:/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
+CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
 
 //Celeritas runtime random number generator
 CELERITAS_RNG:STRING=XORWOW
 
-//No help, variable specified on the command line.
+//Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
 
 //Enable the CUDA language
@@ -265,13 +271,13 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.2.0
+CMAKE_PROJECT_VERSION:STATIC=0.3.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=2
+CMAKE_PROJECT_VERSION_MINOR:STATIC=3
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_PATCH:STATIC=0
@@ -622,6 +628,10 @@ pkgcfg_lib_PC_EXPAT_m:FILEPATH=/usr/lib64/libm.so
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
+//STRINGS property for variable: CELERITAS_CORE_GEO
+CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
+//STRINGS property for variable: CELERITAS_CORE_RNG
+CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=summit
 //STRINGS property for variable: CELERITAS_RNG
@@ -920,7 +930,7 @@ CUDA_nvml_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvrtc_LIBRARY
 CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.2.0;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.117;f5cc679d
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
