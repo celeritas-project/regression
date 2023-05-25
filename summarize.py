@@ -63,19 +63,26 @@ def summarize_result(out):
     if result is None:
         return summary
 
-    active = result['active']
-    time = result['time']
+    try:
+        runner = result['runner']
+    except KeyError:
+        # v0.2 and before #774
+        runner = result
+
+    active = runner['active']
+    time = runner['time']
+
     steps = sum(active)
     emptying_step = calc_emptying_step(active)
     summary.update({
-        "unconverged": result['alive'][-1] + result['initializers'][-1],
+        "unconverged": runner['alive'][-1] + runner['initializers'][-1],
         "num_step_iters": len(active),
         "num_steps": steps,
         "emptying_step": emptying_step,
         "setup_time": time['setup'],
         "total_time": time['total'],
-        "active_hwm": calc_hwm(result['active']),
-        "queue_hwm": calc_hwm(result['initializers']),
+        "active_hwm": calc_hwm(active),
+        "queue_hwm": calc_hwm(runner['initializers']),
         "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
         "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
@@ -86,7 +93,7 @@ def summarize_result(out):
     try:
         summary["action_times"] = time['actions']
     except KeyError:
-        # Backward compatibility
+        # v0.2
         if internal is not None:
             summary["action_times"] = get_action_times(internal['actions'])
 
@@ -95,7 +102,7 @@ def summarize_result(out):
 def summarize_input(inp):
     mag_field = inp.get('mag_field')
     if mag_field and not any(mag_field):
-        # 0.3.0-dev or less
+        # v0.2
         mag_field = None
     return {
         'geometry_filename': PurePath(inp['geometry_filename']).name,
