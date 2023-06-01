@@ -45,6 +45,14 @@ def get_num_events_and_primaries(d):
        num_primaries = num_events * primary_gen['primaries_per_event']
     return (num_events, num_primaries)
 
+def get_num_track_slots(inp):
+    try:
+        num_track_slots = inp['num_track_slots']
+    except KeyError:
+        # v0.2
+        num_track_slots = inp['max_num_tracks']
+    return num_track_slots
+
 def summarize_result(out):
     """Calculate statistics about the tracking behaviors.
 
@@ -64,30 +72,40 @@ def summarize_result(out):
         return summary
 
     try:
-        runner = result['runner']
+        runner_result = result['runner']
     except KeyError:
         # v0.2 and before #774
-        runner = result
+        time = result['time']
+        def get_stream_counts(key, stream=0):
+            return result[key][-1]
+        def get_step_time(stream=0):
+            return time['steps']
+    else:
+        time = runner_result['time']
+        def get_stream_counts(key, stream=0):
+            return runner_result[key][stream]
+        def get_step_time(stream=0):
+            return time['steps'][stream]
 
-    active = runner['active']
-    time = runner['time']
+    active = get_stream_counts('active')
+    inits = get_stream_counts('initializers')
 
     steps = sum(active)
     emptying_step = calc_emptying_step(active)
     summary.update({
-        "unconverged": runner['alive'][-1] + runner['initializers'][-1],
+        "unconverged": get_stream_counts('alive')[-1] + inits[-1],
         "num_step_iters": len(active),
         "num_steps": steps,
         "emptying_step": emptying_step,
         "setup_time": time['setup'],
         "total_time": time['total'],
         "active_hwm": calc_hwm(active),
-        "queue_hwm": calc_hwm(runner['initializers']),
-        "pre_emptying_time": time['steps'][(emptying_step or 0) - 1],
+        "queue_hwm": calc_hwm(inits),
+        "pre_emptying_time": get_step_time()[(emptying_step or 0) - 1],
         "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
         "avg_time_per_primary": time['total'] / num_primaries,
-        "slot_occupancy": steps / (len(active) * inp['max_num_tracks'])
+        "slot_occupancy": steps / (len(active) * get_num_track_slots(inp))
     })
 
     try:
@@ -109,7 +127,7 @@ def summarize_input(inp):
         'mag_field': mag_field,
         'use_device': inp['use_device'],
         'enable_msc': get_msc(inp),
-        'max_num_tracks': inp['max_num_tracks'],
+        'num_track_slots': get_num_track_slots(inp),
     }
 
 def summarize_system(sys):
@@ -170,6 +188,7 @@ def summarize_one(out):
     try:
         result = summarize_result(out)
     except Exception as e:
+        raise
         result = {
             'failure': failure,
             'exception': exception_to_dict(e, context='result')

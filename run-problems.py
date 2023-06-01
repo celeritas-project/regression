@@ -42,12 +42,13 @@ class System:
             build = self.build_dirs[inp["_geometry"]]
         except KeyError:
             build = PurePath("nonexistent")
-        cmd = build / "app/demo-loop"
+        cmd = build / "bin" / "celer-sim"
         env = dict(environ)
-        env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
         if not inp['use_device']:
+            env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
             env['CELER_DISABLE_DEVICE'] = "1"
         else:
+            env['OMP_NUM_THREADS'] = "1"
             env['CUDA_VISIBLE_DEVICES'] = str(inp['_instance'])
 
         return asyncio.create_subprocess_exec(
@@ -120,7 +121,7 @@ class Summit(System):
             build = PurePath("nonexistent")
 
         args.extend([
-            build / "app" / "demo-loop",
+            build / "bin" / "celer-sim",
             "-"
         ])
 
@@ -182,7 +183,7 @@ class Crusher(System):
             build = PurePath("nonexistent")
 
         args.extend([
-            build / "app" / "demo-loop",
+            build / "bin" / "celer-sim",
             "-"
         ])
 
@@ -221,6 +222,7 @@ if True:
         "physics": "em_basic",
         "msc": "none",
     }
+    base_input["merge_events"] = True # v0.3
     use_msc = {"geant_options": {"msc": "urban"}}
     use_field = {
         "mag_field": [0.0, 0.0, 1.0],
