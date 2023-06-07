@@ -30,22 +30,16 @@ CELERITAS_BUILD_DOCS:BOOL=OFF
 CELERITAS_BUILD_TESTS:BOOL=ON
 
 //Celeritas runtime geometry
-CELERITAS_CORE_GEO:STRING=ORANGE
+CELERITAS_CORE_GEO:STRING=
 
 //Celeritas runtime random number generator
-CELERITAS_CORE_RNG:STRING=xorwow
+CELERITAS_CORE_RNG:STRING=
 
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
-//Use kernel launch bounds generated from launch-bounds.json
-CELERITAS_LAUNCH_BOUNDS:BOOL=OFF
-
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
-
-//Celeritas runtime random number generator
-CELERITAS_RNG:STRING=XORWOW
 
 //Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
@@ -556,7 +550,7 @@ HEPMC3_LIB:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/l
 HEPMC3_ROOTIO_LIB:FILEPATH=HEPMC3_ROOTIO_LIB-NOTFOUND
 
 //Path to a library.
-HEPMC3_SEARCH_LIB:FILEPATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/libHepMC3search.so
+HEPMC3_SEARCH_LIB:FILEPATH=HEPMC3_SEARCH_LIB-NOTFOUND
 
 //The directory containing a CMake configuration file for HepMC3.
 HepMC3_DIR:PATH=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/share/HepMC3/cmake
@@ -634,8 +628,6 @@ CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=summit
-//STRINGS property for variable: CELERITAS_RNG
-CELERITAS_RNG-STRINGS:INTERNAL=XORWOW;CURAND
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -772,7 +764,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -930,7 +922,7 @@ CUDA_nvml_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvrtc_LIBRARY
 CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.117;f5cc679d
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.145;e64bff8e
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
