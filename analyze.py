@@ -112,12 +112,17 @@ class Analysis:
         else:
             self.valid = pd.Series(True, index=result.index)
         self.version = self._load_version(summaries)
-        
+
         failed_probs = (~self.successful).groupby(level='problem').any()
         self.failed_problems = set(failed_probs.index[failed_probs])
 
     def _load_version(self, summaries):
         versions = set()
+        def _lstripv(text):
+            if text.startswith("v"):
+                return text[1:]
+            return text
+
         for s in summaries.values():
             try:
                 temp_sys = s["system"]
@@ -125,11 +130,12 @@ class Analysis:
                 pass
             else:
                 if isinstance(temp_sys, list):
-                    versions.update(ts["version"] for ts in temp_sys)
+                    versions.update(_lstripv(ts["version"]) for ts in temp_sys)
                 else:
-                    versions.add(temp_sys["version"])
+                    versions.add(_lstripv(temp_sys["version"]))
         if len(versions) > 1:
-            print("WARNING: multiple versions present in same summary:", versions)
+            print("WARNING: multiple versions present in same summary:",
+                  versions)
         elif not versions:
             print("WARNING: no version found")
         return " or ".join(versions)
@@ -196,7 +202,7 @@ class Analysis:
         return result
 
     def __str__(self):
-        return f"Analysis for Celeritas {self.version} on {self.system}"
+        return f"Analysis for Celeritas v{self.version} on {self.system}"
 
     @property
     def system(self):
@@ -205,11 +211,11 @@ class Analysis:
     @property
     def invalid(self):
         return ~self.valid
-    
+
     @property
     def successful(self):
         return self.valid & (self.result['unconverged'] == 0)
-        
+
     def plot_results(self, ax, df):
         problems = self.problems()
         problem_to_abbr = self.problem_to_abbr(problems)
@@ -243,7 +249,37 @@ class Analysis:
         grid = ax.grid()
         ax.set_axisbelow(True)
         return scat
+    
+def CountGetter(out, stream):
+    result = out['result']
+    try:
+        result = result['runner']
+    except KeyError:
+        # v0.2 and before #774
+        def get_counts(key):
+            return result[key][-1]
+    else:
+        def get_counts(key):
+            return result[key][stream]
+    
+    return get_counts
 
+def StepTimeGetter(out, stream):
+    result = out['result']
+    try:
+        result = result['runner']
+    except KeyError:
+        # v0.2 and before #774
+        time = result['time']
+        def get_step_time():
+            return time['steps']
+    else:
+        time = result['time']
+        def get_step_time():
+            return time['steps'][stream]
+
+    return get_step_time
+    
 def plot_counts(ax, out):
     blue = (.1, .1, .9)
     red = (.7, .1, .1)
@@ -253,13 +289,15 @@ def plot_counts(ax, out):
         line, = ax.plot(*args, **kwargs)
         lines.append(line)
 
-    plot(ax, out['result']['active'], '-', color=(blue + (0.5,)), label='Active')
-    plot(ax, out['result']['alive'], '-', color=blue, label='Alive')
+    get_counts = CountGetter(out, stream=0)
+        
+    plot(ax, get_counts('active'), '-', color=(blue + (0.5,)), label='Active')
+    plot(ax, get_counts('alive'), '-', color=blue, label='Alive')
     ax.set_xlabel('Step iteration')
     ax.set_ylabel('Tracks', color=blue)
 
     oax = ax.twinx()
-    inits = np.array(out['result']['initializers'])
+    inits = np.array(get_counts('initializers'))
     plot(oax, inits, '--', color=red, label='Queued')
     oax.axhline(out['input']['initializer_capacity'], linestyle='--', color=(red + (0.25,)))
     oax.set_ylabel('Initializers', color=red)
@@ -288,9 +326,11 @@ def plot_counts(ax, out):
 
 
 def plot_time_per_step(ax, outp):
-    r = outp['result']
-    active = np.asarray(r['active'])
-    stime = np.asarray(r['time']['steps'])
+    get_counts = CountGetter(outp, stream=0)
+    get_step_time = StepTimeGetter(outp, stream=0)
+
+    active = np.asarray(get_stream_counts('active'))
+    stime = np.asarray(get_step_time())
 
     alpha = np.ones_like(active, dtype=float)
     alpha[active == outp['input']['max_num_tracks']] = .05
@@ -332,9 +372,11 @@ def plot_time_per_step(ax, outp):
 
 
 def plot_accum_time(ax, outp):
-    r = outp['result']
-    active = np.asarray(r['active'])
-    stime = np.asarray(r['time']['steps'])
+    get_counts = CountGetter(outp, 0)
+    get_step_time = StepTimeGetter(outp, 0)
+
+    active = np.asarray(get_counts('active'))
+    stime = np.asarray(get_step_time())
 
     accum_time = np.cumsum(stime)
     accum_steps = np.cumsum(active)
@@ -363,11 +405,11 @@ def annotate_metadata(obj, md, **kwargs):
     """Draw a little caption on a figure or axis with result metadata.
     """
     if isinstance(md, Analysis):
-        s = f"{md.version} on {md.system}"
+        s = f"v{md.version} on {md.system}"
     else:
         # Assume data from a single result
         name = "/".join(md['name'])
-        s = f"{name}.{md['instance']}\n{md['version']} on {md['system']}"
+        s = f"{name}.{md['instance']}\nv{md['version']} on {md['system']}"
 
     try:
         # Assume obj is axes to get layout coordinates
