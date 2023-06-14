@@ -1065,7 +1065,7 @@ CUDA_parse_cubin:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/cmake-3.22.2-wowacj45ll2cxqd7qs6hjsyjkupa76po/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-dev.146;faa2420f
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.0;-rc.1.3;2a9396ea
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
