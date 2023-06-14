@@ -13,11 +13,9 @@
 "_timeout": 600.0
 },
 "stderr": [
-"srun: Job 266710 step creation temporarily disabled, retrying (Requested nodes are busy)",
-"srun: Step created for job 266710",
-"slurmstepd: error: execve(): nonexistent/app/demo-loop: No such file or directory",
-"srun: error: crusher118: task 0: Exited with exit code 2",
-"srun: launch/slurm: _step_signal: Terminating StepId=266710.42"
+"slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory",
+"srun: error: crusher003: task 0: Exited with exit code 2",
+"srun: Terminating StepId=340742.48"
 ],
 "stdout": []
 }
