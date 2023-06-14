@@ -269,7 +269,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0-rc.1.3+2a9396ea"
+   "version": "0.3.0-rc.1"
   }
  },
  "cms2018+field+msc-vecgeom-gpu": {
@@ -564,7 +564,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "cms2018-vecgeom-cpu": {
@@ -833,7 +833,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0-rc.1.3+2a9396ea"
+   "version": "0.3.0-rc.1"
   }
  },
  "cms2018-vecgeom-gpu": {
@@ -1122,7 +1122,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field+msc-orange-cpu": {
@@ -1395,7 +1395,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field+msc-orange-gpu": {
@@ -1690,7 +1690,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field+msc-vecgeom-cpu": {
@@ -1963,7 +1963,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field+msc-vecgeom-gpu": {
@@ -2258,7 +2258,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field-orange-cpu": {
@@ -2531,7 +2531,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+field-orange-gpu": {
@@ -2824,7 +2824,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+msc-orange-cpu": {
@@ -3093,7 +3093,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "simple-cms+msc-orange-gpu": {
@@ -3384,7 +3384,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field+msc-orange-cpu": {
@@ -3657,7 +3657,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field+msc-orange-gpu": {
@@ -3850,7 +3850,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field+msc-vecgeom-cpu": {
@@ -4123,7 +4123,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -4316,7 +4316,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field-orange-cpu": {
@@ -4589,7 +4589,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15+field-orange-gpu": {
@@ -4780,7 +4780,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15-orange-cpu": {
@@ -5049,7 +5049,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem15-orange-gpu": {
@@ -5236,7 +5236,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field+msc-orange-cpu": {
@@ -5509,7 +5509,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field+msc-orange-gpu": {
@@ -5702,7 +5702,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field+msc-vecgeom-cpu": {
@@ -5975,7 +5975,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field+msc-vecgeom-gpu": {
@@ -6168,7 +6168,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field-orange-cpu": {
@@ -6441,7 +6441,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+field-orange-gpu": {
@@ -6632,7 +6632,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+msc-orange-cpu": {
@@ -6901,7 +6901,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat+msc-orange-gpu": {
@@ -7090,7 +7090,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat-orange-cpu": {
@@ -7359,7 +7359,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat-orange-gpu": {
@@ -7546,7 +7546,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat-vecgeom-cpu": {
@@ -7815,7 +7815,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  },
  "testem3-flat-vecgeom-gpu": {
@@ -8002,7 +8002,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.1",
-   "version": "0.3.0"
+   "version": "0.3.0-rc.1"
   }
  }
 }
