@@ -299,20 +299,20 @@ def use_vecgeom(basename):
 
 # List of list of setting dictionaries
 problems = [
-#    [testem15],
-#    [testem15, use_field],
-#    [testem15, use_msc, use_field],
-#    [testem15, use_msc, use_field, use_vecgeom("testem15")],
-#    [simple_cms, use_msc],
-#    [simple_cms, use_field],
-#    [simple_cms, use_field, use_msc],
-#    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
-#    [testem3],
-#    [testem3, use_vecgeom("testem3-flat")],
-#    [testem3, use_field],
-#    [testem3, use_msc],
-#    [testem3, use_field, use_msc],
-#    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
+    [testem15],
+    [testem15, use_field],
+    [testem15, use_msc, use_field],
+    [testem15, use_msc, use_field, use_vecgeom("testem15")],
+    [simple_cms, use_msc],
+    [simple_cms, use_field],
+    [simple_cms, use_field, use_msc],
+    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
+    [testem3],
+    [testem3, use_vecgeom("testem3-flat")],
+    [testem3, use_field],
+    [testem3, use_msc],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
     [full_cms],
     [full_cms, use_field, use_msc],
 ]
@@ -469,8 +469,8 @@ async def main():
     results_dir.mkdir(exist_ok=True)
 
     device_mods = []
-#    if system.gpu_per_job:
-#        device_mods.append([use_gpu])
+    if system.gpu_per_job:
+        device_mods.append([use_gpu])
     device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
