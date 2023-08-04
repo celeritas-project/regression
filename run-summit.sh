@@ -2,6 +2,7 @@
 #BSUB -P csc404
 #BSUB -W 1:59
 #BSUB -nnodes 1
+#BSUB -q debug
 #BSUB -J celer-regression
 #BSUB -o summit-%J.out
 #BSUB -e summit-%J.err
