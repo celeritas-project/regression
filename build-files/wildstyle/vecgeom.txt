@@ -44,6 +44,9 @@ CELERITAS_PYTHONPATH:STRING=/projects/spack/opt/spack/gcc-8.5.0/ninja/4s73f3f/mi
 //Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
 
+//Increase logging level for tests
+CELERITAS_TEST_VERBOSE:BOOL=ON
+
 //Enable the CUDA language
 CELERITAS_USE_CUDA:BOOL=ON
 
@@ -1213,7 +1216,7 @@ CUDA_parse_cubin:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/23zsmwg/shar
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/projects/spack/opt/spack/gcc-8.5.0/cmake/23zsmwg/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.1;-rc.1;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.1;-rc.2;
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
