@@ -13,9 +13,9 @@
 "_timeout": 600.0
 },
 "stderr": [
-"slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory",
-"srun: error: crusher148: task 0: Exited with exit code 2",
-"srun: Terminating StepId=359171.224"
+"srun: error: crusher141: task 0: Exited with exit code 2",
+"srun: Terminating StepId=359247.224",
+"slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory"
 ],
 "stdout": []
 }
