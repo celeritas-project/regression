@@ -249,7 +249,7 @@ class Analysis:
         grid = ax.grid()
         ax.set_axisbelow(True)
         return scat
-    
+
 def CountGetter(out, stream):
     result = out['result']
     try:
@@ -261,7 +261,7 @@ def CountGetter(out, stream):
     else:
         def get_counts(key):
             return result[key][stream]
-    
+
     return get_counts
 
 def StepTimeGetter(out, stream):
@@ -279,7 +279,17 @@ def StepTimeGetter(out, stream):
             return time['steps'][stream]
 
     return get_step_time
-    
+
+def _calc_scale_and_label(arr):
+    dtype = type(arr[0])
+    scale10 = np.floor(np.log10(np.max(arr)))
+    if scale10 == 0:
+        return (dtype(1), "")
+
+    return (dtype(10**scale10), " [$\\times 10^{{{n}}}$]".format(n =
+                                                                 int(scale10)))
+
+
 def plot_counts(ax, out):
     blue = (.1, .1, .9)
     red = (.7, .1, .1)
@@ -290,23 +300,29 @@ def plot_counts(ax, out):
         lines.append(line)
 
     get_counts = CountGetter(out, stream=0)
-        
-    plot(ax, get_counts('active'), '-', color=(blue + (0.5,)), label='Active')
-    plot(ax, get_counts('alive'), '-', color=blue, label='Alive')
+    active = np.asarray(get_counts('active'), dtype=float)
+    alive = np.asarray(get_counts('alive'), dtype=float)
+    (norm, scale_label) = _calc_scale_and_label(active)
+
+    plot(ax, active / norm, '-', color=(blue + (0.5,)), label='Active')
+    plot(ax, alive / norm, '-', color=blue, label='Alive')
     ax.set_xlabel('Step iteration')
-    ax.set_ylabel('Tracks', color=blue)
+    ax.set_ylabel('Tracks' + scale_label, color=blue)
+    ax.set_axisbelow(True)
+    ax.grid()
 
     oax = ax.twinx()
-    inits = np.array(get_counts('initializers'))
-    plot(oax, inits, '--', color=red, label='Queued')
-    oax.axhline(out['input']['initializer_capacity'], linestyle='--', color=(red + (0.25,)))
-    oax.set_ylabel('Initializers', color=red)
+    inits = np.asarray(get_counts('initializers'))
+    plot(oax, inits / norm, '--', color=red, label='Queued')
+    oax.axhline(out['input']['initializer_capacity'] / norm, linestyle='--',
+                color=(red + (0.25,)))
+    oax.set_ylabel("Initializers" + scale_label, color=red)
 
     max_init_idx = np.argmax(inits)
     max_init_val = inits[max_init_idx]
     text = re.sub(r'([-+.0-9]+)e\+?(-)?0*([0-9]+)', r'$\1\\times 10^{\2\3}$',
                   f'{max_init_val:.2g}')
-    oax.annotate(text + ' queued', xy=(max_init_idx, max_init_val), xycoords='data',
+    oax.annotate(text + ' queued', xy=(max_init_idx, max_init_val / norm), xycoords='data',
                  xytext=(30, 10), textcoords='offset points',
                  size='x-small',
                  bbox=dict(boxstyle="round,pad=.2", fc=(0.9, 0.9, 0.9, 0.8) , ec=(0.2,)*3),
@@ -315,6 +331,7 @@ def plot_counts(ax, out):
 
     oax.spines['left'].set_color(blue)
     oax.spines['right'].set_color(red)
+    oax.set_axisbelow(True)
 
     legend = ax.legend(lines, [l.get_label() for l in lines])
 
@@ -329,20 +346,20 @@ def plot_time_per_step(ax, outp):
     get_counts = CountGetter(outp, stream=0)
     get_step_time = StepTimeGetter(outp, stream=0)
 
-    active = np.asarray(get_stream_counts('active'))
+    active = np.asarray(get_stream_counts('active'), float)
     stime = np.asarray(get_step_time())
 
     alpha = np.ones_like(active, dtype=float)
     alpha[active == outp['input']['max_num_tracks']] = .05
 
-    # Manually scale
-    mega_active = active * 1e-6
+    (norm, active_label) = _calc_scale_and_label(active)
+    active /= norm
 
     def _xy(idx):
-        return np.array([mega_active[idx], stime[idx]])
+        return np.array([active[idx], stime[idx]])
 
-    ax.plot(mega_active, stime, marker='', color="0.9", zorder=-1, lw=.5)
-    scat = ax.scatter(mega_active, stime, c=np.arange(len(mega_active)), s=6) #, alpha=alpha)
+    ax.plot(active, stime, marker='', color="0.9", zorder=-1, lw=.5)
+    scat = ax.scatter(active, stime, c=np.arange(len(active)), s=6) #, alpha=alpha)
     ax.annotate('All primaries active', xy=_xy(0), xycoords='data',
                 xytext=(30, 0), textcoords='offset points',
                 size='x-small', color=".2",
@@ -359,8 +376,8 @@ def plot_time_per_step(ax, outp):
                 xytext=(_xy(-80) * .9), textcoords='data',
                 size='x-small', color=".2",
                 arrowprops=dict(arrowstyle="<-", ec=".2", lw=.5))
-    ax.set_xlabel(r'Number of active tracks [$\times 10^{6}$]')
-    ax.set_ylabel('Time per step [s]')
+    ax.set_xlabel("Number of active tracks" + active_label)
+    ax.set_ylabel("Time per step [s]")
     cb = ax.get_figure().colorbar(scat)
     cb.set_label('Step iteration')
 
@@ -371,11 +388,11 @@ def plot_time_per_step(ax, outp):
     }
 
 
-def plot_accum_time(ax, outp):
+def plot_accum_time_inv(ax, outp):
     get_counts = CountGetter(outp, 0)
     get_step_time = StepTimeGetter(outp, 0)
 
-    active = np.asarray(get_counts('active'))
+    active = np.asarray(get_counts('active'), dtype=float)
     stime = np.asarray(get_step_time())
 
     accum_time = np.cumsum(stime)
@@ -384,14 +401,21 @@ def plot_accum_time(ax, outp):
     blue = (.1, .1, .9)
     red = (.7, .1, .1)
 
-    ax.plot(accum_time, accum_steps, marker='', color=blue)
-    ax.set_ylabel('Total number of steps')
-    ax.set_xlabel('Total wall time (s)')
+    ax.plot(np.arange(len(accum_steps)), accum_time, marker='', color=blue)
+    ax.set_xlabel("Step iteration")
+    ax.set_ylabel("Total wall time [s]", color=blue)
     ax.grid()
+    ax.set_axisbelow(True)
 
     oax = ax.twinx()
-    oax.plot(accum_time, np.arange(len(accum_steps)), linestyle='-.', marker='', color=(red + (0.5,)))
-    oax.set_ylabel("Number of step iterations", color=red)
+    oax.set_axisbelow(True)
+
+    (norm, accum_steps_label) = _calc_scale_and_label(accum_steps)
+    accum_steps /= norm
+
+    oax.plot(np.arange(len(accum_steps)), accum_steps, linestyle='-.',
+             marker='', color=(red + (0.5,)))
+    oax.set_ylabel("Total number of steps" + accum_steps_label, color=red)
     oax.spines['left'].set_color(blue)
     oax.spines['right'].set_color(red)
 
