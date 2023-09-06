@@ -346,44 +346,49 @@ def plot_time_per_step(ax, outp):
     get_counts = CountGetter(outp, stream=0)
     get_step_time = StepTimeGetter(outp, stream=0)
 
-    active = np.asarray(get_stream_counts('active'), float)
-    stime = np.asarray(get_step_time())
+    active = np.asarray(get_counts('active'), dtype=float)
+    stime = np.asarray(get_step_time()) * 1000
+    def _xy(idx):
+        return np.array([active[idx], stime[idx]])
+
+    hq, hi = max((q, i) for (i, q) in enumerate(active))
+    hq //= 2
+    _, filling = min((q, i) for (i, q) in enumerate(active[:hi]) if q > hq)
+    _, draining = min((q, i) for (i, q) in enumerate(active[hi:], start=hi) if q > hq)
 
     alpha = np.ones_like(active, dtype=float)
-    alpha[active == outp['input']['max_num_tracks']] = .05
+    alpha[active == outp['input']['num_track_slots']] = .05
 
     (norm, active_label) = _calc_scale_and_label(active)
     active /= norm
 
-    def _xy(idx):
-        return np.array([active[idx], stime[idx]])
+    ax.set_axisbelow(True)
+    ax.axhline(0, linestyle='-', lw=0.5, color=(0.75,)*3, zorder=-2)
+    ax.axvline(0, linestyle='-', lw=0.5, color=(0.75,)*3, zorder=-2)
 
     ax.plot(active, stime, marker='', color="0.9", zorder=-1, lw=.5)
-    scat = ax.scatter(active, stime, c=np.arange(len(active)), s=6) #, alpha=alpha)
+    scat = ax.scatter(active, stime, c=np.arange(len(active)), alpha=0.8, s=3,
+                      edgecolors='none')
     ax.annotate('All primaries active', xy=_xy(0), xycoords='data',
                 xytext=(30, 0), textcoords='offset points',
                 size='x-small', color=".2",
                 arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
-    ax.annotate('First secondaries', xy=_xy(2), xycoords='data',
-                xytext=(-15, 50), textcoords='offset points',
+    ax.annotate('Filling', xy=(_xy(filling)), xycoords='data',
+                xytext=(_xy(filling) * [1.1, 0.7]), textcoords='data',
                 size='x-small', color=".2",
                 arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
-    ax.annotate('Filling', xy=(_xy(3) * 1.1), xycoords='data',
-                xytext=(_xy(5) * 1.2), textcoords='data',
+    ax.annotate('Draining', xy=(_xy(draining)), xycoords='data',
+                xytext=(_xy(draining) * [0.7, 1.3]), textcoords='data',
                 size='x-small', color=".2",
-                arrowprops=dict(arrowstyle="<-", ec=".2", lw=.5))
-    ax.annotate('Draining', xy=(_xy(-100) * .8), xycoords='data',
-                xytext=(_xy(-80) * .9), textcoords='data',
-                size='x-small', color=".2",
-                arrowprops=dict(arrowstyle="<-", ec=".2", lw=.5))
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
     ax.set_xlabel("Number of active tracks" + active_label)
-    ax.set_ylabel("Time per step [s]")
+    ax.set_ylabel("Time per step [ms]")
+
     cb = ax.get_figure().colorbar(scat)
     cb.set_label('Step iteration')
 
     return {
         'ax': ax,
-        'oax': oax,
         'cb': cb,
     }
 
