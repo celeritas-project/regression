@@ -10,16 +10,30 @@ import json
 import re
 
 from pathlib import Path, PurePosixPath
+from enum import IntEnum
 
 import pandas as pd
 import numpy as np
 
 Islc = pd.IndexSlice
 
+KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP"], start=0)
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
 GEO_COLORS = {'orange': '#F6A75E', 'vecgeom': '#5785B7'}
 ARCH_SHAPES = {'gpu': 'x', 'cpu': 'o'}
+KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
+KERNEL_ORDERING = {
+    'along-step-neutral': KernelCategory.GEO,
+    'along-step-general-linear': KernelCategory.GP,
+    'along-step-uniform-msc': KernelCategory.GP,
+    'initialize-tracks': KernelCategory.GP,
+    'extend-from-primaries': KernelCategory.GP,
+    'extend-from-secondaries': KernelCategory.GP,
+    'geo-boundary': KernelCategory.GEO,
+    'physics-discrete-select': KernelCategory.PHYS,
+    'pre-step': KernelCategory.PHYS,
+}
 
 def unstack_subdict(df):
     result = pd.DataFrame(list(df.values), index=df.index)
@@ -499,6 +513,86 @@ def float_fmt_transform(digits):
     return transform
 
 
+def get_action_priority(k):
+    try:
+        return KERNEL_ORDERING[k]
+    except KeyError:
+        # Physics model
+        return KernelCategory.PHYS
+
+
+def autopct_format(pctvalue):
+    if pctvalue < 5:
+        return ""
+    return "{:1.0f}%".format(pctvalue)
+
+
+class PiePlotter:
+    def __init__(self, times):
+        import matplotlib.pyplot as plt
+        self._colormaps = plt.colormaps
+        
+        self.times = times.dropna()
+
+        actions = list(self.times.index)
+        ca = sorted([(get_action_priority(a), a) for a in actions])
+        (category, actions) = zip(*ca)
+        
+        cmap = self._colormaps["tab20c"] # 5 groups of 4 shades
+        def _get_color(color, shade = 0):
+            shade = shade % 4
+            return cmap((color % 5) * 4 + shade)
+        
+        self.outer_colors = _get_color(np.arange(len(KernelCategory)))
+        self.actions = np.array(actions)
+        
+        cat = np.array([int(c) for c in category])
+        self.catbound = np.concatenate([cat[:-1] != cat[1:], [True]])
+        self.catlabels = [KERNEL_CATEGORY_LABELS[c] for c in cat[self.catbound]]
+
+    def __call__(self, ax, arch):
+        width = 0.3
+        angle = 90.0 # degrees
+        legend_thresh = 0.02
+        
+        series = self.times[arch]
+        inner = np.array([series[t] for t in self.actions])
+        outer = np.cumsum(inner)[self.catbound]
+        outer = np.concatenate([[outer[0]], np.diff(outer)])
+        
+        # Plot outer ring (categories
+        (wedges, texts, autotexts) = ax.pie(
+            outer,
+            autopct=autopct_format, pctdistance=0.85,
+            radius=1, colors=self.outer_colors,
+            wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+        )
+        outer_legend = ax.legend(wedges, self.catlabels,
+                  loc="upper right",
+                  bbox_to_anchor=(0.5, 0, 0.5, 1))
+        ax.add_artist(outer_legend)
+        
+        # Determine kernels to higlight
+        inner_frac = inner / np.sum(inner)
+        inner_cmap = self._colormaps["plasma"]
+        inner_ignore_cmap = self._colormaps["Greys_r"]
+        
+        slc = inner_frac > legend_thresh
+        num_inner = np.count_nonzero(slc)
+        ascending_idx = np.argsort(np.argsort(inner_frac[slc]))
+        inner_colors = np.zeros((inner.size, 4))
+        inner_colors[slc, :] = inner_cmap(np.linspace(0.0, 1.0, num_inner)[ascending_idx])
+        inner_colors[~slc, :] = [0.5, 0.5, 0.5, 1.0] #inner_ignore_cmap(np.linspace(0.0, 1.0, inner.size - num_inner))
+        
+        (wedges, texts) = ax.pie(
+            inner,
+            radius=(1 - width), colors=inner_colors,
+            wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+        )
+        inner_legend = ax.legend(np.array(wedges)[slc], self.actions[slc],
+                           loc="center",
+                           fontsize='xx-small')
+        ax.add_artist(inner_legend)
 def main():
     # Generate table from wildstyle failures
     pass

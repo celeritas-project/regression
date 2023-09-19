@@ -269,7 +269,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "cms2018+field+msc-vecgeom-gpu": {
@@ -833,7 +833,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "cms2018-vecgeom-gpu": {
@@ -1395,7 +1395,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-orange-gpu": {
@@ -1963,7 +1963,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-vecgeom-gpu": {
@@ -2531,7 +2531,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field-orange-gpu": {
@@ -3093,7 +3093,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+msc-orange-gpu": {
@@ -3657,7 +3657,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-orange-gpu": {
@@ -4225,7 +4225,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -4793,7 +4793,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field-orange-gpu": {
@@ -5355,7 +5355,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15-orange-gpu": {
@@ -5917,7 +5917,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-orange-gpu": {
@@ -6485,7 +6485,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-vecgeom-gpu": {
@@ -7053,7 +7053,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field-orange-gpu": {
@@ -7615,7 +7615,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+msc-orange-gpu": {
@@ -8175,7 +8175,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-orange-gpu": {
@@ -8733,7 +8733,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-vecgeom-gpu": {
