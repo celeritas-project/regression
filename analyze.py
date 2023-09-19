@@ -489,6 +489,16 @@ def make_failure_table(failures):
         flist.append(text)
     return pd.Series(flist, index=idx, name="Failure", dtype=object)
 
+
+def float_fmt_transform(digits):
+    format = "{{:.{}f}}".format(digits).format
+    def transform(val):
+        if np.isnan(val):
+            return "—"
+        return format(val)
+    return transform
+
+
 def main():
     # Generate table from wildstyle failures
     pass
