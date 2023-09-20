@@ -322,6 +322,8 @@ problems = [
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
+    [testem15, use_field],
+    [testem15, use_field, use_vecgeom("testem15")],
     [testem3, use_field, use_msc],
     [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
     [full_cms, use_field, use_msc],
