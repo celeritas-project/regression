@@ -269,7 +269,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "cms2018+field+msc-vecgeom-gpu": {
@@ -291,249 +291,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-neutral": 9.263607099999975,
-     "along-step-uniform-msc": 25.094090680999937,
-     "annihil-2-gamma": 0.1374207060000001,
-     "brems-rel": 0.13722341999999996,
-     "brems-sb": 0.30961909700000023,
-     "conv-bethe-heitler": 0.18713602300000004,
-     "extend-from-primaries": 0.017413200000000007,
-     "extend-from-secondaries": 0.7653988929999999,
-     "geo-boundary": 4.036238206000003,
-     "initialize-tracks": 0.42732568999999776,
-     "ioni-moller-bhabha": 0.1708161730000007,
-     "photoel-livermore": 0.3760354809999998,
-     "physics-discrete-select": 0.2760847949999999,
-     "pre-step": 1.2190671560000015,
-     "scat-klein-nishina": 0.20255014400000046,
-     "scat-rayleigh": 0.15910928000000002
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68235.41010989012,
-    "avg_time_per_primary": 0.004761637247142857,
-    "avg_time_per_step": 6.978249620650702e-08,
+    "avg_time_per_primary": 0.004679844733076923,
+    "avg_time_per_step": 6.85838148483352e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 3121,
     "num_steps": 620942232,
-    "pre_emptying_time": 0.04782381,
+    "pre_emptying_time": 0.047907318,
     "queue_hwm": {
      "count": 9984679,
      "index": 457
     },
-    "setup_time": 60.240920025,
+    "setup_time": 59.663506887,
     "slot_occupancy": 0.18973939719012212,
-    "total_time": 43.330898949,
+    "total_time": 42.586587071,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 9.188376419000027,
-     "along-step-uniform-msc": 24.913648546999962,
-     "annihil-2-gamma": 0.0997465490000001,
-     "brems-rel": 0.0987198500000001,
-     "brems-sb": 0.2706596000000002,
-     "conv-bethe-heitler": 0.148074775,
-     "extend-from-primaries": 0.011717857999999987,
-     "extend-from-secondaries": 0.6000185689999993,
-     "geo-boundary": 3.9363439420000095,
-     "initialize-tracks": 0.4195587779999992,
-     "ioni-moller-bhabha": 0.13016574900000014,
-     "photoel-livermore": 0.33610505200000046,
-     "physics-discrete-select": 0.23635008199999966,
-     "pre-step": 1.042708560999997,
-     "scat-klein-nishina": 0.1647330910000003,
-     "scat-rayleigh": 0.12025976899999975
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68260.72010989011,
-    "avg_time_per_primary": 0.00460711362065934,
-    "avg_time_per_step": 6.749289508289011e-08,
+    "avg_time_per_primary": 0.004574900207692308,
+    "avg_time_per_step": 6.70209778087217e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2107,
     "num_steps": 621172553,
-    "pre_emptying_time": 0.048449464,
+    "pre_emptying_time": 0.048075481,
     "queue_hwm": {
      "count": 9985558,
      "index": 457
     },
-    "setup_time": 60.049435521,
+    "setup_time": 60.701300482,
     "slot_occupancy": 0.2811562932380636,
-    "total_time": 41.924733948,
+    "total_time": 41.63159189,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 9.194854970000005,
-     "along-step-uniform-msc": 24.256988033000013,
-     "annihil-2-gamma": 0.10070355799999997,
-     "brems-rel": 0.09899544199999999,
-     "brems-sb": 0.2712116209999999,
-     "conv-bethe-heitler": 0.14909055399999993,
-     "extend-from-primaries": 0.011814620000000007,
-     "extend-from-secondaries": 0.6043795870000004,
-     "geo-boundary": 3.956701553999994,
-     "initialize-tracks": 0.420438893999999,
-     "ioni-moller-bhabha": 0.1287073140000003,
-     "photoel-livermore": 0.33725051400000067,
-     "physics-discrete-select": 0.23738666600000052,
-     "pre-step": 1.050957889999999,
-     "scat-klein-nishina": 0.16588325299999987,
-     "scat-rayleigh": 0.12106172100000016
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68251.61285714286,
-    "avg_time_per_primary": 0.0045835629967032965,
-    "avg_time_per_step": 6.715684516199099e-08,
+    "avg_time_per_primary": 0.004542083248901099,
+    "avg_time_per_step": 6.654909765148134e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2140,
     "num_steps": 621089677,
-    "pre_emptying_time": 0.048115349,
+    "pre_emptying_time": 0.048203184,
     "queue_hwm": {
      "count": 9947661,
      "index": 457
     },
-    "setup_time": 60.052950034,
+    "setup_time": 60.289826416,
     "slot_occupancy": 0.27678377249530545,
-    "total_time": 41.71042327,
+    "total_time": 41.332957565,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 9.206654217999995,
-     "along-step-uniform-msc": 25.067046934000032,
-     "annihil-2-gamma": 0.10102688900000012,
-     "brems-rel": 0.099542876,
-     "brems-sb": 0.27147146599999966,
-     "conv-bethe-heitler": 0.14914626399999958,
-     "extend-from-primaries": 0.012056298999999996,
-     "extend-from-secondaries": 0.6046882510000012,
-     "geo-boundary": 3.957471537000003,
-     "initialize-tracks": 0.42262620700000003,
-     "ioni-moller-bhabha": 0.13227380799999983,
-     "photoel-livermore": 0.3372266419999998,
-     "physics-discrete-select": 0.23766797100000003,
-     "pre-step": 1.0494132199999988,
-     "scat-klein-nishina": 0.16594481099999983,
-     "scat-rayleigh": 0.12110203800000015
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68238.07384615384,
-    "avg_time_per_primary": 0.00467470349989011,
-    "avg_time_per_step": 6.850579502624096e-08,
+    "avg_time_per_primary": 0.004576798818681318,
+    "avg_time_per_step": 6.707104349105662e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2129,
     "num_steps": 620966472,
-    "pre_emptying_time": 0.048176372,
+    "pre_emptying_time": 0.047980459,
     "queue_hwm": {
      "count": 9967751,
      "index": 456
     },
-    "setup_time": 60.0546645,
+    "setup_time": 60.153551861,
     "slot_occupancy": 0.27815865462461287,
-    "total_time": 42.539801849,
+    "total_time": 41.64886925,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 9.206095421000011,
-     "along-step-uniform-msc": 24.736693122999988,
-     "annihil-2-gamma": 0.10531299900000013,
-     "brems-rel": 0.10402634500000028,
-     "brems-sb": 0.2769011529999986,
-     "conv-bethe-heitler": 0.15386997200000002,
-     "extend-from-primaries": 0.012499540999999989,
-     "extend-from-secondaries": 0.6225856570000017,
-     "geo-boundary": 3.9572241780000037,
-     "initialize-tracks": 0.4210225269999982,
-     "ioni-moller-bhabha": 0.13384414899999988,
-     "photoel-livermore": 0.34260724600000003,
-     "physics-discrete-select": 0.24216693099999986,
-     "pre-step": 1.075543930999998,
-     "scat-klein-nishina": 0.17026708900000045,
-     "scat-rayleigh": 0.12583338400000024
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68256.10417582418,
-    "avg_time_per_primary": 0.004647368811318681,
-    "avg_time_per_step": 6.80872262991644e-08,
+    "avg_time_per_primary": 0.004581600992417582,
+    "avg_time_per_step": 6.712368143097672e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2254,
     "num_steps": 621130548,
-    "pre_emptying_time": 0.049325442,
+    "pre_emptying_time": 0.048964501,
     "queue_hwm": {
      "count": 9978208,
      "index": 457
     },
-    "setup_time": 60.052993498,
+    "setup_time": 60.289916667,
     "slot_occupancy": 0.2628022407998844,
-    "total_time": 42.291056183,
+    "total_time": 41.692569031,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 9.29391194999999,
-     "along-step-uniform-msc": 25.097062114999957,
-     "annihil-2-gamma": 0.11247982699999987,
-     "brems-rel": 0.1112749980000001,
-     "brems-sb": 0.28372779900000067,
-     "conv-bethe-heitler": 0.16138357499999978,
-     "extend-from-primaries": 0.013778485999999972,
-     "extend-from-secondaries": 0.6551535520000008,
-     "geo-boundary": 4.000582424999995,
-     "initialize-tracks": 0.4242984360000008,
-     "ioni-moller-bhabha": 0.1424950139999998,
-     "photoel-livermore": 0.35045439800000083,
-     "physics-discrete-select": 0.2494027030000003,
-     "pre-step": 1.104770640999998,
-     "scat-klein-nishina": 0.17812259399999986,
-     "scat-rayleigh": 0.13327411200000008
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 857
     },
     "avg_steps_per_primary": 68342.20208791208,
-    "avg_time_per_primary": 0.004671065074725275,
-    "avg_time_per_step": 6.834817919265527e-08,
+    "avg_time_per_primary": 0.004614234112527473,
+    "avg_time_per_step": 6.751661450112401e-08,
     "emptying_step": 858,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 2437,
     "num_steps": 621914039,
-    "pre_emptying_time": 0.048412434,
+    "pre_emptying_time": 0.048179087,
     "queue_hwm": {
      "count": 9975257,
      "index": 457
     },
-    "setup_time": 59.857165372,
+    "setup_time": 59.87211892,
     "slot_occupancy": 0.24337441362608736,
-    "total_time": 42.50669218,
+    "total_time": 41.989530424,
     "unconverged": 0
    }
   ],
@@ -564,7 +462,302 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
+  }
+ },
+ "cms2018+field+msc-vecgeom-gpu+sync": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "cms2018.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "cms2018+field+msc",
+   "vecgeom",
+   "gpu+sync"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-neutral": 9.301097010999987,
+     "along-step-uniform-msc": 25.19915346300011,
+     "annihil-2-gamma": 0.1385162549999999,
+     "brems-rel": 0.13698738899999982,
+     "brems-sb": 0.30962415500000084,
+     "conv-bethe-heitler": 0.18723997099999973,
+     "extend-from-primaries": 0.013113784999999987,
+     "extend-from-secondaries": 0.7710070009999987,
+     "geo-boundary": 4.050249448999995,
+     "initialize-tracks": 0.4268202120000053,
+     "ioni-moller-bhabha": 0.17183765299999973,
+     "photoel-livermore": 0.3767142029999993,
+     "physics-discrete-select": 0.27664170499999974,
+     "pre-step": 1.2204764099999976,
+     "scat-klein-nishina": 0.20429982500000024,
+     "scat-rayleigh": 0.15927522500000002
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68235.41010989012,
+    "avg_time_per_primary": 0.0047416049492307695,
+    "avg_time_per_step": 6.94889199258072e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 3121,
+    "num_steps": 620942232,
+    "pre_emptying_time": 0.048050902,
+    "queue_hwm": {
+     "count": 9984679,
+     "index": 457
+    },
+    "setup_time": 59.639446262,
+    "slot_occupancy": 0.18973939719012212,
+    "total_time": 43.148605038,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 9.202245777999991,
+     "along-step-uniform-msc": 24.947456538999987,
+     "annihil-2-gamma": 0.10003832899999998,
+     "brems-rel": 0.098968403,
+     "brems-sb": 0.2709015979999998,
+     "conv-bethe-heitler": 0.1482482519999998,
+     "extend-from-primaries": 0.008907173999999999,
+     "extend-from-secondaries": 0.5994362210000013,
+     "geo-boundary": 3.9304582900000007,
+     "initialize-tracks": 0.4183619500000007,
+     "ioni-moller-bhabha": 0.13065450700000011,
+     "photoel-livermore": 0.3365655229999998,
+     "physics-discrete-select": 0.23664582000000003,
+     "pre-step": 1.0435604139999985,
+     "scat-klein-nishina": 0.16527692599999988,
+     "scat-rayleigh": 0.12070290299999978
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68260.72010989011,
+    "avg_time_per_primary": 0.0046097502238461536,
+    "avg_time_per_step": 6.753152056446383e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 2107,
+    "num_steps": 621172553,
+    "pre_emptying_time": 0.048281023,
+    "queue_hwm": {
+     "count": 9985558,
+     "index": 457
+    },
+    "setup_time": 60.165251824,
+    "slot_occupancy": 0.2811562932380636,
+    "total_time": 41.948727037,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 9.223737126000012,
+     "along-step-uniform-msc": 24.32557361399992,
+     "annihil-2-gamma": 0.1017839130000002,
+     "brems-rel": 0.10038895600000008,
+     "brems-sb": 0.27278544400000004,
+     "conv-bethe-heitler": 0.15046325799999974,
+     "extend-from-primaries": 0.009208893999999992,
+     "extend-from-secondaries": 0.6158150230000002,
+     "geo-boundary": 3.9607985229999967,
+     "initialize-tracks": 0.4226334870000004,
+     "ioni-moller-bhabha": 0.12999846200000034,
+     "photoel-livermore": 0.3387250869999999,
+     "physics-discrete-select": 0.23872556700000042,
+     "pre-step": 1.0553060720000018,
+     "scat-klein-nishina": 0.1674412440000002,
+     "scat-rayleigh": 0.12207891400000016
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68251.61285714286,
+    "avg_time_per_primary": 0.00455190989978022,
+    "avg_time_per_step": 6.669307448173865e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 2140,
+    "num_steps": 621089677,
+    "pre_emptying_time": 0.048120821,
+    "queue_hwm": {
+     "count": 9947661,
+     "index": 457
+    },
+    "setup_time": 60.653212995,
+    "slot_occupancy": 0.27678377249530545,
+    "total_time": 41.422380088,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 9.22304994699999,
+     "along-step-uniform-msc": 25.106837775999953,
+     "annihil-2-gamma": 0.10050438100000011,
+     "brems-rel": 0.09900945100000008,
+     "brems-sb": 0.27147533299999943,
+     "conv-bethe-heitler": 0.14861792499999987,
+     "extend-from-primaries": 0.009012916000000017,
+     "extend-from-secondaries": 0.604210881,
+     "geo-boundary": 3.9703737169999997,
+     "initialize-tracks": 0.4235043460000002,
+     "ioni-moller-bhabha": 0.13195852099999988,
+     "photoel-livermore": 0.33705680299999996,
+     "physics-discrete-select": 0.23710000100000006,
+     "pre-step": 1.0514650190000019,
+     "scat-klein-nishina": 0.16583677399999977,
+     "scat-rayleigh": 0.12077241699999994
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68238.07384615384,
+    "avg_time_per_primary": 0.004651411928351648,
+    "avg_time_per_step": 6.81644669343758e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 2129,
+    "num_steps": 620966472,
+    "pre_emptying_time": 0.048180663,
+    "queue_hwm": {
+     "count": 9967751,
+     "index": 456
+    },
+    "setup_time": 59.640881878,
+    "slot_occupancy": 0.27815865462461287,
+    "total_time": 42.327848548,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 9.205643642000005,
+     "along-step-uniform-msc": 24.710093247999975,
+     "annihil-2-gamma": 0.10523780900000003,
+     "brems-rel": 0.10371181600000004,
+     "brems-sb": 0.27660561299999986,
+     "conv-bethe-heitler": 0.15381029500000015,
+     "extend-from-primaries": 0.009571935999999991,
+     "extend-from-secondaries": 0.6216328970000008,
+     "geo-boundary": 3.9458283539999948,
+     "initialize-tracks": 0.41934686100000107,
+     "ioni-moller-bhabha": 0.13409164700000004,
+     "photoel-livermore": 0.3419223389999988,
+     "physics-discrete-select": 0.24195954200000094,
+     "pre-step": 1.0731651289999984,
+     "scat-klein-nishina": 0.17035689899999995,
+     "scat-rayleigh": 0.12598631400000002
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68256.10417582418,
+    "avg_time_per_primary": 0.004615496577362638,
+    "avg_time_per_step": 6.762027562360369e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 2254,
+    "num_steps": 621130548,
+    "pre_emptying_time": 0.048955258,
+    "queue_hwm": {
+     "count": 9978208,
+     "index": 457
+    },
+    "setup_time": 60.27127378,
+    "slot_occupancy": 0.2628022407998844,
+    "total_time": 42.001018854,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 9.26718464299999,
+     "along-step-uniform-msc": 24.994891295000034,
+     "annihil-2-gamma": 0.11267268399999993,
+     "brems-rel": 0.11135153499999992,
+     "brems-sb": 0.2837309929999997,
+     "conv-bethe-heitler": 0.16129872500000023,
+     "extend-from-primaries": 0.010356169999999977,
+     "extend-from-secondaries": 0.6552546360000007,
+     "geo-boundary": 3.990948015999998,
+     "initialize-tracks": 0.42120656200000206,
+     "ioni-moller-bhabha": 0.14255876199999987,
+     "photoel-livermore": 0.34923701700000076,
+     "physics-discrete-select": 0.24919464799999944,
+     "pre-step": 1.105349971,
+     "scat-klein-nishina": 0.17776165799999963,
+     "scat-rayleigh": 0.13314844200000003
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 857
+    },
+    "avg_steps_per_primary": 68342.20208791208,
+    "avg_time_per_primary": 0.004673536975384615,
+    "avg_time_per_step": 6.838434865433228e-08,
+    "emptying_step": 858,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 2437,
+    "num_steps": 621914039,
+    "pre_emptying_time": 0.04815539,
+    "queue_hwm": {
+     "count": 9975257,
+     "index": 457
+    },
+    "setup_time": 60.271317989,
+    "slot_occupancy": 0.24337441362608736,
+    "total_time": 42.529186476,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.3",
+   "occupancy": {
+    "along-step-neutral": 0.125,
+    "along-step-uniform-msc-apply-eloss-mean": 0.5,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.125,
+    "along-step-uniform-msc-propagate": 0.125,
+    "along-step-uniform-msc-scatter-msc-urban": 0.125,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.375,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries": 0.625,
+    "geo-boundary": 0.125,
+    "initialize-tracks": 0.125,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.375,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "scat-rayleigh": 0.375
+   },
+   "vecgeom": "1.2.5",
+   "version": "0.3.2"
   }
  },
  "cms2018-vecgeom-cpu": {
@@ -833,7 +1026,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "cms2018-vecgeom-gpu": {
@@ -851,249 +1044,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-general-linear": 2.059064786999996,
-     "along-step-neutral": 5.6765800900000105,
-     "annihil-2-gamma": 0.08187766199999996,
-     "brems-rel": 0.08349938099999996,
-     "brems-sb": 0.21884906199999993,
-     "conv-bethe-heitler": 0.12348929900000001,
-     "extend-from-primaries": 0.009766944999999997,
-     "extend-from-secondaries": 0.503369311,
-     "geo-boundary": 2.4063725850000024,
-     "initialize-tracks": 0.338683013999999,
-     "ioni-moller-bhabha": 0.10319067899999985,
-     "photoel-livermore": 0.2707674759999995,
-     "physics-discrete-select": 0.1995746990000003,
-     "pre-step": 0.7496575170000004,
-     "scat-klein-nishina": 0.14164707100000004,
-     "scat-rayleigh": 0.10103468600000003
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 703
     },
     "avg_steps_per_primary": 47904.663846153846,
-    "avg_time_per_primary": 0.0014716701624175824,
-    "avg_time_per_step": 3.072081180120293e-08,
+    "avg_time_per_primary": 0.001428713840989011,
+    "avg_time_per_step": 2.9824107430903495e-08,
     "emptying_step": 704,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1743,
     "num_steps": 435932441,
-    "pre_emptying_time": 0.022393785,
+    "pre_emptying_time": 0.022287208,
     "queue_hwm": {
      "count": 10559084,
      "index": 447
     },
-    "setup_time": 61.037882522,
+    "setup_time": 61.16882305,
     "slot_occupancy": 0.23851840084336368,
-    "total_time": 13.392198478,
+    "total_time": 13.001295953,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 2.0862109980000008,
-     "along-step-neutral": 5.734320412000001,
-     "annihil-2-gamma": 0.08514345199999993,
-     "brems-rel": 0.08647437500000008,
-     "brems-sb": 0.22209735000000017,
-     "conv-bethe-heitler": 0.1268115629999999,
-     "extend-from-primaries": 0.010154923999999997,
-     "extend-from-secondaries": 0.5174242650000002,
-     "geo-boundary": 2.4435991629999876,
-     "initialize-tracks": 0.34022715099999945,
-     "ioni-moller-bhabha": 0.10662038700000023,
-     "photoel-livermore": 0.27409148500000075,
-     "physics-discrete-select": 0.20316133299999933,
-     "pre-step": 0.7659560980000008,
-     "scat-klein-nishina": 0.14562017699999974,
-     "scat-rayleigh": 0.10431150500000003
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 704
     },
     "avg_steps_per_primary": 47942.79571428571,
-    "avg_time_per_primary": 0.0014891786297802198,
-    "avg_time_per_step": 3.106157260112562e-08,
+    "avg_time_per_primary": 0.0014450077306593406,
+    "avg_time_per_step": 3.0140247541483394e-08,
     "emptying_step": 705,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1833,
     "num_steps": 436279441,
-    "pre_emptying_time": 0.022156173,
+    "pre_emptying_time": 0.021907436,
     "queue_hwm": {
      "count": 10563547,
      "index": 447
     },
-    "setup_time": 60.727552005,
+    "setup_time": 60.388188392,
     "slot_occupancy": 0.2269877237631074,
-    "total_time": 13.551525531,
+    "total_time": 13.149570349,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 2.0572751799999978,
-     "along-step-neutral": 5.678019620000009,
-     "annihil-2-gamma": 0.08013852199999988,
-     "brems-rel": 0.08140543599999991,
-     "brems-sb": 0.21653275099999988,
-     "conv-bethe-heitler": 0.12151721399999993,
-     "extend-from-primaries": 0.009424709999999984,
-     "extend-from-secondaries": 0.4963179620000003,
-     "geo-boundary": 2.413281180999995,
-     "initialize-tracks": 0.3387901879999998,
-     "ioni-moller-bhabha": 0.10401840300000004,
-     "photoel-livermore": 0.2684124250000001,
-     "physics-discrete-select": 0.19849487099999977,
-     "pre-step": 0.7445293429999995,
-     "scat-klein-nishina": 0.1403878570000001,
-     "scat-rayleigh": 0.09942655400000001
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 704
     },
     "avg_steps_per_primary": 47954.87076923077,
-    "avg_time_per_primary": 0.001455718272967033,
-    "avg_time_per_step": 3.035600450207164e-08,
+    "avg_time_per_primary": 0.0014388599345054947,
+    "avg_time_per_step": 3.000445859670023e-08,
     "emptying_step": 705,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1706,
     "num_steps": 436389324,
-    "pre_emptying_time": 0.022124327,
+    "pre_emptying_time": 0.022136895,
     "queue_hwm": {
      "count": 10547259,
      "index": 447
     },
-    "setup_time": 60.693759853,
+    "setup_time": 60.073505013,
     "slot_occupancy": 0.2439468289875062,
-    "total_time": 13.247036284,
+    "total_time": 13.093625404,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 2.0648052370000016,
-     "along-step-neutral": 5.696233354000006,
-     "annihil-2-gamma": 0.08525285200000005,
-     "brems-rel": 0.08708753,
-     "brems-sb": 0.22209453600000004,
-     "conv-bethe-heitler": 0.12691774800000014,
-     "extend-from-primaries": 0.010195431000000005,
-     "extend-from-secondaries": 0.5166224229999993,
-     "geo-boundary": 2.426978365000007,
-     "initialize-tracks": 0.3417582699999987,
-     "ioni-moller-bhabha": 0.10727960799999982,
-     "photoel-livermore": 0.2746626810000004,
-     "physics-discrete-select": 0.2033564699999996,
-     "pre-step": 0.7653199380000021,
-     "scat-klein-nishina": 0.14467154199999976,
-     "scat-rayleigh": 0.10428910499999992
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 704
     },
     "avg_steps_per_primary": 47956.79956043956,
-    "avg_time_per_primary": 0.0014688802612087912,
-    "avg_time_per_step": 3.0629238703837474e-08,
+    "avg_time_per_primary": 0.0014392678931868133,
+    "avg_time_per_step": 3.001175863232733e-08,
     "emptying_step": 705,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1826,
     "num_steps": 436406876,
-    "pre_emptying_time": 0.022055847,
+    "pre_emptying_time": 0.021851542,
     "queue_hwm": {
      "count": 10556174,
      "index": 447
     },
-    "setup_time": 60.436889014,
+    "setup_time": 60.029370859,
     "slot_occupancy": 0.22792444093334452,
-    "total_time": 13.366810377,
+    "total_time": 13.097337828,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 2.082511021000004,
-     "along-step-neutral": 5.689176283999985,
-     "annihil-2-gamma": 0.08916305799999982,
-     "brems-rel": 0.09086474400000026,
-     "brems-sb": 0.22652110200000056,
-     "conv-bethe-heitler": 0.13097824799999977,
-     "extend-from-primaries": 0.010728760999999991,
-     "extend-from-secondaries": 0.5339299550000003,
-     "geo-boundary": 2.4198031989999897,
-     "initialize-tracks": 0.34060347999999846,
-     "ioni-moller-bhabha": 0.11215574599999986,
-     "photoel-livermore": 0.2784458980000001,
-     "physics-discrete-select": 0.20724832499999998,
-     "pre-step": 0.784697102999999,
-     "scat-klein-nishina": 0.14903298299999987,
-     "scat-rayleigh": 0.1082175969999999
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 703
     },
     "avg_steps_per_primary": 47847.92648351649,
-    "avg_time_per_primary": 0.0014774081441758242,
-    "avg_time_per_step": 3.0877161305721125e-08,
+    "avg_time_per_primary": 0.0014565299652747252,
+    "avg_time_per_step": 3.0440816819439336e-08,
     "emptying_step": 704,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1931,
     "num_steps": 435416131,
-    "pre_emptying_time": 0.022305717,
+    "pre_emptying_time": 0.022175472,
     "queue_hwm": {
      "count": 10560904,
      "index": 447
     },
-    "setup_time": 60.520850866,
+    "setup_time": 60.42343919,
     "slot_occupancy": 0.21504152308838903,
-    "total_time": 13.444414112,
+    "total_time": 13.254422684,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 2.0783381279999955,
-     "along-step-neutral": 5.691620973999995,
-     "annihil-2-gamma": 0.08522346300000003,
-     "brems-rel": 0.08697137299999977,
-     "brems-sb": 0.22232187899999986,
-     "conv-bethe-heitler": 0.12704155099999986,
-     "extend-from-primaries": 0.010132330999999979,
-     "extend-from-secondaries": 0.5168365739999995,
-     "geo-boundary": 2.4136925629999966,
-     "initialize-tracks": 0.3394973399999987,
-     "ioni-moller-bhabha": 0.10725243500000012,
-     "photoel-livermore": 0.27339275200000007,
-     "physics-discrete-select": 0.20311094799999987,
-     "pre-step": 0.7658119739999992,
-     "scat-klein-nishina": 0.1446160649999997,
-     "scat-rayleigh": 0.1045657349999999
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 703
     },
     "avg_steps_per_primary": 47876.218241758244,
-    "avg_time_per_primary": 0.0014830530337362638,
-    "avg_time_per_step": 3.097682081419552e-08,
+    "avg_time_per_primary": 0.001433464109010989,
+    "avg_time_per_step": 2.994104717654377e-08,
     "emptying_step": 704,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 1830,
     "num_steps": 435673586,
-    "pre_emptying_time": 0.022421351,
+    "pre_emptying_time": 0.022320389,
     "queue_hwm": {
      "count": 10548517,
      "index": 447
     },
-    "setup_time": 61.037904345,
+    "setup_time": 60.786986296,
     "slot_occupancy": 0.22704410344525114,
-    "total_time": 13.495782607,
+    "total_time": 13.044523392,
     "unconverged": 0
    }
   ],
@@ -1122,7 +1213,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-orange-cpu": {
@@ -1395,7 +1486,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-orange-gpu": {
@@ -1417,249 +1508,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-neutral": 0.19339946600000002,
-     "along-step-uniform-msc": 1.0882384499999989,
-     "annihil-2-gamma": 0.024366986000000004,
-     "brems-rel": 0.023068659999999967,
-     "brems-sb": 0.11222378900000005,
-     "conv-bethe-heitler": 0.045278811999999995,
-     "extend-from-primaries": 0.0022937269999999984,
-     "extend-from-secondaries": 0.27480632600000016,
-     "geo-boundary": 0.03209148200000001,
-     "initialize-tracks": 0.34316024900000003,
-     "ioni-moller-bhabha": 0.04360020099999996,
-     "photoel-livermore": 0.09589098500000001,
-     "physics-discrete-select": 0.12990151000000005,
-     "pre-step": 0.35767343099999993,
-     "scat-klein-nishina": 0.1487385799999999,
-     "scat-rayleigh": 0.06311866700000011
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35964.90120879121,
-    "avg_time_per_primary": 0.0004125720878021978,
-    "avg_time_per_step": 1.1471520119214154e-08,
+    "avg_time_per_primary": 0.0004049052271428571,
+    "avg_time_per_step": 1.1258343927937237e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 427,
     "num_steps": 327280601,
-    "pre_emptying_time": 0.008322459,
+    "pre_emptying_time": 0.008153115,
     "queue_hwm": {
      "count": 17491786,
      "index": 74
     },
-    "setup_time": 0.317310303,
+    "setup_time": 0.322543592,
     "slot_occupancy": 0.7309580876620648,
-    "total_time": 3.754405999,
+    "total_time": 3.684637567,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.19359820800000005,
-     "along-step-uniform-msc": 1.0727326929999996,
-     "annihil-2-gamma": 0.024316233,
-     "brems-rel": 0.022768308000000004,
-     "brems-sb": 0.112304049,
-     "conv-bethe-heitler": 0.04526451299999997,
-     "extend-from-primaries": 0.002333535,
-     "extend-from-secondaries": 0.27471200199999996,
-     "geo-boundary": 0.03165292099999999,
-     "initialize-tracks": 0.3440178090000001,
-     "ioni-moller-bhabha": 0.043878498,
-     "photoel-livermore": 0.09572685500000003,
-     "physics-discrete-select": 0.12932942300000003,
-     "pre-step": 0.3579332369999998,
-     "scat-klein-nishina": 0.14904890899999992,
-     "scat-rayleigh": 0.06342333300000007
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 303
     },
     "avg_steps_per_primary": 35987.694285714286,
-    "avg_time_per_primary": 0.00041090258164835165,
-    "avg_time_per_step": 1.1417863517070721e-08,
+    "avg_time_per_primary": 0.00040343713703296704,
+    "avg_time_per_step": 1.1210419145777724e-08,
     "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 425,
     "num_steps": 327488018,
-    "pre_emptying_time": 0.009358007,
+    "pre_emptying_time": 0.009189986,
     "queue_hwm": {
      "count": 17455092,
      "index": 74
     },
-    "setup_time": 0.322255862,
+    "setup_time": 0.318632782,
     "slot_occupancy": 0.7348633216409122,
-    "total_time": 3.739213493,
+    "total_time": 3.671277947,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.19363053099999994,
-     "along-step-uniform-msc": 1.0951745969999993,
-     "annihil-2-gamma": 0.024358737000000002,
-     "brems-rel": 0.022972668000000012,
-     "brems-sb": 0.1120711620000001,
-     "conv-bethe-heitler": 0.04498787099999999,
-     "extend-from-primaries": 0.002326122,
-     "extend-from-secondaries": 0.2755087809999999,
-     "geo-boundary": 0.030766057000000006,
-     "initialize-tracks": 0.3434826320000003,
-     "ioni-moller-bhabha": 0.04384884600000002,
-     "photoel-livermore": 0.09573026299999994,
-     "physics-discrete-select": 0.12910253099999983,
-     "pre-step": 0.35724872700000027,
-     "scat-klein-nishina": 0.14842373400000008,
-     "scat-rayleigh": 0.062753844
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35970.267692307694,
-    "avg_time_per_primary": 0.0003479493706593407,
-    "avg_time_per_step": 9.67324940797564e-09,
+    "avg_time_per_primary": 0.00034013971846153846,
+    "avg_time_per_step": 9.456135310727142e-09,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 424,
     "num_steps": 327329436,
-    "pre_emptying_time": 0.00855567,
+    "pre_emptying_time": 0.008384006,
     "queue_hwm": {
      "count": 17450581,
      "index": 74
     },
-    "setup_time": 0.225434073,
+    "setup_time": 0.223688513,
     "slot_occupancy": 0.7362398021626022,
-    "total_time": 3.166339273,
+    "total_time": 3.095271438,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1953356830000001,
-     "along-step-uniform-msc": 1.0612470719999987,
-     "annihil-2-gamma": 0.024701009000000013,
-     "brems-rel": 0.023334356,
-     "brems-sb": 0.11263951199999998,
-     "conv-bethe-heitler": 0.045562696000000034,
-     "extend-from-primaries": 0.002359445999999999,
-     "extend-from-secondaries": 0.27707914000000017,
-     "geo-boundary": 0.031896732,
-     "initialize-tracks": 0.3432240790000002,
-     "ioni-moller-bhabha": 0.04458719499999999,
-     "photoel-livermore": 0.09625600899999996,
-     "physics-discrete-select": 0.1295071679999999,
-     "pre-step": 0.3586186419999997,
-     "scat-klein-nishina": 0.1490863800000001,
-     "scat-rayleigh": 0.06307681899999994
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 303
     },
     "avg_steps_per_primary": 35979.2243956044,
-    "avg_time_per_primary": 0.00041045888714285716,
-    "avg_time_per_step": 1.1408219438799331e-08,
+    "avg_time_per_primary": 0.00040221063241758245,
+    "avg_time_per_step": 1.1178968951501933e-08,
     "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 432,
     "num_steps": 327410942,
-    "pre_emptying_time": 0.008919411,
+    "pre_emptying_time": 0.008732219,
     "queue_hwm": {
      "count": 17505301,
      "index": 74
     },
-    "setup_time": 0.319508289,
+    "setup_time": 0.319881145,
     "slot_occupancy": 0.7227856627217045,
-    "total_time": 3.735175873,
+    "total_time": 3.660116755,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1942047579999999,
-     "along-step-uniform-msc": 1.03853798,
-     "annihil-2-gamma": 0.024656548000000028,
-     "brems-rel": 0.023639533000000032,
-     "brems-sb": 0.1126592400000001,
-     "conv-bethe-heitler": 0.045581292999999974,
-     "extend-from-primaries": 0.0023660299999999994,
-     "extend-from-secondaries": 0.2765399580000004,
-     "geo-boundary": 0.03188482300000003,
-     "initialize-tracks": 0.3438025030000002,
-     "ioni-moller-bhabha": 0.045071265,
-     "photoel-livermore": 0.09614373200000007,
-     "physics-discrete-select": 0.12959929599999992,
-     "pre-step": 0.358944233,
-     "scat-klein-nishina": 0.14931525899999987,
-     "scat-rayleigh": 0.06312343799999999
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 303
     },
     "avg_steps_per_primary": 35989.04406593407,
-    "avg_time_per_primary": 0.0004079593342857143,
-    "avg_time_per_step": 1.1335653526620729e-08,
+    "avg_time_per_primary": 0.00040019590538461537,
+    "avg_time_per_step": 1.1119937074500582e-08,
     "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 433,
     "num_steps": 327500301,
-    "pre_emptying_time": 0.008256368,
+    "pre_emptying_time": 0.008132656,
     "queue_hwm": {
      "count": 17500079,
      "index": 74
     },
-    "setup_time": 0.317961156,
+    "setup_time": 0.318947104,
     "slot_occupancy": 0.7213132232771735,
-    "total_time": 3.712429942,
+    "total_time": 3.641782739,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.19502044499999996,
-     "along-step-uniform-msc": 1.0762751639999997,
-     "annihil-2-gamma": 0.024910872000000018,
-     "brems-rel": 0.023525623999999985,
-     "brems-sb": 0.11316525799999996,
-     "conv-bethe-heitler": 0.046117698999999915,
-     "extend-from-primaries": 0.002381977000000001,
-     "extend-from-secondaries": 0.2765112460000005,
-     "geo-boundary": 0.031187535999999964,
-     "initialize-tracks": 0.34356283100000024,
-     "ioni-moller-bhabha": 0.04589396199999993,
-     "photoel-livermore": 0.09692223400000015,
-     "physics-discrete-select": 0.12975382100000005,
-     "pre-step": 0.3606077780000003,
-     "scat-klein-nishina": 0.14964877799999998,
-     "scat-rayleigh": 0.062613804
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35974.327032967034,
-    "avg_time_per_primary": 0.0004125855685714286,
-    "avg_time_per_step": 1.1468889138449576e-08,
+    "avg_time_per_primary": 0.0004051171324175824,
+    "avg_time_per_step": 1.1261284527889328e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 442,
     "num_steps": 327366376,
-    "pre_emptying_time": 0.008980177,
+    "pre_emptying_time": 0.008773644,
     "queue_hwm": {
      "count": 17521631,
      "index": 75
     },
-    "setup_time": 0.333663505,
+    "setup_time": 0.343246512,
     "slot_occupancy": 0.7063368887922883,
-    "total_time": 3.754528674,
+    "total_time": 3.686565905,
     "unconverged": 0
    }
   ],
@@ -1690,7 +1679,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-vecgeom-cpu": {
@@ -1963,7 +1952,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field+msc-vecgeom-gpu": {
@@ -1985,249 +1974,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-neutral": 0.18633925999999998,
-     "along-step-uniform-msc": 1.172562091,
-     "annihil-2-gamma": 0.02515418699999998,
-     "brems-rel": 0.023221470999999994,
-     "brems-sb": 0.10687063600000003,
-     "conv-bethe-heitler": 0.04552223799999995,
-     "extend-from-primaries": 0.0023521109999999987,
-     "extend-from-secondaries": 0.26367321699999985,
-     "geo-boundary": 0.06673443,
-     "initialize-tracks": 0.1633835149999998,
-     "ioni-moller-bhabha": 0.04213325600000004,
-     "photoel-livermore": 0.09514060100000009,
-     "physics-discrete-select": 0.13075639100000014,
-     "pre-step": 0.36423360899999996,
-     "scat-klein-nishina": 0.1283972530000001,
-     "scat-rayleigh": 0.06225311000000007
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35968.284835164835,
-    "avg_time_per_primary": 0.00039390813296703294,
-    "avg_time_per_step": 1.0951540635652547e-08,
+    "avg_time_per_primary": 0.00041064918615384615,
+    "avg_time_per_step": 1.1416979932064203e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 446,
     "num_steps": 327311392,
-    "pre_emptying_time": 0.008428551,
+    "pre_emptying_time": 0.008284821,
     "queue_hwm": {
      "count": 17434418,
      "index": 74
     },
-    "setup_time": 0.52951024,
+    "setup_time": 0.454726248,
     "slot_occupancy": 0.699884457438516,
-    "total_time": 3.58456401,
+    "total_time": 3.736907594,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1866466730000002,
-     "along-step-uniform-msc": 1.1876584989999985,
-     "annihil-2-gamma": 0.025583749000000003,
-     "brems-rel": 0.023861664999999983,
-     "brems-sb": 0.10733404999999997,
-     "conv-bethe-heitler": 0.04593118600000003,
-     "extend-from-primaries": 0.0024080109999999985,
-     "extend-from-secondaries": 0.26626613800000026,
-     "geo-boundary": 0.06737433100000002,
-     "initialize-tracks": 0.1639119590000001,
-     "ioni-moller-bhabha": 0.043593440000000046,
-     "photoel-livermore": 0.09532299299999991,
-     "physics-discrete-select": 0.13126501600000004,
-     "pre-step": 0.3658345979999997,
-     "scat-klein-nishina": 0.128921697,
-     "scat-rayleigh": 0.06060089000000001
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 303
     },
     "avg_steps_per_primary": 35967.85230769231,
-    "avg_time_per_primary": 0.00036097046736263737,
-    "avg_time_per_step": 1.0035919417002221e-08,
+    "avg_time_per_primary": 0.00041378225703296703,
+    "avg_time_per_step": 1.1504224758631836e-08,
     "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 454,
     "num_steps": 327307456,
-    "pre_emptying_time": 0.008568607,
+    "pre_emptying_time": 0.008406557,
     "queue_hwm": {
      "count": 17441351,
      "index": 74
     },
-    "setup_time": 0.273176241,
+    "setup_time": 0.459489107,
     "slot_occupancy": 0.6875434236904598,
-    "total_time": 3.284831253,
+    "total_time": 3.765418539,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.18543231500000007,
-     "along-step-uniform-msc": 1.1952201070000008,
-     "annihil-2-gamma": 0.024910916999999994,
-     "brems-rel": 0.023269265000000018,
-     "brems-sb": 0.10651612499999998,
-     "conv-bethe-heitler": 0.04516604699999998,
-     "extend-from-primaries": 0.002325200000000002,
-     "extend-from-secondaries": 0.2633164009999996,
-     "geo-boundary": 0.06635578199999999,
-     "initialize-tracks": 0.1636489859999999,
-     "ioni-moller-bhabha": 0.04357079799999999,
-     "photoel-livermore": 0.094473276,
-     "physics-discrete-select": 0.13063989400000017,
-     "pre-step": 0.3628114909999999,
-     "scat-klein-nishina": 0.1281325209999999,
-     "scat-rayleigh": 0.060793757000000004
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35968.98032967033,
-    "avg_time_per_primary": 0.0003958919175824176,
-    "avg_time_per_step": 1.1006481528080786e-08,
+    "avg_time_per_primary": 0.000412434588021978,
+    "avg_time_per_step": 1.1466396440539801e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 438,
     "num_steps": 327317721,
-    "pre_emptying_time": 0.008073807,
+    "pre_emptying_time": 0.007929908,
     "queue_hwm": {
      "count": 17488550,
      "index": 75
     },
-    "setup_time": 0.529471753,
+    "setup_time": 0.459292307,
     "slot_occupancy": 0.7126815155760883,
-    "total_time": 3.60261645,
+    "total_time": 3.753154751,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.18456090099999992,
-     "along-step-uniform-msc": 1.189799857000001,
-     "annihil-2-gamma": 0.024370511999999987,
-     "brems-rel": 0.02273222299999999,
-     "brems-sb": 0.10591193499999998,
-     "conv-bethe-heitler": 0.04470539999999998,
-     "extend-from-primaries": 0.0022546540000000035,
-     "extend-from-secondaries": 0.26093080199999996,
-     "geo-boundary": 0.06517885199999995,
-     "initialize-tracks": 0.16318046699999994,
-     "ioni-moller-bhabha": 0.042437346999999986,
-     "photoel-livermore": 0.09415310199999997,
-     "physics-discrete-select": 0.13014043499999997,
-     "pre-step": 0.3598598939999997,
-     "scat-klein-nishina": 0.12717704399999988,
-     "scat-rayleigh": 0.059048013999999975
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35976.26087912088,
-    "avg_time_per_primary": 0.0003936259002197802,
-    "avg_time_per_step": 1.0941267674880139e-08,
+    "avg_time_per_primary": 0.00035386432626373625,
+    "avg_time_per_step": 9.83605070723468e-09,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 422,
     "num_steps": 327383974,
-    "pre_emptying_time": 0.008633388,
+    "pre_emptying_time": 0.008491842,
     "queue_hwm": {
      "count": 17457226,
      "index": 74
     },
-    "setup_time": 0.530851338,
+    "setup_time": 0.300902205,
     "slot_occupancy": 0.7398523403005013,
-    "total_time": 3.581995692,
+    "total_time": 3.220165369,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.18507478700000032,
-     "along-step-uniform-msc": 1.1684538779999996,
-     "annihil-2-gamma": 0.024664916999999998,
-     "brems-rel": 0.022936296999999987,
-     "brems-sb": 0.10631966399999991,
-     "conv-bethe-heitler": 0.04504340799999997,
-     "extend-from-primaries": 0.0023107270000000007,
-     "extend-from-secondaries": 0.2621273260000002,
-     "geo-boundary": 0.06600230800000002,
-     "initialize-tracks": 0.16334536099999997,
-     "ioni-moller-bhabha": 0.041937481000000026,
-     "photoel-livermore": 0.09466175200000003,
-     "physics-discrete-select": 0.13040965,
-     "pre-step": 0.36212786200000036,
-     "scat-klein-nishina": 0.127672193,
-     "scat-rayleigh": 0.06041593299999993
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 303
     },
     "avg_steps_per_primary": 35981.64659340659,
-    "avg_time_per_primary": 0.0003921864632967033,
-    "avg_time_per_step": 1.0899625237511198e-08,
+    "avg_time_per_primary": 0.00041000182054945055,
+    "avg_time_per_step": 1.1394748694590892e-08,
     "emptying_step": 304,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 435,
     "num_steps": 327432984,
-    "pre_emptying_time": 0.008311978,
+    "pre_emptying_time": 0.008139349,
     "queue_hwm": {
      "count": 17471384,
      "index": 74
     },
-    "setup_time": 0.571618104,
+    "setup_time": 0.45340863,
     "slot_occupancy": 0.7178492578966864,
-    "total_time": 3.568896816,
+    "total_time": 3.731016567,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.185535802,
-     "along-step-uniform-msc": 1.1782115940000009,
-     "annihil-2-gamma": 0.02519584399999999,
-     "brems-rel": 0.023341823000000015,
-     "brems-sb": 0.10744454599999993,
-     "conv-bethe-heitler": 0.04554242200000008,
-     "extend-from-primaries": 0.0023810949999999997,
-     "extend-from-secondaries": 0.26478836799999994,
-     "geo-boundary": 0.06669173299999995,
-     "initialize-tracks": 0.16330735800000012,
-     "ioni-moller-bhabha": 0.04244995900000006,
-     "photoel-livermore": 0.09551450000000003,
-     "physics-discrete-select": 0.130784667,
-     "pre-step": 0.364430655,
-     "scat-klein-nishina": 0.12856391400000003,
-     "scat-rayleigh": 0.05977567799999998
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35973.02153846154,
-    "avg_time_per_primary": 0.000406998454945055,
-    "avg_time_per_step": 1.1313991361829349e-08,
+    "avg_time_per_primary": 0.00041154320593406597,
+    "avg_time_per_step": 1.144032912259131e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 446,
     "num_steps": 327354496,
-    "pre_emptying_time": 0.008516056,
+    "pre_emptying_time": 0.008338362,
     "queue_hwm": {
      "count": 17521621,
      "index": 75
     },
-    "setup_time": 0.560126903,
+    "setup_time": 0.453362127,
     "slot_occupancy": 0.6999766259984586,
-    "total_time": 3.70368594,
+    "total_time": 3.745043174,
     "unconverged": 0
    }
   ],
@@ -2258,7 +2145,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field-orange-cpu": {
@@ -2531,7 +2418,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+field-orange-gpu": {
@@ -2553,249 +2440,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-neutral": 0.19202095900000002,
-     "along-step-uniform-msc": 0.605797992,
-     "annihil-2-gamma": 0.02426878700000001,
-     "brems-rel": 0.022854046000000006,
-     "brems-sb": 0.11184991599999991,
-     "conv-bethe-heitler": 0.045125693999999994,
-     "extend-from-primaries": 0.002302882000000002,
-     "extend-from-secondaries": 0.27277527000000007,
-     "geo-boundary": 0.029836083999999985,
-     "initialize-tracks": 0.340883427,
-     "ioni-moller-bhabha": 0.04462419399999997,
-     "photoel-livermore": 0.09532517600000004,
-     "physics-discrete-select": 0.12862633599999979,
-     "pre-step": 0.3558401249999999,
-     "scat-klein-nishina": 0.1477563020000001,
-     "scat-rayleigh": 0.062560943
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 300
     },
     "avg_steps_per_primary": 35710.564065934064,
-    "avg_time_per_primary": 0.0003581751053846154,
-    "avg_time_per_step": 1.0029948133087456e-08,
+    "avg_time_per_primary": 0.0003608861434065934,
+    "avg_time_per_step": 1.0105865108718884e-08,
     "emptying_step": 301,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 426,
     "num_steps": 324966133,
-    "pre_emptying_time": 0.006943027,
+    "pre_emptying_time": 0.006815344,
     "queue_hwm": {
      "count": 17440424,
      "index": 74
     },
-    "setup_time": 0.318151361,
+    "setup_time": 0.227957664,
     "slot_occupancy": 0.7274926167698533,
-    "total_time": 3.259393459,
+    "total_time": 3.284063905,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1927272690000001,
-     "along-step-uniform-msc": 0.6421449739999997,
-     "annihil-2-gamma": 0.024344700999999996,
-     "brems-rel": 0.022946273999999985,
-     "brems-sb": 0.111817553,
-     "conv-bethe-heitler": 0.04541695900000004,
-     "extend-from-primaries": 0.002269831999999999,
-     "extend-from-secondaries": 0.2744933189999999,
-     "geo-boundary": 0.031106614999999994,
-     "initialize-tracks": 0.34151845500000017,
-     "ioni-moller-bhabha": 0.044034794000000044,
-     "photoel-livermore": 0.09551518600000007,
-     "physics-discrete-select": 0.1284997209999999,
-     "pre-step": 0.3545175189999999,
-     "scat-klein-nishina": 0.14842248499999997,
-     "scat-rayleigh": 0.06229808200000006
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 301
     },
     "avg_steps_per_primary": 35743.518461538464,
-    "avg_time_per_primary": 0.00036257545065934065,
-    "avg_time_per_step": 1.0143809738526083e-08,
+    "avg_time_per_primary": 0.0003640983295604396,
+    "avg_time_per_step": 1.0186415474241149e-08,
     "emptying_step": 302,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 418,
     "num_steps": 325266018,
-    "pre_emptying_time": 0.007726117,
+    "pre_emptying_time": 0.007511851,
     "queue_hwm": {
      "count": 17482206,
      "index": 74
     },
-    "setup_time": 0.325385949,
+    "setup_time": 0.226335368,
     "slot_occupancy": 0.7421001133165861,
-    "total_time": 3.299436601,
+    "total_time": 3.313294799,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1923005550000003,
-     "along-step-uniform-msc": 0.6572038189999992,
-     "annihil-2-gamma": 0.024481457000000022,
-     "brems-rel": 0.023064161999999985,
-     "brems-sb": 0.11225262000000005,
-     "conv-bethe-heitler": 0.04545206800000003,
-     "extend-from-primaries": 0.0023084150000000003,
-     "extend-from-secondaries": 0.2742727039999998,
-     "geo-boundary": 0.030813513000000018,
-     "initialize-tracks": 0.3407262300000007,
-     "ioni-moller-bhabha": 0.04414780700000005,
-     "photoel-livermore": 0.09546279199999996,
-     "physics-discrete-select": 0.12875050799999993,
-     "pre-step": 0.35651964199999986,
-     "scat-klein-nishina": 0.14850904199999976,
-     "scat-rayleigh": 0.06337246799999999
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 300
     },
     "avg_steps_per_primary": 35728.235384615386,
-    "avg_time_per_primary": 0.0003644982463736264,
-    "avg_time_per_step": 1.0201966104673048e-08,
+    "avg_time_per_primary": 0.00031059823,
+    "avg_time_per_step": 8.693354895824044e-09,
     "emptying_step": 301,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 429,
     "num_steps": 325126942,
-    "pre_emptying_time": 0.006909698,
+    "pre_emptying_time": 0.006759036,
     "queue_hwm": {
      "count": 17463584,
      "index": 74
     },
-    "setup_time": 0.313746464,
+    "setup_time": 0.216888691,
     "slot_occupancy": 0.7227627369629476,
-    "total_time": 3.316934042,
+    "total_time": 2.826443893,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.1925020279999999,
-     "along-step-uniform-msc": 0.6248570700000003,
-     "annihil-2-gamma": 0.024548488999999982,
-     "brems-rel": 0.023335212999999997,
-     "brems-sb": 0.112314221,
-     "conv-bethe-heitler": 0.045531167000000046,
-     "extend-from-primaries": 0.002357002000000002,
-     "extend-from-secondaries": 0.275265798,
-     "geo-boundary": 0.03042391799999998,
-     "initialize-tracks": 0.34112239000000016,
-     "ioni-moller-bhabha": 0.044204726,
-     "photoel-livermore": 0.09592932800000001,
-     "physics-discrete-select": 0.12897002099999982,
-     "pre-step": 0.3567165320000002,
-     "scat-klein-nishina": 0.148130596,
-     "scat-rayleigh": 0.063635389
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 301
     },
     "avg_steps_per_primary": 35730.183186813185,
-    "avg_time_per_primary": 0.0002959734202197802,
-    "avg_time_per_step": 8.283568507676e-09,
+    "avg_time_per_primary": 0.00036302824274725274,
+    "avg_time_per_step": 1.0160268164570573e-08,
     "emptying_step": 302,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 430,
     "num_steps": 325144667,
-    "pre_emptying_time": 0.007427245,
+    "pre_emptying_time": 0.007267019,
     "queue_hwm": {
      "count": 17503508,
      "index": 74
     },
-    "setup_time": 0.22102448,
+    "setup_time": 0.220195792,
     "slot_occupancy": 0.7211212047310762,
-    "total_time": 2.693358124,
+    "total_time": 3.303557009,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.19109658800000012,
-     "along-step-uniform-msc": 0.6215174389999998,
-     "annihil-2-gamma": 0.024001529999999983,
-     "brems-rel": 0.02265201299999999,
-     "brems-sb": 0.11161717000000003,
-     "conv-bethe-heitler": 0.04498513300000001,
-     "extend-from-primaries": 0.002266625000000001,
-     "extend-from-secondaries": 0.2722748800000002,
-     "geo-boundary": 0.030340629000000004,
-     "initialize-tracks": 0.3412496609999998,
-     "ioni-moller-bhabha": 0.045218641000000025,
-     "photoel-livermore": 0.09515491599999999,
-     "physics-discrete-select": 0.1283199990000001,
-     "pre-step": 0.3542654270000004,
-     "scat-klein-nishina": 0.14756607099999985,
-     "scat-rayleigh": 0.062877562
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 301
     },
     "avg_steps_per_primary": 35746.011208791206,
-    "avg_time_per_primary": 0.0003595740625274725,
-    "avg_time_per_step": 1.0059138079133163e-08,
+    "avg_time_per_primary": 0.0003614788614285714,
+    "avg_time_per_step": 1.0112425112754147e-08,
     "emptying_step": 302,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 414,
     "num_steps": 325288702,
-    "pre_emptying_time": 0.009716157,
+    "pre_emptying_time": 0.009539161,
     "queue_hwm": {
      "count": 17475601,
      "index": 74
     },
-    "setup_time": 0.325798393,
+    "setup_time": 0.230101,
     "slot_occupancy": 0.7493224167017545,
-    "total_time": 3.272123969,
+    "total_time": 3.289457639,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-neutral": 0.192425335,
-     "along-step-uniform-msc": 0.6303403500000002,
-     "annihil-2-gamma": 0.024152699,
-     "brems-rel": 0.022676867000000017,
-     "brems-sb": 0.11156677399999987,
-     "conv-bethe-heitler": 0.04497092699999999,
-     "extend-from-primaries": 0.002303843,
-     "extend-from-secondaries": 0.2727863009999997,
-     "geo-boundary": 0.030855928000000005,
-     "initialize-tracks": 0.3411359169999998,
-     "ioni-moller-bhabha": 0.04473446299999999,
-     "photoel-livermore": 0.09532222100000008,
-     "physics-discrete-select": 0.12836470199999994,
-     "pre-step": 0.355021074,
-     "scat-klein-nishina": 0.14833733499999993,
-     "scat-rayleigh": 0.06434958000000003
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 301
     },
     "avg_steps_per_primary": 35739.71549450549,
-    "avg_time_per_primary": 0.0003611020686813187,
-    "avg_time_per_step": 1.0103663772500744e-08,
+    "avg_time_per_primary": 0.0002950541898901099,
+    "avg_time_per_step": 8.255639022517415e-09,
     "emptying_step": 302,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 421,
     "num_steps": 325231411,
-    "pre_emptying_time": 0.007817262,
+    "pre_emptying_time": 0.007636096,
     "queue_hwm": {
      "count": 17561312,
      "index": 74
     },
-    "setup_time": 0.340679803,
+    "setup_time": 0.223263524,
     "slot_occupancy": 0.7367335951526488,
-    "total_time": 3.286028825,
+    "total_time": 2.684993128,
     "unconverged": 0
    }
   ],
@@ -2824,7 +2609,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+msc-orange-cpu": {
@@ -3093,7 +2878,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "simple-cms+msc-orange-gpu": {
@@ -3111,249 +2896,147 @@
   ],
   "result": [
    {
-    "action_times": {
-     "along-step-general-linear": 0.714923749,
-     "along-step-neutral": 0.194116314,
-     "annihil-2-gamma": 0.024473964999999997,
-     "brems-rel": 0.023370746000000005,
-     "brems-sb": 0.11267095499999998,
-     "conv-bethe-heitler": 0.04565980099999996,
-     "extend-from-primaries": 0.0023651270000000007,
-     "extend-from-secondaries": 0.2756644329999999,
-     "geo-boundary": 0.031040295000000002,
-     "initialize-tracks": 0.3423536990000001,
-     "ioni-moller-bhabha": 0.04474577200000004,
-     "photoel-livermore": 0.09639233299999996,
-     "physics-discrete-select": 0.12903713000000003,
-     "pre-step": 0.3579065339999995,
-     "scat-klein-nishina": 0.148571804,
-     "scat-rayleigh": 0.06441938800000002
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35897.99439560439,
-    "avg_time_per_primary": 0.0003892061434065934,
-    "avg_time_per_step": 1.0842002456110767e-08,
+    "avg_time_per_primary": 0.0003804812994505495,
+    "avg_time_per_step": 1.0598957012961658e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 429,
     "num_steps": 326671749,
-    "pre_emptying_time": 0.007749051,
+    "pre_emptying_time": 0.007614686,
     "queue_hwm": {
      "count": 17462078,
      "index": 74
     },
-    "setup_time": 0.23356835,
+    "setup_time": 0.530697567,
     "slot_occupancy": 0.7261968692699512,
-    "total_time": 3.541775905,
+    "total_time": 3.462379825,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 0.7169713619999996,
-     "along-step-neutral": 0.19376612999999998,
-     "annihil-2-gamma": 0.024739981,
-     "brems-rel": 0.023424048000000013,
-     "brems-sb": 0.11250409499999998,
-     "conv-bethe-heitler": 0.04557978999999998,
-     "extend-from-primaries": 0.002350642000000001,
-     "extend-from-secondaries": 0.27692030799999995,
-     "geo-boundary": 0.03733934300000005,
-     "initialize-tracks": 0.342888471,
-     "ioni-moller-bhabha": 0.04407316900000004,
-     "photoel-livermore": 0.09645584099999992,
-     "physics-discrete-select": 0.12920968999999982,
-     "pre-step": 0.35831414899999997,
-     "scat-klein-nishina": 0.1483748579999999,
-     "scat-rayleigh": 0.06265387000000003
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35909.640989010986,
-    "avg_time_per_primary": 0.0003148708551648352,
-    "avg_time_per_step": 8.768421139637443e-09,
+    "avg_time_per_primary": 0.00038077525582417583,
+    "avg_time_per_step": 1.0603705448926657e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 434,
     "num_steps": 326777733,
-    "pre_emptying_time": 0.007780832,
+    "pre_emptying_time": 0.0076201,
     "queue_hwm": {
      "count": 17436094,
      "index": 74
     },
-    "setup_time": 0.335048253,
+    "setup_time": 0.56905138,
     "slot_occupancy": 0.7180634357962191,
-    "total_time": 2.865324782,
+    "total_time": 3.465054828,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 0.7132996429999999,
-     "along-step-neutral": 0.19357450100000023,
-     "annihil-2-gamma": 0.024114757999999997,
-     "brems-rel": 0.022481900999999995,
-     "brems-sb": 0.11187141199999992,
-     "conv-bethe-heitler": 0.04487457699999999,
-     "extend-from-primaries": 0.0022833979999999994,
-     "extend-from-secondaries": 0.27322761100000026,
-     "geo-boundary": 0.03170195699999999,
-     "initialize-tracks": 0.34290735299999986,
-     "ioni-moller-bhabha": 0.04300822700000003,
-     "photoel-livermore": 0.09565293000000002,
-     "physics-discrete-select": 0.1287079769999999,
-     "pre-step": 0.3559800660000001,
-     "scat-klein-nishina": 0.14819049000000004,
-     "scat-rayleigh": 0.062548317
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35898.26901098901,
-    "avg_time_per_primary": 0.0003320190914285714,
-    "avg_time_per_step": 9.248888611507571e-09,
+    "avg_time_per_primary": 0.00037916889483516483,
+    "avg_time_per_step": 1.0562316938432197e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 419,
     "num_steps": 326674248,
-    "pre_emptying_time": 0.007810038,
+    "pre_emptying_time": 0.00761727,
     "queue_hwm": {
      "count": 17440396,
      "index": 74
     },
-    "setup_time": 0.239758701,
+    "setup_time": 0.530124276,
     "slot_occupancy": 0.7435342246991069,
-    "total_time": 3.021373732,
+    "total_time": 3.450436943,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 0.7160591449999998,
-     "along-step-neutral": 0.1950552500000001,
-     "annihil-2-gamma": 0.02476600800000001,
-     "brems-rel": 0.023515611000000016,
-     "brems-sb": 0.11264907200000013,
-     "conv-bethe-heitler": 0.04559881800000003,
-     "extend-from-primaries": 0.002379698,
-     "extend-from-secondaries": 0.2763430039999999,
-     "geo-boundary": 0.03259458300000002,
-     "initialize-tracks": 0.34314311599999964,
-     "ioni-moller-bhabha": 0.044479652000000036,
-     "photoel-livermore": 0.09610588499999999,
-     "physics-discrete-select": 0.12945979799999993,
-     "pre-step": 0.35904737499999984,
-     "scat-klein-nishina": 0.14895333900000005,
-     "scat-rayleigh": 0.063418588
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35900.58483516484,
-    "avg_time_per_primary": 0.0003896443207692308,
-    "avg_time_per_step": 1.085342544023327e-08,
+    "avg_time_per_primary": 0.00038057390076923073,
+    "avg_time_per_step": 1.0600771617415446e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 434,
     "num_steps": 326695322,
-    "pre_emptying_time": 0.007777935,
+    "pre_emptying_time": 0.007601024,
     "queue_hwm": {
      "count": 17481722,
      "index": 74
     },
-    "setup_time": 0.240160859,
+    "setup_time": 0.529582771,
     "slot_occupancy": 0.7178823453490086,
-    "total_time": 3.545763319,
+    "total_time": 3.463222497,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 0.7143765159999999,
-     "along-step-neutral": 0.19366856399999988,
-     "annihil-2-gamma": 0.024338868999999985,
-     "brems-rel": 0.023155274000000014,
-     "brems-sb": 0.11233474299999995,
-     "conv-bethe-heitler": 0.04529503999999998,
-     "extend-from-primaries": 0.0023352159999999985,
-     "extend-from-secondaries": 0.27400060400000037,
-     "geo-boundary": 0.031192798,
-     "initialize-tracks": 0.342601787,
-     "ioni-moller-bhabha": 0.04472293999999997,
-     "photoel-livermore": 0.09610566599999999,
-     "physics-discrete-select": 0.1291935369999999,
-     "pre-step": 0.35754882299999974,
-     "scat-klein-nishina": 0.14841527099999996,
-     "scat-rayleigh": 0.06266800600000001
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35922.98021978022,
-    "avg_time_per_primary": 0.00038860950318681317,
-    "avg_time_per_step": 1.0817852550352538e-08,
+    "avg_time_per_primary": 0.0003798755889010989,
+    "avg_time_per_step": 1.0574723660926344e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 424,
     "num_steps": 326899120,
-    "pre_emptying_time": 0.00780722,
+    "pre_emptying_time": 0.007606825,
     "queue_hwm": {
      "count": 17511659,
      "index": 74
     },
-    "setup_time": 0.23776948,
+    "setup_time": 0.52548158,
     "slot_occupancy": 0.7352719216976525,
-    "total_time": 3.536346479,
+    "total_time": 3.456867859,
     "unconverged": 0
    },
    {
-    "action_times": {
-     "along-step-general-linear": 0.7157837949999986,
-     "along-step-neutral": 0.19387786200000018,
-     "annihil-2-gamma": 0.02427524099999999,
-     "brems-rel": 0.022988331,
-     "brems-sb": 0.11204716899999995,
-     "conv-bethe-heitler": 0.04508126899999994,
-     "extend-from-primaries": 0.0022899470000000014,
-     "extend-from-secondaries": 0.27428570899999993,
-     "geo-boundary": 0.03125756799999999,
-     "initialize-tracks": 0.3430042769999999,
-     "ioni-moller-bhabha": 0.04323583399999995,
-     "photoel-livermore": 0.09588189,
-     "physics-discrete-select": 0.1288494879999999,
-     "pre-step": 0.35656683599999983,
-     "scat-klein-nishina": 0.14836184300000024,
-     "scat-rayleigh": 0.06306468700000001
-    },
+    "action_times": {},
     "active_hwm": {
      "count": 1048576,
      "index": 302
     },
     "avg_steps_per_primary": 35904.27054945055,
-    "avg_time_per_primary": 0.00038847615791208793,
-    "avg_time_per_step": 1.0819775808480611e-08,
+    "avg_time_per_primary": 0.0003793778036263736,
+    "avg_time_per_step": 1.056636990031202e-08,
     "emptying_step": 303,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 422,
     "num_steps": 326728862,
-    "pre_emptying_time": 0.007822913,
+    "pre_emptying_time": 0.007605622,
     "queue_hwm": {
      "count": 17520561,
      "index": 74
     },
-    "setup_time": 0.237038854,
+    "setup_time": 0.529897583,
     "slot_occupancy": 0.7383718580996256,
-    "total_time": 3.535133037,
+    "total_time": 3.452338013,
     "unconverged": 0
    }
   ],
@@ -3384,7 +3067,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-orange-cpu": {
@@ -3657,7 +3340,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-orange-gpu": {
@@ -3685,21 +3368,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31268.92087912088,
-    "avg_time_per_primary": 0.00033666788835164834,
-    "avg_time_per_step": 1.076685344061396e-08,
+    "avg_time_per_primary": 0.00033671134285714286,
+    "avg_time_per_step": 1.0768243143369054e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 362,
     "num_steps": 284547180,
-    "pre_emptying_time": 0.007955326,
+    "pre_emptying_time": 0.007990877,
     "queue_hwm": {
      "count": 14918622,
      "index": 62
     },
-    "setup_time": 0.26797447,
+    "setup_time": 0.2888322,
     "slot_occupancy": 0.7496280037895751,
-    "total_time": 3.063677784,
+    "total_time": 3.06407322,
     "unconverged": 0
    },
    {
@@ -3709,21 +3392,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31259.39912087912,
-    "avg_time_per_primary": 0.0003385961639560439,
-    "avg_time_per_step": 1.0831819340055231e-08,
+    "avg_time_per_primary": 0.0003391051998901099,
+    "avg_time_per_step": 1.0848103592100432e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 376,
     "num_steps": 284460532,
-    "pre_emptying_time": 0.007967373,
+    "pre_emptying_time": 0.007982622,
     "queue_hwm": {
      "count": 14911209,
      "index": 61
     },
-    "setup_time": 0.262416987,
+    "setup_time": 0.264925749,
     "slot_occupancy": 0.7214965515948356,
-    "total_time": 3.081225092,
+    "total_time": 3.085857319,
     "unconverged": 0
    },
    {
@@ -3733,21 +3416,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31269.88296703297,
-    "avg_time_per_primary": 0.00027984676241758245,
-    "avg_time_per_step": 8.949402295896587e-09,
+    "avg_time_per_primary": 0.0003380253058241758,
+    "avg_time_per_step": 1.0809931913737804e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 370,
     "num_steps": 284555935,
-    "pre_emptying_time": 0.008001135,
+    "pre_emptying_time": 0.007981496,
     "queue_hwm": {
      "count": 14944287,
      "index": 62
     },
-    "setup_time": 0.274501742,
+    "setup_time": 0.267838314,
     "slot_occupancy": 0.73344239673099,
-    "total_time": 2.546605538,
+    "total_time": 3.076030283,
     "unconverged": 0
    },
    {
@@ -3757,21 +3440,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31266.976373626374,
-    "avg_time_per_primary": 0.0002719527367032967,
-    "avg_time_per_step": 8.697762567559563e-09,
+    "avg_time_per_primary": 0.0003365576426373626,
+    "avg_time_per_step": 1.0763997088034654e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 360,
     "num_steps": 284529485,
-    "pre_emptying_time": 0.007978878,
+    "pre_emptying_time": 0.008020034,
     "queue_hwm": {
      "count": 14840773,
      "index": 61
     },
-    "setup_time": 0.177260081,
+    "setup_time": 0.278932017,
     "slot_occupancy": 0.7537457280688815,
-    "total_time": 2.474769904,
+    "total_time": 3.062674548,
     "unconverged": 0
    },
    {
@@ -3781,21 +3464,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31266.46230769231,
-    "avg_time_per_primary": 0.0003371451120879121,
-    "avg_time_per_step": 1.078296318816236e-08,
+    "avg_time_per_primary": 0.0002815292457142857,
+    "avg_time_per_step": 9.004192509653472e-09,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284524807,
-    "pre_emptying_time": 0.008008895,
+    "pre_emptying_time": 0.007964298,
     "queue_hwm": {
      "count": 14942231,
      "index": 62
     },
-    "setup_time": 0.267480536,
+    "setup_time": 0.266093949,
     "slot_occupancy": 0.7454505516932561,
-    "total_time": 3.06802052,
+    "total_time": 2.561916136,
     "unconverged": 0
    },
    {
@@ -3805,21 +3488,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31261.262417582417,
-    "avg_time_per_primary": 0.00033712599,
-    "avg_time_per_step": 1.0784145102546744e-08,
+    "avg_time_per_primary": 0.0002723672598901099,
+    "avg_time_per_step": 8.712612313983876e-09,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 367,
     "num_steps": 284477488,
-    "pre_emptying_time": 0.007946366,
+    "pre_emptying_time": 0.007977486,
     "queue_hwm": {
      "count": 14901826,
      "index": 62
     },
-    "setup_time": 0.275324923,
+    "setup_time": 0.176432746,
     "slot_occupancy": 0.7392339888320631,
-    "total_time": 3.067846509,
+    "total_time": 2.478542065,
     "unconverged": 0
    }
   ],
@@ -3850,7 +3533,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-vecgeom-cpu": {
@@ -4123,7 +3806,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -4151,21 +3834,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31268.92087912088,
-    "avg_time_per_primary": 0.00027122744428571425,
-    "avg_time_per_step": 8.674026370600475e-09,
+    "avg_time_per_primary": 0.0002731652662637363,
+    "avg_time_per_step": 8.73599915135339e-09,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 362,
     "num_steps": 284547180,
-    "pre_emptying_time": 0.007264212,
+    "pre_emptying_time": 0.007237534,
     "queue_hwm": {
      "count": 14918622,
      "index": 62
     },
-    "setup_time": 0.402041009,
+    "setup_time": 0.232824894,
     "slot_occupancy": 0.7496280037895751,
-    "total_time": 2.468169743,
+    "total_time": 2.485803923,
     "unconverged": 0
    },
    {
@@ -4175,21 +3858,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31259.39912087912,
-    "avg_time_per_primary": 0.00027362250098901097,
-    "avg_time_per_step": 8.75328728907812e-09,
+    "avg_time_per_primary": 0.0003260692648351649,
+    "avg_time_per_step": 1.0431079099577865e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 376,
     "num_steps": 284460532,
-    "pre_emptying_time": 0.007252556,
+    "pre_emptying_time": 0.007239976,
     "queue_hwm": {
      "count": 14911209,
      "index": 61
     },
-    "setup_time": 0.40206245,
+    "setup_time": 0.373026076,
     "slot_occupancy": 0.7214965515948356,
-    "total_time": 2.489964759,
+    "total_time": 2.96723031,
     "unconverged": 0
    },
    {
@@ -4199,21 +3882,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31269.88296703297,
-    "avg_time_per_primary": 0.0003278477991208791,
-    "avg_time_per_step": 1.0484458783121145e-08,
+    "avg_time_per_primary": 0.0003249679648351648,
+    "avg_time_per_step": 1.039236268257768e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 370,
     "num_steps": 284555935,
-    "pre_emptying_time": 0.00724358,
+    "pre_emptying_time": 0.007261658,
     "queue_hwm": {
      "count": 14944287,
      "index": 62
     },
-    "setup_time": 0.371298183,
+    "setup_time": 0.370759685,
     "slot_occupancy": 0.73344239673099,
-    "total_time": 2.983414972,
+    "total_time": 2.95720848,
     "unconverged": 0
    },
    {
@@ -4223,21 +3906,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31266.976373626374,
-    "avg_time_per_primary": 0.0003271697116483516,
-    "avg_time_per_step": 1.0463746405754749e-08,
+    "avg_time_per_primary": 0.00032414518549450546,
+    "avg_time_per_step": 1.0367014118062315e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 360,
     "num_steps": 284529485,
-    "pre_emptying_time": 0.007243088,
+    "pre_emptying_time": 0.007222379,
     "queue_hwm": {
      "count": 14840773,
      "index": 61
     },
-    "setup_time": 0.371267275,
+    "setup_time": 0.369898563,
     "slot_occupancy": 0.7537457280688815,
-    "total_time": 2.977244376,
+    "total_time": 2.949721188,
     "unconverged": 0
    },
    {
@@ -4247,21 +3930,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31266.46230769231,
-    "avg_time_per_primary": 0.00032725807791208794,
-    "avg_time_per_step": 1.046674467650197e-08,
+    "avg_time_per_primary": 0.00032419145626373625,
+    "avg_time_per_step": 1.036866445181351e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284524807,
-    "pre_emptying_time": 0.00722408,
+    "pre_emptying_time": 0.007252496,
     "queue_hwm": {
      "count": 14942231,
      "index": 62
     },
-    "setup_time": 0.370665906,
+    "setup_time": 0.372246591,
     "slot_occupancy": 0.7454505516932561,
-    "total_time": 2.978048509,
+    "total_time": 2.950142252,
     "unconverged": 0
    },
    {
@@ -4271,21 +3954,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31261.262417582417,
-    "avg_time_per_primary": 0.00032732113626373624,
-    "avg_time_per_step": 1.0470502818838164e-08,
+    "avg_time_per_primary": 0.0003241156620879121,
+    "avg_time_per_step": 1.0367964599715532e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 367,
     "num_steps": 284477488,
-    "pre_emptying_time": 0.007215538,
+    "pre_emptying_time": 0.007222164,
     "queue_hwm": {
      "count": 14901826,
      "index": 62
     },
-    "setup_time": 0.369666397,
+    "setup_time": 0.374657311,
     "slot_occupancy": 0.7392339888320631,
-    "total_time": 2.97862234,
+    "total_time": 2.949452525,
     "unconverged": 0
    }
   ],
@@ -4316,7 +3999,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field-orange-cpu": {
@@ -4589,7 +4272,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15+field-orange-gpu": {
@@ -4617,21 +4300,21 @@
      "index": 262
     },
     "avg_steps_per_primary": 31249.356703296704,
-    "avg_time_per_primary": 0.0003125154295604396,
-    "avg_time_per_step": 1.0000699615281048e-08,
+    "avg_time_per_primary": 0.0003231644630769231,
+    "avg_time_per_step": 1.0341475702852798e-08,
     "emptying_step": 263,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 369,
     "num_steps": 284369146,
-    "pre_emptying_time": 0.006819426,
+    "pre_emptying_time": 0.006791667,
     "queue_hwm": {
      "count": 14892817,
      "index": 62
     },
-    "setup_time": 0.265367893,
+    "setup_time": 0.180176751,
     "slot_occupancy": 0.734947292462274,
-    "total_time": 2.843890409,
+    "total_time": 2.940796614,
     "unconverged": 0
    },
    {
@@ -4641,21 +4324,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31272.235274725273,
-    "avg_time_per_primary": 0.00023726901109890112,
-    "avg_time_per_step": 7.587209836920923e-09,
+    "avg_time_per_primary": 0.0003240936681318681,
+    "avg_time_per_step": 1.0363623363815181e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284577341,
-    "pre_emptying_time": 0.006806893,
+    "pre_emptying_time": 0.006792371,
     "queue_hwm": {
      "count": 14849685,
      "index": 61
     },
-    "setup_time": 0.190228907,
+    "setup_time": 0.166869015,
     "slot_occupancy": 0.7455881899529762,
-    "total_time": 2.159148001,
+    "total_time": 2.94925238,
     "unconverged": 0
    },
    {
@@ -4665,21 +4348,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31262.61142857143,
-    "avg_time_per_primary": 0.00031137362373626374,
-    "avg_time_per_step": 9.959936470684407e-09,
+    "avg_time_per_primary": 0.00032421531593406595,
+    "avg_time_per_step": 1.0370704848980085e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 361,
     "num_steps": 284489764,
-    "pre_emptying_time": 0.006835493,
+    "pre_emptying_time": 0.006790499,
     "queue_hwm": {
      "count": 14923434,
      "index": 62
     },
-    "setup_time": 0.283759659,
+    "setup_time": 0.168278259,
     "slot_occupancy": 0.7515528565298487,
-    "total_time": 2.833499976,
+    "total_time": 2.950359375,
     "unconverged": 0
    },
    {
@@ -4689,21 +4372,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31258.055494505494,
-    "avg_time_per_primary": 0.0003123412632967033,
-    "avg_time_per_step": 9.992344640619321e-09,
+    "avg_time_per_primary": 0.00032320185329670327,
+    "avg_time_per_step": 1.0339793956585537e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 367,
     "num_steps": 284448305,
-    "pre_emptying_time": 0.006782058,
+    "pre_emptying_time": 0.006799114,
     "queue_hwm": {
      "count": 14912707,
      "index": 62
     },
-    "setup_time": 0.264793319,
+    "setup_time": 0.172091594,
     "slot_occupancy": 0.7391581548332193,
-    "total_time": 2.842305496,
+    "total_time": 2.941136865,
     "unconverged": 0
    },
    {
@@ -4713,21 +4396,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31263.28032967033,
-    "avg_time_per_primary": 0.0003112300043956044,
-    "avg_time_per_step": 9.955129503804257e-09,
+    "avg_time_per_primary": 0.0002460670478021978,
+    "avg_time_per_step": 7.870800671184481e-09,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 360,
     "num_steps": 284495851,
-    "pre_emptying_time": 0.006815501,
+    "pre_emptying_time": 0.006818116,
     "queue_hwm": {
      "count": 14922553,
      "index": 62
     },
-    "setup_time": 0.256562271,
+    "setup_time": 0.186435927,
     "slot_occupancy": 0.7536566283967759,
-    "total_time": 2.83219304,
+    "total_time": 2.239210135,
     "unconverged": 0
    },
    {
@@ -4737,21 +4420,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31258.56087912088,
-    "avg_time_per_primary": 0.0003121700748351648,
-    "avg_time_per_step": 9.986706555120983e-09,
+    "avg_time_per_primary": 0.0003231800264835165,
+    "avg_time_per_step": 1.0338928517319689e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284452904,
-    "pre_emptying_time": 0.006830744,
+    "pre_emptying_time": 0.006829513,
     "queue_hwm": {
      "count": 14927478,
      "index": 62
     },
-    "setup_time": 0.26548001,
+    "setup_time": 0.178042629,
     "slot_occupancy": 0.7452621669559688,
-    "total_time": 2.840747681,
+    "total_time": 2.940938241,
     "unconverged": 0
    }
   ],
@@ -4780,7 +4463,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15-orange-cpu": {
@@ -5049,7 +4732,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem15-orange-gpu": {
@@ -5073,21 +4756,21 @@
      "index": 262
     },
     "avg_steps_per_primary": 31249.356703296704,
-    "avg_time_per_primary": 0.00032044178252747254,
-    "avg_time_per_step": 1.0254348131706244e-08,
+    "avg_time_per_primary": 0.0003171549938461538,
+    "avg_time_per_step": 1.0149168728734022e-08,
     "emptying_step": 263,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 369,
     "num_steps": 284369146,
-    "pre_emptying_time": 0.006413858,
+    "pre_emptying_time": 0.006425751,
     "queue_hwm": {
      "count": 14892817,
      "index": 62
     },
-    "setup_time": 0.278625009,
+    "setup_time": 0.78212809,
     "slot_occupancy": 0.734947292462274,
-    "total_time": 2.916020221,
+    "total_time": 2.886110444,
     "unconverged": 0
    },
    {
@@ -5097,21 +4780,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31272.235274725273,
-    "avg_time_per_primary": 0.000320115747032967,
-    "avg_time_per_step": 1.0236420397223403e-08,
+    "avg_time_per_primary": 0.0003157251842857143,
+    "avg_time_per_step": 1.0096022286609248e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284577341,
-    "pre_emptying_time": 0.006413623,
+    "pre_emptying_time": 0.006437446,
     "queue_hwm": {
      "count": 14849685,
      "index": 61
     },
-    "setup_time": 0.278564328,
+    "setup_time": 0.783598888,
     "slot_occupancy": 0.7455881899529762,
-    "total_time": 2.913053298,
+    "total_time": 2.873099177,
     "unconverged": 0
    },
    {
@@ -5121,21 +4804,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31262.61142857143,
-    "avg_time_per_primary": 0.0003201824706593407,
-    "avg_time_per_step": 1.0241705859758104e-08,
+    "avg_time_per_primary": 0.0003156758421978022,
+    "avg_time_per_step": 1.0097551924574692e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 361,
     "num_steps": 284489764,
-    "pre_emptying_time": 0.00643134,
+    "pre_emptying_time": 0.006398838,
     "queue_hwm": {
      "count": 14923434,
      "index": 62
     },
-    "setup_time": 0.277214653,
+    "setup_time": 0.786101296,
     "slot_occupancy": 0.7515528565298487,
-    "total_time": 2.913660483,
+    "total_time": 2.872650164,
     "unconverged": 0
    },
    {
@@ -5145,21 +4828,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31258.055494505494,
-    "avg_time_per_primary": 0.000320494760989011,
-    "avg_time_per_step": 1.0253189327319072e-08,
+    "avg_time_per_primary": 0.00023718293637362635,
+    "avg_time_per_step": 7.587897987298606e-09,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 367,
     "num_steps": 284448305,
-    "pre_emptying_time": 0.006422186,
+    "pre_emptying_time": 0.006455685,
     "queue_hwm": {
      "count": 14912707,
      "index": 62
     },
-    "setup_time": 0.276839356,
+    "setup_time": 0.784534642,
     "slot_occupancy": 0.7391581548332193,
-    "total_time": 2.916502325,
+    "total_time": 2.158364721,
     "unconverged": 0
    },
    {
@@ -5169,21 +4852,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31263.28032967033,
-    "avg_time_per_primary": 0.00031986172516483514,
-    "avg_time_per_step": 1.0231227235015107e-08,
+    "avg_time_per_primary": 0.0003164072146153846,
+    "avg_time_per_step": 1.0120729855564748e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 360,
     "num_steps": 284495851,
-    "pre_emptying_time": 0.006405604,
+    "pre_emptying_time": 0.006433376,
     "queue_hwm": {
      "count": 14922553,
      "index": 62
     },
-    "setup_time": 0.27765358,
+    "setup_time": 0.785011567,
     "slot_occupancy": 0.7536566283967759,
-    "total_time": 2.910741699,
+    "total_time": 2.879305653,
     "unconverged": 0
    },
    {
@@ -5193,21 +4876,21 @@
      "index": 263
     },
     "avg_steps_per_primary": 31258.56087912088,
-    "avg_time_per_primary": 0.0003215677104395604,
-    "avg_time_per_step": 1.0287348534153126e-08,
+    "avg_time_per_primary": 0.0003159036317582418,
+    "avg_time_per_step": 1.0106147655992993e-08,
     "emptying_step": 264,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 364,
     "num_steps": 284452904,
-    "pre_emptying_time": 0.006455287,
+    "pre_emptying_time": 0.006469089,
     "queue_hwm": {
      "count": 14927478,
      "index": 62
     },
-    "setup_time": 0.279938211,
+    "setup_time": 0.782131091,
     "slot_occupancy": 0.7452621669559688,
-    "total_time": 2.926266165,
+    "total_time": 2.874723049,
     "unconverged": 0
    }
   ],
@@ -5236,7 +4919,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-orange-cpu": {
@@ -5509,7 +5192,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-orange-gpu": {
@@ -5537,21 +5220,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73073.3954945055,
-    "avg_time_per_primary": 0.00082500507,
-    "avg_time_per_step": 1.1290088060326053e-08,
+    "avg_time_per_primary": 0.0008312254752747253,
+    "avg_time_per_step": 1.1375213504855217e-08,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 847,
     "num_steps": 664967899,
-    "pre_emptying_time": 0.010226885,
+    "pre_emptying_time": 0.010193243,
     "queue_hwm": {
      "count": 8060595,
      "index": 103
     },
-    "setup_time": 0.244141991,
+    "setup_time": 0.167893442,
     "slot_occupancy": 0.7487164185489082,
-    "total_time": 7.507546137,
+    "total_time": 7.564151825,
     "unconverged": 0
    },
    {
@@ -5561,21 +5244,21 @@
      "index": 606
     },
     "avg_steps_per_primary": 73073.8776923077,
-    "avg_time_per_primary": 0.0008892935007692308,
-    "avg_time_per_step": 1.216978664405604e-08,
+    "avg_time_per_primary": 0.0008493757448351649,
+    "avg_time_per_step": 1.1623520903210212e-08,
     "emptying_step": 607,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 828,
     "num_steps": 664972287,
-    "pre_emptying_time": 0.010926078,
+    "pre_emptying_time": 0.01090315,
     "queue_hwm": {
      "count": 8022642,
      "index": 103
     },
-    "setup_time": 0.278057833,
+    "setup_time": 0.151700147,
     "slot_occupancy": 0.7659021633258765,
-    "total_time": 8.092570857,
+    "total_time": 7.729319278,
     "unconverged": 0
    },
    {
@@ -5585,21 +5268,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73053.25351648351,
-    "avg_time_per_primary": 0.0008857969805494506,
-    "avg_time_per_step": 1.212535976032309e-08,
+    "avg_time_per_primary": 0.0009066959592307691,
+    "avg_time_per_step": 1.2411438445054128e-08,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 832,
     "num_steps": 664784607,
-    "pre_emptying_time": 0.010956313,
+    "pre_emptying_time": 0.010969008,
     "queue_hwm": {
      "count": 8075510,
      "index": 104
     },
-    "setup_time": 0.275918205,
+    "setup_time": 0.158340673,
     "slot_occupancy": 0.7620048144688973,
-    "total_time": 8.060752523,
+    "total_time": 8.250933229,
     "unconverged": 0
    },
    {
@@ -5609,21 +5292,21 @@
      "index": 606
     },
     "avg_steps_per_primary": 73069.31714285714,
-    "avg_time_per_primary": 0.00081959286989011,
-    "avg_time_per_step": 1.1216648819746481e-08,
+    "avg_time_per_primary": 0.0009083284948351648,
+    "avg_time_per_step": 1.2431052189242446e-08,
     "emptying_step": 607,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 847,
     "num_steps": 664930786,
-    "pre_emptying_time": 0.010478902,
+    "pre_emptying_time": 0.010514855,
     "queue_hwm": {
      "count": 8007990,
      "index": 103
     },
-    "setup_time": 0.162307662,
+    "setup_time": 0.15287729,
     "slot_occupancy": 0.7486746314002604,
-    "total_time": 7.458295116,
+    "total_time": 8.265789303,
     "unconverged": 0
    },
    {
@@ -5633,21 +5316,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73076.07758241758,
-    "avg_time_per_primary": 0.0008537132354945055,
-    "avg_time_per_step": 1.1682526809565823e-08,
+    "avg_time_per_primary": 0.0009047878587912087,
+    "avg_time_per_step": 1.2381450793808131e-08,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 824,
     "num_steps": 664992306,
-    "pre_emptying_time": 0.010927454,
+    "pre_emptying_time": 0.010902438,
     "queue_hwm": {
      "count": 8027533,
      "index": 103
     },
-    "setup_time": 0.273926551,
+    "setup_time": 0.161297731,
     "slot_occupancy": 0.7696433044174342,
-    "total_time": 7.768790443,
+    "total_time": 8.233569515,
     "unconverged": 0
    },
    {
@@ -5657,21 +5340,21 @@
      "index": 606
     },
     "avg_steps_per_primary": 73074.9134065934,
-    "avg_time_per_primary": 0.000857953886043956,
-    "avg_time_per_step": 1.1740744477797007e-08,
+    "avg_time_per_primary": 0.0009077649083516483,
+    "avg_time_per_step": 1.2422387739288685e-08,
     "emptying_step": 607,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 835,
     "num_steps": 664981712,
-    "pre_emptying_time": 0.010467117,
+    "pre_emptying_time": 0.010457137,
     "queue_hwm": {
      "count": 8044688,
      "index": 103
     },
-    "setup_time": 0.269312803,
+    "setup_time": 0.163210248,
     "slot_occupancy": 0.7594921911547998,
-    "total_time": 7.807380363,
+    "total_time": 8.260660666,
     "unconverged": 0
    }
   ],
@@ -5702,7 +5385,302 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
+  }
+ },
+ "testem3-flat+field+msc-orange-gpu+sync": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.org.json",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat+field+msc",
+   "orange",
+   "gpu+sync"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-neutral": 0.5735939429999991,
+     "along-step-uniform-msc": 3.820869130000002,
+     "annihil-2-gamma": 0.04827949900000004,
+     "brems-rel": 0.04222862500000005,
+     "brems-sb": 0.22004413499999975,
+     "conv-bethe-heitler": 0.096325931,
+     "extend-from-primaries": 0.0033464359999999965,
+     "extend-from-secondaries": 0.4031528240000005,
+     "geo-boundary": 0.3347026249999998,
+     "initialize-tracks": 0.5532852809999995,
+     "ioni-moller-bhabha": 0.0616133790000001,
+     "photoel-livermore": 0.20296666399999994,
+     "physics-discrete-select": 0.16630564900000008,
+     "pre-step": 0.6979068820000003,
+     "scat-klein-nishina": 0.11599591800000023,
+     "scat-rayleigh": 0.06533484200000003
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 607
+    },
+    "avg_steps_per_primary": 73073.3954945055,
+    "avg_time_per_primary": 0.0009097931042857143,
+    "avg_time_per_step": 1.2450401382458314e-08,
+    "emptying_step": 608,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 847,
+    "num_steps": 664967899,
+    "pre_emptying_time": 0.010414837,
+    "queue_hwm": {
+     "count": 8060595,
+     "index": 103
+    },
+    "setup_time": 0.273947937,
+    "slot_occupancy": 0.7487164185489082,
+    "total_time": 8.279117249,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.574263985000001,
+     "along-step-uniform-msc": 3.839821248,
+     "annihil-2-gamma": 0.04794984300000002,
+     "brems-rel": 0.04192567700000004,
+     "brems-sb": 0.21977927099999994,
+     "conv-bethe-heitler": 0.09590462900000006,
+     "extend-from-primaries": 0.003287991999999997,
+     "extend-from-secondaries": 0.4005880440000003,
+     "geo-boundary": 0.3369318850000002,
+     "initialize-tracks": 0.5514360779999992,
+     "ioni-moller-bhabha": 0.06183890400000005,
+     "photoel-livermore": 0.20298705599999983,
+     "physics-discrete-select": 0.16542147499999993,
+     "pre-step": 0.6956089399999993,
+     "scat-klein-nishina": 0.11591438600000013,
+     "scat-rayleigh": 0.06486546600000004
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 606
+    },
+    "avg_steps_per_primary": 73073.8776923077,
+    "avg_time_per_primary": 0.000911165714065934,
+    "avg_time_per_step": 1.2469103089103621e-08,
+    "emptying_step": 607,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 828,
+    "num_steps": 664972287,
+    "pre_emptying_time": 0.011114058,
+    "queue_hwm": {
+     "count": 8022642,
+     "index": 103
+    },
+    "setup_time": 0.273315995,
+    "slot_occupancy": 0.7659021633258765,
+    "total_time": 8.291607998,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5742201159999996,
+     "along-step-uniform-msc": 3.8062824190000004,
+     "annihil-2-gamma": 0.047710066999999926,
+     "brems-rel": 0.04184384699999998,
+     "brems-sb": 0.21924830700000014,
+     "conv-bethe-heitler": 0.09589102500000002,
+     "extend-from-primaries": 0.0033317890000000017,
+     "extend-from-secondaries": 0.39774428100000003,
+     "geo-boundary": 0.3295709269999994,
+     "initialize-tracks": 0.5526322090000009,
+     "ioni-moller-bhabha": 0.06167405599999996,
+     "photoel-livermore": 0.2023048440000001,
+     "physics-discrete-select": 0.16576405899999985,
+     "pre-step": 0.6958218190000003,
+     "scat-klein-nishina": 0.11476433700000005,
+     "scat-rayleigh": 0.06485895700000006
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 607
+    },
+    "avg_steps_per_primary": 73053.25351648351,
+    "avg_time_per_primary": 0.0009062131202197801,
+    "avg_time_per_step": 1.2404829033594032e-08,
+    "emptying_step": 608,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 832,
+    "num_steps": 664784607,
+    "pre_emptying_time": 0.011103456,
+    "queue_hwm": {
+     "count": 8075510,
+     "index": 104
+    },
+    "setup_time": 0.27392648,
+    "slot_occupancy": 0.7620048144688973,
+    "total_time": 8.246539394,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5752046279999999,
+     "along-step-uniform-msc": 3.8044536379999996,
+     "annihil-2-gamma": 0.048577317000000016,
+     "brems-rel": 0.042712555000000034,
+     "brems-sb": 0.22003332000000012,
+     "conv-bethe-heitler": 0.09677196499999995,
+     "extend-from-primaries": 0.0034335789999999987,
+     "extend-from-secondaries": 0.4044984979999998,
+     "geo-boundary": 0.3392996779999996,
+     "initialize-tracks": 0.5525719849999998,
+     "ioni-moller-bhabha": 0.06154014100000001,
+     "photoel-livermore": 0.2031238100000001,
+     "physics-discrete-select": 0.16642097999999994,
+     "pre-step": 0.6981240140000006,
+     "scat-klein-nishina": 0.11736804700000003,
+     "scat-rayleigh": 0.06548015999999998
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 606
+    },
+    "avg_steps_per_primary": 73069.31714285714,
+    "avg_time_per_primary": 0.0008462004017582418,
+    "avg_time_per_step": 1.1580789787645658e-08,
+    "emptying_step": 607,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 847,
+    "num_steps": 664930786,
+    "pre_emptying_time": 0.010617959,
+    "queue_hwm": {
+     "count": 8007990,
+     "index": 103
+    },
+    "setup_time": 0.273400668,
+    "slot_occupancy": 0.7486746314002604,
+    "total_time": 7.700423656,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5726091799999992,
+     "along-step-uniform-msc": 3.789384505,
+     "annihil-2-gamma": 0.047775499000000034,
+     "brems-rel": 0.04176872100000001,
+     "brems-sb": 0.21943282500000025,
+     "conv-bethe-heitler": 0.09588491799999989,
+     "extend-from-primaries": 0.0034012259999999946,
+     "extend-from-secondaries": 0.3988727299999998,
+     "geo-boundary": 0.3343450690000003,
+     "initialize-tracks": 0.5518001080000002,
+     "ioni-moller-bhabha": 0.06328145899999993,
+     "photoel-livermore": 0.2025082840000001,
+     "physics-discrete-select": 0.16580260100000016,
+     "pre-step": 0.6941458820000012,
+     "scat-klein-nishina": 0.11584235500000004,
+     "scat-rayleigh": 0.06479255999999996
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 607
+    },
+    "avg_steps_per_primary": 73076.07758241758,
+    "avg_time_per_primary": 0.0009049255126373627,
+    "avg_time_per_step": 1.2383334499812996e-08,
+    "emptying_step": 608,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 824,
+    "num_steps": 664992306,
+    "pre_emptying_time": 0.011083635,
+    "queue_hwm": {
+     "count": 8027533,
+     "index": 103
+    },
+    "setup_time": 0.27725296,
+    "slot_occupancy": 0.7696433044174342,
+    "total_time": 8.234822165,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5737437050000005,
+     "along-step-uniform-msc": 3.8224213099999975,
+     "annihil-2-gamma": 0.04815092299999998,
+     "brems-rel": 0.042033684,
+     "brems-sb": 0.2196805460000002,
+     "conv-bethe-heitler": 0.09627796500000003,
+     "extend-from-primaries": 0.0033631899999999985,
+     "extend-from-secondaries": 0.403027878,
+     "geo-boundary": 0.3355038059999999,
+     "initialize-tracks": 0.5525724239999992,
+     "ioni-moller-bhabha": 0.06275989800000001,
+     "photoel-livermore": 0.2025846140000001,
+     "physics-discrete-select": 0.1660535779999999,
+     "pre-step": 0.6958164000000001,
+     "scat-klein-nishina": 0.11593352399999998,
+     "scat-rayleigh": 0.06515387599999999
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 606
+    },
+    "avg_steps_per_primary": 73074.9134065934,
+    "avg_time_per_primary": 0.0008357871898901099,
+    "avg_time_per_step": 1.1437402398819654e-08,
+    "emptying_step": 607,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 835,
+    "num_steps": 664981712,
+    "pre_emptying_time": 0.010657696,
+    "queue_hwm": {
+     "count": 8044688,
+     "index": 103
+    },
+    "setup_time": 0.161148884,
+    "slot_occupancy": 0.7594921911547998,
+    "total_time": 7.605663428,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.3",
+   "occupancy": {
+    "along-step-neutral": 0.125,
+    "along-step-uniform-msc-apply-eloss-mean": 0.5,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.5,
+    "along-step-uniform-msc-propagate": 0.125,
+    "along-step-uniform-msc-scatter-msc-urban": 0.375,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.375,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries": 0.75,
+    "geo-boundary": 0.5,
+    "initialize-tracks": 0.5,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.375,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "scat-rayleigh": 0.5
+   },
+   "vecgeom": null,
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-vecgeom-cpu": {
@@ -5975,7 +5953,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field+msc-vecgeom-gpu": {
@@ -6003,21 +5981,21 @@
      "index": 608
     },
     "avg_steps_per_primary": 73297.41527472528,
-    "avg_time_per_primary": 0.0016125412050549451,
-    "avg_time_per_step": 2.1999973655428317e-08,
+    "avg_time_per_primary": 0.0016130417769230768,
+    "avg_time_per_step": 2.200680298039504e-08,
     "emptying_step": 609,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 835,
     "num_steps": 667006479,
-    "pre_emptying_time": 0.021303251,
+    "pre_emptying_time": 0.021346258,
     "queue_hwm": {
      "count": 8048361,
      "index": 103
     },
-    "setup_time": 0.475691124,
+    "setup_time": 0.217598555,
     "slot_occupancy": 0.7618047280225925,
-    "total_time": 14.674124966,
+    "total_time": 14.67868017,
     "unconverged": 0
    },
    {
@@ -6027,21 +6005,21 @@
      "index": 608
     },
     "avg_steps_per_primary": 73283.42054945054,
-    "avg_time_per_primary": 0.0016076266302197802,
-    "avg_time_per_step": 2.1937112353195602e-08,
+    "avg_time_per_primary": 0.0015912675973626374,
+    "avg_time_per_step": 2.1713882695866713e-08,
     "emptying_step": 609,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 824,
     "num_steps": 666879127,
-    "pre_emptying_time": 0.021466441,
+    "pre_emptying_time": 0.021496672,
     "queue_hwm": {
      "count": 8034844,
      "index": 103
     },
-    "setup_time": 0.224398184,
+    "setup_time": 0.513523266,
     "slot_occupancy": 0.7718270577273323,
-    "total_time": 14.629402335,
+    "total_time": 14.480535136,
     "unconverged": 0
    },
    {
@@ -6051,21 +6029,21 @@
      "index": 609
     },
     "avg_steps_per_primary": 73294.61109890109,
-    "avg_time_per_primary": 0.0016462070261538462,
-    "avg_time_per_step": 2.246013726619702e-08,
+    "avg_time_per_primary": 0.0016499322325274725,
+    "avg_time_per_step": 2.2510962372132838e-08,
     "emptying_step": 610,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 831,
     "num_steps": 666980961,
-    "pre_emptying_time": 0.020826758,
+    "pre_emptying_time": 0.020861772,
     "queue_hwm": {
      "count": 8061866,
      "index": 104
     },
-    "setup_time": 0.495034817,
+    "setup_time": 0.514690069,
     "slot_occupancy": 0.765442373089842,
-    "total_time": 14.980483938,
+    "total_time": 15.014383316,
     "unconverged": 0
    },
    {
@@ -6075,21 +6053,21 @@
      "index": 609
     },
     "avg_steps_per_primary": 73277.10967032966,
-    "avg_time_per_primary": 0.00159270128989011,
-    "avg_time_per_step": 2.1735318123976223e-08,
+    "avg_time_per_primary": 0.001648594314065934,
+    "avg_time_per_step": 2.249808052586795e-08,
     "emptying_step": 610,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 830,
     "num_steps": 666821698,
-    "pre_emptying_time": 0.021543938,
+    "pre_emptying_time": 0.021564157,
     "queue_hwm": {
      "count": 8030441,
      "index": 104
     },
-    "setup_time": 0.474531569,
+    "setup_time": 0.51280523,
     "slot_occupancy": 0.7661815988012107,
-    "total_time": 14.493581738,
+    "total_time": 15.002208258,
     "unconverged": 0
    },
    {
@@ -6099,21 +6077,21 @@
      "index": 609
     },
     "avg_steps_per_primary": 73317.12175824176,
-    "avg_time_per_primary": 0.0016467336136263737,
-    "avg_time_per_step": 2.2460423624598442e-08,
+    "avg_time_per_primary": 0.0016503697696703297,
+    "avg_time_per_step": 2.2510018534447006e-08,
     "emptying_step": 610,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 842,
     "num_steps": 667185808,
-    "pre_emptying_time": 0.021263473,
+    "pre_emptying_time": 0.021276165,
     "queue_hwm": {
      "count": 8031363,
      "index": 103
     },
-    "setup_time": 0.493541449,
+    "setup_time": 0.512886521,
     "slot_occupancy": 0.7556745479339092,
-    "total_time": 14.985275884,
+    "total_time": 15.018364904,
     "unconverged": 0
    },
    {
@@ -6123,21 +6101,21 @@
      "index": 609
     },
     "avg_steps_per_primary": 73290.18186813187,
-    "avg_time_per_primary": 0.0016471507338461538,
-    "avg_time_per_step": 2.247437094384357e-08,
+    "avg_time_per_primary": 0.0016494636936263737,
+    "avg_time_per_step": 2.2505929874675282e-08,
     "emptying_step": 610,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 851,
     "num_steps": 666940655,
-    "pre_emptying_time": 0.022273183,
+    "pre_emptying_time": 0.02232669,
     "queue_hwm": {
      "count": 8044015,
      "index": 104
     },
-    "setup_time": 0.493633932,
+    "setup_time": 0.512706868,
     "slot_occupancy": 0.747407959154714,
-    "total_time": 14.989071678,
+    "total_time": 15.010119612,
     "unconverged": 0
    }
   ],
@@ -6168,7 +6146,302 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
+  }
+ },
+ "testem3-flat+field+msc-vecgeom-gpu+sync": {
+  "input": {
+   "enable_msc": true,
+   "geometry_filename": "testem3-flat.gdml",
+   "mag_field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "testem3-flat+field+msc",
+   "vecgeom",
+   "gpu+sync"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-neutral": 0.5300188739999999,
+     "along-step-uniform-msc": 11.076297533000023,
+     "annihil-2-gamma": 0.04796527099999999,
+     "brems-rel": 0.04167605400000008,
+     "brems-sb": 0.20745334100000015,
+     "conv-bethe-heitler": 0.09457752099999987,
+     "extend-from-primaries": 0.003247674000000002,
+     "extend-from-secondaries": 0.3857103700000001,
+     "geo-boundary": 0.5617831479999995,
+     "initialize-tracks": 0.1932835620000002,
+     "ioni-moller-bhabha": 0.05961704699999998,
+     "photoel-livermore": 0.19827609099999993,
+     "physics-discrete-select": 0.16735804199999985,
+     "pre-step": 0.7039772890000002,
+     "scat-klein-nishina": 0.10681979500000015,
+     "scat-rayleigh": 0.06485520100000004
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 608
+    },
+    "avg_steps_per_primary": 73297.41527472528,
+    "avg_time_per_primary": 0.0016114345689010989,
+    "avg_time_per_step": 2.198487576760105e-08,
+    "emptying_step": 609,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 835,
+    "num_steps": 667006479,
+    "pre_emptying_time": 0.021476203,
+    "queue_hwm": {
+     "count": 8048361,
+     "index": 103
+    },
+    "setup_time": 0.513112154,
+    "slot_occupancy": 0.7618047280225925,
+    "total_time": 14.664054577,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5294201560000006,
+     "along-step-uniform-msc": 11.0736353,
+     "annihil-2-gamma": 0.047748359999999955,
+     "brems-rel": 0.04110906299999997,
+     "brems-sb": 0.207481195,
+     "conv-bethe-heitler": 0.094300039,
+     "extend-from-primaries": 0.0031934800000000037,
+     "extend-from-secondaries": 0.3862432070000001,
+     "geo-boundary": 0.562346922,
+     "initialize-tracks": 0.19334176100000003,
+     "ioni-moller-bhabha": 0.05884572400000001,
+     "photoel-livermore": 0.19810229499999987,
+     "physics-discrete-select": 0.16748000500000013,
+     "pre-step": 0.7026879839999997,
+     "scat-klein-nishina": 0.10722842600000007,
+     "scat-rayleigh": 0.06446567900000005
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 608
+    },
+    "avg_steps_per_primary": 73283.42054945054,
+    "avg_time_per_primary": 0.0016250783162637364,
+    "avg_time_per_step": 2.2175251974860508e-08,
+    "emptying_step": 609,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 824,
+    "num_steps": 666879127,
+    "pre_emptying_time": 0.021670702,
+    "queue_hwm": {
+     "count": 8034844,
+     "index": 103
+    },
+    "setup_time": 0.217128671,
+    "slot_occupancy": 0.7718270577273323,
+    "total_time": 14.788212678,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5321425679999997,
+     "along-step-uniform-msc": 11.059411210999993,
+     "annihil-2-gamma": 0.04806093199999994,
+     "brems-rel": 0.04154665800000006,
+     "brems-sb": 0.2076310690000001,
+     "conv-bethe-heitler": 0.09461575500000008,
+     "extend-from-primaries": 0.003277696999999999,
+     "extend-from-secondaries": 0.38856116799999946,
+     "geo-boundary": 0.5608066859999997,
+     "initialize-tracks": 0.19290616800000004,
+     "ioni-moller-bhabha": 0.05975024000000007,
+     "photoel-livermore": 0.19795394100000013,
+     "physics-discrete-select": 0.16740428199999982,
+     "pre-step": 0.7031248690000003,
+     "scat-klein-nishina": 0.10689598400000004,
+     "scat-rayleigh": 0.06494529099999988
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 609
+    },
+    "avg_steps_per_primary": 73294.61109890109,
+    "avg_time_per_primary": 0.001666308920989011,
+    "avg_time_per_step": 2.273439883241285e-08,
+    "emptying_step": 610,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 831,
+    "num_steps": 666980961,
+    "pre_emptying_time": 0.020968247,
+    "queue_hwm": {
+     "count": 8061866,
+     "index": 104
+    },
+    "setup_time": 0.513894657,
+    "slot_occupancy": 0.765442373089842,
+    "total_time": 15.163411181,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5294971729999999,
+     "along-step-uniform-msc": 11.043136467999993,
+     "annihil-2-gamma": 0.04791412099999997,
+     "brems-rel": 0.041464382000000036,
+     "brems-sb": 0.20725572499999992,
+     "conv-bethe-heitler": 0.09455768100000005,
+     "extend-from-primaries": 0.003217493999999999,
+     "extend-from-secondaries": 0.38532388400000017,
+     "geo-boundary": 0.5608985340000006,
+     "initialize-tracks": 0.19353934899999997,
+     "ioni-moller-bhabha": 0.05965731600000001,
+     "photoel-livermore": 0.19772127999999967,
+     "physics-discrete-select": 0.1674084340000002,
+     "pre-step": 0.7033650310000004,
+     "scat-klein-nishina": 0.10691612499999993,
+     "scat-rayleigh": 0.06447144200000007
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 609
+    },
+    "avg_steps_per_primary": 73277.10967032966,
+    "avg_time_per_primary": 0.0016638220823076923,
+    "avg_time_per_step": 2.27058912366106e-08,
+    "emptying_step": 610,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 830,
+    "num_steps": 666821698,
+    "pre_emptying_time": 0.021696638,
+    "queue_hwm": {
+     "count": 8030441,
+     "index": 104
+    },
+    "setup_time": 0.513368715,
+    "slot_occupancy": 0.7661815988012107,
+    "total_time": 15.140780949,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5309575430000001,
+     "along-step-uniform-msc": 11.04681992699999,
+     "annihil-2-gamma": 0.04847762900000002,
+     "brems-rel": 0.042010951000000046,
+     "brems-sb": 0.20831570900000007,
+     "conv-bethe-heitler": 0.09507072300000008,
+     "extend-from-primaries": 0.003305445999999999,
+     "extend-from-secondaries": 0.3919055929999997,
+     "geo-boundary": 0.5615148799999989,
+     "initialize-tracks": 0.193002785,
+     "ioni-moller-bhabha": 0.06134752799999992,
+     "photoel-livermore": 0.19865020199999994,
+     "physics-discrete-select": 0.1679381759999999,
+     "pre-step": 0.7057513170000012,
+     "scat-klein-nishina": 0.10854885500000004,
+     "scat-rayleigh": 0.06527053900000002
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 609
+    },
+    "avg_steps_per_primary": 73317.12175824176,
+    "avg_time_per_primary": 0.001666402413076923,
+    "avg_time_per_step": 2.2728693831868797e-08,
+    "emptying_step": 610,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 842,
+    "num_steps": 667185808,
+    "pre_emptying_time": 0.021442729,
+    "queue_hwm": {
+     "count": 8031363,
+     "index": 103
+    },
+    "setup_time": 0.512512013,
+    "slot_occupancy": 0.7556745479339092,
+    "total_time": 15.164261959,
+    "unconverged": 0
+   },
+   {
+    "action_times": {
+     "along-step-neutral": 0.5302755450000004,
+     "along-step-uniform-msc": 11.070518225999988,
+     "annihil-2-gamma": 0.0485554879999999,
+     "brems-rel": 0.04223044999999998,
+     "brems-sb": 0.2080855979999998,
+     "conv-bethe-heitler": 0.09520044499999997,
+     "extend-from-primaries": 0.003312608999999994,
+     "extend-from-secondaries": 0.38908438300000064,
+     "geo-boundary": 0.5635990730000005,
+     "initialize-tracks": 0.1931470089999999,
+     "ioni-moller-bhabha": 0.05925747499999994,
+     "photoel-livermore": 0.19874684100000012,
+     "physics-discrete-select": 0.16820649099999982,
+     "pre-step": 0.7076014249999995,
+     "scat-klein-nishina": 0.10712246300000001,
+     "scat-rayleigh": 0.06541171700000002
+    },
+    "active_hwm": {
+     "count": 1048576,
+     "index": 609
+    },
+    "avg_steps_per_primary": 73290.18186813187,
+    "avg_time_per_primary": 0.0016686128297802199,
+    "avg_time_per_step": 2.2767208202354975e-08,
+    "emptying_step": 610,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "num_step_iters": 851,
+    "num_steps": 666940655,
+    "pre_emptying_time": 0.022532913,
+    "queue_hwm": {
+     "count": 8044015,
+     "index": 104
+    },
+    "setup_time": 0.515168172,
+    "slot_occupancy": 0.747407959154714,
+    "total_time": 15.184376751,
+    "unconverged": 0
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.3",
+   "occupancy": {
+    "along-step-neutral": 0.125,
+    "along-step-uniform-msc-apply-eloss-mean": 0.5,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.125,
+    "along-step-uniform-msc-propagate": 0.125,
+    "along-step-uniform-msc-scatter-msc-urban": 0.125,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.375,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries": 0.625,
+    "geo-boundary": 0.125,
+    "initialize-tracks": 0.125,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.375,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "scat-rayleigh": 0.375
+   },
+   "vecgeom": "1.2.5",
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field-orange-cpu": {
@@ -6441,7 +6714,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+field-orange-gpu": {
@@ -6469,21 +6742,21 @@
      "index": 511
     },
     "avg_steps_per_primary": 61602.04648351648,
-    "avg_time_per_primary": 0.0005604202003296703,
-    "avg_time_per_step": 9.097428288841475e-09,
+    "avg_time_per_primary": 0.0005900413601098901,
+    "avg_time_per_step": 9.57827529752236e-09,
     "emptying_step": 512,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 728,
     "num_steps": 560578623,
-    "pre_emptying_time": 0.008553475,
+    "pre_emptying_time": 0.008550656,
     "queue_hwm": {
      "count": 8470397,
      "index": 102
     },
-    "setup_time": 0.151879748,
+    "setup_time": 0.14873086,
     "slot_occupancy": 0.7343536196174202,
-    "total_time": 5.099823823,
+    "total_time": 5.369376377,
     "unconverged": 0
    },
    {
@@ -6493,21 +6766,21 @@
      "index": 510
     },
     "avg_steps_per_primary": 61610.19065934066,
-    "avg_time_per_primary": 0.0006117571045054945,
-    "avg_time_per_step": 9.929479165030739e-09,
+    "avg_time_per_primary": 0.000561711904945055,
+    "avg_time_per_step": 9.117191473256614e-09,
     "emptying_step": 511,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 696,
     "num_steps": 560652735,
-    "pre_emptying_time": 0.008577878,
+    "pre_emptying_time": 0.008623237,
     "queue_hwm": {
      "count": 8462129,
      "index": 102
     },
-    "setup_time": 0.228581845,
+    "setup_time": 0.148314498,
     "slot_occupancy": 0.7682185542994532,
-    "total_time": 5.566989651,
+    "total_time": 5.111578335,
     "unconverged": 0
    },
    {
@@ -6517,21 +6790,21 @@
      "index": 510
     },
     "avg_steps_per_primary": 61636.318351648355,
-    "avg_time_per_primary": 0.0005830981023076924,
-    "avg_time_per_step": 9.460300645813937e-09,
+    "avg_time_per_primary": 0.0005973104086813187,
+    "avg_time_per_step": 9.690883956980287e-09,
     "emptying_step": 511,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 692,
     "num_steps": 560890497,
-    "pre_emptying_time": 0.008499654,
+    "pre_emptying_time": 0.008523913,
     "queue_hwm": {
      "count": 8496417,
      "index": 102
     },
-    "setup_time": 0.225131025,
+    "setup_time": 0.155180268,
     "slot_occupancy": 0.7729867937936948,
-    "total_time": 5.306192731,
+    "total_time": 5.435524719,
     "unconverged": 0
    },
    {
@@ -6541,21 +6814,21 @@
      "index": 510
     },
     "avg_steps_per_primary": 61579.71967032967,
-    "avg_time_per_primary": 0.0005839101216483516,
-    "avg_time_per_step": 9.482182198528117e-09,
+    "avg_time_per_primary": 0.0005967797298901098,
+    "avg_time_per_step": 9.691173215548919e-09,
     "emptying_step": 511,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 694,
     "num_steps": 560375449,
-    "pre_emptying_time": 0.008568923,
+    "pre_emptying_time": 0.008549933,
     "queue_hwm": {
      "count": 8446296,
      "index": 102
     },
-    "setup_time": 0.224605183,
+    "setup_time": 0.155221961,
     "slot_occupancy": 0.7700514023860525,
-    "total_time": 5.313582107,
+    "total_time": 5.430695542,
     "unconverged": 0
    },
    {
@@ -6565,21 +6838,21 @@
      "index": 511
     },
     "avg_steps_per_primary": 61627.215934065935,
-    "avg_time_per_primary": 0.0006117132847252747,
-    "avg_time_per_step": 9.926024978635055e-09,
+    "avg_time_per_primary": 0.0005973059908791208,
+    "avg_time_per_step": 9.692243626876961e-09,
     "emptying_step": 512,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 708,
     "num_steps": 560807665,
-    "pre_emptying_time": 0.008647982,
+    "pre_emptying_time": 0.008628552,
     "queue_hwm": {
      "count": 8451139,
      "index": 101
     },
-    "setup_time": 0.243096321,
+    "setup_time": 0.153294001,
     "slot_occupancy": 0.7554065911783336,
-    "total_time": 5.566590891,
+    "total_time": 5.435484517,
     "unconverged": 0
    },
    {
@@ -6589,21 +6862,21 @@
      "index": 510
     },
     "avg_steps_per_primary": 61594.43714285714,
-    "avg_time_per_primary": 0.0006210941653846154,
-    "avg_time_per_step": 1.0083608101557935e-08,
+    "avg_time_per_primary": 0.0005916642437362637,
+    "avg_time_per_step": 9.605806484829233e-09,
     "emptying_step": 511,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 704,
     "num_steps": 560509378,
-    "pre_emptying_time": 0.011122955,
+    "pre_emptying_time": 0.011080034,
     "queue_hwm": {
      "count": 8455485,
      "index": 102
     },
-    "setup_time": 0.292239502,
+    "setup_time": 0.147795163,
     "slot_occupancy": 0.7592945992946625,
-    "total_time": 5.651956905,
+    "total_time": 5.384144618,
     "unconverged": 0
    }
   ],
@@ -6632,7 +6905,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+msc-orange-cpu": {
@@ -6901,7 +7174,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat+msc-orange-gpu": {
@@ -6925,21 +7198,21 @@
      "index": 608
     },
     "avg_steps_per_primary": 73160.70758241758,
-    "avg_time_per_primary": 0.0005998047018681319,
-    "avg_time_per_step": 8.198454084009987e-09,
+    "avg_time_per_primary": 0.0006423743001098901,
+    "avg_time_per_step": 8.780318306602455e-09,
     "emptying_step": 609,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 829,
     "num_steps": 665762439,
-    "pre_emptying_time": 0.007578267,
+    "pre_emptying_time": 0.007576649,
     "queue_hwm": {
      "count": 8073204,
      "index": 104
     },
-    "setup_time": 0.389747823,
+    "setup_time": 0.277442415,
     "slot_occupancy": 0.7658872604370117,
-    "total_time": 5.458222787,
+    "total_time": 5.845606131,
     "unconverged": 0
    },
    {
@@ -6949,21 +7222,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73169.89230769231,
-    "avg_time_per_primary": 0.000626518385054945,
-    "avg_time_per_step": 8.562516156513183e-09,
+    "avg_time_per_primary": 0.0006434389885714286,
+    "avg_time_per_step": 8.79376705743469e-09,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 824,
     "num_steps": 665846020,
-    "pre_emptying_time": 0.007569837,
+    "pre_emptying_time": 0.007626649,
     "queue_hwm": {
      "count": 8050030,
      "index": 104
     },
-    "setup_time": 0.401931705,
+    "setup_time": 0.276434498,
     "slot_occupancy": 0.7706313688778182,
-    "total_time": 5.701317304,
+    "total_time": 5.855294796,
     "unconverged": 0
    },
    {
@@ -6973,21 +7246,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73149.90417582418,
-    "avg_time_per_primary": 0.0005998213489010988,
-    "avg_time_per_step": 8.199892476405157e-09,
+    "avg_time_per_primary": 0.0006435926803296703,
+    "avg_time_per_step": 8.798270996811173e-09,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 841,
     "num_steps": 665664128,
-    "pre_emptying_time": 0.007601165,
+    "pre_emptying_time": 0.007544551,
     "queue_hwm": {
      "count": 8043595,
      "index": 104
     },
-    "setup_time": 0.16089428,
+    "setup_time": 0.275646921,
     "slot_occupancy": 0.7548475412919887,
-    "total_time": 5.458374275,
+    "total_time": 5.856693391,
     "unconverged": 0
    },
    {
@@ -6997,21 +7270,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73152.8343956044,
-    "avg_time_per_primary": 0.000603484832967033,
-    "avg_time_per_step": 8.249643885340623e-09,
+    "avg_time_per_primary": 0.0006065096295604396,
+    "avg_time_per_step": 8.290992885941868e-09,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 866,
     "num_steps": 665690793,
-    "pre_emptying_time": 0.007585784,
+    "pre_emptying_time": 0.007579399,
     "queue_hwm": {
      "count": 7993843,
      "index": 104
     },
-    "setup_time": 0.392293479,
+    "setup_time": 0.226396155,
     "slot_occupancy": 0.7330856950949302,
-    "total_time": 5.49171198,
+    "total_time": 5.519237629,
     "unconverged": 0
    },
    {
@@ -7021,21 +7294,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73159.18593406593,
-    "avg_time_per_primary": 0.0006280202346153846,
-    "avg_time_per_step": 8.584297741931987e-09,
+    "avg_time_per_primary": 0.0005832536687912088,
+    "avg_time_per_step": 7.972391454941297e-09,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 833,
     "num_steps": 665748592,
-    "pre_emptying_time": 0.007524618,
+    "pre_emptying_time": 0.007581055,
     "queue_hwm": {
      "count": 8014435,
      "index": 103
     },
-    "setup_time": 0.403075755,
+    "setup_time": 0.160362717,
     "slot_occupancy": 0.762193677519836,
-    "total_time": 5.714984135,
+    "total_time": 5.307608386,
     "unconverged": 0
    },
    {
@@ -7045,21 +7318,21 @@
      "index": 607
     },
     "avg_steps_per_primary": 73180.92208791208,
-    "avg_time_per_primary": 0.0006014419601098901,
-    "avg_time_per_step": 8.218562201052607e-09,
+    "avg_time_per_primary": 0.0006058973665934066,
+    "avg_time_per_step": 8.279444277369768e-09,
     "emptying_step": 608,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 861,
     "num_steps": 665946391,
-    "pre_emptying_time": 0.00757655,
+    "pre_emptying_time": 0.007562987,
     "queue_hwm": {
      "count": 8070563,
      "index": 104
     },
-    "setup_time": 0.159966279,
+    "setup_time": 0.245990218,
     "slot_occupancy": 0.7376259804879608,
-    "total_time": 5.473121837,
+    "total_time": 5.513666036,
     "unconverged": 0
    }
   ],
@@ -7090,7 +7363,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-orange-cpu": {
@@ -7359,7 +7632,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-orange-gpu": {
@@ -7383,21 +7656,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62390.63978021978,
-    "avg_time_per_primary": 0.00042393003725274726,
-    "avg_time_per_step": 6.794769836406603e-09,
+    "avg_time_per_primary": 0.00047989759197802196,
+    "avg_time_per_step": 7.69182033825157e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 694,
     "num_steps": 567754822,
-    "pre_emptying_time": 0.005955582,
+    "pre_emptying_time": 0.005963731,
     "queue_hwm": {
      "count": 8459340,
      "index": 102
     },
-    "setup_time": 0.215693845,
+    "setup_time": 0.188861582,
     "slot_occupancy": 0.7801919189585045,
-    "total_time": 3.857763339,
+    "total_time": 4.367068087,
     "unconverged": 0
    },
    {
@@ -7407,21 +7680,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62412.87835164835,
-    "avg_time_per_primary": 0.000476816798021978,
-    "avg_time_per_step": 7.639718125728535e-09,
+    "avg_time_per_primary": 0.00047970820197802195,
+    "avg_time_per_step": 7.686045166435633e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 693,
     "num_steps": 567957193,
-    "pre_emptying_time": 0.005951521,
+    "pre_emptying_time": 0.005952843,
     "queue_hwm": {
      "count": 8469187,
      "index": 102
     },
-    "setup_time": 0.150419104,
+    "setup_time": 0.18672069,
     "slot_occupancy": 0.7815962305660715,
-    "total_time": 4.339032862,
+    "total_time": 4.365344638,
     "unconverged": 0
    },
    {
@@ -7431,21 +7704,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62396.64538461538,
-    "avg_time_per_primary": 0.0004768114001098901,
-    "avg_time_per_step": 7.641619147484706e-09,
+    "avg_time_per_primary": 0.00047993860450549456,
+    "avg_time_per_step": 7.69173729688726e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 696,
     "num_steps": 567809473,
-    "pre_emptying_time": 0.005944695,
+    "pre_emptying_time": 0.005973703,
     "queue_hwm": {
      "count": 8473189,
      "index": 102
     },
-    "setup_time": 0.148393096,
+    "setup_time": 0.190267449,
     "slot_occupancy": 0.7780248721440634,
-    "total_time": 4.338983741,
+    "total_time": 4.367441301,
     "unconverged": 0
    },
    {
@@ -7455,21 +7728,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62408.47868131868,
-    "avg_time_per_primary": 0.00047542169076923073,
-    "avg_time_per_step": 7.617902259673944e-09,
+    "avg_time_per_primary": 0.0004790316354945055,
+    "avg_time_per_step": 7.675746078359358e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 687,
     "num_steps": 567917156,
-    "pre_emptying_time": 0.00597619,
+    "pre_emptying_time": 0.005983321,
     "queue_hwm": {
      "count": 8422127,
      "index": 102
     },
-    "setup_time": 0.159167205,
+    "setup_time": 0.188382117,
     "slot_occupancy": 0.7883668202673677,
-    "total_time": 4.326337386,
+    "total_time": 4.359187883,
     "unconverged": 0
    },
    {
@@ -7479,21 +7752,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62425.28032967033,
-    "avg_time_per_primary": 0.0004754109316483516,
-    "avg_time_per_step": 7.615679563434685e-09,
+    "avg_time_per_primary": 0.0004786244753846154,
+    "avg_time_per_step": 7.667157806212178e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 684,
     "num_steps": 568070051,
-    "pre_emptying_time": 0.005994065,
+    "pre_emptying_time": 0.005977159,
     "queue_hwm": {
      "count": 8440292,
      "index": 102
     },
-    "setup_time": 0.150956162,
+    "setup_time": 0.190387909,
     "slot_occupancy": 0.7920377449682582,
-    "total_time": 4.326239478,
+    "total_time": 4.355482726,
     "unconverged": 0
    },
    {
@@ -7503,21 +7776,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62415.61483516484,
-    "avg_time_per_primary": 0.0004237813993406593,
-    "avg_time_per_step": 6.7896695475937494e-09,
+    "avg_time_per_primary": 0.000479283152967033,
+    "avg_time_per_step": 7.678898208930336e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 690,
     "num_steps": 567982095,
-    "pre_emptying_time": 0.00598126,
+    "pre_emptying_time": 0.005964646,
     "queue_hwm": {
      "count": 8459815,
      "index": 102
     },
-    "setup_time": 0.215769681,
+    "setup_time": 0.222725242,
     "slot_occupancy": 0.7850288930146591,
-    "total_time": 3.856410734,
+    "total_time": 4.361476692,
     "unconverged": 0
    }
   ],
@@ -7546,7 +7819,7 @@
     "scat-rayleigh": 0.5
    },
    "vecgeom": null,
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-vecgeom-cpu": {
@@ -7815,7 +8088,7 @@
    "geant4": "11.0.3",
    "occupancy": {},
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  },
  "testem3-flat-vecgeom-gpu": {
@@ -7839,21 +8112,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62390.63978021978,
-    "avg_time_per_primary": 0.0004260866018681319,
-    "avg_time_per_step": 6.829335351730399e-09,
+    "avg_time_per_primary": 0.0004543698524175824,
+    "avg_time_per_step": 7.282660572453932e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 694,
     "num_steps": 567754822,
-    "pre_emptying_time": 0.005692429,
+    "pre_emptying_time": 0.005700046,
     "queue_hwm": {
      "count": 8459340,
      "index": 102
     },
-    "setup_time": 0.603779163,
+    "setup_time": 0.382165532,
     "slot_occupancy": 0.7801919189585045,
-    "total_time": 3.877388077,
+    "total_time": 4.134765657,
     "unconverged": 0
    },
    {
@@ -7863,21 +8136,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62412.87835164835,
-    "avg_time_per_primary": 0.00042560572725274724,
-    "avg_time_per_step": 6.8191972312955634e-09,
+    "avg_time_per_primary": 0.00038396803571428574,
+    "avg_time_per_step": 6.152064219037015e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 693,
     "num_steps": 567957193,
-    "pre_emptying_time": 0.005671693,
+    "pre_emptying_time": 0.005676302,
     "queue_hwm": {
      "count": 8469187,
      "index": 102
     },
-    "setup_time": 0.606759165,
+    "setup_time": 0.404073352,
     "slot_occupancy": 0.7815962305660715,
-    "total_time": 3.873012118,
+    "total_time": 3.494109125,
     "unconverged": 0
    },
    {
@@ -7887,21 +8160,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62396.64538461538,
-    "avg_time_per_primary": 0.0004094633742857143,
-    "avg_time_per_step": 6.562265835955858e-09,
+    "avg_time_per_primary": 0.0004551146615384615,
+    "avg_time_per_step": 7.293896310180087e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 696,
     "num_steps": 567809473,
-    "pre_emptying_time": 0.005676699,
+    "pre_emptying_time": 0.005691609,
     "queue_hwm": {
      "count": 8473189,
      "index": 102
     },
-    "setup_time": 0.256369763,
+    "setup_time": 0.375914284,
     "slot_occupancy": 0.7780248721440634,
-    "total_time": 3.726116706,
+    "total_time": 4.14154342,
     "unconverged": 0
    },
    {
@@ -7911,21 +8184,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62408.47868131868,
-    "avg_time_per_primary": 0.00040930229296703296,
-    "avg_time_per_step": 6.5584404814141596e-09,
+    "avg_time_per_primary": 0.0004547808781318681,
+    "avg_time_per_step": 7.287164945233667e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 687,
     "num_steps": 567917156,
-    "pre_emptying_time": 0.005712333,
+    "pre_emptying_time": 0.005707691,
     "queue_hwm": {
      "count": 8422127,
      "index": 102
     },
-    "setup_time": 0.254774617,
+    "setup_time": 0.375845931,
     "slot_occupancy": 0.7883668202673677,
-    "total_time": 3.724650866,
+    "total_time": 4.138505991,
     "unconverged": 0
    },
    {
@@ -7935,21 +8208,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62425.28032967033,
-    "avg_time_per_primary": 0.00042530700901098904,
-    "avg_time_per_step": 6.813057254447656e-09,
+    "avg_time_per_primary": 0.0003987689191208791,
+    "avg_time_per_step": 6.387939581768235e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 684,
     "num_steps": 568070051,
-    "pre_emptying_time": 0.005730275,
+    "pre_emptying_time": 0.005732222,
     "queue_hwm": {
      "count": 8440292,
      "index": 102
     },
-    "setup_time": 0.35394519,
+    "setup_time": 0.375008783,
     "slot_occupancy": 0.7920377449682582,
-    "total_time": 3.870293782,
+    "total_time": 3.628797164,
     "unconverged": 0
    },
    {
@@ -7959,21 +8232,21 @@
      "index": 517
     },
     "avg_steps_per_primary": 62415.61483516484,
-    "avg_time_per_primary": 0.0004112012817582418,
-    "avg_time_per_step": 6.588115535578635e-09,
+    "avg_time_per_primary": 0.00045494103296703296,
+    "avg_time_per_step": 7.288897724848175e-09,
     "emptying_step": 518,
     "num_events": 7,
     "num_primaries": 9100,
     "num_step_iters": 690,
     "num_steps": 567982095,
-    "pre_emptying_time": 0.005710089,
+    "pre_emptying_time": 0.005728447,
     "queue_hwm": {
      "count": 8459815,
      "index": 102
     },
-    "setup_time": 0.353927305,
+    "setup_time": 0.376933054,
     "slot_occupancy": 0.7850288930146591,
-    "total_time": 3.741931664,
+    "total_time": 4.1399634,
     "unconverged": 0
    }
   ],
@@ -8002,7 +8275,7 @@
     "scat-rayleigh": 0.375
    },
    "vecgeom": "1.2.5",
-   "version": "0.3.2-rc.1"
+   "version": "0.3.2"
   }
  }
 }
