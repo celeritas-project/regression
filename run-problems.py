@@ -257,6 +257,7 @@ testem15 = {
     "geometry_filename": "testem15.org.json",
     "hepmc3_filename": "testem15-13TeV.hepmc3",
     "physics_filename": "testem15.gdml",
+    "sync": False,
 }
 
 simple_cms = {
@@ -272,6 +273,7 @@ testem3 = {
     "_geometry": "orange",
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
+    "sync": False,
     "primary_gen_options": {
         "pdg": 11,
         "energy": 10000,  # 10 GeV
@@ -469,7 +471,7 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    # device_mods.append([]) # CPU
+    device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
