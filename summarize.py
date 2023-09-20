@@ -155,11 +155,13 @@ def inp_to_nametuple(d):
     if get_msc(d):
         name += '+msc'
 
-    return (
-        name,
-        "vecgeom" if geo_split[-1] == 'gdml' else "orange",
-        "gpu" if d["use_device"] else "cpu"
-    )
+    geo = "vecgeom" if geo_split[-1] == 'gdml' else "orange"
+
+    exe = "gpu" if d["use_device"] else "cpu"
+    if d["sync"]:
+        exe += "+sync"
+
+    return (name, geo, exe)
 
 failure_re = re.compile(
     r'(error|warning|critical'

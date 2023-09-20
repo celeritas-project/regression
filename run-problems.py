@@ -207,7 +207,7 @@ base_input = {
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
     "use_device": False,
-    "sync": True,
+    "sync": False,
     "eloss_fluctuation": True,
 }
 
@@ -250,6 +250,10 @@ use_gpu = {
     "initializer_capacity": 2**26,
 }
 
+use_sync = {
+    "sync": True,
+}
+
 testem15 = {
     "_geometry": "orange",
     "_num_events": 7,
@@ -273,7 +277,6 @@ testem3 = {
     "_geometry": "orange",
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
-    "sync": False,
     "primary_gen_options": {
         "pdg": 11,
         "energy": 10000,  # 10 GeV
@@ -314,6 +317,13 @@ problems = [
     [testem3, use_field, use_msc],
     [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
     [full_cms],
+    [full_cms, use_field, use_msc],
+]
+
+# Run again with sync on for detailed GPU timing
+sync_problems = [
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
     [full_cms, use_field, use_msc],
 ]
 
@@ -471,10 +481,12 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    device_mods.append([]) # CPU
+    #device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
+    inputs += [build_input([base_input] + p + [use_gpu, use_sync])
+               for p in sync_problems]
     with open(results_dir / "index.json", "w") as f:
         json.dump([(inp['_outdir'], inp['_name'])
                    for inp in inputs], f, indent=0)
