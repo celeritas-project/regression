@@ -278,6 +278,7 @@ testem3 = {
     "geometry_filename": "testem3-flat.org.json",
     "physics_filename": "testem3-flat.gdml",
     "primary_gen_options": {
+        "seed": 0,
         "pdg": 11,
         "energy": 10000,  # 10 GeV
         "position": [-22, 0, 0],
