@@ -531,21 +531,21 @@ class PiePlotter:
     def __init__(self, times):
         import matplotlib.pyplot as plt
         self._colormaps = plt.colormaps
-        
+
         self.times = times.dropna()
 
         actions = list(self.times.index)
         ca = sorted([(get_action_priority(a), a) for a in actions])
         (category, actions) = zip(*ca)
-        
+
         cmap = self._colormaps["tab20c"] # 5 groups of 4 shades
         def _get_color(color, shade = 0):
             shade = shade % 4
             return cmap((color % 5) * 4 + shade)
-        
+
         self.outer_colors = _get_color(np.arange(len(KernelCategory)))
         self.actions = np.array(actions)
-        
+
         cat = np.array([int(c) for c in category])
         self.catbound = np.concatenate([cat[:-1] != cat[1:], [True]])
         self.catlabels = [KERNEL_CATEGORY_LABELS[c] for c in cat[self.catbound]]
@@ -554,12 +554,12 @@ class PiePlotter:
         width = 0.3
         angle = 90.0 # degrees
         legend_thresh = 0.02
-        
+
         series = self.times[arch]
         inner = np.array([series[t] for t in self.actions])
         outer = np.cumsum(inner)[self.catbound]
         outer = np.concatenate([[outer[0]], np.diff(outer)])
-        
+
         # Plot outer ring (categories
         (wedges, texts, autotexts) = ax.pie(
             outer,
@@ -571,27 +571,37 @@ class PiePlotter:
                   loc="upper right",
                   bbox_to_anchor=(0.5, 0, 0.5, 1))
         ax.add_artist(outer_legend)
-        
+
         # Determine kernels to higlight
         inner_frac = inner / np.sum(inner)
         inner_cmap = self._colormaps["plasma"]
-        inner_ignore_cmap = self._colormaps["Greys_r"]
-        
+
         slc = inner_frac > legend_thresh
         num_inner = np.count_nonzero(slc)
         ascending_idx = np.argsort(np.argsort(inner_frac[slc]))
         inner_colors = np.zeros((inner.size, 4))
-        inner_colors[slc, :] = inner_cmap(np.linspace(0.0, 1.0, num_inner)[ascending_idx])
-        inner_colors[~slc, :] = [0.5, 0.5, 0.5, 1.0] #inner_ignore_cmap(np.linspace(0.0, 1.0, inner.size - num_inner))
-        
+        inner_colors[slc, :] = inner_cmap(
+                np.linspace(0.0, 1.0, num_inner)[ascending_idx])
+        inner_colors[~slc, :] = [0.5, 0.5, 0.5, 1.0]
+
         (wedges, texts) = ax.pie(
             inner,
             radius=(1 - width), colors=inner_colors,
             wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
         )
-        inner_legend = ax.legend(np.array(wedges)[slc], self.actions[slc],
-                           loc="center",
-                           fontsize='xx-small')
+
+        # Generate legend with all real kernels and one stand-in gray kernel
+        wedges = np.array(wedges)
+        actions = self.actions[slc].tolist()
+        if not np.all(slc):
+            wedges = wedges[slc].tolist() + [wedges[~slc][0]]
+            actions += ["Fast kernel (<{:.0f}%)".format(legend_thresh * 100)]
+
+        inner_legend = ax.legend(
+            wedges, actions,
+            loc="center",
+            fontsize='xx-small'
+        )
         ax.add_artist(inner_legend)
 def main():
     # Generate table from wildstyle failures
