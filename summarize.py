@@ -155,7 +155,7 @@ def inp_to_nametuple(d):
     if get_msc(d):
         name += '+msc'
 
-    geo = "vecgeom" if geo_split[-1] == 'gdml' else "orange"
+    geo = d['_geometry']
 
     exe = "gpu" if d["use_device"] else "cpu"
     if d["sync"]:
