@@ -63,12 +63,16 @@ def inverse_summary(summary):
     return pd.DataFrame({'count': summary['count'], 'mean': mean, 'std': std})
 
 
-def get_cpugpu_ratio(summary):
+def calc_ratio(summary, num, denom):
     mean = summary['mean'].unstack()
     re = summary['std'].unstack() / mean
-    ratio = mean['cpu'] / mean['gpu']
-    std = ratio * np.hypot(re['gpu'], re['cpu'])
+    ratio = mean[num] / mean[denom]
+    std = ratio * np.hypot(re[denom], re[num])
     return pd.DataFrame({'mean': ratio, 'std' : std})
+
+
+def get_cpugpu_ratio(summary):
+    return calc_ratio(summary, 'cpu', 'gpu')
 
 
 def calc_event_rate(results, summary):
@@ -356,7 +360,7 @@ def plot_counts(ax, out):
     }
 
 
-def plot_time_per_step(ax, outp):
+def plot_time_per_step(ax, outp, scale=1):
     get_counts = CountGetter(outp, stream=0)
     get_step_time = StepTimeGetter(outp, stream=0)
 
@@ -375,26 +379,28 @@ def plot_time_per_step(ax, outp):
 
     (norm, active_label) = _calc_scale_and_label(active)
     active /= norm
+    
+    lw = 0.5 * scale
 
     ax.set_axisbelow(True)
-    ax.axhline(0, linestyle='-', lw=0.5, color=(0.75,)*3, zorder=-2)
-    ax.axvline(0, linestyle='-', lw=0.5, color=(0.75,)*3, zorder=-2)
+    ax.axhline(0, linestyle='-', lw=lw, color=(0.75,)*3, zorder=-2)
+    ax.axvline(0, linestyle='-', lw=lw, color=(0.75,)*3, zorder=-2)
 
-    ax.plot(active, stime, marker='', color="0.9", zorder=-1, lw=.5)
-    scat = ax.scatter(active, stime, c=np.arange(len(active)), alpha=0.8, s=3,
+    ax.plot(active, stime, marker='', color="0.9", zorder=-1, lw=lw)
+    scat = ax.scatter(active, stime, c=np.arange(len(active)), alpha=0.8, s=(3 * scale),
                       edgecolors='none')
     ax.annotate('All primaries active', xy=_xy(0), xycoords='data',
                 xytext=(30, 0), textcoords='offset points',
                 size='x-small', color=".2",
-                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=lw))
     ax.annotate('Filling', xy=(_xy(filling)), xycoords='data',
                 xytext=(_xy(filling) * [1.1, 0.7]), textcoords='data',
                 size='x-small', color=".2",
-                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=lw))
     ax.annotate('Draining', xy=(_xy(draining)), xycoords='data',
                 xytext=(_xy(draining) * [0.7, 1.3]), textcoords='data',
                 size='x-small', color=".2",
-                arrowprops=dict(arrowstyle="->", ec=".2", lw=.5))
+                arrowprops=dict(arrowstyle="->", ec=".2", lw=lw))
     ax.set_xlabel("Number of active tracks" + active_label)
     ax.set_ylabel("Time per step [ms]")
 
@@ -485,8 +491,8 @@ def make_failure_table(failures):
             text = "{which}: `{condition}` at `{file}:{line}`".format(**err)
         elif tp == "RuntimeError":
             f = PurePosixPath(err["file"])
-            err["file"] = f.name
-            text = "{which} error: `{what}` at `{file}:{line}`".format(**err)
+            err["where"] = "{}:{:d}".format(f.name, err["line"]) if line in err else f.name
+            text = "{which} error: `{what}` at `{where}`".format(**err)
         elif isinstance(err["stdout"], list) and err["stdout"]:
             text = "`{}`".format(err["stdout"][-1])
         elif isinstance(err["stderr"], list) and err["stderr"]:

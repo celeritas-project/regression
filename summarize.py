@@ -105,6 +105,8 @@ def summarize_result(out):
         "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
         "avg_time_per_primary": time['total'] / num_primaries,
+        "avg_step_per_time": steps / time['total'],
+        "avg_event_per_time": num_events / time['total'],
         "slot_occupancy": steps / (len(active) * get_num_track_slots(inp))
     })
 

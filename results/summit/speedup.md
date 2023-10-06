@@ -8,6 +8,7 @@
 | simple-cms+msc [BM]          | orange   | 26.5× (±0.2) |
 | testem15 [A]                 | orange   | 22.4× (±2.4) |
 | testem15+field [AF]          | orange   | 25.5× (±2.6) |
+|                              | vecgeom  |  nan× (±nan) |
 | testem15+field+msc [AFM]     | orange   | 32.1× (±3.2) |
 |                              | vecgeom  | 31.0× (±2.1) |
 | testem3-flat [C]             | orange   | 24.2× (±0.3) |
