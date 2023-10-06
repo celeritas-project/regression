@@ -15,7 +15,7 @@
 "stderr": [
 "slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory",
 "srun: error: crusher004: task 0: Exited with exit code 2",
-"srun: Terminating StepId=378050.48"
+"srun: Terminating StepId=378061.48"
 ],
 "stdout": []
 }
