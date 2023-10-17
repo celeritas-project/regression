@@ -75,7 +75,9 @@ def get_cpugpu_ratio(summary):
     return calc_ratio(summary, 'cpu', 'gpu')
 
 
-def calc_event_rate(results, summary):
+def calc_event_rate(results, summary=None):
+    if summary is None:
+        summary = results.summed
     ppe = summary[('num_primaries', 'mean')] / summary[('num_events', 'mean')]
     event_rate = inverse_summary(summary['avg_time_per_primary'])
     event_rate['mean'] /= ppe
@@ -614,7 +616,7 @@ class PiePlotter:
 
 
 def plot_event_rate(ax, results):
-    event_rate = calc_event_rate(results, results.summed)
+    event_rate = calc_event_rate(results)
     ax.set_yscale('log')
     p = results.plot_results(ax, event_rate)
     ax.set_ylabel(r"Throughput [event/s]")
