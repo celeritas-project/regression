@@ -133,6 +133,8 @@ class Analysis:
 
         failed_probs = (~self.successful).groupby(level='problem').any()
         self.failed_problems = set(failed_probs.index[failed_probs])
+        
+        self.summed = summarize_instances(self.result[self.successful].dropna(how='all'))
 
     def _load_version(self, summaries):
         versions = set()
@@ -609,6 +611,33 @@ class PiePlotter:
             fontsize='xx-small'
         )
         ax.add_artist(inner_legend)
+
+
+def plot_event_rate(ax, results):
+    event_rate = calc_event_rate(results, results.summed)
+    ax.set_yscale('log')
+    p = results.plot_results(ax, event_rate)
+    ax.set_ylabel(r"Throughput [event/s]")
+    ax.set_ylim([0.5 * event_rate['mean'].min(), None])
+    annotate_metadata(ax, results)
+    return p
+
+
+def dump_markdown(f, headers, table, alignment=None):
+    widths = np.vectorize(len)(table)
+    widths = np.concatenate([widths, [[len(t) for t in headers]]])
+    col_widths = np.max(widths, axis=0)
+    if alignment is None:
+        alignment = ['<'] *len(headers)
+    col_fmt = " | ".join(f"{{:{a}{c}}}" for (a, c) in zip(alignment, col_widths))
+    fmt = ("| " + col_fmt + " |\n").format
+
+    f.write(fmt(*headers))
+    f.write(fmt(*["-"*w for w in col_widths]))
+    for i in range(table.shape[0]):
+        f.write(fmt(*table[i,:].tolist()))
+        
+        
 def main():
     # Generate table from wildstyle failures
     pass
