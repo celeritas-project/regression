@@ -38,6 +38,9 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
+//Threads-per-block launch bound for Celeritas action kernels
+CELERITAS_MAX_BLOCK_SIZE:STRING=256
+
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
 
@@ -96,7 +99,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CUDA_ARCHITECTURES:STRING=70
 
 //CUDA compiler
-CMAKE_CUDA_COMPILER:FILEPATH=/sw/summit/cuda/11.4.2/bin/nvcc
+CMAKE_CUDA_COMPILER:STRING=/sw/summit/cuda/11.4.2/bin/nvcc
 
 //Flags used by the CUDA compiler during all build types.
 CMAKE_CUDA_FLAGS:STRING=-Werror all-warnings -Xcompiler -Wno-psabi
@@ -117,7 +120,7 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_CUDA_HOST_COMPILER:STRING=/sw/summit/gcc/11.2.0-0/bin/g++
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/sw/summit/gcc/11.2.0-0/bin/g++
+CMAKE_CXX_COMPILER:STRING=/sw/summit/gcc/11.2.0-0/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -268,16 +271,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.3.2
+CMAKE_PROJECT_VERSION:STATIC=0.4.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=3
+CMAKE_PROJECT_VERSION_MINOR:STATIC=4
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=2
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -473,7 +476,13 @@ CUDA_cufft_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft.so
 CUDA_cufft_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft_static.a
 
 //Path to a library.
+CUDA_cufft_static_nocallback_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft_static_nocallback.a
+
+//Path to a library.
 CUDA_cufftw_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufftw.so
+
+//Path to a library.
+CUDA_cufftw_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufftw_static.a
 
 //Path to a library.
 CUDA_culibos_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libculibos.a
@@ -492,6 +501,12 @@ CUDA_curand_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcurand_stati
 
 //"cusolver" library
 CUDA_cusolver_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver.so
+
+//Path to a library.
+CUDA_cusolver_lapack_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/liblapack_static.a
+
+//Path to a library.
+CUDA_cusolver_metis_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libmetis_static.a
 
 //Path to a library.
 CUDA_cusolver_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver_static.a
@@ -979,8 +994,12 @@ CUDA_cudart_static_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_cufft_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cufft_static_LIBRARY
 CUDA_cufft_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_static_nocallback_LIBRARY
+CUDA_cufft_static_nocallback_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cufftw_LIBRARY
 CUDA_cufftw_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufftw_static_LIBRARY
+CUDA_cufftw_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_culibos_LIBRARY
 CUDA_culibos_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cupti_LIBRARY
@@ -993,6 +1012,10 @@ CUDA_curand_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_curand_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusolver_LIBRARY
 CUDA_cusolver_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_lapack_static_LIBRARY
+CUDA_cusolver_lapack_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_metis_static_LIBRARY
+CUDA_cusolver_metis_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusolver_static_LIBRARY
 CUDA_cusolver_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusparse_LIBRARY
@@ -1068,7 +1091,7 @@ CUDA_parse_cubin:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/cmake-3.22.2-wowacj45ll2cxqd7qs6hjsyjkupa76po/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.2;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.91;cf7c5a7bc
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
