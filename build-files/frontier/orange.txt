@@ -41,6 +41,9 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
+//Threads-per-block launch bound for Celeritas action kernels
+CELERITAS_MAX_BLOCK_SIZE:STRING=256
+
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=
 
@@ -691,7 +694,7 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.91;cf7c5a7bc
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.98;225a32495
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
