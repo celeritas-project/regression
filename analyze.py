@@ -515,6 +515,7 @@ def make_failure_table(failures):
 
 
 def float_fmt_transform(digits):
+    assert int(digits) == digits
     format = "{{:.{}f}}".format(digits).format
     def transform(val):
         if np.isnan(val):
@@ -537,16 +538,31 @@ def autopct_format(pctvalue):
     return "{:1.0f}%".format(pctvalue)
 
 
-class PiePlotter:
+class ActionFractionCalculator:
     def __init__(self, times):
-        import matplotlib.pyplot as plt
-        self._colormaps = plt.colormaps
-
         self.times = times.dropna()
 
         actions = list(self.times.index)
         ca = sorted([(get_action_priority(a), a) for a in actions])
         (category, actions) = zip(*ca)
+        self.actions = np.array(actions)
+
+        cat = np.array([int(c) for c in category])
+        self.bounds = np.concatenate([cat[:-1] != cat[1:], [True]])
+        self.labels = [KERNEL_CATEGORY_LABELS[c] for c in cat[self.bounds]]
+
+    def __call__(self, arch):
+        series = self.times[arch]
+        inner = np.array([series[t] for t in self.actions])
+        outer = np.cumsum(inner)[self.bounds]
+        outer = np.concatenate([[outer[0]], np.diff(outer)])
+        return (inner, outer)
+     
+class PiePlotter:
+    def __init__(self, times):
+        import matplotlib.pyplot as plt
+        self._colormaps = plt.colormaps
+        self.get_actions = ActionFractionCalculator(times)
 
         cmap = self._colormaps["tab20c"] # 5 groups of 4 shades
         def _get_color(color, shade = 0):
@@ -554,21 +570,25 @@ class PiePlotter:
             return cmap((color % 5) * 4 + shade)
 
         self.outer_colors = _get_color(np.arange(len(KernelCategory)))
-        self.actions = np.array(actions)
+        
+    @property
+    def arch(self):
+        return self.get_actions.times.columns
+    
+    @property
+    def actions(self):
+        return self.get_actions.actions
 
-        cat = np.array([int(c) for c in category])
-        self.catbound = np.concatenate([cat[:-1] != cat[1:], [True]])
-        self.catlabels = [KERNEL_CATEGORY_LABELS[c] for c in cat[self.catbound]]
+    @property
+    def catlabels(self):
+        return self.get_actions.labels
 
     def __call__(self, ax, arch):
         width = 0.3
         angle = 90.0 # degrees
         legend_thresh = 0.02
-
-        series = self.times[arch]
-        inner = np.array([series[t] for t in self.actions])
-        outer = np.cumsum(inner)[self.catbound]
-        outer = np.concatenate([[outer[0]], np.diff(outer)])
+        
+        (inner, outer) = self.get_actions(arch)
 
         # Plot outer ring (categories
         (wedges, texts, autotexts) = ax.pie(
