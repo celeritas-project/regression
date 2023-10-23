@@ -92,9 +92,9 @@ class ProblemAbbreviator:
             self.geo_abbrev = json.load(f)
 
     def __call__(self, inp):
-        geo, *_ = inp['geometry_filename'].partition('.')
+        geo, *_ = inp['geometry_name'].partition('.')
         bits = [self.geo_abbrev[geo]]
-        if inp.get('mag_field') and any(inp['mag_field']):
+        if inp.get('field') and any(inp['field']):
             bits.append('F')
         if inp['enable_msc']:
             bits.append('M')
@@ -212,7 +212,7 @@ class Analysis:
         result = {}
         for p in problems:
             inputs = self.input.xs(p, level='problem')
-            inputs = inputs.dropna(subset='geometry_filename')
+            inputs = inputs.dropna(subset='geometry_name')
             if len(inputs):
                 value = abbreviate_problem(inputs.iloc[0])
                 if p in self.failed_problems:

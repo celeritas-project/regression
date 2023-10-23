@@ -28,21 +28,34 @@ def get_action_times(actions):
 
 def get_msc(d):
     try:
-        msc_model = d['geant_options']['msc']
+        phyopts = d['physics_options']
     except KeyError:
-        return d['enable_msc']
-    else:
-        return msc_model != "none"
+        try:
+            # v0.3
+            phyopts = d['geant_options']
+        except KeyError:
+            # v0.1?
+            return d['enable_msc']
+
+    msc_model = phyopts['msc']
+    return msc_model != "none"
 
 def get_num_events_and_primaries(d):
     try:
-        primary_gen = d['primary_gen_options']
+        primary_gen = d['primary_options']
     except KeyError:
+        try:
+            # v0.3 or earlier
+            primary_gen = d['primary_gen_options']
+        except KeyError:
+            primary_gen = None
+
+    if primary_gen:
+        num_events = primary_gen['num_events']
+        num_primaries = num_events * primary_gen['primaries_per_event']
+    else:
         num_events = d.get('_num_events', None)
         num_primaries = d.get('_num_primaries', None)
-    else:
-       num_events = primary_gen['num_events']
-       num_primaries = num_events * primary_gen['primaries_per_event']
     return (num_events, num_primaries)
 
 def get_num_track_slots(inp):
@@ -120,13 +133,21 @@ def summarize_result(out):
     return summary
 
 def summarize_input(inp):
-    mag_field = inp.get('mag_field')
-    if mag_field and not any(mag_field):
-        # v0.2
-        mag_field = None
+    field = inp.get('field')
+    if not field:
+        field = inp.get('mag_field')
+    if field and not any(field):
+        # v0.2 and earlier
+        field = None
+
+    geo_file = inp.get('geometry_file')
+    if not geo_file:
+        # v0.3 and earlier
+        geo_file = inp['geometry_filename']
+
     return {
-        'geometry_filename': PurePath(inp['geometry_filename']).name,
-        'mag_field': mag_field,
+        'geometry_name': PurePath(geo_file).name,
+        'field': field,
         'use_device': inp['use_device'],
         'enable_msc': get_msc(inp),
         'num_track_slots': get_num_track_slots(inp),
