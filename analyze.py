@@ -92,9 +92,9 @@ class ProblemAbbreviator:
             self.geo_abbrev = json.load(f)
 
     def __call__(self, inp):
-        geo, *_ = inp['geometry_filename'].partition('.')
+        geo, *_ = inp['geometry_name'].partition('.')
         bits = [self.geo_abbrev[geo]]
-        if inp.get('mag_field') and any(inp['mag_field']):
+        if inp.get('field') and any(inp['field']):
             bits.append('F')
         if inp['enable_msc']:
             bits.append('M')
@@ -116,6 +116,13 @@ class Analysis:
         input = pd.DataFrame([v.get('input') or {} for v in summaries.values()],
                              index=summaries.keys())
         input.index.names = RESULT_LEVELS[:-1]
+        try:
+            # Try renaming < v3
+            geo_name = input.pop('geometry_filename')
+        except KeyError:
+            pass
+        else:
+            input['geometry_name'] = geo_name
 
         result = pd.DataFrame([v['result'] for v in summaries.values()],
                                index=summaries.keys())
@@ -212,7 +219,7 @@ class Analysis:
         result = {}
         for p in problems:
             inputs = self.input.xs(p, level='problem')
-            inputs = inputs.dropna(subset='geometry_filename')
+            inputs = inputs.dropna(subset='geometry_name')
             if len(inputs):
                 value = abbreviate_problem(inputs.iloc[0])
                 if p in self.failed_problems:
