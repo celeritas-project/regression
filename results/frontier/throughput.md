@@ -1,4 +1,4 @@
-| Problem                       | Geometry |        CPU [s] |        GPU [s] |
+| Problem                       | Geometry |      CPU [1/s] |      GPU [1/s] |
 | ----------------------------- | -------- | -------------- | -------------- |
 | simple-cms+field [BF]         | orange   | 0.123 (±0.015) | 2.480 (±0.026) |
 | simple-cms+field+msc [BFM*]   | orange   | 0.101 (±0.024) | 2.203 (±0.031) |

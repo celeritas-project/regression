@@ -689,7 +689,7 @@ def dump_event_rate(f, results, prec=3):
             tp_out[i, j] = fmt(*row2)
     
     dump_markdown(f,
-                  ["Problem", "Geometry", "CPU [s]", "GPU [s]"], 
+                  ["Problem", "Geometry", "CPU [1/s]", "GPU [1/s]"], 
                   tp_out,
                   alignment="<<>>")
     
