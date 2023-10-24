@@ -667,6 +667,54 @@ def dump_markdown(f, headers, table, alignment=None):
         f.write(fmt(*table[i,:].tolist()))
         
         
+        
+def dump_event_rate(f, results, prec=3):
+    assert prec == int(prec)
+    fmt = "{{:.{:d}f}} (±{{:.{:d}f}})".format(prec, prec).format
+    event_rate = calc_event_rate(results)
+    del event_rate['count']
+    event_rate = event_rate.loc[event_rate.index.get_level_values('arch') != 'gpu+sync']
+    event_rate = event_rate.dropna(how='all', axis=0).unstack('arch')
+
+    tp_out = np.full((len(event_rate), 4), "", dtype=object)
+    _abbrev = results.problem_to_abbr()
+    prev_prob = None
+    for (i, ((prob, geo), row)) in enumerate(event_rate.iterrows()):
+        if prob != prev_prob:
+            abbr = _abbrev[prob]
+            tp_out[i, 0] = f"{prob} [{abbr}]"
+        prev_prob = prob
+        tp_out[i, 1] = geo
+        for (j, (arch, row2)) in enumerate(row.unstack(0).iterrows(), start=2):
+            tp_out[i, j] = fmt(*row2)
+    
+    dump_markdown(f,
+                  ["Problem", "Geometry", "CPU [s]", "GPU [s]"], 
+                  tp_out,
+                  alignment="<<>>")
+    
+    
+def dump_speedup(f, results, prec=1):
+    assert prec == int(prec)
+    fmt = "{{:.{:d}f}}× (±{{:.{:d}f}})".format(prec, prec).format
+    
+    speedup = get_cpugpu_ratio(results.summed['total_time']).dropna(how='all', axis=0)
+    speedup_out = np.full((len(speedup), 3), "", dtype=object)
+    _abbrev = results.problem_to_abbr()
+    prev_prob = None
+    for (i, ((prob, geo), row)) in enumerate(speedup.iterrows()):
+        if prob != prev_prob:
+            abbr = _abbrev[prob]
+            speedup_out[i, 0] = f"{prob} [{abbr}]"
+        speedup_out[i, 1] = geo
+        speedup_out[i, 2] = fmt(*row)
+        prev_prob = prob
+
+    dump_markdown(f,
+                  ["Problem", "Geometry", "Speedup"], 
+                  speedup_out,
+                  alignment="<<>")
+    
 def main():
     # Generate table from wildstyle failures
     pass
