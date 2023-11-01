@@ -44,6 +44,9 @@ CELERITAS_MAX_BLOCK_SIZE:STRING=256
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
 
+//Global runtime precision for real numbers
+CELERITAS_REAL_TYPE:STRING=
+
 //Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
 
@@ -734,6 +737,8 @@ CELERITAS_CORE_GEO-STRINGS:INTERNAL=VecGeom;ORANGE
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=summit
+//STRINGS property for variable: CELERITAS_REAL_TYPE
+CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -1091,7 +1096,7 @@ CUDA_parse_cubin:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/cmake-3.22.2-wowacj45ll2cxqd7qs6hjsyjkupa76po/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.101;585806eb4
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.112;7b24878db
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1201,6 +1206,7 @@ ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/gpfs/alpine/proj-shared/csc404/celeritas/install-ndebug
 _LAST_CELERITAS_CORE_GEO:INTERNAL=VecGeom
 _LAST_CELERITAS_CORE_RNG:INTERNAL=xorwow
+_LAST_CELERITAS_REAL_TYPE:INTERNAL=double
 _Python_EXECUTABLE:INTERNAL=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/bin/python3.9
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;10;64;;cpython-39-powerpc64le-linux-gnu;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9/site-packages;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9/site-packages
