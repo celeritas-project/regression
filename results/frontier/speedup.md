@@ -1,12 +1,12 @@
 | Problem                       | Geometry |       Speedup |
 | ----------------------------- | -------- | ------------- |
-| simple-cms+field [BF]         | orange   |  20.1× (±2.5) |
-| simple-cms+field+msc [BFM*]   | orange   |  21.9× (±5.3) |
-| simple-cms+msc [BM]           | orange   | 38.2× (±14.4) |
-| testem15 [A]                  | orange   | 38.4× (±11.3) |
-| testem15+field [AF*]          | orange   | 42.6× (±19.5) |
-| testem15+field+msc [AFM*]     | orange   | 40.2× (±11.7) |
-| testem3-flat [C*]             | orange   |  22.6× (±7.3) |
-| testem3-flat+field [CF]       | orange   | 21.6× (±10.0) |
-| testem3-flat+field+msc [CFM*] | orange   |  15.8× (±4.1) |
-| testem3-flat+msc [CM]         | orange   |  25.0× (±5.3) |
+| simple-cms+field [BF]         | orange   | 38.3× (±13.0) |
+| simple-cms+field+msc [BFM*]   | orange   |  32.9× (±7.6) |
+| simple-cms+msc [BM]           | orange   | 35.5× (±12.4) |
+| testem15 [A]                  | orange   | 37.2× (±11.2) |
+| testem15+field [AF*]          | orange   | 46.8× (±16.9) |
+| testem15+field+msc [AFM*]     | orange   | 44.2× (±16.0) |
+| testem3-flat [C*]             | orange   |  27.9× (±9.9) |
+| testem3-flat+field [CF]       | orange   |  24.5× (±6.7) |
+| testem3-flat+field+msc [CFM*] | orange   |  19.7× (±5.8) |
+| testem3-flat+msc [CM]         | orange   | 33.1× (±10.6) |
