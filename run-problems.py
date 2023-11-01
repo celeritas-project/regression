@@ -157,12 +157,12 @@ class Frontier(System):
     name = "frontier"
     num_jobs = 8
     gpu_per_job = 1
-    cpu_per_job = 8
+    cpu_per_job = 7
 
     # NOTE: layout multi-gpu run
     # num_jobs = 4
     # gpu_per_job = 2
-    # cpu_per_job = 16
+    # cpu_per_job = 14
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
