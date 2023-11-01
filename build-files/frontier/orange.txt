@@ -47,6 +47,9 @@ CELERITAS_MAX_BLOCK_SIZE:STRING=256
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=
 
+//Global runtime precision for real numbers
+CELERITAS_REAL_TYPE:STRING=
+
 //Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
 
@@ -500,6 +503,8 @@ CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;hipRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=frontier
+//STRINGS property for variable: CELERITAS_REAL_TYPE
+CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -694,7 +699,7 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.101;585806eb4
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.138;fd9d70b9b
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -802,6 +807,7 @@ ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/ccs/home/s3j/.local/src/celeritas-frontier/install-ndebug
 _LAST_CELERITAS_CORE_GEO:INTERNAL=ORANGE
 _LAST_CELERITAS_CORE_RNG:INTERNAL=xorwow
+_LAST_CELERITAS_REAL_TYPE:INTERNAL=double
 _Python_EXECUTABLE:INTERNAL=/lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view/bin/python3.9
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;12;64;;cpython-39-x86_64-linux-gnu;/lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view/lib/python3.9;/lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view/lib/python3.9;/lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view/lib/python3.9/site-packages;/lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view/lib/python3.9/site-packages
