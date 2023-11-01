@@ -12,8 +12,8 @@
 },
 "stderr": [
 "slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory",
-"srun: error: frontier01016: task 0: Exited with exit code 2",
-"srun: Terminating StepId=1482050.144"
+"srun: error: frontier04216: task 0: Exited with exit code 2",
+"srun: Terminating StepId=1490760.144"
 ],
 "stdout": []
 }
