@@ -36,7 +36,7 @@
 | cuda | orange  | ioni-moller-bhabha                          |    64 |      236 |     0.500 |
 | cuda | orange  | brems-sb                                    |    64 |      304 |     0.375 |
 | cuda | orange  | brems-rel                                   |    64 |      288 |     0.375 |
-| cuda | orange  | photoel-livermore                           |    80 |      264 |     0.375 |
+| cuda | orange  | photoel-livermore                           |    64 |      268 |     0.375 |
 | cuda | orange  | scat-klein-nishina                          |    64 |      232 |     0.500 |
 | cuda | orange  | conv-bethe-heitler                          |    64 |      272 |     0.375 |
 | cuda | orange  | scat-rayleigh                               |   104 |      252 |     0.500 |
