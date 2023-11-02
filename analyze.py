@@ -35,6 +35,8 @@ KERNEL_ORDERING = {
     'pre-step': KernelCategory.PHYS,
 }
 
+BYTES_PER_REG = 4 # 32-bit registers
+
 def unstack_subdict(df):
     result = pd.DataFrame(list(df.values), index=df.index)
     result.columns.name = df.name
@@ -142,7 +144,7 @@ class Analysis:
 
         failed_probs = (~self.successful).groupby(level='problem').any()
         self.failed_problems = set(failed_probs.index[failed_probs])
-        
+
         self.summed = summarize_instances(self.result[self.successful].dropna(how='all'))
 
     def _load_version(self, summaries):
@@ -390,7 +392,7 @@ def plot_time_per_step(ax, outp, scale=1):
 
     (norm, active_label) = _calc_scale_and_label(active)
     active /= norm
-    
+
     lw = 0.5 * scale
 
     ax.set_axisbelow(True)
@@ -564,7 +566,7 @@ class ActionFractionCalculator:
         outer = np.cumsum(inner)[self.bounds]
         outer = np.concatenate([[outer[0]], np.diff(outer)])
         return (inner, outer)
-     
+
 class PiePlotter:
     def __init__(self, times):
         import matplotlib.pyplot as plt
@@ -577,11 +579,11 @@ class PiePlotter:
             return cmap((color % 5) * 4 + shade)
 
         self.outer_colors = _get_color(np.arange(len(KernelCategory)))
-        
+
     @property
     def arch(self):
         return self.get_actions.times.columns
-    
+
     @property
     def actions(self):
         return self.get_actions.actions
@@ -594,7 +596,7 @@ class PiePlotter:
         width = 0.3
         angle = 90.0 # degrees
         legend_thresh = 0.02
-        
+
         (inner, outer) = self.get_actions(arch)
 
         # Plot outer ring (categories
@@ -642,6 +644,37 @@ class PiePlotter:
         ax.add_artist(inner_legend)
 
 
+
+def _update_gpusync_tuple(t):
+    if t[2] == "gpu+sync":
+        t = t[:2] + ("gpu",) + t[3:]
+    return t
+
+
+def calc_geo_frac(analysis):
+    action_times = analysis.result["action_times"][analysis.valid]
+    _arch = action_times.index.get_level_values("arch")
+    # Only get CPU and GPU+sync values
+    action_times = unstack_subdict(action_times[_arch != "gpu"])
+    # Get a mask for action categories
+    _cat = np.vectorize(get_action_priority)(action_times.columns)
+    geo_actions = ((_cat == KernelCategory.GEO)
+                   | (_cat == KernelCategory.GP))
+
+    # Replace "gpu+sync" with "gpu"
+    geo_action_times = action_times.loc[:, geo_actions]
+    geo_action_times.index = pd.MultiIndex.from_tuples(
+        [_update_gpusync_tuple(r) for r in geo_action_times.index],
+        names=geo_action_times.index.names
+    )
+
+    geo_frac = summarize_instances(
+        geo_action_times.sum(axis=1) / analysis.result["total_time"]
+    )
+    geo_frac.dropna(inplace=True)
+    return geo_frac
+
+
 def plot_event_rate(ax, results):
     event_rate = calc_event_rate(results)
     ax.set_yscale('log')
@@ -665,9 +698,9 @@ def dump_markdown(f, headers, table, alignment=None):
     f.write(fmt(*["-"*w for w in col_widths]))
     for i in range(table.shape[0]):
         f.write(fmt(*table[i,:].tolist()))
-        
-        
-        
+
+
+
 def dump_event_rate(f, results, prec=3):
     assert prec == int(prec)
     fmt = "{{:.{:d}f}} (±{{:.{:d}f}})".format(prec, prec).format
@@ -687,17 +720,17 @@ def dump_event_rate(f, results, prec=3):
         tp_out[i, 1] = geo
         for (j, (arch, row2)) in enumerate(row.unstack(0).iterrows(), start=2):
             tp_out[i, j] = fmt(*row2)
-    
+
     dump_markdown(f,
-                  ["Problem", "Geometry", "CPU [1/s]", "GPU [1/s]"], 
+                  ["Problem", "Geometry", "CPU [1/s]", "GPU [1/s]"],
                   tp_out,
                   alignment="<<>>")
-    
-    
+
+
 def dump_speedup(f, results, prec=1):
     assert prec == int(prec)
     fmt = "{{:.{:d}f}}× (±{{:.{:d}f}})".format(prec, prec).format
-    
+
     speedup = get_cpugpu_ratio(results.summed['total_time']).dropna(how='all', axis=0)
     speedup_out = np.full((len(speedup), 3), "", dtype=object)
     _abbrev = results.problem_to_abbr()
@@ -711,10 +744,40 @@ def dump_speedup(f, results, prec=1):
         prev_prob = prob
 
     dump_markdown(f,
-                  ["Problem", "Geometry", "Speedup"], 
+                  ["Problem", "Geometry", "Speedup"],
                   speedup_out,
                   alignment="<<>")
-    
+
+
+def load_kernels(analysis, problem, geo):
+    return analysis.load_results((problem, geo, "gpu"), 0)["system"]["kernels"]
+
+
+def kernel_stats_dataframe(kernel_stats):
+    values = []
+    index = []
+    for (instance, kernels) in kernel_stats.items():
+        arch, _, geo = instance.partition("/")
+        for (ki, stats) in enumerate(kernels):
+            stats.pop("stack_size", None) # Unavailable with HIP
+            row = list(stats.values())
+            row.append(ki)
+            values.append(row)
+            name = stats["name"]
+            if name == "extend-from-secondaries":
+                # Fixup duplicate name
+                name = f"{name}-{ki}"
+            index.append((arch, geo, name))
+    index=pd.MultiIndex.from_tuples(index, names=("arch", "geo", "name"))
+    columns = pd.Index(list(stats.keys()) + ["kernel_index"])
+    result = pd.DataFrame(values, index=index, columns=columns)
+    del result["name"]
+    del result["print_buffer_size"]
+    result["register_mem"] = result["num_regs"] * BYTES_PER_REG
+    return result
+
+
+
 def main():
     # Generate table from wildstyle failures
     pass
