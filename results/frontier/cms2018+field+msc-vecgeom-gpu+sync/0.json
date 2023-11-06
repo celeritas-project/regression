@@ -1,0 +1,21 @@
+{
+"input": {
+"_geometry": "vecgeom",
+"_instance": 0,
+"_name": [
+"cms2018+field+msc",
+"vecgeom",
+"gpu+sync"
+],
+"_num_events": 7,
+"_num_primaries": 9100,
+"_outdir": "cms2018+field+msc-vecgeom-gpu+sync",
+"_timeout": 600.0
+},
+"stderr": [
+"slurmstepd: error: execve(): nonexistent/bin/celer-sim: No such file or directory",
+"srun: error: frontier01917: task 0: Exited with exit code 2",
+"srun: Terminating StepId=1491106.288"
+],
+"stdout": []
+}

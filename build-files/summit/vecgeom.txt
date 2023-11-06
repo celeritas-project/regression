@@ -38,8 +38,14 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
+//Threads-per-block launch bound for Celeritas action kernels
+CELERITAS_MAX_BLOCK_SIZE:STRING=256
+
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/sw/summit/xalt/1.2.1/site:/sw/summit/xalt/1.2.1/libexec
+
+//Global runtime precision for real numbers
+CELERITAS_REAL_TYPE:STRING=
 
 //Only run one GPU-enabled test at a time
 CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
@@ -96,7 +102,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CUDA_ARCHITECTURES:STRING=70
 
 //CUDA compiler
-CMAKE_CUDA_COMPILER:FILEPATH=/sw/summit/cuda/11.4.2/bin/nvcc
+CMAKE_CUDA_COMPILER:STRING=/sw/summit/cuda/11.4.2/bin/nvcc
 
 //Flags used by the CUDA compiler during all build types.
 CMAKE_CUDA_FLAGS:STRING=-Werror all-warnings -Xcompiler -Wno-psabi
@@ -117,7 +123,7 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_CUDA_HOST_COMPILER:STRING=/sw/summit/gcc/11.2.0-0/bin/g++
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/sw/summit/gcc/11.2.0-0/bin/g++
+CMAKE_CXX_COMPILER:STRING=/sw/summit/gcc/11.2.0-0/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -268,16 +274,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.3.2
+CMAKE_PROJECT_VERSION:STATIC=0.4.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=3
+CMAKE_PROJECT_VERSION_MINOR:STATIC=4
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=2
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -473,7 +479,13 @@ CUDA_cufft_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft.so
 CUDA_cufft_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft_static.a
 
 //Path to a library.
+CUDA_cufft_static_nocallback_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufft_static_nocallback.a
+
+//Path to a library.
 CUDA_cufftw_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufftw.so
+
+//Path to a library.
+CUDA_cufftw_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcufftw_static.a
 
 //Path to a library.
 CUDA_culibos_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libculibos.a
@@ -492,6 +504,12 @@ CUDA_curand_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcurand_stati
 
 //"cusolver" library
 CUDA_cusolver_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver.so
+
+//Path to a library.
+CUDA_cusolver_lapack_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/liblapack_static.a
+
+//Path to a library.
+CUDA_cusolver_metis_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libmetis_static.a
 
 //Path to a library.
 CUDA_cusolver_static_LIBRARY:FILEPATH=/sw/summit/cuda/11.4.2/lib64/libcusolver_static.a
@@ -719,6 +737,8 @@ CELERITAS_CORE_GEO-STRINGS:INTERNAL=VecGeom;ORANGE
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=summit
+//STRINGS property for variable: CELERITAS_REAL_TYPE
+CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -979,8 +999,12 @@ CUDA_cudart_static_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_cufft_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cufft_static_LIBRARY
 CUDA_cufft_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_static_nocallback_LIBRARY
+CUDA_cufft_static_nocallback_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cufftw_LIBRARY
 CUDA_cufftw_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufftw_static_LIBRARY
+CUDA_cufftw_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_culibos_LIBRARY
 CUDA_culibos_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cupti_LIBRARY
@@ -993,6 +1017,10 @@ CUDA_curand_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_curand_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusolver_LIBRARY
 CUDA_cusolver_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_lapack_static_LIBRARY
+CUDA_cusolver_lapack_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_metis_static_LIBRARY
+CUDA_cusolver_metis_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusolver_static_LIBRARY
 CUDA_cusolver_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusparse_LIBRARY
@@ -1068,7 +1096,7 @@ CUDA_parse_cubin:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/autofs/nccs-svm1_sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-11.2.0/cmake-3.22.2-wowacj45ll2cxqd7qs6hjsyjkupa76po/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.3.2;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-dev.124;565e6012c
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1090,7 +1118,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/gpfs/alpine/proj-shared/csc404/ce
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VecGeom
-FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.5(1.1.17)]
+FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.5(1.2.4)]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib64/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.10.5(3.7.0)]
 //ADVANCED property for variable: GITCOMMAND
@@ -1178,6 +1206,7 @@ ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/gpfs/alpine/proj-shared/csc404/celeritas/install-ndebug
 _LAST_CELERITAS_CORE_GEO:INTERNAL=VecGeom
 _LAST_CELERITAS_CORE_RNG:INTERNAL=xorwow
+_LAST_CELERITAS_REAL_TYPE:INTERNAL=double
 _Python_EXECUTABLE:INTERNAL=/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/bin/python3.9
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;10;64;;cpython-39-powerpc64le-linux-gnu;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9/site-packages;/gpfs/alpine/proj-shared/csc404/celeritas/spack/view/lib/python3.9/site-packages

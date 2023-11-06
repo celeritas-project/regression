@@ -149,19 +149,20 @@ class Summit(System):
     def get_monitoring_coro(self):
         return [self.run_jslist()]
 
-class Crusher(System):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-crusher'
+class Frontier(System):
+    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-frontier'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug'
     }
-    name = "crusher"
+    name = "frontier"
+    num_jobs = 8
+    gpu_per_job = 1
+    cpu_per_job = 7
+
     # NOTE: layout multi-gpu run
     # num_jobs = 4
     # gpu_per_job = 2
-    # cpu_per_job = 16
-    num_jobs = 8
-    gpu_per_job = 1
-    cpu_per_job = 8
+    # cpu_per_job = 14
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
@@ -194,6 +195,13 @@ class Crusher(System):
             stderr=asyncio.subprocess.PIPE,
             env=env,
         )
+
+class Crusher(Frontier):
+    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-crusher'
+    build_dirs = {
+        "orange": _CELER_ROOT / 'build-ndebug'
+    }
+    name = "crusher"
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
@@ -468,7 +476,7 @@ async def main():
         Sys = Local
     else:
         # TODO: use metaclass to build this list automatically
-        _systems = {S.name: S for S in [Summit, Crusher, Wildstyle]}
+        _systems = {S.name: S for S in [Frontier, Summit, Crusher, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
 
@@ -484,7 +492,7 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    #device_mods.append([]) # CPU
+    device_mods.append([]) # CPU
 
     inputs = [build_input([base_input] + p + d)
               for p, d in itertools.product(problems, device_mods)]
