@@ -203,6 +203,51 @@ class Crusher(Frontier):
     }
     name = "crusher"
 
+class Perlmutter(Frontier):
+    _CELER_ROOT = Path(environ['CFS']) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
+    build_dirs = {
+        "orange": _CELER_ROOT / 'build-ndebug-novg',
+        "vecgeom": _CELER_ROOT / 'build-ndebug',
+    }
+    name = "perlmutter"
+    num_jobs = 4
+    gpu_per_job = 1
+    cpu_per_job = 16
+
+    def create_celer_subprocess(self, inp):
+        cmd = "srun"
+        env = dict(environ)
+        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+        env["CUDA_VISIBLE_DEVICES"] = str(inp["_instance"])
+
+        args = [
+            f"--cpus-per-task={self.cpu_per_job}",
+            "--ntasks=1"
+        ]
+        if inp['use_device']:
+            args.append("--gpus-per-task=1")
+        else:
+            env["CELER_DISABLE_DEVICE"] = "1"
+            args.append("--gpus=0")
+
+        try:
+            build = self.build_dirs[inp["_geometry"]]
+        except KeyError:
+            build = PurePath("nonexistent")
+
+        args.extend([
+            build / "bin" / "celer-sim",
+            "-"
+        ])
+
+        return asyncio.create_subprocess_exec(
+            cmd, *args,
+            stdin=asyncio.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env=env,
+        )
+
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
@@ -476,7 +521,7 @@ async def main():
         Sys = Local
     else:
         # TODO: use metaclass to build this list automatically
-        _systems = {S.name: S for S in [Frontier, Summit, Crusher, Wildstyle]}
+        _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
 

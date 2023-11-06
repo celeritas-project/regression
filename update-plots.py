@@ -27,11 +27,13 @@ cpu_per_gpu = {
     "summit": 7,
     "frontier": 7,
     "crusher": 8,
+    "perlmutter": 16,
 }
 
 system_color = {
     "summit": "#7A954F",
     "frontier": "#BC5544",
+    "perlmutter": "#3E92C7",
 }
 
 # archgeo_colors = {k: np.array(v, dtype=float) / 255 for k, v in {
@@ -452,6 +454,7 @@ def plot_kernels(cuda, hip, problem):
 summit = plot_all("summit")
 crusher = plot_minimal("crusher")
 frontier = plot_minimal("frontier")
+perlmutter = plot_minimal("perlmutter")
 
 # Compare
 fig = plot_compare(summit, frontier)
