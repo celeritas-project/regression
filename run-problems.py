@@ -212,7 +212,7 @@ class Perlmutter(Frontier):
     name = "perlmutter"
     num_jobs = 4
     gpu_per_job = 1
-    cpu_per_job = 16
+    cpu_per_job = 7
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"

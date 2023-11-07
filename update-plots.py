@@ -27,7 +27,7 @@ cpu_per_gpu = {
     "summit": 7,
     "frontier": 7,
     "crusher": 8,
-    "perlmutter": 16,
+    "perlmutter": 7,
 }
 
 system_color = {
@@ -454,7 +454,7 @@ def plot_kernels(cuda, hip, problem):
 summit = plot_all("summit")
 crusher = plot_minimal("crusher")
 frontier = plot_minimal("frontier")
-perlmutter = plot_minimal("perlmutter")
+perlmutter = plot_all("perlmutter")
 
 # Compare
 fig = plot_compare(summit, frontier)
