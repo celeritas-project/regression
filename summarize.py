@@ -112,6 +112,7 @@ def summarize_result(out):
         "emptying_step": emptying_step,
         "setup_time": time['setup'],
         "total_time": time['total'],
+        "warmup_time": time.get('warmup', None),
         "active_hwm": calc_hwm(active),
         "queue_hwm": calc_hwm(inits),
         "pre_emptying_time": get_step_time()[(emptying_step or 0) - 1],

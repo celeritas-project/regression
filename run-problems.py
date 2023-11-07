@@ -181,12 +181,12 @@ class Frontier(System):
         try:
             build = self.build_dirs[inp["_geometry"]]
         except KeyError:
-            build = PurePath("nonexistent")
+            raise RuntimeError("Geometry type unavailable")
 
-        args.extend([
-            build / "bin" / "celer-sim",
-            "-"
-        ])
+        exe = build / "bin" / "celer-sim"
+        if not exe.exists():
+            raise FileNotFoundError(exe)
+        args.extend([str(exe), "-"])
 
         return asyncio.create_subprocess_exec(
             cmd, *args,
@@ -462,8 +462,8 @@ async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
     try:
         proc = await system.create_celer_subprocess(inp)
-    except FileNotFoundError as e:
-        print("File not found:", e)
+    except Exception as e:
+        print("Problem creating subprocess:", e)
         return exception_to_dict(e, context="creating subprocess")
 
     # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
