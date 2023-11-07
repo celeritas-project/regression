@@ -277,16 +277,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.4.0
+CMAKE_PROJECT_VERSION:STATIC=0.3.2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=4
+CMAKE_PROJECT_VERSION_MINOR:STATIC=3
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+CMAKE_PROJECT_VERSION_PATCH:STATIC=2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -1150,7 +1150,7 @@ CUDA_parse_cubin:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-z
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-11.2.0/cmake-3.26.3-5vtoqmjru432zemlam2cjut7wnupuptr/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-rc.1;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.3.2;;
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1172,7 +1172,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VecGeom
-FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.5(1.2.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.5(1.1.17)]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.2(3.7.0)]
 //ADVANCED property for variable: GITCOMMAND

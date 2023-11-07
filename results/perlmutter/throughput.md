@@ -1,18 +1,18 @@
 | Problem                      | Geometry |      CPU [1/s] |      GPU [1/s] |
 | ---------------------------- | -------- | -------------- | -------------- |
-| cms2018 [Z]                  | vecgeom  | 0.082 (±0.001) | 0.775 (±0.003) |
-| cms2018+field+msc [ZFM]      | vecgeom  | 0.037 (±0.000) | 0.219 (±0.002) |
-| simple-cms+field [BF]        | orange   | 0.132 (±0.001) | 4.989 (±0.086) |
-| simple-cms+field+msc [BFM]   | orange   | 0.102 (±0.000) | 4.061 (±0.107) |
-|                              | vecgeom  | 0.107 (±0.002) | 3.738 (±0.014) |
-| simple-cms+msc [BM]          | orange   | 0.119 (±0.001) | 5.136 (±0.068) |
-| testem15 [A]                 | orange   | 0.176 (±0.001) | 7.438 (±0.121) |
-| testem15+field [AF]          | orange   | 0.145 (±0.001) | 7.081 (±0.124) |
-| testem15+field+msc [AFM]     | orange   | 0.118 (±0.000) | 5.908 (±0.119) |
-|                              | vecgeom  | 0.126 (±0.000) | 5.357 (±0.016) |
-| testem3-flat [C]             | orange   | 0.094 (±0.000) | 3.537 (±0.038) |
-|                              | vecgeom  | 0.107 (±0.001) | 3.247 (±0.020) |
-| testem3-flat+field [CF]      | orange   | 0.078 (±0.000) | 2.456 (±0.008) |
-| testem3-flat+field+msc [CFM] | orange   | 0.047 (±0.000) | 1.556 (±0.006) |
-|                              | vecgeom  | 0.047 (±0.000) | 0.624 (±0.002) |
-| testem3-flat+msc [CM]        | orange   | 0.055 (±0.000) | 2.422 (±0.011) |
+| cms2018 [Z]                  | vecgeom  | 0.081 (±0.000) | 0.753 (±0.004) |
+| cms2018+field+msc [ZFM]      | vecgeom  | 0.037 (±0.000) | 0.216 (±0.002) |
+| simple-cms+field [BF]        | orange   | 0.140 (±0.001) | 4.152 (±0.272) |
+| simple-cms+field+msc [BFM]   | orange   | 0.106 (±0.001) | 3.562 (±0.053) |
+|                              | vecgeom  | 0.109 (±0.001) | 3.550 (±0.035) |
+| simple-cms+msc [BM]          | orange   | 0.122 (±0.001) | 4.533 (±0.230) |
+| testem15 [A]                 | orange   | 0.186 (±0.004) | 6.451 (±0.123) |
+| testem15+field [AF]          | orange   | 0.155 (±0.001) | 6.046 (±0.061) |
+| testem15+field+msc [AFM]     | orange   | 0.124 (±0.002) | 5.028 (±0.157) |
+|                              | vecgeom  | 0.127 (±0.002) | 4.988 (±0.037) |
+| testem3-flat [C]             | orange   | 0.102 (±0.000) | 3.392 (±0.026) |
+|                              | vecgeom  | 0.106 (±0.000) | 3.096 (±0.007) |
+| testem3-flat+field [CF]      | orange   | 0.087 (±0.001) | 2.142 (±0.015) |
+| testem3-flat+field+msc [CFM] | orange   | 0.051 (±0.000) | 1.400 (±0.010) |
+|                              | vecgeom  | 0.048 (±0.000) | 0.619 (±0.002) |
+| testem3-flat+msc [CM]        | orange   | 0.058 (±0.001) | 2.301 (±0.013) |
