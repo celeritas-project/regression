@@ -8,7 +8,7 @@
 | testem15               |           — |           — |       0.34 |          — |
 | testem15+field         |           — |           — |       0.47 |       0.54 |
 | testem15+field+msc     |        0.55 |           — |       0.57 |          — |
-| testem3-flat           |        0.39 |           — |       0.44 |          — |
+| testem3-flat           |        0.39 |           — |       0.45 |          — |
 | testem3-flat+field     |           — |           — |       0.56 |          — |
 | testem3-flat+field+msc |        0.70 |        0.90 |       0.70 |       0.79 |
 | testem3-flat+msc       |           — |           — |       0.64 |          — |
