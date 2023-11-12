@@ -6,9 +6,9 @@
 | simple-cms+field+msc   |        0.61 |           — |       0.63 |          — |
 | simple-cms+msc         |           — |           — |       0.57 |          — |
 | testem15               |           — |           — |       0.40 |          — |
-| testem15+field         |           — |           — |       0.50 |       0.54 |
+| testem15+field         |           — |           — |       0.51 |       0.53 |
 | testem15+field+msc     |        0.57 |           — |       0.60 |          — |
 | testem3-flat           |        0.47 |           — |       0.54 |          — |
-| testem3-flat+field     |           — |           — |       0.62 |          — |
+| testem3-flat+field     |           — |           — |       0.61 |          — |
 | testem3-flat+field+msc |        0.73 |        0.92 |       0.73 |       0.80 |
 | testem3-flat+msc       |           — |           — |       0.69 |          — |

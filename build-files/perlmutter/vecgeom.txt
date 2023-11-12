@@ -105,7 +105,7 @@ CMAKE_CUDA_ARCHITECTURES:STRING=80
 CMAKE_CUDA_COMPILER:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/nvcc
 
 //Flags used by the CUDA compiler during all build types.
-CMAKE_CUDA_FLAGS:STRING=--ptxas-options=-v -Xcompiler -Wno-psabi
+CMAKE_CUDA_FLAGS:STRING=-lineinfo -Xptxas=-v -Xcompiler -Wno-psabi
 
 //Flags used by the CUDA compiler during DEBUG builds.
 CMAKE_CUDA_FLAGS_DEBUG:STRING=-g
@@ -1150,7 +1150,7 @@ CUDA_parse_cubin:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-z
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-11.2.0/cmake-3.26.3-5vtoqmjru432zemlam2cjut7wnupuptr/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-rc.1;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-rc.1.7;db8af37b4
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
