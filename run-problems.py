@@ -204,7 +204,7 @@ class Crusher(Frontier):
     name = "crusher"
 
 class Perlmutter(Frontier):
-    _CELER_ROOT = Path(environ['CFS']) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
+    _CELER_ROOT = Path(environ.get('CFS', '')) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug-novg',
         "vecgeom": _CELER_ROOT / 'build-ndebug',
