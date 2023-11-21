@@ -9,3 +9,4 @@ results.hip_stats.csv
 results.hsa_stats.csv
 results.stats.csv
 results.sysinfo.txt
+*.ncu-rep
