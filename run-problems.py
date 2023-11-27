@@ -312,7 +312,7 @@ _iso_origin_electrons = {
     "pdg": 11,
     "energy": 10000,  # 10 GeV
     "position": [0, 0, 0],
-    "direction": {"distribution": "isotropic"}
+    "direction": {"distribution": "isotropic"},
     "primaries_per_event": 1300,  # 13 TeV
 }
 
@@ -324,7 +324,7 @@ testem15 = {
         "pdg": [11, -11],
         "energy": 10000,  # 10 GeV
         "position": [0, 0, 0],
-        "direction": {"distribution": "isotropic"}
+        "direction": {"distribution": "isotropic"},
         "primaries_per_event": 1300,
     },
     "physics_filename": "testem15.gdml",
@@ -420,6 +420,7 @@ def build_input(problem_dicts):
 
     inp["_name"] = name = inp_to_nametuple(inp)
     inp["_outdir"] = "-".join(name)
+
     (inp["max_events"], _) = get_num_events_and_primaries(inp)
     return inp
 
@@ -469,9 +470,6 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 
 async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
-
-    # Set number of events based on number of CPUs
-    inp["primary_gen_options"]["num_events"] = system.cpu_per_job
 
     try:
         proc = await system.create_celer_subprocess(inp)
@@ -552,9 +550,18 @@ async def main():
         device_mods.append([use_gpu])
     device_mods.append([]) # CPU
 
-    inputs = [build_input([base_input] + p + d)
+    # Set number of events based on number of CPUs
+    base_inputs = [
+        base_input, {
+            "primary_gen_options": {
+                "num_events": system.cpu_per_job
+            }
+        }
+    ]
+
+    inputs = [build_input(base_inputs + p + d)
               for p, d in itertools.product(problems, device_mods)]
-    inputs += [build_input([base_input] + p + [use_gpu, use_sync])
+    inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
                for p in sync_problems]
     with open(results_dir / "index.json", "w") as f:
         json.dump([(inp['_outdir'], inp['_name'])
