@@ -26,7 +26,7 @@ cpu_per_gpu = {
     "wildstyle": 32,
     "summit": 7,
     "frontier": 7,
-    "crusher": 8,
+    "crusher": 7,
     "perlmutter": 7,
 }
 
