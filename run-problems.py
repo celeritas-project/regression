@@ -212,7 +212,7 @@ class Perlmutter(Frontier):
     name = "perlmutter"
     num_jobs = 4
     gpu_per_job = 1
-    cpu_per_job = 7 # TODO: should be 32?
+    cpu_per_job = 32
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
@@ -307,23 +307,35 @@ use_sync = {
     "sync": True,
 }
 
+_iso_origin_electrons = {
+    "seed": 0,
+    "pdg": 11,
+    "energy": 10000,  # 10 GeV
+    "position": [0, 0, 0],
+    "direction": {"distribution": "isotropic"}
+    "primaries_per_event": 1300,  # 13 TeV
+}
+
 testem15 = {
     "_geometry": "orange",
-    "_num_events": 7,
-    "_num_primaries": 9100,
     "geometry_filename": "testem15.org.json",
-    "hepmc3_filename": "testem15-13TeV.hepmc3",
+    "primary_gen_options": {
+        "seed": 0,
+        "pdg": [11, -11],
+        "energy": 10000,  # 10 GeV
+        "position": [0, 0, 0],
+        "direction": {"distribution": "isotropic"}
+        "primaries_per_event": 1300,
+    },
     "physics_filename": "testem15.gdml",
     "sync": False,
 }
 
 simple_cms = {
     "_geometry": "orange",
-    "_num_events": 7,
-    "_num_primaries": 9100,
     "geometry_filename": "simple-cms.org.json",
-    "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "simple-cms.gdml",
+    "primary_gen_options": _iso_origin_electrons,
 }
 
 testem3 = {
@@ -336,18 +348,15 @@ testem3 = {
         "energy": 10000,  # 10 GeV
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
-        "num_events": 7,
         "primaries_per_event": 1300  # 13 TeV
     }
 }
 
 full_cms = {
     "_geometry": "vecgeom",
-    "_num_events": 7,
-    "_num_primaries": 9100,
     "geometry_filename": "cms2018.gdml",
-    "hepmc3_filename": "simple-cms-13TeV.hepmc3",
     "physics_filename": "cms2018.gdml",
+    "primary_gen_options": _iso_origin_electrons,
     "cuda_stack_size": 8192, # Needed for v0.3+ when vecgeom is overridden
 }
 
@@ -460,6 +469,10 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 
 async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
+
+    # Set number of events based on number of CPUs
+    inp["primary_gen_options"]["num_events"] = system.cpu_per_job
+
     try:
         proc = await system.create_celer_subprocess(inp)
     except Exception as e:
