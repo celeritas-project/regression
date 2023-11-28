@@ -203,16 +203,19 @@ class Crusher(Frontier):
     }
     name = "crusher"
 
+
 class Perlmutter(Frontier):
+    # System details:
+    # https://portal.nersc.gov/cfs/mpccc/sleak/userdocs4/systems/perlmutter/system_details/#system-specification-phase-1
     _CELER_ROOT = Path(environ.get('CFS', '')) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug-novg',
         "vecgeom": _CELER_ROOT / 'build-ndebug',
     }
     name = "perlmutter"
-    num_jobs = 4
+    num_jobs = 4 # Nvidia A100 per node
     gpu_per_job = 1
-    cpu_per_job = 32
+    cpu_per_job = 16 # 1/4 of AMD EPYC with no hyperthreading
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
