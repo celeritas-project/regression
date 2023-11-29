@@ -27,7 +27,7 @@ cpu_per_gpu = {
     "summit": 7,
     "frontier": 7,
     "crusher": 7,
-    "perlmutter": 7,
+    "perlmutter": 16,
 }
 
 system_color = {
