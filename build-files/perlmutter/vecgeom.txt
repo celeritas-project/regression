@@ -17,9 +17,6 @@
 //No help, variable specified on the command line.
 BUILD_SHARED_LIBS:BOOL=ON
 
-//Build the testing tree.
-BUILD_TESTING:BOOL=ON
-
 //Build Celeritas demonstration mini-apps
 CELERITAS_BUILD_DEMOS:BOOL=ON
 
@@ -78,7 +75,7 @@ CELERITAS_USE_OpenMP:BOOL=ON
 CELERITAS_USE_Python:BOOL=ON
 
 //Enable ROOT I/O
-CELERITAS_USE_ROOT:BOOL=OFF
+CELERITAS_USE_ROOT:BOOL=ON
 
 //Build SWIG Python bindings
 CELERITAS_USE_SWIG:BOOL=OFF
@@ -105,7 +102,7 @@ CMAKE_CUDA_ARCHITECTURES:STRING=80
 CMAKE_CUDA_COMPILER:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/nvcc
 
 //Flags used by the CUDA compiler during all build types.
-CMAKE_CUDA_FLAGS:STRING=--ptxas-options=-v -Xcompiler -Wno-psabi
+CMAKE_CUDA_FLAGS:STRING=-lineinfo -Xptxas=-v -Xcompiler -Wno-psabi
 
 //Flags used by the CUDA compiler during DEBUG builds.
 CMAKE_CUDA_FLAGS_DEBUG:STRING=-g
@@ -727,8 +724,107 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environme
 //The directory containing a CMake configuration file for PTL.
 PTL_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/Geant4-11.0.1/PTL
 
+//Path to a library.
+ROOT_Core_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libCore.so
+
+//The directory containing a CMake configuration file for ROOT.
+ROOT_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/root/cmake
+
+//Path to a library.
+ROOT_Gpad_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libGpad.so
+
+//Path to a library.
+ROOT_Graf3d_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libGraf3d.so
+
+//Path to a library.
+ROOT_Graf_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libGraf.so
+
+//Path to a library.
+ROOT_Hist_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libHist.so
+
+//Path to a library.
+ROOT_Imt_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libImt.so
+
+//Path to a library.
+ROOT_MathCore_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libMathCore.so
+
+//Path to a library.
+ROOT_Matrix_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libMatrix.so
+
+//Path to a library.
+ROOT_MultiProc_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libMultiProc.so
+
+//Path to a library.
+ROOT_Net_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libNet.so
+
+//Path to a library.
+ROOT_Physics_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libPhysics.so
+
+//Path to a library.
+ROOT_Postscript_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libPostscript.so
+
+//Path to a library.
+ROOT_RIO_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libRIO.so
+
+//Path to a library.
+ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libROOTDataFrame.so
+
+//Path to a library.
+ROOT_ROOTVecOps_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libROOTVecOps.so
+
+//Path to a library.
+ROOT_Rint_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libRint.so
+
+//Path to a library.
+ROOT_Thread_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libThread.so
+
+//Path to a library.
+ROOT_TreePlayer_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libTreePlayer.so
+
+//Path to a library.
+ROOT_Tree_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/pcrxoluo4kfz4xbj4wqwmjwezdd5gsbm/lib/root/libTree.so
+
+//Path to a program.
+ROOT_genmap_CMD:FILEPATH=ROOT_genmap_CMD-NOTFOUND
+
+//Path to a program.
+ROOT_genreflex_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/genreflex
+
+//Path to a program.
+ROOT_hadd_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/hadd
+
+//Path to a program.
+ROOT_root_CMD:FILEPATH=ROOT_root_CMD-NOTFOUND
+
+//Path to a program.
+ROOT_rootbrowse_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootbrowse
+
+//Path to a program.
+ROOT_rootcint_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootcint
+
+//Path to a program.
+ROOT_rootcling_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootcling
+
+//Path to a program.
+ROOT_rootcp_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootcp
+
+//Path to a program.
+ROOT_rootdraw_CMD:FILEPATH=ROOT_rootdraw_CMD-NOTFOUND
+
+//Path to a program.
+ROOT_rootls_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootls
+
+//Path to a program.
+ROOT_rootmkdir_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootmkdir
+
+//Path to a program.
+ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootmv
+
+//Path to a program.
+ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
+
 //Name of the computer/site where compile is being run
-SITE:STRING=login15
+SITE:STRING=login02
 
 //The directory containing a CMake configuration file for VecCore.
 VecCore_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecCore
@@ -1150,7 +1246,7 @@ CUDA_parse_cubin:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-z
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-11.2.0/cmake-3.26.3-5vtoqmjru432zemlam2cjut7wnupuptr/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-rc.1;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;;
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1158,7 +1254,7 @@ EXPAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_LIBRARY
 EXPAT_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding GTest
-FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/GTest/GTestConfig.cmake][c ][v1.12.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/GTest/GTestConfig.cmake][c ][v1.12.1(1.10)]
 //Details about finding Geant4
 FIND_PACKAGE_MESSAGE_DETAILS_Geant4:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/Geant4-11.0.1/Geant4Config.cmake][v11.0.1()]
 //Details about finding HepMC3
@@ -1169,6 +1265,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][c ][v4.5()]
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/opt/cray/pe/gcc/11.2.0/snos/lib64/libgomp.so][/usr/lib64/libpthread.so][v4.5()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/python3.11][cfound components: Interpreter ][v3.11.6(3.6)]
+//Details about finding ROOT
+FIND_PACKAGE_MESSAGE_DETAILS_ROOT:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/root/cmake/ROOTConfig.cmake][v6.28.06(6.24)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VecGeom
@@ -1240,6 +1338,64 @@ PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //PTL library
 PTL_LIBRARY:INTERNAL=
+//ADVANCED property for variable: ROOT_Core_LIBRARY
+ROOT_Core_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Gpad_LIBRARY
+ROOT_Gpad_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Graf3d_LIBRARY
+ROOT_Graf3d_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Graf_LIBRARY
+ROOT_Graf_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Hist_LIBRARY
+ROOT_Hist_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Imt_LIBRARY
+ROOT_Imt_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_MathCore_LIBRARY
+ROOT_MathCore_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Matrix_LIBRARY
+ROOT_Matrix_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_MultiProc_LIBRARY
+ROOT_MultiProc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Net_LIBRARY
+ROOT_Net_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Physics_LIBRARY
+ROOT_Physics_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Postscript_LIBRARY
+ROOT_Postscript_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_RIO_LIBRARY
+ROOT_RIO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_ROOTDataFrame_LIBRARY
+ROOT_ROOTDataFrame_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_ROOTVecOps_LIBRARY
+ROOT_ROOTVecOps_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Rint_LIBRARY
+ROOT_Rint_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Thread_LIBRARY
+ROOT_Thread_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_TreePlayer_LIBRARY
+ROOT_TreePlayer_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Tree_LIBRARY
+ROOT_Tree_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_genreflex_CMD
+ROOT_genreflex_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_hadd_CMD
+ROOT_hadd_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootbrowse_CMD
+ROOT_rootbrowse_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcint_CMD
+ROOT_rootcint_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcling_CMD
+ROOT_rootcling_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcp_CMD
+ROOT_rootcp_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootls_CMD
+ROOT_rootls_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootmkdir_CMD
+ROOT_rootmkdir_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootmv_CMD
+ROOT_rootmv_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootrm_CMD
+ROOT_rootrm_CMD-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
