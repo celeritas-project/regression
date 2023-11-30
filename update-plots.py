@@ -31,7 +31,7 @@ cpu_per_gpu = {
 }
 
 cpu_power = {
-    "summit": None, # not specified with just raw chips
+    "summit": 190 / 6, # not specified with just raw chips
     "frontier": 280 / 6, # 64-core AMD “Optimized 3rd Gen EPYC”
     "perlmutter": 280 / 4, # AMD EPYC 7763
 }
@@ -176,6 +176,7 @@ def plot_all(system):
 
     analysis = analyze.Analysis(results_dir)
     print(analysis)
+    speedup = analyze.get_cpugpu_ratio(analysis.summed["total_time"]).dropna(how="all", axis=0)
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
@@ -188,9 +189,6 @@ def plot_all(system):
     with open(results_dir / "speedup.md", "w") as f:
         analyze.dump_speedup(f, analysis)
 
-    summed = analysis.summed
-    times = summed[("total_time", "mean")].unstack()
-    speedup = analyze.get_cpugpu_ratio(summed["total_time"]).dropna(how="all", axis=0)
 
     event_rate = analyze.calc_event_rate(analysis)
     testem3 = event_rate["mean"].xs("testem3-flat+field+msc", level="problem").unstack("arch")
@@ -479,14 +477,14 @@ def plot_kernels(cuda, hip, problem):
 
 # Plot individual results
 summit = plot_all("summit")
-crusher = plot_minimal("crusher")
-frontier = plot_minimal("frontier")
-perlmutter = plot_all("perlmutter")
-
-# Compare
-fig = plot_compare(summit, frontier)
-fig.savefig("plots/frontier-vs-summit.pdf")
-plt.close()
-
-# Plot kernels
-plot_kernels(summit, frontier, "testem3-flat+field+msc")
+# crusher = plot_minimal("crusher")
+# frontier = plot_minimal("frontier")
+# perlmutter = plot_all("perlmutter")
+#
+# # Compare
+# fig = plot_compare(summit, frontier)
+# fig.savefig("plots/frontier-vs-summit.pdf")
+# plt.close()
+#
+# # Plot kernels
+# plot_kernels(summit, frontier, "testem3-flat+field+msc")
