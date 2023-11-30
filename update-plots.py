@@ -26,7 +26,6 @@ cpu_per_gpu = {
     "wildstyle": 32,
     "summit": 7,
     "frontier": 7,
-    "crusher": 7,
     "perlmutter": 16,
 }
 
@@ -41,6 +40,9 @@ gpu_power = {
     "frontier": 500 / 2, # MI250x
     "perlmutter": 250, # A100
 }
+
+for _d in [cpu_per_gpu, cpu_power, gpu_power]:
+    _d["crusher"] = _d["frontier"]
 
 system_color = {
     "summit": "#7A954F",
@@ -167,6 +169,13 @@ def plot_geo_throughput(analysis, geo_frac):
     return fig
 
 
+def calc_cpu_gpu_speedup(analysis):
+    speedup = analyze.get_cpugpu_ratio(
+        analysis.summed["total_time"]
+    ).dropna(how="all", axis=0)
+    return speedup
+
+
 def plot_all(system):
     results_dir = Path("results") / system
     results_dir.mkdir(parents=True, exist_ok=True)
@@ -176,12 +185,10 @@ def plot_all(system):
 
     analysis = analyze.Analysis(results_dir)
     print(analysis)
-    speedup = analyze.get_cpugpu_ratio(analysis.summed["total_time"]).dropna(how="all", axis=0)
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
     assert not np.any(unconv > 0)
-
 
     with open(results_dir / "throughput.md", "w") as f:
         analyze.dump_event_rate(f, analysis)
@@ -189,6 +196,7 @@ def plot_all(system):
     with open(results_dir / "speedup.md", "w") as f:
         analyze.dump_speedup(f, analysis)
 
+    speedup = calc_cpu_gpu_speedup(analysis)
 
     event_rate = analyze.calc_event_rate(analysis)
     testem3 = event_rate["mean"].xs("testem3-flat+field+msc", level="problem").unstack("arch")
@@ -302,6 +310,12 @@ def plot_minimal(system):
         analyze.dump_speedup(f, analysis)
 
     plots_dir = Path("plots") / system
+
+    speedup = calc_cpu_gpu_speedup(analysis)
+    fig = plot_speedup(analysis, speedup)
+    fig.savefig(plots_dir / "speedups.pdf", transparent=True)
+    plt.close()
+
     return analysis
 
 
@@ -477,14 +491,15 @@ def plot_kernels(cuda, hip, problem):
 
 # Plot individual results
 summit = plot_all("summit")
-# crusher = plot_minimal("crusher")
-# frontier = plot_minimal("frontier")
-# perlmutter = plot_all("perlmutter")
-#
-# # Compare
-# fig = plot_compare(summit, frontier)
-# fig.savefig("plots/frontier-vs-summit.pdf")
-# plt.close()
-#
-# # Plot kernels
-# plot_kernels(summit, frontier, "testem3-flat+field+msc")
+crusher = plot_minimal("crusher")
+frontier = plot_minimal("frontier")
+
+perlmutter = plot_all("perlmutter")
+
+# Compare
+fig = plot_compare(summit, frontier)
+fig.savefig("plots/frontier-vs-summit.pdf")
+plt.close()
+
+# Plot kernels
+plot_kernels(summit, frontier, "testem3-flat+field+msc")
