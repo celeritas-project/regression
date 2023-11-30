@@ -30,6 +30,18 @@ cpu_per_gpu = {
     "perlmutter": 16,
 }
 
+cpu_power = {
+    "summit": None, # not specified with just raw chips
+    "frontier": 280 / 6, # 64-core AMD “Optimized 3rd Gen EPYC”
+    "perlmutter": 280 / 4, # AMD EPYC 7763
+}
+
+gpu_power = {
+    "summit": 250, # V100
+    "frontier": 500 / 2, # MI250x
+    "perlmutter": 250, # A100
+}
+
 system_color = {
     "summit": "#7A954F",
     "frontier": "#BC5544",
@@ -44,6 +56,7 @@ system_color = {
 #     "hip/orange": (57, 140, 173),
 #     "hip/orange.spill": (78, 101, 110),
 # }.items()}
+
 archgeo_labels = {
     "cuda/vecgeom": "NVIDIA V100 (VecGeom)",
     "cuda/orange": "NVIDIA V100 (ORANGE)",
@@ -76,13 +89,27 @@ def plot_timing(analysis):
 
 
 def plot_speedup(analysis, speedup):
-    fig, ax = plt.subplots()
+    sys = analysis.system
+    fig, ax = plt.subplots(layout="constrained")
     analysis.plot_results(ax, speedup)
     num_cpu = cpu_per_gpu[analysis.system]
     ax.set_ylabel(f"Speedup ({num_cpu}-CPU / 1-GPU wall time)")
     ax.set_ylim([0, None])
+
+    if cpu_power[sys] is not None:
+        efficiency_factor = (cpu_power[sys] / gpu_power[sys])
+        oax = ax.twinx()
+        red = (.7, .1, .1)
+        oax.axhline(1.0, linestyle='--',
+                    color=(red + (0.25,)))
+        oax.spines['right'].set_color(red)
+        oax.set_ylim([0, ax.get_ylim()[1] * efficiency_factor])
+        oax.set_ylabel("Power efficiency", color=red)
+        for lab in oax.get_yticklabels():
+            lab.set_color(red)
+
+
     analyze.annotate_metadata(ax, analysis)
-    fig.tight_layout()
     return fig
 
 
