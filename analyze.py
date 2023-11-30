@@ -248,10 +248,11 @@ class Analysis:
         return self.valid & (self.result['unconverged'] == 0)
 
     def plot_results(self, ax, df):
-        problems = self.problems()
+        get_levels = df.index.get_level_values
+        _idx_problems = set(get_levels('problem'))
+        problems = [p for p in self.problems() if p in _idx_problems]
         problem_to_abbr = self.problem_to_abbr(problems)
         p_to_i = dict(zip(problems, itertools.count()))
-        get_levels = df.index.get_level_values
 
         # One data point for each row, with geometries close to each other
         index = np.array([p_to_i[p] for p in get_levels('problem')], dtype=float)
@@ -267,6 +268,8 @@ class Analysis:
         result = []
         for lab, slc, mark in slc_mark:
             temp_idx = index[slc]
+            if not len(temp_idx):
+                continue
             temp_sum = df.loc[slc]
             ax.errorbar(temp_idx, temp_sum['mean'], temp_sum['std'],
                         capsize=0, fmt='none', ecolor=(0.2,)*3)
@@ -279,7 +282,7 @@ class Analysis:
         xax.set_ticklabels(list(problem_to_abbr.values()), rotation=90)
         grid = ax.grid()
         ax.set_axisbelow(True)
-        return scat
+        return result
 
 def CountGetter(out, stream):
     result = out['result']
@@ -748,6 +751,11 @@ def dump_speedup(f, results, prec=1):
                   speedup_out,
                   alignment="<<>")
 
+
+def get_device_properties(analysis):
+    problem = analysis.problems()[0]
+    results = analysis.load_results((problem, "orange", "gpu"), 0)
+    return results["system"]["device"]
 
 def load_kernels(analysis, problem, geo):
     return analysis.load_results((problem, geo, "gpu"), 0)["system"]["kernels"]
