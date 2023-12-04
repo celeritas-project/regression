@@ -22,17 +22,21 @@ with open('plots/style.json') as f:
 
 import analyze
 
+# NOTE: these are the *used* values. Summit and frontier reserve a core for
+# system processes.
 cpu_per_gpu = {
     "wildstyle": 32,
-    "summit": 7,
+    "summit": 7, # 44 total, 2 reserved for system
     "frontier": 7,
     "perlmutter": 16,
 }
 
+sm_per_gpu = {'summit': 80, 'perlmutter': 108, 'frontier': 110}
+
 cpu_power = {
-    "summit": 190 / 6, # not specified with just raw chips
-    "frontier": 280 / 6, # 64-core AMD “Optimized 3rd Gen EPYC”
-    "perlmutter": 280 / 4, # AMD EPYC 7763
+    "summit": 190 / 3, # not specified with just raw chips
+    "frontier": 225 / 8, # 64-core AMD “Optimized 3rd Gen EPYC”
+    "perlmutter": 280 / 4, # AMD EPYC 7453
 }
 
 gpu_power = {
@@ -74,7 +78,8 @@ def plot_timing(analysis):
     (fig, [run_ax, setup_ax]) = plt.subplots(
         nrows=2,
         gridspec_kw=dict(height_ratios=[3, 1]),
-        subplot_kw=dict(yscale="log")
+        subplot_kw=dict(yscale="log"),
+        layout="constrained"
     )
 
     analysis.plot_results(run_ax, analysis.summed["total_time"])
@@ -86,7 +91,6 @@ def plot_timing(analysis):
     analysis.plot_results(setup_ax, analysis.summed["setup_time"])
     setup_ax.set_ylabel("Setup [s]")
 
-    fig.tight_layout()
     return fig
 
 
@@ -117,7 +121,8 @@ def plot_speedup(analysis, speedup):
 
 def plot_steps_vs_primaries(analysis):
     fig, axes = plt.subplots(
-        nrows=2, figsize=(4,4), subplot_kw=dict(yscale="log")
+        nrows=2, figsize=(4,4), subplot_kw=dict(yscale="log"),
+        layout="constrained"
     )
     for (ax, q) in zip(axes, ["step", "primary"]):
         analysis.plot_results(
@@ -128,12 +133,11 @@ def plot_steps_vs_primaries(analysis):
         if ax != axes[-1]:
             ax.tick_params(labelbottom=False)
         ax.legend()
-    fig.tight_layout()
     return fig
 
 
 def plot_accum_per_step(data, p):
-    (fig, axes) = plt.subplots(nrows=2, figsize=(3, 4), sharex=True)
+    (fig, axes) = plt.subplots(nrows=2, figsize=(3, 4), sharex=True, layout="constrained")
     for i, ax, plot in zip(itertools.count(),
                            axes,
                            [analyze.plot_counts, analyze.plot_accum_time_inv]):
@@ -141,22 +145,21 @@ def plot_accum_per_step(data, p):
         analyze.annotate_metadata(ax, data["_metadata"])
         if i == 0:
             ax.set_xlabel(None)
-    fig.tight_layout()
     return fig
 
 
 def plot_diff_per_step(data, p):
-    (fig, ax) = plt.subplots(figsize=(4, 3))
+    (fig, ax) = plt.subplots(figsize=(4, 3), layout="constrained")
     analyze.plot_time_per_step(ax, data, scale=2)
     analyze.annotate_metadata(ax, data["_metadata"])
-    fig.tight_layout()
     return fig
 
 
 def plot_geo_throughput(analysis, geo_frac):
     (fig, (time_ax, geo_ax)) = plt.subplots(
         nrows=2,
-        gridspec_kw=dict(height_ratios=[3, 1])
+        gridspec_kw=dict(height_ratios=[3, 1]),
+        layout="constrained"
     )
     analyze.plot_event_rate(time_ax, analysis)
     time_ax.tick_params(labelbottom=False)
@@ -165,7 +168,6 @@ def plot_geo_throughput(analysis, geo_frac):
     analysis.plot_results(geo_ax, geo_frac * 100)
     geo_ax.set_ylabel("Geometry [%]")
     geo_ax.set_ylim([0, 100])
-    fig.tight_layout()
     return fig
 
 
@@ -314,6 +316,11 @@ def plot_minimal(system):
     speedup = calc_cpu_gpu_speedup(analysis)
     fig = plot_speedup(analysis, speedup)
     fig.savefig(plots_dir / "speedups.pdf", transparent=True)
+    fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
+    plt.close()
+
+    fig = plot_geo_throughput(analysis, analyze.calc_geo_frac(analysis))
+    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
     plt.close()
 
     return analysis
@@ -330,7 +337,7 @@ def plot_compare(old, new):
     problem_to_abbr = old.problem_to_abbr(problems)
     p_to_i = dict(zip(problems, itertools.count()))
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(layout="constrained")
     ax.set_yscale("log")
     for (offset, system, rates) in [
         (-0.05, old.system, old_rates),
@@ -363,7 +370,6 @@ def plot_compare(old, new):
     ax.legend()
     ax.set_ylabel(r"Event rate [1/s]")
     analyze.annotate_metadata(ax, new)
-    plt.tight_layout()
     return fig
 
 
@@ -391,7 +397,7 @@ def plot_compare(old, new):
 
 
 def plot_reg_vs_spill(ksdf):
-    (fig, ax) = plt.subplots()
+    (fig, ax) = plt.subplots(layout="constrained")
     for key, ks in ksdf.unstack("name").iterrows():
         k = "/".join(key)
         ks = ks.unstack(level=0)
@@ -402,12 +408,11 @@ def plot_reg_vs_spill(ksdf):
     ax.set_ylabel("Memory spill [B]")
     ax.legend()
     cb = fig.colorbar(s)
-    fig.tight_layout()
     return fig
 
 
 def plot_occupancy_vs_mem(ksdf):
-    (fig, ax) = plt.subplots()
+    (fig, ax) = plt.subplots(layout="constrained")
     for key, ks in ksdf.unstack("name").iterrows():
         k = "/".join(key)
         ks = ks.unstack(level=0)
@@ -420,12 +425,11 @@ def plot_occupancy_vs_mem(ksdf):
     ax.set_ylabel("Register + spill [B]")
     ax.legend()
     cb = fig.colorbar(s)
-    fig.tight_layout()
     return fig
 
 
 def plot_occupancy_vs_spill(ksdf):
-    (fig, ax) = plt.subplots()
+    (fig, ax) = plt.subplots(layout="constrained")
     for key, ks in ksdf.unstack("name").iterrows():
         k = "/".join(key)
         ks = ks.unstack(level=0)
@@ -437,7 +441,6 @@ def plot_occupancy_vs_spill(ksdf):
     ax.set_ylabel("Local memory spill [B]")
     ax.legend()
     cb = fig.colorbar(s)
-    fig.tight_layout()
     return fig
 
 
