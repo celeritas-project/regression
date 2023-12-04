@@ -255,14 +255,15 @@ regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
 base_input = {
+    "use_device": False,
+    "merge_events": False,
     "_timeout": 600.0,
     "brem_combined": False,
-    "initializer_capacity": 2**20,
-    "max_num_tracks": 2**12,
+    "initializer_capacity": 2**22,
+    "max_num_tracks": 2**16,
     "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "enable_diagnostics": False,
-    "use_device": False,
     "sync": False,
     "eloss_fluctuation": True,
 }
@@ -301,6 +302,7 @@ else:
 
 use_gpu = {
     "use_device": True,
+    "merge_events": True,
     "max_num_tracks": 2**20,
     "max_steps": 2**15,
     "initializer_capacity": 2**26,
