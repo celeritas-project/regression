@@ -217,7 +217,7 @@ def plot_all(system):
 
     ### SPEEDUPS ###
     fig = plot_speedup(analysis, speedup)
-    fig.savefig(plots_dir / "speedups.pdf", transparent=True)
+    fig.savefig(plots_dir / "speedup.pdf", transparent=True)
     fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
     plt.close()
 
@@ -315,7 +315,7 @@ def plot_minimal(system):
 
     speedup = calc_cpu_gpu_speedup(analysis)
     fig = plot_speedup(analysis, speedup)
-    fig.savefig(plots_dir / "speedups.pdf", transparent=True)
+    fig.savefig(plots_dir / "speedup.pdf", transparent=True)
     fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
     plt.close()
 

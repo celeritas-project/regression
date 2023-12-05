@@ -105,6 +105,10 @@ class ProblemAbbreviator:
 
 abbreviate_problem = ProblemAbbreviator()
 
+def get_failed_problem_set(failures):
+    failed_probs = failures.groupby(level='problem').any()
+    return set(failed_probs.index[failed_probs])
+
 class Analysis:
     def __init__(self, basedir):
         basedir = Path(basedir)
@@ -142,8 +146,8 @@ class Analysis:
             self.valid = pd.Series(True, index=result.index)
         self.version = self._load_version(summaries)
 
-        failed_probs = (~self.successful).groupby(level='problem').any()
-        self.failed_problems = set(failed_probs.index[failed_probs])
+        self.failed_problems = get_failed_problem_set(~self.successful)
+        self.failed_pga = ~self.successful.unstack('instance').any(axis=1)
 
         self.summed = summarize_instances(self.result[self.successful].dropna(how='all'))
 
@@ -215,16 +219,21 @@ class Analysis:
                 skip.add(p)
         return result
 
-    def problem_to_abbr(self, problems=None):
+    def problem_to_abbr(self, problems=None, index=None):
         if problems is None:
             problems = self.problems()
+        if index is None:
+            failed_problems = self.failed_problems
+        else:
+            failed = self.failed_pga.groupby(index.names).any()
+            failed_problems = get_failed_problem_set(failed[index])
         result = {}
         for p in problems:
             inputs = self.input.xs(p, level='problem')
             inputs = inputs.dropna(subset='geometry_name')
             if len(inputs):
                 value = abbreviate_problem(inputs.iloc[0])
-                if p in self.failed_problems:
+                if p in failed_problems:
                     value += "*"
             else:
                 print(f"WARNING: no inputs available for {p}")
@@ -251,7 +260,7 @@ class Analysis:
         get_levels = df.index.get_level_values
         _idx_problems = set(get_levels('problem'))
         problems = [p for p in self.problems() if p in _idx_problems]
-        problem_to_abbr = self.problem_to_abbr(problems)
+        problem_to_abbr = self.problem_to_abbr(problems, df.index)
         p_to_i = dict(zip(problems, itertools.count()))
 
         # One data point for each row, with geometries close to each other
