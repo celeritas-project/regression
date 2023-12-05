@@ -115,7 +115,6 @@ def summarize_result(out):
         "warmup_time": time.get('warmup', None),
         "active_hwm": calc_hwm(active),
         "queue_hwm": calc_hwm(inits),
-        "pre_emptying_time": get_step_time()[(emptying_step or 0) - 1],
         "avg_steps_per_primary": steps / num_primaries,
         "avg_time_per_step": time['total'] / steps,
         "avg_time_per_primary": time['total'] / num_primaries,
@@ -123,6 +122,11 @@ def summarize_result(out):
         "avg_event_per_time": num_events / time['total'],
         "slot_occupancy": steps / (len(active) * get_num_track_slots(inp))
     })
+
+    try:
+        summary["pre_emptying_time"] = get_step_time()[(emptying_step or 0) - 1]
+    except Exception as e:
+        summary["pre_emptying_time"] = [str(type(e)), str(e)]
 
     try:
         summary["action_times"] = time['actions']
