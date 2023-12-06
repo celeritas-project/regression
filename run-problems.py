@@ -434,9 +434,6 @@ def build_input(problem_dicts):
 
     # Update 'maximum events' input entry
     (inp["max_events"], _) = get_num_events_and_primaries(inp)
-    if not inp['use_device']:
-        # Scale number of primaries down by 10 for speed
-        inp['primary_options']['primaries_per_event'] /= 10
 
     return inp
 
