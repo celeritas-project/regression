@@ -1,0 +1,201 @@
+{
+"input": {
+"_exe": "celer-g4",
+"_format": "celer-g4",
+"_geometry": "orange",
+"_instance": 0,
+"_name": [
+"simple-cms+field",
+"orange",
+"g4"
+],
+"_outdir": "simple-cms+field-orange-g4",
+"_timeout": 600.0,
+"_use_celeritas": false,
+"_version": "0.4.0",
+"cuda_heap_size": null,
+"cuda_stack_size": null,
+"default_stream": false,
+"event_file": null,
+"field": [
+0.0,
+0.0,
+1.0
+],
+"field_options": {
+"delta_chord": 0.025,
+"delta_intersection": 1e-05,
+"epsilon_rel_max": 0.001,
+"epsilon_step": 1e-05,
+"errcon": 0.0001,
+"max_nsteps": 100,
+"max_stepping_decrease": 0.1,
+"max_stepping_increase": 5.0,
+"minimum_step": 1.0000000000000002e-06,
+"pgrow": -0.2,
+"pshrink": -0.25,
+"safety": 0.9
+},
+"field_type": "uniform",
+"geometry_file": "/gpfs/alpine/csc404/proj-shared/celeritas/regression/input/simple-cms.gdml",
+"initializer_capacity": 4194304,
+"macro_file": "",
+"max_events": 7,
+"max_steps": 2097152,
+"num_track_slots": 65536,
+"offload_output_file": "",
+"output_file": "-",
+"physics_list": "geant_physics_list",
+"physics_options": {
+"annihilation": true,
+"apply_cuts": false,
+"brems": "all",
+"compton_scattering": true,
+"coulomb_scattering": false,
+"default_cutoff": 0.1,
+"eloss_fluctuation": true,
+"em_bins_per_decade": 14,
+"gamma_conversion": true,
+"gamma_general": false,
+"integral_approach": true,
+"ionization": true,
+"linear_loss_limit": 0.01,
+"lowest_electron_energy": [
+0.001,
+"MeV"
+],
+"lpm": true,
+"max_energy": [
+100000000.0,
+"MeV"
+],
+"min_energy": [
+0.0001,
+"MeV"
+],
+"msc": "none",
+"msc_lambda_limit": 0.1,
+"msc_range_factor": 0.04,
+"msc_safety_factor": 0.6,
+"photoelectric": true,
+"rayleigh_scattering": false,
+"relaxation": "none",
+"verbose": false
+},
+"physics_output_file": "",
+"primary_options": {
+"direction": {
+"distribution": "isotropic",
+"params": []
+},
+"energy": {
+"distribution": "delta",
+"params": [
+10000.0
+]
+},
+"num_events": 7,
+"pdg": [
+11
+],
+"position": {
+"distribution": "delta",
+"params": [
+0.0,
+0.0,
+0.0
+]
+},
+"primaries_per_event": 130,
+"seed": 0
+},
+"sd_type": "none",
+"secondary_stack_factor": 3.0,
+"step_diagnostic": false,
+"step_diagnostic_bins": null,
+"sync": false
+},
+"result": {
+"time": {
+"_index": "thread",
+"actions": [
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"events": [
+[
+33.772074677
+],
+[
+42.200461254
+],
+[
+39.897292271
+],
+[
+41.595435236
+],
+[
+42.087749815
+],
+[
+40.553812172
+],
+[
+37.017296804
+]
+],
+"setup": 0.059103768,
+"total": 42.201174033
+}
+},
+"system": {
+"build": {
+"config": {
+"CELERITAS_BUILD_TYPE": "Release",
+"CELERITAS_CORE_GEO": "ORANGE",
+"CELERITAS_CORE_RNG": "xorwow",
+"CELERITAS_DEBUG": false,
+"CELERITAS_HOSTNAME": "summit",
+"CELERITAS_REAL_TYPE": "double",
+"CELERITAS_USE_CUDA": true,
+"CELERITAS_USE_GEANT4": true,
+"CELERITAS_USE_HEPMC3": true,
+"CELERITAS_USE_HIP": false,
+"CELERITAS_USE_JSON": true,
+"CELERITAS_USE_MPI": false,
+"CELERITAS_USE_OPENMP": true,
+"CELERITAS_USE_ROOT": false,
+"CELERITAS_USE_VECGEOM": false,
+"CLHEP_VERSION": "2.4.5.1",
+"Geant4_VERSION": "11.0.3"
+},
+"version": "0.4.0-10+1782ddbdb"
+},
+"environ": {
+"CELER_COLOR": "",
+"CELER_DISABLE": "1",
+"CELER_DISABLE_DEVICE": "1",
+"CELER_DISABLE_REDIRECT": "",
+"CELER_ENABLE_PROFILING": "",
+"CELER_LOG": "",
+"CELER_LOG_LOCAL": ""
+},
+"memory": [
+{
+"_units": "kibi",
+"cpu_delta": 64,
+"cpu_hwm": 64960,
+"label": "run.initialize"
+},
+{
+"label": "run.beamon"
+}
+]
+}
+}

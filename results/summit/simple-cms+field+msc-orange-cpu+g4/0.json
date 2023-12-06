@@ -1,0 +1,919 @@
+{
+"input": {
+"_exe": "celer-g4",
+"_format": "celer-g4",
+"_geometry": "orange",
+"_instance": 0,
+"_name": [
+"simple-cms+field+msc",
+"orange",
+"cpu+g4"
+],
+"_outdir": "simple-cms+field+msc-orange-cpu+g4",
+"_timeout": 600.0,
+"_use_celeritas": true,
+"_version": "0.4.0",
+"cuda_heap_size": null,
+"cuda_stack_size": null,
+"default_stream": false,
+"event_file": null,
+"field": [
+0.0,
+0.0,
+1.0
+],
+"field_options": {
+"delta_chord": 0.025,
+"delta_intersection": 1e-05,
+"epsilon_rel_max": 0.001,
+"epsilon_step": 1e-05,
+"errcon": 0.0001,
+"max_nsteps": 100,
+"max_stepping_decrease": 0.1,
+"max_stepping_increase": 5.0,
+"minimum_step": 1.0000000000000002e-06,
+"pgrow": -0.2,
+"pshrink": -0.25,
+"safety": 0.9
+},
+"field_type": "uniform",
+"geometry_file": "/gpfs/alpine/csc404/proj-shared/celeritas/regression/input/simple-cms.gdml",
+"initializer_capacity": 4194304,
+"macro_file": "",
+"max_events": 7,
+"max_steps": 2097152,
+"num_track_slots": 65536,
+"offload_output_file": "",
+"output_file": "-",
+"physics_list": "geant_physics_list",
+"physics_options": {
+"annihilation": true,
+"apply_cuts": false,
+"brems": "all",
+"compton_scattering": true,
+"coulomb_scattering": false,
+"default_cutoff": 0.1,
+"eloss_fluctuation": true,
+"em_bins_per_decade": 56,
+"gamma_conversion": true,
+"gamma_general": false,
+"integral_approach": true,
+"ionization": true,
+"linear_loss_limit": 0.01,
+"lowest_electron_energy": [
+0.001,
+"MeV"
+],
+"lpm": true,
+"max_energy": [
+100000000.0,
+"MeV"
+],
+"min_energy": [
+0.0001,
+"MeV"
+],
+"msc": "urban",
+"msc_lambda_limit": 0.1,
+"msc_range_factor": 0.04,
+"msc_safety_factor": 0.6,
+"photoelectric": true,
+"rayleigh_scattering": false,
+"relaxation": "none",
+"verbose": false
+},
+"physics_output_file": "",
+"primary_options": {
+"direction": {
+"distribution": "isotropic",
+"params": []
+},
+"energy": {
+"distribution": "delta",
+"params": [
+10000.0
+]
+},
+"num_events": 7,
+"pdg": [
+11
+],
+"position": {
+"distribution": "delta",
+"params": [
+0.0,
+0.0,
+0.0
+]
+},
+"primaries_per_event": 130,
+"seed": 0
+},
+"sd_type": "none",
+"secondary_stack_factor": 3.0,
+"step_diagnostic": false,
+"step_diagnostic_bins": null,
+"sync": false
+},
+"internal": {
+"actions": {
+"description": [
+"update beginning-of-step state",
+"limit range due to multiple scattering",
+"limit range due to energy loss",
+"select a discrete interaction",
+"reject by integral cross section",
+"interact by Moller+Bhabha ionization",
+"interact by Seltzer-Berger bremsstrahlung",
+"interact by relativistic bremsstrahlung",
+"interact by Livermore photoelectric effect",
+"interact by Compton scattering (simple Klein-Nishina)",
+"interact by Bethe-Heitler gamma conversion",
+"interact by positron annihilation yielding two gammas",
+"mark a track that failed to sample an interaction",
+"apply along-step in a uniform field with Urban MSC",
+"create track initializers from primaries",
+"initialize track states",
+"apply along-step for neutral particles",
+"pause due to propagation misbehavior",
+"kill due to too many field substeps",
+"cross a geometry boundary",
+"create track initializers from secondaries"
+],
+"label": [
+"pre-step",
+"msc-range",
+"eloss-range",
+"physics-discrete-select",
+"physics-integral-rejected",
+"ioni-moller-bhabha",
+"brems-sb",
+"brems-rel",
+"photoel-livermore",
+"scat-klein-nishina",
+"conv-bethe-heitler",
+"annihil-2-gamma",
+"physics-failure",
+"along-step-uniform-msc",
+"extend-from-primaries",
+"initialize-tracks",
+"along-step-neutral",
+"geo-propagation-limit",
+"kill-looping",
+"geo-boundary",
+"extend-from-secondaries"
+]
+},
+"geometry": {
+"bbox": [
+[
+-1000.0,
+-1000.0,
+-2000.0
+],
+[
+1000.0,
+1000.0,
+2000.0
+]
+],
+"supports_safety": false,
+"surfaces": {
+"label": [
+"world_box.mx@global",
+"world_box.px@global",
+"world_box.my@global",
+"world_box.py@global",
+"world_box.mz@global",
+"world_box.pz@global",
+"guide_tube.coz@global",
+"crystal_em_calorimeter_outer.mz@global",
+"crystal_em_calorimeter_outer.pz@global",
+"silicon_tracker_outer.coz@global",
+"crystal_em_calorimeter_outer.coz@global",
+"hadron_calorimeter_outer.coz@global",
+"superconducting_solenoid_outer.coz@global",
+"iron_muon_chambers_outer.coz@global"
+]
+},
+"volumes": {
+"label": [
+"[EXTERIOR]@global",
+"vacuum_tube@global",
+"si_tracker@global",
+"em_calorimeter@global",
+"had_calorimeter@global",
+"sc_solenoid@global",
+"fe_muon_chambers@global",
+"world@global"
+]
+}
+},
+"material": {
+"_units": {
+"atomic_mass": "amu",
+"mean_excitation_energy": "MeV",
+"nuclear_mass": "MeV/c^2"
+},
+"elements": {
+"atomic_mass": [
+1.0079407526651378,
+28.08536145553855,
+207.217,
+12.01073638,
+47.86671733000001,
+55.845110798
+],
+"atomic_number": [
+1,
+14,
+82,
+6,
+22,
+26
+],
+"coulomb_correction": [
+6.400821803338426e-05,
+0.012434362460045012,
+0.3316240662922142,
+0.0023005980013017513,
+0.030309421721511194,
+0.04197325340410895
+],
+"isotope_fractions": [
+[
+0.999885,
+0.000115
+],
+[
+0.9222960777039223,
+0.046831953168046815,
+0.03087196912803091
+],
+[
+0.014,
+0.241,
+0.221,
+0.524
+],
+[
+0.9893,
+0.0107
+],
+[
+0.08250000000000002,
+0.07440000000000001,
+0.7372000000000001,
+0.05410000000000001,
+0.051800000000000006
+],
+[
+0.05845,
+0.91754,
+0.02119,
+0.00282
+]
+],
+"isotope_ids": [
+[
+0,
+1
+],
+[
+2,
+3,
+4
+],
+[
+5,
+6,
+7,
+8
+],
+[
+9,
+10
+],
+[
+11,
+12,
+13,
+14,
+15
+],
+[
+16,
+17,
+18,
+19
+]
+],
+"label": [
+"H",
+"Si",
+"Pb",
+"C",
+"Ti",
+"Fe"
+],
+"mass_radiation_coeff": [
+0.015862058769305017,
+0.04582332534886423,
+0.15698030788251505,
+0.02342082542233114,
+0.061868555349638754,
+0.07226213991781555
+]
+},
+"isotopes": {
+"atomic_mass_number": [
+1,
+2,
+28,
+29,
+30,
+204,
+206,
+207,
+208,
+12,
+13,
+46,
+47,
+48,
+49,
+50,
+54,
+56,
+57,
+58
+],
+"atomic_number": [
+1,
+1,
+14,
+14,
+14,
+82,
+82,
+82,
+82,
+6,
+6,
+22,
+22,
+22,
+22,
+22,
+26,
+26,
+26,
+26
+],
+"label": [
+"H1",
+"H2",
+"Si28",
+"Si29",
+"Si30",
+"Pb204",
+"Pb206",
+"Pb207",
+"Pb208",
+"C12",
+"C13",
+"Ti46",
+"Ti47",
+"Ti48",
+"Ti49",
+"Ti50",
+"Fe54",
+"Fe56",
+"Fe57",
+"Fe58"
+],
+"nuclear_mass": [
+938.272013,
+1875.6127932681015,
+26053.193927338805,
+26984.285671258807,
+27913.24181692881,
+189958.33878913638,
+191822.65115313636,
+192755.47872013637,
+193687.67619713637,
+11174.86338798439,
+12109.48242473439,
+42793.37966883937,
+43724.064292839364,
+44652.00298683936,
+45583.42593983936,
+46512.05209583937,
+50231.17250845499,
+52089.808009454995,
+53021.72727945499,
+53951.248020454994
+]
+},
+"materials": {
+"density": [
+9.999999996544215e-26,
+2.3299999991948024,
+11.349999996077683,
+1.9999999993088426,
+4.539999998431074,
+7.873999997278915
+],
+"electron_density": [
+0.05974697167543438,
+6.994470478942717e+23,
+2.7048004774376616e+24,
+6.016757577023765e+23,
+1.256596342218398e+24,
+2.2076717680975458e+24
+],
+"element_frac": [
+[
+1.0
+],
+[
+1.0
+],
+[
+1.0
+],
+[
+1.0
+],
+[
+1.0
+],
+[
+1.0
+]
+],
+"element_id": [
+[
+0
+],
+[
+1
+],
+[
+2
+],
+[
+3
+],
+[
+4
+],
+[
+5
+]
+],
+"label": [
+"vacuum",
+"Si",
+"Pb",
+"C",
+"Ti",
+"Fe"
+],
+"matter_state": [
+"gas",
+"solid",
+"solid",
+"solid",
+"solid",
+"solid"
+],
+"mean_excitation_energy": [
+1.9199999999999986e-05,
+0.00017299999999999998,
+0.0008229999999999989,
+8.099999999999999e-05,
+0.0002329999999999998,
+0.00028600000000000007
+],
+"number_density": [
+0.05974697167543438,
+4.99605034210194e+22,
+3.2985371676069046e+22,
+1.0027929295039609e+23,
+5.711801555538172e+22,
+8.491045261913637e+22
+],
+"radiation_length": [
+6.30435188073252e+26,
+9.366071672822798,
+0.5612533705095863,
+21.348521717601486,
+3.5601981654808665,
+1.7574936777243961
+],
+"temperature": [
+2.73,
+293.15,
+293.15,
+293.15,
+293.15,
+293.15
+],
+"zeff": [
+1.0,
+14.0,
+82.0,
+6.0,
+22.0,
+26.0
+]
+}
+},
+"orange": {
+"scalars": {
+"max_depth": 1,
+"max_faces": 9,
+"max_intersections": 10,
+"max_logic_depth": 3,
+"tol": {
+"abs": 1e-08,
+"rel": 1e-08
+}
+},
+"sizes": {
+"bih": {
+"bboxes": 8,
+"inner_nodes": 0,
+"leaf_nodes": 1,
+"local_volume_ids": 8
+},
+"connectivity_records": 14,
+"daughters": 0,
+"local_surface_ids": 38,
+"local_volume_ids": 21,
+"logic_ints": 77,
+"real_ids": 14,
+"reals": 12,
+"rect_arrays": 0,
+"simple_units": 1,
+"surface_types": 14,
+"transforms": 0,
+"universe_indices": 1,
+"universe_types": 1,
+"volume_records": 8
+}
+},
+"particle": {
+"_units": {
+"charge": "e",
+"mass": "MeV/c^2"
+},
+"charge": [
+0.0,
+-1.0,
+1.0
+],
+"decay_constant": [
+0.0,
+0.0,
+0.0
+],
+"is_antiparticle": [
+false,
+false,
+true
+],
+"label": [
+"gamma",
+"e-",
+"e+"
+],
+"mass": [
+0.0,
+0.51099891,
+0.51099891
+],
+"pdg": [
+22,
+11,
+-11
+]
+},
+"physics": {
+"models": {
+"label": [
+"ioni-moller-bhabha",
+"brems-sb",
+"brems-rel",
+"photoel-livermore",
+"scat-klein-nishina",
+"conv-bethe-heitler",
+"annihil-2-gamma"
+],
+"process_id": [
+0,
+1,
+1,
+2,
+3,
+4,
+5
+]
+},
+"options": {
+"fixed_step_limiter": 0.0,
+"linear_loss_limit": 0.01,
+"lowest_electron_energy": [
+0.001,
+"MeV"
+],
+"max_step_over_range": 0.2,
+"min_eprime_over_e": 0.8,
+"min_range": 0.1
+},
+"processes": {
+"label": [
+"Electron/positron ionization",
+"Bremsstrahlung",
+"Photoelectric effect",
+"Compton scattering",
+"Photon annihiliation",
+"Positron annihiliation"
+]
+},
+"sizes": {
+"integral_xs": 8,
+"model_groups": 8,
+"model_ids": 10,
+"process_groups": 3,
+"process_ids": 8,
+"reals": 38276,
+"value_grid_ids": 66,
+"value_grids": 66,
+"value_tables": 24
+}
+}
+},
+"result": {
+"time": {
+"_index": "thread",
+"actions": [
+{
+"along-step-neutral": 1.2376313879999998,
+"along-step-uniform-msc": 21.22485723299999,
+"annihil-2-gamma": 0.095923262,
+"brems-rel": 0.1340289710000001,
+"brems-sb": 0.7534024899999995,
+"conv-bethe-heitler": 0.28675880199999987,
+"extend-from-primaries": 7.450999999999995e-05,
+"extend-from-secondaries": 0.9464851499999999,
+"geo-boundary": 0.10393813000000003,
+"initialize-tracks": 0.9740601260000004,
+"ioni-moller-bhabha": 0.21832861399999978,
+"photoel-livermore": 0.6358510129999997,
+"physics-discrete-select": 0.9870684170000001,
+"pre-step": 8.217027703999996,
+"scat-klein-nishina": 1.718430437
+},
+{
+"along-step-neutral": 1.495133338,
+"along-step-uniform-msc": 19.33656782700001,
+"annihil-2-gamma": 0.15015555599999997,
+"brems-rel": 0.1677630100000001,
+"brems-sb": 0.7928770089999991,
+"conv-bethe-heitler": 0.20090816800000008,
+"extend-from-primaries": 0.00010739200000000005,
+"extend-from-secondaries": 0.9234526569999996,
+"geo-boundary": 0.21171031399999993,
+"initialize-tracks": 1.1043943849999995,
+"ioni-moller-bhabha": 0.19344986499999992,
+"photoel-livermore": 0.4646418029999999,
+"physics-discrete-select": 0.913435237,
+"pre-step": 7.623782206999997,
+"scat-klein-nishina": 1.864521335999998
+},
+{
+"along-step-neutral": 1.223333108999999,
+"along-step-uniform-msc": 17.818410902999997,
+"annihil-2-gamma": 0.14207795400000006,
+"brems-rel": 0.10003256599999998,
+"brems-sb": 0.6762135269999995,
+"conv-bethe-heitler": 0.15268488299999994,
+"extend-from-primaries": 0.00010684499999999997,
+"extend-from-secondaries": 1.038572993,
+"geo-boundary": 0.18557319499999994,
+"initialize-tracks": 0.8017335260000003,
+"ioni-moller-bhabha": 0.18624425499999994,
+"photoel-livermore": 0.5962620160000001,
+"physics-discrete-select": 0.8774083789999999,
+"pre-step": 7.013427627999996,
+"scat-klein-nishina": 1.667130839
+},
+{
+"along-step-neutral": 1.183315715,
+"along-step-uniform-msc": 17.516256492000007,
+"annihil-2-gamma": 0.14624073900000004,
+"brems-rel": 0.14455385899999998,
+"brems-sb": 0.6823777740000004,
+"conv-bethe-heitler": 0.1978280620000001,
+"extend-from-primaries": 0.00010216899999999998,
+"extend-from-secondaries": 1.0448352009999997,
+"geo-boundary": 0.129130693,
+"initialize-tracks": 0.8327398460000003,
+"ioni-moller-bhabha": 0.2503848030000001,
+"photoel-livermore": 0.5223772779999997,
+"physics-discrete-select": 0.9340988130000002,
+"pre-step": 7.083460403000002,
+"scat-klein-nishina": 1.7851553839999992
+},
+{
+"along-step-neutral": 1.4051162760000002,
+"along-step-uniform-msc": 21.201080253999994,
+"annihil-2-gamma": 0.13817916200000002,
+"brems-rel": 0.13556879600000002,
+"brems-sb": 0.6874629769999999,
+"conv-bethe-heitler": 0.14751869200000006,
+"extend-from-primaries": 0.00015763199999999994,
+"extend-from-secondaries": 1.1537188729999994,
+"geo-boundary": 0.08119247000000003,
+"initialize-tracks": 0.8106414360000002,
+"ioni-moller-bhabha": 0.18183662700000008,
+"photoel-livermore": 0.5285176239999997,
+"physics-discrete-select": 0.9626068810000004,
+"pre-step": 8.325289806999999,
+"scat-klein-nishina": 1.8881206340000005
+},
+{
+"along-step-neutral": 1.5750296510000006,
+"along-step-uniform-msc": 21.14678461199999,
+"annihil-2-gamma": 0.15492224100000007,
+"brems-rel": 0.13264890099999999,
+"brems-sb": 0.7245566170000005,
+"conv-bethe-heitler": 0.16479128200000012,
+"extend-from-primaries": 7.741900000000003e-05,
+"extend-from-secondaries": 0.9856256319999998,
+"geo-boundary": 0.10180217400000001,
+"initialize-tracks": 0.9125602950000002,
+"ioni-moller-bhabha": 0.25887922100000016,
+"photoel-livermore": 0.5935570519999998,
+"physics-discrete-select": 0.8546666440000001,
+"pre-step": 8.310148872000003,
+"scat-klein-nishina": 1.8205357830000002
+},
+{
+"along-step-neutral": 1.210959061999999,
+"along-step-uniform-msc": 20.67426844500001,
+"annihil-2-gamma": 0.129598175,
+"brems-rel": 0.17778787499999993,
+"brems-sb": 0.5806942740000007,
+"conv-bethe-heitler": 0.19982450699999996,
+"extend-from-primaries": 9.099400000000004e-05,
+"extend-from-secondaries": 1.1357761470000003,
+"geo-boundary": 0.11206541499999995,
+"initialize-tracks": 0.9318376290000003,
+"ioni-moller-bhabha": 0.21402590300000024,
+"photoel-livermore": 0.4214390949999999,
+"physics-discrete-select": 1.1671251120000006,
+"pre-step": 7.939307708999998,
+"scat-klein-nishina": 1.9360208489999993
+}
+],
+"events": [
+[
+37.537158762
+],
+[
+35.447471965
+],
+[
+32.494186874
+],
+[
+32.456930191
+],
+[
+37.652351887
+],
+[
+37.749335059
+],
+[
+36.834939575
+]
+],
+"setup": 0.143241547,
+"total": 38.120733242
+}
+},
+"system": {
+"build": {
+"config": {
+"CELERITAS_BUILD_TYPE": "Release",
+"CELERITAS_CORE_GEO": "ORANGE",
+"CELERITAS_CORE_RNG": "xorwow",
+"CELERITAS_DEBUG": false,
+"CELERITAS_HOSTNAME": "summit",
+"CELERITAS_REAL_TYPE": "double",
+"CELERITAS_USE_CUDA": true,
+"CELERITAS_USE_GEANT4": true,
+"CELERITAS_USE_HEPMC3": true,
+"CELERITAS_USE_HIP": false,
+"CELERITAS_USE_JSON": true,
+"CELERITAS_USE_MPI": false,
+"CELERITAS_USE_OPENMP": true,
+"CELERITAS_USE_ROOT": false,
+"CELERITAS_USE_VECGEOM": false,
+"CLHEP_VERSION": "2.4.5.1",
+"Geant4_VERSION": "11.0.3"
+},
+"version": "0.4.0-10+1782ddbdb"
+},
+"device": null,
+"environ": {
+"CELER_COLOR": "",
+"CELER_DISABLE": "",
+"CELER_DISABLE_DEVICE": "1",
+"CELER_DISABLE_REDIRECT": "",
+"CELER_DISABLE_SIGNALS": "",
+"CELER_ENABLE_PROFILING": "",
+"CELER_LOG": "",
+"CELER_LOG_LOCAL": "",
+"G4LEDATA": "/gpfs/alpine/proj-shared/csc404/celeritas/spack/opt/gcc-11.2.0/g4emlow/cxapm7t/share/data/G4EMLOW8.0"
+},
+"kernels": [],
+"memory": [
+{
+"_units": "kibi",
+"cpu_hwm": 66368,
+"label": "run.initialize"
+},
+{
+"label": "run.beamon"
+},
+{
+"_units": "kibi",
+"cpu_delta": 6144,
+"cpu_hwm": 72512,
+"label": "SharedParams.construct",
+"parent_index": 1
+},
+{
+"_units": "kibi",
+"cpu_delta": 2880,
+"cpu_hwm": 69248,
+"label": "GeantImporter.load",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 69248,
+"label": "MaterialParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 69248,
+"label": "GeoMaterialParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 69248,
+"label": "ParticleParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 69248,
+"label": "CutoffParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_delta": 3264,
+"cpu_hwm": 72512,
+"label": "PhysicsParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 69248,
+"label": "SeltzerBergerModel.construct",
+"parent_index": 8
+},
+{
+"_units": "kibi",
+"cpu_hwm": 72512,
+"label": "UrbanMscParams.construct",
+"parent_index": 2
+},
+{
+"_units": "kibi",
+"cpu_hwm": 72512,
+"label": "CoreParams.construct",
+"parent_index": 2
+}
+]
+}
+}
