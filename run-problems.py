@@ -257,10 +257,10 @@ class Perlmutter(Frontier):
         except KeyError:
             build = PurePath("nonexistent")
 
-        args.extend([
-            build / "bin" / "celer-sim",
-            "-"
-        ])
+        exe = build / "bin" / inp['_exe']
+        if not exe.exists():
+            raise FileNotFoundError(exe)
+        args.extend([str(exe), "-"])
 
         return asyncio.create_subprocess_exec(
             cmd, *args,
