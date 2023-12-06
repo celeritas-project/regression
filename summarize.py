@@ -130,7 +130,7 @@ def inp_to_nametuple(inp):
     name = geo_split[0]
     if inp.get('field') and any(inp['field']):
         name += '+field'
-    if get_msc(inp):
+    if inp['physics_options']['msc'] != "none":
         name += '+msc'
 
     geo = inp['_geometry']
