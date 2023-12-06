@@ -20,8 +20,18 @@ Islc = pd.IndexSlice
 KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP"], start=0)
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
-GEO_COLORS = {'orange': '#F6A75E', 'vecgeom': '#5785B7'}
-ARCH_SHAPES = {'gpu': 'x', 'cpu': 'o'}
+GEO_COLORS = {
+    'orange': '#D39051',
+    'vecgeom': '#5785B7',
+    'geant4': '#9F239D',
+}
+ARCH_SHAPES = {
+    'gpu': 'x',
+    'cpu': 's',
+    'g4+gpu': '+',
+    'g4+cpu': 'd',
+    'g4': 'o',
+    }
 KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
 KERNEL_ORDERING = {
     'along-step-neutral': KernelCategory.GEO,
@@ -109,14 +119,20 @@ def get_failed_problem_set(failures):
     failed_probs = failures.groupby(level='problem').any()
     return set(failed_probs.index[failed_probs])
 
+def to_name(namelist):
+    # REMOVEME: replace arbitrary geometry name with geant4
+    if namelist[2] == "g4":
+        namelist[1] = "geant4"
+    return tuple(namelist)
+
 class Analysis:
     def __init__(self, basedir):
         basedir = Path(basedir)
         with open(basedir / 'index.json') as f:
-            index = {tuple(name): dirname
+            index = {to_name(name): dirname
                      for (dirname, name) in json.load(f)}
         with open(basedir / 'summaries.json') as f:
-            summaries = {tuple(v.pop('name')): v
+            summaries = {to_name(v.pop('name')): v
                          for v in json.load(f).values()}
 
         input = pd.DataFrame([v.get('input') or {} for v in summaries.values()],
@@ -270,7 +286,7 @@ class Analysis:
 
         if 'arch' in df.index.names:
             slc_mark = [(a.upper(), get_levels('arch') == a, ARCH_SHAPES[a])
-                        for a in ['cpu', 'gpu']]
+                        for a in ['cpu', 'gpu', 'g4']]
         else:
             slc_mark = [(None, slice(None), 's')]
 
@@ -667,7 +683,8 @@ def calc_geo_frac(analysis):
     action_times = analysis.result["action_times"][analysis.valid]
     _arch = action_times.index.get_level_values("arch")
     # Only get CPU and GPU+sync values
-    action_times = unstack_subdict(action_times[_arch != "gpu"])
+    _valid_arch = (_arch == "cpu") | (_arch == "gpu+sync")
+    action_times = unstack_subdict(action_times[_valid_arch])
     # Get a mask for action categories
     _cat = np.vectorize(get_action_priority)(action_times.columns)
     geo_actions = ((_cat == KernelCategory.GEO)

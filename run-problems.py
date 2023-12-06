@@ -314,6 +314,7 @@ use_geant = {
 }
 
 pure_geant = {
+    "_geometry": "geant4",
     "_use_celeritas": False,
     "physics_options": {
         # Since geant4 uses splines it doesn't need as many points
@@ -559,6 +560,7 @@ async def main():
         _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
+    system.build_dirs['geant4'] = system.build_dirs['orange']
 
     # Copy build files
     buildfile_dir = regression_dir / 'build-files' / system.name
