@@ -26,11 +26,6 @@ def calc_hwm(counts):
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
-def get_msc(d):
-    phyopts = d['physics_options']
-    msc_model = phyopts['msc']
-    return msc_model != "none"
-
 def get_num_events_and_primaries(d):
     primary_gen = d.get('primary_options')
     if primary_gen:
@@ -60,45 +55,44 @@ def summarize_result(out):
         num_events = 0
         num_primaries = 0
 
-    if result is None:
-        return summary
+    if inp['_exe'] == "celer-sim":
+        result = result['runner']
 
-    runner_result = result['runner']
-    time = runner_result['time']
-    def get_stream_counts(key, stream=0):
-        return runner_result[key][stream]
-    def get_step_time(stream=0):
-        return time['steps'][stream]
+    time = result['time']
+    total_time = time['total']
+    summary["setup_time"] = time['setup']
+    summary["total_time"] = total_time
+    summary["avg_time_per_primary"] = total_time / num_primaries
+    summary["avg_event_per_time"] = num_events / total_time
 
-    active = get_stream_counts('active')
-    inits = get_stream_counts('initializers')
+    if inp['_exe'] == "celer-sim":
+        def get_stream_counts(key, stream=0):
+            return result[key][stream]
+        active = get_stream_counts('active')
+        inits = get_stream_counts('initializers')
 
-    steps = sum(active)
-    emptying_step = calc_emptying_step(active)
-    summary.update({
-        "unconverged": get_stream_counts('alive')[-1] + inits[-1],
-        "num_step_iters": len(active),
-        "num_steps": steps,
-        "emptying_step": emptying_step,
-        "setup_time": time['setup'],
-        "total_time": time['total'],
-        "warmup_time": time.get('warmup', None),
-        "active_hwm": calc_hwm(active),
-        "queue_hwm": calc_hwm(inits),
-        "avg_steps_per_primary": steps / num_primaries,
-        "avg_time_per_step": time['total'] / steps,
-        "avg_time_per_primary": time['total'] / num_primaries,
-        "avg_step_per_time": steps / time['total'],
-        "avg_event_per_time": num_events / time['total'],
-        "slot_occupancy": steps / (len(active) * get_num_track_slots(inp))
-    })
+        steps = sum(active)
+        emptying_step = calc_emptying_step(active)
+        summary.update({
+            "unconverged": get_stream_counts('alive')[-1] + inits[-1],
+            "num_step_iters": len(active),
+            "num_steps": steps,
+            "emptying_step": emptying_step,
+            "warmup_time": time.get('warmup', None),
+            "active_hwm": calc_hwm(active),
+            "queue_hwm": calc_hwm(inits),
+            "avg_steps_per_primary": steps / num_primaries,
+            "avg_time_per_step": total_time / steps,
+            "avg_step_per_time": steps / total_time,
+            "slot_occupancy": steps / (len(active) * inp['num_track_slots']),
+            "action_times": time['actions'],
+        })
 
-    try:
-        summary["pre_emptying_time"] = get_step_time()[(emptying_step or 0) - 1]
-    except Exception as e:
-        summary["pre_emptying_time"] = [str(type(e)), str(e)]
-
-    summary["action_times"] = time['actions']
+        try:
+            preempty_time = time['steps'][0][(emptying_step or 0) - 1]
+        except Exception as e:
+            preempty_time = [str(type(e)), str(e)]
+        summary["pre_emptying_time"] = preempty_time
 
     return summary
 
@@ -109,8 +103,8 @@ def summarize_input(inp):
     return {
         'geometry_name': PurePath(geo_file).name,
         'field': field,
-        'use_device': inp['use_device'],
-        'enable_msc': get_msc(inp),
+        'use_device': inp.get('use_device', False),
+        'enable_msc': inp['physics_options']['msc'] != "none",
         'num_track_slots': get_num_track_slots(inp),
     }
 
@@ -134,14 +128,14 @@ def summarize_system(sys):
 def inp_to_nametuple(inp):
     geo_split = PurePath(inp['geometry_file']).name.split('.')
     name = geo_split[0]
-    if inp.get('mag_field') and any(inp['mag_field']):
+    if inp.get('field') and any(inp['field']):
         name += '+field'
     if get_msc(inp):
         name += '+msc'
 
     geo = inp['_geometry']
 
-    arch = "gpu" if inp["use_device"] else "cpu"
+    arch = "gpu" if inp.get("use_device", False) else "cpu"
     if inp.get('_exe') == 'celer-g4':
         if not inp['_use_celeritas']:
             arch = "g4"

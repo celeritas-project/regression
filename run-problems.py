@@ -303,7 +303,6 @@ base_input = {
         "direction": {"distribution": "isotropic"},
         "primaries_per_event": 1300,  # 13 TeV
     },
-    "eloss_fluctuation": True, # TODO: unused??
 }
 
 use_geant = {
@@ -321,7 +320,6 @@ pure_geant = {
 use_msc = {"physics_options": {"msc": "urban"}}
 use_field = {
     "field": [0.0, 0.0, 1.0],
-    "eloss_fluctuation": False, # TODO: unused?? ake true?
 }
 
 use_gpu = {
@@ -370,27 +368,27 @@ problems = [
     [testem15, use_field],
     [testem15, use_msc, use_field],
     [testem15, use_msc, use_field, use_vecgeom],
-#    [simple_cms, use_msc],
-#    [simple_cms, use_field],
-#    [simple_cms, use_field, use_msc],
-#    [simple_cms, use_field, use_msc, use_vecgeom],
-#    [testem3],
-#    [testem3, use_vecgeom],
-#    [testem3, use_field],
-#    [testem3, use_msc],
-#    [testem3, use_field, use_msc],
-#    [testem3, use_field, use_msc, use_vecgeom],
-#    [full_cms],
-#    [full_cms, use_field, use_msc],
+    [simple_cms, use_msc],
+    [simple_cms, use_field],
+    [simple_cms, use_field, use_msc],
+    [simple_cms, use_field, use_msc, use_vecgeom],
+    [testem3],
+    [testem3, use_vecgeom],
+    [testem3, use_field],
+    [testem3, use_msc],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom],
+    [full_cms],
+    [full_cms, use_field, use_msc],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
     [testem15, use_field],
     [testem15, use_field, use_vecgeom],
-#    [testem3, use_field, use_msc],
-#    [testem3, use_field, use_msc, use_vecgeom],
-#    [full_cms, use_field, use_msc],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom],
+    [full_cms, use_field, use_msc],
 ]
 
 def recurse_updated(d, other):
@@ -413,18 +411,23 @@ def build_input(problem_dicts):
 
     Later entries override earlier entries.
     """
+    # Combine all dictionaries
     inp = base_input.copy()
     for d in problem_dicts:
         inp = recurse_updated(inp, d)
+
+    # Make paths absolute
     for k in inp:
         if k.endswith('_file'):
             v = inp[k]
             if v != '-':
                 inp[k] = str(input_dir / v)
 
+    # Save name and output directory
     inp["_name"] = name = inp_to_nametuple(inp)
     inp["_outdir"] = "-".join(name)
 
+    # Update 'maximum events' input entry
     (inp["max_events"], _) = get_num_events_and_primaries(inp)
 
     return inp
