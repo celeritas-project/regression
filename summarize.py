@@ -27,29 +27,12 @@ def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
 def get_msc(d):
-    try:
-        phyopts = d['physics_options']
-    except KeyError:
-        try:
-            # v0.3
-            phyopts = d['geant_options']
-        except KeyError:
-            # v0.1?
-            return d['enable_msc']
-
+    phyopts = d['physics_options']
     msc_model = phyopts['msc']
     return msc_model != "none"
 
 def get_num_events_and_primaries(d):
-    try:
-        primary_gen = d['primary_options']
-    except KeyError:
-        try:
-            # v0.3 or earlier
-            primary_gen = d['primary_gen_options']
-        except KeyError:
-            primary_gen = None
-
+    primary_gen = d.get('primary_options')
     if primary_gen:
         num_events = primary_gen['num_events']
         num_primaries = num_events * primary_gen['primaries_per_event']
@@ -59,11 +42,7 @@ def get_num_events_and_primaries(d):
     return (num_events, num_primaries)
 
 def get_num_track_slots(inp):
-    try:
-        num_track_slots = inp['num_track_slots']
-    except KeyError:
-        # v0.2
-        num_track_slots = inp['max_num_tracks']
+    num_track_slots = inp['num_track_slots']
     return num_track_slots
 
 def summarize_result(out):
@@ -84,21 +63,12 @@ def summarize_result(out):
     if result is None:
         return summary
 
-    try:
-        runner_result = result['runner']
-    except KeyError:
-        # v0.2 and before #774
-        time = result['time']
-        def get_stream_counts(key, stream=0):
-            return result[key][-1]
-        def get_step_time(stream=0):
-            return time['steps']
-    else:
-        time = runner_result['time']
-        def get_stream_counts(key, stream=0):
-            return runner_result[key][stream]
-        def get_step_time(stream=0):
-            return time['steps'][stream]
+    runner_result = result['runner']
+    time = runner_result['time']
+    def get_stream_counts(key, stream=0):
+        return runner_result[key][stream]
+    def get_step_time(stream=0):
+        return time['steps'][stream]
 
     active = get_stream_counts('active')
     inits = get_stream_counts('initializers')
@@ -128,27 +98,13 @@ def summarize_result(out):
     except Exception as e:
         summary["pre_emptying_time"] = [str(type(e)), str(e)]
 
-    try:
-        summary["action_times"] = time['actions']
-    except KeyError:
-        # v0.2
-        if internal is not None:
-            summary["action_times"] = get_action_times(internal['actions'])
+    summary["action_times"] = time['actions']
 
     return summary
 
 def summarize_input(inp):
     field = inp.get('field')
-    if not field:
-        field = inp.get('mag_field')
-    if field and not any(field):
-        # v0.2 and earlier
-        field = None
-
     geo_file = inp.get('geometry_file')
-    if not geo_file:
-        # v0.3 and earlier
-        geo_file = inp['geometry_filename']
 
     return {
         'geometry_name': PurePath(geo_file).name,
@@ -175,21 +131,26 @@ def summarize_system(sys):
         'occupancy': occupancy,
     }
 
-def inp_to_nametuple(d):
-    geo_split = PurePath(d['geometry_filename']).name.split('.')
+def inp_to_nametuple(inp):
+    geo_split = PurePath(inp['geometry_file']).name.split('.')
     name = geo_split[0]
-    if d.get('mag_field') and any(d['mag_field']):
+    if inp.get('mag_field') and any(inp['mag_field']):
         name += '+field'
-    if get_msc(d):
+    if get_msc(inp):
         name += '+msc'
 
-    geo = d['_geometry']
+    geo = inp['_geometry']
 
-    exe = "gpu" if d["use_device"] else "cpu"
-    if d["sync"]:
-        exe += "+sync"
+    arch = "gpu" if inp["use_device"] else "cpu"
+    if inp.get('_exe') == 'celer-g4':
+        if not inp['_use_celeritas']:
+            arch = "g4"
+        else:
+            arch = arch + "+g4"
+    if inp["sync"]:
+        arch += "+sync"
 
-    return (name, geo, exe)
+    return (name, geo, arch)
 
 failure_re = re.compile(
     r'(error|warning|critical'

@@ -25,9 +25,6 @@ import time
 
 from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
 
-g4env = {k: v for k, v in environ.items()
-         if k.startswith('G4')}
-
 systems = {}
 
 class System:
@@ -37,18 +34,40 @@ class System:
     gpu_per_job = None
     cpu_per_job = None
 
+    def get_runtime_environ(self, inp):
+        env = {}
+
+        omp_threads = self.cpu_per_job
+        if inp['use_device']:
+            omp_threads = 1
+        else:
+            env['CELER_DISABLE_DEVICE'] = "1"
+
+        if not inp['_use_celeritas']:
+            assert inp['_exe'] == "celer-g4"
+            env['CELER_DISABLE'] = "1"
+
+        if inp['_exe'] == "celer-g4":
+            # Let Geant4 handle the threading
+            omp_threads = 1
+            env['G4FORCE_RUN_MANAGER_TYPE'] = "MT"
+            env['G4FORCENUMBEROFTHREADS'] = str(self.cpu_per_job)
+        else:
+            assert inp['_exe'] == "celer-sim"
+
+        env['OMP_NUM_THREADS'] = str(omp_threads)
+        return env
+
     def create_celer_subprocess(self, inp):
         try:
             build = self.build_dirs[inp["_geometry"]]
         except KeyError:
             build = PurePath("nonexistent")
-        cmd = build / "bin" / "celer-sim"
+        cmd = build / "bin" / inp['_exe']
+
         env = dict(environ)
-        if not inp['use_device']:
-            env['OMP_NUM_THREADS'] = str(self.cpu_per_job)
-            env['CELER_DISABLE_DEVICE'] = "1"
-        else:
-            env['OMP_NUM_THREADS'] = "1"
+        env.update(self.get_runtime_environ(inp))
+        if inp['use_device']:
             env['CUDA_VISIBLE_DEVICES'] = str(inp['_instance'])
 
         return asyncio.create_subprocess_exec(
@@ -75,7 +94,7 @@ class Wildstyle(System):
 
 class Local(System):
     build_dirs = {
-        "orange": Path("/Users/seth/.local/src/celeritas/build"),
+        "orange": Path("/Users/seth/Code/celeritas-temp/build"),
     }
     name = "testing"
     num_jobs = 1
@@ -96,8 +115,8 @@ class Summit(System):
 
     def create_celer_subprocess(self, inp):
         cmd = "jsrun"
-        env = g4env.copy()
-        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+        env = {k: v for k, v in environ.items() if k.startswith('G4')}
+        env.update(self.get_runtime_environ(inp))
 
         args = [
             "-n1", # total resource sets
@@ -110,7 +129,6 @@ class Summit(System):
         if inp['use_device']:
             args.append("-g1") # GPUs per resource set
         else:
-            env["CELER_DISABLE_DEVICE"] = "1"
             args.append("-g0")
 
         args.extend("".join(["-E", k, "=", v]) for k, v in env.items())
@@ -121,7 +139,7 @@ class Summit(System):
             build = PurePath("nonexistent")
 
         args.extend([
-            build / "bin" / "celer-sim",
+            build / "bin" / inp['_exe'],
             "-"
         ])
 
@@ -166,16 +184,17 @@ class Frontier(System):
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
+
         env = dict(environ)
-        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+        env.update(self.get_runtime_environ(inp))
 
         args = [
             f"--cpus-per-task={self.cpu_per_job}",
         ]
         if inp['use_device']:
             args.append("--gpus-per-task=1")
+            args.append("--gpus=0")
         else:
-            env["CELER_DISABLE_DEVICE"] = "1"
             args.append("--gpus=0")
 
         try:
@@ -183,7 +202,7 @@ class Frontier(System):
         except KeyError:
             raise RuntimeError("Geometry type unavailable")
 
-        exe = build / "bin" / "celer-sim"
+        exe = build / "bin" / inp['_exe']
         if not exe.exists():
             raise FileNotFoundError(exe)
         args.extend([str(exe), "-"])
@@ -219,8 +238,9 @@ class Perlmutter(Frontier):
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
+
         env = dict(environ)
-        env["OMP_NUM_THREADS"] = str(self.cpu_per_job)
+        env.update(self.get_runtime_environ(inp))
         env["CUDA_VISIBLE_DEVICES"] = str(inp["_instance"])
 
         args = [
@@ -230,7 +250,6 @@ class Perlmutter(Frontier):
         if inp['use_device']:
             args.append("--gpus-per-task=1")
         else:
-            env["CELER_DISABLE_DEVICE"] = "1"
             args.append("--gpus=0")
 
         try:
@@ -255,145 +274,123 @@ regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
 base_input = {
+    "_geometry": "orange",
+    "_exe": "celer-sim",
+    "_timeout": 600.0,
+    "_use_celeritas": True,
     "use_device": False,
     "merge_events": False,
-    "_timeout": 600.0,
-    "brem_combined": False,
+    "sync": False,
     "initializer_capacity": 2**22,
-    "max_num_tracks": 2**16,
+    "num_track_slots": 2**16,
     "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
-    "enable_diagnostics": False,
-    "sync": False,
-    "eloss_fluctuation": True,
-}
-
-if True:
-    # v0.2 and higher
-    base_input["geant_options"] = {
+    "brem_combined": False,
+    "physics_options": {
         "coulomb_scattering": False,
-        "rayleigh_scattering": True,
-        "eloss_fluctuation": False,
+        "rayleigh_scattering": True,# TODO: false?
+        "eloss_fluctuation": False, # TODO: true?
         "lpm": True,
         "em_bins_per_decade": 56,
         "physics": "em_basic",
         "msc": "none",
-    }
-    use_msc = {"geant_options": {"msc": "urban"}}
-    use_field = {
-        "mag_field": [0.0, 0.0, 1.0],
-        "eloss_fluctuation": False,
-    }
-else:
-    # v0.1
-    base_input.update({
-        "brem_lpm": True,
-        "conv_lpm": True,
-        "eloss_fluctuation": False,
-        "enable_msc": False,
-        "rayleigh": True,
-    })
-    use_msc = {"enable_msc": True}
-    use_field = {
-        "mag_field": [0.0, 0.0, 1000.0],
-        "eloss_fluctuation": False,
-    }
+    },
+    "primary_options": {
+        "seed": 0,
+        "pdg": 11,
+        "energy": 10000,  # 10 GeV
+        "position": [0, 0, 0],
+        "direction": {"distribution": "isotropic"},
+        "primaries_per_event": 1300,  # 13 TeV
+    },
+    "eloss_fluctuation": True, # TODO: unused??
+}
+
+use_geant = {
+    "_exe": "celer-g4",
+    "merge_events": False, # can't actually merge IRL
+    "physics_list": "geant_physics_list",
+    "sd_type": "none",
+    "output_file": "-",
+}
+
+pure_geant = {
+    "_use_celeritas": False,
+}
+
+use_msc = {"physics_options": {"msc": "urban"}}
+use_field = {
+    "field": [0.0, 0.0, 1.0],
+    "eloss_fluctuation": False, # TODO: unused?? ake true?
+}
 
 use_gpu = {
     "use_device": True,
-    "merge_events": True, # v0.3
-    "max_num_tracks": 2**20,
-    "max_steps": 2**15,
-    "initializer_capacity": 2**26,
+    "merge_events": True,
+    "num_track_slots": 2**17, # 1M / 8
+    "max_steps": 2**15, # TODO: shorten to 2**12
+    "initializer_capacity": 2**23,
 }
 
 use_sync = {
     "sync": True,
 }
 
-_iso_origin_electrons = {
-    "seed": 0,
-    "pdg": 11,
-    "energy": 10000,  # 10 GeV
-    "position": [0, 0, 0],
-    "direction": {"distribution": "isotropic"},
-    "primaries_per_event": 1300,  # 13 TeV
-}
-
 testem15 = {
-    "_geometry": "orange",
-    "geometry_filename": "testem15.org.json",
-    "primary_gen_options": {
-        "seed": 0,
+    "geometry_file": "testem15.gdml",
+    "primary_options": {
         "pdg": [11, -11],
-        "energy": 10000,  # 10 GeV
-        "position": [0, 0, 0],
-        "direction": {"distribution": "isotropic"},
-        "primaries_per_event": 1300,
     },
-    "physics_filename": "testem15.gdml",
     "sync": False,
 }
 
 simple_cms = {
-    "_geometry": "orange",
-    "geometry_filename": "simple-cms.org.json",
-    "physics_filename": "simple-cms.gdml",
-    "primary_gen_options": _iso_origin_electrons,
+    "geometry_file": "simple-cms.gdml",
 }
 
 testem3 = {
-    "_geometry": "orange",
-    "geometry_filename": "testem3-flat.org.json",
-    "physics_filename": "testem3-flat.gdml",
-    "primary_gen_options": {
-        "seed": 0,
-        "pdg": 11,
-        "energy": 10000,  # 10 GeV
+    "geometry_file": "testem3-flat.gdml",
+    "primary_options": {
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
-        "primaries_per_event": 1300  # 13 TeV
     }
 }
 
 full_cms = {
     "_geometry": "vecgeom",
-    "geometry_filename": "cms2018.gdml",
-    "physics_filename": "cms2018.gdml",
-    "primary_gen_options": _iso_origin_electrons,
-    "cuda_stack_size": 8192, # Needed for v0.3+ when vecgeom is overridden
+    "geometry_file": "cms2018.gdml",
+    "cuda_stack_size": 8192,
 }
 
-def use_vecgeom(basename):
-    return {"_geometry": "vecgeom", "geometry_filename": basename + ".gdml"}
+use_vecgeom = {"_geometry": "vecgeom"}
 
 # List of list of setting dictionaries
 problems = [
     [testem15],
     [testem15, use_field],
     [testem15, use_msc, use_field],
-    [testem15, use_msc, use_field, use_vecgeom("testem15")],
-    [simple_cms, use_msc],
-    [simple_cms, use_field],
-    [simple_cms, use_field, use_msc],
-    [simple_cms, use_field, use_msc, use_vecgeom("simple-cms")],
-    [testem3],
-    [testem3, use_vecgeom("testem3-flat")],
-    [testem3, use_field],
-    [testem3, use_msc],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
-    [full_cms],
-    [full_cms, use_field, use_msc],
+    [testem15, use_msc, use_field, use_vecgeom],
+#    [simple_cms, use_msc],
+#    [simple_cms, use_field],
+#    [simple_cms, use_field, use_msc],
+#    [simple_cms, use_field, use_msc, use_vecgeom],
+#    [testem3],
+#    [testem3, use_vecgeom],
+#    [testem3, use_field],
+#    [testem3, use_msc],
+#    [testem3, use_field, use_msc],
+#    [testem3, use_field, use_msc, use_vecgeom],
+#    [full_cms],
+#    [full_cms, use_field, use_msc],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
     [testem15, use_field],
-    [testem15, use_field, use_vecgeom("testem15")],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom("testem3-flat")],
-    [full_cms, use_field, use_msc],
+    [testem15, use_field, use_vecgeom],
+#    [testem3, use_field, use_msc],
+#    [testem3, use_field, use_msc, use_vecgeom],
+#    [full_cms, use_field, use_msc],
 ]
 
 def recurse_updated(d, other):
@@ -410,6 +407,7 @@ def recurse_updated(d, other):
             result[k] = v
     return result
 
+
 def build_input(problem_dicts):
     """Construct an input dictionary by merging inputs.
 
@@ -419,13 +417,16 @@ def build_input(problem_dicts):
     for d in problem_dicts:
         inp = recurse_updated(inp, d)
     for k in inp:
-        if k.endswith('_filename'):
-            inp[k] = str(input_dir / inp[k])
+        if k.endswith('_file'):
+            v = inp[k]
+            if v != '-':
+                inp[k] = str(input_dir / v)
 
     inp["_name"] = name = inp_to_nametuple(inp)
     inp["_outdir"] = "-".join(name)
 
     (inp["max_events"], _) = get_num_events_and_primaries(inp)
+
     return inp
 
 
@@ -434,6 +435,7 @@ def build_instance(inp, instance):
     inp["_instance"] = instance
     inp["seed"] = 20220904 + instance
     return inp
+
 
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
     """Interrupt, then terminate, then kill a process if it doesn't
@@ -474,6 +476,14 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 
 async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
+
+    if inp["merge_events"]:
+        # Round up cpu-per-job to nearest power of 2
+        # factor = 2**int(math.ceil(math.log2(system.cpu_per_job)))
+        # BACKWARD COMPATIBILITY:
+        factor = 8
+        inp["initializer_capacity"] *= factor
+        inp["num_track_slots"] *= factor
 
     try:
         proc = await system.create_celer_subprocess(inp)
@@ -552,15 +562,17 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-    device_mods.append([]) # CPU
+        device_mods.append([use_gpu, use_geant])
+    if True:
+        # CPU-only
+        device_mods.append([]) # CPU celeritas
+        device_mods.append([use_geant]) # CPU celeritas through celer-g4
+        device_mods.append([use_geant, pure_geant]) # CPU geant4
 
     # Set number of events based on number of CPUs
     base_inputs = [
-        base_input, {
-            "primary_gen_options": {
-                "num_events": system.cpu_per_job
-            }
-        }
+        base_input,
+        {"primary_options": {"num_events": system.cpu_per_job}},
     ]
 
     inputs = [build_input(base_inputs + p + d)
