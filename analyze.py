@@ -28,8 +28,8 @@ GEO_COLORS = {
 ARCH_SHAPES = {
     'gpu': 'x',
     'cpu': 's',
-    'g4+gpu': '+',
-    'g4+cpu': 'd',
+    'gpu+g4': '+',
+    'cpu+g4': 'd',
     'g4': 'o',
     }
 KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
@@ -286,7 +286,7 @@ class Analysis:
 
         if 'arch' in df.index.names:
             slc_mark = [(a.upper(), get_levels('arch') == a, ARCH_SHAPES[a])
-                        for a in ['cpu', 'gpu', 'g4']]
+                        for a in ARCH_SHAPES]
         else:
             slc_mark = [(None, slice(None), 's')]
 
