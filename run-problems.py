@@ -314,6 +314,7 @@ use_geant = {
 }
 
 pure_geant = {
+    "_geometry": "geant4",
     "_use_celeritas": False,
     "physics_options": {
         # Since geant4 uses splines it doesn't need as many points
@@ -433,9 +434,6 @@ def build_input(problem_dicts):
 
     # Update 'maximum events' input entry
     (inp["max_events"], _) = get_num_events_and_primaries(inp)
-    if not inp['use_device']:
-        # Scale number of primaries down by 10 for speed
-        inp['primary_options']['primaries_per_event'] /= 10
 
     return inp
 
@@ -559,6 +557,7 @@ async def main():
         _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
+    system.build_dirs['geant4'] = system.build_dirs['orange']
 
     # Copy build files
     buildfile_dir = regression_dir / 'build-files' / system.name
