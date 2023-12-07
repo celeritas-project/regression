@@ -75,6 +75,16 @@ def inverse_summary(summary):
     return pd.DataFrame({'count': summary['count'], 'mean': mean, 'std': std})
 
 
+def _calc_re(summary):
+    return summary['std'] / summary['mean']
+
+
+def calc_summary_ratio(num, denom):
+    ratio = num['mean'] / denom['mean']
+    std = ratio * np.hypot(_calc_re(denom), _calc_re(num))
+    return pd.DataFrame({'mean': ratio, 'std' : std})
+
+
 def calc_ratio(summary, num, denom):
     mean = summary['mean'].unstack()
     re = summary['std'].unstack() / mean
@@ -267,7 +277,8 @@ class Analysis:
 
     @property
     def successful(self):
-        return self.valid & (self.result['unconverged'] == 0)
+        # Protect against NaN for celer-g4 run
+        return self.valid & ~(self.result['unconverged'] > 0)
 
     def plot_results(self, ax, df):
         get_levels = df.index.get_level_values
@@ -529,7 +540,9 @@ def make_failure_table(failures):
             text = "{which}: `{condition}` at `{file}:{line}`".format(**err)
         elif tp == "RuntimeError":
             f = PurePosixPath(err["file"])
-            err["where"] = "{}:{:d}".format(f.name, err["line"]) if line in err else f.name
+            err["where"] = f.name
+            if "line" in err and not np.isnan(err["line"]):
+                err["where"] = "{}:{:d}".format(f.name, int(err["line"]))
             text = "{which} error: `{what}` at `{where}`".format(**err)
         elif isinstance(err["stdout"], list) and err["stdout"]:
             text = "`{}`".format(err["stdout"][-1])
