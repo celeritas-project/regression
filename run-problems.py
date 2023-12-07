@@ -75,7 +75,7 @@ class System:
             stdin=asyncio.subprocess.PIPE,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
-            env=env
+            env=env,
         )
 
     def get_monitoring_coro(self):
@@ -148,6 +148,7 @@ class Summit(System):
             stdin=asyncio.subprocess.PIPE,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
+            env=env,
         )
 
     async def run_jslist(self):
