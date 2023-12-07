@@ -1,4 +1,6 @@
 /testing
 */*-cpu
+*/*+g4
+*/*-g4
 */*/*.json
 !*/*/0.json

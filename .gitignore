@@ -2,6 +2,7 @@ __pycache__
 *.err
 *.out
 core
+core.*
 .ipynb_checkpoints
 results.copy_stats.csv
 results.db
