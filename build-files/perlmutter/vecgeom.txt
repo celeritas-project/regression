@@ -1246,7 +1246,7 @@ CUDA_parse_cubin:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-z
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-11.2.0/cmake-3.26.3-5vtoqmjru432zemlam2cjut7wnupuptr/share/cmake-3.26/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-7;8d085a63f
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.0;-10;1782ddbdb
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
