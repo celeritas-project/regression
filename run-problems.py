@@ -242,15 +242,19 @@ class Perlmutter(Frontier):
 
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
-        env["CUDA_VISIBLE_DEVICES"] = str(inp["_instance"])
+        # number of virtual CPUS
+        n_cpus = int(2 * (64 / self.num_jobs))
 
+        # 2 hyperthreads per core on Perlmutter
+        assert self.cpu_per_job * 2 == n_cpus
         args = [
-            f"--cpus-per-task={self.cpu_per_job * 2}",
+            f"--cpus-per-task={n_cpus}",
             "--ntasks=1",
             "--cpu-bind=verbose,cores"
         ]
         if inp['use_device']:
             args.append("--gpus-per-task=1")
+            args.append("--gpu-bind=verbose,closest")
         else:
             args.append("--gpus=0")
 
