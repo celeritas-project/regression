@@ -350,7 +350,9 @@ def plot_all(system):
 
     ### THROUGHPUT VS GEANT4 ###
 
-    if 'geant4' not in analysis.summed.index[1]:
+    if 'geant4' not in analysis.summed.index.levels[1]:
+        print("skipping vs-geant4 plots because it's not in the results:",
+              analysis.summed.index.levels[1])
         return analysis
 
     throughput = analyze.summarize_instances(analysis.result['avg_event_per_time'])
@@ -358,9 +360,10 @@ def plot_all(system):
 
     (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
     analysis.plot_results(ax, throughput)
-    grid = ax.grid(which='both')
     ax.legend()
     ax.set_ylabel("Throughput [event/s]")
+    grid = ax.grid(which='both')
+    analyze.annotate_metadata(ax, analysis)
     fig.savefig(plots_dir / "throughput-with-geant.pdf", transparent=True)
     fig.savefig(plots_dir / "throughput-with-geant.png", dpi=150)
     plt.close()
@@ -380,6 +383,7 @@ def plot_all(system):
     grid = ax.grid(which='both')
     hline = ax.axhline(1.0, linestyle='-', linewidth=2,
                 color=(.7, .1, .1, 0.5,));
+    analyze.annotate_metadata(ax, analysis)
     fig.savefig(plots_dir / "speedup-wrt-geant.png", dpi=150)#transparent=True)
     fig.savefig(plots_dir / "speedup-wrt-geant.pdf", transparent=True)
     plt.close()

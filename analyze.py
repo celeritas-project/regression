@@ -774,17 +774,6 @@ def calc_geo_frac(analysis):
     return geo_frac
 
 
-def plot_event_rate(ax, results):
-    event_rate = calc_event_rate(results)
-    ax.set_yscale('log')
-    p = results.plot_results(ax, event_rate)
-    grid = ax.grid()
-    ax.set_ylabel(r"Throughput [event/s]")
-    ax.set_ylim([0.5 * event_rate['mean'].min(), None])
-    annotate_metadata(ax, results)
-    return p
-
-
 def dump_markdown(f, headers, table, alignment=None):
     widths = np.vectorize(len)(table)
     widths = np.concatenate([widths, [[len(t) for t in headers]]])
