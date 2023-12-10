@@ -64,8 +64,8 @@ system_color = {
 # }.items()}
 
 archgeo_labels = {
-    "cuda/vecgeom": "NVIDIA V100 (VecGeom)",
-    "cuda/orange": "NVIDIA V100 (ORANGE)",
+    "cuda/vecgeom": "NVIDIA A100 (VecGeom)",
+    "cuda/orange": "NVIDIA A100 (ORANGE)",
     "hip/orange": "AMD MI250 (ORANGE)",
 }
 archgeo_markers = {
@@ -491,18 +491,21 @@ def plot_kernels(cuda, hip, problem):
     print(ksdf[ksdf["local_mem"] > 64])
     return ksdf
 
+def main():
+    # Plot individual results
+    summit = plot_all("summit")
+    crusher = plot_minimal("crusher")
+    frontier = plot_minimal("frontier")
 
-# Plot individual results
-summit = plot_all("summit")
-crusher = plot_minimal("crusher")
-frontier = plot_minimal("frontier")
+    perlmutter = plot_all("perlmutter")
 
-perlmutter = plot_all("perlmutter")
+    # Compare
+    fig = plot_compare(summit, frontier)
+    fig.savefig("plots/frontier-vs-summit.pdf")
+    plt.close()
 
-# Compare
-fig = plot_compare(summit, frontier)
-fig.savefig("plots/frontier-vs-summit.pdf")
-plt.close()
+    # Plot kernels
+    plot_kernels(perlmutter, frontier, "testem3-flat+field+msc")
 
-# Plot kernels
-plot_kernels(summit, frontier, "testem3-flat+field+msc")
+if __name__ == '__main__':
+    main()
