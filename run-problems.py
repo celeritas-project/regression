@@ -13,6 +13,7 @@ Requires Python 3.7+.
 
 import asyncio
 import itertools
+import math
 import json
 from pathlib import Path, PurePath
 from pprint import pprint
@@ -492,7 +493,7 @@ async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
 
     if not inp["merge_events"] and inp["use_device"]:
-        assert inp["_exe"] == "celer-sim"
+        assert inp["_exe"] == "celer-g4"
         # Round up cpu-per-job to nearest power of 2
         factor = 2**int(math.ceil(math.log2(system.cpu_per_job)))
         inp["initializer_capacity"] /= factor
