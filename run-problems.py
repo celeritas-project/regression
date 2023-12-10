@@ -288,6 +288,7 @@ base_input = {
     "use_device": False,
     "merge_events": False,
     "sync": False,
+    "write_track_counts": False,
     "initializer_capacity": 2**24,
     "num_track_slots": 2**16,
     "max_steps": 2**21,
@@ -337,6 +338,7 @@ use_field = {
 use_gpu = {
     "use_device": True,
     "merge_events": True,
+    "write_track_counts": True,
     "num_track_slots": 2**20,
     "max_steps": 2**15,
     "initializer_capacity": 2**26,
