@@ -285,7 +285,8 @@ class Analysis:
     @property
     def successful(self):
         # Protect against NaN for celer-g4 run
-        return self.valid & self.celersim & ~(self.result['unconverged'] > 0)
+        unconverged_celersim = self.result['unconverged'] > 0
+        return self.valid & ~(self.celersim & unconverged_celersim)
 
     def plot_results(self, ax, df):
         get_levels = df.index.get_level_values
@@ -736,7 +737,7 @@ def dump_markdown(f, headers, table, alignment=None):
     widths = np.concatenate([widths, [[len(t) for t in headers]]])
     col_widths = np.max(widths, axis=0)
     if alignment is None:
-        alignment = ['<'] *len(headers)
+        alignment = ['<'] * len(headers)
     col_fmt = " | ".join(f"{{:{a}{c}}}" for (a, c) in zip(alignment, col_widths))
     fmt = ("| " + col_fmt + " |\n").format
 
