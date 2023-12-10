@@ -21,7 +21,7 @@ KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP"], start=0)
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
 GEO_COLORS = {
-    'orange': '#D39051',
+    'orange': '#F6A75E',
     'vecgeom': '#5785B7',
     'geant4': '#9F239D',
 }
