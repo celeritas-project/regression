@@ -1,14 +1,13 @@
 | Problem                | vecgeom/cpu | vecgeom/gpu | orange/cpu | orange/gpu |
 | ---------------------- | ----------- | ----------- | ---------- | ---------- |
-| cms2018                |        0.00 |           — |          — |          — |
 | cms2018+field+msc      |        0.00 |        0.96 |          — |          — |
 | simple-cms+field       |           — |           — |       0.00 |          — |
 | simple-cms+field+msc   |        0.00 |           — |       0.00 |          — |
 | simple-cms+msc         |           — |           — |       0.00 |          — |
 | testem15               |           — |           — |       0.00 |          — |
-| testem15+field         |           — |           — |       0.00 |       0.53 |
+| testem15+field         |           — |           — |       0.00 |       0.57 |
 | testem15+field+msc     |        0.00 |           — |       0.00 |          — |
 | testem3-flat           |        0.00 |           — |       0.00 |          — |
 | testem3-flat+field     |           — |           — |       0.00 |          — |
-| testem3-flat+field+msc |        0.00 |        0.92 |       0.00 |       0.80 |
+| testem3-flat+field+msc |        0.00 |        0.93 |       0.00 |       0.82 |
 | testem3-flat+msc       |           — |           — |       0.00 |          — |

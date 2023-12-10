@@ -45,6 +45,33 @@ KERNEL_ORDERING = {
     'pre-step': KernelCategory.PHYS,
 }
 
+CPU_POWER_PER_TASK= {
+    "summit": 2 * 190 / 6,
+    "frontier": 225 / 8, # 64-core AMD “Optimized 3rd Gen EPYC”
+    "perlmutter": 280 / 4, # AMD EPYC 7453
+}
+GPU_POWER_PER_TASK = {
+    "wildstyle": 250, # V100
+    "summit": 250, # V100
+    "frontier": 500 / 2, # MI250x
+    "perlmutter": 250, # A100
+}
+CPU_PER_TASK = {
+    "wildstyle": 32,
+    "summit": 7, # 44 total, 2 reserved for system
+    "frontier": 7, # 64 total, 8 reserved
+    "perlmutter": 16,
+}
+TASK_PER_NODE = {
+    "wildstyle": 2,
+    "summit": 6,
+    "frontier": 8,
+    "perlmutter": 4,
+}
+
+for _d in [CPU_POWER_PER_TASK, GPU_POWER_PER_TASK, CPU_PER_TASK, TASK_PER_NODE]:
+    _d["crusher"] = _d["frontier"]
+
 BYTES_PER_REG = 4 # 32-bit registers
 
 def unstack_subdict(df):
@@ -137,6 +164,21 @@ def _is_celersim(result):
     good_arch = (arch == 'cpu') | (arch == 'gpu') | (arch == 'gpu+sync')
     return pd.Series(good_arch, index=result.index)
 
+def _calc_power(idx, system):
+    power = pd.Series(index=idx)
+    arch = power.index.get_level_values("arch")
+    is_gpu = {'gpu', 'gpu+g4', 'gpu+sync'}.__contains__
+    is_cpu = {'cpu', 'cpu+g4', 'g4'}.__contains__
+    try:
+        power[arch.map(is_gpu)] = GPU_POWER_PER_TASK[system]
+    except KeyError:
+        pass
+    try:
+        power[arch.map(is_cpu)] = CPU_POWER_PER_TASK[system]
+    except KeyError:
+        pass
+    return power
+
 class Analysis:
     def __init__(self, basedir):
         basedir = Path(basedir)
@@ -179,6 +221,7 @@ class Analysis:
         self.failed_pga = ~self.successful.unstack('instance').any(axis=1)
 
         self.summed = summarize_instances(self.result[self.successful].dropna(how='all'))
+        self.power = _calc_power(self.summed.index, self.system)
 
     def _load_version(self, summaries):
         versions = set()
@@ -223,10 +266,12 @@ class Analysis:
 
     def failures(self):
         try:
-            failures = self.result['failure']
+            failures = self.result['failure'].dropna()
         except KeyError:
             return
-        return unstack_subdict(failures.dropna())
+        if not failures.size:
+            return
+        return unstack_subdict(failures)
 
     def action_times(self):
         result = self.result
@@ -279,6 +324,10 @@ class Analysis:
         return self.basedir.name
 
     @property
+    def cpu_per_task(self):
+        return CPU_PER_TASK[self.system]
+
+    @property
     def invalid(self):
         return ~self.valid
 
@@ -312,6 +361,9 @@ class Analysis:
             if not len(temp_idx):
                 continue
             temp_sum = df.loc[slc]
+            if np.all(np.isnan(temp_sum['mean'])):
+                print(f"Warning: all NaN for {lab!s}")
+                continue
             ax.errorbar(temp_idx, temp_sum['mean'], temp_sum['std'],
                         capsize=0, fmt='none', ecolor=(0.2,)*3)
             scat = ax.scatter(temp_idx, temp_sum['mean'], c=color[slc],
@@ -321,7 +373,6 @@ class Analysis:
         xax = ax.get_xaxis()
         xax.set_ticks(np.arange(len(problems)))
         xax.set_ticklabels(list(problem_to_abbr.values()), rotation=90)
-        grid = ax.grid()
         ax.set_axisbelow(True)
         return result
 
@@ -540,8 +591,8 @@ def make_failure_table(failures):
     flist = []
     idx = []
     for key, err in failures.iterrows():
-        idx.append("{}/{}+{} ({:d})".format(*key))
         tp = err.get("type")
+
         if tp == "DebugError":
             f = PurePosixPath(err["file"])
             err["file"] = f.name
@@ -552,9 +603,9 @@ def make_failure_table(failures):
             if "line" in err and not np.isnan(err["line"]):
                 err["where"] = "{}:{:d}".format(f.name, int(err["line"]))
             text = "{which} error: `{what}` at `{where}`".format(**err)
-        elif isinstance(err["stdout"], list) and err["stdout"]:
+        elif "stdout" in err and isinstance(err["stdout"], list) and err["stdout"]:
             text = "`{}`".format(err["stdout"][-1])
-        elif isinstance(err["stderr"], list) and err["stderr"]:
+        elif "stderr" in err and isinstance(err["stderr"], list) and err["stderr"]:
             for line in err["stderr"]:
                 if line.startswith("celeritas: CUDA error"):
                     text = line
@@ -565,6 +616,7 @@ def make_failure_table(failures):
             text = "`{}`".format(line)
         else:
             text = "(unknown failure)"
+        idx.append("{}/{}+{} ({:d})".format(*key))
         flist.append(text)
     return pd.Series(flist, index=idx, name="Failure", dtype=object)
 
@@ -726,6 +778,7 @@ def plot_event_rate(ax, results):
     event_rate = calc_event_rate(results)
     ax.set_yscale('log')
     p = results.plot_results(ax, event_rate)
+    grid = ax.grid()
     ax.set_ylabel(r"Throughput [event/s]")
     ax.set_ylim([0.5 * event_rate['mean'].min(), None])
     annotate_metadata(ax, results)
@@ -748,20 +801,19 @@ def dump_markdown(f, headers, table, alignment=None):
 
 
 
-def dump_event_rate(f, results, prec=3):
+def dump_rate(f, analysis, rate, units, prec=3):
     assert prec == int(prec)
     fmt = "{{:.{:d}f}} (±{{:.{:d}f}})".format(prec, prec).format
-    event_rate = calc_event_rate(results)
-    del event_rate['count']
-    event_rate = event_rate.loc[event_rate.index.get_level_values('arch') != 'gpu+sync']
-    event_rate = event_rate.dropna(how='all', axis=0).unstack('arch')
+    rate = rate.loc[:, ['mean', 'std']]
+    rate = rate.loc[rate.index.get_level_values('arch') != 'gpu+sync']
+    rate = rate.dropna(how='all', axis=0).unstack('arch')
 
-    _avail_arch = set(event_rate.columns.get_level_values(1))
+    _avail_arch = set(rate.columns.get_level_values(1))
     arches = [_a for _a in ARCH_SHAPES if _a in _avail_arch]
-    tp_out = np.full((len(event_rate), 2 + len(arches)), "", dtype=object)
-    _abbrev = results.problem_to_abbr()
+    tp_out = np.full((len(rate), 2 + len(arches)), "", dtype=object)
+    _abbrev = analysis.problem_to_abbr()
     prev_prob = None
-    for (i, ((prob, geo), row)) in enumerate(event_rate.iterrows()):
+    for (i, ((prob, geo), row)) in enumerate(rate.iterrows()):
         if prob != prev_prob:
             abbr = _abbrev[prob]
             tp_out[i, 0] = f"{prob} [{abbr}]"
@@ -780,7 +832,7 @@ def dump_event_rate(f, results, prec=3):
 
     dump_markdown(f,
                   ["Problem", "Geometry"]
-                  + [a.upper() + " [1/s]" for a in arches],
+                  + [a.upper() + " " + units for a in arches],
                   tp_out,
                   alignment=("<<" + ">"*len(arches)))
 

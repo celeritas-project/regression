@@ -24,30 +24,6 @@ import analyze
 
 # NOTE: these are the *used* values. Summit and frontier reserve a core for
 # system processes.
-cpu_per_gpu = {
-    "wildstyle": 32,
-    "summit": 7, # 44 total, 2 reserved for system
-    "frontier": 7,
-    "perlmutter": 16,
-}
-
-sm_per_gpu = {'summit': 80, 'perlmutter': 108, 'frontier': 110}
-
-cpu_power = {
-    "summit": 190 / 3, # not specified with just raw chips
-    "frontier": 225 / 8, # 64-core AMD “Optimized 3rd Gen EPYC”
-    "perlmutter": 280 / 4, # AMD EPYC 7453
-}
-
-gpu_power = {
-    "summit": 250, # V100
-    "frontier": 500 / 2, # MI250x
-    "perlmutter": 250, # A100
-}
-
-for _d in [cpu_per_gpu, cpu_power, gpu_power]:
-    _d["crusher"] = _d["frontier"]
-
 system_color = {
     "summit": "#7A954F",
     "frontier": "#BC5544",
@@ -74,6 +50,31 @@ archgeo_markers = {
     "hip/orange": "x",
 }
 
+JOULE_PER_WH = 3600
+
+
+
+def calc_cpu_gpu_speedup(analysis):
+    speedup = analyze.get_cpugpu_ratio(
+        analysis.summed["total_time"]
+    ).dropna(how="all", axis=0)
+    return speedup
+
+
+def get_where_arch(df, arch):
+    slc = df.index.get_level_values("arch") == arch
+    return df[slc]
+
+
+def calc_events_per_task_sec(analysis, like_other=None):
+    if like_other is None:
+        like_other = analysis.summed
+    summed = analysis.summed
+    if like_other is not analysis.summed:
+        summed = summed.reindex_like(like_other.summed)
+    return summed['avg_event_per_time']
+
+
 def plot_timing(analysis):
     (fig, [run_ax, setup_ax]) = plt.subplots(
         nrows=2,
@@ -83,12 +84,14 @@ def plot_timing(analysis):
     )
 
     analysis.plot_results(run_ax, analysis.summed["total_time"])
+    run_ax.grid()
     run_ax.legend();
     run_ax.set_ylabel("Run [s]")
     run_ax.tick_params(labelbottom=False)
     analyze.annotate_metadata(run_ax, analysis)
 
     analysis.plot_results(setup_ax, analysis.summed["setup_time"])
+    setup_ax.grid()
     setup_ax.set_ylabel("Setup [s]")
 
     return fig
@@ -98,12 +101,13 @@ def plot_speedup(analysis, speedup):
     sys = analysis.system
     fig, ax = plt.subplots(layout="constrained")
     analysis.plot_results(ax, speedup)
-    num_cpu = cpu_per_gpu[analysis.system]
+    ax.grid()
+    num_cpu = analyze.CPU_PER_TASK[analysis.system]
     ax.set_ylabel(f"Speedup ({num_cpu}-CPU / 1-GPU wall time)")
     ax.set_ylim([0, None])
 
-    if cpu_power[sys] is not None:
-        efficiency_factor = (cpu_power[sys] / gpu_power[sys])
+    if analyze.CPU_POWER_PER_TASK[sys] is not None:
+        efficiency_factor = (analyze.CPU_POWER_PER_TASK[sys] / analyze.GPU_POWER_PER_TASK[sys])
         oax = ax.twinx()
         red = (.7, .1, .1)
         oax.axhline(1.0, linestyle='--',
@@ -132,6 +136,7 @@ def plot_steps_vs_primaries(analysis):
         ax.set_ylabel(q + " per sec")
         if ax != axes[-1]:
             ax.tick_params(labelbottom=False)
+        ax.grid()
         ax.legend()
     return fig
 
@@ -168,17 +173,24 @@ def plot_geo_throughput(analysis, geo_frac):
     analysis.plot_results(geo_ax, geo_frac * 100)
     geo_ax.set_ylabel("Geometry [%]")
     geo_ax.set_ylim([0, 100])
+    geo_ax.grid()
     return fig
 
 
-def calc_cpu_gpu_speedup(analysis):
-    speedup = analyze.get_cpugpu_ratio(
-        analysis.summed["total_time"]
-    ).dropna(how="all", axis=0)
-    return speedup
+def dump_event_power(f, analysis):
+    rate = analyze.calc_event_rate(analysis)
+    power = analysis.power / JOULE_PER_WH # W-h/sec
+    rate.loc[:, 'mean'] /= power
+    rate.loc[:, 'std'] = power
+    return analyze.dump_rate(f, analysis, rate, "[1/W-h]")
 
 
-def plot_all(system):
+def dump_event_rate(f, analysis):
+    return analyze.dump_rate(f, analysis, analyze.calc_event_rate(analysis),
+                             "[1/s]")
+
+
+def plot_minimal(system):
     results_dir = Path("results") / system
     results_dir.mkdir(parents=True, exist_ok=True)
 
@@ -186,39 +198,82 @@ def plot_all(system):
     plots_dir.mkdir(parents=True, exist_ok=True)
 
     analysis = analyze.Analysis(results_dir)
+    print("")
     print(analysis)
+    print("="* len(str(analysis)))
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
     assert not np.any(unconv > 0)
 
+    failures = analysis.failures()
+    if failures is not None:
+        ftab = analyze.make_failure_table(failures)
+    else:
+        ftab = None
+    failed_file = results_dir / "failed.md"
+    if ftab is not None:
+        print(f"WARNING: failures occurred: see {failed_file!s}")
+        with open(results_dir / "failed.md", "w") as f:
+            analyze.dump_markdown(
+                f,
+                ["Instance", "Failure"],
+                np.array([ftab.index, ftab.to_numpy()]).T,
+                alignment="<<",
+            )
+    else:
+        failed_file.unlink(missing_ok=True)
+
     with open(results_dir / "throughput.md", "w") as f:
-        analyze.dump_event_rate(f, analysis)
+        dump_event_rate(f, analysis)
 
     with open(results_dir / "speedup.md", "w") as f:
         analyze.dump_speedup(f, analysis)
+
+    with open(results_dir / "power.md", "w") as f:
+        dump_event_power(f, analysis)
 
     speedup = calc_cpu_gpu_speedup(analysis)
 
     event_rate = analyze.calc_event_rate(analysis)
     testem3 = event_rate["mean"].xs("testem3-flat+field+msc", level="problem").unstack("arch")
-    print(str(testem3 / testem3.loc[("vecgeom", "cpu")]))
+    try:
+        del testem3["gpu+sync"]
+    except KeyError:
+        pass
+    print("Speedup for testem3:")
+    print(str(testem3 / testem3.loc[("orange", "cpu")]))
 
     _desc = (speedup["mean"].dropna()).describe()
     print("Speedups: {min:.0f}×–{max:.0f}×".format(**_desc))
     _desc = (speedup["mean"].dropna() * 7).describe()
     print("CPU:GPU equivalence: {min:.0f}×–{max:.0f}×".format(**_desc))
 
-    ### TIMING ###
-    fig = plot_timing(analysis)
-    fig.savefig(plots_dir / "timing.pdf", transparent=True)
-    plt.close()
-
-
     ### SPEEDUPS ###
     fig = plot_speedup(analysis, speedup)
     fig.savefig(plots_dir / "speedup.pdf", transparent=True)
     fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
+    plt.close()
+
+    fig = plot_geo_throughput(analysis, analyze.calc_geo_frac(analysis))
+    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
+    plt.close()
+
+    return analysis
+
+def plot_all(system):
+    analysis = plot_minimal(system)
+
+    results_dir = Path("results") / system
+    plots_dir = Path("plots") / system
+
+    # Check that everything is converged
+    unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
+    assert not np.any(unconv > 0)
+
+    ### TIMING ###
+    fig = plot_timing(analysis)
+    fig.savefig(plots_dir / "timing.pdf", transparent=True)
     plt.close()
 
     ### STEPS VS PRIMARIES ###
@@ -240,12 +295,6 @@ def plot_all(system):
             np.concatenate([np.array([gf_table.index]).T, gf_table], axis=1),
             alignment="<" + ">"*gf_table.shape[1]
         )
-
-    ### GEO THROUGHPUT ###
-
-    fig = plot_geo_throughput(analysis, geo_frac)
-    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
-    plt.close()
 
     ### Action fraction pie charts ###
 
@@ -293,83 +342,80 @@ def plot_all(system):
         fig.savefig(plots_dir / f"time-per-step-{p}.pdf", transparent=True)
         plt.close()
 
-    return analysis
+    ### THROUGHPUT VS GEANT4 ###
 
+    if 'geant4' not in analysis.summed.index[1]:
+        return analysis
 
-def plot_minimal(system):
-    results_dir = Path("results") / system
-    analysis = analyze.Analysis(results_dir)
-    print(analysis)
+    throughput = analyze.summarize_instances(analysis.result['avg_event_per_time'])
+    throughput = throughput[~analysis.failed_pga]
 
-    # Check that everything is converged
-    unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
-    assert not np.any(unconv > 0)
-
-    with open(results_dir / "throughput.md", "w") as f:
-        analyze.dump_event_rate(f, analysis)
-
-    with open(results_dir / "speedup.md", "w") as f:
-        analyze.dump_speedup(f, analysis)
-
-    plots_dir = Path("plots") / system
-
-    speedup = calc_cpu_gpu_speedup(analysis)
-    fig = plot_speedup(analysis, speedup)
-    fig.savefig(plots_dir / "speedup.pdf", transparent=True)
-    fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
-    plt.close()
-
-    fig = plot_geo_throughput(analysis, analyze.calc_geo_frac(analysis))
-    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
-    plt.close()
-
-    return analysis
-
-
-def plot_compare(old, new):
-    new_rates = analyze.calc_event_rate(new)
-    old_rates = analyze.calc_event_rate(old, old.summed.loc[new_rates.index])
-
-    # TODO: add relative.md
-    # rel = (new_rates["mean"] / old_rates["mean"]).unstack()
-
-    problems = old.problems()
-    problem_to_abbr = old.problem_to_abbr(problems)
-    p_to_i = dict(zip(problems, itertools.count()))
-
-    fig, ax = plt.subplots(layout="constrained")
-    ax.set_yscale("log")
-    for (offset, system, rates) in [
-        (-0.05, old.system, old_rates),
-        (0.05, new.system, new_rates)
-    ]:
-        for arch in ["cpu", "gpu"]:
-            summary = rates.xs(arch, level="arch")
-            index = np.array([
-                p_to_i[p] for p in summary.index.get_level_values("problem")
-            ], dtype=float)
-            index += offset
-
-            mark = analyze.ARCH_SHAPES[arch]
-            ax.errorbar(index, summary["mean"], summary["std"],
-                        capsize=0, fmt="none", ecolor=(0.2,)*3)
-            label = "{system} ({count} {arch})".format(
-                system=system.title(),
-                count=cpu_per_gpu[system] if arch == "cpu" else 1,
-                arch=arch.upper()
-            )
-            scat = ax.scatter(index, summary["mean"],
-                              c=system_color[system], marker=mark,
-                              label=label)
-
-    xax = ax.get_xaxis()
-    xax.set_ticks(np.arange(len(problems)))
-    xax.set_ticklabels(list(problem_to_abbr.values()), rotation=90)
-    grid = ax.grid()
-    ax.set_axisbelow(True)
+    (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
+    analysis.plot_results(ax, throughput)
     ax.legend()
-    ax.set_ylabel(r"Event rate [1/s]")
-    analyze.annotate_metadata(ax, new)
+    ax.set_ylabel("Throughput [event/s]")
+    fig.savefig(plots_dir / "throughput-with-geant.pdf", transparent=True)
+    fig.savefig(plots_dir / "throughput-with-geant.png", dpi=150)
+    plt.close()
+
+    ref = throughput.xs(('geant4', 'g4'), level=('geo', 'arch'))
+    compare = throughput[throughput.index.get_level_values('arch') != 'g4']
+
+    expanded_ref = ref.loc[list(compare.index.get_level_values('problem'))]
+    expanded_ref.index = compare.index
+    speedup = analyze.calc_summary_ratio(compare, expanded_ref)
+    speedup['mean'].unstack('arch')
+
+    (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
+    analysis.plot_results(ax, speedup)
+    ax.legend()
+    ax.set_ylabel("Speedup [C/G4]")
+    hline = ax.axhline(1.0, linestyle='-', linewidth=2,
+                color=(.7, .1, .1, 0.5,));
+    fig.savefig(plots_dir / "speedup-wrt-geant.png", dpi=150)#transparent=True)
+    fig.savefig(plots_dir / "speedup-wrt-geant.pdf", transparent=True)
+    plt.close()
+
+    return analysis
+
+
+def plot_per_node(plot_like, analyses, rates):
+    (fig, ax) = plt.subplots(layout="constrained", subplot_kw=dict(yscale="log"))
+    for k in analyses:
+        r = rates[k]
+        for arch in ['cpu', 'gpu', 'g4']:
+            # events per task-sec
+            v = r[r.index.get_level_values("arch") == arch].copy()
+            v *= analyze.TASK_PER_NODE[k]
+            scat = plot_like.plot_results(ax, v)
+            for s in scat:
+                s.set_color(system_color[k])
+                s.set_label(f"{k.title()} ({arch.upper()})")
+    ax.legend()
+    ax.set_xlabel("Problem")
+    ax.set_ylabel("Throughput per node [event/s]")
+    grid = ax.grid(which='both')
+    return fig
+
+
+def plot_power(plot_like, analyses, rates):
+    (fig, ax) = plt.subplots(layout="constrained")
+    for k in analyses:
+        r = rates[k]
+        for arch in ['cpu', 'gpu', 'g4']:
+            v = get_where_arch(r, arch) # events/(task * s)
+            power = get_where_arch(analyses[k].power, arch) / JOULE_PER_WH # W-h/sec
+            v.loc[:, 'mean'] /= power
+            v.loc[:, 'std'] = power
+            scat = plot_like.plot_results(ax, v)
+            for s in scat:
+                s.set_color(system_color[k])
+                s.set_label(f"{k.title()} ({arch.upper()})")
+
+    ax.legend()
+    ax.set_xlabel("Problem")
+    ax.set_ylabel("Efficiency [event/W-h]")
+    grid = ax.grid(which='both')
     return fig
 
 
@@ -492,20 +538,33 @@ def plot_kernels(cuda, hip, problem):
     return ksdf
 
 def main():
+    analyses = {}
+
     # Plot individual results
-    summit = plot_all("summit")
-    crusher = plot_minimal("crusher")
-    frontier = plot_minimal("frontier")
+    analyses["summit"] = plot_all("summit")
+    analyses["crusher"] = plot_minimal("crusher")
+    analyses["frontier"] = plot_minimal("frontier")
+    analyses["perlmutter"] = plot_like = plot_all("perlmutter")
 
-    perlmutter = plot_all("perlmutter")
+    del analyses["crusher"]
 
-    # Compare
-    fig = plot_compare(summit, frontier)
-    fig.savefig("plots/frontier-vs-summit.pdf")
+    # Compare multiple systems
+    plots_dir = Path("plots")
+
+    rates = {k: calc_events_per_task_sec(v, plot_like)
+             for (k, v) in analyses.items()}
+
+    fig = plot_per_node(plot_like, analyses, rates)
+    fig.savefig(plots_dir / "per-node.pdf", transparent=True)
+    fig.savefig(plots_dir / "per-node.png", transparent=False, dpi=150)
     plt.close()
 
+    fig = plot_power(plot_like, analyses, rates)
+    fig.savefig(plots_dir / "event-per-energy.pdf", transparent=True)
+    fig.savefig(plots_dir / "event-per-energy.png", transparent=False, dpi=150)
+
     # Plot kernels
-    plot_kernels(perlmutter, frontier, "testem3-flat+field+msc")
+    plot_kernels(analyses["perlmutter"], analyses["frontier"], "testem3-flat+field+msc")
 
 if __name__ == '__main__':
     main()
