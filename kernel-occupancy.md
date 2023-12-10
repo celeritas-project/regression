@@ -7,7 +7,7 @@
 | cuda | vecgeom | along-step-uniform-msc-propagate            |     0 |     1016 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-scatter-msc-urban    |     0 |      880 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-update-time          |     0 |      112 |     1.000 |
-| cuda | vecgeom | along-step-uniform-msc-apply-eloss-mean     |     0 |      192 |     0.625 |
+| cuda | vecgeom | along-step-uniform-msc-apply-eloss-fluct    |   104 |      304 |     0.375 |
 | cuda | vecgeom | along-step-uniform-msc-update-track         |     0 |       64 |     1.000 |
 | cuda | vecgeom | along-step-neutral                          |     0 |     1016 |     0.125 |
 | cuda | vecgeom | physics-discrete-select                     |     0 |      212 |     0.500 |
@@ -17,7 +17,6 @@
 | cuda | vecgeom | photoel-livermore                           |    64 |      280 |     0.375 |
 | cuda | vecgeom | scat-klein-nishina                          |    48 |      224 |     0.500 |
 | cuda | vecgeom | conv-bethe-heitler                          |    48 |      288 |     0.375 |
-| cuda | vecgeom | scat-rayleigh                               |    48 |      288 |     0.375 |
 | cuda | vecgeom | annihil-2-gamma                             |    48 |      224 |     0.500 |
 | cuda | vecgeom | geo-boundary                                |     0 |      880 |     0.125 |
 | cuda | vecgeom | extend-from-secondaries-locate-alive        |     0 |      116 |     1.000 |
@@ -29,7 +28,7 @@
 | cuda | orange  | along-step-uniform-msc-propagate            |   184 |      512 |     0.250 |
 | cuda | orange  | along-step-uniform-msc-scatter-msc-urban    |    64 |      304 |     0.375 |
 | cuda | orange  | along-step-uniform-msc-update-time          |     0 |       92 |     1.000 |
-| cuda | orange  | along-step-uniform-msc-apply-eloss-mean     |     0 |      184 |     0.625 |
+| cuda | orange  | along-step-uniform-msc-apply-eloss-fluct    |   104 |      256 |     0.500 |
 | cuda | orange  | along-step-uniform-msc-update-track         |     0 |       64 |     1.000 |
 | cuda | orange  | along-step-neutral                          |     0 |      496 |     0.250 |
 | cuda | orange  | physics-discrete-select                     |     8 |      192 |     0.625 |
@@ -39,7 +38,6 @@
 | cuda | orange  | photoel-livermore                           |    80 |      268 |     0.375 |
 | cuda | orange  | scat-klein-nishina                          |    64 |      224 |     0.500 |
 | cuda | orange  | conv-bethe-heitler                          |    64 |      272 |     0.375 |
-| cuda | orange  | scat-rayleigh                               |    64 |      284 |     0.375 |
 | cuda | orange  | annihil-2-gamma                             |    64 |      224 |     0.500 |
 | cuda | orange  | geo-boundary                                |   176 |      256 |     0.500 |
 | cuda | orange  | extend-from-secondaries-locate-alive        |     0 |      116 |     1.000 |
@@ -51,7 +49,7 @@
 | hip  | orange  | along-step-uniform-msc-propagate            |    32 |      984 |     0.250 |
 | hip  | orange  | along-step-uniform-msc-scatter-msc-urban    |     0 |      472 |     0.500 |
 | hip  | orange  | along-step-uniform-msc-update-time          |     0 |       80 |     1.000 |
-| hip  | orange  | along-step-uniform-msc-apply-eloss-mean     |     0 |      168 |     1.000 |
+| hip  | orange  | along-step-uniform-msc-apply-eloss-fluct    |     0 |      320 |     0.750 |
 | hip  | orange  | along-step-uniform-msc-update-track         |     0 |       44 |     1.000 |
 | hip  | orange  | along-step-neutral                          |     0 |      632 |     0.375 |
 | hip  | orange  | physics-discrete-select                     |     0 |      256 |     1.000 |
@@ -61,7 +59,6 @@
 | hip  | orange  | photoel-livermore                           |     0 |      288 |     0.875 |
 | hip  | orange  | scat-klein-nishina                          |     0 |      272 |     0.875 |
 | hip  | orange  | conv-bethe-heitler                          |     0 |      584 |     0.375 |
-| hip  | orange  | scat-rayleigh                               |    64 |      344 |     0.625 |
 | hip  | orange  | annihil-2-gamma                             |     0 |      316 |     0.750 |
 | hip  | orange  | geo-boundary                                |   128 |      360 |     0.625 |
 | hip  | orange  | extend-from-secondaries-locate-alive        |     0 |       76 |     1.000 |
