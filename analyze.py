@@ -132,6 +132,11 @@ def get_failed_problem_set(failures):
 def _to_nametuple(namelist):
     return tuple(namelist)
 
+def _is_celersim(result):
+    arch = result.index.get_level_values('arch')
+    good_arch = (arch == 'cpu') | (arch == 'gpu') | (arch == 'gpu+sync')
+    return pd.Series(good_arch, index=result.index)
+
 class Analysis:
     def __init__(self, basedir):
         basedir = Path(basedir)
@@ -167,6 +172,7 @@ class Analysis:
             self.valid = result['failure'].isna()
         else:
             self.valid = pd.Series(True, index=result.index)
+        self.celersim = _is_celersim(result)
         self.version = self._load_version(summaries)
 
         self.failed_problems = get_failed_problem_set(~self.successful)
@@ -224,12 +230,13 @@ class Analysis:
 
     def action_times(self):
         result = self.result
+
         return summarize_instances(
-            unstack_subdict(result['action_times'][self.valid]))
+            unstack_subdict(result['action_times'][self.valid & self.celersim]))
 
     def active_hwm(self):
         hwm = self.result['active_hwm']
-        return summarize_instances(unstack_subdict(hwm[self.valid]))
+        return summarize_instances(unstack_subdict(hwm[self.valid & self.celersim]))
 
     def problems(self):
         """Get an ordered list of problem names.
@@ -278,7 +285,7 @@ class Analysis:
     @property
     def successful(self):
         # Protect against NaN for celer-g4 run
-        return self.valid & ~(self.result['unconverged'] > 0)
+        return self.valid & self.celersim & ~(self.result['unconverged'] > 0)
 
     def plot_results(self, ax, df):
         get_levels = df.index.get_level_values
@@ -748,7 +755,9 @@ def dump_event_rate(f, results, prec=3):
     event_rate = event_rate.loc[event_rate.index.get_level_values('arch') != 'gpu+sync']
     event_rate = event_rate.dropna(how='all', axis=0).unstack('arch')
 
-    tp_out = np.full((len(event_rate), 4), "", dtype=object)
+    _avail_arch = set(event_rate.columns.get_level_values(1))
+    arches = [_a for _a in ARCH_SHAPES if _a in _avail_arch]
+    tp_out = np.full((len(event_rate), 2 + len(arches)), "", dtype=object)
     _abbrev = results.problem_to_abbr()
     prev_prob = None
     for (i, ((prob, geo), row)) in enumerate(event_rate.iterrows()):
@@ -757,13 +766,22 @@ def dump_event_rate(f, results, prec=3):
             tp_out[i, 0] = f"{prob} [{abbr}]"
         prev_prob = prob
         tp_out[i, 1] = geo
-        for (j, (arch, row2)) in enumerate(row.unstack(0).iterrows(), start=2):
+        unstacked_row = row.unstack(0)
+        for (j, a) in enumerate(arches, start=2):
+            try:
+                row2 = unstacked_row.loc[a]
+            except KeyError:
+                # Arch not applicable for this geometry
+                continue
+            if np.any(np.isnan(row2)):
+                continue
             tp_out[i, j] = fmt(*row2)
 
     dump_markdown(f,
-                  ["Problem", "Geometry", "CPU [1/s]", "GPU [1/s]"],
+                  ["Problem", "Geometry"]
+                  + [a.upper() + " [1/s]" for a in arches],
                   tp_out,
-                  alignment="<<>>")
+                  alignment=("<<" + ">"*len(arches)))
 
 
 def dump_speedup(f, results, prec=1):
