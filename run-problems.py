@@ -116,7 +116,7 @@ class Summit(System):
 
     def create_celer_subprocess(self, inp):
         cmd = "jsrun"
-        env = dict(environ)
+        env = {k: v for k, v in environ.items() if k.startswith('G4')}
         env.update(self.get_runtime_environ(inp))
 
         args = [
@@ -144,12 +144,12 @@ class Summit(System):
             "-"
         ])
 
+        # NOTE: env is not passed to subprocess but to jsrun
         return asyncio.create_subprocess_exec(
             cmd, *args,
             stdin=asyncio.subprocess.PIPE,
             stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-            env=env,
+            stderr=asyncio.subprocess.PIPE
         )
 
     async def run_jslist(self):
