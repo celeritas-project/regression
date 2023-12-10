@@ -116,7 +116,7 @@ class Summit(System):
 
     def create_celer_subprocess(self, inp):
         cmd = "jsrun"
-        env = {k: v for k, v in environ.items() if k.startswith('G4')}
+        env = dict(environ)
         env.update(self.get_runtime_environ(inp))
 
         args = [
