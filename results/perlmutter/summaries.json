@@ -440,64 +440,36 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 50.596731847042115,
-    "avg_time_per_primary": 1.5203171057692306e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "Thrust GPU library",
-     "type": "RuntimeError",
-     "what": "trivial_device_copy D->H failed: cudaErrorIllegalAddress: an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.09225073753011419,
+    "avg_time_per_primary": 0.008338478258557692,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.663336548,
-    "total_time": 0.316225958
+    "setup_time": 27.602448496,
+    "total_time": 173.440347778
    },
    {
-    "avg_event_per_time": 46.39975095861668,
-    "avg_time_per_primary": 1.6578338317307694e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "Thrust GPU library",
-     "type": "RuntimeError",
-     "what": "trivial_device_copy D->H failed: cudaErrorIllegalAddress: an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.09187326314084827,
+    "avg_time_per_primary": 0.008372738084326923,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.787931591,
-    "total_time": 0.344829437
+    "setup_time": 27.716737647,
+    "total_time": 174.152952154
    },
    {
-    "avg_event_per_time": 23.392412381562938,
-    "avg_time_per_primary": 3.2883772596153845e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "Thrust GPU library",
-     "type": "RuntimeError",
-     "what": "trivial_device_copy D->H failed: cudaErrorIllegalAddress: an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.09274728455186619,
+    "avg_time_per_primary": 0.008293836018461538,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 28.229632842,
-    "total_time": 0.68398247
+    "setup_time": 27.598381249,
+    "total_time": 172.511789184
    },
    {
-    "avg_event_per_time": 46.27051440851094,
-    "avg_time_per_primary": 1.6624642692307694e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/src/corecel/sys/Stream.cc:38",
-     "type": "RuntimeError",
-     "what": "an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.09195612051976992,
+    "avg_time_per_primary": 0.008365193799855768,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.880457486,
-    "total_time": 0.345792568
+    "setup_time": 27.675047706,
+    "total_time": 173.996031037
    }
   ],
   "system": {
@@ -1170,64 +1142,36 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 47.873383804287045,
-    "avg_time_per_primary": 1.6068025865384615e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/src/corecel/sys/Stream.cc:38",
-     "type": "RuntimeError",
-     "what": "an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.4728309623027617,
+    "avg_time_per_primary": 0.0016268620935576922,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.582019573,
-    "total_time": 0.334214938
+    "setup_time": 27.966194767,
+    "total_time": 33.838731546
    },
    {
-    "avg_event_per_time": 34.02321114073548,
-    "avg_time_per_primary": 2.2608999663461538e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "Thrust GPU library",
-     "type": "RuntimeError",
-     "what": "trivial_device_copy D->H failed: cudaErrorIllegalAddress: an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.4746905281928878,
+    "avg_time_per_primary": 0.0016204889787019231,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.812675215,
-    "total_time": 0.470267193
+    "setup_time": 28.000443574,
+    "total_time": 33.706170757
    },
    {
-    "avg_event_per_time": 34.773848104980026,
-    "avg_time_per_primary": 2.2120956153846154e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/src/corecel/sys/Stream.cc:38",
-     "type": "RuntimeError",
-     "what": "an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.47486037333275444,
+    "avg_time_per_primary": 0.0016199093721634616,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.649620481,
-    "total_time": 0.460115888
+    "setup_time": 27.991618701,
+    "total_time": 33.694114941
    },
    {
-    "avg_event_per_time": 61.378729061807014,
-    "avg_time_per_primary": 1.2532530096153848e-05,
-    "failure": {
-     "condition": "celer0005",
-     "file": "Thrust GPU library",
-     "type": "RuntimeError",
-     "what": "trivial_device_copy D->H failed: cudaErrorIllegalAddress: an illegal memory access was encountered",
-     "which": "Geant4"
-    },
+    "avg_event_per_time": 0.4732305353866304,
+    "avg_time_per_primary": 0.0016254884495192307,
     "num_events": 16,
     "num_primaries": 20800,
-    "setup_time": 27.454263854,
-    "total_time": 0.260676626
+    "setup_time": 28.320949723,
+    "total_time": 33.81015975
    }
   ],
   "system": {

@@ -1,7 +1,7 @@
 | Problem                      | Geometry |      Speedup |
 | ---------------------------- | -------- | ------------ |
-| cms2018 [Z*]                 | vecgeom  |  3.1× (±0.0) |
-| cms2018+field+msc [ZFM*]     | vecgeom  |  1.9× (±0.0) |
+| cms2018 [Z]                  | vecgeom  |  3.1× (±0.0) |
+| cms2018+field+msc [ZFM]      | vecgeom  |  1.9× (±0.0) |
 | simple-cms+field [BF]        | orange   | 10.2× (±0.3) |
 | simple-cms+field+msc [BFM]   | orange   | 12.1× (±0.2) |
 |                              | vecgeom  | 10.8× (±0.3) |

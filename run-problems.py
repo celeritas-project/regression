@@ -243,6 +243,10 @@ class Perlmutter(Frontier):
 
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
+        if inp['geometry_file'].endswith('cms2018.gdml') \
+           and inp['use_device'] and inp['_exe'] == 'celer-g4':
+            env["CUDA_HEAP_SIZE"] = "10000000"
+            env["CUDA_STACK_SIZE"] = "32000"
         # number of virtual CPUS
         n_cpus = int(2 * (64 / self.num_jobs))
 
@@ -378,31 +382,31 @@ use_vecgeom = {"_geometry": "vecgeom"}
 
 # List of list of setting dictionaries
 problems = [
-    [testem15],
-    [testem15, use_field],
-    [testem15, use_msc, use_field],
-    [testem15, use_msc, use_field, use_vecgeom],
-    [simple_cms, use_msc],
-    [simple_cms, use_field],
-    [simple_cms, use_field, use_msc],
-    [simple_cms, use_field, use_msc, use_vecgeom],
-    [testem3],
-    [testem3, use_vecgeom],
-    [testem3, use_field],
-    [testem3, use_msc],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom],
+    # [testem15],
+    # [testem15, use_field],
+    # [testem15, use_msc, use_field],
+    # [testem15, use_msc, use_field, use_vecgeom],
+    # [simple_cms, use_msc],
+    # [simple_cms, use_field],
+    # [simple_cms, use_field, use_msc],
+    # [simple_cms, use_field, use_msc, use_vecgeom],
+    # [testem3],
+    # [testem3, use_vecgeom],
+    # [testem3, use_field],
+    # [testem3, use_msc],
+    # [testem3, use_field, use_msc],
+    # [testem3, use_field, use_msc, use_vecgeom],
     [full_cms],
     [full_cms, use_field, use_msc],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
-    [testem15, use_field],
-    [testem15, use_field, use_vecgeom],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom],
-    [full_cms, use_field, use_msc],
+    # [testem15, use_field],
+    # [testem15, use_field, use_vecgeom],
+    # [testem3, use_field, use_msc],
+    # [testem3, use_field, use_msc, use_vecgeom],
+    # [full_cms, use_field, use_msc],
 ]
 
 def recurse_updated(d, other):
@@ -578,13 +582,13 @@ async def main():
 
     device_mods = []
     if system.gpu_per_job:
-        device_mods.append([use_gpu])
+        # device_mods.append([use_gpu])
         device_mods.append([use_gpu, use_geant])
-    if True:
-        # CPU-only
-        device_mods.append([]) # CPU celeritas
-        device_mods.append([use_geant]) # CPU celeritas through celer-g4
-        device_mods.append([use_geant, pure_geant]) # CPU geant4
+    # if True:
+    #     # CPU-only
+    #     device_mods.append([]) # CPU celeritas
+    #     device_mods.append([use_geant]) # CPU celeritas through celer-g4
+    #     device_mods.append([use_geant, pure_geant]) # CPU geant4
 
     # Set number of events based on number of CPUs
     base_inputs = [
