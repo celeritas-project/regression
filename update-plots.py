@@ -85,7 +85,7 @@ def plot_timing(analysis):
 
     analysis.plot_results(run_ax, analysis.summed["total_time"])
     run_ax.grid()
-    run_ax.legend();
+    run_ax.legend()
     run_ax.set_ylabel("Run [s]")
     run_ax.tick_params(labelbottom=False)
     analyze.annotate_metadata(run_ax, analysis)
@@ -101,7 +101,7 @@ def plot_speedup(analysis, speedup):
     sys = analysis.system
     fig, ax = plt.subplots(layout="constrained")
     analysis.plot_results(ax, speedup)
-    ax.grid()
+    ax.grid(which='both')
     num_cpu = analyze.CPU_PER_TASK[analysis.system]
     ax.set_ylabel(f"Speedup ({num_cpu}-CPU / 1-GPU wall time)")
     ax.set_ylim([0, None])
@@ -117,7 +117,6 @@ def plot_speedup(analysis, speedup):
         oax.set_ylabel("Power efficiency", color=red)
         for lab in oax.get_yticklabels():
             lab.set_color(red)
-
 
     analyze.annotate_metadata(ax, analysis)
     return fig
@@ -138,6 +137,7 @@ def plot_steps_vs_primaries(analysis):
             ax.tick_params(labelbottom=False)
         ax.grid()
         ax.legend()
+    analyze.annotate_metadata(axes[0], analysis)
     return fig
 
 
@@ -166,7 +166,13 @@ def plot_geo_throughput(analysis, geo_frac):
         gridspec_kw=dict(height_ratios=[3, 1]),
         layout="constrained"
     )
-    analyze.plot_event_rate(time_ax, analysis)
+    event_rate = analyze.calc_event_rate(analysis)
+    time_ax.set_yscale('log')
+    p = analysis.plot_results(time_ax, event_rate)
+    grid = time_ax.grid()
+    time_ax.set_ylabel(r"Throughput [event/s]")
+    time_ax.set_ylim([0.5 * event_rate['mean'].min(), None])
+    analyze.annotate_metadata(time_ax, analysis)
     time_ax.tick_params(labelbottom=False)
     time_ax.legend()
 
@@ -352,6 +358,7 @@ def plot_all(system):
 
     (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
     analysis.plot_results(ax, throughput)
+    grid = ax.grid(which='both')
     ax.legend()
     ax.set_ylabel("Throughput [event/s]")
     fig.savefig(plots_dir / "throughput-with-geant.pdf", transparent=True)
@@ -370,6 +377,7 @@ def plot_all(system):
     analysis.plot_results(ax, speedup)
     ax.legend()
     ax.set_ylabel("Speedup [C/G4]")
+    grid = ax.grid(which='both')
     hline = ax.axhline(1.0, linestyle='-', linewidth=2,
                 color=(.7, .1, .1, 0.5,));
     fig.savefig(plots_dir / "speedup-wrt-geant.png", dpi=150)#transparent=True)
@@ -391,9 +399,10 @@ def plot_per_node(plot_like, analyses, rates):
             for s in scat:
                 s.set_color(system_color[k])
                 s.set_label(f"{k.title()} ({arch.upper()})")
-    ax.legend()
+    ax.legend(loc='lower left')
     ax.set_xlabel("Problem")
     ax.set_ylabel("Throughput per node [event/s]")
+    analyze.annotate_metadata(ax, plot_like)
     grid = ax.grid(which='both')
     return fig
 
@@ -415,6 +424,7 @@ def plot_power(plot_like, analyses, rates):
     ax.legend()
     ax.set_xlabel("Problem")
     ax.set_ylabel("Efficiency [event/W-h]")
+    analyze.annotate_metadata(ax, plot_like)
     grid = ax.grid(which='both')
     return fig
 
@@ -555,8 +565,8 @@ def main():
              for (k, v) in analyses.items()}
 
     fig = plot_per_node(plot_like, analyses, rates)
-    fig.savefig(plots_dir / "per-node.pdf", transparent=True)
-    fig.savefig(plots_dir / "per-node.png", transparent=False, dpi=150)
+    fig.savefig(plots_dir / "event-per-node.pdf", transparent=True)
+    fig.savefig(plots_dir / "event-per-node.png", transparent=False, dpi=150)
     plt.close()
 
     fig = plot_power(plot_like, analyses, rates)
