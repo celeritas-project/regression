@@ -287,7 +287,7 @@ base_input = {
     "use_device": False,
     "merge_events": False,
     "sync": False,
-    "initializer_capacity": 2**22,
+    "initializer_capacity": 2**24,
     "num_track_slots": 2**16,
     "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
@@ -336,9 +336,9 @@ use_field = {
 use_gpu = {
     "use_device": True,
     "merge_events": True,
-    "num_track_slots": 2**17, # 1M / 8
-    "max_steps": 2**15, # TODO: shorten to 2**12
-    "initializer_capacity": 2**23,
+    "num_track_slots": 2**20,
+    "max_steps": 2**15,
+    "initializer_capacity": 2**26,
 }
 
 use_sync = {
@@ -491,13 +491,12 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 async def run_celeritas(system, results_dir, inp):
     instance = inp['_instance']
 
-    if inp["merge_events"]:
+    if not inp["merge_events"] and inp["use_device"]:
+        assert inp["_exe"] == "celer-sim"
         # Round up cpu-per-job to nearest power of 2
-        # factor = 2**int(math.ceil(math.log2(system.cpu_per_job)))
-        # BACKWARD COMPATIBILITY:
-        factor = 8
-        inp["initializer_capacity"] *= factor
-        inp["num_track_slots"] *= factor
+        factor = 2**int(math.ceil(math.log2(system.cpu_per_job)))
+        inp["initializer_capacity"] /= factor
+        inp["num_track_slots"] /= factor
 
     try:
         proc = await system.create_celer_subprocess(inp)
