@@ -188,12 +188,12 @@ def dump_event_power(f, analysis):
     power = analysis.power / JOULE_PER_WH # W-h/sec
     rate.loc[:, 'mean'] /= power
     rate.loc[:, 'std'] = power
-    return analyze.dump_rate(f, analysis, rate, "[1/W-h]")
+    return analyze.dump_rate(f, analysis, rate, "[1/W-h]", prec=1)
 
 
 def dump_event_rate(f, analysis):
     return analyze.dump_rate(f, analysis, analyze.calc_event_rate(analysis),
-                             "[1/s]")
+                             "[1/s]", prec=2)
 
 
 def plot_minimal(system):
