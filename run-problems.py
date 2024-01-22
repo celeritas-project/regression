@@ -14,6 +14,7 @@ Requires Python 3.7+.
 import asyncio
 import itertools
 import math
+import numpy as np
 import json
 from pathlib import Path, PurePath
 from pprint import pprint
@@ -58,6 +59,32 @@ class System:
 
         env['OMP_NUM_THREADS'] = str(omp_threads)
         return env
+
+    async def compute_gpu_energy(self, power_monitor_subprocess: asyncio.subprocess.Process):
+        """
+        Terminate the power monitor subprocess and compute the total energy consumed
+
+        Returns:
+            energy_wh: total energy consumed in watt-hours
+            gpu_power: array of GPU power samples in watts (average power draw over 1s)
+        """
+        if power_monitor_subprocess is None:
+            return 0, np.array([])
+
+        power_monitor_subprocess.terminate()
+        out, _ = await communicate_with_timeout(power_monitor_subprocess, 5)
+
+        if power_monitor_subprocess.returncode:
+            print(f"Power monitor exited with code {power_monitor_subprocess.returncode}")
+            return 0, np.array([])
+
+        gpu_power = np.array(out.splitlines(), dtype=np.float32)
+        energy_ws = np.sum(np.multiply(gpu_power, self.power_sample_interval))
+        energy_wh = energy_ws / 3600
+        return energy_wh, gpu_power
+
+    def create_gpu_power_monitor_subprocess(self, inp):
+        return None
 
     def create_celer_subprocess(self, inp):
         try:
@@ -234,9 +261,23 @@ class Perlmutter(Frontier):
         "vecgeom": _CELER_ROOT / 'build-ndebug',
     }
     name = "perlmutter"
-    num_jobs = 4 # Nvidia A100 per node
+    num_jobs = 4  # Nvidia A100 per node
     gpu_per_job = 1
-    cpu_per_job = 16 # 1/4 of AMD EPYC with no hyperthreading
+    cpu_per_job = 16  # 1/4 of AMD EPYC with no hyperthreading
+    power_sample_interval = 1.0  # seconds
+
+    def create_gpu_power_monitor_subprocess(self, inp):
+        """
+        Create a subprocess that monitors GPU power usage using nvidia-smi
+
+        Must be using ampere GPUs, each sample measures the average power draw over 1s
+
+        Returns:
+            subprocess: the power monitor subprocess
+        """
+        cmd = "nvidia-smi"
+        args = ['--query-gpu=power.draw', '--format=csv,noheader,nounits', '-lms', str(int(self.power_sample_interval * 1000)), '-i', str(inp['_instance'])]
+        return asyncio.create_subprocess_exec(cmd, *args, stdout=subprocess.PIPE)
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
@@ -295,6 +336,7 @@ base_input = {
     "write_track_counts": False,
     "initializer_capacity": 2**24,
     "num_track_slots": 2**16,
+    "track_order": "unsorted",
     "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "brem_combined": False,
@@ -495,7 +537,7 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
     return result
 
 
-async def run_celeritas(system, results_dir, inp):
+async def run_celeritas(system: System, results_dir, inp):
     instance = inp['_instance']
 
     if not inp["merge_events"] and inp["use_device"]:
@@ -507,6 +549,9 @@ async def run_celeritas(system, results_dir, inp):
 
     try:
         proc = await system.create_celer_subprocess(inp)
+        proc_gpu_power = None
+        if inp["use_device"]:
+            proc_gpu_power = await system.create_gpu_power_monitor_subprocess(inp)
     except Exception as e:
         print("Problem creating subprocess:", e)
         return exception_to_dict(e, context="creating subprocess")
@@ -520,6 +565,11 @@ async def run_celeritas(system, results_dir, inp):
         interrupt=inp['_timeout']
     )
 
+    energy_wh = 0
+    gpu_power = np.array([])
+    if proc_gpu_power:
+        energy_wh, gpu_power = await system.compute_gpu_energy(proc_gpu_power)
+
     try:
         result = json.loads(out)
     except json.decoder.JSONDecodeError as e:
@@ -528,6 +578,10 @@ async def run_celeritas(system, results_dir, inp):
         result = {
             'stdout': out.decode().splitlines(),
         }
+
+    if proc_gpu_power:
+        result["result"]["runner"]['gpu_energy_wh'] = energy_wh
+        result["result"]["runner"]['gpu_power'] = gpu_power.tolist()
 
     if proc.returncode:
         print(f"{instance}: exit code {proc.returncode}")
