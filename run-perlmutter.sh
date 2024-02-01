@@ -17,6 +17,6 @@ fi
 source $CFS/atlas/esseivaj/devel/celeritas/scripts/env/perlmutter.sh
 
 echo "Running on $HOSTNAME at $(date)"
-python3 run-problems.py perlmutter
+python3 run-problems.py perlmutter "$@"
 echo "Completed at $(date)"
 exit 0

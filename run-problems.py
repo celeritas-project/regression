@@ -16,6 +16,8 @@ import itertools
 import math
 import numpy as np
 import json
+import re
+from scipy.integrate import simpson
 from pathlib import Path, PurePath
 from pprint import pprint
 from os import environ
@@ -35,6 +37,7 @@ class System:
     num_jobs = None # Number of simultaneous jobs to run
     gpu_per_job = None
     cpu_per_job = None
+    power_sample_interval = 1.0  # seconds
 
     def get_runtime_environ(self, inp):
         env = {}
@@ -78,8 +81,21 @@ class System:
             print(f"Power monitor exited with code {power_monitor_subprocess.returncode}")
             return 0, np.array([])
 
-        gpu_power = np.array(out.splitlines(), dtype=np.float32)
+        lines = out.decode().splitlines()
+        gpu_power = []
+        for line in lines:
+            if re.match('^ [0-9]+', line):
+                line_cols = line.split()
+                power = float(line_cols[3])
+                sm_use = int(line_cols[6])
+                if sm_use > 80:
+                    gpu_power.append(power)
+        gpu_power = np.array(gpu_power, dtype=np.float32)
+        if gpu_power.size == 0:
+            print("No GPU power samples found")
+            return 0, np.array([])
         energy_ws = np.sum(np.multiply(gpu_power, self.power_sample_interval))
+        print(f"{energy_ws} watts-secs {simpson(gpu_power)}")
         energy_wh = energy_ws / 3600
         return energy_wh, gpu_power
 
@@ -276,7 +292,7 @@ class Perlmutter(Frontier):
             subprocess: the power monitor subprocess
         """
         cmd = "nvidia-smi"
-        args = ['--query-gpu=power.draw', '--format=csv,noheader,nounits', '-lms', str(int(self.power_sample_interval * 1000)), '-i', str(inp['_instance'])]
+        args = ['dmon', '-i', str(inp['_instance']), '--select', 'pu', '--options', 'DT']
         return asyncio.create_subprocess_exec(cmd, *args, stdout=subprocess.PIPE)
 
     def create_celer_subprocess(self, inp):
@@ -548,10 +564,10 @@ async def run_celeritas(system: System, results_dir, inp):
         inp["num_track_slots"] /= factor
 
     try:
-        proc = await system.create_celer_subprocess(inp)
         proc_gpu_power = None
         if inp["use_device"]:
             proc_gpu_power = await system.create_gpu_power_monitor_subprocess(inp)
+        proc = await system.create_celer_subprocess(inp)
     except Exception as e:
         print("Problem creating subprocess:", e)
         return exception_to_dict(e, context="creating subprocess")
@@ -580,8 +596,11 @@ async def run_celeritas(system: System, results_dir, inp):
         }
 
     if proc_gpu_power:
-        result["result"]["runner"]['gpu_energy_wh'] = energy_wh
-        result["result"]["runner"]['gpu_power'] = gpu_power.tolist()
+        res = result["result"]
+        if "runner" in res:
+            res = res["runner"]
+        res['gpu_energy_wh'] = energy_wh
+        res['gpu_power'] = gpu_power.tolist()
 
     if proc.returncode:
         print(f"{instance}: exit code {proc.returncode}")
@@ -612,6 +631,10 @@ async def run_celeritas(system: System, results_dir, inp):
 
     return result
 
+def is_track_order_flag(param: str) -> bool:
+    return param in ["unsorted", "shuffled", "partition_status",
+                     "sort_along_step_action", "sort_step_limit_action",
+                     "sort_action", "sort_particle_type"]
 
 async def main():
     try:
@@ -622,6 +645,11 @@ async def main():
         # TODO: use metaclass to build this list automatically
         _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
+
+    track_orders = [[{'track_order': param}] for param in sys.argv[2:] if is_track_order_flag(param)]
+    if not track_orders:
+        track_orders = [[{'track_order': 'unsorted'}]]
+
     system = Sys()
     system.build_dirs['geant4'] = system.build_dirs['orange']
 
@@ -650,8 +678,9 @@ async def main():
         {"primary_options": {"num_events": system.cpu_per_job}},
     ]
 
-    inputs = [build_input(base_inputs + p + d)
-              for p, d in itertools.product(problems, device_mods)]
+    # only allow problems if !(sorted and !use_gpu)
+    inputs = [build_input(base_inputs + p + d + o)
+              for p, d, o in itertools.product(problems, device_mods, track_orders) if not (o[0].get('track_order') != 'unsorted' and not (d and d[0].get('use_device', False)))]
     inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
                for p in sync_problems]
     with open(results_dir / "index.json", "w") as f:

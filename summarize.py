@@ -64,6 +64,7 @@ def summarize_result(out):
     summary["total_time"] = total_time
     summary["avg_time_per_primary"] = total_time / num_primaries
     summary["avg_event_per_time"] = num_events / total_time
+    summary["gpu_energy_wh"] = result.get("gpu_energy_wh", 0.0)
 
     if inp['_exe'] == "celer-sim":
         def get_stream_counts(key, stream=0):
@@ -132,6 +133,9 @@ def inp_to_nametuple(inp):
         name += '+field'
     if inp['physics_options']['msc'] != "none":
         name += '+msc'
+    track_order = inp.get('track_order', 'unsorted')
+    if track_order != 'unsorted':
+        name += f"+{track_order}"
 
     geo = inp['_geometry']
 
