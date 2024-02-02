@@ -86,10 +86,15 @@ class System:
         for line in lines:
             if re.match('^ [0-9]+', line):
                 line_cols = line.split()
-                power = float(line_cols[3])
-                sm_use = int(line_cols[6])
-                if sm_use > 80:
-                    gpu_power.append(power)
+                try:
+                    power = float(line_cols[3])
+                    sm_use = int(line_cols[6])
+                except (IndexError, ValueError):
+                    print(f"Failed to parse power sample: {line}")
+                    continue
+                else:
+                    if sm_use > 80:
+                        gpu_power.append(power)
         gpu_power = np.array(gpu_power, dtype=np.float32)
         if gpu_power.size == 0:
             print("No GPU power samples found")

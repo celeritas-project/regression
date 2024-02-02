@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #SBATCH -A m2616
-#SBATCH -t 01:59:59
+#SBATCH -t 03:59:59
 #SBATCH -q regular
 #SBATCH -N 1
 #SBATCH -C gpu
@@ -10,7 +10,7 @@
 
 if [ -z "$SLURM_JOB_ID" ]; then
   set -x
-  sbatch $0 && squeue -u $USER
+  sbatch $0 "$@" && squeue -u $USER
   exit $?
 fi
 
