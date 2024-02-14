@@ -337,6 +337,43 @@ class Analysis:
         unconverged_celersim = self.result['unconverged'] > 0
         return self.valid & ~(self.celersim & unconverged_celersim)
 
+    def plot_sorting(self, ax, throughput):
+
+        # prepare df
+        sorted_problems_idx = list(set([x for x in throughput.index.get_level_values('problem') if "sort" in x]))
+        unsorted_problems_idx = [re.sub(r"\+sort[a-zA-Z_]*", "", x) for x in sorted_problems_idx]
+
+        idx = pd.IndexSlice
+        arch = "gpu"
+        result_index = throughput.loc[idx[unsorted_problems_idx, :, arch]].index
+        speedup = pd.DataFrame(index=result_index, columns=["speedup"], dtype=float)
+        speedup.sort_index(inplace=True)
+        for sorted_idx, unsorted_idx in zip(sorted_problems_idx, unsorted_problems_idx):
+            cur = throughput.loc[idx[[sorted_idx, unsorted_idx], :, arch]]
+            speedup.loc[unsorted_idx, "speedup"] = (cur.loc[sorted_idx]["mean"] / cur.loc[unsorted_idx]["mean"]).to_numpy()
+        
+        # plot
+        get_levels = speedup.index.get_level_values
+        _idx_problems = set(get_levels('problem'))
+        problems = [p for p in self.problems() if p in _idx_problems]
+        problem_to_abbr = self.problem_to_abbr(problems, speedup.index)
+        p_to_i = dict(zip(problems, itertools.count()))
+
+        # One data point for each row, with geometries close to each other
+        index = np.array([p_to_i[p] for p in get_levels('problem')], dtype=float)
+        index += [(0.1 if g == 'orange' else -0.05) for g in get_levels('geo')]
+        color = np.array([GEO_COLORS[g] for g in get_levels('geo')])
+        results = []
+        lab, slc, mark = (arch.upper(), get_levels('arch') == arch, ARCH_SHAPES[arch])
+        scat = ax.scatter(index[slc], speedup.loc[slc]['speedup'], c=color[slc],
+                              marker=mark, label=lab)
+        results.append(scat)
+        xax = ax.get_xaxis()
+        xax.set_ticks(np.arange(len(problems)))
+        xax.set_ticklabels(list(problem_to_abbr.values()), rotation=90)
+        ax.set_axisbelow(True)
+        return results
+
     def plot_results(self, ax, df):
         get_levels = df.index.get_level_values
         _idx_problems = set(get_levels('problem'))

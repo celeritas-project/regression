@@ -348,7 +348,7 @@ def plot_all(system):
         fig.savefig(plots_dir / f"time-per-step-{p}.pdf", transparent=True)
         plt.close()
 
-    ### THROUGHPUT VS GEANT4 ###
+    ### SORTING RESULTS ###
 
     if 'geant4' not in analysis.summed.index.levels[1]:
         print("skipping vs-geant4 plots because it's not in the results:",
@@ -357,6 +357,22 @@ def plot_all(system):
 
     throughput = analyze.summarize_instances(analysis.result['avg_event_per_time'])
     throughput = throughput[~analysis.failed_pga]
+
+    (fig, ax) = plt.subplots()
+    analysis.plot_sorting(ax, throughput)
+    ax.legend()
+    plt.title("Sorting speedup using sort_along_step_action")
+    ax.set_ylabel("Througput speedup [sorted/unsorted]")
+    grid = ax.grid(which='both')
+    analyze.annotate_metadata(ax, analysis)
+    fig.savefig(plots_dir / "sorting.pdf", transparent=True)
+    fig.savefig(plots_dir / "sorting.png", dpi=150)
+    plt.close()
+
+    ### THROUGHPUT VS GEANT4 ###
+
+    # remove sorted problems as the don't don't have CPU results
+    throughput = throughput.loc[list(set([x for x in throughput.index.get_level_values('problem') if "sort" not in x]))]
 
     (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
     analysis.plot_results(ax, throughput)
