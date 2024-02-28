@@ -25,9 +25,9 @@ import analyze
 # NOTE: these are the *used* values. Summit and frontier reserve a core for
 # system processes.
 system_color = {
-    "summit": "#7A954F",
-    "frontier": "#BC5544",
-    "perlmutter": "#3E92C7",
+    "summit": "#3E92C7", # blue, IBM
+    "frontier": "#BC5544", # red, AMD
+    "perlmutter": "#7A954F",  # green, nvidia
 }
 
 # archgeo_colors = {k: np.array(v, dtype=float) / 255 for k, v in {
@@ -103,7 +103,7 @@ def plot_speedup(analysis, speedup):
     analysis.plot_results(ax, speedup)
     ax.grid(which='both')
     num_cpu = analyze.CPU_PER_TASK[analysis.system]
-    ax.set_ylabel(f"Speedup ({num_cpu}-CPU / 1-GPU wall time)")
+    ax.set_ylabel(f"Speedup (1 GPU / {num_cpu} CPU)")
     ax.set_ylim([0, None])
 
     if analyze.CPU_POWER_PER_TASK[sys] is not None:
@@ -188,12 +188,12 @@ def dump_event_power(f, analysis):
     power = analysis.power / JOULE_PER_WH # W-h/sec
     rate.loc[:, 'mean'] /= power
     rate.loc[:, 'std'] = power
-    return analyze.dump_rate(f, analysis, rate, "[1/W-h]")
+    return analyze.dump_rate(f, analysis, rate, "[1/W-h]", prec=1)
 
 
 def dump_event_rate(f, analysis):
     return analyze.dump_rate(f, analysis, analyze.calc_event_rate(analysis),
-                             "[1/s]")
+                             "[1/s]", prec=2)
 
 
 def plot_minimal(system):
@@ -247,11 +247,25 @@ def plot_minimal(system):
         del testem3["gpu+sync"]
     except KeyError:
         pass
-    print("Speedup for testem3:")
-    print(str(testem3 / testem3.loc[("orange", "cpu")]))
+
+    ref_label = ("geant4", "g4")
+    try:
+        ref = testem3.loc[ref_label]
+    except KeyError:
+        ref_label = ("orange", "cpu")
+        ref = testem3.loc[ref_label]
+    else:
+        del testem3["g4"]
+
+    testem3.dropna(inplace=True, how="all")
+
+    print("Speedup for testem3 (relative to", "/".join(ref_label), "):")
+    print(str(testem3 / ref))
 
     _desc = (speedup["mean"].dropna()).describe()
-    print("Speedups: {min:.0f}×–{max:.0f}×".format(**_desc))
+    print("Speedups: {min:.1f}×–{max:.0f}×".format(**_desc))
+    _desc = 100 * (1 - 1 / speedup["mean"].dropna()).describe()
+    print("GPU capacity: {min:.0f}%–{max:.0f}%".format(**_desc))
     _desc = (speedup["mean"].dropna() * 7).describe()
     print("CPU:GPU equivalence: {min:.0f}×–{max:.0f}×".format(**_desc))
 
@@ -261,9 +275,9 @@ def plot_minimal(system):
     fig.savefig(plots_dir / "speedup.png", transparent=False, dpi=150)
     plt.close()
 
-    fig = plot_geo_throughput(analysis, analyze.calc_geo_frac(analysis))
-    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
-    plt.close()
+#    fig = plot_geo_throughput(analysis, analyze.calc_geo_frac(analysis))
+#    fig.savefig(plots_dir / "throughput-geo.pdf", transparent=True)
+#    plt.close()
 
     return analysis
 
@@ -379,7 +393,7 @@ def plot_all(system):
     (fig, ax) = plt.subplots(subplot_kw=dict(yscale='log'))
     analysis.plot_results(ax, speedup)
     ax.legend()
-    ax.set_ylabel("Speedup [C/G4]")
+    ax.set_ylabel("Speedup (C/G4)")
     grid = ax.grid(which='both')
     hline = ax.axhline(1.0, linestyle='-', linewidth=2,
                 color=(.7, .1, .1, 0.5,));
