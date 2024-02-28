@@ -25,9 +25,9 @@ import analyze
 # NOTE: these are the *used* values. Summit and frontier reserve a core for
 # system processes.
 system_color = {
-    "summit": "#7A954F",
-    "frontier": "#BC5544",
-    "perlmutter": "#3E92C7",
+    "summit": "#3E92C7", # blue, IBM
+    "frontier": "#BC5544", # red, AMD
+    "perlmutter": "#7A954F",  # green, nvidia
 }
 
 # archgeo_colors = {k: np.array(v, dtype=float) / 255 for k, v in {
