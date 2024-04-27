@@ -14,10 +14,8 @@ Requires Python 3.7+.
 import asyncio
 import itertools
 import math
-import numpy as np
 import json
 import re
-from scipy.integrate import simpson
 from pathlib import Path, PurePath
 from pprint import pprint
 from os import environ
@@ -26,6 +24,12 @@ from signal import SIGINT, SIGTERM, SIGKILL
 import subprocess
 import sys
 import time
+
+try:
+    import numpy as np
+    from scipy.integrate import simpson
+except ImportError as e:
+    print("Can't load numpy/scipy:", e)
 
 from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
 
@@ -498,7 +502,9 @@ async def run_celeritas(system: System, results_dir, inp):
     try:
         proc_gpu_power = None
         if inp["use_device"]:
-            proc_gpu_power = await system.create_gpu_power_monitor_subprocess(inp)
+            power_subprocess = system.create_gpu_power_monitor_subprocess(inp)
+            if power_subprocess:
+                proc_gpu_power = await power_subprocess
         proc = await system.create_celer_subprocess(inp)
     except Exception as e:
         print("Problem creating subprocess:", e)
