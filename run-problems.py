@@ -170,7 +170,7 @@ class Summit(System):
         return [self.run_jslist()]
 
 class Frontier(System):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-frontier'
+    _CELER_ROOT = Path(environ['HOME']) / 'Code' / 'celeritas-frontier'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug'
     }
@@ -580,11 +580,9 @@ async def main():
     if system.gpu_per_job:
         device_mods.append([use_gpu])
         # device_mods.append([use_gpu, use_geant])
-    if True:
-        # CPU-only
-        device_mods.append([]) # CPU celeritas
-        # device_mods.append([use_geant]) # CPU celeritas through celer-g4
-        # device_mods.append([use_geant, pure_geant]) # CPU geant4
+    device_mods.append([]) # CPU celeritas
+    # device_mods.append([use_geant]) # CPU celeritas through celer-g4
+    # device_mods.append([use_geant, pure_geant]) # CPU geant4
 
     # Set number of events based on number of CPUs
     base_inputs = [
