@@ -82,6 +82,9 @@ class System:
     def get_monitoring_coro(self):
         return []
 
+    def filter_problems(self, inputs):
+        return inputs
+
 class Wildstyle(System):
     build_dirs = {
         'orange': Path("/home/s3j/.local/src/celeritas/build-reldeb"),
@@ -217,13 +220,8 @@ class Frontier(System):
             env=env,
         )
 
-class Crusher(Frontier):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-crusher'
-    build_dirs = {
-        "orange": _CELER_ROOT / 'build-ndebug'
-    }
-    name = "crusher"
-
+    def filter_problems(self, inputs):
+        return [i for i in inputs if i['_geometry'] != "vecgeom"]
 
 class Perlmutter(Frontier):
     # System details:
@@ -276,6 +274,9 @@ class Perlmutter(Frontier):
             stderr=asyncio.subprocess.PIPE,
             env=env,
         )
+
+    def filter_problems(self, inputs):
+        return inputs
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
@@ -507,8 +508,6 @@ async def run_celeritas(system, results_dir, inp):
         print("Problem creating subprocess:", e)
         return exception_to_dict(e, context="creating subprocess")
 
-    # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
-
     print(f"{instance}: awaiting communcation")
     failed = False
     out, err = await communicate_with_timeout(proc,
@@ -562,7 +561,7 @@ async def main():
         Sys = Local
     else:
         # TODO: use metaclass to build this list automatically
-        _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
+        _systems = {S.name: S for S in [Frontier, Summit, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
     system = Sys()
     system.build_dirs['geant4'] = system.build_dirs['orange']
@@ -594,6 +593,8 @@ async def main():
               for p, d in itertools.product(problems, device_mods)]
     inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
                for p in sync_problems]
+
+    inputs = system.filter_problems(inputs)
     with open(results_dir / "index.json", "w") as f:
         json.dump([(inp['_outdir'], inp['_name'])
                    for inp in inputs], f, indent=0)
