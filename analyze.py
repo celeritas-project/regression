@@ -46,31 +46,24 @@ KERNEL_ORDERING = {
 }
 
 CPU_POWER_PER_TASK= {
-    "summit": 2 * 190 / 6,
     "frontier": 225 / 8, # 64-core AMD “Optimized 3rd Gen EPYC”
     "perlmutter": 280 / 4, # AMD EPYC 7453
 }
 GPU_POWER_PER_TASK = {
     "wildstyle": 250, # V100
-    "summit": 250, # V100
     "frontier": 500 / 2, # MI250x
     "perlmutter": 250, # A100
 }
 CPU_PER_TASK = {
     "wildstyle": 32,
-    "summit": 7, # 44 total, 2 reserved for system
     "frontier": 7, # 64 total, 8 reserved
     "perlmutter": 16,
 }
 TASK_PER_NODE = {
     "wildstyle": 2,
-    "summit": 6,
     "frontier": 8,
     "perlmutter": 4,
 }
-
-for _d in [CPU_POWER_PER_TASK, GPU_POWER_PER_TASK, CPU_PER_TASK, TASK_PER_NODE]:
-    _d["crusher"] = _d["frontier"]
 
 BYTES_PER_REG = 4 # 32-bit registers
 

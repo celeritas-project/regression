@@ -151,72 +151,6 @@ class Local(System):
     cpu_per_job = 1
 
 
-class Summit(System):
-    _CELER_ROOT = Path(environ.get('PROJWORK', '')) / 'csc404' / 'celeritas'
-    build_dirs = {
-        "orange": _CELER_ROOT / 'build-ndebug-novg',
-        "vecgeom": _CELER_ROOT / 'build-ndebug',
-    }
-    name = "summit"
-    num_jobs = 6
-    gpu_per_job = 1
-    cpu_per_job = 7
-
-    def create_celer_subprocess(self, inp):
-        cmd = "jsrun"
-        env = {k: v for k, v in environ.items() if k.startswith('G4')}
-        env.update(self.get_runtime_environ(inp))
-
-        args = [
-            "-n1", # total resource sets
-            "-r1", # resource sets per host
-            "-a1", # tasks per resource set
-            f"-c{self.cpu_per_job}", # CPUs per resource set
-            "--bind=packed:7",
-            "--launch_distribution=packed",
-        ]
-        if inp['use_device']:
-            args.append("-g1") # GPUs per resource set
-        else:
-            args.append("-g0")
-
-        args.extend("".join(["-E", k, "=", v]) for k, v in env.items())
-
-        try:
-            build = self.build_dirs[inp["_geometry"]]
-        except KeyError:
-            build = PurePath("nonexistent")
-
-        args.extend([
-            build / "bin" / inp['_exe'],
-            "-"
-        ])
-
-        # NOTE: env is not passed to subprocess but to jsrun
-        return asyncio.create_subprocess_exec(
-            cmd, *args,
-            stdin=asyncio.subprocess.PIPE,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
-        )
-
-    async def run_jslist(self):
-        # Wait a second for the jobs to start
-        await asyncio.sleep(1)
-        print("Running jslist")
-
-        try:
-            proc = await asyncio.create_subprocess_exec("jslist", "-r", "-R")
-        except FileNotFoundError as e:
-            print("jslist not found :(")
-            return
-
-        print("Waiting on jslist output")
-        await proc.communicate()
-
-    def get_monitoring_coro(self):
-        return [self.run_jslist()]
-
 class Frontier(System):
     _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-frontier'
     build_dirs = {
@@ -264,13 +198,6 @@ class Frontier(System):
             stderr=asyncio.subprocess.PIPE,
             env=env,
         )
-
-class Crusher(Frontier):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-crusher'
-    build_dirs = {
-        "orange": _CELER_ROOT / 'build-ndebug'
-    }
-    name = "crusher"
 
 
 class Perlmutter(Frontier):
@@ -648,7 +575,7 @@ async def main():
         Sys = Local
     else:
         # TODO: use metaclass to build this list automatically
-        _systems = {S.name: S for S in [Frontier, Summit, Crusher, Perlmutter, Wildstyle]}
+        _systems = {S.name: S for S in [Frontier, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
 
     track_orders = [[{'track_order': param}] for param in sys.argv[2:] if is_track_order_flag(param)]

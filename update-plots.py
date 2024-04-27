@@ -22,10 +22,9 @@ with open('plots/style.json') as f:
 
 import analyze
 
-# NOTE: these are the *used* values. Summit and frontier reserve a core for
-# system processes.
+# NOTE: these are the *used* values. Frontier reserves a core for system
+# processes.
 system_color = {
-    "summit": "#3E92C7", # blue, IBM
     "frontier": "#BC5544", # red, AMD
     "perlmutter": "#7A954F",  # green, nvidia
 }
@@ -569,12 +568,8 @@ def main():
     analyses = {}
 
     # Plot individual results
-    analyses["summit"] = plot_all("summit")
-    analyses["crusher"] = plot_minimal("crusher")
     analyses["frontier"] = plot_minimal("frontier")
     analyses["perlmutter"] = plot_like = plot_all("perlmutter")
-
-    del analyses["crusher"]
 
     # Compare multiple systems
     plots_dir = Path("plots")
