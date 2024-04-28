@@ -1,0 +1,72 @@
+{
+ "simple-cms+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "simple-cms.gdml",
+   "num_track_slots": 65536,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-neutral": 1.7798050959999994,
+     "along-step-uniform-msc": 22.87925153300001,
+     "annihil-2-gamma": 0.10190769299999997,
+     "brems-rel": 0.083418989,
+     "brems-sb": 1.0016398850000006,
+     "conv-bethe-heitler": 0.15469717300000002,
+     "extend-from-primaries": 4.169400000000001e-05,
+     "extend-from-secondaries": 1.3018565439999976,
+     "geo-boundary": 0.08934504600000005,
+     "initialize-tracks": 0.7886076960000006,
+     "ioni-moller-bhabha": 0.21253210899999994,
+     "photoel-livermore": 0.7920502359999997,
+     "physics-discrete-select": 1.0242656159999988,
+     "pre-step": 7.284091677999997,
+     "scat-klein-nishina": 2.192636815999998
+    },
+    "active_hwm": {
+     "count": 65536,
+     "index": 676
+    },
+    "avg_event_per_time": 0.025195870384014322,
+    "avg_step_per_time": 1142306.2590224838,
+    "avg_steps_per_primary": 34874.64846153846,
+    "avg_time_per_primary": 0.030530033593076922,
+    "avg_time_per_step": 8.754219738371557e-07,
+    "emptying_step": 677,
+    "num_events": 1,
+    "num_primaries": 1300,
+    "num_step_iters": 792,
+    "num_steps": 45337043,
+    "pre_emptying_time": 0.057009316,
+    "queue_hwm": {
+     "count": 1711450,
+     "index": 82
+    },
+    "setup_time": 0.091012574,
+    "slot_occupancy": 0.8734701715334497,
+    "total_time": 39.689043671,
+    "unconverged": 0,
+    "warmup_time": 0.168111528
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": {},
+   "vecgeom": null,
+   "version": "0.4.1-7+b16fb4369"
+  }
+ }
+}
