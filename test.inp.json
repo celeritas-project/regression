@@ -1,0 +1,52 @@
+{
+"_exe": "celer-sim",
+"_geometry": "orange",
+"_instance": 0,
+"_name": [
+"testem15",
+"orange",
+"gpu"
+],
+"_outdir": "testem15-orange-gpu",
+"_timeout": 600.0,
+"_use_celeritas": true,
+"brem_combined": false,
+"geometry_file": "/lustre/orion/hep143/scratch/s3j/celeritas-regression/input/testem15.gdml",
+"initializer_capacity": 67108864,
+"max_events": 7,
+"max_steps": 32768,
+"merge_events": true,
+"num_track_slots": 1048576,
+"physics_options": {
+"coulomb_scattering": false,
+"eloss_fluctuation": true,
+"em_bins_per_decade": 56,
+"lpm": true,
+"msc": "none",
+"physics": "em_basic",
+"rayleigh_scattering": false
+},
+"primary_options": {
+"direction": {
+"distribution": "isotropic"
+},
+"energy": 10000,
+"num_events": 7,
+"pdg": [
+11,
+-11
+],
+"position": [
+0,
+0,
+0
+],
+"primaries_per_event": 1300,
+"seed": 0
+},
+"secondary_stack_factor": 3.0,
+"seed": 20220904,
+"sync": false,
+"use_device": true,
+"write_track_counts": true
+}

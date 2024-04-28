@@ -13,9 +13,10 @@ if [ -z "$SLURM_JOB_ID" ]; then
   exit $?
 fi
 
-source /ccs/home/s3j/Code/celeritas-frontier/scripts/env/frontier.sh
+source /ccs/home/s3j/Code/celeritas-frontier/scripts/env/frontier.sh 2> /dev/null
 
 echo "Running on $HOSTNAME at $(date)"
+module list 2>&1
 python3 run-problems.py frontier
 echo "Completed at $(date)"
 exit 0
