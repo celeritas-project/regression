@@ -313,7 +313,6 @@ base_input = {
         "direction": {"distribution": "isotropic"},
         "primaries_per_event": 1300,  # 13 TeV
     },
-    "write_track_counts": True,
 }
 
 use_geant = {
@@ -381,31 +380,31 @@ use_vecgeom = {"_geometry": "vecgeom"}
 
 # List of list of setting dictionaries
 problems = [
-#    [testem15],
-#    [testem15, use_field],
-#    [testem15, use_msc, use_field],
-#    [testem15, use_msc, use_field, use_vecgeom],
-#    [simple_cms, use_msc],
-#    [simple_cms, use_field],
+    [testem15],
+    [testem15, use_field],
+    [testem15, use_msc, use_field],
+    [testem15, use_msc, use_field, use_vecgeom],
+    [simple_cms, use_msc],
+    [simple_cms, use_field],
     [simple_cms, use_field, use_msc],
-#    [simple_cms, use_field, use_msc, use_vecgeom],
-#    [testem3],
-#    [testem3, use_vecgeom],
-#    [testem3, use_field],
-#    [testem3, use_msc],
-#    [testem3, use_field, use_msc],
-#    [testem3, use_field, use_msc, use_vecgeom],
-#    [full_cms],
-#    [full_cms, use_field, use_msc],
+    [simple_cms, use_field, use_msc, use_vecgeom],
+    [testem3],
+    [testem3, use_vecgeom],
+    [testem3, use_field],
+    [testem3, use_msc],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom],
+    [full_cms],
+    [full_cms, use_field, use_msc],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
-#    [testem15, use_field],
-#    [testem15, use_field, use_vecgeom],
-#    [testem3, use_field, use_msc],
-#    [testem3, use_field, use_msc, use_vecgeom],
-#    [full_cms, use_field, use_msc],
+    [testem15, use_field],
+    [testem15, use_field, use_vecgeom],
+    [testem3, use_field, use_msc],
+    [testem3, use_field, use_msc, use_vecgeom],
+    [full_cms, use_field, use_msc],
 ]
 
 def recurse_updated(d, other):
