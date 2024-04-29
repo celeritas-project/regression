@@ -8,6 +8,9 @@ from pathlib import PurePath
 import re
 
 def calc_emptying_step(active):
+    if not active:
+        # No statistics saved
+        return None
     active_it = iter(active)
     prev = next(active_it)
     max_cap = 0
@@ -20,6 +23,8 @@ def calc_emptying_step(active):
     return result
 
 def calc_hwm(counts):
+    if not counts:
+        return None
     hq, hi = max((q, i) for (i, q) in enumerate(counts))
     return {"index": hi, "count": hq}
 
@@ -64,6 +69,7 @@ def summarize_result(out):
     summary["total_time"] = total_time
     summary["avg_time_per_primary"] = total_time / num_primaries
     summary["avg_event_per_time"] = num_events / total_time
+    summary["gpu_energy_wh"] = result.get("gpu_energy_wh", 0.0)
 
     if inp['_exe'] == "celer-sim":
         def get_stream_counts(key, stream=0):
@@ -73,26 +79,32 @@ def summarize_result(out):
 
         steps = sum(active)
         emptying_step = calc_emptying_step(active)
+        try:
+            unconverged = get_stream_counts('alive')[-1] + inits[-1]
+        except IndexError as e:
+            unconverged = [str(type(e)), str(e)]
+        try:
+            preempty_time = time['steps'][0][(emptying_step or 0) - 1]
+        except Exception as e:
+            preempty_time = [str(type(e)), str(e)]
+        slot_oc = steps / (len(active) * inp['num_track_slots']) if active else None,
+
         summary.update({
-            "unconverged": get_stream_counts('alive')[-1] + inits[-1],
-            "num_step_iters": len(active),
+            "unconverged": unconverged,
+            "num_step_iters": len(active) if active else None,
             "num_steps": steps,
             "emptying_step": emptying_step,
             "warmup_time": time.get('warmup', None),
             "active_hwm": calc_hwm(active),
             "queue_hwm": calc_hwm(inits),
             "avg_steps_per_primary": steps / num_primaries,
-            "avg_time_per_step": total_time / steps,
+            "avg_time_per_step": total_time / steps if steps else None,
             "avg_step_per_time": steps / total_time,
-            "slot_occupancy": steps / (len(active) * inp['num_track_slots']),
+            "slot_occupancy": slot_oc,
             "action_times": time['actions'],
+            "pre_emptying_time": preempty_time,
         })
 
-        try:
-            preempty_time = time['steps'][0][(emptying_step or 0) - 1]
-        except Exception as e:
-            preempty_time = [str(type(e)), str(e)]
-        summary["pre_emptying_time"] = preempty_time
 
     return summary
 
@@ -132,6 +144,9 @@ def inp_to_nametuple(inp):
         name += '+field'
     if inp['physics_options']['msc'] != "none":
         name += '+msc'
+    track_order = inp.get('track_order', 'unsorted')
+    if track_order != 'unsorted':
+        name += f"+{track_order}"
 
     geo = inp['_geometry']
 
