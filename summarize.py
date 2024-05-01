@@ -74,29 +74,43 @@ def summarize_result(out):
     if inp['_exe'] == "celer-sim":
         def get_stream_counts(key, stream=0):
             return result[key][stream]
-        active = get_stream_counts('active')
-        inits = get_stream_counts('initializers')
+        try:
+            active = get_stream_counts('active')
+            inits = get_stream_counts('initializers')
+            alive = get_stream_counts('alive')
+        except (KeyError, IndexError):
+            # Likely because 'write_track_counts' is off
+            active = []
+            inits = []
+            alive = []
 
-        steps = sum(active)
-        emptying_step = calc_emptying_step(active)
         try:
-            unconverged = get_stream_counts('alive')[-1] + inits[-1]
-        except IndexError as e:
-            unconverged = None
-        try:
-            preempty_time = time['steps'][0][(emptying_step or 0) - 1]
-        except Exception as e:
-            preempty_time = None
-        slot_oc = steps / (len(active) * inp['num_track_slots']) if active else None,
+            steps = get_stream_counts('num_steps')
+            step_iters = get_stream_counts('num_step_iterations')
+            aborted = get_stream_counts('num_aborted')
+            queue_hwm = get_stream_counts('max_queued')
+        except (KeyError, IndexError):
+            # < 0.4.3
+            steps = sum(active)
+            step_iters = len(active)
+            aborted = alive[-1] if alive else None
+            queue_hwm = calc_hwm(inits)
+
+        emptying_step = (calc_emptying_step(active)
+                         if active else None)
+        preempty_time = (time['steps'][0][emptying_step - 1]
+                         if emptying_step else None)
+        slot_oc = (steps / (step_iters * inp['num_track_slots'])
+                   if step_iters else None)
 
         summary.update({
-            "unconverged": unconverged,
-            "num_step_iters": len(active) if active else None,
+            "unconverged": aborted,
+            "num_step_iters": step_iters,
             "num_steps": steps,
             "emptying_step": emptying_step,
             "warmup_time": time.get('warmup', None),
             "active_hwm": calc_hwm(active),
-            "queue_hwm": calc_hwm(inits),
+            "queue_hwm": queue_hwm,
             "avg_steps_per_primary": steps / num_primaries,
             "avg_time_per_step": total_time / steps if steps else None,
             "avg_step_per_time": steps / total_time,
@@ -192,6 +206,7 @@ def summarize_one(out):
             'failure': failure,
             'exception': exception_to_dict(e, context='result')
         }
+        raise
     else:
         if failure:
             result['failure'] = failure
