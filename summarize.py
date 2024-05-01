@@ -82,11 +82,11 @@ def summarize_result(out):
         try:
             unconverged = get_stream_counts('alive')[-1] + inits[-1]
         except IndexError as e:
-            unconverged = [str(type(e)), str(e)]
+            unconverged = None
         try:
             preempty_time = time['steps'][0][(emptying_step or 0) - 1]
         except Exception as e:
-            preempty_time = [str(type(e)), str(e)]
+            preempty_time = None
         slot_oc = steps / (len(active) * inp['num_track_slots']) if active else None,
 
         summary.update({

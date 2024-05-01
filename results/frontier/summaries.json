@@ -31,17 +31,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096039328,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.814483001,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060487709
    },
    {
@@ -58,17 +55,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095936475,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.785614813,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059255875
    },
    {
@@ -85,17 +79,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096097398,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.727755179,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.081386871
    },
    {
@@ -112,17 +103,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.09596117,
     "slot_occupancy": [
      null
     ],
     "total_time": 45.003011112,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06018189
    },
    {
@@ -139,17 +127,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096070527,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.817885849,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.062090365
    },
    {
@@ -166,17 +151,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095973624,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.836191948,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060410914
    },
    {
@@ -193,17 +175,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.09596091,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.777445927,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.054634862
    },
    {
@@ -220,17 +199,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096075867,
     "slot_occupancy": [
      null
     ],
     "total_time": 44.816686166,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06046701
    }
   ],
@@ -563,17 +539,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.09556045,
     "slot_occupancy": [
      null
     ],
     "total_time": 34.032996914,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060177503
    },
    {
@@ -590,17 +563,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096004711,
     "slot_occupancy": [
      null
     ],
     "total_time": 34.054445585,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059984318
    },
    {
@@ -617,17 +587,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095192404,
     "slot_occupancy": [
      null
     ],
     "total_time": 33.995265804,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.054628193
    },
    {
@@ -644,17 +611,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095936622,
     "slot_occupancy": [
      null
     ],
     "total_time": 33.978269469,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.064963506
    },
    {
@@ -671,17 +635,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095523341,
     "slot_occupancy": [
      null
     ],
     "total_time": 33.95364303,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.057198491
    },
    {
@@ -698,17 +659,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096290423,
     "slot_occupancy": [
      null
     ],
     "total_time": 33.971891552,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.072734183
    },
    {
@@ -725,17 +683,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095658085,
     "slot_occupancy": [
      null
     ],
     "total_time": 33.993730497,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.05993825
    },
    {
@@ -752,17 +707,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095689354,
     "slot_occupancy": [
      null
     ],
     "total_time": 34.003324261,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059995288
    }
   ],
@@ -1089,17 +1041,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095837708,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.485825347,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060689643
    },
    {
@@ -1116,17 +1065,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.095908532,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.450887163,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060563083
    },
    {
@@ -1143,17 +1089,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096352373,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.412664177,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059952757
    },
    {
@@ -1170,17 +1113,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096169717,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.467275987,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060859104
    },
    {
@@ -1197,17 +1137,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096386718,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.407745037,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.05714644
    },
    {
@@ -1224,17 +1161,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096207369,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.370793792,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.075725747
    },
    {
@@ -1251,17 +1185,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096351121,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.521091291,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060282471
    },
    {
@@ -1278,17 +1209,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.096555809,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.435323497,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060088504
    }
   ],
@@ -1617,17 +1545,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.07073196,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.671893155,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.055512766
    },
    {
@@ -1644,17 +1569,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070982596,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.62929776,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061061068
    },
    {
@@ -1671,17 +1593,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070970372,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.859915491,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060554127
    },
    {
@@ -1698,17 +1617,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070935176,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.660439537,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06066076
    },
    {
@@ -1725,17 +1641,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070903325,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.725938741,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060172013
    },
    {
@@ -1752,17 +1665,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.07110074,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.899860826,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059984308
    },
    {
@@ -1779,17 +1689,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070804217,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.613783719,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.076163131
    },
    {
@@ -1806,17 +1713,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071043441,
     "slot_occupancy": [
      null
     ],
     "total_time": 38.873125256,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060984312
    }
   ],
@@ -2149,17 +2053,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070518247,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.470707252,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060645663
    },
    {
@@ -2176,17 +2077,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070485135,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.408861214,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060235275
    },
    {
@@ -2203,17 +2101,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070639797,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.411995117,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060338671
    },
    {
@@ -2230,17 +2125,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071810504,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.419403927,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061079775
    },
    {
@@ -2257,17 +2149,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071046918,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.463559902,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.076559477
    },
    {
@@ -2284,17 +2173,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070504952,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.368544873,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.056271449
    },
    {
@@ -2311,17 +2197,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070667229,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.406657173,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060001883
    },
    {
@@ -2338,17 +2221,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071037721,
     "slot_occupancy": [
      null
     ],
     "total_time": 30.483869283,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060202373
    }
   ],
@@ -3090,17 +2970,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070691155,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.17506725,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06009514
    },
    {
@@ -3117,17 +2994,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070633876,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.138995181,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060342809
    },
    {
@@ -3144,17 +3018,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070923235,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.074908444,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.07480533
    },
    {
@@ -3171,17 +3042,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070979602,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.081381266,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.05616833
    },
    {
@@ -3198,17 +3066,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070990112,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.100783368,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060408263
    },
    {
@@ -3225,17 +3090,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071260163,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.115419953,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060680158
    },
    {
@@ -3252,17 +3114,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.071165595,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.050872482,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060139264
    },
    {
@@ -3279,17 +3138,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070807637,
     "slot_occupancy": [
      null
     ],
     "total_time": 25.142649196,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060094679
    }
   ],
@@ -3616,17 +3472,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069256446,
     "slot_occupancy": [
      null
     ],
     "total_time": 107.13087096,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.055719228
    },
    {
@@ -3643,17 +3496,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069438111,
     "slot_occupancy": [
      null
     ],
     "total_time": 107.235054049,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060323162
    },
    {
@@ -3670,17 +3520,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069823722,
     "slot_occupancy": [
      null
     ],
     "total_time": 107.174111979,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061347802
    },
    {
@@ -3697,17 +3544,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.06979127,
     "slot_occupancy": [
      null
     ],
     "total_time": 107.01712818,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.07627238
    },
    {
@@ -3724,17 +3568,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069803743,
     "slot_occupancy": [
      null
     ],
     "total_time": 106.960579842,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06000574
    },
    {
@@ -3751,17 +3592,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069449322,
     "slot_occupancy": [
      null
     ],
     "total_time": 106.962039658,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060034885
    },
    {
@@ -3778,17 +3616,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069582915,
     "slot_occupancy": [
      null
     ],
     "total_time": 106.993861875,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061563892
    },
    {
@@ -3805,17 +3640,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069426879,
     "slot_occupancy": [
      null
     ],
     "total_time": 107.028566712,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06005827
    }
   ],
@@ -4565,17 +4397,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069265074,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.833926995,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.055322569
    },
    {
@@ -4592,17 +4421,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069344775,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.786979525,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.079920079
    },
    {
@@ -4619,17 +4445,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069737758,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.664962098,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.06061746
    },
    {
@@ -4646,17 +4469,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069420618,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.65688268,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060213905
    },
    {
@@ -4673,17 +4493,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069774558,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.689983043,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060669338
    },
    {
@@ -4700,17 +4517,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069694337,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.939115141,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060244443
    },
    {
@@ -4727,17 +4541,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069566815,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.67496562,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060133092
    },
    {
@@ -4754,17 +4565,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069497504,
     "slot_occupancy": [
      null
     ],
     "total_time": 56.701336944,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060277606
    }
   ],
@@ -5091,17 +4899,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.06975539,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.389648465,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059946987
    },
    {
@@ -5118,17 +4923,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069893321,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.453283817,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061446117
    },
    {
@@ -5145,17 +4947,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069505286,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.48509375,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059839021
    },
    {
@@ -5172,17 +4971,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069947735,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.182262326,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.0827189
    },
    {
@@ -5199,17 +4995,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069706517,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.349268974,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060894862
    },
    {
@@ -5226,17 +5019,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069346976,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.307890655,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.055889349
    },
    {
@@ -5253,17 +5043,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.070131051,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.311045905,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060650379
    },
    {
@@ -5280,17 +5067,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069877,
     "slot_occupancy": [
      null
     ],
     "total_time": 94.457169829,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060120686
    }
   ],
@@ -5615,17 +5399,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.06936557,
     "slot_occupancy": [
      null
     ],
     "total_time": 47.918266215,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.059697764
    },
    {
@@ -5642,17 +5423,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069215897,
     "slot_occupancy": [
      null
     ],
     "total_time": 47.98344049,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061912701
    },
    {
@@ -5669,17 +5447,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069028361,
     "slot_occupancy": [
      null
     ],
     "total_time": 47.946050651,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.057268843
    },
    {
@@ -5696,17 +5471,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069071443,
     "slot_occupancy": [
      null
     ],
     "total_time": 48.08409506,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.07059043
    },
    {
@@ -5723,17 +5495,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.06937588,
     "slot_occupancy": [
      null
     ],
     "total_time": 48.016157622,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060110607
    },
    {
@@ -5750,17 +5519,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069082313,
     "slot_occupancy": [
      null
     ],
     "total_time": 48.052458325,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.061741446
    },
    {
@@ -5777,17 +5543,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069403903,
     "slot_occupancy": [
      null
     ],
     "total_time": 47.841746018,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060211908
    },
    {
@@ -5804,17 +5567,14 @@
     "num_primaries": 9100,
     "num_step_iters": null,
     "num_steps": 0,
-    "pre_emptying_time": [
-     "<class 'IndexError'>",
-     "list index out of range"
-    ],
+    "pre_emptying_time": null,
     "queue_hwm": null,
     "setup_time": 0.069076682,
     "slot_occupancy": [
      null
     ],
     "total_time": 47.931265954,
-    "unconverged": "list index out of range",
+    "unconverged": null,
     "warmup_time": 0.060757522
    }
   ],
