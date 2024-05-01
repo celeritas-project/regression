@@ -134,6 +134,9 @@ class System:
     def get_monitoring_coro(self):
         return []
 
+    def filter_problems(self, inputs):
+        return inputs
+
 class Wildstyle(System):
     build_dirs = {
         'orange': Path("/home/s3j/.local/src/celeritas/build-reldeb"),
@@ -156,7 +159,7 @@ class Local(System):
 
 
 class Frontier(System):
-    _CELER_ROOT = Path(environ['HOME']) / '.local' / 'src' / 'celeritas-frontier'
+    _CELER_ROOT = Path(environ['HOME']) / 'Code' / 'celeritas-frontier'
     build_dirs = {
         "orange": _CELER_ROOT / 'build-ndebug'
     }
@@ -202,6 +205,9 @@ class Frontier(System):
             stderr=asyncio.subprocess.PIPE,
             env=env,
         )
+
+    def filter_problems(self, inputs):
+        return [i for i in inputs if i['_geometry'] != "vecgeom"]
 
 
 class Perlmutter(Frontier):
@@ -273,6 +279,9 @@ class Perlmutter(Frontier):
             stderr=asyncio.subprocess.PIPE,
             env=env,
         )
+
+    def filter_problems(self, inputs):
+        return inputs
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
@@ -510,8 +519,6 @@ async def run_celeritas(system: System, results_dir, inp):
         print("Problem creating subprocess:", e)
         return exception_to_dict(e, context="creating subprocess")
 
-    # TODO: monitor output, e.g. https://gist.github.com/kalebo/1e085ee36de45ffded7e5d9f857265d0
-
     print(f"{instance}: awaiting communcation")
     failed = False
     out, err = await communicate_with_timeout(proc,
@@ -603,12 +610,10 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-        device_mods.append([use_gpu, use_geant])
-    if True:
-        # CPU-only
-        device_mods.append([]) # CPU celeritas
-        device_mods.append([use_geant]) # CPU celeritas through celer-g4
-        device_mods.append([use_geant, pure_geant]) # CPU geant4
+        # device_mods.append([use_gpu, use_geant])
+    device_mods.append([]) # CPU celeritas
+    # device_mods.append([use_geant]) # CPU celeritas through celer-g4
+    # device_mods.append([use_geant, pure_geant]) # CPU geant4
 
     # Set number of events based on number of CPUs
     base_inputs = [
@@ -621,6 +626,8 @@ async def main():
               for p, d, o in itertools.product(problems, device_mods, track_orders) if not (o[0].get('track_order') != 'unsorted' and not (d and d[0].get('use_device', False)))]
     inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
                for p in sync_problems]
+
+    inputs = system.filter_problems(inputs)
     with open(results_dir / "index.json", "w") as f:
         json.dump([(inp['_outdir'], inp['_name'])
                    for inp in inputs], f, indent=0)

@@ -1,0 +1,148 @@
+{
+ "simple-cms+field+msc-orange-cpu": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "simple-cms.gdml",
+   "num_track_slots": 65536,
+   "use_device": false
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "cpu"
+  ],
+  "result": [
+   {
+    "action_times": {
+     "along-step-neutral": 1.7328282689999988,
+     "along-step-uniform-msc": 22.89834812199994,
+     "annihil-2-gamma": 0.09950842799999995,
+     "brems-rel": 0.08245849399999998,
+     "brems-sb": 1.0035377519999997,
+     "conv-bethe-heitler": 0.152703909,
+     "extend-from-primaries": 4.686900000000037e-05,
+     "extend-from-secondaries": 1.263917437999999,
+     "geo-boundary": 0.08968152999999995,
+     "initialize-tracks": 0.7755085609999992,
+     "ioni-moller-bhabha": 0.21124013599999994,
+     "photoel-livermore": 0.7915627579999998,
+     "physics-discrete-select": 1.019539538000001,
+     "pre-step": 7.271812624999999,
+     "scat-klein-nishina": 2.182027661999995
+    },
+    "active_hwm": {
+     "count": 65536,
+     "index": 676
+    },
+    "avg_event_per_time": 0.025266540566208823,
+    "avg_step_per_time": 1145510.2361114537,
+    "avg_steps_per_primary": 34874.64846153846,
+    "avg_time_per_primary": 0.03044464149,
+    "avg_time_per_step": 8.729734300712995e-07,
+    "emptying_step": 677,
+    "num_events": 1,
+    "num_primaries": 1300,
+    "num_step_iters": 792,
+    "num_steps": 45337043,
+    "pre_emptying_time": 0.056854802,
+    "queue_hwm": {
+     "count": 1711450,
+     "index": 82
+    },
+    "setup_time": 0.090140856,
+    "slot_occupancy": 0.8734701715334497,
+    "total_time": 39.578033937,
+    "unconverged": 0,
+    "warmup_time": 0.166896863
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": {},
+   "vecgeom": null,
+   "version": "0.4.1-6+699239c14"
+  }
+ },
+ "simple-cms+field+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "simple-cms.gdml",
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "simple-cms+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 932934,
+     "index": 43
+    },
+    "avg_event_per_time": 1.6805226204865147,
+    "avg_step_per_time": 76232623.34568849,
+    "avg_steps_per_primary": 34894.192307692305,
+    "avg_time_per_primary": 0.0004577330646153846,
+    "avg_time_per_step": 1.3117743508121805e-08,
+    "emptying_step": 44,
+    "num_events": 1,
+    "num_primaries": 1300,
+    "num_step_iters": 203,
+    "num_steps": 45362450,
+    "pre_emptying_time": 0.008992693,
+    "queue_hwm": {
+     "count": 374697,
+     "index": 42
+    },
+    "setup_time": 0.516673864,
+    "slot_occupancy": 0.21310839159735318,
+    "total_time": 0.595052984,
+    "unconverged": 0,
+    "warmup_time": 1.547941116
+   }
+  ],
+  "system": {
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": {
+    "along-step-neutral": 0.375,
+    "along-step-uniform-msc-apply-eloss-fluct": 0.75,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.5,
+    "along-step-uniform-msc-propagate": 0.25,
+    "along-step-uniform-msc-scatter-msc-urban": 0.5,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.75,
+    "brems-rel": 0.375,
+    "brems-sb": 0.5,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries-locate-alive": 1.0,
+    "extend-from-secondaries-process-secondaries": 1.0,
+    "geo-boundary": 0.625,
+    "initialize-tracks": 0.625,
+    "ioni-moller-bhabha": 0.875,
+    "photoel-livermore": 0.875,
+    "physics-discrete-select": 1.0,
+    "pre-step": 0.5,
+    "scat-klein-nishina": 0.875
+   },
+   "vecgeom": null,
+   "version": "0.4.1-6+699239c14"
+  }
+ }
+}
