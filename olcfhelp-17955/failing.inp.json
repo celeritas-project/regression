@@ -1,0 +1,56 @@
+{
+"_exe": "celer-g4",
+"_geometry": "orange",
+"_instance": 3,
+"_name": [
+"testem15",
+"orange",
+"gpu+g4"
+],
+"_outdir": "testem15-orange-gpu+g4",
+"_timeout": 600.0,
+"_use_celeritas": true,
+"brem_combined": false,
+"geometry_file": "testem15.gdml",
+"initializer_capacity": 8388608.0,
+"max_events": 7,
+"max_steps": 32768,
+"merge_events": false,
+"num_track_slots": 131072.0,
+"output_file": "-",
+"physics_list": "geant_physics_list",
+"physics_options": {
+"coulomb_scattering": false,
+"eloss_fluctuation": true,
+"em_bins_per_decade": 56,
+"lpm": true,
+"msc": "none",
+"physics": "em_basic",
+"rayleigh_scattering": false
+},
+"primary_options": {
+"direction": {
+"distribution": "isotropic"
+},
+"energy": 10000,
+"num_events": 7,
+"pdg": [
+11,
+-11
+],
+"position": [
+0,
+0,
+0
+],
+"primaries_per_event": 1300,
+"seed": 0
+},
+"sd_type": "none",
+"secondary_stack_factor": 3.0,
+"seed": 20220907,
+"sync": false,
+"track_order": "unsorted",
+"use_device": true,
+"write_track_counts": true
+}

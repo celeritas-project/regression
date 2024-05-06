@@ -1,0 +1,82 @@
+{
+  "action_diagnostic": false,
+  "default_stream": false,
+  "environ": {},
+  "event_file": null,
+  "geometry_file": "simple-cms.gdml",
+  "initializer_capacity": 67108864,
+  "max_steps": 32768,
+  "merge_events": true,
+  "num_track_slots": 1048576,
+  "physics_options": {
+    "annihilation": true,
+    "apply_cuts": false,
+    "brems": "all",
+    "compton_scattering": true,
+    "coulomb_scattering": false,
+    "default_cutoff": 0.1,
+    "eloss_fluctuation": true,
+    "em_bins_per_decade": 56,
+    "gamma_conversion": true,
+    "gamma_general": false,
+    "integral_approach": true,
+    "ionization": true,
+    "linear_loss_limit": 0.01,
+    "lowest_electron_energy": [
+      0.001,
+      "MeV"
+    ],
+    "lpm": true,
+    "max_energy": [
+      100000000.0,
+      "MeV"
+    ],
+    "min_energy": [
+      0.0001,
+      "MeV"
+    ],
+    "msc": "urban",
+    "msc_lambda_limit": 0.1,
+    "msc_range_factor": 0.04,
+    "msc_safety_factor": 0.6,
+    "photoelectric": true,
+    "rayleigh_scattering": false,
+    "relaxation": "none",
+    "verbose": false
+  },
+  "primary_options": {
+    "direction": {
+      "distribution": "isotropic",
+      "params": []
+    },
+    "energy": {
+      "distribution": "delta",
+      "params": [
+        10000.0
+      ]
+    },
+    "num_events": 7,
+    "pdg": [
+      11
+    ],
+    "position": {
+      "distribution": "delta",
+      "params": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "primaries_per_event": 1300,
+    "seed": 0
+  },
+  "secondary_stack_factor": 3.0,
+  "seed": 9,
+  "simple_calo": [],
+  "sync": false,
+  "track_order": "unsorted",
+  "use_device": true,
+  "warm_up": true,
+  "write_step_times": false,
+  "write_track_counts": true
+}
