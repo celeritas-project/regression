@@ -73,16 +73,14 @@ def summarize_result(out):
 
     if inp['_exe'] == "celer-sim":
         def get_stream_counts(key, stream=0):
-            return result[key][stream]
-        try:
-            active = get_stream_counts('active')
-            inits = get_stream_counts('initializers')
-            alive = get_stream_counts('alive')
-        except (KeyError, IndexError):
-            # Likely because 'write_track_counts' is off
-            active = []
-            inits = []
-            alive = []
+            r = result[key]
+            if not r:
+                return None
+            return r[stream]
+
+        active = get_stream_counts('active')
+        inits = get_stream_counts('initializers')
+        alive = get_stream_counts('alive')
 
         try:
             steps = get_stream_counts('num_steps')
@@ -91,8 +89,8 @@ def summarize_result(out):
             queue_hwm = get_stream_counts('max_queued')
         except (KeyError, IndexError):
             # < 0.4.3
-            steps = sum(active)
-            step_iters = len(active)
+            steps = sum(active) if active else None
+            step_iters = len(active) if active else None
             aborted = alive[-1] if alive else None
             queue_hwm = calc_hwm(inits)
 
