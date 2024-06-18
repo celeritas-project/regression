@@ -308,7 +308,7 @@ base_input = {
         "lpm": True,
         "em_bins_per_decade": 56,
         "physics": "em_basic",
-        "msc": "none",
+        "msc": "urban",
     },
     "primary_options": {
         "seed": 0,
@@ -337,7 +337,7 @@ pure_geant = {
     }
 }
 
-use_msc = {"physics_options": {"msc": "urban"}}
+use_msc = {"physics_options": {"msc": "none"}}
 use_field = {
     "field": [0.0, 0.0, 1.0],
 }
@@ -385,31 +385,31 @@ use_vecgeom = {"_geometry": "vecgeom"}
 
 # List of list of setting dictionaries
 problems = [
-    [testem15],
+    [testem15, no_msc],
+    [testem15, no_msc, use_field],
     [testem15, use_field],
-    [testem15, use_msc, use_field],
-    [testem15, use_msc, use_field, use_vecgeom],
-    [simple_cms, use_msc],
+    [testem15, use_field, use_vecgeom],
+    [simple_cms],
+    [simple_cms, no_msc, use_field],
     [simple_cms, use_field],
-    [simple_cms, use_field, use_msc],
-    [simple_cms, use_field, use_msc, use_vecgeom],
+    [simple_cms, use_field, use_vecgeom],
+    [testem3, no_msc],
+    [testem3, no_msc, use_vecgeom],
+    [testem3, no_msc, use_field],
     [testem3],
-    [testem3, use_vecgeom],
     [testem3, use_field],
-    [testem3, use_msc],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom],
-    [full_cms],
-    [full_cms, use_field, use_msc],
+    [testem3, use_field, use_vecgeom],
+    [full_cms, no_msc],
+    [full_cms, use_field],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
-    [testem15, use_field],
-    [testem15, use_field, use_vecgeom],
-    [testem3, use_field, use_msc],
-    [testem3, use_field, use_msc, use_vecgeom],
-    [full_cms, use_field, use_msc],
+    [testem15, no_msc, use_field],
+    [testem15, no_msc, use_field, use_vecgeom],
+    [testem3, use_field],
+    [testem3, use_field, use_vecgeom],
+    [full_cms, use_field],
 ]
 
 def recurse_updated(d, other):
