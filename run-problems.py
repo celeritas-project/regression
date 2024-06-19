@@ -598,11 +598,6 @@ async def run_celeritas(system: System, results_dir, inp):
 
     return result
 
-def is_track_order_flag(param: str) -> bool:
-    return param in ["unsorted", "shuffled", "partition_status",
-                     "sort_along_step_action", "sort_step_limit_action",
-                     "sort_action", "sort_particle_type"]
-
 async def main():
     try:
         sysname = sys.argv[1]
@@ -612,10 +607,6 @@ async def main():
         # TODO: use metaclass to build this list automatically
         _systems = {S.name: S for S in [Frontier, Perlmutter, Wildstyle]}
         Sys = _systems[sysname]
-
-    track_orders = [[{'track_order': param}] for param in sys.argv[2:] if is_track_order_flag(param)]
-    if not track_orders:
-        track_orders = [[{'track_order': 'unsorted'}]]
 
     system = Sys()
     system.build_dirs['geant4'] = system.build_dirs['orange']
@@ -643,9 +634,8 @@ async def main():
         {"primary_options": {"num_events": system.cpu_per_job}},
     ]
 
-    # only allow problems if !(sorted and !use_gpu)
-    inputs = [build_input(base_inputs + p + d + o)
-              for p, d, o in itertools.product(problems, device_mods, track_orders) if not (o[0].get('track_order') != 'unsorted' and not (d and d[0].get('use_device', False)))]
+    inputs = [build_input(base_inputs + p + d)
+              for p, d in itertools.product(problems, device_mods)]
     inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
                for p in sync_problems]
 
