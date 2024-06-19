@@ -1,0 +1,58 @@
+[
+  {
+    "filename": "testem15.gdml",
+    "isotope": 15,
+    "element": 4,
+    "material": 2,
+    "logical": 2,
+    "physical": 2
+  },
+  {
+    "filename": "simple-cms.gdml",
+    "isotope": 20,
+    "element": 6,
+    "material": 6,
+    "logical": 7,
+    "physical": 7
+  },
+  {
+    "filename": "testem3-flat.gdml",
+    "isotope": 9,
+    "element": 3,
+    "material": 3,
+    "logical": 101,
+    "physical": 101
+  },
+  {
+    "filename": "testem3-composite.gdml",
+    "isotope": 17,
+    "element": 5,
+    "material": 3,
+    "logical": 54,
+    "physical": 152
+  },
+  {
+    "filename": "atlas-tilecal.gdml",
+    "isotope": 33,
+    "element": 13,
+    "material": 11,
+    "logical": 199,
+    "physical": 680
+  },
+  {
+    "filename": "cms-hgcal.gdml",
+    "isotope": 45,
+    "element": 16,
+    "material": 19,
+    "logical": 893,
+    "physical": 24506
+  },
+  {
+    "filename": "cms2018.gdml",
+    "isotope": 122,
+    "element": 40,
+    "material": 385,
+    "logical": 3815,
+    "physical": 19173
+  }
+]

@@ -1,1 +1,8 @@
-{"testem15": "A", "simple-cms": "B", "testem3-flat": "C", "cms2018": "Z"}
+[
+  ["testem15", "Inf"],
+  ["testem3-flat", "EM3-"],
+  ["testem3-composite", "EM3"],
+  ["atlas-tilecal", "ATC"],
+  ["cms-hgcal", "C"],
+  ["cms2018", "C2"]
+]
