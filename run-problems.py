@@ -339,7 +339,7 @@ pure_geant = {
 
 use_msc = {"physics_options": {"msc": "none"}}
 use_field = {
-    "field": [0.0, 0.0, 1.0],
+    "field": [0.0, 0.0, 1.0], # units: [T]
 }
 
 use_gpu = {
@@ -363,15 +363,33 @@ testem15 = {
     "sync": False,
 }
 
-simple_cms = {
-    "geometry_file": "simple-cms.gdml",
-}
-
 testem3 = {
     "geometry_file": "testem3-flat.gdml",
     "primary_options": {
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
+    }
+}
+
+testem3_composite = {
+    "geometry_file": "testem3-composite.gdml",
+    "primary_options": testem3["primary_options"]
+}
+
+_tilecal_angle = 76 * (2 * math.pi / 360)
+tilecal = {
+    "geometry_file": "atlas-tilecal.gdml",
+    "primary_options": {
+        "position": [229.8, 0, 0],
+        "direction": [math.sin(_tilecal_angle), 0, math.cos(_tilecal_angle)],
+    }
+}
+
+hgcal = {
+    "geometry_file": "cms-hgcal.gdml",
+    "primary_options": {
+        "position": [0, 0, -900],
+        "direction": [0, 0, 1],
     }
 }
 
@@ -389,16 +407,20 @@ problems = [
     [testem15, no_msc, use_field],
     [testem15, use_field],
     [testem15, use_field, use_vecgeom],
-    [simple_cms],
-    [simple_cms, no_msc, use_field],
-    [simple_cms, use_field],
-    [simple_cms, use_field, use_vecgeom],
     [testem3, no_msc],
     [testem3, no_msc, use_vecgeom],
     [testem3, no_msc, use_field],
     [testem3],
     [testem3, use_field],
     [testem3, use_field, use_vecgeom],
+    [testem3_composite],
+    [testem3_composite, use_vecgeom],
+    [testem3_composite, use_field],
+    [testem3_composite, use_field, use_vecgeom],
+    [tilecal, no_msc],
+    [tilecal, no_msc, use_vecgeom],
+    [hgcal, no_msc],
+    [hgcal, no_msc, use_vecgeom],
     [full_cms, no_msc],
     [full_cms, use_field],
 ]
