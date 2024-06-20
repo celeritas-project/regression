@@ -338,7 +338,7 @@ pure_geant = {
     }
 }
 
-use_msc = {"physics_options": {"msc": "none"}}
+no_msc = {"physics_options": {"msc": "none"}}
 use_field = {
     "field": [0.0, 0.0, 1.0], # units: [T]
 }
