@@ -139,8 +139,8 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/s3j/.local/src/celeritas/build-reldeb"),
-        'vecgeom': Path("/home/s3j/.local/src/celeritas/build-reldeb-vecgeom"),
+        'orange': Path("/home/s3j/Code/celeritas/build-reldeb"),
+        'vecgeom': Path("/home/s3j/Code/celeritas/build-reldeb-vecgeom"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -150,7 +150,8 @@ class Wildstyle(System):
 
 class Local(System):
     build_dirs = {
-        "orange": Path("/Users/seth/Code/celeritas-temp/build"),
+        "orange": Path("/Users/seth/Code/celeritas/build-ndebug"),
+        "vecgeom": Path("/Users/seth/Code/celeritas/build-vecgeom-ndebug"),
     }
     name = "testing"
     num_jobs = 1
