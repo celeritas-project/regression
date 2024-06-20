@@ -168,7 +168,8 @@ def inp_to_nametuple(inp):
             arch = "g4"
         else:
             arch = arch + "+g4"
-    if inp["sync"]:
+    if arch == "gpu" and (
+            inp.get("action_times", False) or inp.get("sync", False)):
         arch += "+sync"
 
     return (name, geo, arch)

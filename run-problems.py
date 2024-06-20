@@ -294,7 +294,7 @@ base_input = {
     "_use_celeritas": True,
     "use_device": False,
     "merge_events": False,
-    "sync": False,
+    "action_times": True,
     "write_track_counts": False,
     "initializer_capacity": 2**24,
     "num_track_slots": 2**16,
@@ -344,6 +344,7 @@ use_field = {
 }
 
 use_gpu = {
+    "action_times": False,
     "use_device": True,
     "merge_events": True,
     "write_track_counts": True,
@@ -353,7 +354,8 @@ use_gpu = {
 }
 
 use_sync = {
-    "sync": True,
+    "sync": True, # Deprecated
+    "action_times": True,
 }
 
 testem15 = {
@@ -361,7 +363,6 @@ testem15 = {
     "primary_options": {
         "pdg": [11, -11],
     },
-    "sync": False,
 }
 
 testem3 = {
