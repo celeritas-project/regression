@@ -549,8 +549,6 @@ async def run_celeritas(system: System, results_dir, inp):
         interrupt=inp['_timeout']
     )
 
-    energy_wh = 0
-    gpu_power = np.array([])
     if proc_gpu_power:
         energy_wh, gpu_power = await system.compute_gpu_energy(proc_gpu_power)
 
@@ -637,8 +635,9 @@ async def main():
 
     inputs = [build_input(base_inputs + p + d)
               for p, d in itertools.product(problems, device_mods)]
-    inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
-               for p in sync_problems]
+    if system.gpu_per_job:
+        inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
+                   for p in sync_problems]
 
     inputs = system.filter_problems(inputs)
     with open(results_dir / "index.json", "w") as f:
