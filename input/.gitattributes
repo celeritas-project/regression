@@ -1,0 +1,2 @@
+atlas-tilecal.org.json filter=lfs diff=lfs merge=lfs -text
+cms-hgcal.org.json filter=lfs diff=lfs merge=lfs -text
