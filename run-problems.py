@@ -370,6 +370,7 @@ testem3 = {
     "primary_options": {
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
+        "_units": "cgs",
     }
 }
 
@@ -382,7 +383,7 @@ _tilecal_angle = 76 * (2 * math.pi / 360)
 tilecal = {
     "geometry_file": "atlas-tilecal.gdml",
     "primary_options": {
-        "position": [229.8, 0, 0],
+        "position": [229.801, 0, 0],
         "direction": [math.sin(_tilecal_angle), 0, math.cos(_tilecal_angle)],
     }
 }
@@ -390,7 +391,7 @@ tilecal = {
 hgcal = {
     "geometry_file": "cms-hgcal.gdml",
     "primary_options": {
-        "position": [0, 0, -900],
+        "position": [0, 0, -899.999],
         "direction": [0, 0, 1],
     }
 }
