@@ -205,7 +205,6 @@ def summarize_one(out):
             'failure': failure,
             'exception': exception_to_dict(e, context='result')
         }
-        raise
     else:
         if failure:
             result['failure'] = failure
