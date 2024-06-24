@@ -434,6 +434,8 @@ sync_problems = [
     [testem15, no_msc, use_field, use_vecgeom],
     [testem3, use_field],
     [testem3, use_field, use_vecgeom],
+    [testem3_composite, use_field],
+    [testem3_composite, use_field, use_vecgeom],
     [full_cms, use_field],
 ]
 
