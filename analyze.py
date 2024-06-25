@@ -131,7 +131,7 @@ class ProblemAbbreviator:
     def __init__(self):
         input_dir = Path(__file__).parent / "input"
         with open(input_dir / "problem-abbr.json") as f:
-            self.geo_abbrev = dict(*json.load(f))
+            self.geo_abbrev = json.load(f)
 
     def __call__(self, inp):
         geo, *_ = inp['geometry_name'].partition('.')
