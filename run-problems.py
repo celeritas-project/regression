@@ -626,10 +626,10 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-        #device_mods.append([use_gpu, use_geant])
+        device_mods.append([use_gpu, use_geant])
     device_mods.append([]) # CPU celeritas
-    #device_mods.append([use_geant]) # CPU celeritas through celer-g4
-    #device_mods.append([use_geant, pure_geant]) # CPU geant4
+    device_mods.append([use_geant]) # CPU celeritas through celer-g4
+    device_mods.append([use_geant, pure_geant]) # CPU geant4
 
     # Set number of events based on number of CPUs
     base_inputs = [
