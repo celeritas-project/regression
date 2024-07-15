@@ -1,0 +1,36 @@
+{
+"input": {
+"_exe": "celer-sim",
+"_geometry": "orange",
+"_instance": 0,
+"_name": [
+"atlas-tilecal",
+"orange",
+"gpu"
+],
+"_outdir": "atlas-tilecal-orange-gpu",
+"_timeout": 600.0,
+"_use_celeritas": true
+},
+"stderr": [
+"status: Loading input and initializing problem data",
+"status: Initializing Geant4 run manager",
+"status: Initializing Geant4 geometry",
+"info: Loading Geant4 geometry from GDML at /lustre/orion/hep143/scratch/s3j/celeritas-regression/input/atlas-tilecal.gdml",
+"status: Building Geant4 physics tables",
+"status: Transferring data from Geant4",
+"status: Loading external elemental data",
+"info: Loading ORANGE geometry from JSON at /lustre/orion/hep143/scratch/s3j/celeritas-regression/input/atlas-tilecal.gdml",
+"/ccs/home/s3j/Code/celeritas-frontier/src/orange/OrangeParams.cc:61: warning: Using ORANGE geometry with GDML suffix: trying `.org.json` instead",
+"/ccs/home/s3j/Code/celeritas-frontier/app/celer-sim/Runner.cc:276: warning: Geometry contains surfaces that are incompatible with the current ORANGE simple safety algorithm: multiple scattering may result in arbitrarily small steps",
+"status: Celeritas core setup complete",
+"status: Creating states",
+"status: Celeritas core state initialization complete",
+"status: Warming up",
+"status: Transporting 9100 primaries",
+":0:rocdevice.cpp            :2692: 476516580932 us: [pid:50199 tid:0x7fffd25ff700] Callback: Queue 0x7ffea1000000 aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29",
+"srun: error: frontier10482: task 0: Aborted",
+"srun: Terminating StepId=2098154.400"
+],
+"stdout": []
+}
