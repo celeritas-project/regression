@@ -137,9 +137,9 @@ class ProblemAbbreviator:
         geo, *_ = inp['geometry_name'].partition('.')
         bits = [self.geo_abbrev[geo]]
         if inp.get('field') and any(inp['field']):
-            bits.append('F')
-        if inp['enable_msc']:
-            bits.append('M')
+            bits.append('+F')
+        if not inp['enable_msc']:
+            bits.append('-M')
 
         return "".join(bits)
 
@@ -294,7 +294,13 @@ class Analysis:
             failed_problems = self.failed_problems
         else:
             failed = self.failed_pga.groupby(index.names).any()
-            failed_problems = get_failed_problem_set(failed[index])
+            try:
+                failed_idx = failed[index]
+            except KeyError as e:
+                print(f"All problems seem to have failed: {e}")
+                failed_idx = index
+            failed_problems = get_failed_problem_set(failed_idx)
+
         result = {}
         for p in problems:
             inputs = self.input.xs(p, level='problem')

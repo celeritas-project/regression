@@ -430,6 +430,9 @@ def plot_power(plot_like, analyses, rates):
         r = rates[k]
         for arch in ['cpu', 'gpu', 'g4']:
             v = get_where_arch(r, arch) # events/(task * s)
+            if v.dropna().size == 0:
+                print(f"No power available for arch {arch}")
+                continue
             power = get_where_arch(analyses[k].power, arch) / JOULE_PER_WH # W-h/sec
             v.loc[:, 'mean'] /= power
             v.loc[:, 'std'] = power
