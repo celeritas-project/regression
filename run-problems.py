@@ -150,8 +150,8 @@ class Wildstyle(System):
 
 class Local(System):
     build_dirs = {
-        "orange": Path("/Users/seth/Code/celeritas/build-ndebug"),
-        "vecgeom": Path("/Users/seth/Code/celeritas/build-vecgeom-ndebug"),
+        "orange": Path("/Users/seth/Code/celeritas/build-reldeb"),
+        "vecgeom": Path("/Users/seth/Code/celeritas/build-vecgeom-reldeb"),
     }
     name = "testing"
     num_jobs = 1
@@ -379,6 +379,11 @@ testem3_composite = {
     "primary_options": testem3["primary_options"]
 }
 
+testem3_expanded = {
+    "geometry_file": "testem3-expanded.gdml",
+    "primary_options": testem3["primary_options"]
+}
+
 _tilecal_angle = 76 * (2 * math.pi / 360)
 tilecal = {
     "geometry_file": "atlas-tilecal.gdml",
@@ -420,6 +425,8 @@ problems = [
     [testem3_composite, use_vecgeom],
     [testem3_composite, use_field],
     [testem3_composite, use_field, use_vecgeom],
+    [testem3_expanded, use_field],
+    [testem3_expanded, use_field, use_vecgeom],
     [tilecal, no_msc],
     [tilecal, no_msc, use_vecgeom],
     [hgcal, no_msc],

@@ -137,9 +137,9 @@ class ProblemAbbreviator:
         geo, *_ = inp['geometry_name'].partition('.')
         bits = [self.geo_abbrev[geo]]
         if inp.get('field') and any(inp['field']):
-            bits.append('+F')
+            bits.append('F$_\\mathrm{U}$')
         if not inp['enable_msc']:
-            bits.append('-M')
+            bits.append('M$_-$')
 
         return "".join(bits)
 
@@ -337,6 +337,9 @@ class Analysis:
         return self.valid & ~(self.celersim & unconverged_celersim)
 
     def plot_results(self, ax, df):
+        if df.empty:
+            print("Warning: empty dataframe (will not plot results)")
+            return []
         get_levels = df.index.get_level_values
         _idx_problems = set(get_levels('problem'))
         problems = [p for p in self.problems() if p in _idx_problems]

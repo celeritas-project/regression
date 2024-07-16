@@ -1,8 +1,19 @@
 {
-  "testem15": "Inf", 
-  "testem3-flat": "EM3-", 
-  "testem3-composite": "EM3", 
-  "atlas-tilecal": "ATC",
-  "cms-hgcal": "C",
-  "cms2018": "C2"
+  "testem15": "T$_\\mathrm{inf}$", 
+  "testem3-flat": "T$_{\\mathrm{E}3}^-$", 
+  "testem3-composite": "T$_{\\mathrm{E}3}^+$", 
+  "testem3-expanded": "T$_{\\mathrm{E}3}^*$", 
+  "simple-cms": "C",
+  "atlas-emec": "A$_\\mathrm{E}$",
+  "atlas-emec-nogaps": "A$_\\mathrm{E}^*$",
+  "atlas-tilecal": "A$_\\mathrm{T}$",
+  "simple-cms": "T$_\\mathrm{SC}$",
+  "cms-hgcal": "C$_\\mathrm{HG}$",
+  "cms2018": "C$_2$",
+  "cms-run3": "C$_3$",
+  "cms-hllhc": "C$_4$",
+  "dune10kt_v5_refactored_1x2x6": "D$_A$",
+  "dunevd10kt_3view_30deg_v6_refactored_1x8x6": "D$_B$",
+  "trackml": "T$_\\mathrm{ML}$",
+  "zdcgeom": "L$_\\mathrm{Z}$"
 }
