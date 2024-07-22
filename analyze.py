@@ -139,7 +139,7 @@ class ProblemAbbreviator:
         if inp.get('field') and any(inp['field']):
             bits.append('F$_\\mathrm{U}$')
         if not inp['enable_msc']:
-            bits.append('M$_-$')
+            bits.append('M̃')
 
         return "".join(bits)
 
