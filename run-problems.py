@@ -177,6 +177,7 @@ class Frontier(System):
     def get_runtime_environ(self, inp):
         env = super().get_runtime_environ(inp)
         env["HSA_OVERRIDE_CPU_AFFINITY_DEBUG"] = "0"
+        return env
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
