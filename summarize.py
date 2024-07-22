@@ -72,21 +72,29 @@ def summarize_result(out):
     summary["gpu_energy_wh"] = result.get("gpu_energy_wh", 0.0)
 
     if inp['_exe'] == "celer-sim":
-        def get_stream_counts(key, stream=0):
+        def squeeze(r):
+            if len(r) == 1:
+                return r[0]
+            return r
+
+        def mean(r):
+            return sum(r) / len(r)
+
+        def get_stream_counts(key, op):
             r = result[key]
             if not r:
                 return None
-            return r[stream]
+            return op(r)
 
-        active = get_stream_counts('active')
-        inits = get_stream_counts('initializers')
-        alive = get_stream_counts('alive')
+        active = get_stream_counts('active', squeeze)
+        inits = get_stream_counts('initializers', squeeze)
+        alive = get_stream_counts('alive', squeeze)
 
         try:
-            steps = get_stream_counts('num_steps')
-            step_iters = get_stream_counts('num_step_iterations')
-            aborted = get_stream_counts('num_aborted')
-            queue_hwm = get_stream_counts('max_queued')
+            steps = get_stream_counts('num_steps', sum)
+            step_iters = get_stream_counts('num_step_iterations', squeeze)
+            aborted = get_stream_counts('num_aborted', sum)
+            queue_hwm = get_stream_counts('max_queued', mean)
         except (KeyError, IndexError):
             # < 0.4.3
             steps = sum(active) if active else None
@@ -99,7 +107,7 @@ def summarize_result(out):
         preempty_time = (time['steps'][0][emptying_step - 1]
                          if emptying_step else None)
         slot_oc = (steps / (step_iters * inp['num_track_slots'])
-                   if step_iters else None)
+                   if step_iters and isinstance(step_iters, int) else None)
 
         summary.update({
             "unconverged": aborted,
