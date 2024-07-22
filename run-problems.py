@@ -174,6 +174,10 @@ class Frontier(System):
     # gpu_per_job = 2
     # cpu_per_job = 14
 
+    def get_runtime_environ(self, inp):
+        env = super().get_runtime_environ(inp)
+        env["HSA_OVERRIDE_CPU_AFFINITY_DEBUG"] = "0"
+
     def create_celer_subprocess(self, inp):
         cmd = "srun"
 
@@ -185,7 +189,7 @@ class Frontier(System):
         ]
         if inp['use_device']:
             args.append("--gpus-per-task=1")
-            args.append("--gpus=0")
+            args.append("--gpu-bind=verbose,closest")
         else:
             args.append("--gpus=0")
 
