@@ -346,6 +346,7 @@ pure_geant = {
 no_msc = {"physics_options": {"msc": "none"}}
 use_field = {
     "field": [0.0, 0.0, 1.0], # units: [T]
+    "field_options": {"max_substeps": 1000},
 }
 
 use_gpu = {
