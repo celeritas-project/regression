@@ -12,7 +12,7 @@
 "_outdir": "atlas-tilecal-orange-gpu",
 "_timeout": 600.0,
 "_use_celeritas": true,
-"_version": "0.4.3",
+"_version": "0.4.4",
 "action_diagnostic": false,
 "brem_combined": false,
 "cuda_heap_size": null,
@@ -2679,11 +2679,10 @@ true
 }
 },
 "stderr": [
-"srun: Job step's --cpus-per-task value exceeds that of job (32 > 16). Job step may never run.",
-"srun: Job 27162493 step creation temporarily disabled, retrying (Requested nodes are busy)",
-"srun: Job 27162493 step creation still disabled, retrying (Requested nodes are busy)",
-"srun: Step created for StepId=27162493.114",
-"cpu-bind=MASK - nid002801, task  0  0 [1475479]: mask 0xffff000000000000ffff00000000 set",
+"srun: Job 28430517 step creation temporarily disabled, retrying (Requested nodes are busy)",
+"srun: Job 28430517 step creation still disabled, retrying (Requested nodes are busy)",
+"srun: Step created for StepId=28430517.322",
+"cpu-bind=MASK - nid003796, task  0  0 [1400579]: mask 0xffff000000000000ffff00000000 set",
 "status: Loading input and initializing problem data",
 "status: Initializing Geant4 run manager",
 "status: Initializing Geant4 geometry",
@@ -2703,8 +2702,8 @@ true
 "celeritas: CUDA error: an illegal memory access was encountered",
 "/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/app/celer-sim/celer-sim.cc:264: critical: While running input at <stdin>: copy_if failed to synchronize: cudaErrorIllegalAddress: an illegal memory access was encountered",
 "status: Saving output",
-"srun: error: nid002801: task 0: Exited with exit code 1",
-"srun: Terminating StepId=27162493.114"
+"srun: error: nid003796: task 0: Exited with exit code 1",
+"srun: Terminating StepId=28430517.322"
 ],
 "system": {
 "build": {
@@ -2728,13 +2727,14 @@ true
 "CLHEP_VERSION": "2.4.7.1",
 "Geant4_VERSION": "11.0.3"
 },
-"version": "0.4.3-7+0967ac32c"
+"version": "0.4.4"
 },
 "device": {
 "can_map_host_memory": true,
 "capability_major": 8,
 "capability_minor": 0,
 "clock_rate": 1410000,
+"debug": false,
 "device_id": 0,
 "eu_per_cu": 1,
 "max_blocks_per_grid": 2147483647,
@@ -2745,10 +2745,12 @@ true
 "memory_clock_rate": 1215000,
 "multiprocessor_count": 108,
 "name": "NVIDIA A100-SXM4-40GB",
+"num_devices": 1,
 "platform": "cuda",
 "regs_per_block": 65536,
 "regs_per_multiprocessor": 65536,
 "shared_mem_per_block": 49152,
+"stream_async": true,
 "threads_per_warp": 32,
 "total_const_mem": 65536,
 "total_global_mem": 42297524224
@@ -2756,6 +2758,7 @@ true
 "environ": {
 "CELER_COLOR": "",
 "CELER_DEBUG_DEVICE": "",
+"CELER_DEVICE_ASYNC": "1",
 "CELER_DISABLE_DEVICE": "",
 "CELER_DISABLE_REDIRECT": "",
 "CELER_DISABLE_ROOT": "",
@@ -3038,14 +3041,14 @@ true
 "memory": [
 {
 "_units": "kibi",
-"cpu_delta": 68440,
-"cpu_hwm": 226264,
+"cpu_delta": 68280,
+"cpu_hwm": 226112,
 "label": "celer-sim.run"
 },
 {
 "_units": "kibi",
-"cpu_delta": 17840,
-"cpu_hwm": 175664,
+"cpu_delta": 17844,
+"cpu_hwm": 175676,
 "gpu_delta": 2048,
 "gpu_usage": 431616,
 "label": "Runner.build_core_params",
@@ -3053,24 +3056,24 @@ true
 },
 {
 "_units": "kibi",
-"cpu_delta": 11852,
-"cpu_hwm": 169676,
+"cpu_delta": 11856,
+"cpu_hwm": 169688,
 "gpu_usage": 429568,
 "label": "GeantSetup.construct",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_delta": 8156,
-"cpu_hwm": 168620,
+"cpu_delta": 8160,
+"cpu_hwm": 168632,
 "gpu_usage": 429568,
 "label": "load_geant_geometry",
 "parent_index": 2
 },
 {
 "_units": "kibi",
-"cpu_delta": 792,
-"cpu_hwm": 169676,
+"cpu_delta": 1056,
+"cpu_hwm": 169688,
 "gpu_usage": 429568,
 "label": "GeantSetup.initialize",
 "parent_index": 2
@@ -3078,35 +3081,35 @@ true
 {
 "_units": "kibi",
 "cpu_delta": 264,
-"cpu_hwm": 169940,
+"cpu_hwm": 169952,
 "gpu_usage": 429568,
 "label": "GeantImporter.load",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 171116,
+"cpu_hwm": 171128,
 "gpu_usage": 431616,
 "label": "MaterialParams.construct",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 171116,
+"cpu_hwm": 171128,
 "gpu_usage": 431616,
 "label": "GeoMaterialParams.construct",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 171116,
+"cpu_hwm": 171128,
 "gpu_usage": 431616,
 "label": "ParticleParams.construct",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 171116,
+"cpu_hwm": 171128,
 "gpu_usage": 431616,
 "label": "CutoffParams.construct",
 "parent_index": 1
@@ -3114,14 +3117,14 @@ true
 {
 "_units": "kibi",
 "cpu_delta": 1380,
-"cpu_hwm": 172496,
+"cpu_hwm": 172508,
 "gpu_usage": 431616,
 "label": "PhysicsParams.construct",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 171380,
+"cpu_hwm": 171392,
 "gpu_usage": 431616,
 "label": "SeltzerBergerModel.construct",
 "parent_index": 10
@@ -3129,14 +3132,14 @@ true
 {
 "_units": "kibi",
 "cpu_delta": 3168,
-"cpu_hwm": 175664,
+"cpu_hwm": 175676,
 "gpu_usage": 431616,
 "label": "Runner.build_events",
 "parent_index": 1
 },
 {
 "_units": "kibi",
-"cpu_hwm": 175664,
+"cpu_hwm": 175676,
 "gpu_usage": 431616,
 "label": "CoreParams.construct",
 "parent_index": 1

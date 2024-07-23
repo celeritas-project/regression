@@ -1,21 +1,37 @@
-| Problem                                                        | Geometry |  GPU [1/W-h] | CPU [1/W-h] |
-| -------------------------------------------------------------- | -------- | ------------ | ----------- |
-| atlas-tilecal [A$_\mathrm{T}$M̃*]                              | vecgeom  |  27.4 (±0.1) | 15.9 (±0.0) |
-| cms-hgcal [C$_\mathrm{HG}$M̃]                                  | orange   |   9.1 (±0.1) |  6.0 (±0.0) |
-|                                                                | vecgeom  |  11.1 (±0.1) |  7.6 (±0.0) |
-| cms2018 [C$_\mathrm{R2}$M̃]                                    | vecgeom  |  12.6 (±0.1) | 16.4 (±0.0) |
-| cms2018+field+msc [C$_\mathrm{R2}$F$_\mathrm{U}$]              | vecgeom  |   3.5 (±0.1) |  6.6 (±0.0) |
-| testem15 [T$_\mathrm{inf}$M̃]                                  | orange   | 112.3 (±0.1) | 38.0 (±0.0) |
-| testem15+field [T$_\mathrm{inf}$F$_\mathrm{U}$M̃]              | orange   | 106.2 (±0.1) | 28.7 (±0.0) |
-| testem15+field+msc [T$_\mathrm{inf}$F$_\mathrm{U}$]            | orange   |  88.8 (±0.1) | 22.3 (±0.0) |
-|                                                                | vecgeom  |  78.8 (±0.1) | 23.7 (±0.0) |
-| testem3-composite+field+msc [T$_\mathrm{EM3}^+$F$_\mathrm{U}$] | orange   |  13.7 (±0.1) |  6.6 (±0.0) |
-|                                                                | vecgeom  |  11.9 (±0.1) |  7.6 (±0.0) |
-| testem3-composite+msc [T$_\mathrm{EM3}^+$]                     | orange   |  18.9 (±0.1) |  7.3 (±0.0) |
-|                                                                | vecgeom  |  25.1 (±0.1) |  9.8 (±0.0) |
-| testem3-flat [T$_\mathrm{EM3}^-$M̃]                            | orange   |  51.5 (±0.1) | 19.9 (±0.0) |
-|                                                                | vecgeom  |  46.2 (±0.1) | 20.2 (±0.0) |
-| testem3-flat+field [T$_\mathrm{EM3}^-$F$_\mathrm{U}$M̃]        | orange   |  35.4 (±0.1) | 15.2 (±0.0) |
-| testem3-flat+field+msc [T$_\mathrm{EM3}^-$F$_\mathrm{U}$]      | orange   |  22.5 (±0.1) |  8.0 (±0.0) |
-|                                                                | vecgeom  |   9.0 (±0.1) |  8.1 (±0.0) |
-| testem3-flat+msc [T$_\mathrm{EM3}^-$]                          | orange   |  34.5 (±0.1) | 10.2 (±0.0) |
+| Problem                                                        | Geometry |  GPU [1/W-h] | CPU [1/W-h] | GPU+G4 [1/W-h] | CPU+G4 [1/W-h] |  G4 [1/W-h] |
+| -------------------------------------------------------------- | -------- | ------------ | ----------- | -------------- | -------------- | ----------- |
+| atlas-tilecal [A$_\mathrm{T}$M̃*]                              | geant4   |              |             |                |                |  9.3 (±0.0) |
+|                                                                | vecgeom  |  27.3 (±0.1) | 16.0 (±0.0) |    17.6 (±0.1) |     9.4 (±0.0) |             |
+| cms-hgcal [C$_\mathrm{HG}$M̃]                                  | geant4   |              |             |                |                |  3.1 (±0.0) |
+|                                                                | orange   |   9.1 (±0.1) |  6.3 (±0.0) |     3.1 (±0.1) |     3.3 (±0.0) |             |
+|                                                                | vecgeom  |  11.1 (±0.1) |  7.6 (±0.0) |     7.0 (±0.1) |     4.9 (±0.0) |             |
+| cms2018 [C$_\mathrm{R2}$M̃*]                                   | geant4   |              |             |                |                | 10.8 (±0.0) |
+|                                                                | vecgeom  |  12.6 (±0.1) | 16.3 (±0.0) |     6.5 (±0.1) |    10.3 (±0.0) |             |
+| cms2018+field+msc [C$_\mathrm{R2}$F$_\mathrm{U}$]              | geant4   |              |             |                |                |  5.3 (±0.0) |
+|                                                                | vecgeom  |   3.5 (±0.1) |  7.1 (±0.0) |     1.3 (±0.1) |     5.6 (±0.0) |             |
+| testem15 [T$_\mathrm{inf}$M̃]                                  | geant4   |              |             |                |                | 23.0 (±0.0) |
+|                                                                | orange   | 112.2 (±0.1) | 38.8 (±0.0) |    59.0 (±0.1) |    21.2 (±0.0) |             |
+| testem15+field [T$_\mathrm{inf}$F$_\mathrm{U}$M̃]              | geant4   |              |             |                |                | 18.9 (±0.0) |
+|                                                                | orange   | 106.1 (±0.1) | 30.2 (±0.0) |    54.9 (±0.1) |    19.5 (±0.0) |             |
+| testem15+field+msc [T$_\mathrm{inf}$F$_\mathrm{U}$]            | geant4   |              |             |                |                | 16.3 (±0.0) |
+|                                                                | orange   |  88.9 (±0.1) | 23.3 (±0.0) |    49.6 (±0.1) |    17.0 (±0.0) |             |
+|                                                                | vecgeom  |  78.7 (±0.1) | 24.7 (±0.0) |    49.4 (±0.1) |    17.1 (±0.0) |             |
+| testem3-composite+field+msc [T$_\mathrm{EM3}^+$F$_\mathrm{U}$] | geant4   |              |             |                |                |  5.4 (±0.0) |
+|                                                                | orange   |  13.5 (±0.1) |  6.2 (±0.0) |     5.3 (±0.1) |     5.2 (±0.0) |             |
+|                                                                | vecgeom  |  11.9 (±0.1) |  7.8 (±0.0) |     6.4 (±0.1) |     6.7 (±0.0) |             |
+| testem3-composite+msc [T$_\mathrm{EM3}^+$*]                    | geant4   |              |             |                |                |  7.6 (±0.0) |
+|                                                                | orange   |  18.8 (±0.1) |  7.0 (±0.0) |    10.3 (±0.1) |     5.6 (±0.0) |             |
+|                                                                | vecgeom  |  25.3 (±0.1) |  9.4 (±0.0) |    16.1 (±0.1) |     7.4 (±0.0) |             |
+| testem3-expanded+field+msc [T$_\mathrm{EM3}^*$F$_\mathrm{U}$]  | geant4   |              |             |                |                |  5.4 (±0.0) |
+|                                                                | orange   |  13.6 (±0.1) |  6.3 (±0.0) |     5.4 (±0.1) |     5.6 (±0.0) |             |
+|                                                                | vecgeom  |  11.9 (±0.1) |  7.7 (±0.0) |     6.4 (±0.1) |     6.9 (±0.0) |             |
+| testem3-flat [T$_\mathrm{EM3}^-$M̃]                            | geant4   |              |             |                |                | 12.9 (±0.0) |
+|                                                                | orange   |  51.7 (±0.1) | 20.8 (±0.0) |    21.2 (±0.1) |    11.0 (±0.0) |             |
+|                                                                | vecgeom  |  46.3 (±0.1) | 20.1 (±0.0) |    27.0 (±0.1) |    11.2 (±0.0) |             |
+| testem3-flat+field [T$_\mathrm{EM3}^-$F$_\mathrm{U}$M̃]        | geant4   |              |             |                |                |  9.9 (±0.0) |
+|                                                                | orange   |  35.5 (±0.1) | 16.5 (±0.0) |    14.1 (±0.1) |    10.2 (±0.0) |             |
+| testem3-flat+field+msc [T$_\mathrm{EM3}^-$F$_\mathrm{U}$]      | geant4   |              |             |                |                |  6.1 (±0.0) |
+|                                                                | orange   |  22.5 (±0.1) |  8.0 (±0.0) |     7.4 (±0.1) |     7.2 (±0.0) |             |
+|                                                                | vecgeom  |   9.0 (±0.1) |  8.1 (±0.0) |     4.5 (±0.1) |     6.7 (±0.0) |             |
+| testem3-flat+msc [T$_\mathrm{EM3}^-$]                          | geant4   |              |             |                |                |  7.6 (±0.0) |
+|                                                                | orange   |  34.6 (±0.1) |  9.5 (±0.0) |    16.6 (±0.1) |     7.6 (±0.0) |             |

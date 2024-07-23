@@ -39,7 +39,7 @@ CELERITAS_DEBUG:BOOL=OFF
 CELERITAS_MAX_BLOCK_SIZE:STRING=256
 
 //Python path used for finding modules and generating documentation
-CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/root:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/misc:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.11/site-packages
+CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/root:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/misc:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.11/site-packages:/opt/nersc/pymon
 
 //Global runtime precision for real numbers
 CELERITAS_REAL_TYPE:STRING=
@@ -102,7 +102,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CRAYPE_LINKTYPE:STRING=
 
 //saved value of LOADEDMODULES environment variable
-CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-x86-milan:libfabric/1.15.2.0:craype-network-ofi:gcc-native/12.3:perftools-base/23.12.0:cpe/23.12:craype/2.7.30:cray-dsmml/0.2.2:cray-mpich/8.1.28:cray-libsci/23.12.5:PrgEnv-gnu/8.5.0
+CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-x86-milan:libfabric/1.15.2.0:craype-network-ofi:xpmem/2.6.2-2.5_2.38__gd067c3f.shasta:gcc-native/12.3:perftools-base/23.12.0:cpe/23.12:craype/2.7.30:cray-dsmml/0.2.2:cray-mpich/8.1.28:cray-libsci/23.12.5:PrgEnv-gnu/8.5.0
 
 //No help, variable specified on the command line.
 CMAKE_CUDA_ARCHITECTURES:STRING=80
@@ -128,8 +128,8 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Set to CMAKE_CXX_COMPILER by Celeritas CMakeLists
 CMAKE_CUDA_HOST_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:PATH=CC
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -289,7 +289,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.4.3
+CMAKE_PROJECT_VERSION:STATIC=0.4.4
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
@@ -298,7 +298,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 CMAKE_PROJECT_VERSION_MINOR:STATIC=4
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=3
+CMAKE_PROJECT_VERSION_PATCH:STATIC=4
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -863,7 +863,7 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login12
+SITE:STRING=login14
 
 //Path to a file.
 VDT_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/include
@@ -1306,7 +1306,7 @@ CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.27.9-b2qxruoil4zgk5mxgapgczwvxzbvgqn7/share/cmake-3.27/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.3;-7;0967ac32c
+Celeritas_GIT_DESCRIBE:INTERNAL=0.4.4;;
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
