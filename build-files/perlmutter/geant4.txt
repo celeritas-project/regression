@@ -35,8 +35,17 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
+//Fetch and build GTest
+CELERITAS_EXTERNAL_GTest:BOOL=
+
+//Fetch and build nlohmann_json
+CELERITAS_EXTERNAL_nlohmann_json:BOOL=
+
 //Threads-per-block launch bound for Celeritas action kernels
 CELERITAS_MAX_BLOCK_SIZE:STRING=256
+
+//Celeritas OpenMP parallelism
+CELERITAS_OPENMP:STRING=
 
 //Python path used for finding modules and generating documentation
 CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/root:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/misc:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.11/site-packages:/opt/nersc/pymon
@@ -73,6 +82,9 @@ CELERITAS_USE_MPI:BOOL=OFF
 
 //Enable CPU shared-memory parallelism
 CELERITAS_USE_OpenMP:BOOL=ON
+
+//Perfetto tracing library
+CELERITAS_USE_Perfetto:BOOL=OFF
 
 //Use Python to generate and preprocess
 CELERITAS_USE_Python:BOOL=ON
@@ -128,8 +140,8 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Set to CMAKE_CXX_COMPILER by Celeritas CMakeLists
 CMAKE_CUDA_HOST_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:PATH=CC
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -232,6 +244,9 @@ CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/install-ndebug-novg
 
+//Inform installed binaries of external library rpaths
+CMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
+
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
 
@@ -279,6 +294,9 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
+//Make sure build can be used with shared libs or runtime modules
+CMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -289,16 +307,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.4.4
+CMAKE_PROJECT_VERSION:STATIC=0.5.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=4
+CMAKE_PROJECT_VERSION_MINOR:STATIC=5
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=4
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -824,8 +842,14 @@ CELERITASTEST_NP_DEFAULT:INTERNAL=1
 CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
 //STRINGS property for variable: CELERITAS_CORE_RNG
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
+//ADVANCED property for variable: CELERITAS_EXTERNAL_GTest
+CELERITAS_EXTERNAL_GTest-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CELERITAS_EXTERNAL_nlohmann_json
+CELERITAS_EXTERNAL_nlohmann_json-ADVANCED:INTERNAL=1
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=perlmutter
+//STRINGS property for variable: CELERITAS_OPENMP
+CELERITAS_OPENMP-STRINGS:INTERNAL=event;track
 //STRINGS property for variable: CELERITAS_REAL_TYPE
 CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
 //STRINGS property for variable: CELERITAS_UNITS
@@ -964,7 +988,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1164,7 +1188,7 @@ CUDA_nvrtc_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_pcsamplingutil_LIBRARY
 CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.4.4;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.203;3708f3507
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1338,6 +1362,7 @@ _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/install-ndebug-novg
 _LAST_CELERITAS_CORE_GEO:INTERNAL=ORANGE
 _LAST_CELERITAS_CORE_RNG:INTERNAL=xorwow
+_LAST_CELERITAS_OPENMP:INTERNAL=event
 _LAST_CELERITAS_REAL_TYPE:INTERNAL=double
 _LAST_CELERITAS_UNITS:INTERNAL=CGS
 //Compiler reason failure
