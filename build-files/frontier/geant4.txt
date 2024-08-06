@@ -80,6 +80,9 @@ CELERITAS_USE_MPI:BOOL=OFF
 //Enable CPU shared-memory parallelism
 CELERITAS_USE_OpenMP:BOOL=ON
 
+//Enable PNG output with libpng
+CELERITAS_USE_PNG:BOOL=OFF
+
 //Perfetto tracing library
 CELERITAS_USE_Perfetto:BOOL=OFF
 
@@ -732,7 +735,7 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.202;141cd4928
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.221;2eb8ebdf2.track-data-layout
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
