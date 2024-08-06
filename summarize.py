@@ -164,9 +164,6 @@ def inp_to_nametuple(inp):
         name += '+field'
     if inp['physics_options']['msc'] != "none":
         name += '+msc'
-    track_order = inp.get('track_order', 'unsorted')
-    if track_order != 'unsorted':
-        name += f"+{track_order}"
 
     geo = inp['_geometry']
 

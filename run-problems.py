@@ -303,7 +303,7 @@ base_input = {
     "write_track_counts": False,
     "initializer_capacity": 2**24,
     "num_track_slots": 2**16,
-    "track_order": "unsorted",
+    "track_order": "partition_charge",
     "max_steps": 2**21,
     "secondary_stack_factor": 3.0,
     "brem_combined": False,
@@ -445,7 +445,7 @@ problems = [
 sync_problems = [
 #    [testem15, no_msc, use_field],
 #    [testem15, no_msc, use_field, use_vecgeom],
-#    [testem3, use_field],
+    [testem3, use_field],
 #    [testem3, use_field, use_vecgeom],
 #    [testem3_composite, use_field],
 #    [testem3_composite, use_field, use_vecgeom],
