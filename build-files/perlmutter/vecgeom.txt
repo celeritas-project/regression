@@ -24,7 +24,7 @@ CELERITAS_BUILD_DEMOS:BOOL=ON
 CELERITAS_BUILD_DOCS:BOOL=OFF
 
 //Build Celeritas unit tests
-CELERITAS_BUILD_TESTS:BOOL=ON
+CELERITAS_BUILD_TESTS:BOOL=OFF
 
 //Celeritas runtime geometry
 CELERITAS_CORE_GEO:STRING=
@@ -53,12 +53,6 @@ CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments
 //Global runtime precision for real numbers
 CELERITAS_REAL_TYPE:STRING=
 
-//Only run one GPU-enabled test at a time
-CELERITAS_TEST_RESOURCE_LOCK:BOOL=ON
-
-//Increase logging level for tests
-CELERITAS_TEST_VERBOSE:BOOL=OFF
-
 //Native unit system for Celeritas
 CELERITAS_UNITS:STRING=
 
@@ -74,14 +68,14 @@ CELERITAS_USE_HIP:BOOL=OFF
 //Enable HepMC3 event record reader
 CELERITAS_USE_HepMC3:BOOL=ON
 
-//Enable JSON I/O
-CELERITAS_USE_JSON:BOOL=ON
-
 //Enable distributed memory parallelism
 CELERITAS_USE_MPI:BOOL=OFF
 
 //Enable CPU shared-memory parallelism
 CELERITAS_USE_OpenMP:BOOL=ON
+
+//Enable PNG output with libpng
+CELERITAS_USE_PNG:BOOL=OFF
 
 //Perfetto tracing library
 CELERITAS_USE_Perfetto:BOOL=OFF
@@ -881,7 +875,7 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login14
+SITE:STRING=login33
 
 //Path to a file.
 VDT_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/include
@@ -937,6 +931,10 @@ CELERITAS_HOSTNAME:INTERNAL=perlmutter
 CELERITAS_OPENMP-STRINGS:INTERNAL=event;track
 //STRINGS property for variable: CELERITAS_REAL_TYPE
 CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
+//Only run one GPU-enabled test at a time
+CELERITAS_TEST_RESOURCE_LOCK:INTERNAL=ON
+//Increase logging level for tests
+CELERITAS_TEST_VERBOSE:INTERNAL=OFF
 //STRINGS property for variable: CELERITAS_UNITS
 CELERITAS_UNITS-STRINGS:INTERNAL=CGS;SI;CLHEP
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -959,8 +957,6 @@ CMAKE_CPACK_COMMAND:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles1
 CMAKE_CRAYPE_LINKTYPE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CRAYPE_LOADEDMODULES
 CMAKE_CRAYPE_LOADEDMODULES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.27.9-b2qxruoil4zgk5mxgapgczwvxzbvgqn7/bin/ctest
 //ADVANCED property for variable: CMAKE_CUDA_COMPILER
@@ -1073,7 +1069,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1330,7 +1326,7 @@ CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.27.9-b2qxruoil4zgk5mxgapgczwvxzbvgqn7/share/cmake-3.27/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.203;3708f3507
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.222;0744378e0
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
