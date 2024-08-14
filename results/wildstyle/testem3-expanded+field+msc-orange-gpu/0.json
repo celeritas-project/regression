@@ -5,11 +5,11 @@
 "_geometry": "orange",
 "_instance": 0,
 "_name": [
-"cms-hgcal",
+"testem3-expanded+field+msc",
 "orange",
 "gpu"
 ],
-"_outdir": "cms-hgcal-orange-gpu",
+"_outdir": "testem3-expanded+field+msc-orange-gpu",
 "_timeout": 600.0,
 "_use_celeritas": true,
 "_version": "0.5.0",
@@ -21,10 +21,31 @@
 "default_stream": false,
 "environ": {},
 "event_file": null,
-"field": null,
-"field_options": null,
+"field": [
+0.0,
+0.0,
+1.0
+],
+"field_options": {
+"_format": "field-driver",
+"_units": "cgs",
+"_version": "0.5.0",
+"delta_chord": 0.025,
+"delta_intersection": 1e-05,
+"epsilon_rel_max": 0.001,
+"epsilon_step": 1e-05,
+"errcon": 0.0001,
+"max_nsteps": 100,
+"max_stepping_decrease": 0.1,
+"max_stepping_increase": 5.0,
+"max_substeps": 1000,
+"minimum_step": 1.0000000000000002e-06,
+"pgrow": -0.2,
+"pshrink": -0.25,
+"safety": 0.9
+},
 "file_sampling_options": null,
-"geometry_file": "/home/viu/Celeritas/regression/input/cms-hgcal.gdml",
+"geometry_file": "/home/viu/Celeritas/regression/input/testem3-expanded.gdml",
 "initializer_capacity": 67108864,
 "max_steps": 32768,
 "mctruth_file": null,
@@ -65,7 +86,7 @@
 0.0001,
 "MeV"
 ],
-"msc": "none",
+"msc": "urban",
 "msc_lambda_limit": 0.1,
 "msc_range_factor": 0.04,
 "msc_safety_factor": 0.6,
@@ -83,9 +104,9 @@
 "direction": {
 "distribution": "delta",
 "params": [
+1.0,
 0.0,
-0.0,
-1.0
+0.0
 ]
 },
 "energy": {
@@ -101,9 +122,9 @@
 "position": {
 "distribution": "delta",
 "params": [
+-22.0,
 0.0,
-0.0,
--899.999
+0.0
 ]
 },
 "primaries_per_event": 1300,
@@ -127,18 +148,18 @@
 "condition": "InvalidRead",
 "file": "G4GDMLRead::Read()",
 "type": "RuntimeError",
-"what": "ERROR - Empty document or unable to validate schema!\n        Check Internet connection is ON in case of schema\n        validation enabled and location defined as URL in\n        the GDML file - /home/viu/Celeritas/regression/input/cms-hgcal.gdml - being imported!\n        Otherwise, verify GDML schema server is reachable!",
+"what": "ERROR - Empty document or unable to validate schema!\n        Check Internet connection is ON in case of schema\n        validation enabled and location defined as URL in\n        the GDML file - /home/viu/Celeritas/regression/input/testem3-expanded.gdml - being imported!\n        Otherwise, verify GDML schema server is reachable!",
 "which": "Geant4"
 }
 },
 "stderr": [
 "status: Initializing Geant4 run manager",
 "status: Initializing Geant4 geometry",
-"info: Loading Geant4 geometry from GDML at /home/viu/Celeritas/regression/input/cms-hgcal.gdml",
+"info: Loading Geant4 geometry from GDML at /home/viu/Celeritas/regression/input/testem3-expanded.gdml",
 "/home/viu/Celeritas/celeritas/app/celer-sim/celer-sim.cc:252: critical: While running input at <stdin>: celeritas: Geant4 error: ERROR - Empty document or unable to validate schema!",
 "        Check Internet connection is ON in case of schema",
 "        validation enabled and location defined as URL in",
-"        the GDML file - /home/viu/Celeritas/regression/input/cms-hgcal.gdml - being imported!",
+"        the GDML file - /home/viu/Celeritas/regression/input/testem3-expanded.gdml - being imported!",
 "        Otherwise, verify GDML schema server is reachable!",
 "status: Saving output"
 ]
