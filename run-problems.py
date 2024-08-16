@@ -139,8 +139,8 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/s3j/Code/celeritas/build-reldeb"),
-        'vecgeom': Path("/home/s3j/Code/celeritas/build-reldeb-vecgeom"),
+        'orange': Path("/home/viu/Celeritas/celeritas/build-ndebug"),
+        'vecgeom': Path("/dev/null"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -631,7 +631,14 @@ async def main():
     buildfile_dir = regression_dir / 'build-files' / system.name
     buildfile_dir.mkdir(exist_ok=True)
     for k, v in system.build_dirs.items():
-        shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
+        dst = buildfile_dir / (k + '.txt')
+        try:
+            shutil.copyfile(v / 'CMakeCache.txt', dst)
+        except OSError:
+            dst.unlink(missing_ok=True)
+
+
+
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
