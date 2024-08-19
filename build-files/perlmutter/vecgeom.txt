@@ -35,9 +35,6 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
-//Fetch and build GTest
-CELERITAS_EXTERNAL_GTest:BOOL=
-
 //Fetch and build nlohmann_json
 CELERITAS_EXTERNAL_nlohmann_json:BOOL=
 
@@ -380,19 +377,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to the coverage program that CTest uses for performing coverage
-// inspection
-COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
-
-//Extra command line flags to pass to the coverage tool
-COVERAGE_EXTRA_FLAGS:STRING=-l
-
-//How many times to retry timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_COUNT:STRING=3
-
-//How long to wait between timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_DELAY:STRING=5
-
 //Path to a file.
 CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/extras/CUPTI/include
 
@@ -703,9 +687,6 @@ Celeritas_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Celeritas_SOURCE_DIR:STATIC=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas
 
-//Maximum time allowed before CTest will kill the test.
-DART_TESTING_TIMEOUT:STRING=1500
-
 //Path to a file.
 EXPAT_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/expat-2.6.2-af5k3df52iyxzhxu4g2notqqzktdkg7u/include
 
@@ -715,14 +696,8 @@ EXPAT_LIBRARY:PATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc
 //Path to a library.
 EXPAT_LIBRARY_RELEASE:FILEPATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/expat-2.6.2-af5k3df52iyxzhxu4g2notqqzktdkg7u/lib/libexpat.so
 
-//Path to a program.
-GITCOMMAND:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/git
-
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/git
-
-//The directory containing a CMake configuration file for GTest.
-GTest_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/GTest
 
 //The directory containing a CMake configuration file for Geant4.
 Geant4_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/Geant4-11.0.3
@@ -741,15 +716,6 @@ HEPMC3_SEARCH_LIB:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/
 
 //The directory containing a CMake configuration file for HepMC3.
 HepMC3_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/HepMC3/cmake
-
-//Command to build the project
-MAKECOMMAND:STRING=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.27.9-b2qxruoil4zgk5mxgapgczwvxzbvgqn7/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
-
-//Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
-
-//File that contains suppressions for the memory checker
-MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //CXX compiler flags for OpenMP parallelization
 OpenMP_CXX_FLAGS:STRING=-fopenmp
@@ -874,9 +840,6 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 //Path to a program.
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
-//Name of the computer/site where compile is being run
-SITE:STRING=login33
-
 //Path to a file.
 VDT_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/include
 
@@ -915,14 +878,10 @@ pkgcfg_lib_PC_EXPAT_expat:FILEPATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux
 # INTERNAL cache entries
 ########################
 
-//Default number of processes to use in CeleritasAddTest
-CELERITASTEST_NP_DEFAULT:INTERNAL=1
 //STRINGS property for variable: CELERITAS_CORE_GEO
 CELERITAS_CORE_GEO-STRINGS:INTERNAL=VecGeom;ORANGE
 //STRINGS property for variable: CELERITAS_CORE_RNG
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
-//ADVANCED property for variable: CELERITAS_EXTERNAL_GTest
-CELERITAS_EXTERNAL_GTest-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CELERITAS_EXTERNAL_nlohmann_json
 CELERITAS_EXTERNAL_nlohmann_json-ADVANCED:INTERNAL=1
 //Build/deploy system name
@@ -931,10 +890,6 @@ CELERITAS_HOSTNAME:INTERNAL=perlmutter
 CELERITAS_OPENMP-STRINGS:INTERNAL=event;track
 //STRINGS property for variable: CELERITAS_REAL_TYPE
 CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
-//Only run one GPU-enabled test at a time
-CELERITAS_TEST_RESOURCE_LOCK:INTERNAL=ON
-//Increase logging level for tests
-CELERITAS_TEST_VERBOSE:INTERNAL=OFF
 //STRINGS property for variable: CELERITAS_UNITS
 CELERITAS_UNITS-STRINGS:INTERNAL=CGS;SI;CLHEP
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -1114,14 +1069,6 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_COMMAND
-COVERAGE_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
-COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
-CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
-CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDAToolkit_CUPTI_INCLUDE_DIR
 CUDAToolkit_CUPTI_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDAToolkit_rt_LIBRARY
@@ -1326,15 +1273,11 @@ CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.27.9-b2qxruoil4zgk5mxgapgczwvxzbvgqn7/share/cmake-3.27/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.222;0744378e0
-//ADVANCED property for variable: DART_TESTING_TIMEOUT
-DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.241;ae4537e71
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
 EXPAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_LIBRARY
 EXPAT_LIBRARY-ADVANCED:INTERNAL=1
-//Details about finding GTest
-FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/GTest/GTestConfig.cmake][c ][v1.14.0(1.10)]
 //Details about finding Geant4
 FIND_PACKAGE_MESSAGE_DETAILS_Geant4:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/Geant4-11.0.3/Geant4Config.cmake][v11.0.3()]
 //Details about finding HepMC3
@@ -1353,16 +1296,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.7(1.2.4)]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.2(3.7.0)]
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MAKECOMMAND
-MAKECOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_COMMAND
-MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
-MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 OpenMP_COMPILE_RESULT_CXX_fopenmp:INTERNAL=TRUE
 //ADVANCED property for variable: OpenMP_CXX_FLAGS
@@ -1478,8 +1413,6 @@ ROOT_rootmkdir_CMD-ADVANCED:INTERNAL=1
 ROOT_rootmv_CMD-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ROOT_rootrm_CMD
 ROOT_rootrm_CMD-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SITE
-SITE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VDT_INCLUDE_DIR
 VDT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VDT_LIBRARY

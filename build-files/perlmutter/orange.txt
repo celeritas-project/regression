@@ -131,8 +131,8 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Set to CMAKE_CXX_COMPILER by Celeritas CMakeLists
 CMAKE_CUDA_HOST_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:PATH=CC
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -1131,7 +1131,7 @@ CUDA_nvrtc_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_pcsamplingutil_LIBRARY
 CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.222;0744378e0
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.241;ae4537e71
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
 EXPAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_LIBRARY
