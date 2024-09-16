@@ -346,6 +346,7 @@ pure_geant = {
 no_msc = {"physics_options": {"msc": "none"}}
 use_field = {
     "field": [0.0, 0.0, 1.0], # units: [T]
+    "field_options": {"max_substeps": 1000},
 }
 
 use_gpu = {
@@ -630,7 +631,11 @@ async def main():
     buildfile_dir = regression_dir / 'build-files' / system.name
     buildfile_dir.mkdir(exist_ok=True)
     for k, v in system.build_dirs.items():
-        shutil.copyfile(v / 'CMakeCache.txt', buildfile_dir / (k + '.txt'))
+        dst = buildfile_dir / (k + '.txt')
+        try:
+            shutil.copyfile(v / 'CMakeCache.txt', dst)
+        except OSError:
+            dst.unlink(missing_ok=True)
 
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
