@@ -35,6 +35,9 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
+//Use verbose debug assertions in device code
+CELERITAS_DEVICE_DEBUG:BOOL=OFF
+
 //Fetch and build GTest
 CELERITAS_EXTERNAL_GTest:BOOL=
 
@@ -80,6 +83,9 @@ CELERITAS_USE_MPI:BOOL=OFF
 //Enable CPU shared-memory parallelism
 CELERITAS_USE_OpenMP:BOOL=ON
 
+//Enable PNG output with libpng
+CELERITAS_USE_PNG:BOOL=OFF
+
 //Perfetto tracing library
 CELERITAS_USE_Perfetto:BOOL=OFF
 
@@ -88,9 +94,6 @@ CELERITAS_USE_Python:BOOL=ON
 
 //Enable ROOT I/O
 CELERITAS_USE_ROOT:BOOL=OFF
-
-//Build SWIG Python bindings
-CELERITAS_USE_SWIG:BOOL=OFF
 
 //Use VecGeom geometry
 CELERITAS_USE_VecGeom:BOOL=OFF
@@ -111,7 +114,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CRAYPE_LINKTYPE:STRING=
 
 //saved value of LOADEDMODULES environment variable
-CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-network-ofi:xpmem/2.6.2-2.5_2.40__gd067c3f.shasta:Core/24.00:tmux/3.2a:hsi/default:lfs-wrapper/0.0.1:DefApps:PrgEnv-amd/8.5.0:cray-dsmml/0.2.2:cray-pmi/6.1.13:craype/2.7.31:perftools-base/23.12.0:cpe/23.12:amd/5.7.1:git/2.45.1-uhawllz:cray-mpich/8.1.28:rocm/5.7.1:craype-x86-trento:libfabric/1.15.2.0:miniforge3/23.11.0-0:glibc/2.31:g4abla/3.1:g4emlow/8.0:g4ensdfstate/2.3:g4incl/1.0:g4ndl/4.6:g4particlexs/4.0:g4photonevaporation/5.7:g4pii/1.3:g4radioactivedecay/5.6:g4realsurface/2.2:g4saiddata/2.0:geant4-data/11.0.0
+CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-network-ofi:xpmem/2.8.4-1.0_7.3__ga37cbd9.shasta:Core/24.00:tmux/3.2a:hsi/default:lfs-wrapper/0.0.1:DefApps:git/2.36.1:PrgEnv-amd/8.5.0:cray-dsmml/0.2.2:cray-pmi/6.1.13:craype/2.7.31.11:perftools-base/23.12.0:cpe/23.12:amd/5.7.1:cray-mpich/8.1.28:rocm/5.7.1:craype-x86-trento:libfabric/1.15.2.0:miniforge3/23.11.0-0:glibc/2.31:g4abla/3.1:g4emlow/8.0:g4ensdfstate/2.3:g4incl/1.0:g4ndl/4.6:g4particlexs/4.0:g4photonevaporation/5.7:g4pii/1.3:g4radioactivedecay/5.6:g4realsurface/2.2:g4saiddata/2.0:geant4-data/11.0.0
 
 //CUDA compiler
 CMAKE_CUDA_COMPILER:FILEPATH=NOTFOUND
@@ -120,7 +123,7 @@ CMAKE_CUDA_COMPILER:FILEPATH=NOTFOUND
 CMAKE_CUDA_FLAGS_RELEASE:UNINITIALIZED=-O3 -DNDEBUG
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/opt/cray/pe/craype/2.7.31/bin/CC
+CMAKE_CXX_COMPILER:FILEPATH=/opt/cray/pe/craype/2.7.31.11/bin/CC
 
 //LLVM archiver
 CMAKE_CXX_COMPILER_AR:FILEPATH=/opt/rocm-5.7.1/llvm/bin/llvm-ar
@@ -422,10 +425,10 @@ EXPAT_LIBRARY:PATH=/lustre/orion/world-shared/hep143/opt/rocmcc-5.7.1/expat/2.6.
 EXPAT_LIBRARY_RELEASE:FILEPATH=/lustre/orion/world-shared/hep143/opt/rocmcc-5.7.1/expat/2.6.2/qzql/lib/libexpat.so
 
 //Path to a program.
-GITCOMMAND:FILEPATH=/sw/frontier/spack-envs/cpe23.12-gpu/opt/rocmcc-5.7.1/git-2.45.1-uhawllzfxu3vis5e5txywfocdipwxil5/bin/git
+GITCOMMAND:FILEPATH=/sw/frontier/spack-envs/base/opt/linux-sles15-x86_64/gcc-7.5.0/git-2.36.1-5stfkquvckvzc477c4nplqu242ph7miq/bin/git
 
 //Git command line client
-GIT_EXECUTABLE:FILEPATH=/sw/frontier/spack-envs/cpe23.12-gpu/opt/rocmcc-5.7.1/git-2.45.1-uhawllzfxu3vis5e5txywfocdipwxil5/bin/git
+GIT_EXECUTABLE:FILEPATH=/sw/frontier/spack-envs/base/opt/linux-sles15-x86_64/gcc-7.5.0/git-2.36.1-5stfkquvckvzc477c4nplqu242ph7miq/bin/git
 
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=/lustre/orion/world-shared/hep143/opt-view/lib64/cmake/GTest
@@ -482,7 +485,7 @@ PTL_DIR:PATH=/lustre/orion/world-shared/hep143/opt-view/lib64/Geant4-11.0.4/PTL
 ROCTX_LIBRARY:FILEPATH=/opt/rocm-5.7.1/lib/libroctx64.so
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login01
+SITE:STRING=login02
 
 //Xerces-C++ include directory
 XercesC_INCLUDE_DIR:PATH=/lustre/orion/world-shared/hep143/opt/rocmcc-5.7.1/xerces-c/3.2.5/jt6u/include
@@ -532,6 +535,12 @@ CELERITAS_HOSTNAME:INTERNAL=frontier
 CELERITAS_OPENMP-STRINGS:INTERNAL=event;track
 //STRINGS property for variable: CELERITAS_REAL_TYPE
 CELERITAS_REAL_TYPE-STRINGS:INTERNAL=double;float
+//Result of TRY_COMPILE
+CELERITAS_TRY_SINCOSPI:INTERNAL=FALSE
+//Result of TRY_COMPILE
+CELERITAS_TRY__SINCOSPI:INTERNAL=FALSE
+//Result of TRY_COMPILE
+CELERITAS_TRY___SINCOSPI:INTERNAL=FALSE
 //STRINGS property for variable: CELERITAS_UNITS
 CELERITAS_UNITS-STRINGS:INTERNAL=CGS;SI;CLHEP
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -732,7 +741,7 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.202;141cd4928
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.0;-dev.259;c78d0f595
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
