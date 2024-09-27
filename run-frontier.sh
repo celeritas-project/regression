@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #SBATCH -A hep143
-#SBATCH -t 1:59:59
+#SBATCH -t 0:14:59
 #SBATCH -N 1
 #SBATCH -J celer-regression
 #SBATCH -o frontier-%J.out
