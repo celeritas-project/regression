@@ -47,10 +47,12 @@ class System:
         env = {}
 
         omp_threads = self.cpu_per_job
-        if inp['use_device']:
-            omp_threads = 1
-        else:
+        if not inp['use_device']:
+            # No device ative
             env['CELER_DISABLE_DEVICE'] = "1"
+        elif inp['merge_events']:
+            # Single stream: merge onto one CPU
+            omp_threads = 1
 
         if not inp['_use_celeritas']:
             assert inp['_exe'] == "celer-g4"
@@ -359,6 +361,14 @@ use_gpu = {
     "initializer_capacity": 2**26,
 }
 
+use_gpu_streams = use_gpu.copy()
+use_gpu_streams.update({
+    "merge_events": False,
+    "num_track_slots": 2**18,
+    "max_steps": 2**15,
+    "initializer_capacity": 2**24,
+})
+
 use_sync = {
     "sync": True, # Deprecated
     "action_times": True,
@@ -403,7 +413,7 @@ tilecal = {
     "primary_options": {
         "position": [229.801, 0, 0],
         "direction": [math.sin(_tilecal_angle), 0, math.cos(_tilecal_angle)],
-    }
+    },
 }
 
 hgcal = {
@@ -411,7 +421,7 @@ hgcal = {
     "primary_options": {
         "position": [0, 0, -899.999],
         "direction": [0, 0, 1],
-    }
+    },
 }
 
 full_cms = {
@@ -548,13 +558,6 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 async def run_celeritas(system: System, results_dir, inp):
     instance = inp['_instance']
 
-    if not inp["merge_events"] and inp["use_device"]:
-        assert inp["_exe"] == "celer-g4"
-        # Round up cpu-per-job to nearest power of 2
-        factor = 2**int(math.ceil(math.log2(system.cpu_per_job)))
-        inp["initializer_capacity"] /= factor
-        inp["num_track_slots"] /= factor
-
     try:
         proc_gpu_power = None
         if inp["use_device"]:
@@ -654,10 +657,10 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-        device_mods.append([use_gpu, use_geant])
+        device_mods.append([use_gpu_streams, use_geant])
     device_mods.append([]) # CPU celeritas
     device_mods.append([use_geant]) # CPU celeritas through celer-g4
-    device_mods.append([use_geant, pure_geant]) # CPU geant4
+    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
 
     # Set number of events based on number of CPUs
     base_inputs = [

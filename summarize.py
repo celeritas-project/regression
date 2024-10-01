@@ -249,6 +249,9 @@ def summarize_all(instances):
             if inp is None:
                 inp = summarize_input(r['input'])
 
+    if inp is None:
+        return {'result': "No instances ran successfully"}
+
     consistent = bool(systems)
     for s in systems[1:]:
         if not equivalent_systems(systems[0], s):
