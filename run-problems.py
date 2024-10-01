@@ -403,7 +403,7 @@ tilecal = {
     "primary_options": {
         "position": [229.801, 0, 0],
         "direction": [math.sin(_tilecal_angle), 0, math.cos(_tilecal_angle)],
-    }
+    },
 }
 
 hgcal = {
@@ -411,7 +411,7 @@ hgcal = {
     "primary_options": {
         "position": [0, 0, -899.999],
         "direction": [0, 0, 1],
-    }
+    },
 }
 
 full_cms = {
