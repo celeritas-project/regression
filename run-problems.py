@@ -377,17 +377,24 @@ testem3 = {
         "position": [-22, 0, 0],
         "direction": [1, 0, 0],
         "_units": "cgs",
-    }
+    },
+    "environ": {
+        "ORANGE_FORCE_INPUT": str(input_dir / "testem3-flat-manual.org.json")
+    },
 }
 
 testem3_composite = {
     "geometry_file": "testem3-composite.gdml",
-    "primary_options": testem3["primary_options"]
+    "primary_options": testem3["primary_options"],
+    "environ": {
+        "ORANGE_MAX_FACE_INTERSECT": "12,12",
+    },
 }
 
 testem3_expanded = {
     "geometry_file": "testem3-expanded.gdml",
-    "primary_options": testem3["primary_options"]
+    "primary_options": testem3["primary_options"],
+    "environ": testem3_composite["environ"],
 }
 
 _tilecal_angle = 76 * (2 * math.pi / 360)
