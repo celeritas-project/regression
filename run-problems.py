@@ -609,6 +609,10 @@ async def run_celeritas(system: System, results_dir, inp):
         with open(outdir / f"{instance:d}.inp.json", "w") as f:
             json.dump(inp, f, indent=0, sort_keys=True)
 
+    # Echo stderr
+    with open(outdir / f"{instance:d}.err", "wb") as f:
+        f.write(err)
+
     if not failed:
         print(f"{instance}: success")
 
