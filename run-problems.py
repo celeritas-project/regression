@@ -517,6 +517,11 @@ def build_instance(inp, instance):
     inp["seed"] = 20220904 + instance
     return inp
 
+def patch_input(system, inp):
+    # patch num_track_slots for celer-sim
+    if inp['_exe'] == "celer-sim" and not inp['merge_events']:
+        inp['num_track_slots'] *= system.cpu_per_job
+
 
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
     """Interrupt, then terminate, then kill a process if it doesn't
@@ -557,6 +562,8 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 
 async def run_celeritas(system: System, results_dir, inp):
     instance = inp['_instance']
+
+    patch_input(system, inp)
 
     try:
         proc_gpu_power = None
