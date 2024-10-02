@@ -102,8 +102,10 @@ def summarize_result(out):
             aborted = alive[-1] if alive else None
             queue_hwm = calc_hwm(inits)
 
+        active_hwm = (calc_hwm(active)
+                      if active and isinstance(active[0], int) else None)
         emptying_step = (calc_emptying_step(active)
-                         if active else None)
+                         if active and isinstance(active[0], int) else None)
         preempty_time = (time['steps'][0][emptying_step - 1]
                          if emptying_step else None)
         slot_oc = (steps / (step_iters * inp['num_track_slots'])
@@ -115,7 +117,7 @@ def summarize_result(out):
             "num_steps": steps,
             "emptying_step": emptying_step,
             "warmup_time": time.get('warmup', None),
-            "active_hwm": calc_hwm(active),
+            "active_hwm": active_hwm,
             "queue_hwm": queue_hwm,
             "avg_steps_per_primary": steps / num_primaries,
             "avg_time_per_step": total_time / steps if steps else None,
