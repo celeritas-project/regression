@@ -98,9 +98,6 @@ CELERITAS_USE_Python:BOOL=ON
 //Enable ROOT I/O
 CELERITAS_USE_ROOT:BOOL=ON
 
-//Build SWIG Python bindings
-CELERITAS_USE_SWIG:BOOL=OFF
-
 //Use VecGeom geometry
 CELERITAS_USE_VecGeom:BOOL=OFF
 
@@ -805,7 +802,7 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login13
+SITE:STRING=nid001009
 
 //Path to a file.
 VDT_INCLUDE_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/include
