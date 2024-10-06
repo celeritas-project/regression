@@ -1,9 +1,12 @@
-| Problem                     | orange/cpu | vecgeom/cpu |
-| --------------------------- | ---------- | ----------- |
-| testem3-composite+field+msc |       0.80 |        0.76 |
-| testem3-composite+msc       |       0.77 |        0.71 |
-| testem3-expanded+field+msc  |       0.80 |        0.76 |
-| testem3-flat                |       0.51 |        0.51 |
-| testem3-flat+field          |       0.61 |           — |
-| testem3-flat+field+msc      |       0.76 |        0.77 |
-| testem3-flat+msc            |       0.70 |           — |
+| Problem                     | orange/cpu | vecgeom/cpu | vecgeom/gpu | orange/gpu |
+| --------------------------- | ---------- | ----------- | ----------- | ---------- |
+| atlas-tilecal               |       0.73 |        0.66 |           — |          — |
+| cms2018+field+msc           |          — |           — |        0.98 |          — |
+| testem15+field              |          — |           — |           — |       0.58 |
+| testem3-composite+field+msc |       0.78 |        0.77 |        0.90 |       0.87 |
+| testem3-composite+msc       |       0.74 |        0.72 |           — |          — |
+| testem3-expanded+field+msc  |       0.79 |        0.77 |           — |          — |
+| testem3-flat                |       0.67 |        0.57 |           — |          — |
+| testem3-flat+field          |       0.72 |           — |           — |          — |
+| testem3-flat+field+msc      |       0.77 |        0.77 |        0.93 |       0.87 |
+| testem3-flat+msc            |       0.74 |           — |           — |          — |
