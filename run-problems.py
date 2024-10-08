@@ -521,6 +521,7 @@ def patch_input(system, inp):
     # patch num_track_slots for celer-sim
     if inp['_exe'] == "celer-sim" and not inp['merge_events']:
         inp['num_track_slots'] *= system.cpu_per_job
+        inp['initializer_capacity'] *= system.cpu_per_job
 
 
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
