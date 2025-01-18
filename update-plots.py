@@ -304,7 +304,7 @@ def plot_all(system):
     ### GEO FRACTIONS ###
 
     geo_frac = analyze.calc_geo_frac(analysis)
-    gf_table = geo_frac["mean"].unstack(["geo", "arch"]).applymap(
+    gf_table = geo_frac["mean"].unstack(["geo", "arch"]).map(
         analyze.float_fmt_transform(2)
     )
     with open(results_dir / "geo-frac.md", "w") as f:

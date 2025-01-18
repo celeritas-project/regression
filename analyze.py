@@ -43,6 +43,7 @@ KERNEL_ORDERING = {
     'geo-boundary': KernelCategory.GEO,
     'physics-discrete-select': KernelCategory.PHYS,
     'pre-step': KernelCategory.PHYS,
+    'tracking-cut': KernelCategory.PHYS,
 }
 
 CPU_POWER_PER_TASK= {
