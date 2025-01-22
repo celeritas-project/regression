@@ -137,7 +137,7 @@ def summarize_input(inp):
     return {
         'geometry_name': PurePath(geo_file).name,
         'field': field,
-        'use_device': inp.get('use_device', False),
+        'use_device': inp.get('use_device', None),
         'enable_msc': inp['physics_options']['msc'] != "none",
         'num_track_slots': get_num_track_slots(inp),
     }
