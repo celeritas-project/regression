@@ -300,14 +300,14 @@ base_input = {
     "_timeout": 600.0,
     "_use_celeritas": True,
     "use_device": False,
-    "merge_events": False,
+    "merge_events": False, # Separate streams
     "action_times": True,
     "write_track_counts": False,
-    "initializer_capacity": 2**24,
-    "num_track_slots": 2**16,
+    "initializer_capacity": 2**20,
+    "num_track_slots": 2**12,
     "track_order": "unsorted",
     "max_steps": 2**21,
-    "secondary_stack_factor": 3.0,
+    "secondary_stack_factor": 2.0,
     "brem_combined": False,
     "physics_options": {
         "coulomb_scattering": False,
@@ -330,7 +330,6 @@ base_input = {
 
 use_geant = {
     "_exe": "celer-g4",
-    "merge_events": False, # can't actually merge IRL
     "physics_list": "geant_physics_list",
     "sd_type": "none",
     "output_file": "-",
