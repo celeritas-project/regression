@@ -565,15 +565,24 @@ async def run_celeritas(system: System, results_dir, inp):
 
     patch_input(system, inp)
 
-    try:
-        proc_gpu_power = None
-        if inp["use_device"]:
+    proc_gpu_power = None
+    if inp["use_device"]:
+        try:
             power_subprocess = system.create_gpu_power_monitor_subprocess(inp)
             if power_subprocess:
                 proc_gpu_power = await power_subprocess
+        except Exception as e:
+            print("Problem creating power subprocess:", e)
+
+    outdir = results_dir / inp['_outdir']
+    outdir.mkdir(exist_ok=True)
+
+    try:
         proc = await system.create_celer_subprocess(inp)
     except Exception as e:
         print("Problem creating subprocess:", e)
+        with open(outdir / f"{instance:d}.inp.json", "w") as f:
+            json.dump(inp, f, indent=0, sort_keys=True)
         return exception_to_dict(e, context="creating subprocess")
 
     print(f"{instance}: awaiting communcation")
@@ -613,8 +622,6 @@ async def run_celeritas(system: System, results_dir, inp):
     )
 
     try:
-        outdir = results_dir / inp['_outdir']
-        outdir.mkdir(exist_ok=True)
         with open(outdir / f"{instance:d}.json", "w") as f:
             json.dump(result, f, indent=0, sort_keys=True)
     except Exception as e:

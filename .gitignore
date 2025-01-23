@@ -11,3 +11,4 @@ results.hsa_stats.csv
 results.stats.csv
 results.sysinfo.txt
 *.ncu-rep
+/results-old
