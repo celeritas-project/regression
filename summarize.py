@@ -28,6 +28,14 @@ def calc_hwm(counts):
     hq, hi = max((q, i) for (i, q) in enumerate(counts))
     return {"index": hi, "count": hq}
 
+def clean_up_result(result):
+    """Reduce verbosity/diffs in output"""
+    vols = result["internal"]["geometry"]["volumes"]
+    labels = []
+    for lab in vols["label"]:
+        labels.append(lab.partition("@")[0])
+    vols["label"] = labels
+
 def get_action_times(actions):
     return {a['label']: a['time'] for a in actions if a.get('time', 0) > 0}
 
@@ -143,7 +151,8 @@ def summarize_input(inp):
         'merge_events': inp.get('merge_events'),
     }
 
-def summarize_system(sys):
+def summarize_system(r):
+    sys = r['system']
     try:
         kernels = sys['kernels']
     except KeyError:
@@ -151,13 +160,22 @@ def summarize_system(sys):
     else:
         occupancy = {v['name']: v['occupancy'] for v in sys['kernels']}
 
+    # Version/configure changed in v0.5.1
     get_config = sys['build']['config'].get
+    get_version = (get_config("versions") or {}).get
+
+    # Sizes available with v0.5.2 onward
+    sizes = r['internal'].get('core-sizes')
+
     return  {
-        'debug': get_config('CELERITAS_DEBUG'),
+        'debug': get_config('debug') or get_config('CELERITAS_DEBUG'),
         'version': sys['build']['version'],
-        'geant4': get_config('Geant4_VERSION'),
-        'vecgeom': get_config('VecGeom_VERSION'),
+        'geant4': get_version('Geant4') or get_config('Geant4_VERSION'),
+        'vecgeom': get_version('VecGeom') or get_config('VecGeom_VERSION'),
         'occupancy': occupancy,
+        'sizes': sizes,
+        'openmp': get_config('openmp'),
+        'build_type': get_config('build_type'),
     }
 
 def inp_to_nametuple(inp):
@@ -244,7 +262,7 @@ def summarize_all(instances):
     inp = None
     for r in instances:
         try:
-            sys_sum = summarize_system(r['system'])
+            sys_sum = summarize_system(r)
         except KeyError as e:
             print("Couldn't summarize system: missing key", e)
         else:
