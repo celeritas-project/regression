@@ -48,7 +48,7 @@ class System:
         if not inp["_use_celeritas"]:
             return None
 
-        if inp['merge_events']:
+        if inp.get('merge_events', False):
             # Single stream: merge onto one CPU
             assert inp['_exe'] == "celer-sim"
             return 1
@@ -132,7 +132,7 @@ class System:
 
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
-        if inp['use_device']:
+        if inp.get('use_device', False):
             env['CUDA_VISIBLE_DEVICES'] = str(inp['_instance'])
 
         return asyncio.create_subprocess_exec(
@@ -352,7 +352,7 @@ use_celer_g4 = {
 ## ARCHITECTURES ##
 
 use_cpu = {
-    "_tracks_per_stream": 2**12,
+    "_tracks_per_process": 2**12,
     "_inits_per_track": 2**8,
     "_use_celeritas": True,
     "use_device": False,
@@ -361,7 +361,7 @@ use_cpu = {
 }
 
 use_gpu = {
-    "_tracks_per_stream": 2**20,
+    "_tracks_per_process": 2**20,
     "_inits_per_track": 2**6,
     "_use_celeritas": True,
     "use_device": True,
@@ -475,21 +475,24 @@ def recurse_updated(d, other):
 
 def update_sizes(system, inp):
     # Set number of events based on number of CPUs
-    inp["primary_options"]["num_events"] = num_events = system.cpu_per_job
-    num_primaries = primaries_per_event
+    prim_opts = inp["primary_options"]
+    prim_opts["num_events"] = num_events = system.cpu_per_job
+    num_primaries = prim_opts["primaries_per_event"]
 
     # Calculate stream sizes
     # NOTE: old celer-sim input quantities are integrated over all streams, old
     # celer-g4 are *per stream*
     if inp["_use_celeritas"]:
+        num_tracks = inp["_tracks_per_process"]
         num_streams = system.get_num_streams(inp)
-        num_tracks = inp["_tracks_per_stream"]
         if inp['_exe'] == "celer-sim":
-            # Step iters are divided by per-stream track slots
+            # Step iters should be divided by per-stream track slots
             num_steps = inp["max_steps"]
             safety_factor = 4
             inp["max_steps"] = (safety_factor * num_steps * num_primaries * num_events) // num_tracks
-            num_tracks *= num_streams
+        elif inp['_exe'] == "celer-g4":
+            # celer-g4 expects tracks per stream
+            num_tracks = num_tracks // num_streams
 
         inp["_num_streams"] = num_streams
         inp["num_track_slots"] = num_tracks
