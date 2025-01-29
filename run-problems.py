@@ -157,7 +157,7 @@ class Wildstyle(System):
     name = "wildstyle"
     num_jobs = 2
     gpu_per_job = 1
-    cpu_per_job = 4
+    cpu_per_job = 32
 
 
 class Local(System):
@@ -327,7 +327,7 @@ base_input = {
         "energy": 10000,  # 10 GeV
         "position": [0, 0, 0],
         "direction": {"distribution": "isotropic"},
-        "primaries_per_event": 100,  # 13 TeV
+        "primaries_per_event": 1300,  # 13 TeV
     },
     "max_steps": 200000,
 }
