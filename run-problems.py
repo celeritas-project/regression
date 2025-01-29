@@ -31,7 +31,8 @@ try:
 except ImportError as e:
     print("Can't load numpy/scipy:", e)
 
-from summarize import inp_to_nametuple, summarize_all, exception_to_dict, get_num_events_and_primaries
+from summarize import (inp_to_nametuple, summarize_all, exception_to_dict,
+get_num_events_and_primaries, clean_up_result)
 
 systems = {}
 
@@ -43,28 +44,37 @@ class System:
     cpu_per_job = None
     power_sample_interval = 1.0  # seconds
 
+    def get_num_streams(self, inp):
+        if not inp["_use_celeritas"]:
+            return None
+
+        if inp['merge_events']:
+            # Single stream: merge onto one CPU
+            assert inp['_exe'] == "celer-sim"
+            return 1
+
+        return self.cpu_per_job
+
     def get_runtime_environ(self, inp):
         env = {}
 
-        omp_threads = self.cpu_per_job
-        if not inp['use_device']:
-            # No device ative
-            env['CELER_DISABLE_DEVICE'] = "1"
-        elif inp['merge_events']:
-            # Single stream: merge onto one CPU
-            omp_threads = 1
-
         if not inp['_use_celeritas']:
+            # No Celeritas at all
             assert inp['_exe'] == "celer-g4"
             env['CELER_DISABLE'] = "1"
+        elif not inp['use_device']:
+            # No device ative
+            env['CELER_DISABLE_DEVICE'] = "1"
 
+        num_streams = self.get_num_streams(inp)
         if inp['_exe'] == "celer-g4":
             # Let Geant4 handle the threading
-            omp_threads = 1
             env['G4FORCE_RUN_MANAGER_TYPE'] = "MT"
-            env['G4FORCENUMBEROFTHREADS'] = str(self.cpu_per_job)
+            env['G4FORCENUMBEROFTHREADS'] = str(num_streams)
+            omp_threads = 1
         else:
             assert inp['_exe'] == "celer-sim"
+            omp_threads = num_streams
 
         env['OMP_NUM_THREADS'] = str(omp_threads)
         return env
@@ -171,7 +181,7 @@ class Frontier(System):
     gpu_per_job = 1
     cpu_per_job = 7
 
-    # NOTE: layout multi-gpu run
+    # NOTE: layout for a multi-gpu run
     # num_jobs = 4
     # gpu_per_job = 2
     # cpu_per_job = 14
@@ -250,8 +260,8 @@ class Perlmutter(Frontier):
 
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
-        if inp['geometry_file'].endswith('cms2018.gdml') \
-           and inp['use_device'] and inp['_exe'] == 'celer-g4':
+        if (inp['geometry_file'].endswith('cms2018.gdml')
+           and inp['use_device'] and inp['_exe'] == 'celer-g4'):
             env["CUDA_HEAP_SIZE"] = "10000000"
             env["CUDA_STACK_SIZE"] = "32000"
         # number of virtual CPUS
@@ -294,19 +304,12 @@ class Perlmutter(Frontier):
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
 
+## BASE INPUT ##
+
 base_input = {
     "_geometry": "orange",
-    "_exe": "celer-sim",
     "_timeout": 600.0,
-    "_use_celeritas": True,
-    "use_device": False,
-    "merge_events": False, # Separate streams
-    "action_times": True,
     "write_track_counts": False,
-    "initializer_capacity": 2**20,
-    "num_track_slots": 2**12,
-    "track_order": "unsorted",
-    "max_steps": 2**21,
     "secondary_stack_factor": 2.0,
     "brem_combined": False,
     "physics_options": {
@@ -326,16 +329,51 @@ base_input = {
         "direction": {"distribution": "isotropic"},
         "primaries_per_event": 100,  # 13 TeV
     },
+    "max_steps": 200000,
 }
 
-use_geant = {
+use_vecgeom = {"_geometry": "vecgeom"}
+
+## APPLICATIONS ##
+
+use_celer_sim = {
+    "_exe": "celer-sim",
+    "track_order": "unsorted",
+    "merge_events": True,
+}
+
+use_celer_g4 = {
     "_exe": "celer-g4",
     "physics_list": "geant_physics_list",
     "sd_type": "none",
     "output_file": "-",
 }
 
-pure_geant = {
+## ARCHITECTURES ##
+
+use_cpu = {
+    "_tracks_per_stream": 2**12,
+    "_inits_per_track": 2**8,
+    "_use_celeritas": True,
+    "use_device": False,
+    "action_times": True,
+    "merge_events": False, # Either celer-g4 *OR* default event-paralell OpenMP
+}
+
+use_gpu = {
+    "_tracks_per_stream": 2**20,
+    "_inits_per_track": 2**6,
+    "_use_celeritas": True,
+    "use_device": True,
+    "action_times": False,
+    "write_track_counts": True,
+}
+
+gpu_sync = {
+    "action_times": True,
+}
+
+use_geant = {
     "_geometry": "geant4",
     "_use_celeritas": False,
     "physics_options": {
@@ -344,34 +382,16 @@ pure_geant = {
     }
 }
 
+## PHYSICS ##
+
 no_msc = {"physics_options": {"msc": "none"}}
+
 use_field = {
     "field": [0.0, 0.0, 1.0], # units: [T]
-    "field_options": {"max_substeps": 1000},
+    "field_options": {"max_substeps": 100},
 }
 
-use_gpu = {
-    "action_times": False,
-    "use_device": True,
-    "merge_events": True,
-    "write_track_counts": True,
-    "num_track_slots": 2**20,
-    "max_steps": 2**15,
-    "initializer_capacity": 2**26,
-}
-
-use_gpu_streams = use_gpu.copy()
-use_gpu_streams.update({
-    "merge_events": False,
-    "num_track_slots": 2**18,
-    "max_steps": 2**15,
-    "initializer_capacity": 2**24,
-})
-
-use_sync = {
-    "sync": True, # Deprecated
-    "action_times": True,
-}
+## PROBLEMS ##
 
 testem15 = {
     "geometry_file": "testem15.gdml",
@@ -429,8 +449,6 @@ full_cms = {
     "cuda_stack_size": 8192,
 }
 
-use_vecgeom = {"_geometry": "vecgeom"}
-
 # List of list of setting dictionaries
 problems = [
     [testem3, use_field],
@@ -455,7 +473,29 @@ def recurse_updated(d, other):
     return result
 
 
-def build_input(problem_dicts):
+def update_sizes(system, inp):
+    # Set number of events based on number of CPUs
+    inp["primary_options"]["num_events"] = num_events = system.cpu_per_job
+    num_primaries = primaries_per_event
+
+    # Calculate stream sizes
+    # NOTE: old celer-sim input quantities are integrated over all streams, old
+    # celer-g4 are *per stream*
+    if inp["_use_celeritas"]:
+        num_streams = system.get_num_streams(inp)
+        num_tracks = inp["_tracks_per_stream"]
+        if inp['_exe'] == "celer-sim":
+            # Step iters are divided by per-stream track slots
+            num_steps = inp["max_steps"]
+            safety_factor = 4
+            inp["max_steps"] = (safety_factor * num_steps * num_primaries * num_events) // num_tracks
+            num_tracks *= num_streams
+
+        inp["_num_streams"] = num_streams
+        inp["num_track_slots"] = num_tracks
+        inp["initializer_capacity"] = inp["_inits_per_track"] * num_tracks
+
+def merge_inputs(problem_dicts):
     """Construct an input dictionary by merging inputs.
 
     Later entries override earlier entries.
@@ -476,23 +516,15 @@ def build_input(problem_dicts):
     inp["_name"] = name = inp_to_nametuple(inp)
     inp["_outdir"] = "-".join(name)
 
-    # Update 'maximum events' input entry
-    (inp["max_events"], _) = get_num_events_and_primaries(inp)
-
     return inp
 
 
-def build_instance(inp, instance):
+def build_instance(system, inp, instance):
     inp = inp.copy()
     inp["_instance"] = instance
     inp["seed"] = 20220904 + instance
-    return inp
 
-def patch_input(system, inp):
-    # patch num_track_slots for celer-sim
-    if inp['_exe'] == "celer-sim" and not inp['merge_events']:
-        inp['num_track_slots'] *= system.cpu_per_job
-        inp['initializer_capacity'] *= system.cpu_per_job
+    return inp
 
 
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
@@ -535,10 +567,8 @@ async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, inp
 async def run_celeritas(system: System, results_dir, inp):
     instance = inp['_instance']
 
-    patch_input(system, inp)
-
     proc_gpu_power = None
-    if inp["use_device"]:
+    if inp.get("use_device", False):
         try:
             power_subprocess = system.create_gpu_power_monitor_subprocess(inp)
             if power_subprocess:
@@ -594,6 +624,12 @@ async def run_celeritas(system: System, results_dir, inp):
     )
 
     try:
+        # Remove pointer addresses to reduce senseless diffing
+        clean_up_result(result)
+    except Exception as e:
+        print(f"{instance}: failed to clean up:", repr(e))
+
+    try:
         with open(outdir / f"{instance:d}.json", "w") as f:
             json.dump(result, f, indent=0, sort_keys=True)
     except Exception as e:
@@ -640,24 +676,22 @@ async def main():
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    device_mods = []
-    if system.gpu_per_job:
-        device_mods.append([use_gpu])
-        device_mods.append([use_gpu_streams, use_geant])
-    device_mods.append([]) # CPU celeritas
-    device_mods.append([use_geant]) # CPU celeritas through celer-g4
-    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
+    arch_inputs = [
+        [use_celer_sim, use_gpu], # celer-sim GPU
+        [use_celer_g4, use_gpu], # celer-g4 GPU
+    ] if system.gpu_per_job else []
 
-    # Set number of events based on number of CPUs
-    base_inputs = [
-        base_input,
-        {"primary_options": {"num_events": system.cpu_per_job}},
-    ]
+    arch_inputs.extend([
+        [use_celer_sim, use_cpu], # celer-sim CPU
+        [use_celer_g4, use_cpu], # celer-g4 CPU
+        [use_celer_g4, use_geant], # celer-g4 Geant4
+    ])
 
-    inputs = [build_input(base_inputs + p + d)
-              for p, d in itertools.product(problems, device_mods)]
+    inputs = [merge_inputs([base_input] + p + d)
+              for p, d in itertools.product(problems, arch_inputs)]
     if system.gpu_per_job:
-        inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
+        # Add sync problems for a *subset* of the requested ones
+        inputs += [merge_inputs([base_input] + p + [use_celer_sim, use_gpu, gpu_sync])
                    for p in sync_problems]
 
     inputs = system.filter_problems(inputs)
@@ -671,10 +705,11 @@ async def main():
     for (i, inp) in enumerate(inputs, start=1):
         print("="*79)
         name = inp['_outdir']
+        update_sizes(system, inp)
         print(f"Running problem {i} of {_num_inputs}: {name}...")
         start = time.monotonic()
-        tasks = [run_celeritas(system, results_dir, build_instance(inp, i))
-                 for i in range(system.num_jobs)]
+        instances = (build_instance(system, inp, i) for i in range(system.num_jobs))
+        tasks = [run_celeritas(system, results_dir, inst) for inst in instances]
         if not summaries:
             # Only print monitoring for first instance
             tasks.extend(system.get_monitoring_coro())
