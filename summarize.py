@@ -30,7 +30,12 @@ def calc_hwm(counts):
 
 def clean_up_result(result):
     """Reduce verbosity/diffs in output"""
-    vols = result["internal"]["geometry"]["volumes"]
+    try:
+        vols = result["internal"]["geometry"]["volumes"]
+    except KeyError:
+        # Possibly g4 with no 'internal' result
+        return
+
     labels = []
     for lab in vols["label"]:
         labels.append(lab.partition("@")[0])
@@ -165,7 +170,11 @@ def summarize_system(r):
     get_version = (get_config("versions") or {}).get
 
     # Sizes available with v0.5.2 onward
-    sizes = r['internal'].get('core-sizes')
+    try:
+        sizes = r['internal']['core-sizes']
+    except KeyError:
+        # Possibly celer-g4 (no 'internal')
+        sizes = None
 
     return  {
         'debug': get_config('debug') or get_config('CELERITAS_DEBUG'),
