@@ -338,13 +338,13 @@ use_vecgeom = {"_geometry": "vecgeom"}
 
 use_celer_sim = {
     "_exe": "celer-sim",
-    "track_order": "unsorted",
+    "track_order": "none",
     "merge_events": True,
 }
 
 use_celer_g4 = {
     "_exe": "celer-g4",
-    "physics_list": "geant_physics_list",
+    "physics_list": "celer_em",
     "sd_type": "none",
     "output_file": "-",
 }
