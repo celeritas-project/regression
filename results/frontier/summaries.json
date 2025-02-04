@@ -5,7 +5,7 @@
    "field": null,
    "geometry_name": "atlas-tilecal.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -15,87 +15,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.0719422367178745,
-    "avg_time_per_primary": 0.010692338802967032,
+    "avg_event_per_time": 0.07326145481163028,
+    "avg_time_per_primary": 0.010499801992857143,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.097870908,
-    "total_time": 97.300283107
+    "setup_time": 0.09870358,
+    "total_time": 95.548198135
    },
    {
-    "avg_event_per_time": 0.07237829110815551,
-    "avg_time_per_primary": 0.010627921127362636,
+    "avg_event_per_time": 0.0740627414738019,
+    "avg_time_per_primary": 0.010386204371098901,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.0978673,
-    "total_time": 96.714082259
+    "setup_time": 0.097948007,
+    "total_time": 94.514459777
    },
    {
-    "avg_event_per_time": 0.07230420355737577,
-    "avg_time_per_primary": 0.01063881118087912,
+    "avg_event_per_time": 0.07349279537824213,
+    "avg_time_per_primary": 0.010466750723956043,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.099535849,
-    "total_time": 96.813181746
+    "setup_time": 0.098001671,
+    "total_time": 95.247431588
    },
    {
-    "avg_event_per_time": 0.07194064597064354,
-    "avg_time_per_primary": 0.010692575231318682,
+    "avg_event_per_time": 0.07363790282341133,
+    "avg_time_per_primary": 0.010446125429120878,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.099767529,
-    "total_time": 97.302434605
+    "setup_time": 0.09997028,
+    "total_time": 95.059741405
    },
    {
-    "avg_event_per_time": 0.07230452500357269,
-    "avg_time_per_primary": 0.010638763883626372,
+    "avg_event_per_time": 0.07353479843663958,
+    "avg_time_per_primary": 0.010460772118571427,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.098846551,
-    "total_time": 96.812751341
+    "setup_time": 0.09850232,
+    "total_time": 95.193026279
    },
    {
-    "avg_event_per_time": 0.07233618237817206,
-    "avg_time_per_primary": 0.01063410791032967,
+    "avg_event_per_time": 0.07438468545997123,
+    "avg_time_per_primary": 0.010341251891758241,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.09821736,
-    "total_time": 96.770381984
+    "setup_time": 0.098151101,
+    "total_time": 94.105392215
    },
    {
-    "avg_event_per_time": 0.07244821492041323,
-    "avg_time_per_primary": 0.010617663528021978,
+    "avg_event_per_time": 0.07337883188545168,
+    "avg_time_per_primary": 0.010483006467472527,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.098556769,
-    "total_time": 96.620738105
+    "setup_time": 0.100107304,
+    "total_time": 95.395358854
    },
    {
-    "avg_event_per_time": 0.07206414902827013,
-    "avg_time_per_primary": 0.010674250367252747,
+    "avg_event_per_time": 0.0737625599699257,
+    "avg_time_per_primary": 0.01042847170087912,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.099173636,
-    "total_time": 97.135678342
+    "setup_time": 0.100427885,
+    "total_time": 94.899092478
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "atlas-tilecal-orange-cpu": {
@@ -1003,7 +1003,7 @@
    "field": null,
    "geometry_name": "cms-hgcal.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -1013,87 +1013,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.025064565064587797,
-    "avg_time_per_primary": 0.03068997077142857,
+    "avg_event_per_time": 0.025693983272868235,
+    "avg_time_per_primary": 0.02993816727681319,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.21651634,
-    "total_time": 279.27873402
+    "setup_time": 1.223435981,
+    "total_time": 272.437322219
    },
    {
-    "avg_event_per_time": 0.02506325609761779,
-    "avg_time_per_primary": 0.030691573602197802,
+    "avg_event_per_time": 0.025817692132743698,
+    "avg_time_per_primary": 0.02979471461956044,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.228461665,
-    "total_time": 279.29331978
+    "setup_time": 1.219986667,
+    "total_time": 271.131903038
    },
    {
-    "avg_event_per_time": 0.02509732336805847,
-    "avg_time_per_primary": 0.03064991266,
+    "avg_event_per_time": 0.025689606276709756,
+    "avg_time_per_primary": 0.029943268142967036,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.213380022,
-    "total_time": 278.914205206
+    "setup_time": 1.233494763,
+    "total_time": 272.483740101
    },
    {
-    "avg_event_per_time": 0.025060308681975094,
-    "avg_time_per_primary": 0.03069518332725275,
+    "avg_event_per_time": 0.0258105330991576,
+    "avg_time_per_primary": 0.029802978740329673,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.215426654,
-    "total_time": 279.326168278
+    "setup_time": 1.217418117,
+    "total_time": 271.207106537
    },
    {
-    "avg_event_per_time": 0.025061615171863786,
-    "avg_time_per_primary": 0.03069358315318681,
+    "avg_event_per_time": 0.025798809803424073,
+    "avg_time_per_primary": 0.029816521579560436,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.217756257,
-    "total_time": 279.311606694
+    "setup_time": 1.233243287,
+    "total_time": 271.330346374
    },
    {
-    "avg_event_per_time": 0.025016279077454313,
-    "avg_time_per_primary": 0.030749208019670328,
+    "avg_event_per_time": 0.025782981512069057,
+    "avg_time_per_primary": 0.029834826079780222,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.231192676,
-    "total_time": 279.817792979
+    "setup_time": 1.222138951,
+    "total_time": 271.496917326
    },
    {
-    "avg_event_per_time": 0.02505516698782126,
-    "avg_time_per_primary": 0.030701482436923076,
+    "avg_event_per_time": 0.02578340793820089,
+    "avg_time_per_primary": 0.02983433264813187,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.214539322,
-    "total_time": 279.383490176
+    "setup_time": 1.224265396,
+    "total_time": 271.492427098
    },
    {
-    "avg_event_per_time": 0.025037713607397944,
-    "avg_time_per_primary": 0.03072288393791209,
+    "avg_event_per_time": 0.025770127238611655,
+    "avg_time_per_primary": 0.029849707846153845,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 1.228255295,
-    "total_time": 279.578243835
+    "setup_time": 1.221963363,
+    "total_time": 271.6323414
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "cms-hgcal-orange-cpu": {
@@ -1805,7 +1805,7 @@
    ],
    "geometry_name": "cms2018.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -1815,87 +1815,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.03887360485583582,
-    "avg_time_per_primary": 0.019787996819010986,
+    "avg_event_per_time": 0.040000018838180294,
+    "avg_time_per_primary": 0.019230760173956047,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.778851476,
-    "total_time": 180.070771053
+    "setup_time": 9.764641538,
+    "total_time": 174.999917583
    },
    {
-    "avg_event_per_time": 0.03904190844388068,
-    "avg_time_per_primary": 0.019702693845934066,
+    "avg_event_per_time": 0.03990276130027484,
+    "avg_time_per_primary": 0.019277632528791208,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.778538029,
-    "total_time": 179.294513998
+    "setup_time": 9.743813594,
+    "total_time": 175.426456012
    },
    {
-    "avg_event_per_time": 0.03933203088061819,
-    "avg_time_per_primary": 0.0195573620789011,
+    "avg_event_per_time": 0.04002037940651796,
+    "avg_time_per_primary": 0.019220976428461538,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.778075511,
-    "total_time": 177.971994918
+    "setup_time": 9.739224154,
+    "total_time": 174.910885499
    },
    {
-    "avg_event_per_time": 0.039250470613723006,
-    "avg_time_per_primary": 0.019598001175604396,
+    "avg_event_per_time": 0.04008425207519074,
+    "avg_time_per_primary": 0.019190348563516483,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.770308332,
-    "total_time": 178.341810698
+    "setup_time": 9.740727632,
+    "total_time": 174.632171928
    },
    {
-    "avg_event_per_time": 0.039058970522877975,
-    "avg_time_per_primary": 0.019694087143956044,
+    "avg_event_per_time": 0.0401560937179348,
+    "avg_time_per_primary": 0.019156015887252745,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.780606381,
-    "total_time": 179.21619301
+    "setup_time": 9.751636176,
+    "total_time": 174.319744574
    },
    {
-    "avg_event_per_time": 0.03927318658967166,
-    "avg_time_per_primary": 0.01958666550967033,
+    "avg_event_per_time": 0.040171530031435844,
+    "avg_time_per_primary": 0.019148654995934065,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.795882138,
-    "total_time": 178.238656138
+    "setup_time": 9.759692263,
+    "total_time": 174.252760463
    },
    {
-    "avg_event_per_time": 0.039213325771357395,
-    "avg_time_per_primary": 0.019616565391978022,
+    "avg_event_per_time": 0.04010381985194481,
+    "avg_time_per_primary": 0.019180985055054944,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.772872737,
-    "total_time": 178.510745067
+    "setup_time": 9.757087172,
+    "total_time": 174.546964001
    },
    {
-    "avg_event_per_time": 0.0391232591237603,
-    "avg_time_per_primary": 0.019661725184945054,
+    "avg_event_per_time": 0.040008573406788824,
+    "avg_time_per_primary": 0.019226648283846154,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.782566054,
-    "total_time": 178.921699183
+    "setup_time": 9.757858795,
+    "total_time": 174.962499383
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "cms2018-geant4-g4": {
@@ -1904,7 +1904,7 @@
    "field": null,
    "geometry_name": "cms2018.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -1914,87 +1914,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.08251087654116415,
-    "avg_time_per_primary": 0.009322780237912089,
+    "avg_event_per_time": 0.08379295940808783,
+    "avg_time_per_primary": 0.009180136071868131,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.778943519,
-    "total_time": 84.837300165
+    "setup_time": 9.761934648,
+    "total_time": 83.539238254
    },
    {
-    "avg_event_per_time": 0.08259485264180341,
-    "avg_time_per_primary": 0.009313301551208792,
+    "avg_event_per_time": 0.08375247514967035,
+    "avg_time_per_primary": 0.009184573564615384,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.834979642,
-    "total_time": 84.751044116
+    "setup_time": 9.773938721,
+    "total_time": 83.579619438
    },
    {
-    "avg_event_per_time": 0.08268421062981901,
-    "avg_time_per_primary": 0.009303236535384615,
+    "avg_event_per_time": 0.08375243936683385,
+    "avg_time_per_primary": 0.009184577488681319,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.767432816,
-    "total_time": 84.659452472
+    "setup_time": 9.740216181,
+    "total_time": 83.579655147
    },
    {
-    "avg_event_per_time": 0.082684345932795,
-    "avg_time_per_primary": 0.009303221311758241,
+    "avg_event_per_time": 0.08382198555473215,
+    "avg_time_per_primary": 0.009176957144835164,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.788029514,
-    "total_time": 84.659313937
+    "setup_time": 9.734299815,
+    "total_time": 83.510310018
    },
    {
-    "avg_event_per_time": 0.08256144270835312,
-    "avg_time_per_primary": 0.009317070341758242,
+    "avg_event_per_time": 0.08383215106225737,
+    "avg_time_per_primary": 0.009175844344725275,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.779835379,
-    "total_time": 84.78534011
+    "setup_time": 9.734126891,
+    "total_time": 83.500183537
    },
    {
-    "avg_event_per_time": 0.08247441284210617,
-    "avg_time_per_primary": 0.009326902038131869,
+    "avg_event_per_time": 0.08385636771471774,
+    "avg_time_per_primary": 0.009173194477582417,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.765413206,
-    "total_time": 84.874808547
+    "setup_time": 9.745976965,
+    "total_time": 83.476069746
    },
    {
-    "avg_event_per_time": 0.08266487143400014,
-    "avg_time_per_primary": 0.009305412999340658,
+    "avg_event_per_time": 0.08353215735489736,
+    "avg_time_per_primary": 0.009208798067582418,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.770311464,
-    "total_time": 84.679258294
+    "setup_time": 9.743507468,
+    "total_time": 83.800062415
    },
    {
-    "avg_event_per_time": 0.0830811566889639,
-    "avg_time_per_primary": 0.00925878743010989,
+    "avg_event_per_time": 0.08387981289363965,
+    "avg_time_per_primary": 0.009170630485384615,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 9.768744963,
-    "total_time": 84.254965614
+    "setup_time": 9.723108223,
+    "total_time": 83.452737417
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem15+field+msc-geant4-g4": {
@@ -2007,7 +2007,7 @@
    ],
    "geometry_name": "testem15.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -2017,87 +2017,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.11722587241877958,
-    "avg_time_per_primary": 0.0065619538874725275,
+    "avg_event_per_time": 0.12236568509375828,
+    "avg_time_per_primary": 0.006286327483406594,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023223566,
-    "total_time": 59.713780376
+    "setup_time": 0.023144208,
+    "total_time": 57.205580099
    },
    {
-    "avg_event_per_time": 0.11787208384059814,
-    "avg_time_per_primary": 0.006525979215494505,
+    "avg_event_per_time": 0.12292217476366102,
+    "avg_time_per_primary": 0.006257868205714286,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023529801,
-    "total_time": 59.386410861
+    "setup_time": 0.023344776,
+    "total_time": 56.946600672
    },
    {
-    "avg_event_per_time": 0.11828373491061192,
-    "avg_time_per_primary": 0.006503267501758242,
+    "avg_event_per_time": 0.12267923277161004,
+    "avg_time_per_primary": 0.006270260677802198,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023410529,
-    "total_time": 59.179734266
+    "setup_time": 0.023273778,
+    "total_time": 57.059372168
    },
    {
-    "avg_event_per_time": 0.11845803091869624,
-    "avg_time_per_primary": 0.006493698766263736,
+    "avg_event_per_time": 0.12266620815131542,
+    "avg_time_per_primary": 0.00627092645010989,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023314402,
-    "total_time": 59.092658773
+    "setup_time": 0.023110523,
+    "total_time": 57.065430696
    },
    {
-    "avg_event_per_time": 0.11870838728040939,
-    "avg_time_per_primary": 0.006480003535164835,
+    "avg_event_per_time": 0.12237036058668782,
+    "avg_time_per_primary": 0.006286087297142857,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023311828,
-    "total_time": 58.96803217
+    "setup_time": 0.023076146,
+    "total_time": 57.203394404
    },
    {
-    "avg_event_per_time": 0.11854215442217685,
-    "avg_time_per_primary": 0.00648909050945055,
+    "avg_event_per_time": 0.12235806391171403,
+    "avg_time_per_primary": 0.006286719032967033,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023186955,
-    "total_time": 59.050723636
+    "setup_time": 0.023340588,
+    "total_time": 57.2091432
    },
    {
-    "avg_event_per_time": 0.1187176328700474,
-    "avg_time_per_primary": 0.0064794988801098906,
+    "avg_event_per_time": 0.1225368713856498,
+    "avg_time_per_primary": 0.006277545366813186,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.024069037,
-    "total_time": 58.963439809
+    "setup_time": 0.023433788,
+    "total_time": 57.125662838
    },
    {
-    "avg_event_per_time": 0.11845395269592097,
-    "avg_time_per_primary": 0.0064939223362637365,
+    "avg_event_per_time": 0.12206463738413247,
+    "avg_time_per_primary": 0.0063018314371428566,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023820394,
-    "total_time": 59.09469326
+    "setup_time": 0.023786701,
+    "total_time": 57.346666078
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem15+field+msc-orange-cpu": {
@@ -3029,7 +3029,7 @@
    ],
    "geometry_name": "testem15.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -3039,87 +3039,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.13831016058462606,
-    "avg_time_per_primary": 0.005561636006923077,
+    "avg_event_per_time": 0.143597383150208,
+    "avg_time_per_primary": 0.00535685785043956,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023254826,
-    "total_time": 50.610887663
+    "setup_time": 0.029268484,
+    "total_time": 48.747406439
    },
    {
-    "avg_event_per_time": 0.13819285964413733,
-    "avg_time_per_primary": 0.0055663568379120875,
+    "avg_event_per_time": 0.14339637603572342,
+    "avg_time_per_primary": 0.005364366872417582,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023215971,
-    "total_time": 50.653847225
+    "setup_time": 0.024422493,
+    "total_time": 48.815738539
    },
    {
-    "avg_event_per_time": 0.13833021679685945,
-    "avg_time_per_primary": 0.005560829636813187,
+    "avg_event_per_time": 0.1434581602191991,
+    "avg_time_per_primary": 0.005362056560989011,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.022945987,
-    "total_time": 50.603549695
+    "setup_time": 0.024299985,
+    "total_time": 48.794714705
    },
    {
-    "avg_event_per_time": 0.1385354132723445,
-    "avg_time_per_primary": 0.005552593023406593,
+    "avg_event_per_time": 0.14343896020169905,
+    "avg_time_per_primary": 0.005362774298901099,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.02315397,
-    "total_time": 50.528596513
+    "setup_time": 0.023487382,
+    "total_time": 48.80124612
    },
    {
-    "avg_event_per_time": 0.1381896503411964,
-    "avg_time_per_primary": 0.00556648611043956,
+    "avg_event_per_time": 0.14347707126053041,
+    "avg_time_per_primary": 0.0053613498134065934,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.02349401,
-    "total_time": 50.655023605
+    "setup_time": 0.02577963,
+    "total_time": 48.788283302
    },
    {
-    "avg_event_per_time": 0.13877405138438878,
-    "avg_time_per_primary": 0.005543044694285714,
+    "avg_event_per_time": 0.14357827346164678,
+    "avg_time_per_primary": 0.005357570826593407,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023225058,
-    "total_time": 50.441706718
+    "setup_time": 0.023264201,
+    "total_time": 48.753894522
    },
    {
-    "avg_event_per_time": 0.13837663529182084,
-    "avg_time_per_primary": 0.005558964254395604,
+    "avg_event_per_time": 0.14372533034279736,
+    "avg_time_per_primary": 0.005352089067362637,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023626677,
-    "total_time": 50.586574715
+    "setup_time": 0.023197843,
+    "total_time": 48.704010513
    },
    {
-    "avg_event_per_time": 0.13872241752891934,
-    "avg_time_per_primary": 0.005545107870329671,
+    "avg_event_per_time": 0.14350042040930716,
+    "avg_time_per_primary": 0.005360477460879121,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023525911,
-    "total_time": 50.46048162
+    "setup_time": 0.024197807,
+    "total_time": 48.780344894
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem15+field-orange-cpu": {
@@ -4438,7 +4438,7 @@
    "field": null,
    "geometry_name": "testem15.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -4448,87 +4448,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.1777302830552927,
-    "avg_time_per_primary": 0.004328079357142857,
+    "avg_event_per_time": 0.18897011600602093,
+    "avg_time_per_primary": 0.004070647706043956,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023031076,
-    "total_time": 39.38552215
+    "setup_time": 0.045638116,
+    "total_time": 37.042894125
    },
    {
-    "avg_event_per_time": 0.1784192329240026,
-    "avg_time_per_primary": 0.004311366866813187,
+    "avg_event_per_time": 0.18925347174461113,
+    "avg_time_per_primary": 0.004064553015274725,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023040574,
-    "total_time": 39.233438488
+    "setup_time": 0.045582088,
+    "total_time": 36.987432439
    },
    {
-    "avg_event_per_time": 0.17933277012794047,
-    "avg_time_per_primary": 0.004289404377582418,
+    "avg_event_per_time": 0.18907712851526953,
+    "avg_time_per_primary": 0.00406834383021978,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023397106,
-    "total_time": 39.033579836
+    "setup_time": 0.045617486,
+    "total_time": 37.021928855
    },
    {
-    "avg_event_per_time": 0.1778234195466462,
-    "avg_time_per_primary": 0.0043258124896703295,
+    "avg_event_per_time": 0.1894526639377632,
+    "avg_time_per_primary": 0.004060279508571429,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.022912084,
-    "total_time": 39.364893656
+    "setup_time": 0.045549966,
+    "total_time": 36.948543528
    },
    {
-    "avg_event_per_time": 0.17933859570863475,
-    "avg_time_per_primary": 0.004289265041868132,
+    "avg_event_per_time": 0.18935963399129294,
+    "avg_time_per_primary": 0.004062274271538461,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023067996,
-    "total_time": 39.032311881
+    "setup_time": 0.045615924,
+    "total_time": 36.966695871
    },
    {
-    "avg_event_per_time": 0.17891186767336145,
-    "avg_time_per_primary": 0.004299495495934066,
+    "avg_event_per_time": 0.18945584790596426,
+    "avg_time_per_primary": 0.004060211272087912,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023345746,
-    "total_time": 39.125409013
+    "setup_time": 0.045563763,
+    "total_time": 36.947922576
    },
    {
-    "avg_event_per_time": 0.17921179692821795,
-    "avg_time_per_primary": 0.004292299850879121,
+    "avg_event_per_time": 0.18973600943500493,
+    "avg_time_per_primary": 0.004054216021098901,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023366516,
-    "total_time": 39.059928643
+    "setup_time": 0.045622346,
+    "total_time": 36.893365792
    },
    {
-    "avg_event_per_time": 0.1792637471017106,
-    "avg_time_per_primary": 0.0042910559534065935,
+    "avg_event_per_time": 0.18913360501560258,
+    "avg_time_per_primary": 0.004067128996813187,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.023397807,
-    "total_time": 39.048609176
+    "setup_time": 0.045626083,
+    "total_time": 37.010873871
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem15-orange-cpu": {
@@ -5440,7 +5440,7 @@
    ],
    "geometry_name": "testem3-composite.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -5450,87 +5450,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.04337685417294586,
-    "avg_time_per_primary": 0.017733668886263737,
+    "avg_event_per_time": 0.044579964359456305,
+    "avg_time_per_primary": 0.017255078156373626,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031745231,
-    "total_time": 161.376386865
+    "setup_time": 0.030906305,
+    "total_time": 157.021211223
    },
    {
-    "avg_event_per_time": 0.04319782095026963,
-    "avg_time_per_primary": 0.017807166016923077,
+    "avg_event_per_time": 0.04452864693628658,
+    "avg_time_per_primary": 0.01727496392,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031026386,
-    "total_time": 162.045210754
+    "setup_time": 0.031207669,
+    "total_time": 157.202171672
    },
    {
-    "avg_event_per_time": 0.0435223326375914,
-    "avg_time_per_primary": 0.017674392033076924,
+    "avg_event_per_time": 0.04464702313437619,
+    "avg_time_per_primary": 0.017229161436263737,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.030710803,
-    "total_time": 160.836967501
+    "setup_time": 0.030754381,
+    "total_time": 156.78536907
    },
    {
-    "avg_event_per_time": 0.04332199190663526,
-    "avg_time_per_primary": 0.017756126516263737,
+    "avg_event_per_time": 0.04445547710188983,
+    "avg_time_per_primary": 0.017303397002527473,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031970208,
-    "total_time": 161.580751298
+    "setup_time": 0.03051537,
+    "total_time": 157.460912723
    },
    {
-    "avg_event_per_time": 0.04370426524524438,
-    "avg_time_per_primary": 0.017600816874835164,
+    "avg_event_per_time": 0.04461066554518331,
+    "avg_time_per_primary": 0.017243203162967034,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031156408,
-    "total_time": 160.167433561
+    "setup_time": 0.030641604,
+    "total_time": 156.913148783
    },
    {
-    "avg_event_per_time": 0.04346264025682059,
-    "avg_time_per_primary": 0.017698666364615385,
+    "avg_event_per_time": 0.044444080291660935,
+    "avg_time_per_primary": 0.01730783411835165,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.030511897,
-    "total_time": 161.057863918
+    "setup_time": 0.030554776,
+    "total_time": 157.501290477
    },
    {
-    "avg_event_per_time": 0.0435411777229021,
-    "avg_time_per_primary": 0.017666742368021977,
+    "avg_event_per_time": 0.04451916224280697,
+    "avg_time_per_primary": 0.01727864430681319,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031608285,
-    "total_time": 160.767355549
+    "setup_time": 0.03077431,
+    "total_time": 157.235663192
    },
    {
-    "avg_event_per_time": 0.0435745095345149,
-    "avg_time_per_primary": 0.0176532284,
+    "avg_event_per_time": 0.04444894373557645,
+    "avg_time_per_primary": 0.017305940357252747,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.03071477,
-    "total_time": 160.64437844
+    "setup_time": 0.03132223,
+    "total_time": 157.484057251
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-composite+field+msc-orange-cpu": {
@@ -6855,7 +6855,7 @@
    "field": null,
    "geometry_name": "testem3-composite.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -6865,87 +6865,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.05415083940820346,
-    "avg_time_per_primary": 0.014205334167252746,
+    "avg_event_per_time": 0.055403227437248806,
+    "avg_time_per_primary": 0.013884223082527472,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031866459,
-    "total_time": 129.268540922
+    "setup_time": 0.030860598,
+    "total_time": 126.346430051
    },
    {
-    "avg_event_per_time": 0.053670389550681895,
-    "avg_time_per_primary": 0.014332498341648351,
+    "avg_event_per_time": 0.05531112430316825,
+    "avg_time_per_primary": 0.013907342852307693,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.030659737,
-    "total_time": 130.425734909
+    "setup_time": 0.030505992,
+    "total_time": 126.556819956
    },
    {
-    "avg_event_per_time": 0.05424622236873416,
-    "avg_time_per_primary": 0.01418035644956044,
+    "avg_event_per_time": 0.05573026004592823,
+    "avg_time_per_primary": 0.013802748607252746,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.030675197,
-    "total_time": 129.041243691
+    "setup_time": 0.030621686,
+    "total_time": 125.605012326
    },
    {
-    "avg_event_per_time": 0.05375286704497623,
-    "avg_time_per_primary": 0.014310506797472526,
+    "avg_event_per_time": 0.055272154923608006,
+    "avg_time_per_primary": 0.01391714816065934,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.029403579,
-    "total_time": 130.225611857
+    "setup_time": 0.030542583,
+    "total_time": 126.646048262
    },
    {
-    "avg_event_per_time": 0.05389731153412539,
-    "avg_time_per_primary": 0.01427215472043956,
+    "avg_event_per_time": 0.0552013491982563,
+    "avg_time_per_primary": 0.013934999423076922,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.029718791,
-    "total_time": 129.876607956
+    "setup_time": 0.030655661,
+    "total_time": 126.80849475
    },
    {
-    "avg_event_per_time": 0.053814882012420975,
-    "avg_time_per_primary": 0.014294015715824176,
+    "avg_event_per_time": 0.05530699790239162,
+    "avg_time_per_primary": 0.013908380465494505,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.032816944,
-    "total_time": 130.075543014
+    "setup_time": 0.030626625,
+    "total_time": 126.566262236
    },
    {
-    "avg_event_per_time": 0.054291420965244544,
-    "avg_time_per_primary": 0.014168551044615386,
+    "avg_event_per_time": 0.055535618690252,
+    "avg_time_per_primary": 0.013851124510219779,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.033166843,
-    "total_time": 128.933814506
+    "setup_time": 0.031125981,
+    "total_time": 126.045233043
    },
    {
-    "avg_event_per_time": 0.05402590225568014,
-    "avg_time_per_primary": 0.014238184595054947,
+    "avg_event_per_time": 0.05532922212675739,
+    "avg_time_per_primary": 0.013902793852197802,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.027171566,
-    "total_time": 129.567479815
+    "setup_time": 0.031171319,
+    "total_time": 126.515424055
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-composite+msc-orange-cpu": {
@@ -7861,7 +7861,7 @@
    ],
    "geometry_name": "testem3-expanded.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -7871,87 +7871,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.043883018581673115,
-    "avg_time_per_primary": 0.017529121607692308,
+    "avg_event_per_time": 0.04474997365275459,
+    "avg_time_per_primary": 0.017189524516813187,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037114643,
-    "total_time": 159.51500663
+    "setup_time": 0.036922619,
+    "total_time": 156.424673103
    },
    {
-    "avg_event_per_time": 0.04346006265747982,
-    "avg_time_per_primary": 0.017699716065604394,
+    "avg_event_per_time": 0.044826449523073436,
+    "avg_time_per_primary": 0.01716019844120879,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037037333,
-    "total_time": 161.067416197
+    "setup_time": 0.036754634,
+    "total_time": 156.157805815
    },
    {
-    "avg_event_per_time": 0.044098541920844433,
-    "avg_time_per_primary": 0.0174434513189011,
+    "avg_event_per_time": 0.04469189916137129,
+    "avg_time_per_primary": 0.01721186129175824,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037481054,
-    "total_time": 158.735407002
+    "setup_time": 0.036919705,
+    "total_time": 156.627937755
    },
    {
-    "avg_event_per_time": 0.04406082066117232,
-    "avg_time_per_primary": 0.017458384970769233,
+    "avg_event_per_time": 0.04475406958437594,
+    "avg_time_per_primary": 0.017187951316483516,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037496815,
-    "total_time": 158.871303234
+    "setup_time": 0.036754684,
+    "total_time": 156.41035698
    },
    {
-    "avg_event_per_time": 0.044150585491268775,
-    "avg_time_per_primary": 0.017422889428791208,
+    "avg_event_per_time": 0.044925663295072873,
+    "avg_time_per_primary": 0.017122301882967032,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.036952528,
-    "total_time": 158.548293802
+    "setup_time": 0.037404332,
+    "total_time": 155.812947135
    },
    {
-    "avg_event_per_time": 0.04407924622120722,
-    "avg_time_per_primary": 0.017451087193516485,
+    "avg_event_per_time": 0.04452315656997477,
+    "avg_time_per_primary": 0.01727709417956044,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.036955222,
-    "total_time": 158.804893461
+    "setup_time": 0.037050137,
+    "total_time": 157.221557034
    },
    {
-    "avg_event_per_time": 0.04388226544494765,
-    "avg_time_per_primary": 0.017529422454175825,
+    "avg_event_per_time": 0.04479875892901465,
+    "avg_time_per_primary": 0.017170805344175824,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037663088,
-    "total_time": 159.517744333
+    "setup_time": 0.037316793,
+    "total_time": 156.254328632
    },
    {
-    "avg_event_per_time": 0.04381379107769313,
-    "avg_time_per_primary": 0.017556818305604394,
+    "avg_event_per_time": 0.04485797041623706,
+    "avg_time_per_primary": 0.017148140276813186,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.037297988,
-    "total_time": 159.767046581
+    "setup_time": 0.037406286,
+    "total_time": 156.048076519
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-expanded+field+msc-orange-cpu": {
@@ -8883,7 +8883,7 @@
    ],
    "geometry_name": "testem3-flat.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -8893,87 +8893,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.046314805311066264,
-    "avg_time_per_primary": 0.016608744527032968,
+    "avg_event_per_time": 0.0474444617932183,
+    "avg_time_per_primary": 0.016213288973186815,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031485938,
-    "total_time": 151.139575196
+    "setup_time": 0.031613855,
+    "total_time": 147.540929656
    },
    {
-    "avg_event_per_time": 0.046405826417846456,
-    "avg_time_per_primary": 0.016576167878241756,
+    "avg_event_per_time": 0.04736729014102151,
+    "avg_time_per_primary": 0.01623970395901099,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.032965359,
-    "total_time": 150.843127692
+    "setup_time": 0.031680834,
+    "total_time": 147.781306027
    },
    {
-    "avg_event_per_time": 0.04647437941909602,
-    "avg_time_per_primary": 0.016551716856593405,
+    "avg_event_per_time": 0.04747529339146776,
+    "avg_time_per_primary": 0.016202759673076925,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.03150757,
-    "total_time": 150.620623395
+    "setup_time": 0.031608344,
+    "total_time": 147.445113025
    },
    {
-    "avg_event_per_time": 0.04592121202839418,
-    "avg_time_per_primary": 0.016751099007472528,
+    "avg_event_per_time": 0.04743646264552878,
+    "avg_time_per_primary": 0.01621602299857143,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031357609,
-    "total_time": 152.435000968
+    "setup_time": 0.031757553,
+    "total_time": 147.565809287
    },
    {
-    "avg_event_per_time": 0.04622908555567116,
-    "avg_time_per_primary": 0.016639541102417582,
+    "avg_event_per_time": 0.0474324676052151,
+    "avg_time_per_primary": 0.016217388807032967,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031497179,
-    "total_time": 151.419824032
+    "setup_time": 0.031430359,
+    "total_time": 147.578238144
    },
    {
-    "avg_event_per_time": 0.04609696831754661,
-    "avg_time_per_primary": 0.016687231228131868,
+    "avg_event_per_time": 0.04736525990918114,
+    "avg_time_per_primary": 0.016240400046483517,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031505807,
-    "total_time": 151.853804176
+    "setup_time": 0.031307582,
+    "total_time": 147.787640423
    },
    {
-    "avg_event_per_time": 0.04642840835807275,
-    "avg_time_per_primary": 0.01656810552923077,
+    "avg_event_per_time": 0.047510149572569306,
+    "avg_time_per_primary": 0.016190872395714286,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.032102414,
-    "total_time": 150.769760316
+    "setup_time": 0.031698889,
+    "total_time": 147.336938801
    },
    {
-    "avg_event_per_time": 0.04659877418559541,
-    "avg_time_per_primary": 0.016507532283296704,
+    "avg_event_per_time": 0.04739840709636393,
+    "avg_time_per_primary": 0.016229042627252745,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.03196129,
-    "total_time": 150.218543778
+    "setup_time": 0.031427625,
+    "total_time": 147.684287908
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-flat+field+msc-orange-cpu": {
@@ -10302,7 +10302,7 @@
    ],
    "geometry_name": "testem3-flat.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -10312,87 +10312,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.07322467385557375,
-    "avg_time_per_primary": 0.010505076072417583,
+    "avg_event_per_time": 0.0746146282465783,
+    "avg_time_per_primary": 0.010309382855714287,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031424766,
-    "total_time": 95.596192259
+    "setup_time": 0.031668108,
+    "total_time": 93.815383987
    },
    {
-    "avg_event_per_time": 0.07273123084473235,
-    "avg_time_per_primary": 0.01057634746857143,
+    "avg_event_per_time": 0.07488311991838174,
+    "avg_time_per_primary": 0.010272418805054945,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031225038,
-    "total_time": 96.244761964
+    "setup_time": 0.03159124,
+    "total_time": 93.479011126
    },
    {
-    "avg_event_per_time": 0.07326169024180235,
-    "avg_time_per_primary": 0.010499768251208791,
+    "avg_event_per_time": 0.0740417751133638,
+    "avg_time_per_primary": 0.010389145425714286,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031216582,
-    "total_time": 95.547891086
+    "setup_time": 0.031656235,
+    "total_time": 94.541223374
    },
    {
-    "avg_event_per_time": 0.07383353917405935,
-    "avg_time_per_primary": 0.010418446384065935,
+    "avg_event_per_time": 0.07466564122826266,
+    "avg_time_per_primary": 0.010302339289890109,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031337817,
-    "total_time": 94.807862095
+    "setup_time": 0.031388187,
+    "total_time": 93.751287538
    },
    {
-    "avg_event_per_time": 0.0729082559626642,
-    "avg_time_per_primary": 0.010550667535164836,
+    "avg_event_per_time": 0.07494042205961567,
+    "avg_time_per_primary": 0.010264564144285716,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031579216,
-    "total_time": 96.01107457
+    "setup_time": 0.031217355,
+    "total_time": 93.407533713
    },
    {
-    "avg_event_per_time": 0.07357864883432809,
-    "avg_time_per_primary": 0.01045453785054945,
+    "avg_event_per_time": 0.07466802263477187,
+    "avg_time_per_primary": 0.010302010714725276,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031543826,
-    "total_time": 95.13629444
+    "setup_time": 0.031661666,
+    "total_time": 93.748297504
    },
    {
-    "avg_event_per_time": 0.0738179791657373,
-    "avg_time_per_primary": 0.010420642476593406,
+    "avg_event_per_time": 0.07506267250849981,
+    "avg_time_per_primary": 0.010247846812857142,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.032147749,
-    "total_time": 94.827846537
+    "setup_time": 0.031103494,
+    "total_time": 93.255405997
    },
    {
-    "avg_event_per_time": 0.07345902786755147,
-    "avg_time_per_primary": 0.01047156206065934,
+    "avg_event_per_time": 0.07344011334736855,
+    "avg_time_per_primary": 0.010474259014175823,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031980854,
-    "total_time": 95.291214752
+    "setup_time": 0.031210742,
+    "total_time": 95.315757029
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-flat+field-orange-cpu": {
@@ -11316,7 +11316,7 @@
    "field": null,
    "geometry_name": "testem3-flat.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -11326,87 +11326,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.057382680146023046,
-    "avg_time_per_primary": 0.013405277816813187,
+    "avg_event_per_time": 0.059211852083515384,
+    "avg_time_per_primary": 0.01299116210967033,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031494234,
-    "total_time": 121.988028133
+    "setup_time": 0.031377655,
+    "total_time": 118.219575198
    },
    {
-    "avg_event_per_time": 0.05771351734730415,
-    "avg_time_per_primary": 0.013328433347802197,
+    "avg_event_per_time": 0.0589642970781919,
+    "avg_time_per_primary": 0.013045704050549452,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031513141,
-    "total_time": 121.288743465
+    "setup_time": 0.031511063,
+    "total_time": 118.71590686
    },
    {
-    "avg_event_per_time": 0.05779502841393346,
-    "avg_time_per_primary": 0.013309635626813187,
+    "avg_event_per_time": 0.05854410191563618,
+    "avg_time_per_primary": 0.01313933844846154,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031535243,
-    "total_time": 121.117684204
+    "setup_time": 0.031284145,
+    "total_time": 119.567979881
    },
    {
-    "avg_event_per_time": 0.057645605420139086,
-    "avg_time_per_primary": 0.013344135491758242,
+    "avg_event_per_time": 0.059189105060944394,
+    "avg_time_per_primary": 0.012996154755824175,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031460428,
-    "total_time": 121.431632975
+    "setup_time": 0.031359489,
+    "total_time": 118.265008278
    },
    {
-    "avg_event_per_time": 0.05763402622981084,
-    "avg_time_per_primary": 0.013346816447692308,
+    "avg_event_per_time": 0.05887557691393091,
+    "avg_time_per_primary": 0.013065362745494505,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031398908,
-    "total_time": 121.456029674
+    "setup_time": 0.031386984,
+    "total_time": 118.894800984
    },
    {
-    "avg_event_per_time": 0.05750218275564655,
-    "avg_time_per_primary": 0.013377418601648351,
+    "avg_event_per_time": 0.058784616506086594,
+    "avg_time_per_primary": 0.013085579441538462,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031660978,
-    "total_time": 121.734509275
+    "setup_time": 0.03173204,
+    "total_time": 119.078772918
    },
    {
-    "avg_event_per_time": 0.057563752900770225,
-    "avg_time_per_primary": 0.013363110125164834,
+    "avg_event_per_time": 0.059109184488067464,
+    "avg_time_per_primary": 0.013013726646593407,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031776091,
-    "total_time": 121.604302139
+    "setup_time": 0.031755936,
+    "total_time": 118.424912484
    },
    {
-    "avg_event_per_time": 0.05764384169800579,
-    "avg_time_per_primary": 0.013344543780769231,
+    "avg_event_per_time": 0.0587095713532039,
+    "avg_time_per_primary": 0.013102306003956045,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.032000116,
-    "total_time": 121.435348405
+    "setup_time": 0.03158692,
+    "total_time": 119.230984636
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-flat+msc-orange-cpu": {
@@ -12318,7 +12318,7 @@
    "field": null,
    "geometry_name": "testem3-flat.gdml",
    "merge_events": null,
-   "num_track_slots": 4096,
+   "num_track_slots": 0,
    "use_device": null
   },
   "name": [
@@ -12328,87 +12328,87 @@
   ],
   "result": [
    {
-    "avg_event_per_time": 0.09293541315646113,
-    "avg_time_per_primary": 0.008277046855494505,
+    "avg_event_per_time": 0.0943121177897641,
+    "avg_time_per_primary": 0.008156224112637363,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031540163,
-    "total_time": 75.321126385
+    "setup_time": 0.031750539,
+    "total_time": 74.221639425
    },
    {
-    "avg_event_per_time": 0.09273185320880407,
-    "avg_time_per_primary": 0.00829521618098901,
+    "avg_event_per_time": 0.09479782909701112,
+    "avg_time_per_primary": 0.00811443443967033,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031195505,
-    "total_time": 75.486467247
+    "setup_time": 0.031360463,
+    "total_time": 73.841353401
    },
    {
-    "avg_event_per_time": 0.09309141334356359,
-    "avg_time_per_primary": 0.008263176394065933,
+    "avg_event_per_time": 0.09569287363981184,
+    "avg_time_per_primary": 0.008038537667142857,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.03136363,
-    "total_time": 75.194905186
+    "setup_time": 0.031640365,
+    "total_time": 73.150692771
    },
    {
-    "avg_event_per_time": 0.09340977689442169,
-    "avg_time_per_primary": 0.008235013451538462,
+    "avg_event_per_time": 0.09373587392261791,
+    "avg_time_per_primary": 0.008206364725054944,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031522328,
-    "total_time": 74.938622409
+    "setup_time": 0.031898765,
+    "total_time": 74.677918998
    },
    {
-    "avg_event_per_time": 0.09287057470704041,
-    "avg_time_per_primary": 0.008282825552197802,
+    "avg_event_per_time": 0.09484797124709007,
+    "avg_time_per_primary": 0.008110144678021979,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.03208463,
-    "total_time": 75.373712525
+    "setup_time": 0.031690692,
+    "total_time": 73.80231657
    },
    {
-    "avg_event_per_time": 0.09250787709449947,
-    "avg_time_per_primary": 0.008315300203516483,
+    "avg_event_per_time": 0.09564455206914527,
+    "avg_time_per_primary": 0.00804259889967033,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031583387,
-    "total_time": 75.669231852
+    "setup_time": 0.03153972,
+    "total_time": 73.187649987
    },
    {
-    "avg_event_per_time": 0.09301592886580051,
-    "avg_time_per_primary": 0.008269882143956044,
+    "avg_event_per_time": 0.09563968474148735,
+    "avg_time_per_primary": 0.008043008206373627,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031227957,
-    "total_time": 75.25592751
+    "setup_time": 0.031862315,
+    "total_time": 73.191374678
    },
    {
-    "avg_event_per_time": 0.09227853606945532,
-    "avg_time_per_primary": 0.008335966325384615,
+    "avg_event_per_time": 0.09529615143889604,
+    "avg_time_per_primary": 0.008072002464065933,
     "gpu_energy_wh": 0.0,
     "num_events": 7,
     "num_primaries": 9100,
-    "setup_time": 0.031279397,
-    "total_time": 75.857293561
+    "setup_time": 0.031697896,
+    "total_time": 73.455222423
    }
   ],
   "system": {
-   "build_type": null,
+   "build_type": "release,static",
    "debug": false,
    "geant4": "11.0.4",
    "occupancy": null,
-   "openmp": null,
+   "openmp": "event",
    "sizes": null,
    "vecgeom": null,
-   "version": "0.5.1"
+   "version": "0.5.1-7+bf5554d44"
   }
  },
  "testem3-flat-orange-cpu": {
