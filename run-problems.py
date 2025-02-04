@@ -132,7 +132,7 @@ class System:
 
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
-        if inp.get('use_device', False):
+        if inp["_geometry"] != "geant4" and inp['use_device']:
             env['CUDA_VISIBLE_DEVICES'] = str(inp['_instance'])
 
         return asyncio.create_subprocess_exec(
@@ -200,7 +200,7 @@ class Frontier(System):
         args = [
             f"--cpus-per-task={self.cpu_per_job}",
         ]
-        if inp['use_device']:
+        if inp["_geometry"] != "geant4" and inp['use_device']:
             args.append("--gpus-per-task=1")
             args.append("--gpu-bind=verbose,closest")
         else:
@@ -258,10 +258,11 @@ class Perlmutter(Frontier):
     def create_celer_subprocess(self, inp):
         cmd = "srun"
 
+        use_device = inp["_geometry"] != "geant4" and inp['use_device']
+
         env = dict(environ)
         env.update(self.get_runtime_environ(inp))
-        if (inp['geometry_file'].endswith('cms2018.gdml')
-           and inp['use_device'] and inp['_exe'] == 'celer-g4'):
+        if (use_device and inp['geometry_file'].endswith('cms2018.gdml') and inp['_exe'] == 'celer-g4'):
             env["CUDA_HEAP_SIZE"] = "10000000"
             env["CUDA_STACK_SIZE"] = "32000"
         # number of virtual CPUS
@@ -274,10 +275,11 @@ class Perlmutter(Frontier):
             "--ntasks=1",
             "--cpu-bind=verbose,cores"
         ]
-        if inp['use_device']:
+        if use_device:
             args.append("--gpus-per-task=1")
             args.append("--gpu-bind=verbose,closest")
         else:
+            # Geant4-only
             args.append("--gpus=0")
 
         try:
@@ -351,15 +353,6 @@ use_celer_g4 = {
 
 ## ARCHITECTURES ##
 
-use_cpu = {
-    "_tracks_per_process": 2**12,
-    "_inits_per_track": 2**8,
-    "_use_celeritas": True,
-    "use_device": False,
-    "action_times": True,
-    "merge_events": False, # Either celer-g4 *OR* default event-paralell OpenMP
-}
-
 use_gpu = {
     "_tracks_per_process": 2**20,
     "_inits_per_track": 2**6,
@@ -369,17 +362,26 @@ use_gpu = {
     "write_track_counts": True,
 }
 
-gpu_sync = {
+use_cpu = {
+    "_tracks_per_process": 2**12,
+    "_inits_per_track": 2**8,
+    "_use_celeritas": True,
+    "use_device": False,
     "action_times": True,
+    "merge_events": False, # Either celer-g4 *OR* default event-paralell OpenMP
 }
 
 use_geant = {
     "_geometry": "geant4",
     "_use_celeritas": False,
     "physics_options": {
-        # Since geant4 uses splines it doesn't need as many points
+        # Since geant4 uses spline interpolation it doesn't need as many points
         "em_bins_per_decade": 14,
     }
+}
+
+also_gpu_sync = {
+    "action_times": True,
 }
 
 ## PHYSICS ##
