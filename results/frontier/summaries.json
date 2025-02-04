@@ -1,11 +1,102 @@
 {
  "atlas-tilecal-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": null,
+   "geometry_name": "atlas-tilecal.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "atlas-tilecal",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.0719422367178745,
+    "avg_time_per_primary": 0.010692338802967032,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.097870908,
+    "total_time": 97.300283107
+   },
+   {
+    "avg_event_per_time": 0.07237829110815551,
+    "avg_time_per_primary": 0.010627921127362636,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.0978673,
+    "total_time": 96.714082259
+   },
+   {
+    "avg_event_per_time": 0.07230420355737577,
+    "avg_time_per_primary": 0.01063881118087912,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.099535849,
+    "total_time": 96.813181746
+   },
+   {
+    "avg_event_per_time": 0.07194064597064354,
+    "avg_time_per_primary": 0.010692575231318682,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.099767529,
+    "total_time": 97.302434605
+   },
+   {
+    "avg_event_per_time": 0.07230452500357269,
+    "avg_time_per_primary": 0.010638763883626372,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.098846551,
+    "total_time": 96.812751341
+   },
+   {
+    "avg_event_per_time": 0.07233618237817206,
+    "avg_time_per_primary": 0.01063410791032967,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.09821736,
+    "total_time": 96.770381984
+   },
+   {
+    "avg_event_per_time": 0.07244821492041323,
+    "avg_time_per_primary": 0.010617663528021978,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.098556769,
+    "total_time": 96.620738105
+   },
+   {
+    "avg_event_per_time": 0.07206414902827013,
+    "avg_time_per_primary": 0.010674250367252747,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.099173636,
+    "total_time": 97.135678342
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "atlas-tilecal-orange-cpu": {
   "input": {
@@ -907,12 +998,103 @@
   }
  },
  "cms-hgcal-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": null,
+   "geometry_name": "cms-hgcal.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "cms-hgcal",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.025064565064587797,
+    "avg_time_per_primary": 0.03068997077142857,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.21651634,
+    "total_time": 279.27873402
+   },
+   {
+    "avg_event_per_time": 0.02506325609761779,
+    "avg_time_per_primary": 0.030691573602197802,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.228461665,
+    "total_time": 279.29331978
+   },
+   {
+    "avg_event_per_time": 0.02509732336805847,
+    "avg_time_per_primary": 0.03064991266,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.213380022,
+    "total_time": 278.914205206
+   },
+   {
+    "avg_event_per_time": 0.025060308681975094,
+    "avg_time_per_primary": 0.03069518332725275,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.215426654,
+    "total_time": 279.326168278
+   },
+   {
+    "avg_event_per_time": 0.025061615171863786,
+    "avg_time_per_primary": 0.03069358315318681,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.217756257,
+    "total_time": 279.311606694
+   },
+   {
+    "avg_event_per_time": 0.025016279077454313,
+    "avg_time_per_primary": 0.030749208019670328,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.231192676,
+    "total_time": 279.817792979
+   },
+   {
+    "avg_event_per_time": 0.02505516698782126,
+    "avg_time_per_primary": 0.030701482436923076,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.214539322,
+    "total_time": 279.383490176
+   },
+   {
+    "avg_event_per_time": 0.025037713607397944,
+    "avg_time_per_primary": 0.03072288393791209,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 1.228255295,
+    "total_time": 279.578243835
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "cms-hgcal-orange-cpu": {
   "input": {
@@ -1614,28 +1796,309 @@
   }
  },
  "cms2018+field+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "cms2018.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "cms2018+field+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.03887360485583582,
+    "avg_time_per_primary": 0.019787996819010986,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.778851476,
+    "total_time": 180.070771053
+   },
+   {
+    "avg_event_per_time": 0.03904190844388068,
+    "avg_time_per_primary": 0.019702693845934066,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.778538029,
+    "total_time": 179.294513998
+   },
+   {
+    "avg_event_per_time": 0.03933203088061819,
+    "avg_time_per_primary": 0.0195573620789011,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.778075511,
+    "total_time": 177.971994918
+   },
+   {
+    "avg_event_per_time": 0.039250470613723006,
+    "avg_time_per_primary": 0.019598001175604396,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.770308332,
+    "total_time": 178.341810698
+   },
+   {
+    "avg_event_per_time": 0.039058970522877975,
+    "avg_time_per_primary": 0.019694087143956044,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.780606381,
+    "total_time": 179.21619301
+   },
+   {
+    "avg_event_per_time": 0.03927318658967166,
+    "avg_time_per_primary": 0.01958666550967033,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.795882138,
+    "total_time": 178.238656138
+   },
+   {
+    "avg_event_per_time": 0.039213325771357395,
+    "avg_time_per_primary": 0.019616565391978022,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.772872737,
+    "total_time": 178.510745067
+   },
+   {
+    "avg_event_per_time": 0.0391232591237603,
+    "avg_time_per_primary": 0.019661725184945054,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.782566054,
+    "total_time": 178.921699183
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "cms2018-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": null,
+   "geometry_name": "cms2018.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "cms2018",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.08251087654116415,
+    "avg_time_per_primary": 0.009322780237912089,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.778943519,
+    "total_time": 84.837300165
+   },
+   {
+    "avg_event_per_time": 0.08259485264180341,
+    "avg_time_per_primary": 0.009313301551208792,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.834979642,
+    "total_time": 84.751044116
+   },
+   {
+    "avg_event_per_time": 0.08268421062981901,
+    "avg_time_per_primary": 0.009303236535384615,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.767432816,
+    "total_time": 84.659452472
+   },
+   {
+    "avg_event_per_time": 0.082684345932795,
+    "avg_time_per_primary": 0.009303221311758241,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.788029514,
+    "total_time": 84.659313937
+   },
+   {
+    "avg_event_per_time": 0.08256144270835312,
+    "avg_time_per_primary": 0.009317070341758242,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.779835379,
+    "total_time": 84.78534011
+   },
+   {
+    "avg_event_per_time": 0.08247441284210617,
+    "avg_time_per_primary": 0.009326902038131869,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.765413206,
+    "total_time": 84.874808547
+   },
+   {
+    "avg_event_per_time": 0.08266487143400014,
+    "avg_time_per_primary": 0.009305412999340658,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.770311464,
+    "total_time": 84.679258294
+   },
+   {
+    "avg_event_per_time": 0.0830811566889639,
+    "avg_time_per_primary": 0.00925878743010989,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 9.768744963,
+    "total_time": 84.254965614
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem15+field+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem15.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem15+field+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.11722587241877958,
+    "avg_time_per_primary": 0.0065619538874725275,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023223566,
+    "total_time": 59.713780376
+   },
+   {
+    "avg_event_per_time": 0.11787208384059814,
+    "avg_time_per_primary": 0.006525979215494505,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023529801,
+    "total_time": 59.386410861
+   },
+   {
+    "avg_event_per_time": 0.11828373491061192,
+    "avg_time_per_primary": 0.006503267501758242,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023410529,
+    "total_time": 59.179734266
+   },
+   {
+    "avg_event_per_time": 0.11845803091869624,
+    "avg_time_per_primary": 0.006493698766263736,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023314402,
+    "total_time": 59.092658773
+   },
+   {
+    "avg_event_per_time": 0.11870838728040939,
+    "avg_time_per_primary": 0.006480003535164835,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023311828,
+    "total_time": 58.96803217
+   },
+   {
+    "avg_event_per_time": 0.11854215442217685,
+    "avg_time_per_primary": 0.00648909050945055,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023186955,
+    "total_time": 59.050723636
+   },
+   {
+    "avg_event_per_time": 0.1187176328700474,
+    "avg_time_per_primary": 0.0064794988801098906,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.024069037,
+    "total_time": 58.963439809
+   },
+   {
+    "avg_event_per_time": 0.11845395269592097,
+    "avg_time_per_primary": 0.0064939223362637365,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023820394,
+    "total_time": 59.09469326
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem15+field+msc-orange-cpu": {
   "input": {
@@ -2557,12 +3020,107 @@
   }
  },
  "testem15+field-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem15.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem15+field",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.13831016058462606,
+    "avg_time_per_primary": 0.005561636006923077,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023254826,
+    "total_time": 50.610887663
+   },
+   {
+    "avg_event_per_time": 0.13819285964413733,
+    "avg_time_per_primary": 0.0055663568379120875,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023215971,
+    "total_time": 50.653847225
+   },
+   {
+    "avg_event_per_time": 0.13833021679685945,
+    "avg_time_per_primary": 0.005560829636813187,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.022945987,
+    "total_time": 50.603549695
+   },
+   {
+    "avg_event_per_time": 0.1385354132723445,
+    "avg_time_per_primary": 0.005552593023406593,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.02315397,
+    "total_time": 50.528596513
+   },
+   {
+    "avg_event_per_time": 0.1381896503411964,
+    "avg_time_per_primary": 0.00556648611043956,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.02349401,
+    "total_time": 50.655023605
+   },
+   {
+    "avg_event_per_time": 0.13877405138438878,
+    "avg_time_per_primary": 0.005543044694285714,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023225058,
+    "total_time": 50.441706718
+   },
+   {
+    "avg_event_per_time": 0.13837663529182084,
+    "avg_time_per_primary": 0.005558964254395604,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023626677,
+    "total_time": 50.586574715
+   },
+   {
+    "avg_event_per_time": 0.13872241752891934,
+    "avg_time_per_primary": 0.005545107870329671,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023525911,
+    "total_time": 50.46048162
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem15+field-orange-cpu": {
   "input": {
@@ -3875,12 +4433,103 @@
   }
  },
  "testem15-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": null,
+   "geometry_name": "testem15.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem15",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.1777302830552927,
+    "avg_time_per_primary": 0.004328079357142857,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023031076,
+    "total_time": 39.38552215
+   },
+   {
+    "avg_event_per_time": 0.1784192329240026,
+    "avg_time_per_primary": 0.004311366866813187,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023040574,
+    "total_time": 39.233438488
+   },
+   {
+    "avg_event_per_time": 0.17933277012794047,
+    "avg_time_per_primary": 0.004289404377582418,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023397106,
+    "total_time": 39.033579836
+   },
+   {
+    "avg_event_per_time": 0.1778234195466462,
+    "avg_time_per_primary": 0.0043258124896703295,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.022912084,
+    "total_time": 39.364893656
+   },
+   {
+    "avg_event_per_time": 0.17933859570863475,
+    "avg_time_per_primary": 0.004289265041868132,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023067996,
+    "total_time": 39.032311881
+   },
+   {
+    "avg_event_per_time": 0.17891186767336145,
+    "avg_time_per_primary": 0.004299495495934066,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023345746,
+    "total_time": 39.125409013
+   },
+   {
+    "avg_event_per_time": 0.17921179692821795,
+    "avg_time_per_primary": 0.004292299850879121,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023366516,
+    "total_time": 39.059928643
+   },
+   {
+    "avg_event_per_time": 0.1792637471017106,
+    "avg_time_per_primary": 0.0042910559534065935,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.023397807,
+    "total_time": 39.048609176
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem15-orange-cpu": {
   "input": {
@@ -4782,12 +5431,107 @@
   }
  },
  "testem3-composite+field+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem3-composite.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-composite+field+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.04337685417294586,
+    "avg_time_per_primary": 0.017733668886263737,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031745231,
+    "total_time": 161.376386865
+   },
+   {
+    "avg_event_per_time": 0.04319782095026963,
+    "avg_time_per_primary": 0.017807166016923077,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031026386,
+    "total_time": 162.045210754
+   },
+   {
+    "avg_event_per_time": 0.0435223326375914,
+    "avg_time_per_primary": 0.017674392033076924,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.030710803,
+    "total_time": 160.836967501
+   },
+   {
+    "avg_event_per_time": 0.04332199190663526,
+    "avg_time_per_primary": 0.017756126516263737,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031970208,
+    "total_time": 161.580751298
+   },
+   {
+    "avg_event_per_time": 0.04370426524524438,
+    "avg_time_per_primary": 0.017600816874835164,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031156408,
+    "total_time": 160.167433561
+   },
+   {
+    "avg_event_per_time": 0.04346264025682059,
+    "avg_time_per_primary": 0.017698666364615385,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.030511897,
+    "total_time": 161.057863918
+   },
+   {
+    "avg_event_per_time": 0.0435411777229021,
+    "avg_time_per_primary": 0.017666742368021977,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031608285,
+    "total_time": 160.767355549
+   },
+   {
+    "avg_event_per_time": 0.0435745095345149,
+    "avg_time_per_primary": 0.0176532284,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.03071477,
+    "total_time": 160.64437844
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-composite+field+msc-orange-cpu": {
   "input": {
@@ -6106,12 +6850,103 @@
   }
  },
  "testem3-composite+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": null,
+   "geometry_name": "testem3-composite.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-composite+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.05415083940820346,
+    "avg_time_per_primary": 0.014205334167252746,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031866459,
+    "total_time": 129.268540922
+   },
+   {
+    "avg_event_per_time": 0.053670389550681895,
+    "avg_time_per_primary": 0.014332498341648351,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.030659737,
+    "total_time": 130.425734909
+   },
+   {
+    "avg_event_per_time": 0.05424622236873416,
+    "avg_time_per_primary": 0.01418035644956044,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.030675197,
+    "total_time": 129.041243691
+   },
+   {
+    "avg_event_per_time": 0.05375286704497623,
+    "avg_time_per_primary": 0.014310506797472526,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.029403579,
+    "total_time": 130.225611857
+   },
+   {
+    "avg_event_per_time": 0.05389731153412539,
+    "avg_time_per_primary": 0.01427215472043956,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.029718791,
+    "total_time": 129.876607956
+   },
+   {
+    "avg_event_per_time": 0.053814882012420975,
+    "avg_time_per_primary": 0.014294015715824176,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.032816944,
+    "total_time": 130.075543014
+   },
+   {
+    "avg_event_per_time": 0.054291420965244544,
+    "avg_time_per_primary": 0.014168551044615386,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.033166843,
+    "total_time": 128.933814506
+   },
+   {
+    "avg_event_per_time": 0.05402590225568014,
+    "avg_time_per_primary": 0.014238184595054947,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.027171566,
+    "total_time": 129.567479815
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-composite+msc-orange-cpu": {
   "input": {
@@ -7017,12 +7852,107 @@
   }
  },
  "testem3-expanded+field+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem3-expanded.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-expanded+field+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.043883018581673115,
+    "avg_time_per_primary": 0.017529121607692308,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037114643,
+    "total_time": 159.51500663
+   },
+   {
+    "avg_event_per_time": 0.04346006265747982,
+    "avg_time_per_primary": 0.017699716065604394,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037037333,
+    "total_time": 161.067416197
+   },
+   {
+    "avg_event_per_time": 0.044098541920844433,
+    "avg_time_per_primary": 0.0174434513189011,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037481054,
+    "total_time": 158.735407002
+   },
+   {
+    "avg_event_per_time": 0.04406082066117232,
+    "avg_time_per_primary": 0.017458384970769233,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037496815,
+    "total_time": 158.871303234
+   },
+   {
+    "avg_event_per_time": 0.044150585491268775,
+    "avg_time_per_primary": 0.017422889428791208,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.036952528,
+    "total_time": 158.548293802
+   },
+   {
+    "avg_event_per_time": 0.04407924622120722,
+    "avg_time_per_primary": 0.017451087193516485,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.036955222,
+    "total_time": 158.804893461
+   },
+   {
+    "avg_event_per_time": 0.04388226544494765,
+    "avg_time_per_primary": 0.017529422454175825,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037663088,
+    "total_time": 159.517744333
+   },
+   {
+    "avg_event_per_time": 0.04381379107769313,
+    "avg_time_per_primary": 0.017556818305604394,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.037297988,
+    "total_time": 159.767046581
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-expanded+field+msc-orange-cpu": {
   "input": {
@@ -7944,12 +8874,107 @@
   }
  },
  "testem3-flat+field+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem3-flat.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-flat+field+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.046314805311066264,
+    "avg_time_per_primary": 0.016608744527032968,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031485938,
+    "total_time": 151.139575196
+   },
+   {
+    "avg_event_per_time": 0.046405826417846456,
+    "avg_time_per_primary": 0.016576167878241756,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.032965359,
+    "total_time": 150.843127692
+   },
+   {
+    "avg_event_per_time": 0.04647437941909602,
+    "avg_time_per_primary": 0.016551716856593405,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.03150757,
+    "total_time": 150.620623395
+   },
+   {
+    "avg_event_per_time": 0.04592121202839418,
+    "avg_time_per_primary": 0.016751099007472528,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031357609,
+    "total_time": 152.435000968
+   },
+   {
+    "avg_event_per_time": 0.04622908555567116,
+    "avg_time_per_primary": 0.016639541102417582,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031497179,
+    "total_time": 151.419824032
+   },
+   {
+    "avg_event_per_time": 0.04609696831754661,
+    "avg_time_per_primary": 0.016687231228131868,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031505807,
+    "total_time": 151.853804176
+   },
+   {
+    "avg_event_per_time": 0.04642840835807275,
+    "avg_time_per_primary": 0.01656810552923077,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.032102414,
+    "total_time": 150.769760316
+   },
+   {
+    "avg_event_per_time": 0.04659877418559541,
+    "avg_time_per_primary": 0.016507532283296704,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.03196129,
+    "total_time": 150.218543778
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-flat+field+msc-orange-cpu": {
   "input": {
@@ -9268,12 +10293,107 @@
   }
  },
  "testem3-flat+field-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "geometry_name": "testem3-flat.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-flat+field",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.07322467385557375,
+    "avg_time_per_primary": 0.010505076072417583,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031424766,
+    "total_time": 95.596192259
+   },
+   {
+    "avg_event_per_time": 0.07273123084473235,
+    "avg_time_per_primary": 0.01057634746857143,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031225038,
+    "total_time": 96.244761964
+   },
+   {
+    "avg_event_per_time": 0.07326169024180235,
+    "avg_time_per_primary": 0.010499768251208791,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031216582,
+    "total_time": 95.547891086
+   },
+   {
+    "avg_event_per_time": 0.07383353917405935,
+    "avg_time_per_primary": 0.010418446384065935,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031337817,
+    "total_time": 94.807862095
+   },
+   {
+    "avg_event_per_time": 0.0729082559626642,
+    "avg_time_per_primary": 0.010550667535164836,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031579216,
+    "total_time": 96.01107457
+   },
+   {
+    "avg_event_per_time": 0.07357864883432809,
+    "avg_time_per_primary": 0.01045453785054945,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031543826,
+    "total_time": 95.13629444
+   },
+   {
+    "avg_event_per_time": 0.0738179791657373,
+    "avg_time_per_primary": 0.010420642476593406,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.032147749,
+    "total_time": 94.827846537
+   },
+   {
+    "avg_event_per_time": 0.07345902786755147,
+    "avg_time_per_primary": 0.01047156206065934,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031980854,
+    "total_time": 95.291214752
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-flat+field-orange-cpu": {
   "input": {
@@ -10191,12 +11311,103 @@
   }
  },
  "testem3-flat+msc-geant4-g4": {
+  "input": {
+   "enable_msc": true,
+   "field": null,
+   "geometry_name": "testem3-flat.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-flat+msc",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.057382680146023046,
+    "avg_time_per_primary": 0.013405277816813187,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031494234,
+    "total_time": 121.988028133
+   },
+   {
+    "avg_event_per_time": 0.05771351734730415,
+    "avg_time_per_primary": 0.013328433347802197,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031513141,
+    "total_time": 121.288743465
+   },
+   {
+    "avg_event_per_time": 0.05779502841393346,
+    "avg_time_per_primary": 0.013309635626813187,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031535243,
+    "total_time": 121.117684204
+   },
+   {
+    "avg_event_per_time": 0.057645605420139086,
+    "avg_time_per_primary": 0.013344135491758242,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031460428,
+    "total_time": 121.431632975
+   },
+   {
+    "avg_event_per_time": 0.05763402622981084,
+    "avg_time_per_primary": 0.013346816447692308,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031398908,
+    "total_time": 121.456029674
+   },
+   {
+    "avg_event_per_time": 0.05750218275564655,
+    "avg_time_per_primary": 0.013377418601648351,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031660978,
+    "total_time": 121.734509275
+   },
+   {
+    "avg_event_per_time": 0.057563752900770225,
+    "avg_time_per_primary": 0.013363110125164834,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031776091,
+    "total_time": 121.604302139
+   },
+   {
+    "avg_event_per_time": 0.05764384169800579,
+    "avg_time_per_primary": 0.013344543780769231,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.032000116,
+    "total_time": 121.435348405
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-flat+msc-orange-cpu": {
   "input": {
@@ -11102,12 +12313,103 @@
   }
  },
  "testem3-flat-geant4-g4": {
+  "input": {
+   "enable_msc": false,
+   "field": null,
+   "geometry_name": "testem3-flat.gdml",
+   "merge_events": null,
+   "num_track_slots": 4096,
+   "use_device": null
+  },
   "name": [
    "testem3-flat",
    "geant4",
    "g4"
   ],
-  "result": "No instances ran successfully"
+  "result": [
+   {
+    "avg_event_per_time": 0.09293541315646113,
+    "avg_time_per_primary": 0.008277046855494505,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031540163,
+    "total_time": 75.321126385
+   },
+   {
+    "avg_event_per_time": 0.09273185320880407,
+    "avg_time_per_primary": 0.00829521618098901,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031195505,
+    "total_time": 75.486467247
+   },
+   {
+    "avg_event_per_time": 0.09309141334356359,
+    "avg_time_per_primary": 0.008263176394065933,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.03136363,
+    "total_time": 75.194905186
+   },
+   {
+    "avg_event_per_time": 0.09340977689442169,
+    "avg_time_per_primary": 0.008235013451538462,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031522328,
+    "total_time": 74.938622409
+   },
+   {
+    "avg_event_per_time": 0.09287057470704041,
+    "avg_time_per_primary": 0.008282825552197802,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.03208463,
+    "total_time": 75.373712525
+   },
+   {
+    "avg_event_per_time": 0.09250787709449947,
+    "avg_time_per_primary": 0.008315300203516483,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031583387,
+    "total_time": 75.669231852
+   },
+   {
+    "avg_event_per_time": 0.09301592886580051,
+    "avg_time_per_primary": 0.008269882143956044,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031227957,
+    "total_time": 75.25592751
+   },
+   {
+    "avg_event_per_time": 0.09227853606945532,
+    "avg_time_per_primary": 0.008335966325384615,
+    "gpu_energy_wh": 0.0,
+    "num_events": 7,
+    "num_primaries": 9100,
+    "setup_time": 0.031279397,
+    "total_time": 75.857293561
+   }
+  ],
+  "system": {
+   "build_type": null,
+   "debug": false,
+   "geant4": "11.0.4",
+   "occupancy": null,
+   "openmp": null,
+   "sizes": null,
+   "vecgeom": null,
+   "version": "0.5.1"
+  }
  },
  "testem3-flat-orange-cpu": {
   "input": {
