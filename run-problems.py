@@ -45,9 +45,6 @@ class System:
     power_sample_interval = 1.0  # seconds
 
     def get_num_streams(self, inp):
-        if not inp["_use_celeritas"]:
-            return None
-
         if inp.get('merge_events', False):
             # Single stream: merge onto one CPU
             assert inp['_exe'] == "celer-sim"
@@ -62,11 +59,12 @@ class System:
             # No Celeritas at all
             assert inp['_exe'] == "celer-g4"
             env['CELER_DISABLE'] = "1"
-        elif not inp['use_device']:
-            # No device ative
+        if inp["_geometry"] == "geant4" or not inp['use_device']:
+            # Disable GPU
             env['CELER_DISABLE_DEVICE'] = "1"
 
         num_streams = self.get_num_streams(inp)
+        assert num_streams
         if inp['_exe'] == "celer-g4":
             # Let Geant4 handle the threading
             env['G4FORCE_RUN_MANAGER_TYPE'] = "MT"
@@ -158,17 +156,6 @@ class Wildstyle(System):
     num_jobs = 2
     gpu_per_job = 1
     cpu_per_job = 32
-
-
-class Local(System):
-    build_dirs = {
-        "orange": Path("/Users/seth/Code/celeritas/build-reldeb"),
-        "vecgeom": Path("/Users/seth/Code/celeritas/build-vecgeom-reldeb"),
-    }
-    name = "testing"
-    num_jobs = 1
-    gpu_per_job = 0
-    cpu_per_job = 1
 
 
 class Frontier(System):
@@ -302,6 +289,18 @@ class Perlmutter(Frontier):
 
     def filter_problems(self, inputs):
         return inputs
+
+class Local(System):
+    build_dirs = Frontier.build_dirs
+    # {
+    #     "orange": Path("/Users/seth/Code/celeritas/build-reldeb"),
+    #     "vecgeom": Path("/Users/seth/Code/celeritas/build-vecgeom-reldeb"),
+    # }
+    name = "testing"
+    num_jobs = 1
+    gpu_per_job = 1
+    cpu_per_job = 7
+
 
 regression_dir = Path(__file__).parent
 input_dir = regression_dir / "input"
@@ -655,6 +654,8 @@ async def run_celeritas(system: System, results_dir, inp):
     result.setdefault('input', {}).update(
         {k: v for k,v in inp.items() if k.startswith('_')}
     )
+    # Save input environment
+    environ = result['_environ'] = system.get_runtime_environ(inp)
 
     try:
         # Remove pointer addresses to reduce senseless diffing
