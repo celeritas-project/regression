@@ -240,7 +240,7 @@ class Perlmutter(Frontier):
         """
         cmd = "nvidia-smi"
         args = ['dmon', '-i', str(inp['_instance']), '--select', 'pu', '--options', 'DT']
-        return asyncio.create_subprocess_exec(cmd, *args, stdout=subprocess.PIPE)
+        return None
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
@@ -379,7 +379,7 @@ use_geant = {
     }
 }
 
-also_gpu_sync = {
+gpu_sync = {
     "action_times": True,
 }
 
