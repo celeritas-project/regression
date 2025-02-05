@@ -878,7 +878,7 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login19
+SITE:STRING=login20
 
 //The directory containing a CMake configuration file for Thrust.
 Thrust_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/thrust
@@ -1347,7 +1347,7 @@ CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.30.5-wudyq257nwbwln5co435ww2nfuh7bgqu/share/cmake-3.30/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.1;;
+Celeritas_GIT_DESCRIBE:INTERNAL=0.5.1;-7;bf5554d44
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
