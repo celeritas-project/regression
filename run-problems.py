@@ -724,12 +724,12 @@ async def main():
     results_dir.mkdir(exist_ok=True)
 
     arch_inputs = [
-        [use_celer_sim, use_gpu], # celer-sim GPU
+        # [use_celer_sim, use_gpu], # celer-sim GPU
         [use_celer_g4, use_gpu], # celer-g4 GPU
     ] if system.gpu_per_job else []
 
     arch_inputs.extend([
-        [use_celer_sim, use_cpu], # celer-sim CPU
+        # [use_celer_sim, use_cpu], # celer-sim CPU
         [use_celer_g4, use_cpu], # celer-g4 CPU
         [use_celer_g4, use_geant], # celer-g4 Geant4
     ])
