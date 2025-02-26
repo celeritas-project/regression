@@ -52,7 +52,7 @@ base_input = {
     "use_device": True,
     "action_times": False,
     "write_track_counts": True,
-    "track_order": "init_charge",  # TODO
+    "track_order": "none",
     "merge_events": True,  # celer-sim options
     "physics_list": "celer_em",  # celer-g4 options
     "sd_type": "none",
@@ -153,11 +153,9 @@ def merge_inputs(problem_dicts):
     return inp
 
 
-def main():
-    app = 'celer-g4'
+def run(app, track_order='none'):
     num_streams = 16
-    inits_per_track = 64
-    num_threads = [2**i for i in range(18, 23)]
+    num_threads = [2**i for i in range(16, 23)]
     if app == 'celer-g4':
         # celer-g4 tracks are per-stream
         num_threads = [n // num_streams for n in num_threads]
@@ -184,22 +182,22 @@ def main():
         # Set number of events
         inp['primary_options']['num_events'] = num_streams
 
+        # Set track order
+        inp['track_order'] = track_order
+
         geo_name = Path(inp['geometry_file']).stem
-        ext = ''
-        if inp['track_order'] == 'init_charge':
-            ext = '-init-charge'
+        ext = '-' + track_order.replace('_', '-')
         outdir = results_dir / f'scaling{ext}' / app / geo_name
         outdir.mkdir(exist_ok=True, parents=True)
 
         for i in range(len(num_threads)):
+            inits_per_track = 128 if num_threads[i] < 2**19 else 64
             inp['num_track_slots'] = num_threads[i]
             inp['initializer_capacity'] = inits_per_track * num_threads[i]
-            if app == "celer-g4":
-                inp['auto_flush'] = inp['initializer_capacity'] / 2
             outfile = outdir / f'{i}.json'
 
             # Run app and redirect output to JSON
-            print(f'Running {app} on {geo_name} with {num_threads[i]} GPU threads')
+            print(f'Running {app} on {geo_name} with track_order={track_order} and {num_threads[i]} GPU threads')
             arg_list = [exe, '-']
             proc = subprocess.run(
                 arg_list,
@@ -209,16 +207,26 @@ def main():
                 universal_newlines=True,
             )
 
-            with open(str(outfile), 'w') as f:
-                json.dump(json.loads(proc.stdout), f)
+            print(proc.stderr)
+            try:
+                with open(str(outfile), 'w') as f:
+                    json.dump(json.loads(proc.stdout), f)
 
-            with open(str(outfile)) as f:
-                out = json.load(f)
-                if app == 'celer-sim':
-                    time = out['result']['runner']['time']['total']
-                else:
-                    time = out['result']['time']['total']
-                print(f'GPU threads: {num_threads[i]}, time: {time}')
+                with open(str(outfile)) as f:
+                    out = json.load(f)
+                    if app == 'celer-sim':
+                        time = out['result']['runner']['time']['total']
+                    else:
+                        time = out['result']['time']['total']
+                    print(f'GPU threads: {num_threads[i]}, time: {time}')
+            except:
+                "Error loading json output"
+
+
+def main():
+    app = 'celer-g4'
+    for to in ['none', 'init_charge', 'reindex_along_step_action']:
+        run(app, to)
 
 
 if __name__ == '__main__':
