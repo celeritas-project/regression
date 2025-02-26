@@ -23,6 +23,15 @@ CELERITAS_BUILD_DOCS:BOOL=OFF
 //Build Celeritas unit tests
 CELERITAS_BUILD_TESTS:BOOL=ON
 
+//Fetch and build G4VG
+CELERITAS_BUILTIN_G4VG:BOOL=ON
+
+//Fetch and build GTest
+CELERITAS_BUILTIN_GTest:BOOL=
+
+//Fetch and build nlohmann_json
+CELERITAS_BUILTIN_nlohmann_json:BOOL=
+
 //Celeritas runtime geometry
 CELERITAS_CORE_GEO:STRING=
 
@@ -32,12 +41,6 @@ CELERITAS_CORE_RNG:STRING=
 //Enable runtime assertions
 CELERITAS_DEBUG:BOOL=OFF
 
-//Fetch and build GTest
-CELERITAS_EXTERNAL_GTest:BOOL=
-
-//Fetch and build nlohmann_json
-CELERITAS_EXTERNAL_nlohmann_json:BOOL=
-
 //Threads-per-block launch bound for Celeritas action kernels
 CELERITAS_MAX_BLOCK_SIZE:STRING=256
 
@@ -45,7 +48,7 @@ CELERITAS_MAX_BLOCK_SIZE:STRING=256
 CELERITAS_OPENMP:STRING=
 
 //Python path used for finding modules and generating documentation
-CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/misc:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.13/site-packages:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/root:/opt/nersc/pymon
+CELERITAS_PYTHONPATH:STRING=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/root:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/misc:/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib/python3.13/site-packages:/opt/nersc/pymon
 
 //Global runtime precision for real numbers
 CELERITAS_REAL_TYPE:STRING=
@@ -84,7 +87,7 @@ CELERITAS_USE_OpenMP:BOOL=ON
 CELERITAS_USE_PNG:BOOL=OFF
 
 //Perfetto tracing library
-CELERITAS_USE_Perfetto:BOOL=OFF
+CELERITAS_USE_Perfetto:STRING=OFF
 
 //Use Python to generate and preprocess
 CELERITAS_USE_Python:BOOL=ON
@@ -111,7 +114,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CRAYPE_LINKTYPE:STRING=
 
 //saved value of LOADEDMODULES environment variable
-CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-x86-milan:libfabric/1.20.1:craype-network-ofi:xpmem/2.6.2-2.5_2.40__gd067c3f.shasta:gcc-native/12.3:perftools-base/23.12.0:cpe/23.12:sqs/2.0:darshan/3.4.4:craype/2.7.30:cray-dsmml/0.2.2:cray-mpich/8.1.28:PrgEnv-gnu/8.5.0
+CMAKE_CRAYPE_LOADEDMODULES:STRING=craype-x86-milan:libfabric/1.20.1:craype-network-ofi:xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d:gcc-native/13.2:perftools-base/24.07.0:cpe/24.07:sqs/2.0:darshan/default:craype/2.7.32:cray-dsmml/0.3.0:cray-mpich/8.1.30:PrgEnv-gnu/8.5.0
 
 //No help, variable specified on the command line.
 CMAKE_CUDA_ARCHITECTURES:STRING=80
@@ -137,19 +140,19 @@ CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Set to CMAKE_CXX_COMPILER by Celeritas CMakeLists
 CMAKE_CUDA_HOST_COMPILER:BOOL=OFF
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/opt/cray/pe/craype/2.7.30/bin/CC
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:PATH=CC
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
 
 //No help, variable specified on the command line.
 CMAKE_CXX_COMPILER_LAUNCHER:UNINITIALIZED=ccache
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
 
 //No help, variable specified on the command line.
 CMAKE_CXX_EXTENSIONS:BOOL=OFF
@@ -304,16 +307,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Celeritas
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.5.1
+CMAKE_PROJECT_VERSION:STATIC=0.6.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=5
+CMAKE_PROJECT_VERSION_MINOR:STATIC=6
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -724,6 +727,38 @@ EXPAT_LIBRARY:PATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc
 //Path to a library.
 EXPAT_LIBRARY_RELEASE:FILEPATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/expat-2.6.4-357avcex5kyih5ezbmq2pcbe3v7asf5d/lib/libexpat.so
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/build-ndebug/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for G4VG
+FETCHCONTENT_SOURCE_DIR_G4VG:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of G4VG
+FETCHCONTENT_UPDATES_DISCONNECTED_G4VG:BOOL=OFF
+
+//Value Computed by CMake
+G4VG_BINARY_DIR:STATIC=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/build-ndebug/_deps/g4vg-build
+
+//The directory containing a CMake configuration file for G4VG.
+G4VG_DIR:PATH=G4VG_DIR-NOTFOUND
+
+//Value Computed by CMake
+G4VG_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+G4VG_SOURCE_DIR:STATIC=/global/cfs/cdirs/atlas/esseivaj/devel/celeritas/build-ndebug/_deps/g4vg-src
+
 //Path to a program.
 GITCOMMAND:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/git
 
@@ -767,7 +802,7 @@ OpenMP_CXX_FLAGS:STRING=-fopenmp
 OpenMP_CXX_LIB_NAMES:STRING=gomp
 
 //Path to the gomp library for OpenMP
-OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib64/gcc/x86_64-suse-linux/12/libgomp.so
+OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib64/gcc/x86_64-suse-linux/13/libgomp.so
 
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
@@ -779,64 +814,64 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 PTL_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/Geant4/PTL
 
 //Path to a library.
-ROOT_Core_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libCore.so
+ROOT_Core_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libCore.so
 
 //The directory containing a CMake configuration file for ROOT.
 ROOT_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/root/cmake
 
 //Path to a library.
-ROOT_Gpad_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libGpad.so
+ROOT_Gpad_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libGpad.so
 
 //Path to a library.
-ROOT_Graf3d_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libGraf3d.so
+ROOT_Graf3d_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libGraf3d.so
 
 //Path to a library.
-ROOT_Graf_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libGraf.so
+ROOT_Graf_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libGraf.so
 
 //Path to a library.
-ROOT_Hist_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libHist.so
+ROOT_Hist_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libHist.so
 
 //Path to a library.
-ROOT_Imt_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libImt.so
+ROOT_Imt_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libImt.so
 
 //Path to a library.
-ROOT_MathCore_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libMathCore.so
+ROOT_MathCore_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libMathCore.so
 
 //Path to a library.
-ROOT_Matrix_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libMatrix.so
+ROOT_Matrix_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libMatrix.so
 
 //Path to a library.
-ROOT_MultiProc_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libMultiProc.so
+ROOT_MultiProc_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libMultiProc.so
 
 //Path to a library.
-ROOT_Net_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libNet.so
+ROOT_Net_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libNet.so
 
 //Path to a library.
-ROOT_Physics_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libPhysics.so
+ROOT_Physics_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libPhysics.so
 
 //Path to a library.
-ROOT_Postscript_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libPostscript.so
+ROOT_Postscript_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libPostscript.so
 
 //Path to a library.
-ROOT_RIO_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libRIO.so
+ROOT_RIO_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libRIO.so
 
 //Path to a library.
-ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libROOTDataFrame.so
+ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libROOTDataFrame.so
 
 //Path to a library.
-ROOT_ROOTVecOps_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libROOTVecOps.so
+ROOT_ROOTVecOps_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libROOTVecOps.so
 
 //Path to a library.
-ROOT_Rint_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libRint.so
+ROOT_Rint_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libRint.so
 
 //Path to a library.
-ROOT_Thread_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libThread.so
+ROOT_Thread_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libThread.so
 
 //Path to a library.
-ROOT_TreePlayer_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libTreePlayer.so
+ROOT_TreePlayer_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libTreePlayer.so
 
 //Path to a library.
-ROOT_Tree_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/umzpz2pffklbugn65hhgjmdqqsvtciso/lib/root/libTree.so
+ROOT_Tree_LIBRARY:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/._view/b7flmhwkn5shxcpkey6b3g6u6lzjb3po/lib/root/libTree.so
 
 //Path to a program.
 ROOT_genmap_CMD:FILEPATH=ROOT_genmap_CMD-NOTFOUND
@@ -878,7 +913,7 @@ ROOT_rootmv_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/ce
 ROOT_rootrm_CMD:FILEPATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/rootrm
 
 //Name of the computer/site where compile is being run
-SITE:STRING=login20
+SITE:STRING=login01
 
 //The directory containing a CMake configuration file for Thrust.
 Thrust_DIR:PATH=/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/thrust
@@ -926,14 +961,16 @@ pkgcfg_lib_PC_EXPAT_expat:FILEPATH=/pscratch/sd/e/esseivaj/spack/opt/spack/linux
 
 //Default number of processes to use in CeleritasAddTest
 CELERITASTEST_NP_DEFAULT:INTERNAL=1
+//ADVANCED property for variable: CELERITAS_BUILTIN_G4VG
+CELERITAS_BUILTIN_G4VG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CELERITAS_BUILTIN_GTest
+CELERITAS_BUILTIN_GTest-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CELERITAS_BUILTIN_nlohmann_json
+CELERITAS_BUILTIN_nlohmann_json-ADVANCED:INTERNAL=1
 //STRINGS property for variable: CELERITAS_CORE_GEO
 CELERITAS_CORE_GEO-STRINGS:INTERNAL=VecGeom;ORANGE
 //STRINGS property for variable: CELERITAS_CORE_RNG
 CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
-//ADVANCED property for variable: CELERITAS_EXTERNAL_GTest
-CELERITAS_EXTERNAL_GTest-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CELERITAS_EXTERNAL_nlohmann_json
-CELERITAS_EXTERNAL_nlohmann_json-ADVANCED:INTERNAL=1
 //Build/deploy system name
 CELERITAS_HOSTNAME:INTERNAL=perlmutter
 //STRINGS property for variable: CELERITAS_OPENMP
@@ -1004,6 +1041,8 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+CMAKE_CXX_LINK_LIBRARY_USING_rdc_no_as_needed:INTERNAL=LINKER:--push-state,--no-as-needed;<LINK_ITEM>;LINKER:--pop-state
+CMAKE_CXX_LINK_LIBRARY_USING_rdc_no_as_needed_SUPPORTED:INTERNAL=TRUE
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -1086,7 +1125,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1347,7 +1386,7 @@ CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
 //Location of run_nvcc.cmake
 CUDA_run_nvcc:INTERNAL=/pscratch/sd/e/esseivaj/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/cmake-3.30.5-wudyq257nwbwln5co435ww2nfuh7bgqu/share/cmake-3.30/Modules/FindCUDA/run_nvcc.cmake
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.5.1;-7;bf5554d44
+Celeritas_GIT_DESCRIBE:INTERNAL=0.6.0;-dev.128;6cd2f986c
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
@@ -1363,7 +1402,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_HepMC3:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][c ][v4.5()]
 //Details about finding OpenMP_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib64/gcc/x86_64-suse-linux/12/libgomp.so][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib64/gcc/x86_64-suse-linux/13/libgomp.so][v4.5()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/bin/python3.13][cfound components: Interpreter ][v3.13.0(3.6)]
 //Details about finding ROOT
@@ -1373,9 +1412,11 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding Thrust
 FIND_PACKAGE_MESSAGE_DETAILS_Thrust:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/thrust/thrust-config.cmake][v2.5.0.0()]
 //Details about finding VecGeom
-FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.9(1.2.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_VecGeom:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/lib64/cmake/VecGeom/VecGeomConfig.cmake][v1.2.10(1.2.10)]
 //Details about finding nlohmann_json
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/pscratch/sd/e/esseivaj/spack/var/spack/environments/celeritas/.spack-env/view/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3(3.7.0)]
+//Version string and hash for G4VG
+G4VG_GIT_DESCRIBE:INTERNAL=1.0.2;;
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
