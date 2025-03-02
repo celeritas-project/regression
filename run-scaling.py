@@ -42,7 +42,7 @@ base_input = {
         "msc": "urban",
     },
     "primary_options": {
-        "seed": 0,
+        "seed": 1,
         "pdg": 11,
         "energy": 10000,  # 10 GeV
         "position": [0, 0, 0],
@@ -61,8 +61,13 @@ base_input = {
 
 ## PHYSICS ##
 
-use_field = {
+field = {
     "field": [0.0, 0.0, 1.0], # units: [T]
+    "field_options": {"max_substeps": 10},
+}
+
+cms_field = {
+    "field": [0.0, 0.0, 3.8], # units: [T]
     "field_options": {"max_substeps": 10},
 }
 
@@ -110,11 +115,11 @@ full_cms_run4 = {
 
 # List of list of setting dictionaries
 problems = [
-    [testem3_composite, use_field],
+    [testem3_composite, field],
     [tilecal],
     [hgcal],
-    [full_cms_run3, use_field],
-    [full_cms_run4, use_field],
+    [full_cms_run3, cms_field],
+    [full_cms_run4, cms_field],
 ]
 
 
@@ -153,12 +158,21 @@ def merge_inputs(problem_dicts):
     return inp
 
 
-def run(app, track_order='none'):
+def run(arch, app, opt, ext):
+    if arch == 'gpu':
+        #num_tracks = [2**i for i in range(16, 23)]
+        num_tracks = [2**21,]
+    else:
+        num_tracks = [2**16,]
+        if 'CELER_DISABLE' in opt:
+            os.environ['CELER_DISABLE'] = opt['CELER_DISABLE']
+        else:
+            os.environ['CELER_DISABLE_DEVICE'] = "1"
+
     num_streams = 16
-    num_threads = [2**i for i in range(16, 23)]
     if app == 'celer-g4':
         # celer-g4 tracks are per-stream
-        num_threads = [n // num_streams for n in num_threads]
+        num_tracks = [n // num_streams for n in num_tracks]
 
     # Check that executable exists
     exe = build_dir / 'bin' / app
@@ -166,38 +180,54 @@ def run(app, track_order='none'):
         msg = f'Unable to locate executable {exe}.'
         raise IOError(msg)
 
+    os.environ['CELER_DEVICE_ASYNC'] = opt['CELER_DEVICE_ASYNC']
+
     inputs = [merge_inputs([base_input] + p) for p in problems]
 
     for inp in inputs:
+        if arch == 'gpu':
+            inp['use_device'] = True
+            inp['action_times'] = False
+        else:
+            inp['use_device'] = False
+            inp['action_times'] = True
+            inp['merge_events'] = False
+
         # Set number of streams
         if app == 'celer-sim' and not inp['merge_events']:
             os.environ['OMP_NUM_THREADS'] = str(num_streams)
         else:
             os.environ['G4FORCENUMBEROFTHREADS'] = str(num_streams)
 
-        if ('cms' in inp['geometry_file']):
+        if arch == 'gpu' and ('cms' in inp['geometry_file']):
             os.environ["CUDA_HEAP_SIZE"] = "10000000"
             os.environ["CUDA_STACK_SIZE"] = "32000"
 
         # Set number of events
         inp['primary_options']['num_events'] = num_streams
 
-        # Set track order
-        inp['track_order'] = track_order
+        # Set optimization options
+        inp['track_order'] = opt['track_order']
+        if 'field' in inp and max(inp['field']) > 0:
+            inp['field_options']['max_substeps'] = opt['max_substeps']
 
         geo_name = Path(inp['geometry_file']).stem
-        ext = '-' + track_order.replace('_', '-')
-        outdir = results_dir / f'scaling{ext}' / app / geo_name
+        outdir = results_dir / f'opt-{ext}' / arch / app / geo_name
         outdir.mkdir(exist_ok=True, parents=True)
 
-        for i in range(len(num_threads)):
-            inits_per_track = 128 if num_threads[i] < 2**19 else 64
-            inp['num_track_slots'] = num_threads[i]
-            inp['initializer_capacity'] = inits_per_track * num_threads[i]
+        for i in range(len(num_tracks)):
+            if arch == 'gpu':
+                inits_per_track = 64
+                if num_tracks[i] < 2**18 or (app == 'celer-sim' and num_tracks[i] < 2**19):
+                    inits_per_track = 128 
+            else:
+                inits_per_track = 2**9
+            inp['num_track_slots'] = num_tracks[i]
+            inp['initializer_capacity'] = inits_per_track * num_tracks[i]
             outfile = outdir / f'{i}.json'
 
             # Run app and redirect output to JSON
-            print(f'Running {app} on {geo_name} with track_order={track_order} and {num_threads[i]} GPU threads')
+            print(f'Running {app} on {geo_name} with opt={opt} and {num_tracks[i]} {arch} tracks / {num_streams} streams')
             arg_list = [exe, '-']
             proc = subprocess.run(
                 arg_list,
@@ -218,15 +248,74 @@ def run(app, track_order='none'):
                         time = out['result']['runner']['time']['total']
                     else:
                         time = out['result']['time']['total']
-                    print(f'GPU threads: {num_threads[i]}, time: {time}')
+                    print(f'GPU threads: {num_tracks[i]}, time: {time}')
             except:
                 "Error loading json output"
 
 
 def main():
-    app = 'celer-g4'
-    for to in ['none', 'init_charge', 'reindex_along_step_action']:
-        run(app, to)
+    opt_none = {
+        "ext": "none",
+        "opt": {
+            "max_substeps": 100,
+            "track_order": "none",
+            "CELER_DEVICE_ASYNC": "0"
+        }
+    }
+    opt_all = {
+        "ext": "all",
+        "opt": {
+            "max_substeps": 10,
+            "track_order": "init_charge",
+            "CELER_DEVICE_ASYNC": "1"
+        }
+    }
+    opt_init = {
+        "ext": "init-charge",
+        "opt": {
+            "max_substeps": 100,
+            "track_order": "init_charge",
+            "CELER_DEVICE_ASYNC": "0"
+        }
+    }
+    opt_plus_init = {
+        "ext": "plus-init-charge",
+        "opt": {
+            "max_substeps": 100,
+            "track_order": "init_charge",
+            "CELER_DEVICE_ASYNC": "1"
+        }
+    }
+    opt_substeps = {
+        "ext": "max-substeps",
+        "opt": {
+            "max_substeps": 10,
+            "track_order": "none",
+            "CELER_DEVICE_ASYNC": "0"
+        }
+    }
+    opt_async = {
+        "ext": "async",
+        "opt": {
+            "max_substeps": 100,
+            "track_order": "none",
+            "CELER_DEVICE_ASYNC": "1"
+        }
+    }
+    g4 = {
+        "ext": "g4",
+        "opt": {
+            "max_substeps": 10,
+            "track_order": "init_charge",
+            "CELER_DEVICE_ASYNC": "1",
+            "CELER_DISABLE": "1"
+        }
+    }
+
+    for app in ['celer-g4', 'celer-sim']:
+        for arch in ['gpu', 'cpu']:
+            for opt in [opt_none, opt_async, opt_plus_init, opt_all]:
+                run(arch, app, opt["opt"], opt["ext"])
 
 
 if __name__ == '__main__':
