@@ -1,6 +1,7 @@
 {
  "axes.axisbelow": true,
  "axes.formatter.use_mathtext": true,
+ "figure.constrained_layout.use": true,
  "figure.dpi": 150.0,
  "figure.edgecolor": [
   1,
@@ -24,7 +25,6 @@
  "legend.labelspacing": 0.25,
  "lines.linewidth": 0.75,
  "patch.linewidth": 0.75,
- "savefig.bbox": "tight",
  "savefig.dpi": 300.0,
  "xtick.direction": "in",
  "xtick.major.size": 3.0,
