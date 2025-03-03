@@ -15,6 +15,8 @@ import shutil
 import subprocess
 import time
 
+with open("plots/style.json") as f:
+    mpl.rcParams.update(json.load(f))
 
 # Create directory and set filename for results
 results_dir = Path('results')
@@ -219,7 +221,7 @@ def run(arch, app, opt, ext):
             if arch == 'gpu':
                 inits_per_track = 64
                 if num_tracks[i] < 2**18 or (app == 'celer-sim' and num_tracks[i] < 2**19):
-                    inits_per_track = 128 
+                    inits_per_track = 128
             else:
                 inits_per_track = 2**9
             inp['num_track_slots'] = num_tracks[i]
