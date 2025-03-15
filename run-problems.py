@@ -445,7 +445,7 @@ problems = [
     [hgcal, no_msc],
     [hgcal, no_msc, use_vecgeom],
     [hgcal, no_msc, use_vgsurf],
-    #[full_cms, no_msc],
+    [full_cms, no_msc],
     [full_cms, use_field],
     [full_cms, use_field, use_vgsurf],
 ]
