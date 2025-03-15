@@ -141,8 +141,9 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/s3j/Code/celeritas/build-reldeb"),
-        'vecgeom': Path("/home/s3j/Code/celeritas/build-reldeb-vecgeom"),
+        'orange': Path("/home/s3j/Code/celeritas/build-ndebug"),
+        'vecgeom': Path("/home/s3j/Code/celeritas/build-ndebug-vecgeom"),
+        'vgsurf': Path("/home/s3j/Code/celeritas/build-ndebug-vgsurf"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -215,7 +216,8 @@ class Frontier(System):
         )
 
     def filter_problems(self, inputs):
-        return [i for i in inputs if i['_geometry'] != "vecgeom"]
+        invalid = ['vecgeom', 'vgsurf']
+        return [i for i in inputs if i['_geometry'] not in invalid]
 
 
 class Perlmutter(Frontier):
@@ -430,42 +432,26 @@ full_cms = {
 }
 
 use_vecgeom = {"_geometry": "vecgeom"}
+use_vgsurf = {"_geometry": "vgsurf"}
 
 # List of list of setting dictionaries
 problems = [
-    [testem15, no_msc],
-    [testem15, no_msc, use_field],
     [testem15, use_field],
     [testem15, use_field, use_vecgeom],
-    [testem3, no_msc],
-    [testem3, no_msc, use_vecgeom],
-    [testem3, no_msc, use_field],
-    [testem3],
-    [testem3, use_field],
-    [testem3, use_field, use_vecgeom],
-    [testem3_composite],
-    [testem3_composite, use_vecgeom],
-    [testem3_composite, use_field],
-    [testem3_composite, use_field, use_vecgeom],
+    [testem15, use_field, use_vgsurf],
     [testem3_expanded, use_field],
     [testem3_expanded, use_field, use_vecgeom],
-    [tilecal, no_msc],
-    [tilecal, no_msc, use_vecgeom],
+    [testem3_expanded, use_field, use_vgsurf],
     [hgcal, no_msc],
     [hgcal, no_msc, use_vecgeom],
-    [full_cms, no_msc],
+    [hgcal, no_msc, use_vgsurf],
+    #[full_cms, no_msc],
     [full_cms, use_field],
+    [full_cms, use_field, use_vgsurf],
 ]
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
-    [testem15, no_msc, use_field],
-    [testem15, no_msc, use_field, use_vecgeom],
-    [testem3, use_field],
-    [testem3, use_field, use_vecgeom],
-    [testem3_composite, use_field],
-    [testem3_composite, use_field, use_vecgeom],
-    [full_cms, use_field],
 ]
 
 def recurse_updated(d, other):
@@ -671,10 +657,10 @@ async def main():
     device_mods = []
     if system.gpu_per_job:
         device_mods.append([use_gpu])
-        device_mods.append([use_gpu_streams, use_geant])
-    device_mods.append([]) # CPU celeritas
-    device_mods.append([use_geant]) # CPU celeritas through celer-g4
-    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
+        #device_mods.append([use_gpu_streams, use_geant])
+#    device_mods.append([]) # CPU celeritas
+#    device_mods.append([use_geant]) # CPU celeritas through celer-g4
+#    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
 
     # Set number of events based on number of CPUs
     base_inputs = [
