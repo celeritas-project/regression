@@ -421,7 +421,7 @@ hgcal = {
     "geometry_file": "cms-hgcal.gdml",
     "primary_options": {
         "position": [0, 0, -899.999],
-        "direction": [0, 0, 1],
+        "direction": [1e-7, 0, 1],
     },
 }
 
@@ -437,14 +437,7 @@ use_vgsurf = {"_geometry": "vgsurf"}
 
 # List of list of setting dictionaries
 problems = [
-    [testem15, no_msc],
-    [testem15, no_msc, use_field],
-    [testem3],
-    [testem3_composite, use_field],
-    [testem3_expanded, use_field],
-    [tilecal, no_msc],
     [hgcal, no_msc],
-    [full_cms, use_field],
 ]
 
 # Run again with sync on for detailed GPU timing
