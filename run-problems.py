@@ -421,7 +421,7 @@ hgcal = {
     "geometry_file": "cms-hgcal.gdml",
     "primary_options": {
         "position": [0, 0, -899.999],
-        "direction": [4.5e-4, 0, 1 - 1e-7],
+        "direction": [0.0, 0.001000000499999875, 0.999999499999375],
     },
 }
 
