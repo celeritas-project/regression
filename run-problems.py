@@ -667,10 +667,10 @@ async def main():
         {"primary_options": {"num_events": system.cpu_per_job}},
     ]
 
-    geo_mods = [[], [use_vecgeom, use_vecgeomv1, use_vgsurf]]
+    geo_mods = [[], [use_vecgeom], [use_vecgeomv1], [use_vgsurf]]
 
-    inputs = [build_input(base_inputs + p + d)
-              for p, d in itertools.product(problems, device_mods, geo_mods)]
+    inputs = [build_input(itertools.chain(base_inputs, *mods))
+              for mods in itertools.product(problems, device_mods, geo_mods)]
 #    if system.gpu_per_job:
 #        inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
 #                   for p in sync_problems]
