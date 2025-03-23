@@ -36,6 +36,7 @@ KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
 KERNEL_ORDERING = {
     'along-step-neutral': KernelCategory.GEO,
     'along-step-general-linear': KernelCategory.GP,
+    'along-step-cylmap-msc': KernelCategory.GP,
     'along-step-uniform-msc': KernelCategory.GP,
     'initialize-tracks': KernelCategory.GP,
     'extend-from-primaries': KernelCategory.GP,
@@ -131,8 +132,12 @@ def calc_event_rate(results, summary=None):
 class ProblemAbbreviator:
     def __init__(self):
         input_dir = Path(__file__).parent / "input"
-        with open(input_dir / "problem-abbr.json") as f:
-            self.geo_abbrev = json.load(f)
+        try:
+            with open(input_dir / "problem-abbr.json") as f:
+                self.geo_abbrev = json.load(f)
+        except OSError as e:
+            print("Failed to load problem abbreviations:", e)
+            self.geo_abbrev = {}
 
     def __call__(self, inp):
         geo, *_ = inp['geometry_name'].partition('.')
@@ -642,10 +647,15 @@ def get_action_priority(k):
         return KernelCategory.PHYS
 
 
-def autopct_format(pctvalue):
-    if pctvalue < 5:
-        return ""
-    return "{:1.0f}%".format(pctvalue)
+class AutoPercentFormatter:
+    def __init__(self, threshold):
+        """Give threshold in percent"""
+        self.threshold = threshold
+
+    def __call__(self, pctvalue):
+        if pctvalue < self.threshold:
+            return ""
+        return "{:.0f}%".format(pctvalue)
 
 
 class ActionFractionCalculator:
@@ -695,17 +705,18 @@ class PiePlotter:
 
     def __call__(self, ax, arch):
         width = 0.3
-        angle = 90.0 # degrees
-        legend_thresh = 0.02
+        angle = 90.0 # start angle in degrees
+        legend_thresh = 0.01
 
         (inner, outer) = self.get_actions(arch)
 
-        # Plot outer ring (categories
+        # Plot outer ring (categories)
         (wedges, texts, autotexts) = ax.pie(
             outer,
-            autopct=autopct_format, pctdistance=0.85,
+            autopct=AutoPercentFormatter(5), pctdistance=0.85,
             radius=1, colors=self.outer_colors,
             wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+            textprops=dict(fontweight="bold")
         )
         outer_legend = ax.legend(wedges, self.catlabels,
                   loc="upper right",
@@ -722,12 +733,15 @@ class PiePlotter:
         inner_colors = np.zeros((inner.size, 4))
         inner_colors[slc, :] = inner_cmap(
                 np.linspace(0.0, 1.0, num_inner)[ascending_idx])
+        # Small kernels are grey
         inner_colors[~slc, :] = [0.5, 0.5, 0.5, 1.0]
 
-        (wedges, texts) = ax.pie(
+        (wedges, texts, autotexts) = ax.pie(
             inner,
             radius=(1 - width), colors=inner_colors,
+            autopct=AutoPercentFormatter(10), pctdistance=0.75,
             wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+            textprops=dict(size='x-small')
         )
 
         # Generate legend with all real kernels and one stand-in gray kernel
