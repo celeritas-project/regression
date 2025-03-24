@@ -17,7 +17,7 @@ import numpy as np
 
 Islc = pd.IndexSlice
 
-KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP"], start=0)
+KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP", "USER"], start=0)
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
 GEO_COLORS = {
@@ -32,7 +32,7 @@ ARCH_SHAPES = {
     'cpu+g4': 'd',
     'g4': 'o',
 }
-KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
+KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys", "User"]
 KERNEL_ORDERING = {
     'along-step-neutral': KernelCategory.GEO,
     'along-step-general-linear': KernelCategory.GP,
@@ -45,6 +45,8 @@ KERNEL_ORDERING = {
     'physics-discrete-select': KernelCategory.PHYS,
     'pre-step': KernelCategory.PHYS,
     'tracking-cut': KernelCategory.PHYS,
+    'step-gather-post': KernelCategory.USER,
+    'step-gather-post': KernelCategory.USER,
 }
 
 CPU_POWER_PER_TASK= {
