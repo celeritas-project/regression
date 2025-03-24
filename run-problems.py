@@ -420,8 +420,8 @@ tilecal = {
 hgcal = {
     "geometry_file": "cms-hgcal.gdml",
     "primary_options": {
-        "position": [0, 0, -899.999],
-        "direction": [0.0, 0.001000000499999875, 0.999999499999375],
+        "position": [0.01, 0.01, -899.999],
+        "direction": [0.0, 0.0, 1.0],
     },
 }
 
