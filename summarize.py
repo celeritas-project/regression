@@ -280,13 +280,16 @@ def summarize_all(instances):
                 inp = summarize_input(r['input'])
 
     if inp is None:
-        return {'result': "No instances ran successfully"}
-
-    consistent = bool(systems)
-    for s in systems[1:]:
-        if not equivalent_systems(systems[0], s):
-            consistent = False
-            print("WARNING: inconsistent system settings:", s)
+        # No successes
+        consistent = False
+        systems = systems[0] if systems else None
+        result = [{'failure': r.get('failure')} for r in instances]
+    else:
+        consistent = bool(systems)
+        for s in systems[1:]:
+            if not equivalent_systems(systems[0], s):
+                consistent = False
+                print("WARNING: inconsistent system settings:", s)
 
     return {
         'input': inp,
