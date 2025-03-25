@@ -201,9 +201,30 @@ class Analysis:
         else:
             input['geometry_name'] = geo_name
 
-        result = pd.DataFrame([v['result'] for v in summaries.values()],
-                               index=summaries.keys())
+        # Result MAY BE a string if all failed; otherwise, instance list.
+        # Convert to a series first to check
+        result = pd.Series([v['result'] for v in summaries.values()],
+                            index=summaries.keys())
+        all_invalid = result.map(lambda v: not isinstance(v, list))
+        if np.any(all_invalid):
+            # Drop "no successful problem" entries and save for later
+            failed_idx = []
+            failed_vals = []
+            for i, v in result[all_invalid].items():
+                failed_idx.append(i + (0,))
+                failed_vals.append({'failed': v})
+            failed = pd.Series(failed_vals, index=failed_idx)
+            result = result[~all_invalid]
+        else:
+            failed = None
+
+        # Convert from Series of list to DataFrame
+        result = result.apply(pd.Series)
+        # Stack instances
         result = result.stack()
+        if failed is not None:
+            result = pd.concat([result, failed])
+        # Name the indices: prob, geo, arch, instance
         result.index.names = RESULT_LEVELS
         result = unstack_subdict(result)
 
