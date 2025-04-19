@@ -167,7 +167,9 @@ class Frontier(System):
         "orange": _CELER_ROOT / 'build-ndebug'
     }
     name = "frontier"
-    num_jobs = 8
+    # FIXME: srun behavior has changed, 'main' srun counts as 1 so resource is
+    # limited
+    num_jobs = 7
     gpu_per_job = 1
     cpu_per_job = 7
 
@@ -189,6 +191,7 @@ class Frontier(System):
 
         args = [
             f"--cpus-per-task={self.cpu_per_job}",
+            "--cpu-bind=threads,verbose",
         ]
         if inp['use_device']:
             args.append("--gpus-per-task=1")
@@ -585,12 +588,16 @@ async def run_celeritas(system: System, results_dir, inp):
             json.dump(inp, f, indent=0, sort_keys=True)
         return exception_to_dict(e, context="creating subprocess")
 
+    start = time.monotonic()
     print(f"{instance}: awaiting communcation")
     failed = False
     out, err = await communicate_with_timeout(proc,
         input=json.dumps(inp).encode(),
         interrupt=inp['_timeout']
     )
+
+    run_delta = time.monotonic() - start
+    start = time.monotonic()
 
     if proc_gpu_power:
         energy_wh, gpu_power = await system.compute_gpu_energy(proc_gpu_power)
@@ -638,7 +645,8 @@ async def run_celeritas(system: System, results_dir, inp):
         f.write(err)
 
     if not failed:
-        print(f"{instance}: success")
+        process_delta = time.monotonic() - start
+        print(f"{instance}: success (launch {run_delta:.1f}, process {process_delta:.1f})")
 
     return result
 
