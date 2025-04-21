@@ -55,8 +55,10 @@ CPU_POWER_PER_TASK= {
 }
 GPU_POWER_PER_TASK = {
     "wildstyle": 250, # V100
-    "frontier": 500 / 2, # MI250x
-    "perlmutter": 250, # A100
+    #"frontier": 500 / 2, # MI250x
+    "frontier": 100, # estimated
+    # "perlmutter": 250, # A100
+    "perlmutter": 100, # based on real-world usage
 }
 CPU_PER_TASK = {
     "wildstyle": 32,
@@ -168,16 +170,22 @@ def _is_celersim(result):
 def _calc_power(idx, system):
     power = pd.Series(index=idx)
     arch = power.index.get_level_values("arch")
+    is_g4 = lambda arch_key: "g4" in arch_key
     is_gpu = {'gpu', 'gpu+g4', 'gpu+sync'}.__contains__
     is_cpu = {'cpu', 'cpu+g4', 'g4'}.__contains__
-    try:
-        power[arch.map(is_gpu)] = GPU_POWER_PER_TASK[system]
-    except KeyError:
-        pass
-    try:
-        power[arch.map(is_cpu)] = CPU_POWER_PER_TASK[system]
-    except KeyError:
-        pass
+
+    gpu_power = GPU_POWER_PER_TASK.get(system)
+    cpu_power = CPU_POWER_PER_TASK.get(system)
+
+    if gpu_power is not None:
+        # Real-world usage plus the CPU driving it
+        frac_cpu = pd.Series(index=idx)
+        frac_cpu[:] = 1.0 / CPU_PER_TASK[system]
+        frac_cpu[arch.map(is_g4)] = 1.0
+        power[arch.map(is_gpu)] = gpu_power + cpu_power * frac_cpu
+    if cpu_power is not None:
+        power[arch.map(is_cpu)] = cpu_power
+
     return power
 
 class Analysis:
