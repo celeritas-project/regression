@@ -3,7 +3,7 @@
 | cuda | vecgeom | vecgeom-get-bvhptr                          |     0 |       32 |     1.000 |
 | cuda | vecgeom | extend-from-primaries                       |     0 |       96 |     1.000 |
 | cuda | vecgeom | initialize-tracks                           |     0 |      888 |     0.125 |
-| cuda | vecgeom | pre-step                                    |     0 |      352 |     0.250 |
+| cuda | vecgeom | pre-step                                    |     0 |      356 |     0.250 |
 | cuda | vecgeom | along-step-uniform-msc-limit-step-msc-urban |     0 |      888 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-propagate            |     0 |     1016 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-scatter-msc-urban    |     0 |      888 |     0.125 |
@@ -37,7 +37,7 @@
 | cuda | orange  | ioni-moller-bhabha                          |    64 |      240 |     0.500 |
 | cuda | orange  | brems-sb                                    |    96 |      256 |     0.500 |
 | cuda | orange  | brems-rel                                   |    64 |      320 |     0.375 |
-| cuda | orange  | photoel-livermore                           |   104 |      256 |     0.500 |
+| cuda | orange  | photoel-livermore                           |    96 |      256 |     0.500 |
 | cuda | orange  | scat-klein-nishina                          |    64 |      224 |     0.500 |
 | cuda | orange  | conv-bethe-heitler                          |    88 |      256 |     0.500 |
 | cuda | orange  | annihil-2-gamma                             |    72 |      232 |     0.500 |
