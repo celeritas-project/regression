@@ -17,7 +17,7 @@ import numpy as np
 
 Islc = pd.IndexSlice
 
-KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP"], start=0)
+KernelCategory = IntEnum("KernelCategory", ["GEO", "PHYS", "GP", "USER"], start=0)
 
 RESULT_LEVELS = ('problem', 'geo', 'arch', 'instance')
 GEO_COLORS = {
@@ -32,10 +32,11 @@ ARCH_SHAPES = {
     'cpu+g4': 'd',
     'g4': 'o',
 }
-KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys"]
+KERNEL_CATEGORY_LABELS = ["Geometry", "Physics", "Geo&Phys", "User"]
 KERNEL_ORDERING = {
     'along-step-neutral': KernelCategory.GEO,
     'along-step-general-linear': KernelCategory.GP,
+    'along-step-cylmap-msc': KernelCategory.GP,
     'along-step-uniform-msc': KernelCategory.GP,
     'initialize-tracks': KernelCategory.GP,
     'extend-from-primaries': KernelCategory.GP,
@@ -44,6 +45,8 @@ KERNEL_ORDERING = {
     'physics-discrete-select': KernelCategory.PHYS,
     'pre-step': KernelCategory.PHYS,
     'tracking-cut': KernelCategory.PHYS,
+    'step-gather-post': KernelCategory.USER,
+    'step-gather-post': KernelCategory.USER,
 }
 
 CPU_POWER_PER_TASK= {
@@ -52,8 +55,10 @@ CPU_POWER_PER_TASK= {
 }
 GPU_POWER_PER_TASK = {
     "wildstyle": 250, # V100
-    "frontier": 500 / 2, # MI250x
-    "perlmutter": 250, # A100
+    #"frontier": 500 / 2, # MI250x
+    "frontier": 100, # estimated
+    # "perlmutter": 250, # A100
+    "perlmutter": 100, # based on real-world usage
 }
 CPU_PER_TASK = {
     "wildstyle": 32,
@@ -131,8 +136,12 @@ def calc_event_rate(results, summary=None):
 class ProblemAbbreviator:
     def __init__(self):
         input_dir = Path(__file__).parent / "input"
-        with open(input_dir / "problem-abbr.json") as f:
-            self.geo_abbrev = json.load(f)
+        try:
+            with open(input_dir / "problem-abbr.json") as f:
+                self.geo_abbrev = json.load(f)
+        except OSError as e:
+            print("Failed to load problem abbreviations:", e)
+            self.geo_abbrev = {}
 
     def __call__(self, inp):
         geo, *_ = inp['geometry_name'].partition('.')
@@ -161,16 +170,22 @@ def _is_celersim(result):
 def _calc_power(idx, system):
     power = pd.Series(index=idx)
     arch = power.index.get_level_values("arch")
+    is_g4 = lambda arch_key: "g4" in arch_key
     is_gpu = {'gpu', 'gpu+g4', 'gpu+sync'}.__contains__
     is_cpu = {'cpu', 'cpu+g4', 'g4'}.__contains__
-    try:
-        power[arch.map(is_gpu)] = GPU_POWER_PER_TASK[system]
-    except KeyError:
-        pass
-    try:
-        power[arch.map(is_cpu)] = CPU_POWER_PER_TASK[system]
-    except KeyError:
-        pass
+
+    gpu_power = GPU_POWER_PER_TASK.get(system)
+    cpu_power = CPU_POWER_PER_TASK.get(system)
+
+    if gpu_power is not None:
+        # Real-world usage plus the CPU driving it
+        frac_cpu = pd.Series(index=idx)
+        frac_cpu[:] = 1.0 / CPU_PER_TASK[system]
+        frac_cpu[arch.map(is_g4)] = 1.0
+        power[arch.map(is_gpu)] = gpu_power + cpu_power * frac_cpu
+    if cpu_power is not None:
+        power[arch.map(is_cpu)] = cpu_power
+
     return power
 
 class Analysis:
@@ -194,9 +209,30 @@ class Analysis:
         else:
             input['geometry_name'] = geo_name
 
-        result = pd.DataFrame([v['result'] for v in summaries.values()],
-                               index=summaries.keys())
+        # Result MAY BE a string if all failed; otherwise, instance list.
+        # Convert to a series first to check
+        result = pd.Series([v['result'] for v in summaries.values()],
+                            index=summaries.keys())
+        all_invalid = result.map(lambda v: not isinstance(v, list))
+        if np.any(all_invalid):
+            # Drop "no successful problem" entries and save for later
+            failed_idx = []
+            failed_vals = []
+            for i, v in result[all_invalid].items():
+                failed_idx.append(i + (0,))
+                failed_vals.append({'failed': v})
+            failed = pd.Series(failed_vals, index=failed_idx)
+            result = result[~all_invalid]
+        else:
+            failed = None
+
+        # Convert from Series of list to DataFrame
+        result = result.apply(pd.Series)
+        # Stack instances
         result = result.stack()
+        if failed is not None:
+            result = pd.concat([result, failed])
+        # Name the indices: prob, geo, arch, instance
         result.index.names = RESULT_LEVELS
         result = unstack_subdict(result)
 
@@ -224,7 +260,7 @@ class Analysis:
                 return text[1:]
             return text
 
-        for s in summaries.values():
+        for (k, s) in summaries.items():
             try:
                 temp_sys = s["system"]
             except KeyError:
@@ -232,6 +268,9 @@ class Analysis:
             else:
                 if isinstance(temp_sys, list):
                     versions.update(_lstripv(ts["version"]) for ts in temp_sys)
+                elif temp_sys is None:
+                    print("WARNING: missing version for summary", k)
+                    continue
                 else:
                     versions.add(_lstripv(temp_sys["version"]))
         if len(versions) > 1:
@@ -642,10 +681,15 @@ def get_action_priority(k):
         return KernelCategory.PHYS
 
 
-def autopct_format(pctvalue):
-    if pctvalue < 5:
-        return ""
-    return "{:1.0f}%".format(pctvalue)
+class AutoPercentFormatter:
+    def __init__(self, threshold):
+        """Give threshold in percent"""
+        self.threshold = threshold
+
+    def __call__(self, pctvalue):
+        if pctvalue < self.threshold:
+            return ""
+        return "{:.0f}%".format(pctvalue)
 
 
 class ActionFractionCalculator:
@@ -695,17 +739,18 @@ class PiePlotter:
 
     def __call__(self, ax, arch):
         width = 0.3
-        angle = 90.0 # degrees
-        legend_thresh = 0.02
+        angle = 90.0 # start angle in degrees
+        legend_thresh = 0.01
 
         (inner, outer) = self.get_actions(arch)
 
-        # Plot outer ring (categories
+        # Plot outer ring (categories)
         (wedges, texts, autotexts) = ax.pie(
             outer,
-            autopct=autopct_format, pctdistance=0.85,
+            autopct=AutoPercentFormatter(5), pctdistance=0.85,
             radius=1, colors=self.outer_colors,
             wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+            textprops=dict(fontweight="bold")
         )
         outer_legend = ax.legend(wedges, self.catlabels,
                   loc="upper right",
@@ -722,12 +767,15 @@ class PiePlotter:
         inner_colors = np.zeros((inner.size, 4))
         inner_colors[slc, :] = inner_cmap(
                 np.linspace(0.0, 1.0, num_inner)[ascending_idx])
+        # Small kernels are grey
         inner_colors[~slc, :] = [0.5, 0.5, 0.5, 1.0]
 
-        (wedges, texts) = ax.pie(
+        (wedges, texts, autotexts) = ax.pie(
             inner,
             radius=(1 - width), colors=inner_colors,
+            autopct=AutoPercentFormatter(10), pctdistance=0.75,
             wedgeprops=dict(width=width, edgecolor='w'), startangle=angle,
+            textprops=dict(size='x-small')
         )
 
         # Generate legend with all real kernels and one stand-in gray kernel
