@@ -176,11 +176,16 @@ def summarize_system(r):
         # Possibly celer-g4 (no 'internal')
         sizes = None
 
+    # VecGeom version and config options
+    vecgeom = get_version('VecGeom') or get_config('VecGeom_VERSION')
+    if vecgeom is not None:
+        vecgeom = [vecgeom, get_config("vecgeom")]
+
     return  {
         'debug': get_config('debug') or get_config('CELERITAS_DEBUG'),
         'version': sys['build']['version'],
         'geant4': get_version('Geant4') or get_config('Geant4_VERSION'),
-        'vecgeom': get_version('VecGeom') or get_config('VecGeom_VERSION'),
+        'vecgeom': vecgeom,
         'occupancy': occupancy,
         'sizes': sizes,
         'openmp': get_config('openmp'),

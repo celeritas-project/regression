@@ -437,10 +437,10 @@ full_cms = {
 # List of list of setting dictionaries
 problems = [
     [testem15, use_field],
-    #[testem3_expanded, use_field],
-    #[hgcal, no_msc],
-    #[full_cms, no_msc],
-    #[full_cms, use_field],
+    [testem3_expanded, use_field],
+    [hgcal, no_msc],
+    [full_cms, no_msc],
+    [full_cms, use_field],
 ]
 
 # List of geometry settings
