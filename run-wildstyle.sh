@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-module load geant4-data/11.0 python
+module load geant4-data/11.3 python
 
 echo "Running on $HOSTNAME at $(date)"
 python3 run-problems.py wildstyle
