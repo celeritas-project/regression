@@ -141,9 +141,10 @@ class System:
 
 class Wildstyle(System):
     build_dirs = {
-        'orange': Path("/home/s3j/Code/celeritas/build-ndebug"),
+        'orange': None,#Path("/home/s3j/Code/celeritas/build-ndebug"),
         'vecgeom': Path("/home/s3j/Code/celeritas/build-ndebug-vecgeom"),
-        'vgsurf': Path("/home/s3j/Code/celeritas/build-ndebug-vgsurf"),
+        'vecgeom2-solid': Path("/home/s3j/Code/celeritas/build-ndebug-vecgeom2-solid"),
+        'vecgeom2-surface': Path("/home/s3j/Code/celeritas/build-ndebug-vecgeom2-surface"),
     }
     name = "wildstyle"
     num_jobs = 2
@@ -429,29 +430,38 @@ hgcal = {
 }
 
 full_cms = {
-    "_geometry": "vecgeom",
     "geometry_file": "cms2018.gdml",
     "cuda_stack_size": 8192,
 }
 
-use_vecgeom = {"_geometry": "vecgeom"}
-use_vgsurf = {"_geometry": "vgsurf"}
-
 # List of list of setting dictionaries
 problems = [
     [testem15, use_field],
-    [testem15, use_field, use_vecgeom],
-    [testem15, use_field, use_vgsurf],
-    [testem3_expanded, use_field],
-    [testem3_expanded, use_field, use_vecgeom],
-    [testem3_expanded, use_field, use_vgsurf],
-    [hgcal, no_msc],
-    [hgcal, no_msc, use_vecgeom],
-    [hgcal, no_msc, use_vgsurf],
-    [full_cms, no_msc],
-    [full_cms, use_field],
-    [full_cms, use_field, use_vgsurf],
+    #[testem3_expanded, use_field],
+    #[hgcal, no_msc],
+    #[full_cms, no_msc],
+    #[full_cms, use_field],
 ]
+
+# List of geometry settings
+geometries = [
+     "vecgeom",
+     "vecgeom2-solid",
+     "vecgeom2-surface",
+]
+
+architectures = [
+    [use_gpu],
+]
+
+
+#    device_mods = []
+#    if system.gpu_per_job:
+#        device_mods.append([use_gpu])
+        #device_mods.append([use_gpu_streams, use_geant])
+#    device_mods.append([]) # CPU celeritas
+#    device_mods.append([use_geant]) # CPU celeritas through celer-g4
+#    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
 
 # Run again with sync on for detailed GPU timing
 sync_problems = [
@@ -498,7 +508,6 @@ def build_input(problem_dicts):
 
     return inp
 
-
 def build_instance(inp, instance):
     inp = inp.copy()
     inp["_instance"] = instance
@@ -511,6 +520,9 @@ def patch_input(system, inp):
         inp['num_track_slots'] *= system.cpu_per_job
         inp['initializer_capacity'] *= system.cpu_per_job
 
+
+def make_geometry_input(g):
+    return [{'_geometry': g}]
 
 async def communicate_with_timeout(proc, interrupt, terminate=5.0, kill=1.0, input=None):
     """Interrupt, then terminate, then kill a process if it doesn't
@@ -653,6 +665,9 @@ async def main():
     buildfile_dir = regression_dir / 'build-files' / system.name
     buildfile_dir.mkdir(exist_ok=True)
     for k, v in system.build_dirs.items():
+        if v is None:
+            print(f"WARNING: skipping configuration '{k}'")
+            continue
         dst = buildfile_dir / (k + '.txt')
         try:
             shutil.copyfile(v / 'CMakeCache.txt', dst)
@@ -662,25 +677,14 @@ async def main():
     results_dir = regression_dir / 'results' / system.name
     results_dir.mkdir(exist_ok=True)
 
-    device_mods = []
-    if system.gpu_per_job:
-        device_mods.append([use_gpu])
-        #device_mods.append([use_gpu_streams, use_geant])
-#    device_mods.append([]) # CPU celeritas
-#    device_mods.append([use_geant]) # CPU celeritas through celer-g4
-#    device_mods.append([use_geant, pure_geant]) # CPU geant4 for reference
-
     # Set number of events based on number of CPUs
     base_inputs = [
         base_input,
         {"primary_options": {"num_events": system.cpu_per_job}},
     ]
 
-    inputs = [build_input(base_inputs + p + d)
-              for p, d in itertools.product(problems, device_mods)]
-    if system.gpu_per_job:
-        inputs += [build_input(base_inputs + p + [use_gpu, use_sync])
-                   for p in sync_problems]
+    inputs = [build_input(base_inputs + p + d + make_geometry_input(g))
+              for p, d, g in itertools.product(problems, architectures, geometries)]
 
     inputs = system.filter_problems(inputs)
     with open(results_dir / "index.json", "w") as f:
