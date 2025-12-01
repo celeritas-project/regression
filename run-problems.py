@@ -376,7 +376,7 @@ use_gpu = {
     "merge_events": True,
     "write_track_counts": True,
     "num_track_slots": 2**20,
-    "max_steps": 2**15,
+    "max_steps": 2**13,
     "initializer_capacity": 2**26,
 }
 
@@ -384,7 +384,7 @@ use_gpu_streams = use_gpu.copy()
 use_gpu_streams.update({
     "merge_events": False,
     "num_track_slots": 2**18,
-    "max_steps": 2**15,
+    "max_steps": 2**14,
     "initializer_capacity": 2**24,
 })
 
@@ -452,8 +452,9 @@ full_cms = {
 problems = [
     [testem15, use_field],
     [testem3_expanded, use_field],
-    [hgcal, no_msc],
-    [full_cms, no_msc],
+    [tilecal],
+    [hgcal],
+    [full_cms],
     [full_cms, use_field],
 ]
 
