@@ -371,6 +371,7 @@ use_field = {
 }
 
 use_gpu = {
+    "_timeout": 100.0,
     "action_times": False,
     "use_device": True,
     "merge_events": True,
