@@ -163,7 +163,7 @@ class Hudson(System):
     name = "hudson"
     num_jobs = 2
     gpu_per_job = 1
-    cpu_per_job = 48
+    cpu_per_job = 16
 
 
 class Local(System):
