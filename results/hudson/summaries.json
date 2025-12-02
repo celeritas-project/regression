@@ -18,51 +18,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 6280
+     "index": 6287
     },
-    "avg_event_per_time": 0.16116553360752717,
-    "avg_step_per_time": 22821331.86273958,
-    "avg_steps_per_primary": 108924.4720673077,
-    "avg_time_per_primary": 0.004772923540240385,
-    "avg_time_per_step": 4.3818652040755836e-08,
+    "avg_event_per_time": 0.16113563714620163,
+    "avg_step_per_time": 22891019.765405145,
+    "avg_steps_per_primary": 109277.35822115385,
+    "avg_time_per_primary": 0.004773809089375,
+    "avg_time_per_step": 4.368525344210681e-08,
     "emptying_step": null,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 6281,
-    "num_steps": 2265629019,
+    "num_step_iters": 6288,
+    "num_steps": 2272969051,
     "pre_emptying_time": null,
     "queue_hwm": 10873478.0,
-    "setup_time": 0.73049783,
-    "slot_occupancy": 0.34400130646791716,
-    "total_time": 99.276809637,
-    "unconverged": 1734046,
-    "warmup_time": 0.046359951
+    "setup_time": 0.721040254,
+    "slot_occupancy": 0.3447315849117347,
+    "total_time": 99.295229059,
+    "unconverged": 1721922,
+    "warmup_time": 0.042098142
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 6305
+     "index": 6310
     },
-    "avg_event_per_time": 0.16115007269280912,
-    "avg_step_per_time": 23083258.634776235,
-    "avg_steps_per_primary": 110185.19879807692,
-    "avg_time_per_primary": 0.004773381459759615,
-    "avg_time_per_step": 4.3321439828839565e-08,
+    "avg_event_per_time": 0.16114132228072878,
+    "avg_step_per_time": 23134808.007598158,
+    "avg_steps_per_primary": 110437.26033653846,
+    "avg_time_per_primary": 0.00477364066735577,
+    "avg_time_per_step": 4.3224910259534915e-08,
     "emptying_step": null,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 6306,
-    "num_steps": 2291852135,
+    "num_step_iters": 6311,
+    "num_steps": 2297095015,
     "pre_emptying_time": null,
     "queue_hwm": 10888427.0,
-    "setup_time": 0.730366079,
-    "slot_occupancy": 0.34660331718210113,
-    "total_time": 99.286334363,
-    "unconverged": 1700066,
-    "warmup_time": 0.046019088
+    "setup_time": 0.731808769,
+    "slot_occupancy": 0.34712098211857545,
+    "total_time": 99.291725881,
+    "unconverged": 1695801,
+    "warmup_time": 0.042717917
    }
   ],
   "system": {
@@ -103,7 +103,7 @@
     "tracks": 1048576
    },
    "vecgeom": null,
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "atlas-tilecal+msc-vecgeom-gpu": {
@@ -127,24 +127,24 @@
      "count": 1048576,
      "index": 1628
     },
-    "avg_event_per_time": 1.6530416250120066,
-    "avg_step_per_time": 178379879.93046615,
+    "avg_event_per_time": 1.6517022531994006,
+    "avg_step_per_time": 178235348.19000667,
     "avg_steps_per_primary": 83007.76591346154,
-    "avg_time_per_primary": 0.00046534264932692306,
-    "avg_time_per_step": 5.606013415805683e-09,
+    "avg_time_per_primary": 0.00046571999750000004,
+    "avg_time_per_step": 5.610559353995013e-09,
     "emptying_step": 1629,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2015,
     "num_steps": 1726561531,
-    "pre_emptying_time": 0.005672425,
+    "pre_emptying_time": 0.005653415,
     "queue_hwm": 14537727.0,
-    "setup_time": 0.823681515,
+    "setup_time": 0.838767872,
     "slot_occupancy": 0.8171599939502499,
-    "total_time": 9.679127106,
+    "total_time": 9.686975948,
     "unconverged": 0,
-    "warmup_time": 0.045492323
+    "warmup_time": 0.044789414
    },
    {
     "action_times": {},
@@ -152,24 +152,24 @@
      "count": 1048576,
      "index": 1630
     },
-    "avg_event_per_time": 1.6503195596691946,
-    "avg_step_per_time": 178109794.39136472,
+    "avg_event_per_time": 1.6423411389280622,
+    "avg_step_per_time": 177248727.89703333,
     "avg_steps_per_primary": 83018.79072115384,
-    "avg_time_per_primary": 0.0004661101934615384,
-    "avg_time_per_step": 5.614514369730151e-09,
+    "avg_time_per_primary": 0.00046837453620192306,
+    "avg_time_per_step": 5.6417894326492225e-09,
     "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2088,
     "num_steps": 1726790847,
-    "pre_emptying_time": 0.005643256,
+    "pre_emptying_time": 0.005663894,
     "queue_hwm": 14536243.0,
-    "setup_time": 0.832500505,
+    "setup_time": 0.829219058,
     "slot_occupancy": 0.788695440895256,
-    "total_time": 9.695092024,
+    "total_time": 9.742190353,
     "unconverged": 0,
-    "warmup_time": 0.04506217
+    "warmup_time": 0.045209727
    }
   ],
   "system": {
@@ -212,7 +212,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "atlas-tilecal+msc-vecgeom2-solid-gpu": {
@@ -234,51 +234,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 265
+     "index": 1630
     },
-    "avg_event_per_time": 3.3503029612380577,
-    "avg_step_per_time": 59312665.77335697,
-    "avg_steps_per_primary": 13618.209471153847,
-    "avg_time_per_primary": 0.00022960036096153846,
-    "avg_time_per_step": 1.6859805354579027e-08,
-    "emptying_step": 266,
+    "avg_event_per_time": 0.6352886253022242,
+    "avg_step_per_time": 68570287.81109765,
+    "avg_steps_per_primary": 83027.41956730769,
+    "avg_time_per_primary": 0.0012108366789423078,
+    "avg_time_per_step": 1.4583575946988463e-08,
+    "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1711,
-    "num_steps": 283258757,
-    "pre_emptying_time": 0.014396725,
-    "queue_hwm": 5055926.0,
-    "setup_time": 0.820347438,
-    "slot_occupancy": 0.15788229190418415,
-    "total_time": 4.775687508,
+    "num_step_iters": 1935,
+    "num_steps": 1726970327,
+    "pre_emptying_time": 0.015100369,
+    "queue_hwm": 14507691.0,
+    "setup_time": 0.825602219,
+    "slot_occupancy": 0.8511458635946269,
+    "total_time": 25.185402922,
     "unconverged": 0,
-    "warmup_time": 0.074520515
+    "warmup_time": 0.076964888
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 256
+     "index": 1630
     },
-    "avg_event_per_time": 3.534535666449017,
-    "avg_step_per_time": 60400235.26249359,
-    "avg_steps_per_primary": 13145.070192307692,
-    "avg_time_per_primary": 0.00021763276475961538,
-    "avg_time_per_step": 1.6556226902992955e-08,
-    "emptying_step": 257,
+    "avg_event_per_time": 0.6331349632050108,
+    "avg_step_per_time": 68337280.90615231,
+    "avg_steps_per_primary": 83026.75134615385,
+    "avg_time_per_primary": 0.0012149554422596154,
+    "avg_time_per_step": 1.463330098505531e-08,
+    "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1356,
-    "num_steps": 273417460,
-    "pre_emptying_time": 0.014491396,
-    "queue_hwm": 4851619.0,
-    "setup_time": 0.833783915,
-    "slot_occupancy": 0.19229440210843157,
-    "total_time": 4.526761507,
+    "num_step_iters": 2003,
+    "num_steps": 1726956428,
+    "pre_emptying_time": 0.015042459,
+    "queue_hwm": 14519417.0,
+    "setup_time": 0.836160912,
+    "slot_occupancy": 0.822243630023105,
+    "total_time": 25.271073199,
     "unconverged": 0,
-    "warmup_time": 0.074536596
+    "warmup_time": 0.075087543
    }
   ],
   "system": {
@@ -321,7 +321,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "atlas-tilecal+msc-vecgeom2-surface-gpu": {
@@ -345,24 +345,24 @@
      "count": 1048576,
      "index": 1631
     },
-    "avg_event_per_time": 1.2321851695330763,
-    "avg_step_per_time": 133079153.93579142,
+    "avg_event_per_time": 1.228082250853576,
+    "avg_step_per_time": 132636028.21083064,
     "avg_steps_per_primary": 83078.89307692308,
-    "avg_time_per_primary": 0.0006242817948557693,
-    "avg_time_per_step": 7.514324899318823e-09,
+    "avg_time_per_primary": 0.0006263674674038462,
+    "avg_time_per_step": 7.539429621719803e-09,
     "emptying_step": 1632,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3980,
     "num_steps": 1728040976,
-    "pre_emptying_time": 0.007248708,
+    "pre_emptying_time": 0.007283808,
     "queue_hwm": 14521612.0,
-    "setup_time": 0.877795307,
+    "setup_time": 0.874413044,
     "slot_occupancy": 0.41406741118311285,
-    "total_time": 12.985061333,
+    "total_time": 13.028443322,
     "unconverged": 0,
-    "warmup_time": 0.074935639
+    "warmup_time": 0.075054283
    },
    {
     "action_times": {},
@@ -370,24 +370,24 @@
      "count": 1048576,
      "index": 1631
     },
-    "avg_event_per_time": 1.2210497955622657,
-    "avg_step_per_time": 131886015.78610876,
+    "avg_event_per_time": 1.2190371501887707,
+    "avg_step_per_time": 131668629.2548917,
     "avg_steps_per_primary": 83084.88461538461,
-    "avg_time_per_primary": 0.0006299749379807692,
-    "avg_time_per_step": 7.582305023314895e-09,
+    "avg_time_per_primary": 0.000631015034375,
+    "avg_time_per_step": 7.594823502446757e-09,
     "emptying_step": 1632,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 4392,
     "num_steps": 1728165600,
-    "pre_emptying_time": 0.007288108,
+    "pre_emptying_time": 0.007270538,
     "queue_hwm": 14512537.0,
-    "setup_time": 0.891049373,
+    "setup_time": 0.877859841,
     "slot_occupancy": 0.375252082699635,
-    "total_time": 13.10347871,
+    "total_time": 13.125112715,
     "unconverged": 0,
-    "warmup_time": 0.074882149
+    "warmup_time": 0.075272205
    }
   ],
   "system": {
@@ -430,7 +430,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms-hgcal+msc-orange-gpu": {
@@ -454,24 +454,24 @@
      "count": 1048576,
      "index": 2634
     },
-    "avg_event_per_time": 0.48400831546469114,
-    "avg_step_per_time": 81987649.25900312,
+    "avg_event_per_time": 0.4848593059090887,
+    "avg_step_per_time": 82131801.13377215,
     "avg_steps_per_primary": 130302.35326923076,
-    "avg_time_per_primary": 0.0015892924659615384,
-    "avg_time_per_step": 1.2196959042464427e-08,
+    "avg_time_per_primary": 0.0015865030532692308,
+    "avg_time_per_step": 1.2175551810573963e-08,
     "emptying_step": 2635,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3079,
     "num_steps": 2710288948,
-    "pre_emptying_time": 0.009014812,
+    "pre_emptying_time": 0.009008222,
     "queue_hwm": 27904757.0,
-    "setup_time": 2.147101504,
+    "setup_time": 2.179984983,
     "slot_occupancy": 0.8394715686090661,
-    "total_time": 33.057283292,
+    "total_time": 32.999263508,
     "unconverged": 0,
-    "warmup_time": 0.029377535
+    "warmup_time": 0.022707629
    },
    {
     "action_times": {},
@@ -479,24 +479,24 @@
      "count": 1048576,
      "index": 2632
     },
-    "avg_event_per_time": 0.48200465024042144,
-    "avg_step_per_time": 81646636.23745663,
+    "avg_event_per_time": 0.48285206198967173,
+    "avg_step_per_time": 81790179.08253059,
     "avg_steps_per_primary": 130299.79019230769,
-    "avg_time_per_primary": 0.0015958990620673077,
-    "avg_time_per_step": 1.2247902008989744e-08,
+    "avg_time_per_primary": 0.0015930982381249998,
+    "avg_time_per_step": 1.222640677911889e-08,
     "emptying_step": 2633,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3046,
     "num_steps": 2710235636,
-    "pre_emptying_time": 0.01121407,
+    "pre_emptying_time": 0.01124597,
     "queue_hwm": 28443837.0,
-    "setup_time": 2.142918161,
+    "setup_time": 2.200207903,
     "slot_occupancy": 0.8485496117735254,
-    "total_time": 33.194700491,
+    "total_time": 33.136443353,
     "unconverged": 0,
-    "warmup_time": 0.029064112
+    "warmup_time": 0.023046242
    }
   ],
   "system": {
@@ -537,7 +537,7 @@
     "tracks": 1048576
    },
    "vecgeom": null,
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms-hgcal+msc-vecgeom-gpu": {
@@ -561,24 +561,24 @@
      "count": 1048576,
      "index": 2635
     },
-    "avg_event_per_time": 0.7619509889270094,
-    "avg_step_per_time": 129150948.35292874,
+    "avg_event_per_time": 0.7614565898405065,
+    "avg_step_per_time": 129067147.54183382,
     "avg_steps_per_primary": 130384.8735576923,
-    "avg_time_per_primary": 0.0010095541319711538,
-    "avg_time_per_step": 7.742877715983284e-09,
+    "avg_time_per_primary": 0.0010102096160096153,
+    "avg_time_per_step": 7.747905017238221e-09,
     "emptying_step": 2636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3062,
     "num_steps": 2712005370,
-    "pre_emptying_time": 0.008053244,
+    "pre_emptying_time": 0.008059534,
     "queue_hwm": 28114812.0,
-    "setup_time": 2.170712473,
+    "setup_time": 2.150331558,
     "slot_occupancy": 0.844666841059709,
-    "total_time": 20.998725945,
+    "total_time": 21.012360013,
     "unconverged": 0,
-    "warmup_time": 0.045829477
+    "warmup_time": 0.045993499
    },
    {
     "action_times": {},
@@ -586,24 +586,24 @@
      "count": 1048576,
      "index": 2634
     },
-    "avg_event_per_time": 0.7632830936812052,
-    "avg_step_per_time": 129374589.24245305,
+    "avg_event_per_time": 0.7616122517358073,
+    "avg_step_per_time": 129091385.6811998,
     "avg_steps_per_primary": 130382.70548076923,
-    "avg_time_per_primary": 0.001007792227548077,
-    "avg_time_per_step": 7.729493139691914e-09,
+    "avg_time_per_primary": 0.0010100031446153845,
+    "avg_time_per_step": 7.746450274145866e-09,
     "emptying_step": 2635,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3059,
     "num_steps": 2711960274,
-    "pre_emptying_time": 0.007714242,
+    "pre_emptying_time": 0.007741543,
     "queue_hwm": 28576211.0,
-    "setup_time": 2.164667194,
+    "setup_time": 2.141578118,
     "slot_occupancy": 0.8454811573807964,
-    "total_time": 20.962078333,
+    "total_time": 21.008065408,
     "unconverged": 0,
-    "warmup_time": 0.04620148
+    "warmup_time": 0.045750297
    }
   ],
   "system": {
@@ -646,7 +646,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms-hgcal+msc-vecgeom2-solid-gpu": {
@@ -668,51 +668,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 2628
+     "index": 2881
     },
-    "avg_event_per_time": 0.17408481335907755,
-    "avg_step_per_time": 29417129.35053213,
-    "avg_steps_per_primary": 129985.84197115384,
-    "avg_time_per_primary": 0.004418712663028846,
-    "avg_time_per_step": 3.3993799601724594e-08,
-    "emptying_step": 2629,
+    "avg_event_per_time": 0.16369102366311278,
+    "avg_step_per_time": 30431088.68023654,
+    "avg_steps_per_primary": 143004.35802884615,
+    "avg_time_per_primary": 0.004699284982259615,
+    "avg_time_per_step": 3.286113127623494e-08,
+    "emptying_step": 2882,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 8192,
-    "num_steps": 2703705513,
-    "pre_emptying_time": 0.033818621,
-    "queue_hwm": 27948727.0,
-    "setup_time": 2.130108372,
-    "slot_occupancy": 0.3147527474211529,
-    "total_time": 91.909223391,
-    "unconverged": 10,
-    "warmup_time": 0.07375196
+    "num_step_iters": 3095,
+    "num_steps": 2974490647,
+    "pre_emptying_time": 0.033531918,
+    "queue_hwm": 28212301.0,
+    "setup_time": 2.168609525,
+    "slot_occupancy": 0.9165413035329594,
+    "total_time": 97.745127631,
+    "unconverged": 34005,
+    "warmup_time": 0.076199752
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 2626
+     "index": 2879
     },
-    "avg_event_per_time": 0.17489386755434636,
-    "avg_step_per_time": 29549408.65420295,
-    "avg_steps_per_primary": 129966.33139423077,
-    "avg_time_per_primary": 0.004398271820432693,
-    "avg_time_per_step": 3.384162477504487e-08,
-    "emptying_step": 2627,
+    "avg_event_per_time": 0.16366680876465184,
+    "avg_step_per_time": 30438147.18929473,
+    "avg_steps_per_primary": 143058.69072115383,
+    "avg_time_per_primary": 0.0046999802527884615,
+    "avg_time_per_step": 3.285351088491042e-08,
+    "emptying_step": 2880,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 8192,
-    "num_steps": 2703299693,
-    "pre_emptying_time": 0.033532748,
-    "queue_hwm": 28475204.0,
-    "setup_time": 2.1400735,
-    "slot_occupancy": 0.3147055037552491,
-    "total_time": 91.484053865,
-    "unconverged": 4,
-    "warmup_time": 0.074267144
+    "num_step_iters": 3597,
+    "num_steps": 2975620767,
+    "pre_emptying_time": 0.032650011,
+    "queue_hwm": 28661183.0,
+    "setup_time": 2.152360554,
+    "slot_occupancy": 0.7889277455804744,
+    "total_time": 97.759589258,
+    "unconverged": 5,
+    "warmup_time": 0.074852871
    }
   ],
   "system": {
@@ -755,7 +755,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms-hgcal+msc-vecgeom2-surface-gpu": {
@@ -779,24 +779,24 @@
      "count": 1048576,
      "index": 2636
     },
-    "avg_event_per_time": 0.5293919773455713,
-    "avg_step_per_time": 89757321.1305142,
+    "avg_event_per_time": 0.5288334870939448,
+    "avg_step_per_time": 89662630.25681633,
     "avg_steps_per_primary": 130421.49509615384,
-    "avg_time_per_primary": 0.0014530457622115385,
-    "avg_time_per_step": 1.1141152469846123e-08,
+    "avg_time_per_primary": 0.0014545802941826923,
+    "avg_time_per_step": 1.1152918413565925e-08,
     "emptying_step": 2637,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3059,
     "num_steps": 2712767098,
-    "pre_emptying_time": 0.011432421,
+    "pre_emptying_time": 0.011383051,
     "queue_hwm": 27948387.0,
-    "setup_time": 3.289235366,
+    "setup_time": 3.251854446,
     "slot_occupancy": 0.8457326929566906,
-    "total_time": 30.223351854,
+    "total_time": 30.255270119,
     "unconverged": 0,
-    "warmup_time": 0.075685655
+    "warmup_time": 0.076109618
    },
    {
     "action_times": {},
@@ -804,24 +804,24 @@
      "count": 1048576,
      "index": 2635
     },
-    "avg_event_per_time": 0.5305330800848487,
-    "avg_step_per_time": 89939925.51276097,
+    "avg_event_per_time": 0.528736741384709,
+    "avg_step_per_time": 89635396.7756266,
     "avg_steps_per_primary": 130405.73846153847,
-    "avg_time_per_primary": 0.0014499204632211539,
-    "avg_time_per_step": 1.1118532668321108e-08,
+    "avg_time_per_primary": 0.001454846446298077,
+    "avg_time_per_step": 1.1156306949844585e-08,
     "emptying_step": 2636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3101,
     "num_steps": 2712439360,
-    "pre_emptying_time": 0.011461291,
+    "pre_emptying_time": 0.011458181,
     "queue_hwm": 28488597.0,
-    "setup_time": 3.316516795,
+    "setup_time": 3.273402698,
     "slot_occupancy": 0.834177282309386,
-    "total_time": 30.158345635,
+    "total_time": 30.260806083,
     "unconverged": 0,
-    "warmup_time": 0.076797153
+    "warmup_time": 0.075775615
    }
   ],
   "system": {
@@ -864,7 +864,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+field+msc-orange-gpu": {
@@ -933,24 +933,24 @@
      "count": 1048576,
      "index": 1635
     },
-    "avg_event_per_time": 0.22014092458297388,
-    "avg_step_per_time": 20539868.344555777,
+    "avg_event_per_time": 0.2207788574499781,
+    "avg_step_per_time": 20599389.567725677,
     "avg_steps_per_primary": 71771.74692307692,
-    "avg_time_per_primary": 0.003494265188028846,
-    "avg_time_per_step": 4.868580378535175e-08,
+    "avg_time_per_primary": 0.0034841686297115383,
+    "avg_time_per_step": 4.8545127840426944e-08,
     "emptying_step": 1636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 1492852336,
-    "pre_emptying_time": 0.033283496,
+    "pre_emptying_time": 0.032947133,
     "queue_hwm": 16270901.0,
-    "setup_time": 23.642335016,
+    "setup_time": 23.654515545,
     "slot_occupancy": 0.17379088513553143,
-    "total_time": 72.680715911,
+    "total_time": 72.470707498,
     "unconverged": 2,
-    "warmup_time": 0.031964895
+    "warmup_time": 0.035394973
    },
    {
     "action_times": {},
@@ -958,24 +958,24 @@
      "count": 1048576,
      "index": 1636
     },
-    "avg_event_per_time": 0.22082074994886805,
-    "avg_step_per_time": 20617447.723289166,
+    "avg_event_per_time": 0.22134755271875006,
+    "avg_step_per_time": 20666633.90063455,
     "avg_steps_per_primary": 71821.03663461539,
-    "avg_time_per_primary": 0.0034835076387019232,
-    "avg_time_per_step": 4.8502608733204876e-08,
+    "avg_time_per_primary": 0.0034752169598557692,
+    "avg_time_per_step": 4.838717348979099e-08,
     "emptying_step": 1637,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 1493877562,
-    "pre_emptying_time": 0.032413769,
+    "pre_emptying_time": 0.032345868,
     "queue_hwm": 16258296.0,
-    "setup_time": 23.698009891,
+    "setup_time": 23.703338779,
     "slot_occupancy": 0.17391023715026677,
-    "total_time": 72.456958885,
+    "total_time": 72.284512765,
     "unconverged": 1,
-    "warmup_time": 0.032397869
+    "warmup_time": 0.032044286
    }
   ],
   "system": {
@@ -1018,7 +1018,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+field+msc-vecgeom2-solid-gpu": {
@@ -1044,51 +1044,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 452
+     "index": 550
     },
-    "avg_event_per_time": 0.20784428719488782,
-    "avg_step_per_time": 2722564.5028371722,
-    "avg_steps_per_primary": 10076.198942307692,
-    "avg_time_per_primary": 0.0037009954885576925,
-    "avg_time_per_step": 3.673007559445899e-07,
-    "emptying_step": 18,
+    "avg_event_per_time": 0.20783777011773422,
+    "avg_step_per_time": 3906160.4797665523,
+    "avg_steps_per_primary": 14457.135625,
+    "avg_time_per_primary": 0.0037011115390384614,
+    "avg_time_per_step": 2.5600586693247275e-07,
+    "emptying_step": 6,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 453,
-    "num_steps": 209584938,
-    "pre_emptying_time": 0.029002232,
-    "queue_hwm": 14786095.0,
-    "setup_time": 23.060873853,
-    "slot_occupancy": 0.44122687080838036,
-    "total_time": 76.980706162,
-    "unconverged": 15758117,
-    "warmup_time": 0.058757478
+    "num_step_iters": 551,
+    "num_steps": 300708421,
+    "pre_emptying_time": 0.005777838,
+    "queue_hwm": 16047795.0,
+    "setup_time": 23.061728065,
+    "slot_occupancy": 0.5204680541466022,
+    "total_time": 76.983120012,
+    "unconverged": 16727561,
+    "warmup_time": 0.058708336
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 451
+     "index": 542
     },
-    "avg_event_per_time": 0.2079039262468007,
-    "avg_step_per_time": 2713391.122357877,
-    "avg_steps_per_primary": 10039.367596153847,
-    "avg_time_per_primary": 0.0036999338257692306,
-    "avg_time_per_step": 3.685425192705068e-07,
-    "emptying_step": 18,
+    "avg_event_per_time": 0.2079155219671476,
+    "avg_step_per_time": 3800921.4468532735,
+    "avg_steps_per_primary": 14062.373509615385,
+    "avg_time_per_primary": 0.0036997274756249998,
+    "avg_time_per_step": 2.630940980976824e-07,
+    "emptying_step": 6,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 452,
-    "num_steps": 208818846,
-    "pre_emptying_time": 0.021962645,
-    "queue_hwm": 14704918.0,
-    "setup_time": 23.096256595,
-    "slot_occupancy": 0.44058665976060174,
-    "total_time": 76.958623576,
-    "unconverged": 15677532,
-    "warmup_time": 0.058337796
+    "num_step_iters": 543,
+    "num_steps": 292497369,
+    "pre_emptying_time": 0.00846015,
+    "queue_hwm": 16094009.0,
+    "setup_time": 23.103191098,
+    "slot_occupancy": 0.5137149694874801,
+    "total_time": 76.954331493,
+    "unconverged": 16745618,
+    "warmup_time": 0.05926047
    }
   ],
   "system": {
@@ -1131,7 +1131,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+field+msc-vecgeom2-surface-gpu": {
@@ -1157,51 +1157,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1303
+     "index": 1304
     },
-    "avg_event_per_time": 0.22538220639074905,
-    "avg_step_per_time": 16655006.841032099,
-    "avg_steps_per_primary": 56843.63432692308,
-    "avg_time_per_primary": 0.0034130057627403845,
-    "avg_time_per_step": 6.004200475837396e-08,
+    "avg_event_per_time": 0.2251830229946454,
+    "avg_step_per_time": 16655045.435055332,
+    "avg_steps_per_primary": 56894.046634615384,
+    "avg_time_per_primary": 0.0034160247029326927,
+    "avg_time_per_step": 6.004186562560872e-08,
     "emptying_step": 4,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1304,
-    "num_steps": 1182347594,
-    "pre_emptying_time": 0.000976547,
+    "num_step_iters": 1305,
+    "num_steps": 1183396170,
+    "pre_emptying_time": 0.000974028,
     "queue_hwm": 30805631.0,
-    "setup_time": 28.9780795,
-    "slot_occupancy": 0.8647043968270893,
-    "total_time": 70.990519865,
-    "unconverged": 17251324,
-    "warmup_time": 0.059997338
+    "setup_time": 28.92276673,
+    "slot_occupancy": 0.8648080716187927,
+    "total_time": 71.053313821,
+    "unconverged": 17244725,
+    "warmup_time": 0.060011394
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1307
+     "index": 1308
     },
-    "avg_event_per_time": 0.22525925432649457,
-    "avg_step_per_time": 16722254.196956811,
-    "avg_steps_per_primary": 57104.301875,
-    "avg_time_per_primary": 0.0034148686655769227,
-    "avg_time_per_step": 5.980055010657501e-08,
+    "avg_event_per_time": 0.2252812951931337,
+    "avg_step_per_time": 16738654.448711378,
+    "avg_steps_per_primary": 57154.71418269231,
+    "avg_time_per_primary": 0.0034145345647596157,
+    "avg_time_per_step": 5.97419585346052e-08,
     "emptying_step": 4,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1308,
-    "num_steps": 1187769479,
-    "pre_emptying_time": 0.000948647,
-    "queue_hwm": 30754288.0,
-    "setup_time": 28.970040235,
-    "slot_occupancy": 0.8660131849644745,
-    "total_time": 71.029268244,
-    "unconverged": 17021030,
-    "warmup_time": 0.060111689
+    "num_step_iters": 1309,
+    "num_steps": 1188818055,
+    "pre_emptying_time": 0.000947517,
+    "queue_hwm": 30751900.0,
+    "setup_time": 28.948755724,
+    "slot_occupancy": 0.8661155431119425,
+    "total_time": 71.022318947,
+    "unconverged": 16997317,
+    "warmup_time": 0.059693802
    }
   ],
   "system": {
@@ -1244,7 +1244,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+msc-orange-gpu": {
@@ -1309,24 +1309,24 @@
      "count": 1048576,
      "index": 1556
     },
-    "avg_event_per_time": 0.6000218803303856,
-    "avg_step_per_time": 52685595.62700301,
+    "avg_event_per_time": 0.602746311901947,
+    "avg_step_per_time": 52924817.40340504,
     "avg_steps_per_primary": 67543.17230769231,
-    "avg_time_per_primary": 0.0012820045309134616,
-    "avg_time_per_step": 1.8980519971334803e-08,
+    "avg_time_per_primary": 0.0012762098316346153,
+    "avg_time_per_step": 1.889472744663003e-08,
     "emptying_step": 1557,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2895,
     "num_steps": 1404897984,
-    "pre_emptying_time": 0.013995062,
+    "pre_emptying_time": 0.013950515,
     "queue_hwm": 17146191.0,
-    "setup_time": 23.876048638,
+    "setup_time": 23.632551277,
     "slot_occupancy": 0.4628031518175194,
-    "total_time": 26.665694243,
+    "total_time": 26.545164498,
     "unconverged": 0,
-    "warmup_time": 0.031788994
+    "warmup_time": 0.03185181
    },
    {
     "action_times": {},
@@ -1334,24 +1334,24 @@
      "count": 1048576,
      "index": 1555
     },
-    "avg_event_per_time": 0.6026712499069918,
-    "avg_step_per_time": 52924799.38388761,
+    "avg_event_per_time": 0.6049690397981538,
+    "avg_step_per_time": 53126584.46826792,
     "avg_steps_per_primary": 67551.56173076923,
-    "avg_time_per_primary": 0.0012763687820673078,
-    "avg_time_per_step": 1.889473387979321e-08,
+    "avg_time_per_primary": 0.0012715208855769231,
+    "avg_time_per_step": 1.8822968011378408e-08,
     "emptying_step": 1556,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2960,
     "num_steps": 1405072484,
-    "pre_emptying_time": 0.014175924,
+    "pre_emptying_time": 0.014136197,
     "queue_hwm": 17122534.0,
-    "setup_time": 23.63708106,
+    "setup_time": 23.689560517,
     "slot_occupancy": 0.4526964664459229,
-    "total_time": 26.548470667,
+    "total_time": 26.44763442,
     "unconverged": 0,
-    "warmup_time": 0.031854894
+    "warmup_time": 0.032070703
    }
   ],
   "system": {
@@ -1394,7 +1394,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+msc-vecgeom2-solid-gpu": {
@@ -1416,51 +1416,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1107
+     "index": 1200
     },
-    "avg_event_per_time": 0.20796166729327595,
-    "avg_step_per_time": 11501665.92789296,
-    "avg_steps_per_primary": 42543.58721153846,
-    "avg_time_per_primary": 0.003698906530432692,
-    "avg_time_per_step": 8.694392675541692e-08,
-    "emptying_step": 18,
+    "avg_event_per_time": 0.20768048542506043,
+    "avg_step_per_time": 12722526.085064894,
+    "avg_steps_per_primary": 47123.14932692308,
+    "avg_time_per_primary": 0.003703914538028846,
+    "avg_time_per_step": 7.86007427545313e-08,
+    "emptying_step": 5,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1108,
-    "num_steps": 884906614,
-    "pre_emptying_time": 0.005971158,
-    "queue_hwm": 19908795.0,
-    "setup_time": 23.03643536,
-    "slot_occupancy": 0.761654070568429,
-    "total_time": 76.937255833,
-    "unconverged": 7800994,
-    "warmup_time": 0.059594786
+    "num_step_iters": 1201,
+    "num_steps": 980161506,
+    "pre_emptying_time": 0.00119609,
+    "queue_hwm": 17001931.0,
+    "setup_time": 22.954469475,
+    "slot_occupancy": 0.778313783682157,
+    "total_time": 77.041422391,
+    "unconverged": 6870516,
+    "warmup_time": 0.059379684
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1109
+     "index": 1205
     },
-    "avg_event_per_time": 0.20795918934980298,
-    "avg_step_per_time": 11538950.695317658,
-    "avg_steps_per_primary": 42682.008653846155,
-    "avg_time_per_primary": 0.0036989506048557695,
-    "avg_time_per_step": 8.666299271092178e-08,
-    "emptying_step": 18,
+    "avg_event_per_time": 0.2079023372296785,
+    "avg_step_per_time": 12806559.737683596,
+    "avg_steps_per_primary": 47383.78572115384,
+    "avg_time_per_primary": 0.0036999621047115383,
+    "avg_time_per_step": 7.808498304642089e-08,
+    "emptying_step": 5,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1110,
-    "num_steps": 887785780,
-    "pre_emptying_time": 0.005856146,
-    "queue_hwm": 19952951.0,
-    "setup_time": 23.018433887,
-    "slot_occupancy": 0.7627554025735941,
-    "total_time": 76.938172581,
-    "unconverged": 7813548,
-    "warmup_time": 0.058724169
+    "num_step_iters": 1206,
+    "num_steps": 985582743,
+    "pre_emptying_time": 0.00118878,
+    "queue_hwm": 16962921.0,
+    "setup_time": 23.048141824,
+    "slot_occupancy": 0.7793739209720745,
+    "total_time": 76.959211778,
+    "unconverged": 6814117,
+    "warmup_time": 0.058565556
    }
   ],
   "system": {
@@ -1503,7 +1503,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "cms2018+msc-vecgeom2-surface-gpu": {
@@ -1527,49 +1527,49 @@
      "count": 1048576,
      "index": 2710
     },
-    "avg_event_per_time": 0.26281283303699693,
-    "avg_step_per_time": 46762356.81413819,
+    "avg_event_per_time": 0.2624582309773873,
+    "avg_step_per_time": 46699262.37599041,
     "avg_steps_per_primary": 136869.43399038463,
-    "avg_time_per_primary": 0.002926914794615385,
-    "avg_time_per_step": 2.1384721988555946e-08,
+    "avg_time_per_primary": 0.0029308692905769228,
+    "avg_time_per_step": 2.1413614458161807e-08,
     "emptying_step": 2711,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 2846884227,
-    "pre_emptying_time": 0.022437759,
+    "pre_emptying_time": 0.022383205,
     "queue_hwm": 32245094.0,
-    "setup_time": 28.971889565,
+    "setup_time": 29.029506795,
     "slot_occupancy": 0.33142094349022955,
-    "total_time": 60.879827728,
+    "total_time": 60.962081244,
     "unconverged": 1576,
-    "warmup_time": 0.05880986
+    "warmup_time": 0.059431683
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 2701
+     "index": 2704
     },
-    "avg_event_per_time": 0.26646396548523166,
-    "avg_step_per_time": 47251224.13154375,
-    "avg_steps_per_primary": 136405.29375,
-    "avg_time_per_primary": 0.002886809733653846,
-    "avg_time_per_step": 2.1163472870376385e-08,
-    "emptying_step": 2702,
+    "avg_event_per_time": 0.2685630373570211,
+    "avg_step_per_time": 47678467.11512986,
+    "avg_steps_per_primary": 136562.88778846155,
+    "avg_time_per_primary": 0.0028642466096634616,
+    "avg_time_per_step": 2.0973828659073416e-08,
+    "emptying_step": 2705,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
-    "num_steps": 2837230110,
-    "pre_emptying_time": 0.021802444,
-    "queue_hwm": 32328822.0,
-    "setup_time": 29.216123075,
-    "slot_occupancy": 0.33029705635271966,
-    "total_time": 60.04564246,
-    "unconverged": 1612,
-    "warmup_time": 0.05896431
+    "num_steps": 2840508066,
+    "pre_emptying_time": 0.022167243,
+    "queue_hwm": 32348836.0,
+    "setup_time": 28.981680038,
+    "slot_occupancy": 0.3306786606553942,
+    "total_time": 59.576329481,
+    "unconverged": 1510,
+    "warmup_time": 0.059122271
    }
   ],
   "system": {
@@ -1612,7 +1612,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem15+field+msc-orange-gpu": {
@@ -1640,24 +1640,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 8.710221842463808,
-    "avg_step_per_time": 342214796.5040534,
+    "avg_event_per_time": 8.738210593319813,
+    "avg_step_per_time": 343314442.97136784,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 8.831356802884615e-05,
-    "avg_time_per_step": 2.9221413282407716e-09,
+    "avg_time_per_primary": 8.803069701923077e-05,
+    "avg_time_per_step": 2.9127816218422228e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.002953463,
+    "pre_emptying_time": 0.002952874,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.727099782,
+    "setup_time": 0.728521233,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 1.836922215,
+    "total_time": 1.831038498,
     "unconverged": 0,
-    "warmup_time": 0.043997292
+    "warmup_time": 0.043608024
    },
    {
     "action_times": {},
@@ -1665,24 +1665,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 8.709684398516258,
-    "avg_step_per_time": 342191884.5648478,
+    "avg_event_per_time": 8.74472286786409,
+    "avg_step_per_time": 343568499.2973454,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 8.831901754807693e-05,
-    "avg_time_per_step": 2.9223369843258012e-09,
+    "avg_time_per_primary": 8.796513975961538e-05,
+    "avg_time_per_step": 2.9106277264800644e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.002956994,
+    "pre_emptying_time": 0.002943973,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.729995576,
+    "setup_time": 0.728784524,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 1.837035565,
+    "total_time": 1.829674907,
     "unconverged": 0,
-    "warmup_time": 0.043487558
+    "warmup_time": 0.043627124
    }
   ],
   "system": {
@@ -1723,7 +1723,7 @@
     "tracks": 1048576
    },
    "vecgeom": null,
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem15+field+msc-vecgeom-gpu": {
@@ -1751,24 +1751,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.8544472161179595,
-    "avg_step_per_time": 308592376.21384436,
+    "avg_event_per_time": 7.775991616843407,
+    "avg_step_per_time": 305509944.1672284,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 9.793569783653846e-05,
-    "avg_time_per_step": 3.2405207551434547e-09,
+    "avg_time_per_primary": 9.89238166826923e-05,
+    "avg_time_per_step": 3.2732158775579013e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003276016,
+    "pre_emptying_time": 0.003304566,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.644644193,
+    "setup_time": 0.627786017,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.037062515,
+    "total_time": 2.057615387,
     "unconverged": 0,
-    "warmup_time": 0.045168931
+    "warmup_time": 0.045010915
    },
    {
     "action_times": {},
@@ -1776,24 +1776,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.854874775026138,
-    "avg_step_per_time": 308607554.4534051,
+    "avg_event_per_time": 7.775280861878299,
+    "avg_step_per_time": 305480415.75425893,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 9.793036697115386e-05,
-    "avg_time_per_step": 3.2403613766719514e-09,
+    "avg_time_per_primary": 9.893285951923077e-05,
+    "avg_time_per_step": 3.2735322738477654e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.003270526,
+    "pre_emptying_time": 0.003300556,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.657010742,
+    "setup_time": 0.627907378,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 2.036951633,
+    "total_time": 2.057803478,
     "unconverged": 0,
-    "warmup_time": 0.044911229
+    "warmup_time": 0.045039146
    }
   ],
   "system": {
@@ -1836,7 +1836,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem15+field+msc-vecgeom2-solid-gpu": {
@@ -1864,24 +1864,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.018933784011701,
-    "avg_step_per_time": 275765995.403345,
+    "avg_event_per_time": 6.906035756251335,
+    "avg_step_per_time": 271330359.17105424,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 0.00010959367802884615,
-    "avg_time_per_step": 3.6262629064811453e-09,
+    "avg_time_per_primary": 0.00011138528620192307,
+    "avg_time_per_step": 3.685544083806604e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003671659,
+    "pre_emptying_time": 0.003736619,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.627699328,
+    "setup_time": 0.623744925,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.279548503,
+    "total_time": 2.316813953,
     "unconverged": 0,
-    "warmup_time": 0.081522522
+    "warmup_time": 0.080432425
    },
    {
     "action_times": {},
@@ -1889,24 +1889,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.025687815100563,
-    "avg_step_per_time": 276029904.62238866,
+    "avg_event_per_time": 6.897687535423721,
+    "avg_step_per_time": 271000944.33825856,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 0.00010948832192307692,
-    "avg_time_per_step": 3.622795875570108e-09,
+    "avg_time_per_primary": 0.000111520095,
+    "avg_time_per_step": 3.6900240419524803e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.003657469,
+    "pre_emptying_time": 0.003733069,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.624684014,
+    "setup_time": 0.62563004,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 2.277357096,
+    "total_time": 2.319617976,
     "unconverged": 0,
-    "warmup_time": 0.081646562
+    "warmup_time": 0.07981484
    }
   ],
   "system": {
@@ -1949,7 +1949,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem15+field+msc-vecgeom2-surface-gpu": {
@@ -1977,24 +1977,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.861313764547564,
-    "avg_step_per_time": 308862155.16046846,
+    "avg_event_per_time": 7.759606833253524,
+    "avg_step_per_time": 304866204.4917773,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 9.785015485576922e-05,
-    "avg_time_per_step": 3.2376902876963116e-09,
+    "avg_time_per_primary": 9.913269908653847e-05,
+    "avg_time_per_step": 3.2801274305462463e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003291796,
+    "pre_emptying_time": 0.003330156,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.651621069,
+    "setup_time": 0.691823622,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.035283221,
+    "total_time": 2.061960141,
     "unconverged": 0,
-    "warmup_time": 0.075037591
+    "warmup_time": 0.075178664
    },
    {
     "action_times": {},
@@ -2002,24 +2002,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.860947769582853,
-    "avg_step_per_time": 308846154.3104411,
+    "avg_event_per_time": 7.778194546405232,
+    "avg_step_per_time": 305594890.5335596,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 9.7854710625e-05,
-    "avg_time_per_step": 3.2378580275111206e-09,
+    "avg_time_per_primary": 9.889579961538461e-05,
+    "avg_time_per_step": 3.2723060200843988e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.003282916,
+    "pre_emptying_time": 0.003317916,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.64546574,
+    "setup_time": 0.703120991,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 2.035377981,
+    "total_time": 2.057032632,
     "unconverged": 0,
-    "warmup_time": 0.07507065
+    "warmup_time": 0.075498457
    }
   ],
   "system": {
@@ -2062,7 +2062,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem3-expanded+field+msc-orange-gpu": {
@@ -2090,24 +2090,24 @@
      "count": 1048576,
      "index": 1470
     },
-    "avg_event_per_time": 2.073500207855955,
-    "avg_step_per_time": 205609186.8601811,
+    "avg_event_per_time": 2.093275680611897,
+    "avg_step_per_time": 207570131.38177785,
     "avg_steps_per_primary": 76277.25927884615,
-    "avg_time_per_primary": 0.00037098176615384614,
-    "avg_time_per_step": 4.863595908679035e-09,
+    "avg_time_per_primary": 0.0003674770487019231,
+    "avg_time_per_step": 4.817648827136542e-09,
     "emptying_step": 1471,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1734,
     "num_steps": 1586566993,
-    "pre_emptying_time": 0.004940859,
+    "pre_emptying_time": 0.004920029,
     "queue_hwm": 11774960.0,
-    "setup_time": 0.593064881,
+    "setup_time": 0.596740642,
     "slot_occupancy": 0.8725883462987282,
-    "total_time": 7.716420736,
+    "total_time": 7.643522613,
     "unconverged": 0,
-    "warmup_time": 0.043371016
+    "warmup_time": 0.044083858
    },
    {
     "action_times": {},
@@ -2115,24 +2115,24 @@
      "count": 1048576,
      "index": 1470
     },
-    "avg_event_per_time": 2.088791873047224,
-    "avg_step_per_time": 207191721.28061932,
+    "avg_event_per_time": 2.0779207019067973,
+    "avg_step_per_time": 206113386.6269924,
     "avg_steps_per_primary": 76301.64076923077,
-    "avg_time_per_primary": 0.00036826587615384614,
-    "avg_time_per_step": 4.826447667981895e-09,
+    "avg_time_per_primary": 0.00037019255283653847,
+    "avg_time_per_step": 4.851698457653895e-09,
     "emptying_step": 1471,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1722,
     "num_steps": 1587074128,
-    "pre_emptying_time": 0.004803758,
+    "pre_emptying_time": 0.004877149,
     "queue_hwm": 11784105.0,
-    "setup_time": 0.593106921,
+    "setup_time": 0.595994036,
     "slot_occupancy": 0.8789499617342889,
-    "total_time": 7.659930224,
+    "total_time": 7.700005099,
     "unconverged": 0,
-    "warmup_time": 0.04504282
+    "warmup_time": 0.043444203
    }
   ],
   "system": {
@@ -2173,7 +2173,7 @@
     "tracks": 1048576
    },
    "vecgeom": null,
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem3-expanded+field+msc-vecgeom-gpu": {
@@ -2201,24 +2201,24 @@
      "count": 1048576,
      "index": 1475
     },
-    "avg_event_per_time": 1.263017809210484,
-    "avg_step_per_time": 125712035.4369542,
+    "avg_event_per_time": 1.2581591114128543,
+    "avg_step_per_time": 125228434.34656665,
     "avg_steps_per_primary": 76563.89721153847,
-    "avg_time_per_primary": 0.0006090419023557693,
-    "avg_time_per_step": 7.954687842927415e-09,
+    "avg_time_per_primary": 0.0006113938708173077,
+    "avg_time_per_step": 7.985406870395938e-09,
     "emptying_step": 1476,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1727,
     "num_steps": 1592529062,
-    "pre_emptying_time": 0.008138816,
+    "pre_emptying_time": 0.008164854,
     "queue_hwm": 11778848.0,
-    "setup_time": 0.653272002,
+    "setup_time": 0.69142883,
     "slot_occupancy": 0.879417524354335,
-    "total_time": 12.668071569,
+    "total_time": 12.716992513,
     "unconverged": 0,
-    "warmup_time": 0.045710586
+    "warmup_time": 0.045364208
    },
    {
     "action_times": {},
@@ -2226,24 +2226,24 @@
      "count": 1048576,
      "index": 1476
     },
-    "avg_event_per_time": 1.2627459403891779,
-    "avg_step_per_time": 125778035.21894886,
+    "avg_event_per_time": 1.2574430144488997,
+    "avg_step_per_time": 125249827.9332662,
     "avg_steps_per_primary": 76620.5866826923,
-    "avg_time_per_primary": 0.0006091730288942308,
-    "avg_time_per_step": 7.950513762273708e-09,
+    "avg_time_per_primary": 0.0006117420514423076,
+    "avg_time_per_step": 7.984042904496489e-09,
     "emptying_step": 1477,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1715,
     "num_steps": 1593708203,
-    "pre_emptying_time": 0.008261226,
+    "pre_emptying_time": 0.008289515,
     "queue_hwm": 11741413.0,
-    "setup_time": 0.651837131,
+    "setup_time": 0.702560658,
     "slot_occupancy": 0.8862265778700047,
-    "total_time": 12.670799001,
+    "total_time": 12.72423467,
     "unconverged": 0,
-    "warmup_time": 0.045876807
+    "warmup_time": 0.044928014
    }
   ],
   "system": {
@@ -2286,7 +2286,7 @@
     "tracks": 1048576
    },
    "vecgeom": "1.2.11",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem3-expanded+field+msc-vecgeom2-solid-gpu": {
@@ -2314,49 +2314,49 @@
      "count": 1048576,
      "index": 1475
     },
-    "avg_event_per_time": 1.162920363548498,
-    "avg_step_per_time": 115769288.38810498,
-    "avg_steps_per_primary": 76577.29759615385,
-    "avg_time_per_primary": 0.0006614646998557692,
-    "avg_time_per_step": 8.637869455045797e-09,
+    "avg_event_per_time": 1.1621881795408486,
+    "avg_step_per_time": 115696846.410837,
+    "avg_steps_per_primary": 76577.59365384615,
+    "avg_time_per_primary": 0.0006618814257211539,
+    "avg_time_per_step": 8.64327793731751e-09,
     "emptying_step": 1476,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1722,
-    "num_steps": 1592807790,
-    "pre_emptying_time": 0.008537229,
-    "queue_hwm": 11766097.0,
-    "setup_time": 0.674561292,
-    "slot_occupancy": 0.8821253660248547,
-    "total_time": 13.758465757,
+    "num_step_iters": 1728,
+    "num_steps": 1592813948,
+    "pre_emptying_time": 0.008699768,
+    "queue_hwm": 11763254.0,
+    "setup_time": 0.659302106,
+    "slot_occupancy": 0.8790658292946992,
+    "total_time": 13.767133655,
     "unconverged": 0,
-    "warmup_time": 0.079763777
+    "warmup_time": 0.080089432
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1476
+     "index": 1475
     },
-    "avg_event_per_time": 1.1597061270781572,
-    "avg_step_per_time": 115475893.23617564,
-    "avg_steps_per_primary": 76594.93048076922,
-    "avg_time_per_primary": 0.0006632980125480769,
-    "avg_time_per_step": 8.659816105122151e-09,
-    "emptying_step": 1477,
+    "avg_event_per_time": 1.1612568872977471,
+    "avg_step_per_time": 115630980.08648878,
+    "avg_steps_per_primary": 76595.37586538462,
+    "avg_time_per_primary": 0.0006624122342307692,
+    "avg_time_per_step": 8.648201366554428e-09,
+    "emptying_step": 1476,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1732,
-    "num_steps": 1593174554,
-    "pre_emptying_time": 0.008527538,
-    "queue_hwm": 11768453.0,
-    "setup_time": 0.680172137,
-    "slot_occupancy": 0.8772342111442161,
-    "total_time": 13.796598661,
+    "num_step_iters": 1717,
+    "num_steps": 1593183818,
+    "pre_emptying_time": 0.008688799,
+    "queue_hwm": 11769807.0,
+    "setup_time": 0.655056272,
+    "slot_occupancy": 0.884903021864094,
+    "total_time": 13.778174472,
     "unconverged": 0,
-    "warmup_time": 0.079726917
+    "warmup_time": 0.079486168
    }
   ],
   "system": {
@@ -2399,7 +2399,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  },
  "testem3-expanded+field+msc-vecgeom2-surface-gpu": {
@@ -2427,24 +2427,24 @@
      "count": 1048576,
      "index": 1426
     },
-    "avg_event_per_time": 1.7918872673547264,
-    "avg_step_per_time": 172490076.8222949,
+    "avg_event_per_time": 1.7820937569879516,
+    "avg_step_per_time": 171547337.07169735,
     "avg_steps_per_primary": 74047.44533653845,
-    "avg_time_per_primary": 0.0004292852475961539,
-    "avg_time_per_step": 5.7974349505927455e-09,
+    "avg_time_per_primary": 0.0004316443880769231,
+    "avg_time_per_step": 5.829294800315408e-09,
     "emptying_step": 1427,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1661,
     "num_steps": 1540186863,
-    "pre_emptying_time": 0.005846097,
+    "pre_emptying_time": 0.005879197,
     "queue_hwm": 11971954.0,
-    "setup_time": 0.688958587,
+    "setup_time": 0.722096091,
     "slot_occupancy": 0.8843086416071112,
-    "total_time": 8.92913315,
+    "total_time": 8.978203272,
     "unconverged": 0,
-    "warmup_time": 0.076730303
+    "warmup_time": 0.075611197
    },
    {
     "action_times": {},
@@ -2452,24 +2452,24 @@
      "count": 1048576,
      "index": 1427
     },
-    "avg_event_per_time": 1.7897680113833765,
-    "avg_step_per_time": 172426334.33577102,
+    "avg_event_per_time": 1.7810993259648786,
+    "avg_step_per_time": 171591192.77512473,
     "avg_steps_per_primary": 74107.72846153846,
-    "avg_time_per_primary": 0.00042979356225961537,
-    "avg_time_per_step": 5.799578143630135e-09,
+    "avg_time_per_primary": 0.00043188538562500005,
+    "avg_time_per_step": 5.827804934665436e-09,
     "emptying_step": 1428,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 1660,
     "num_steps": 1541440752,
-    "pre_emptying_time": 0.005954317,
+    "pre_emptying_time": 0.006001468,
     "queue_hwm": 11943111.0,
-    "setup_time": 0.670719022,
+    "setup_time": 0.725506489,
     "slot_occupancy": 0.8855617201471904,
-    "total_time": 8.939706095,
+    "total_time": 8.983216021,
     "unconverged": 0,
-    "warmup_time": 0.076098318
+    "warmup_time": 0.075723848
    }
   ],
   "system": {
@@ -2512,7 +2512,7 @@
     "tracks": 1048576
    },
    "vecgeom": "2.0.0-dev.7",
-   "version": "0.7.0-dev.183+81fbf169b"
+   "version": "0.7.0-dev.195+9f96e13e6"
   }
  }
 }
