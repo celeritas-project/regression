@@ -366,8 +366,12 @@ pure_geant = {
 
 no_msc = {"physics_options": {"msc": "none"}}
 use_field = {
-    "field": [0.0, 0.0, 1.0], # units: [T]
-    "field_options": {"max_substeps": 1000},
+    "field": [0.0, 0.0, 3.8], # units: [T]
+    "field_options": {"max_substeps": 100},
+}
+use_x_field = {
+    "field": [0.5, 0.0, 0.0], # units: [T]
+    "field_options": {"max_substeps": 100},
 }
 
 use_gpu = {
@@ -452,7 +456,7 @@ full_cms = {
 # List of list of setting dictionaries
 problems = [
     [testem15, use_field],
-    [testem3_expanded, use_field],
+    [testem3_expanded, use_x_field],
     [tilecal],
     [hgcal],
     [full_cms],
@@ -461,6 +465,7 @@ problems = [
 
 # List of geometry settings
 geometries = [
+     "orange",
      "vecgeom",
      "vecgeom2-solid",
      "vecgeom2-surface",

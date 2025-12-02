@@ -1,4 +1,111 @@
 {
+ "atlas-tilecal+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "field": null,
+   "geometry_name": "atlas-tilecal.gdml",
+   "merge_events": true,
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "atlas-tilecal+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 6252
+    },
+    "avg_event_per_time": 0.16116205383034637,
+    "avg_step_per_time": 22525105.461904436,
+    "avg_steps_per_primary": 107512.92745192308,
+    "avg_time_per_primary": 0.0047730265962019226,
+    "avg_time_per_step": 4.439490868050536e-08,
+    "emptying_step": null,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 6253,
+    "num_steps": 2236268891,
+    "pre_emptying_time": null,
+    "queue_hwm": 10873478.0,
+    "setup_time": 0.742389273,
+    "slot_occupancy": 0.3410638423036923,
+    "total_time": 99.278953201,
+    "unconverged": 1716732,
+    "warmup_time": 0.042683873
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 6276
+    },
+    "avg_event_per_time": 0.1611677662521838,
+    "avg_step_per_time": 22779486.642496534,
+    "avg_steps_per_primary": 108723.241875,
+    "avg_time_per_primary": 0.004772857421298077,
+    "avg_time_per_step": 4.389914556434465e-08,
+    "emptying_step": null,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 6277,
+    "num_steps": 2261443431,
+    "pre_emptying_time": null,
+    "queue_hwm": 10888427.0,
+    "setup_time": 0.741756718,
+    "slot_occupancy": 0.34358459744309855,
+    "total_time": 99.275434363,
+    "unconverged": 1718216,
+    "warmup_time": 0.043005316
+   }
+  ],
+  "system": {
+   "build_type": "release,shared",
+   "debug": null,
+   "geant4": "11.3.2",
+   "occupancy": {
+    "along-step-general-linear-apply-eloss-fluct": 0.375,
+    "along-step-general-linear-limit-step-msc-urban": 0.5,
+    "along-step-general-linear-propagate-linear": 0.25,
+    "along-step-general-linear-scatter-msc-urban": 0.375,
+    "along-step-general-linear-update-time": 1.0,
+    "along-step-general-linear-update-track": 1.0,
+    "along-step-neutral": 0.25,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.5,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries-locate-alive": 1.0,
+    "extend-from-secondaries-process-secondaries": 0.5,
+    "geo-boundary": 0.5,
+    "initialize-tracks": 0.375,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.5,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "tracking-cut": 1.0
+   },
+   "openmp": "disabled",
+   "sizes": {
+    "events": 16,
+    "initializers": 67108864,
+    "processes": 1,
+    "secondaries": 2097152,
+    "streams": 1,
+    "tracks": 1048576
+   },
+   "vecgeom": null,
+   "version": "0.7.0-dev.166+59b7ca05d"
+  }
+ },
  "atlas-tilecal+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
@@ -20,24 +127,24 @@
      "count": 1048576,
      "index": 1628
     },
-    "avg_event_per_time": 1.6516842089266162,
-    "avg_step_per_time": 178233401.0308039,
+    "avg_event_per_time": 1.655731182073433,
+    "avg_step_per_time": 178670110.29032165,
     "avg_steps_per_primary": 83007.76591346154,
-    "avg_time_per_primary": 0.00046572508538461534,
-    "avg_time_per_step": 5.6106206480746614e-09,
+    "avg_time_per_primary": 0.00046458675028846153,
+    "avg_time_per_step": 5.5969070505139155e-09,
     "emptying_step": 1629,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2015,
     "num_steps": 1726561531,
-    "pre_emptying_time": 0.005674996,
+    "pre_emptying_time": 0.005651174,
     "queue_hwm": 14537727.0,
-    "setup_time": 0.802533088,
+    "setup_time": 0.821313885,
     "slot_occupancy": 0.8171599939502499,
-    "total_time": 9.687081776,
+    "total_time": 9.663404406,
     "unconverged": 0,
-    "warmup_time": 0.045489313
+    "warmup_time": 0.045643979
    },
    {
     "action_times": {},
@@ -45,24 +152,24 @@
      "count": 1048576,
      "index": 1630
     },
-    "avg_event_per_time": 1.6474912808809852,
-    "avg_step_per_time": 177804554.02109948,
+    "avg_event_per_time": 1.6484349958743103,
+    "avg_step_per_time": 177906403.9218901,
     "avg_steps_per_primary": 83018.79072115384,
-    "avg_time_per_primary": 0.0004669103734615385,
-    "avg_time_per_step": 5.6241529105116925e-09,
+    "avg_time_per_primary": 0.00046664307125,
+    "avg_time_per_step": 5.620933130878473e-09,
     "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2088,
     "num_steps": 1726790847,
-    "pre_emptying_time": 0.005646357,
+    "pre_emptying_time": 0.005638494,
     "queue_hwm": 14536243.0,
-    "setup_time": 0.801112235,
+    "setup_time": 0.818617394,
     "slot_occupancy": 0.788695440895256,
-    "total_time": 9.711735768,
+    "total_time": 9.706175882,
     "unconverged": 0,
-    "warmup_time": 0.045602043
+    "warmup_time": 0.045589188
    }
   ],
   "system": {
@@ -129,24 +236,24 @@
      "count": 1048576,
      "index": 1630
     },
-    "avg_event_per_time": 1.3025400630491863,
-    "avg_step_per_time": 140580867.361752,
+    "avg_event_per_time": 1.3042128441686909,
+    "avg_step_per_time": 140761407.69779032,
     "avg_steps_per_primary": 83021.72947115384,
-    "avg_time_per_primary": 0.0005905620802403846,
-    "avg_time_per_step": 7.113343506600609e-09,
+    "avg_time_per_primary": 0.0005898046263461538,
+    "avg_time_per_step": 7.104219944624055e-09,
     "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 6299,
     "num_steps": 1726851973,
-    "pre_emptying_time": 0.006541734,
+    "pre_emptying_time": 0.006534311,
     "queue_hwm": 14507778.0,
-    "setup_time": 0.843723335,
+    "setup_time": 0.803681577,
     "slot_occupancy": 0.2614469558478424,
-    "total_time": 12.283691269,
+    "total_time": 12.267936228,
     "unconverged": 0,
-    "warmup_time": 0.074745722
+    "warmup_time": 0.07507584
    },
    {
     "action_times": {},
@@ -154,24 +261,24 @@
      "count": 1048576,
      "index": 1630
     },
-    "avg_event_per_time": 1.2308651386446507,
-    "avg_step_per_time": 132858146.26104145,
+    "avg_event_per_time": 1.2308408462023863,
+    "avg_step_per_time": 132855524.16318029,
     "avg_steps_per_primary": 83029.87129807692,
-    "avg_time_per_primary": 0.000624951300576923,
-    "avg_time_per_step": 7.526824874066712e-09,
+    "avg_time_per_primary": 0.0006249636349038462,
+    "avg_time_per_step": 7.526973426951718e-09,
     "emptying_step": 1631,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 1727021323,
-    "pre_emptying_time": 0.006536673,
+    "pre_emptying_time": 0.006534281,
     "queue_hwm": 14520089.0,
-    "setup_time": 0.833789004,
+    "setup_time": 0.807568358,
     "slot_occupancy": 0.20105174311902374,
-    "total_time": 12.998987052,
+    "total_time": 12.999243606,
     "unconverged": 1,
-    "warmup_time": 0.074157588
+    "warmup_time": 0.075363962
    }
   ],
   "system": {
@@ -238,24 +345,24 @@
      "count": 1048576,
      "index": 1631
     },
-    "avg_event_per_time": 1.230159660634778,
-    "avg_step_per_time": 132860393.7874469,
+    "avg_event_per_time": 1.231153616816267,
+    "avg_step_per_time": 132967743.6005695,
     "avg_steps_per_primary": 83078.89307692308,
-    "avg_time_per_primary": 0.0006253097007211538,
-    "avg_time_per_step": 7.526697546898912e-09,
+    "avg_time_per_primary": 0.0006248048649038461,
+    "avg_time_per_step": 7.520620963562151e-09,
     "emptying_step": 1632,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3980,
     "num_steps": 1728040976,
-    "pre_emptying_time": 0.007263859,
+    "pre_emptying_time": 0.007244397,
     "queue_hwm": 14521612.0,
-    "setup_time": 0.861616608,
+    "setup_time": 0.862051646,
     "slot_occupancy": 0.41406741118311285,
-    "total_time": 13.006441775,
+    "total_time": 12.99594119,
     "unconverged": 0,
-    "warmup_time": 0.074544329
+    "warmup_time": 0.074478126
    },
    {
     "action_times": {},
@@ -263,24 +370,24 @@
      "count": 1048576,
      "index": 1631
     },
-    "avg_event_per_time": 1.2200432053503798,
-    "avg_step_per_time": 131777293.62501639,
+    "avg_event_per_time": 1.2206854585321,
+    "avg_step_per_time": 131846663.61596262,
     "avg_steps_per_primary": 83084.88461538461,
-    "avg_time_per_primary": 0.0006304946954807692,
-    "avg_time_per_step": 7.588560764084182e-09,
+    "avg_time_per_primary": 0.0006301629661057693,
+    "avg_time_per_step": 7.584568107940581e-09,
     "emptying_step": 1632,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 4392,
     "num_steps": 1728165600,
-    "pre_emptying_time": 0.00727368,
+    "pre_emptying_time": 0.007273478,
     "queue_hwm": 14512537.0,
-    "setup_time": 0.860908242,
+    "setup_time": 0.862176167,
     "slot_occupancy": 0.375252082699635,
-    "total_time": 13.114289666,
+    "total_time": 13.107389695,
     "unconverged": 0,
-    "warmup_time": 0.074506379
+    "warmup_time": 0.074287584
    }
   ],
   "system": {
@@ -326,6 +433,113 @@
    "version": "0.7.0-dev.166+59b7ca05d"
   }
  },
+ "cms-hgcal+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "field": null,
+   "geometry_name": "cms-hgcal.gdml",
+   "merge_events": true,
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "cms-hgcal+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 2634
+    },
+    "avg_event_per_time": 0.48519962441950104,
+    "avg_step_per_time": 82189448.72737029,
+    "avg_steps_per_primary": 130302.35326923076,
+    "avg_time_per_primary": 0.0015853902816826923,
+    "avg_time_per_step": 1.2167011891235444e-08,
+    "emptying_step": 2635,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 3079,
+    "num_steps": 2710288948,
+    "pre_emptying_time": 0.009266774,
+    "queue_hwm": 27904757.0,
+    "setup_time": 2.137831813,
+    "slot_occupancy": 0.8394715686090661,
+    "total_time": 32.976117859,
+    "unconverged": 0,
+    "warmup_time": 0.023096032
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 2632
+    },
+    "avg_event_per_time": 0.4827438802800574,
+    "avg_step_per_time": 81771854.21224557,
+    "avg_steps_per_primary": 130299.79019230769,
+    "avg_time_per_primary": 0.0015934552475,
+    "avg_time_per_step": 1.2229146686638873e-08,
+    "emptying_step": 2633,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 3046,
+    "num_steps": 2710235636,
+    "pre_emptying_time": 0.01125303,
+    "queue_hwm": 28443837.0,
+    "setup_time": 2.134085904,
+    "slot_occupancy": 0.8485496117735254,
+    "total_time": 33.143869148,
+    "unconverged": 0,
+    "warmup_time": 0.029621883
+   }
+  ],
+  "system": {
+   "build_type": "release,shared",
+   "debug": null,
+   "geant4": "11.3.2",
+   "occupancy": {
+    "along-step-general-linear-apply-eloss-fluct": 0.375,
+    "along-step-general-linear-limit-step-msc-urban": 0.5,
+    "along-step-general-linear-propagate-linear": 0.25,
+    "along-step-general-linear-scatter-msc-urban": 0.375,
+    "along-step-general-linear-update-time": 1.0,
+    "along-step-general-linear-update-track": 1.0,
+    "along-step-neutral": 0.25,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.5,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries-locate-alive": 1.0,
+    "extend-from-secondaries-process-secondaries": 0.5,
+    "geo-boundary": 0.5,
+    "initialize-tracks": 0.375,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.5,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "tracking-cut": 1.0
+   },
+   "openmp": "disabled",
+   "sizes": {
+    "events": 16,
+    "initializers": 67108864,
+    "processes": 1,
+    "secondaries": 2097152,
+    "streams": 1,
+    "tracks": 1048576
+   },
+   "vecgeom": null,
+   "version": "0.7.0-dev.166+59b7ca05d"
+  }
+ },
  "cms-hgcal+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
@@ -347,24 +561,24 @@
      "count": 1048576,
      "index": 2635
     },
-    "avg_event_per_time": 0.7619159925827743,
-    "avg_step_per_time": 129145016.46083525,
+    "avg_event_per_time": 0.7641184015249769,
+    "avg_step_per_time": 129518325.5157221,
     "avg_steps_per_primary": 130384.8735576923,
-    "avg_time_per_primary": 0.0010096005028365385,
-    "avg_time_per_step": 7.743233362034235e-09,
+    "avg_time_per_primary": 0.0010066905438942308,
+    "avg_time_per_step": 7.720915137052255e-09,
     "emptying_step": 2636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3062,
     "num_steps": 2712005370,
-    "pre_emptying_time": 0.008079576,
+    "pre_emptying_time": 0.008047714,
     "queue_hwm": 28114812.0,
-    "setup_time": 2.156768138,
+    "setup_time": 2.185027624,
     "slot_occupancy": 0.844666841059709,
-    "total_time": 20.999690459,
+    "total_time": 20.939163313,
     "unconverged": 0,
-    "warmup_time": 0.046180897
+    "warmup_time": 0.045878945
    },
    {
     "action_times": {},
@@ -372,24 +586,24 @@
      "count": 1048576,
      "index": 2634
     },
-    "avg_event_per_time": 0.7625480028817143,
-    "avg_step_per_time": 129249993.17707792,
+    "avg_event_per_time": 0.764160976918615,
+    "avg_step_per_time": 129523388.27151966,
     "avg_steps_per_primary": 130382.70548076923,
-    "avg_time_per_primary": 0.0010087637320192308,
-    "avg_time_per_step": 7.736944315578864e-09,
+    "avg_time_per_primary": 0.0010066344559134617,
+    "avg_time_per_step": 7.720613345164363e-09,
     "emptying_step": 2635,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3059,
     "num_steps": 2711960274,
-    "pre_emptying_time": 0.007745354,
+    "pre_emptying_time": 0.007698581,
     "queue_hwm": 28576211.0,
-    "setup_time": 2.158087818,
+    "setup_time": 2.177374733,
     "slot_occupancy": 0.8454811573807964,
-    "total_time": 20.982285626,
+    "total_time": 20.937996683,
     "unconverged": 0,
-    "warmup_time": 0.04645739
+    "warmup_time": 0.045530903
    }
   ],
   "system": {
@@ -456,24 +670,24 @@
      "count": 1048576,
      "index": 2973
     },
-    "avg_event_per_time": 0.4975796480879427,
-    "avg_step_per_time": 1615303.7894388745,
+    "avg_event_per_time": 0.49708395045643006,
+    "avg_step_per_time": 1613694.5952813658,
     "avg_steps_per_primary": 2497.1708173076922,
-    "avg_time_per_primary": 0.0015459450003365383,
-    "avg_time_per_step": 6.190785947127511e-07,
+    "avg_time_per_primary": 0.0015474866338461538,
+    "avg_time_per_step": 6.196959467572851e-07,
     "emptying_step": 2974,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 51941153,
-    "pre_emptying_time": 0.007752743,
+    "pre_emptying_time": 0.007787612,
     "queue_hwm": 27359599.0,
-    "setup_time": 2.161112253,
+    "setup_time": 2.194026185,
     "slot_occupancy": 0.006046746042557061,
-    "total_time": 32.155656007,
+    "total_time": 32.187721984,
     "unconverged": 246922,
-    "warmup_time": 0.074315957
+    "warmup_time": 0.074772366
    },
    {
     "action_times": {},
@@ -481,24 +695,24 @@
      "count": 1048576,
      "index": 2971
     },
-    "avg_event_per_time": 0.49645897502168496,
-    "avg_step_per_time": 1443280.0886605727,
+    "avg_event_per_time": 0.4997166151737522,
+    "avg_step_per_time": 1452750.5331566047,
     "avg_steps_per_primary": 2236.2682692307694,
-    "avg_time_per_primary": 0.0015494347125000001,
-    "avg_time_per_step": 6.928662065365593e-07,
+    "avg_time_per_primary": 0.00153933398625,
+    "avg_time_per_step": 6.883494290152851e-07,
     "emptying_step": 2972,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 46514380,
-    "pre_emptying_time": 0.007829783,
+    "pre_emptying_time": 0.007782221,
     "queue_hwm": 27917662.0,
-    "setup_time": 2.178836078,
+    "setup_time": 2.18594562,
     "slot_occupancy": 0.00541498651728034,
-    "total_time": 32.22824202,
+    "total_time": 32.018146914,
     "unconverged": 245819,
-    "warmup_time": 0.075268315
+    "warmup_time": 0.074512024
    }
   ],
   "system": {
@@ -565,24 +779,24 @@
      "count": 1048576,
      "index": 2636
     },
-    "avg_event_per_time": 0.5285615602610283,
-    "avg_step_per_time": 89616525.62147887,
+    "avg_event_per_time": 0.5288702158279834,
+    "avg_step_per_time": 89668857.53814451,
     "avg_steps_per_primary": 130421.49509615384,
-    "avg_time_per_primary": 0.0014553286259615386,
-    "avg_time_per_step": 1.1158656208384905e-08,
+    "avg_time_per_primary": 0.0014544792771634615,
+    "avg_time_per_step": 1.1152143870848437e-08,
     "emptying_step": 2637,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3059,
     "num_steps": 2712767098,
-    "pre_emptying_time": 0.011407703,
+    "pre_emptying_time": 0.011422292,
     "queue_hwm": 27948387.0,
-    "setup_time": 3.287932798,
+    "setup_time": 3.308565687,
     "slot_occupancy": 0.8457326929566906,
-    "total_time": 30.27083542,
+    "total_time": 30.253168965,
     "unconverged": 0,
-    "warmup_time": 0.076805458
+    "warmup_time": 0.076328238
    },
    {
     "action_times": {},
@@ -590,24 +804,24 @@
      "count": 1048576,
      "index": 2635
     },
-    "avg_event_per_time": 0.5308347567364871,
-    "avg_step_per_time": 89991067.98925453,
+    "avg_event_per_time": 0.5304546056093786,
+    "avg_step_per_time": 89926621.93425971,
     "avg_steps_per_primary": 130405.73846153847,
-    "avg_time_per_primary": 0.0014490964645192308,
-    "avg_time_per_step": 1.1112213937936663e-08,
+    "avg_time_per_primary": 0.001450134961778846,
+    "avg_time_per_step": 1.1120177523526277e-08,
     "emptying_step": 2636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 3101,
     "num_steps": 2712439360,
-    "pre_emptying_time": 0.011423683,
+    "pre_emptying_time": 0.011430791,
     "queue_hwm": 28488597.0,
-    "setup_time": 3.26013473,
+    "setup_time": 3.315993266,
     "slot_occupancy": 0.834177282309386,
-    "total_time": 30.141206462,
+    "total_time": 30.162807205,
     "unconverged": 0,
-    "warmup_time": 0.075490187
+    "warmup_time": 0.075595232
    }
   ],
   "system": {
@@ -653,13 +867,54 @@
    "version": "0.7.0-dev.166+59b7ca05d"
   }
  },
+ "cms2018+field+msc-orange-gpu": {
+  "input": null,
+  "name": [
+   "cms2018+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'runner'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "invalid.empty()",
+     "file": "/home/s3j/Code/celeritas/src/orange/detail/UnitInserter.cc",
+     "line": 377,
+     "type": "RuntimeError",
+     "what": "invalid (null or half-infinite) bounding boxes in 'OCMS': 4511='vi 8614': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}, 4614='vi 8614': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 6863='vi 8614': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 6966='vi 8614': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20169='vi 8061': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20177='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20178='vi 8514': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20187='vi 8724': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20195='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20196='vi 8514': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 22709='vi 8061': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22717='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22718='vi 8514': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 22727='vi 8724': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22735='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22736='vi 8514': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'runner'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "invalid.empty()",
+     "file": "/home/s3j/Code/celeritas/src/orange/detail/UnitInserter.cc",
+     "line": 377,
+     "type": "RuntimeError",
+     "what": "invalid (null or half-infinite) bounding boxes in 'OCMS': 4511='vi 8614': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}, 4614='vi 8614': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 6863='vi 8614': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 6966='vi 8614': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20169='vi 8061': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20177='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20178='vi 8514': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20187='vi 8724': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20195='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20196='vi 8514': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 22709='vi 8061': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22717='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22718='vi 8514': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 22727='vi 8724': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22735='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22736='vi 8514': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}",
+     "which": "runtime"
+    }
+   }
+  ],
+  "system": null
+ },
  "cms2018+field+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "cms2018.gdml",
    "merge_events": true,
@@ -676,51 +931,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1582
+     "index": 1635
     },
-    "avg_event_per_time": 0.23078138289469532,
-    "avg_step_per_time": 20670905.860108644,
-    "avg_steps_per_primary": 68899.39134615385,
-    "avg_time_per_primary": 0.003333157811875,
-    "avg_time_per_step": 4.837717353886416e-08,
-    "emptying_step": 1583,
+    "avg_event_per_time": 0.2199960021155017,
+    "avg_step_per_time": 20526346.60429923,
+    "avg_steps_per_primary": 71771.74692307692,
+    "avg_time_per_primary": 0.003496567036826923,
+    "avg_time_per_step": 4.871787558096436e-08,
+    "emptying_step": 1636,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 3080,
-    "num_steps": 1433107340,
-    "pre_emptying_time": 0.036947961,
-    "queue_hwm": 16885075.0,
-    "setup_time": 23.701793461,
-    "slot_occupancy": 0.443739500912753,
-    "total_time": 69.329682487,
-    "unconverged": 0,
-    "warmup_time": 0.035967343
+    "num_step_iters": 8192,
+    "num_steps": 1492852336,
+    "pre_emptying_time": 0.033054134,
+    "queue_hwm": 16270901.0,
+    "setup_time": 23.597287866,
+    "slot_occupancy": 0.17379088513553143,
+    "total_time": 72.728594366,
+    "unconverged": 2,
+    "warmup_time": 0.031852865
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1581
+     "index": 1636
     },
-    "avg_event_per_time": 0.22951742507328074,
-    "avg_step_per_time": 20553839.169134796,
-    "avg_steps_per_primary": 68886.47129807693,
-    "avg_time_per_primary": 0.0033515135898076922,
-    "avg_time_per_step": 4.86527111441874e-08,
-    "emptying_step": 1582,
+    "avg_event_per_time": 0.22091555024142967,
+    "avg_step_per_time": 20626298.975159716,
+    "avg_steps_per_primary": 71821.03663461539,
+    "avg_time_per_primary": 0.003482012779951923,
+    "avg_time_per_step": 4.848179507163653e-08,
+    "emptying_step": 1637,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 2931,
-    "num_steps": 1432838603,
-    "pre_emptying_time": 0.049304652,
-    "queue_hwm": 16819872.0,
-    "setup_time": 23.727871015,
-    "slot_occupancy": 0.4662099540213276,
-    "total_time": 69.711482668,
-    "unconverged": 0,
-    "warmup_time": 0.033471883
+    "num_step_iters": 8192,
+    "num_steps": 1493877562,
+    "pre_emptying_time": 0.032261617,
+    "queue_hwm": 16258296.0,
+    "setup_time": 23.641916164,
+    "slot_occupancy": 0.17391023715026677,
+    "total_time": 72.425865823,
+    "unconverged": 1,
+    "warmup_time": 0.03237549
    }
   ],
   "system": {
@@ -772,7 +1027,7 @@
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "cms2018.gdml",
    "merge_events": true,
@@ -789,51 +1044,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1593
+     "index": 1475
     },
-    "avg_event_per_time": 0.2085479980033861,
-    "avg_step_per_time": 18770393.46450122,
-    "avg_steps_per_primary": 69234.729375,
-    "avg_time_per_primary": 0.0036885070899519232,
-    "avg_time_per_step": 5.327538828054996e-08,
-    "emptying_step": 1594,
+    "avg_event_per_time": 0.2079682461036001,
+    "avg_step_per_time": 16520695.864521079,
+    "avg_steps_per_primary": 61106.57673076923,
+    "avg_time_per_primary": 0.0036987895202403847,
+    "avg_time_per_step": 6.053013796758671e-08,
+    "emptying_step": 5,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1890,
-    "num_steps": 1440082371,
-    "pre_emptying_time": 0.040224478,
-    "queue_hwm": 16849035.0,
-    "setup_time": 23.205813758,
-    "slot_occupancy": 0.7266505665249294,
-    "total_time": 76.720947471,
-    "unconverged": 32919,
-    "warmup_time": 0.058031433
+    "num_step_iters": 1476,
+    "num_steps": 1271016796,
+    "pre_emptying_time": 0.00499672,
+    "queue_hwm": 16175505.0,
+    "setup_time": 23.067715824,
+    "slot_occupancy": 0.8212304024838497,
+    "total_time": 76.934822021,
+    "unconverged": 4140761,
+    "warmup_time": 0.058276975
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1592
+     "index": 1489
     },
-    "avg_event_per_time": 0.20811433875256238,
-    "avg_step_per_time": 18763021.631336488,
-    "avg_steps_per_primary": 69351.74985576923,
-    "avg_time_per_primary": 0.003696193034278846,
-    "avg_time_per_step": 5.329631973188586e-08,
-    "emptying_step": 1593,
+    "avg_event_per_time": 0.20818656354905157,
+    "avg_step_per_time": 16730103.568097208,
+    "avg_steps_per_primary": 61816.239326923074,
+    "avg_time_per_primary": 0.0036949107383173075,
+    "avg_time_per_step": 5.977249309483711e-08,
+    "emptying_step": 5,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 2082,
-    "num_steps": 1442516397,
-    "pre_emptying_time": 0.043537125,
-    "queue_hwm": 16782465.0,
-    "setup_time": 23.03783224,
-    "slot_occupancy": 0.6607544855013361,
-    "total_time": 76.880815113,
-    "unconverged": 9352,
-    "warmup_time": 0.059104111
+    "num_step_iters": 1490,
+    "num_steps": 1285777778,
+    "pre_emptying_time": 0.006073709,
+    "queue_hwm": 16196956.0,
+    "setup_time": 23.100128482,
+    "slot_occupancy": 0.8229619083788571,
+    "total_time": 76.854143357,
+    "unconverged": 3964554,
+    "warmup_time": 0.058409526
    }
   ],
   "system": {
@@ -885,7 +1140,7 @@
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "cms2018.gdml",
    "merge_events": true,
@@ -902,51 +1157,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1786
+     "index": 1308
     },
-    "avg_event_per_time": 0.22524543861581545,
-    "avg_step_per_time": 23802772.46263078,
-    "avg_steps_per_primary": 81288.32745192308,
-    "avg_time_per_primary": 0.0034150781208173078,
-    "avg_time_per_step": 4.2011912753858924e-08,
+    "avg_event_per_time": 0.22531182037583672,
+    "avg_step_per_time": 16726791.622793462,
+    "avg_steps_per_primary": 57106.47033653846,
+    "avg_time_per_primary": 0.003414071964567308,
+    "avg_time_per_step": 5.978432819341805e-08,
     "emptying_step": 4,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1787,
-    "num_steps": 1690797211,
-    "pre_emptying_time": 0.000916807,
-    "queue_hwm": 28802399.0,
-    "setup_time": 28.925187164,
-    "slot_occupancy": 0.9023334495702401,
-    "total_time": 71.033624913,
-    "unconverged": 11577707,
-    "warmup_time": 0.059825607
+    "num_step_iters": 1309,
+    "num_steps": 1187814583,
+    "pre_emptying_time": 0.000989748,
+    "queue_hwm": 30759272.0,
+    "setup_time": 28.952670859,
+    "slot_occupancy": 0.8653844617722688,
+    "total_time": 71.012696863,
+    "unconverged": 17229558,
+    "warmup_time": 0.059579015
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1795
+     "index": 1307
     },
-    "avg_event_per_time": 0.22541550819069434,
-    "avg_step_per_time": 23951303.957869608,
-    "avg_steps_per_primary": 81733.86168269231,
-    "avg_time_per_primary": 0.0034125015417307693,
-    "avg_time_per_step": 4.1751380290567985e-08,
+    "avg_event_per_time": 0.22547782611357695,
+    "avg_step_per_time": 16738480.003060993,
+    "avg_steps_per_primary": 57104.301875,
+    "avg_time_per_primary": 0.0034115583890865385,
+    "avg_time_per_step": 5.974258115534555e-08,
     "emptying_step": 4,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1796,
-    "num_steps": 1700064323,
-    "pre_emptying_time": 0.001238391,
-    "queue_hwm": 28664356.0,
-    "setup_time": 28.966651421,
-    "slot_occupancy": 0.9027325618506009,
-    "total_time": 70.980032068,
-    "unconverged": 11624474,
-    "warmup_time": 0.05898359
+    "num_step_iters": 1308,
+    "num_steps": 1187769479,
+    "pre_emptying_time": 0.000954809,
+    "queue_hwm": 30751900.0,
+    "setup_time": 28.965508496,
+    "slot_occupancy": 0.8660131849644745,
+    "total_time": 70.960414493,
+    "unconverged": 17006819,
+    "warmup_time": 0.073335332
    }
   ],
   "system": {
@@ -992,6 +1247,47 @@
    "version": "0.7.0-dev.166+59b7ca05d"
   }
  },
+ "cms2018+msc-orange-gpu": {
+  "input": null,
+  "name": [
+   "cms2018+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "exception": {
+     "context": "result",
+     "str": "'runner'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "invalid.empty()",
+     "file": "/home/s3j/Code/celeritas/src/orange/detail/UnitInserter.cc",
+     "line": 377,
+     "type": "RuntimeError",
+     "what": "invalid (null or half-infinite) bounding boxes in 'OCMS': 4511='vi 8614': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}, 4614='vi 8614': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 6863='vi 8614': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 6966='vi 8614': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20169='vi 8061': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20177='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20178='vi 8514': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20187='vi 8724': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20195='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20196='vi 8514': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 22709='vi 8061': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22717='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22718='vi 8514': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 22727='vi 8724': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22735='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22736='vi 8514': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}",
+     "which": "runtime"
+    }
+   },
+   {
+    "exception": {
+     "context": "result",
+     "str": "'runner'",
+     "type": "<class 'KeyError'>"
+    },
+    "failure": {
+     "condition": "invalid.empty()",
+     "file": "/home/s3j/Code/celeritas/src/orange/detail/UnitInserter.cc",
+     "line": 377,
+     "type": "RuntimeError",
+     "what": "invalid (null or half-infinite) bounding boxes in 'OCMS': 4511='vi 8614': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}, 4614='vi 8614': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 6863='vi 8614': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 6966='vi 8614': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20169='vi 8061': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20177='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 20178='vi 8514': {{-3e-09,-3e-09,-inf}, {inf,inf,inf}}, 20187='vi 8724': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20195='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 20196='vi 8514': {{-inf,-inf,-inf}, {3e-09,3e-09,inf}}, 22709='vi 8061': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22717='vi 8513': {{-inf,-inf,-inf}, {3e-09,inf,inf}}, 22718='vi 8514': {{-inf,-3e-09,-inf}, {3e-09,inf,inf}}, 22727='vi 8724': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22735='vi 8513': {{-3e-09,-inf,-inf}, {inf,inf,inf}}, 22736='vi 8514': {{-3e-09,-inf,-inf}, {inf,3e-09,inf}}",
+     "which": "runtime"
+    }
+   }
+  ],
+  "system": null
+ },
  "cms2018+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
@@ -1013,24 +1309,24 @@
      "count": 1048576,
      "index": 1556
     },
-    "avg_event_per_time": 0.6001837298563774,
-    "avg_step_per_time": 52699807.00655158,
+    "avg_event_per_time": 0.6001231665106266,
+    "avg_step_per_time": 52694489.17390472,
     "avg_steps_per_primary": 67543.17230769231,
-    "avg_time_per_primary": 0.0012816588170673077,
-    "avg_time_per_step": 1.8975401558409526e-08,
+    "avg_time_per_primary": 0.0012817881597596153,
+    "avg_time_per_step": 1.8977316521652864e-08,
     "emptying_step": 1557,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2895,
     "num_steps": 1404897984,
-    "pre_emptying_time": 0.013987035,
+    "pre_emptying_time": 0.014048632,
     "queue_hwm": 17146191.0,
-    "setup_time": 23.645873439,
+    "setup_time": 23.63835035,
     "slot_occupancy": 0.4628031518175194,
-    "total_time": 26.658503395,
+    "total_time": 26.661193723,
     "unconverged": 0,
-    "warmup_time": 0.032039951
+    "warmup_time": 0.031892894
    },
    {
     "action_times": {},
@@ -1038,24 +1334,24 @@
      "count": 1048576,
      "index": 1555
     },
-    "avg_event_per_time": 0.602670584093565,
-    "avg_step_per_time": 52924740.91412977,
+    "avg_event_per_time": 0.6031025277209734,
+    "avg_step_per_time": 52962672.92072418,
     "avg_steps_per_primary": 67551.56173076923,
-    "avg_time_per_primary": 0.0012763701921634616,
-    "avg_time_per_step": 1.8894754754161137e-08,
+    "avg_time_per_primary": 0.0012754560524519231,
+    "avg_time_per_step": 1.8881222280771672e-08,
     "emptying_step": 1556,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 2960,
     "num_steps": 1405072484,
-    "pre_emptying_time": 0.014189006,
+    "pre_emptying_time": 0.014151663,
     "queue_hwm": 17122534.0,
-    "setup_time": 23.684371742,
+    "setup_time": 23.669351217,
     "slot_occupancy": 0.4526964664459229,
-    "total_time": 26.548499997,
+    "total_time": 26.529485891,
     "unconverged": 0,
-    "warmup_time": 0.032337054
+    "warmup_time": 0.032451359
    }
   ],
   "system": {
@@ -1122,24 +1418,24 @@
      "count": 1048576,
      "index": 1562
     },
-    "avg_event_per_time": 0.4239493198287914,
-    "avg_step_per_time": 37428165.33203757,
+    "avg_event_per_time": 0.4248618761328028,
+    "avg_step_per_time": 37508729.934040286,
     "avg_steps_per_primary": 67911.17490384616,
-    "avg_time_per_primary": 0.001814440390048077,
-    "avg_time_per_step": 2.6717847138075594e-08,
+    "avg_time_per_primary": 0.0018105431728365387,
+    "avg_time_per_step": 2.666046015843555e-08,
     "emptying_step": 1563,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 1412552438,
-    "pre_emptying_time": 0.016048461,
+    "pre_emptying_time": 0.016042833,
     "queue_hwm": 17117546.0,
-    "setup_time": 23.065349931,
+    "setup_time": 23.063866691,
     "slot_occupancy": 0.1644427466671914,
-    "total_time": 37.740360113,
+    "total_time": 37.659297995,
     "unconverged": 251,
-    "warmup_time": 0.059547386
+    "warmup_time": 0.06042666
    },
    {
     "action_times": {},
@@ -1147,24 +1443,24 @@
      "count": 1048576,
      "index": 1563
     },
-    "avg_event_per_time": 0.4253854271541295,
-    "avg_step_per_time": 37606548.43414171,
+    "avg_event_per_time": 0.42505321876036073,
+    "avg_step_per_time": 37577179.27795299,
     "avg_steps_per_primary": 68004.47860576923,
-    "avg_time_per_primary": 0.001808314813173077,
-    "avg_time_per_step": 2.65911135596835e-08,
+    "avg_time_per_primary": 0.0018097281358653847,
+    "avg_time_per_step": 2.661189634813044e-08,
     "emptying_step": 1564,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 1414493155,
-    "pre_emptying_time": 0.016241033,
+    "pre_emptying_time": 0.016296605,
     "queue_hwm": 17092501.0,
-    "setup_time": 23.044944825,
+    "setup_time": 23.051458148,
     "slot_occupancy": 0.1646686758613214,
-    "total_time": 37.612948114,
+    "total_time": 37.642345226,
     "unconverged": 218,
-    "warmup_time": 0.05890143
+    "warmup_time": 0.05928436
    }
   ],
   "system": {
@@ -1231,49 +1527,49 @@
      "count": 1048576,
      "index": 2710
     },
-    "avg_event_per_time": 0.26264974962280696,
-    "avg_step_per_time": 46733339.339166775,
+    "avg_event_per_time": 0.2628495015140367,
+    "avg_step_per_time": 46768881.24594523,
     "avg_steps_per_primary": 136869.43399038463,
-    "avg_time_per_primary": 0.002928732162644231,
-    "avg_time_per_step": 2.139800010314926e-08,
+    "avg_time_per_primary": 0.0029265064791826924,
+    "avg_time_per_step": 2.138173874079355e-08,
     "emptying_step": 2711,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
     "num_steps": 2846884227,
-    "pre_emptying_time": 0.022418022,
+    "pre_emptying_time": 0.022380489,
     "queue_hwm": 32245094.0,
-    "setup_time": 28.972457217,
+    "setup_time": 28.954318634,
     "slot_occupancy": 0.33142094349022955,
-    "total_time": 60.917628983,
+    "total_time": 60.871334767,
     "unconverged": 1576,
-    "warmup_time": 0.059883678
+    "warmup_time": 0.059302086
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 2705
+     "index": 2701
     },
-    "avg_event_per_time": 0.2697172573550705,
-    "avg_step_per_time": 47917120.877797775,
-    "avg_steps_per_primary": 136659.12264423078,
-    "avg_time_per_primary": 0.002851989438028846,
-    "avg_time_per_step": 2.086936739271717e-08,
-    "emptying_step": 2706,
+    "avg_event_per_time": 0.26644360556882274,
+    "avg_step_per_time": 47247613.77105172,
+    "avg_steps_per_primary": 136405.29375,
+    "avg_time_per_primary": 0.0028870303251923076,
+    "avg_time_per_step": 2.1165090047630995e-08,
+    "emptying_step": 2702,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 8192,
-    "num_steps": 2842509751,
-    "pre_emptying_time": 0.022406382,
-    "queue_hwm": 32344512.0,
-    "setup_time": 28.977993822,
-    "slot_occupancy": 0.33091168745886534,
-    "total_time": 59.321380311,
-    "unconverged": 1733,
-    "warmup_time": 0.059931978
+    "num_steps": 2837230110,
+    "pre_emptying_time": 0.021859325,
+    "queue_hwm": 32328822.0,
+    "setup_time": 28.9962772,
+    "slot_occupancy": 0.33029705635271966,
+    "total_time": 60.050230764,
+    "unconverged": 1612,
+    "warmup_time": 0.059284485
    }
   ],
   "system": {
@@ -1319,13 +1615,124 @@
    "version": "0.7.0-dev.166+59b7ca05d"
   }
  },
+ "testem15+field+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.0,
+    0.0,
+    3.8
+   ],
+   "geometry_name": "testem15.gdml",
+   "merge_events": true,
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "testem15+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 586
+    },
+    "avg_event_per_time": 8.7017658643574,
+    "avg_step_per_time": 341882570.6573109,
+    "avg_steps_per_primary": 30222.20971153846,
+    "avg_time_per_primary": 8.839938711538462e-05,
+    "avg_time_per_step": 2.924980931544355e-09,
+    "emptying_step": 587,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 686,
+    "num_steps": 628621962,
+    "pre_emptying_time": 0.002960624,
+    "queue_hwm": 23446047.0,
+    "setup_time": 0.717998911,
+    "slot_occupancy": 0.8739076091666264,
+    "total_time": 1.838707252,
+    "unconverged": 0,
+    "warmup_time": 0.042826474
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 586
+    },
+    "avg_event_per_time": 8.703744295690425,
+    "avg_step_per_time": 341958505.8466905,
+    "avg_steps_per_primary": 30222.051057692308,
+    "avg_time_per_primary": 8.837929322115385e-05,
+    "avg_time_per_step": 2.9243314112745826e-09,
+    "emptying_step": 587,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 682,
+    "num_steps": 628618662,
+    "pre_emptying_time": 0.002961573,
+    "queue_hwm": 23479214.0,
+    "setup_time": 0.718948078,
+    "slot_occupancy": 0.8790285524385066,
+    "total_time": 1.838289299,
+    "unconverged": 0,
+    "warmup_time": 0.042893204
+   }
+  ],
+  "system": {
+   "build_type": "release,shared",
+   "debug": null,
+   "geant4": "11.3.2",
+   "occupancy": {
+    "along-step-neutral": 0.25,
+    "along-step-uniform-msc-apply-eloss-fluct": 0.375,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.5,
+    "along-step-uniform-msc-propagate": 0.25,
+    "along-step-uniform-msc-scatter-msc-urban": 0.375,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.5,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries-locate-alive": 1.0,
+    "extend-from-secondaries-process-secondaries": 0.5,
+    "geo-boundary": 0.5,
+    "initialize-tracks": 0.375,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.5,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "tracking-cut": 1.0
+   },
+   "openmp": "disabled",
+   "sizes": {
+    "events": 16,
+    "initializers": 67108864,
+    "processes": 1,
+    "secondaries": 2097152,
+    "streams": 1,
+    "tracks": 1048576
+   },
+   "vecgeom": null,
+   "version": "0.7.0-dev.166+59b7ca05d"
+  }
+ },
  "testem15+field+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "testem15.gdml",
    "merge_events": true,
@@ -1344,24 +1751,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.840390059091824,
-    "avg_step_per_time": 308040086.3619749,
+    "avg_event_per_time": 7.846153616352078,
+    "avg_step_per_time": 308266530.0290399,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 9.811128826923077e-05,
-    "avg_time_per_step": 3.2463307351008523e-09,
+    "avg_time_per_primary": 9.80392185576923e-05,
+    "avg_time_per_step": 3.243946074540743e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003275627,
+    "pre_emptying_time": 0.003272805,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.800564262,
+    "setup_time": 0.656696703,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.040714796,
+    "total_time": 2.039215746,
     "unconverged": 0,
-    "warmup_time": 0.047068975
+    "warmup_time": 0.044895431
    },
    {
     "action_times": {},
@@ -1369,24 +1776,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.841204536357947,
-    "avg_step_per_time": 308070469.0071039,
+    "avg_event_per_time": 7.843517623213209,
+    "avg_step_per_time": 308161347.1048567,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 9.81010973076923e-05,
-    "avg_time_per_step": 3.2460105742135918e-09,
+    "avg_time_per_primary": 9.8072166875e-05,
+    "avg_time_per_step": 3.245053311828022e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.003266687,
+    "pre_emptying_time": 0.003265336,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.802080254,
+    "setup_time": 0.668967128,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 2.040502824,
+    "total_time": 2.039901071,
     "unconverged": 0,
-    "warmup_time": 0.046879984
+    "warmup_time": 0.045161522
    }
   ],
   "system": {
@@ -1438,7 +1845,7 @@
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "testem15.gdml",
    "merge_events": true,
@@ -1457,24 +1864,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.270527055915257,
-    "avg_step_per_time": 285650811.41647077,
+    "avg_event_per_time": 7.267298164960158,
+    "avg_step_per_time": 285523951.9310159,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 0.00010580123879807692,
-    "avg_time_per_step": 3.5007777329294134e-09,
+    "avg_time_per_primary": 0.00010584824673076922,
+    "avg_time_per_step": 3.5023331431108987e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003539129,
+    "pre_emptying_time": 0.003538478,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.642269713,
+    "setup_time": 0.651508672,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.200665767,
+    "total_time": 2.201643532,
     "unconverged": 0,
-    "warmup_time": 0.079791414
+    "warmup_time": 0.078698264
    },
    {
     "action_times": {},
@@ -1482,24 +1889,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.239532784191183,
-    "avg_step_per_time": 284439192.49321043,
+    "avg_event_per_time": 7.242655139792702,
+    "avg_step_per_time": 284561868.96038693,
     "avg_steps_per_primary": 30222.859038461538,
-    "avg_time_per_primary": 0.00010625420067307693,
-    "avg_time_per_step": 3.5156899133155497e-09,
+    "avg_time_per_primary": 0.00010620839379807694,
+    "avg_time_per_step": 3.5141742765936335e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 697,
     "num_steps": 628635468,
-    "pre_emptying_time": 0.003550539,
+    "pre_emptying_time": 0.003552978,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.644106489,
+    "setup_time": 0.668259723,
     "slot_occupancy": 0.8601341466479527,
-    "total_time": 2.210087374,
+    "total_time": 2.209134591,
     "unconverged": 0,
-    "warmup_time": 0.079410071
+    "warmup_time": 0.08199579
    }
   ],
   "system": {
@@ -1551,7 +1958,7 @@
    "field": [
     0.0,
     0.0,
-    1.0
+    3.8
    ],
    "geometry_name": "testem15.gdml",
    "merge_events": true,
@@ -1570,24 +1977,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.84234994063226,
-    "avg_step_per_time": 308117087.89817715,
+    "avg_event_per_time": 7.846340619616054,
+    "avg_step_per_time": 308273877.1764587,
     "avg_steps_per_primary": 30222.20971153846,
-    "avg_time_per_primary": 9.808676927884615e-05,
-    "avg_time_per_step": 3.2455194446419926e-09,
+    "avg_time_per_primary": 9.803688197115385e-05,
+    "avg_time_per_step": 3.2438687609835688e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 686,
     "num_steps": 628621962,
-    "pre_emptying_time": 0.003328087,
+    "pre_emptying_time": 0.003300025,
     "queue_hwm": 23446047.0,
-    "setup_time": 0.662669301,
+    "setup_time": 0.654396194,
     "slot_occupancy": 0.8739076091666264,
-    "total_time": 2.040204801,
+    "total_time": 2.039167145,
     "unconverged": 0,
-    "warmup_time": 0.075322258
+    "warmup_time": 0.075179087
    },
    {
     "action_times": {},
@@ -1595,24 +2002,24 @@
      "count": 1048576,
      "index": 586
     },
-    "avg_event_per_time": 7.846027962368827,
-    "avg_step_per_time": 308259974.98242986,
+    "avg_event_per_time": 7.848628751918694,
+    "avg_step_per_time": 308362156.53536624,
     "avg_steps_per_primary": 30222.051057692308,
-    "avg_time_per_primary": 9.804078865384614e-05,
-    "avg_time_per_step": 3.244015055983177e-09,
+    "avg_time_per_primary": 9.800830100961537e-05,
+    "avg_time_per_step": 3.2429400910786193e-09,
     "emptying_step": 587,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
     "num_step_iters": 682,
     "num_steps": 628618662,
-    "pre_emptying_time": 0.003290457,
+    "pre_emptying_time": 0.003287275,
     "queue_hwm": 23479214.0,
-    "setup_time": 0.660260912,
+    "setup_time": 0.656764543,
     "slot_occupancy": 0.8790285524385066,
-    "total_time": 2.039248404,
+    "total_time": 2.038572661,
     "unconverged": 0,
-    "warmup_time": 0.075200556
+    "warmup_time": 0.075003325
    }
   ],
   "system": {
@@ -1658,13 +2065,124 @@
    "version": "0.7.0-dev.166+59b7ca05d"
   }
  },
+ "testem3-expanded+field+msc-orange-gpu": {
+  "input": {
+   "enable_msc": true,
+   "field": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "geometry_name": "testem3-expanded.gdml",
+   "merge_events": true,
+   "num_track_slots": 1048576,
+   "use_device": true
+  },
+  "name": [
+   "testem3-expanded+field+msc",
+   "orange",
+   "gpu"
+  ],
+  "result": [
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 1470
+    },
+    "avg_event_per_time": 2.089475930599226,
+    "avg_step_per_time": 207193346.50979316,
+    "avg_steps_per_primary": 76277.25927884615,
+    "avg_time_per_primary": 0.0003681453124038461,
+    "avg_time_per_step": 4.8264098092200765e-09,
+    "emptying_step": 1471,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 1734,
+    "num_steps": 1586566993,
+    "pre_emptying_time": 0.004928748,
+    "queue_hwm": 11774960.0,
+    "setup_time": 0.604611726,
+    "slot_occupancy": 0.8725883462987282,
+    "total_time": 7.657422498,
+    "unconverged": 0,
+    "warmup_time": 0.043832652
+   },
+   {
+    "action_times": {},
+    "active_hwm": {
+     "count": 1048576,
+     "index": 1470
+    },
+    "avg_event_per_time": 2.0834006038430912,
+    "avg_step_per_time": 206656949.78868422,
+    "avg_steps_per_primary": 76301.64076923077,
+    "avg_time_per_primary": 0.00036921884721153843,
+    "avg_time_per_step": 4.838937190462473e-09,
+    "emptying_step": 1471,
+    "gpu_energy_wh": 0.0,
+    "num_events": 16,
+    "num_primaries": 20800,
+    "num_step_iters": 1722,
+    "num_steps": 1587074128,
+    "pre_emptying_time": 0.004835188,
+    "queue_hwm": 11784105.0,
+    "setup_time": 0.602295138,
+    "slot_occupancy": 0.8789499617342889,
+    "total_time": 7.679752022,
+    "unconverged": 0,
+    "warmup_time": 0.044070623
+   }
+  ],
+  "system": {
+   "build_type": "release,shared",
+   "debug": null,
+   "geant4": "11.3.2",
+   "occupancy": {
+    "along-step-neutral": 0.25,
+    "along-step-uniform-msc-apply-eloss-fluct": 0.375,
+    "along-step-uniform-msc-limit-step-msc-urban": 0.5,
+    "along-step-uniform-msc-propagate": 0.25,
+    "along-step-uniform-msc-scatter-msc-urban": 0.375,
+    "along-step-uniform-msc-update-time": 1.0,
+    "along-step-uniform-msc-update-track": 1.0,
+    "annihil-2-gamma": 0.5,
+    "brems-rel": 0.375,
+    "brems-sb": 0.5,
+    "conv-bethe-heitler": 0.375,
+    "extend-from-primaries": 1.0,
+    "extend-from-secondaries-locate-alive": 1.0,
+    "extend-from-secondaries-process-secondaries": 0.5,
+    "geo-boundary": 0.5,
+    "initialize-tracks": 0.375,
+    "ioni-moller-bhabha": 0.5,
+    "photoel-livermore": 0.5,
+    "physics-discrete-select": 0.5,
+    "pre-step": 0.375,
+    "scat-klein-nishina": 0.5,
+    "tracking-cut": 1.0
+   },
+   "openmp": "disabled",
+   "sizes": {
+    "events": 16,
+    "initializers": 67108864,
+    "processes": 1,
+    "secondaries": 2097152,
+    "streams": 1,
+    "tracks": 1048576
+   },
+   "vecgeom": null,
+   "version": "0.7.0-dev.166+59b7ca05d"
+  }
+ },
  "testem3-expanded+field+msc-vecgeom-gpu": {
   "input": {
    "enable_msc": true,
    "field": [
+    0.5,
     0.0,
-    0.0,
-    1.0
+    0.0
    ],
    "geometry_name": "testem3-expanded.gdml",
    "merge_events": true,
@@ -1681,51 +2199,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1473
+     "index": 1475
     },
-    "avg_event_per_time": 1.1528184815978006,
-    "avg_step_per_time": 114570115.0333142,
-    "avg_steps_per_primary": 76448.16519230769,
-    "avg_time_per_primary": 0.0006672609621634615,
-    "avg_time_per_step": 8.728279619071905e-09,
-    "emptying_step": 1474,
+    "avg_event_per_time": 1.2626766571955534,
+    "avg_step_per_time": 125678079.53080814,
+    "avg_steps_per_primary": 76563.89721153847,
+    "avg_time_per_primary": 0.0006092064542788461,
+    "avg_time_per_step": 7.95683705331338e-09,
+    "emptying_step": 1476,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1738,
-    "num_steps": 1590121836,
-    "pre_emptying_time": 0.008365149,
-    "queue_hwm": 11754049.0,
-    "setup_time": 0.668336748,
-    "slot_occupancy": 0.8725306990506048,
-    "total_time": 13.879028013,
+    "num_step_iters": 1727,
+    "num_steps": 1592529062,
+    "pre_emptying_time": 0.008134553,
+    "queue_hwm": 11778848.0,
+    "setup_time": 0.677500935,
+    "slot_occupancy": 0.879417524354335,
+    "total_time": 12.671494249,
     "unconverged": 0,
-    "warmup_time": 0.045921626
+    "warmup_time": 0.045231084
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1472
+     "index": 1476
     },
-    "avg_event_per_time": 1.1526149469347284,
-    "avg_step_per_time": 114510413.69425657,
-    "avg_steps_per_primary": 76421.82139423076,
-    "avg_time_per_primary": 0.0006673787905288462,
-    "avg_time_per_step": 8.732830209399169e-09,
-    "emptying_step": 1473,
+    "avg_event_per_time": 1.2610701560909803,
+    "avg_step_per_time": 125611115.77004285,
+    "avg_steps_per_primary": 76620.5866826923,
+    "avg_time_per_primary": 0.0006099825338942307,
+    "avg_time_per_step": 7.961078873232102e-09,
+    "emptying_step": 1477,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1727,
-    "num_steps": 1589573885,
-    "pre_emptying_time": 0.010263714,
-    "queue_hwm": 11777580.0,
-    "setup_time": 0.667162018,
-    "slot_occupancy": 0.8777856329789242,
-    "total_time": 13.881478843,
+    "num_step_iters": 1715,
+    "num_steps": 1593708203,
+    "pre_emptying_time": 0.008261554,
+    "queue_hwm": 11741413.0,
+    "setup_time": 0.687118491,
+    "slot_occupancy": 0.8862265778700047,
+    "total_time": 12.687636705,
     "unconverged": 0,
-    "warmup_time": 0.04635608
+    "warmup_time": 0.045048722
    }
   ],
   "system": {
@@ -1775,9 +2293,9 @@
   "input": {
    "enable_msc": true,
    "field": [
+    0.5,
     0.0,
-    0.0,
-    1.0
+    0.0
    ],
    "geometry_name": "testem3-expanded.gdml",
    "merge_events": true,
@@ -1794,51 +2312,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1472
+     "index": 1474
     },
-    "avg_event_per_time": 1.4784526386686656,
-    "avg_step_per_time": 146934061.9961332,
-    "avg_steps_per_primary": 76448.98360576923,
-    "avg_time_per_primary": 0.0005202944951442308,
-    "avg_time_per_step": 6.80577387172701e-09,
-    "emptying_step": 1473,
+    "avg_event_per_time": 1.78188640829678,
+    "avg_step_per_time": 177292306.0827297,
+    "avg_steps_per_primary": 76536.13403846153,
+    "avg_time_per_primary": 0.00043169461624999997,
+    "avg_time_per_step": 5.640402689180269e-09,
+    "emptying_step": 1475,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1734,
-    "num_steps": 1590138859,
-    "pre_emptying_time": 0.006690445,
-    "queue_hwm": 11761960.0,
-    "setup_time": 0.658277085,
-    "slot_occupancy": 0.8745528196931023,
-    "total_time": 10.822125499,
+    "num_step_iters": 1709,
+    "num_steps": 1591951588,
+    "pre_emptying_time": 0.005876606,
+    "queue_hwm": 11756840.0,
+    "setup_time": 0.688934755,
+    "slot_occupancy": 0.888357719390137,
+    "total_time": 8.979248018,
     "unconverged": 0,
-    "warmup_time": 0.080095217
+    "warmup_time": 0.078572844
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1474
+     "index": 1475
     },
-    "avg_event_per_time": 1.4755484061316877,
-    "avg_step_per_time": 146729836.32275587,
-    "avg_steps_per_primary": 76492.986875,
-    "avg_time_per_primary": 0.0005213185592788461,
-    "avg_time_per_step": 6.8152464765266906e-09,
-    "emptying_step": 1475,
+    "avg_event_per_time": 1.7790416564116034,
+    "avg_step_per_time": 177095492.58269942,
+    "avg_steps_per_primary": 76573.41889423077,
+    "avg_time_per_primary": 0.0004323849115384616,
+    "avg_time_per_step": 5.646671100525179e-09,
+    "emptying_step": 1476,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1723,
-    "num_steps": 1591054127,
-    "pre_emptying_time": 0.0085564,
-    "queue_hwm": 11786215.0,
-    "setup_time": 0.65153697,
-    "slot_occupancy": 0.8806427492350946,
-    "total_time": 10.843426033,
+    "num_step_iters": 1711,
+    "num_steps": 1592727113,
+    "pre_emptying_time": 0.005772025,
+    "queue_hwm": 11752632.0,
+    "setup_time": 0.679130888,
+    "slot_occupancy": 0.887751572596128,
+    "total_time": 8.99360616,
     "unconverged": 0,
-    "warmup_time": 0.079553062
+    "warmup_time": 0.079167399
    }
   ],
   "system": {
@@ -1888,9 +2406,9 @@
   "input": {
    "enable_msc": true,
    "field": [
+    0.5,
     0.0,
-    0.0,
-    1.0
+    0.0
    ],
    "geometry_name": "testem3-expanded.gdml",
    "merge_events": true,
@@ -1907,51 +2425,51 @@
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1425
+     "index": 1426
     },
-    "avg_event_per_time": 0.7546539422185157,
-    "avg_step_per_time": 72597068.16289729,
-    "avg_steps_per_primary": 73999.34653846154,
-    "avg_time_per_primary": 0.0010193159091826923,
-    "avg_time_per_step": 1.3774660951267963e-08,
-    "emptying_step": 1426,
+    "avg_event_per_time": 1.788292463366169,
+    "avg_step_per_time": 172144034.95490512,
+    "avg_steps_per_primary": 74047.44533653845,
+    "avg_time_per_primary": 0.0004301481916346154,
+    "avg_time_per_step": 5.809088884560886e-09,
+    "emptying_step": 1427,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1704,
-    "num_steps": 1539186408,
-    "pre_emptying_time": 0.026662909,
-    "queue_hwm": 11957193.0,
-    "setup_time": 0.708293325,
-    "slot_occupancy": 0.8614334187037508,
-    "total_time": 21.201770911,
+    "num_step_iters": 1661,
+    "num_steps": 1540186863,
+    "pre_emptying_time": 0.005854066,
+    "queue_hwm": 11971954.0,
+    "setup_time": 0.70884231,
+    "slot_occupancy": 0.8843086416071112,
+    "total_time": 8.947082386,
     "unconverged": 0,
-    "warmup_time": 0.074954444
+    "warmup_time": 0.075536221
    },
    {
     "action_times": {},
     "active_hwm": {
      "count": 1048576,
-     "index": 1425
+     "index": 1427
     },
-    "avg_event_per_time": 0.7828019889567186,
-    "avg_step_per_time": 75335978.16599533,
-    "avg_steps_per_primary": 74029.89932692307,
-    "avg_time_per_primary": 0.0009826632789423078,
-    "avg_time_per_step": 1.327387025886356e-08,
-    "emptying_step": 1426,
+    "avg_event_per_time": 1.787941174428917,
+    "avg_step_per_time": 172250336.77771705,
+    "avg_steps_per_primary": 74107.72846153846,
+    "avg_time_per_primary": 0.0004302327057692308,
+    "avg_time_per_step": 5.8055038887410965e-09,
+    "emptying_step": 1428,
     "gpu_energy_wh": 0.0,
     "num_events": 16,
     "num_primaries": 20800,
-    "num_step_iters": 1672,
-    "num_steps": 1539821906,
-    "pre_emptying_time": 0.016684247,
-    "queue_hwm": 11959681.0,
-    "setup_time": 0.70763816,
-    "slot_occupancy": 0.8782826576506693,
-    "total_time": 20.439396202,
+    "num_step_iters": 1660,
+    "num_steps": 1541440752,
+    "pre_emptying_time": 0.005958506,
+    "queue_hwm": 11943111.0,
+    "setup_time": 0.707948924,
+    "slot_occupancy": 0.8855617201471904,
+    "total_time": 8.94884028,
     "unconverged": 0,
-    "warmup_time": 0.074993595
+    "warmup_time": 0.076283067
    }
   ],
   "system": {
