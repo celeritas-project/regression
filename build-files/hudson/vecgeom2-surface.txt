@@ -1242,7 +1242,7 @@ CUDA_nvrtc_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_pcsamplingutil_LIBRARY
 CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.7.0;-dev.209;d763cd595;/home/s3j/Code/celeritas/.git/HEAD;20251202.143727
+Celeritas_GIT_DESCRIBE:INTERNAL=0.7.0;-dev.259;vg-refactor-2.f4114a173;/home/s3j/Code/celeritas/.git/HEAD;20251202.161643
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR

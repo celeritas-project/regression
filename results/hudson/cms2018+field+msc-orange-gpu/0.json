@@ -29,7 +29,7 @@
 "info: Loading Geant4 geometry from GDML at /scratch/s3j/regression/input/cms2018.gdml",
 "status: Building Geant4 physics tables",
 "status: Transferring data from Geant4",
-"/home/s3j/Code/celeritas/src/celeritas/ext/GeantImporter.cc:563: warning: Optical materials were requested but none are present",
+"/home/s3j/Code/celeritas/src/celeritas/ext/GeantImporter.cc:564: warning: Optical materials were requested but none are present",
 "status: Initializing problem",
 "status: Converting Geant4 geometry elements to ORANGE input",
 "/home/s3j/Code/celeritas/src/orange/g4org/SolidConverter.cc:929: error: G4Torus is not fully supported: replacing 'TOBCoolingManifold1a' with bounding cylinders",
