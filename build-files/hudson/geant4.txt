@@ -868,7 +868,7 @@ CELERITASTEST_NP_DEFAULT:INTERNAL=1
 //STRINGS property for variable: CELERITAS_CORE_GEO
 CELERITAS_CORE_GEO-STRINGS:INTERNAL=ORANGE
 //STRINGS property for variable: CELERITAS_CORE_RNG
-CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;cuRAND
+CELERITAS_CORE_RNG-STRINGS:INTERNAL=xorwow;ranluxpp;cuRAND
 //Whether to disable GPU when testing
 CELERITAS_DISABLE_DEVICE:INTERNAL=FALSE
 //Environment variables used for CTest
@@ -1233,7 +1233,7 @@ CUDA_nvrtc_static_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_pcsamplingutil_LIBRARY
 CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Version string and hash for Celeritas
-Celeritas_GIT_DESCRIBE:INTERNAL=0.7.0;-dev.195;9f96e13e6;/home/s3j/Code/celeritas/.git/HEAD;20251202.132740
+Celeritas_GIT_DESCRIBE:INTERNAL=0.7.0;-dev.209;d763cd595;/home/s3j/Code/celeritas/.git/HEAD;20251202.143727
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
