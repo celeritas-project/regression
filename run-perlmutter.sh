@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#SBATCH -A m2616
+#SBATCH -A m2845
 #SBATCH -t 03:59:59
 #SBATCH -q regular
 #SBATCH -N 1
@@ -14,7 +14,9 @@ if [ -z "$SLURM_JOB_ID" ]; then
   exit $?
 fi
 
-source $CFS/atlas/esseivaj/devel/celeritas/scripts/env/perlmutter.sh
+source /pscratch/sd/e/esseivaj/dev/celeritas/scripts/env/perlmutter.sh
+# The spack view's lua paths hide the 'lfs' module from srun's cli_filter plugin
+unset LUA_PATH LUA_CPATH
 
 echo "Running on $HOSTNAME at $(date)"
 python3 run-problems.py perlmutter "$@"

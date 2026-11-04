@@ -224,10 +224,10 @@ class Frontier(System):
 class Perlmutter(Frontier):
     # System details:
     # https://portal.nersc.gov/cfs/mpccc/sleak/userdocs4/systems/perlmutter/system_details/#system-specification-phase-1
-    _CELER_ROOT = Path(environ.get('CFS', '')) / 'atlas' / 'esseivaj' / 'devel' / 'celeritas'
+    _CELER_ROOT = Path(environ.get('SCRATCH', '')) / 'dev' / 'celeritas'
     build_dirs = {
-        "orange": _CELER_ROOT / 'build-ndebug-novg',
-        "vecgeom": _CELER_ROOT / 'build-ndebug',
+        "orange": _CELER_ROOT / 'build-release-novg',
+        "vecgeom": _CELER_ROOT / 'build-release',
     }
     name = "perlmutter"
     num_jobs = 4  # Nvidia A100 per node
@@ -246,7 +246,8 @@ class Perlmutter(Frontier):
         """
         cmd = "nvidia-smi"
         args = ['dmon', '-i', str(inp['_instance']), '--select', 'pu', '--options', 'DT']
-        return asyncio.create_subprocess_exec(cmd, *args, stdout=subprocess.PIPE)
+        # return asyncio.create_subprocess_exec(cmd, *args, stdout=subprocess.PIPE)
+        return None
 
     def create_celer_subprocess(self, inp):
         cmd = "srun"
@@ -308,17 +309,15 @@ base_input = {
     "write_track_counts": False,
     "initializer_capacity": 2**20,
     "num_track_slots": 2**12,
-    "track_order": "unsorted",
+    "track_order": "none",
     "max_steps": 2**21,
     "secondary_stack_factor": 2.0,
-    "brem_combined": False,
     "physics_options": {
         "coulomb_scattering": False,
         "rayleigh_scattering": False,
         "eloss_fluctuation": True,
         "lpm": True,
         "em_bins_per_decade": 56,
-        "physics": "em_basic",
         "msc": "urban",
     },
     "primary_options": {
@@ -333,7 +332,7 @@ base_input = {
 
 use_geant = {
     "_exe": "celer-g4",
-    "physics_list": "geant_physics_list",
+    "physics_list": "celer_em",
     "sd_type": "none",
     "output_file": "-",
 }
@@ -372,7 +371,6 @@ use_gpu_streams.update({
 })
 
 use_sync = {
-    "sync": True, # Deprecated
     "action_times": True,
 }
 
@@ -624,9 +622,13 @@ async def run_celeritas(system: System, results_dir, inp):
         result['stderr'] = err.decode().splitlines()
 
     # Copy special inputs to output for later processing
-    result.setdefault('input', {}).update(
-        {k: v for k,v in inp.items() if k.startswith('_')}
-    )
+    result_inp = result.setdefault('input', {})
+    result_inp.update({k: v for k,v in inp.items() if k.startswith('_')})
+    if inp['_exe'] == "celer-sim":
+        # celer-sim v0.7 echoes a nested StandaloneInput: keep the flat input
+        # that was submitted, which summarize and analyze rely on
+        for k, v in inp.items():
+            result_inp.setdefault(k, v)
 
     try:
         with open(outdir / f"{instance:d}.json", "w") as f:
