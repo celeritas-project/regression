@@ -367,7 +367,10 @@ use_gpu_streams.update({
     "merge_events": False,
     "num_track_slots": 2**18,
     "max_steps": 2**15,
-    "initializer_capacity": 2**24,
+    # Per stream: 2**24 exceeds 40 GB for cms2018 with 16 streams since
+    # v0.7 added RNG state to track initializers. The observed queue
+    # high-water mark is below 2**21 tracks per event.
+    "initializer_capacity": 2**23,
 })
 
 use_sync = {
