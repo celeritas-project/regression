@@ -194,8 +194,13 @@ def inp_to_nametuple(inp):
         name += '+field'
     if inp['physics_options']['msc'] != "none":
         name += '+msc'
-    track_order = inp.get('track_order', 'none')
-    if track_order not in ('none', 'unsorted'):
+    # Only a track order other than the default for the device is in the name
+    # (init_charge on GPU, none on CPU)
+    default = 'init_charge' if inp.get('use_device', False) else 'none'
+    track_order = inp.get('track_order', default)
+    if track_order == 'unsorted':
+        track_order = 'none'
+    if track_order != default:
         name += f"+{track_order}"
 
     geo = inp['_geometry']

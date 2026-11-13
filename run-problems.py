@@ -353,6 +353,7 @@ use_field = {
 }
 
 use_gpu = {
+    "track_order": "init_charge",
     "action_times": False,
     "use_device": True,
     "merge_events": True,
