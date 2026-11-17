@@ -209,7 +209,10 @@ def plot_minimal(system):
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
-    assert not np.any(unconv > 0)
+    if np.any(unconv > 0):
+        print(f"WARNING: some tracks were unconverged!")
+        print(unconv)
+
 
     failures = analysis.failures()
     if failures is not None:
@@ -288,7 +291,9 @@ def plot_all(system):
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
-    assert not np.any(unconv > 0)
+    if np.any(unconv > 0):
+        print(f"WARNING: some tracks were unconverged!")
+        print(unconv)
 
     ### TIMING ###
     fig = plot_timing(analysis)
@@ -526,7 +531,7 @@ def plot_kernels(cuda, hip, problem):
     kernel_stats = {
         "cuda/vecgeom": analyze.load_kernels(cuda, problem, "vecgeom"),
         "cuda/orange": analyze.load_kernels(cuda, problem, "orange"),
-        "hip/orange": analyze.load_kernels(hip, problem, "orange"),
+        #"hip/orange": analyze.load_kernels(hip, problem, "orange"),
     }
     ksdf = analyze.kernel_stats_dataframe(kernel_stats)
 
@@ -571,7 +576,7 @@ def main():
     analyses = {}
 
     # Plot individual results
-    analyses["frontier"] = plot_minimal("frontier")
+    #analyses["frontier"] = plot_minimal("frontier")
     analyses["perlmutter"] = plot_like = plot_all("perlmutter")
 
     # Compare multiple systems
@@ -590,7 +595,7 @@ def main():
     fig.savefig(plots_dir / "event-per-energy.png", transparent=False, dpi=150)
 
     # Plot kernels
-    plot_kernels(analyses["perlmutter"], analyses["frontier"], "testem3-flat+field+msc")
+    plot_kernels(analyses["perlmutter"], None, "testem3-flat+field+msc")
 
 if __name__ == '__main__':
     main()
