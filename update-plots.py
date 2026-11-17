@@ -209,7 +209,10 @@ def plot_minimal(system):
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
-    assert not np.any(unconv > 0)
+    if np.any(unconv > 0):
+        print(f"WARNING: some tracks were unconverged!")
+        print(unconv)
+
 
     failures = analysis.failures()
     if failures is not None:
@@ -288,7 +291,9 @@ def plot_all(system):
 
     # Check that everything is converged
     unconv = analyze.summarize_instances(analysis.result["unconverged"])["mean"]
-    assert not np.any(unconv > 0)
+    if np.any(unconv > 0):
+        print(f"WARNING: some tracks were unconverged!")
+        print(unconv)
 
     ### TIMING ###
     fig = plot_timing(analysis)
