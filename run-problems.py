@@ -353,6 +353,7 @@ use_field = {
 }
 
 use_gpu = {
+    "track_order": "init_charge",
     "action_times": False,
     "use_device": True,
     "merge_events": True,
@@ -400,7 +401,9 @@ testem3_composite = {
     "geometry_file": "testem3-composite.gdml",
     "primary_options": testem3["primary_options"],
     "environ": {
-        "ORANGE_MAX_FACE_INTERSECT": "12,12",
+        # Keep the calorimeter as its own universe so its interior is an
+        # implicit background, which doesn't set ORANGE's max intersections
+        "G4ORG_OPTIONS": str(input_dir / "testem3-composite.g4org.json"),
     },
 }
 

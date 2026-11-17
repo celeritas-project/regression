@@ -9,7 +9,7 @@
 | cuda | vecgeom | update-active                               |     0 |       48 |     1.000 |
 | cuda | vecgeom | pre-step                                    |     0 |      356 |     0.250 |
 | cuda | vecgeom | along-step-uniform-msc-limit-step-msc-urban |     0 |     1008 |     0.125 |
-| cuda | vecgeom | along-step-uniform-msc-propagate-uniform    |     0 |     1016 |     0.125 |
+| cuda | vecgeom | along-step-uniform-msc-propagate-uniform    |     0 |     1020 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-scatter-msc-urban    |     0 |     1008 |     0.125 |
 | cuda | vecgeom | along-step-uniform-msc-update-time          |     0 |      128 |     1.000 |
 | cuda | vecgeom | along-step-uniform-msc-apply-eloss-fluct    |    40 |      256 |     0.500 |
@@ -34,7 +34,7 @@
 | cuda | orange  | initialize-tracks                           |   152 |      192 |     0.625 |
 | cuda | orange  | update-active                               |     0 |       48 |     1.000 |
 | cuda | orange  | pre-step                                    |     8 |      320 |     0.375 |
-| cuda | orange  | along-step-uniform-msc-limit-step-msc-urban |    40 |      232 |     0.500 |
+| cuda | orange  | along-step-uniform-msc-limit-step-msc-urban |    40 |      240 |     0.500 |
 | cuda | orange  | along-step-uniform-msc-propagate-uniform    |   352 |      512 |     0.250 |
 | cuda | orange  | along-step-uniform-msc-scatter-msc-urban    |    88 |      256 |     0.500 |
 | cuda | orange  | along-step-uniform-msc-update-time          |     0 |      108 |     1.000 |
@@ -53,7 +53,7 @@
 | cuda | orange  | tracking-cut                                |     0 |       80 |     1.000 |
 | cuda | orange  | extend-from-secondaries-locate-alive        |     0 |      116 |     1.000 |
 | cuda | orange  | update-secondaries                          |     0 |       48 |     1.000 |
-| cuda | orange  | extend-from-secondaries-process-secondaries |   136 |      256 |     0.500 |
+| cuda | orange  | extend-from-secondaries-process-secondaries |   144 |      256 |     0.500 |
 | cuda | orange  | reset-counters                              |     0 |       32 |     1.000 |
 | cuda | orange  | extend-from-primaries                       |     0 |      128 |     1.000 |
 | cuda | orange  | add-primary                                 |     0 |       40 |     1.000 |
