@@ -526,7 +526,7 @@ def plot_kernels(cuda, hip, problem):
     kernel_stats = {
         "cuda/vecgeom": analyze.load_kernels(cuda, problem, "vecgeom"),
         "cuda/orange": analyze.load_kernels(cuda, problem, "orange"),
-        "hip/orange": analyze.load_kernels(hip, problem, "orange"),
+        #"hip/orange": analyze.load_kernels(hip, problem, "orange"),
     }
     ksdf = analyze.kernel_stats_dataframe(kernel_stats)
 
@@ -571,7 +571,7 @@ def main():
     analyses = {}
 
     # Plot individual results
-    analyses["frontier"] = plot_minimal("frontier")
+    #analyses["frontier"] = plot_minimal("frontier")
     analyses["perlmutter"] = plot_like = plot_all("perlmutter")
 
     # Compare multiple systems
@@ -590,7 +590,7 @@ def main():
     fig.savefig(plots_dir / "event-per-energy.png", transparent=False, dpi=150)
 
     # Plot kernels
-    plot_kernels(analyses["perlmutter"], analyses["frontier"], "testem3-flat+field+msc")
+    plot_kernels(analyses["perlmutter"], None, "testem3-flat+field+msc")
 
 if __name__ == '__main__':
     main()
